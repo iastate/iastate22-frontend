@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Prevents GDPR-dependent scripts from executing on load -->
+        <script>
+            window.YETT_BLACKLIST = [
+                /addthis\.com/
+            ];
+        </script>
+        <script src="//unpkg.com/yett"></script>
+        <link media="screen" rel="stylesheet" href="{{ '/css/index.css'|path }}">
+        <title>Preview Layout</title>
+        <script>
+            document.documentElement.classList.add('js');
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="max-bound">
+            {{ yield }}
+        </div>
+        {% render "@privacy-consent" %}
+        <script src="{{ '/js/index.js'|path }}"></script>
+        <link media="print" rel="stylesheet" href="{{ '/css/print.css'|path }}">
+    </body>
+</html>
+

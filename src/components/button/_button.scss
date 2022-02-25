@@ -1,0 +1,23 @@
+@import "variables";
+
+.button {
+    display: inline-block;
+    border: $button-border;
+    padding: $button-padding;
+    appearance: none;
+    cursor: pointer;
+    background-color: $button-background;
+    color: $button-color;
+    font-family: $button-font-family;
+    font-weight: $button-font-weight;
+    text-align: $button-text-align;
+    text-decoration: $button-text-decoration;
+    text-transform: $button-text-transform;
+    transition: $button-transition;
+
+    &:hover {
+        border: $button_hover-border;
+        background-color: $button_hover-background;
+        color: $button_hover-color;
+    }
+}

@@ -1,0 +1,5 @@
+.lazyload {
+    html:not(.js) & {
+        display: none;
+    }
+}

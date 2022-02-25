@@ -1,0 +1,12 @@
+{
+  "context": {
+    "title": "Card Title",
+    "body": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>",
+    "image": "http://via.placeholder.com/400x250/ddd/ddd",
+    "url": "https://idfive.com",
+    "cta": {
+      "url": "https://idfive.com",
+      "text": "Learn More"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "variables";
+
+.blockquote {
+    position: relative;
+    background: $blockquote-background;
+    color: $blockquote-color;
+    max-width: $blockquote-max-width;
+    margin: $blockquote-margin;
+    padding: $blockquote-padding;
+    &:before {
+        display: block;
+        height: $blockquote_before-height;
+        font-family: $blockquote_before-font-family;
+        font-size: $blockquote_before-font-size;
+        font-weight: $blockquote_before-font-weight;
+        line-height: $blockquote_before-line-height;
+        content: $blockquote_before-content;
+    }
+}
+
+.blockquote__quote {
+    font-family: $blockquote_quote-font-family;
+    font-size: $blockquote_quote-font-size;
+    line-height: $blockquote_quote-line-height;
+    margin: $blockquote_quote-margin;
+    padding: $blockquote_quote-padding;
+}
+
+.blockquote__footer {
+    font-family: $blockquote_footer-font-family;
+    margin: $blockquote_footer-margin;
+    padding: $blockquote_footer-padding;
+}
+
+.blockquote__author {
+    font-size: $blockquote_author-font-size;
+    font-weight: $blockquote_author-font-weight;
+}
+
+.blockquote__source {
+    font-size: $blockquote_source-font-size;
+    font-weight: $blockquote_source-font-weight;
+}
+
+.blockquote__portrait {
+    position: relative;
+    width: $blockquote_portrait-width;
+    &:before {
+        content: "";
+        display: block;
+        padding-top: $blockquote_portrait-aspect-ratio;
+    }
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

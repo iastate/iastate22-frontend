@@ -1,0 +1,21 @@
+<div class="carousel-holder">
+    <div class="carousel">
+        {% for slide in slides %}
+            <div class="carousel__slide">
+                <div class="carousel__slide-image" style="background-image:url({{ slide.image|path }})"></div>
+                <div class="carousel__slide-content">
+                    <p>{{ slide.content }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="carousel__nav">
+    <div class="carousel__nav-sizer"></div>
+    <button class="button carousel__nav-previous" aria-label="Previous slide">
+        <span class="visible-for-screen-readers">Previous slide</span>
+    </button>
+    <button class="button carousel__nav-next" aria-label="Next slide">
+        <span class="visible-for-screen-readers">Next slide</span>
+    </button>
+    </div>
+</div>

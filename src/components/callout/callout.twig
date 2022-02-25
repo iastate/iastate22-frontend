@@ -1,0 +1,9 @@
+<div class="callout"{% if image %} style="background-image: url({{ image|path }});"{% endif %}>
+    <h2 class="callout__title">{{ title }}</h2>
+    <div class="callout__body">
+        {{ body|raw }}
+    </div>
+    {% if cta.url %}
+        <a class="button callout__cta" href="{{ cta.url }}">{{ cta.text }}</a>
+    {% endif %}
+</div>

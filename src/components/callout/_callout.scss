@@ -1,0 +1,19 @@
+@import "variables";
+
+.callout {
+    background-position: $callout-bg-position;
+    background-size: $callout-bg-size;
+    padding: $callout-padding;
+    text-align: $callout-align;
+}
+
+.callout__title {
+    font-size: $callout_title-size;
+    font-weight: $callout_title-weight;
+    margin: $callout_title-margin;
+}
+
+.callout__body {
+    font-size: $callout_body-size;
+    margin: $callout_body-margin;
+}

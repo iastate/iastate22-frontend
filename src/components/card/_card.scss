@@ -1,0 +1,75 @@
+@import "variables";
+
+.card {
+    border: $card-border;
+    border-radius: $card-border-radius;
+    box-shadow: $card-shadow;
+    background: $card-background;
+    box-sizing: $card-box-sizing;
+    overflow: $card-overflow;
+    &.card--clickable {
+        cursor: pointer;
+    }
+}
+
+.card--hz {
+    display: flex;
+    border: $card--hz-border;
+    box-shadow: $card--hz-shadow;
+}
+
+.card__cta {
+    background-color: $card__cta-background;
+    color: $card__cta-color;
+    text-decoration: $card__cta-text-decoration;
+    transition: $card__cta_hover-transition;
+    will-change: $card__cta-will-change;
+    overflow: hidden;
+    &:hover {
+        background: $card__cta_hover-background;
+        color: $card__cta_hover-color;
+    }
+}
+
+.card__content {
+    margin: $card__content-margin;
+    padding: $card__content-padding;
+
+    .card--hz & {
+        margin: $card--hz__content-margin;
+        padding: $card--hz__content-padding;
+        flex: 1;
+    }
+}
+
+.card__media {
+    padding: $card__media-padding;
+    margin: $card__media-margin;
+    height: $card__media-height;
+    position: relative;
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: $card__media-background-size;
+        object-position: $card__media-background-position;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .card:not(.card--hz) & {
+        &:before {
+            content: "";
+            display: block;
+            padding-top: $card__media-aspect-ratio;
+        }
+    }
+
+    .card--hz & {
+        margin: $card--hz__media-margin;
+        padding: $card--hz__media-padding;
+        width: $card--hz__media-width;
+        height: $card--hz__media-height;
+    }
+}

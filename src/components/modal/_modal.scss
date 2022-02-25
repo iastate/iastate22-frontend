@@ -1,0 +1,49 @@
+@import "variables";
+
+.modal {
+    display: none;
+
+    &.is-open {
+        display: block;
+    }
+}
+
+.modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $modal__overlay-background;
+}
+
+.modal__container {
+    background-color: $modal__container-background;
+    padding: $modal__container-padding;
+    max-width: $modal__container-max-width;
+    max-height: $modal__container-max-height;
+    border-radius: $modal__container-border-radius;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__content {
+    padding: $modal__content-padding;
+}
+
+.modal__title {
+    margin: $modal__title-margin;
+}
+
+.modal__close:before {
+    content: $modal__close_before-content;
+}

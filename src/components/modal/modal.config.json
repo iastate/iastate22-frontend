@@ -1,0 +1,8 @@
+{
+  "context": {
+    "id": "modal-1",
+    "title": "Modal",
+    "content": "<p>Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also,<code>esc</code> to close modal.</p>",
+    "footer": "<button>Continue</button>"
+  }
+}

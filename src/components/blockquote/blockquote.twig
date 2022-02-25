@@ -1,0 +1,14 @@
+
+<blockquote class="blockquote"{% if sourceUrl %} cite="{{ sourceUrl }}"{% endif %}>
+    <div class="blockquote__quote">
+        <p>{{ quote }}</p>
+    </div>
+    <footer class="blockquote__footer">
+        &mdash; <span class="blockquote__author">{{ author }}</span>{% if source %}, <cite class="blockquote__source">{{ source }}</cite>{% endif %}
+        {% if portrait %}
+            <div class="blockquote__portrait">
+                <img src="{{ portrait|path }}" alt="portrait of {{ author }}">
+            </div>
+        {% endif %}
+    </footer>
+</blockquote>

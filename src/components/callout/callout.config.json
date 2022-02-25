@@ -1,0 +1,11 @@
+{
+  "context": {
+    "title": "Lorem Ipsum",
+    "body": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis consectetur ducimus illo, excepturi dolore nemo veritatis quisquam nulla libero obcaecati autem, architecto officiis? Eaque similique atque praesentium facere id fugiat.</p>",
+    "image": "https://via.placeholder.com/1920x1080",
+    "cta": {
+      "url": "https://idfive.com",
+      "text": "Read More"
+    }
+  }
+}

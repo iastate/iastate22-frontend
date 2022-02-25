@@ -1,0 +1,204 @@
+/* Base
+========================================================================== */
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $base-color;
+}
+
+a {
+    .text-content & {
+        color: $link-color;
+        text-decoration: $link-text-decoration;
+        transition: $link-transition;
+        &:hover {
+            color: $link_hover-color;
+        }
+        &.fancy-link {
+            color: $fancy-link-color;
+            font-family: $fancy-link-font-family;
+            font-size: $fancy-link-font-size;
+            font-weight: $fancy-link-font-weight;
+            margin-right: 1.1rem;
+            position: relative;
+            text-decoration: $fancy-link-text-decoration;
+            transition: $fancy-link-transition;
+            &:hover {
+                color: $fancy-link_hover-color;
+                &:after {
+                    transform: translateX(66.667%);
+                }
+            }
+            &:after {
+                content: $fancy-link-icon;
+                position: absolute;
+                transform: translateX(33.333%);
+                transition: $fancy-link-icon-transition;
+            }
+        }
+    }
+}
+
+p {
+    margin: $base-margin;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+ul,
+ol {
+    .text-content & {
+        margin: $list-margin;
+        padding: $list-padding;
+        li {
+            font-size: $list-item-font-size;
+            margin: $list-item-margin;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        ul,
+        ol {
+            margin: $list-list-margin;
+        }
+    }
+    .text-content > & {
+        &:first-child {
+            margin-top: 0;
+            ul,
+            ol,
+            li {
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+            ul,
+            ol,
+            li {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+ul {
+    .text-content & {
+        list-style-type: $unordered-list-style-type;
+    }
+}
+
+ol {
+    .text-content & {
+        list-style-type: $ordered-list-style-type;
+    }
+}
+
+/* Headings
+========================================================================== */
+
+h1,
+.h1,
+%h1,
+h2,
+.h2,
+%h2,
+h3,
+.h3,
+%h3,
+h4,
+.h4,
+%h4,
+h5,
+.h5,
+%h5,
+h6,
+.h6,
+%h6 {
+    line-height: $heading-line-height;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+h1,
+.h1,
+%h1 {
+    color: $h1-color;
+    font-family: $h1-font-family;
+    font-size: $h1-font-size;
+    font-weight: $h1-font-weight;
+    letter-spacing: $h1-letter-spacing;
+    margin: $h1-margin;
+}
+
+h2,
+.h2,
+%h2 {
+    color: $h2-color;
+    font-family: $h2-font-family;
+    font-size: $h2-font-size;
+    font-weight: $h2-font-weight;
+    letter-spacing: $h2-letter-spacing;
+    margin: $h2-margin;
+}
+
+h3,
+.h3,
+%h3 {
+    color: $h3-color;
+    font-family: $h3-font-family;
+    font-size: $h3-font-size;
+    font-weight: $h3-font-weight;
+    letter-spacing: $h3-letter-spacing;
+    margin: $h3-margin;
+}
+
+h4,
+.h4,
+%h4 {
+    color: $h4-color;
+    font-family: $h4-font-family;
+    font-size: $h4-font-size;
+    font-weight: $h4-font-weight;
+    letter-spacing: $h4-letter-spacing;
+    margin: $h4-margin;
+}
+
+h5,
+.h5,
+%h5 {
+    color: $h5-color;
+    font-family: $h5-font-family;
+    font-size: $h5-font-size;
+    font-weight: $h5-font-weight;
+    letter-spacing: $h5-letter-spacing;
+    margin: $h5-margin;
+}
+
+h6,
+.h6,
+%h6 {
+    color: $h6-color;
+    font-family: $h6-font-family;
+    font-size: $h6-font-size;
+    font-weight: $h6-font-weight;
+    letter-spacing: $h6-letter-spacing;
+    margin: $h6-margin;
+}

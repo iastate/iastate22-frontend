@@ -1,0 +1,24 @@
+.max-bound {
+    width: 100%;
+    max-width: rem(1400);
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.outer-pad {
+    padding: rem(48) rem(16);
+    @include media("550") {
+        padding: rem(48) rem(32);
+    }
+    @include media("800") {
+        padding: rem(48) rem(64);
+    }
+}
+
+.section {
+    margin: rem(48) 0;
+}
+
+.silc-position--relative {
+    position: relative;
+}

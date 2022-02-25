@@ -1,0 +1,124 @@
+@import "variables";
+
+.silc-hero {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    background-color: $hero-background;
+    overflow: hidden;
+}
+
+.silc-hero--overlay {
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: $hero--overlay-background;
+    }
+}
+
+.silc-hero--callout {
+    height: $hero--callout-height;
+    padding-top: 0;
+}
+
+.silc-hero__compartment {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.silc-hero__content {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    padding: rem(20);
+
+    @include media("800") {
+        max-width: 50%;
+    }
+}
+
+.silc-hero__content--tl {
+    left: 0;
+    top: auto;
+    transform: none;
+}
+
+.silc-hero__content--tc {
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.silc-hero__content--tr {
+    top: auto;
+    right: 0;
+    left: auto;
+    transform: none;
+}
+
+.silc-hero__content--cl {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.silc-hero__content--cr {
+    left: auto;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.silc-hero__content--bl {
+    top: auto;
+    bottom: 1rem;
+    left: 0;
+    transform: none;
+}
+
+.silc-hero__content--bc {
+    top: auto;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.silc-hero__content--br {
+    top: auto;
+    bottom: 1rem;
+    left: auto;
+    right: 0;
+    transform: none;
+}
+
+.silc-hero__media {
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    video,
+    iframe {
+        display: block;
+        position: relative;
+        width: 100vw;
+        height: 56.25vw;
+    }
+}

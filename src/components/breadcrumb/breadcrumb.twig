@@ -1,0 +1,9 @@
+<nav class="silc-breadcrumb" aria-label="Breadcrumb">
+	<ol class="silc-breadcrumb__list">
+		{% for link in links %}
+			<li>
+				<a href="{{ link.url }}"{% if loop.last %} aria-current="page"{% endif %}>{{ link.name }}</a>
+			</li>
+		{% endfor %}
+	</ol>
+</nav>

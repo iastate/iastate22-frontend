@@ -1,0 +1,28 @@
+%visible-for-screen-readers,
+.visible-for-screen-readers {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Removes default list style and uses CSS before pseudo's instead to allow styling of numbers */
+%styled-ol,
+.styled-ol {
+    counter-reset: list;
+    list-style-type: none !important;
+    li {
+        position: relative;
+        &:before {
+            content: counter(list, $ordered-list-style-type) ".\00a0";
+            counter-increment: list;
+            display: inline-block;
+            margin-right: -1em;
+            position: absolute;
+            transform: translateX(-100%);
+        }
+    }
+}

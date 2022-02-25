@@ -1,0 +1,17 @@
+<div class="modal" id="{{ id }}" aria-hidden="false">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="{{ id }}-title">
+            <header class="modal__header">
+                <h2 class="modal__title" id="{{ id }}-title">{{ title }}</h2>
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </header>
+            <main class="modal__content" id="{{ id }}-content">
+                {{ content|raw }}
+            </main>
+            <footer class="modal__footer">
+                {{ footer|raw }}
+                <button data-micromodal-close aria-label="Close this dialog window">Close</button>
+            </footer>
+        </div>
+    </div>
+</div>

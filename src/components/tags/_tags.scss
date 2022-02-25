@@ -1,0 +1,29 @@
+.tag-list {
+    margin: 0;
+    padding: 0;
+    .tag-list__item:last-child {
+        .tag-list__link:after {
+            content: "";
+        }
+    }
+}
+
+.tag-list__item {
+    display: inline-block;
+}
+
+.tag-list__link {
+    &:after {
+        content: ",";
+        color: black;
+    }
+}
+
+.tag-list__button {
+    margin-top: rem(5);
+    margin-bottom: rem(5);
+}
+
+.tag-list__heading {
+    margin-right: rem(8);
+}

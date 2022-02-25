@@ -1,0 +1,15 @@
+{
+  "context": {
+    "src": "https://via.placeholder.com/600x450",
+    "alt": "placeholder alt text"
+  },
+  "variants": [
+    {
+      "name": "iframe",
+      "context": {
+        "src": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "title": "Rick Astley - Never Gonna Give You Up (Video)"
+      }
+    }
+  ]
+}

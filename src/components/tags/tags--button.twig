@@ -1,0 +1,10 @@
+<ul class="tag-list">
+    <li class="tag-list__item tag-list__heading">
+        <strong>Tags:</strong>
+    </li>
+    {% for tag in tags %}
+        <li class="tag-list__item">
+            <a href="{{ tag.url }}" class="tag-list__button button">{{ tag.name }}</a>
+        </li>
+    {% endfor %}
+</ul>

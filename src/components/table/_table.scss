@@ -1,0 +1,68 @@
+@import "variables";
+
+// General Table Styles ------------------------------
+.table {
+    width: 100%;
+    max-width: 100%;
+    empty-cells: show;
+    border-collapse: collapse;
+    border: 0;
+    padding: 0;
+    color: black;
+
+    td {
+        padding: rem(20) rem(10);
+    }
+}
+
+// Responsive behavior and structure -----------------
+.table--stacked {
+    thead {
+        display: none;
+    }
+
+    td {
+        display: block;
+    }
+
+    .tablesaw-cell-label {
+        display: table-row;
+    }
+
+    @include media($silc-table-media-query) {
+        thead {
+            display: table-header-group;
+        }
+
+        td {
+            display: table-cell;
+        }
+
+        .tablesaw-cell-label {
+            display: none;
+        }
+    }
+}
+
+// General Theme, used for demo not production
+.table--theme-default {
+    thead {
+        text-align: left;
+        tr {
+            background-color: $silc-table-thead-background-color;
+        }
+        th {
+            padding: rem(10);
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid $silc-table-border-color;
+
+            &:nth-child(odd) {
+                background-color: $silc-table-stripe-background;
+            }
+        }
+    }
+}
