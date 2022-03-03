@@ -122,23 +122,30 @@ const config = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|svg)$/,
-                loader: "url-loader",
+                loader: "file-loader",
                 options: {
-                    limit: 1000,
                     name: "[name].[ext]",
                     outputPath: "fonts/",
                 },
-                exclude: [path.resolve(__dirname, "img")],
+                exclude: [path.resolve(__dirname, "src", "img")],
             },
             {
-                test: /\.(jpg|jpeg|gif|png|svg)$/,
+                test: /\.(jpg|jpeg|gif|png|webp)$/,
                 loader: "url-loader",
                 options: {
-                    limit: 1000,
+                    limit: 8192,
                     name: "[name].[ext]",
                     outputPath: "img/",
                 },
-                exclude: [path.resolve(__dirname, "fonts")],
+            },
+            {
+                test: /\.svg$/,
+                loader: "file-loader",
+                options: {
+                    name: "[name].[ext]",
+                    outputPath: "img/",
+                },
+                exclude: [path.resolve(__dirname, "src", "fonts")],
             },
             {
                 test: /\.html$/,
