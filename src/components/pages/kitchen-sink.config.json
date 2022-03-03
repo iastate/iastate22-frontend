@@ -1,20 +1,31 @@
 {
   "preview": "@page-preview",
   "context": {
-    "title": "Home",
-    "sections": [
-      {
-        "title": "Accordion 1",
-        "content": "<p>This is the content area of accordion 1, specifically for the home page</p>"
-      },
-      {
-        "title": "Accordion 2",
-        "content": "<p>This is the content area of accordion 2, specifically for the home page</p>"
-      },
-      {
-        "title": "Accordion 3",
-        "content": "<p>This is the content area of accordion 3, specifically for the home page</p>"
-      }
-    ]
+    "button_set": {
+      "items": [
+        {
+          "text": "Primary CTA Style",
+          "url": "https://iastate.edu"
+        }
+      ]
+    },
+    "link_set": {
+      "links": [
+        {
+          "url": "https://iastate.edu",
+          "text": "Secondary Link Style",
+          "variant": "link-secondary"
+        },
+        {
+          "url": "https://www.google.com/",
+          "text": "External Link Style"
+        },
+        {
+          "url": "https://iastate.edu",
+          "text": "Tertiary Link Style",
+          "variant": "link-tertiary"
+        }
+      ]
+    }
   }
 }

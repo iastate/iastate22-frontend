@@ -1,23 +1,52 @@
-@import "variables";
-
 .button {
+  display: block;
+  border: rem(2) solid $red2;
+  border-radius: rem(30);
+  padding: rem(5) rem(35) rem(5) rem(20);
+  appearance: none;
+  margin: rem(10) 0;
+  text-align: left;
+  cursor: pointer;
+  background-color: $white;
+  color: $red2;
+  font-family: $nimbus-sans-bold;
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: (32 / 18);
+  text-decoration: none;
+  transition: 0.2s color ease-in-out, 0.2s background-color ease-in-out, 0.2s padding ease-in-out;
+  position: relative;
+  @include media-breakpoint-up(md) {
     display: inline-block;
-    border: $button-border;
-    padding: $button-padding;
-    appearance: none;
-    cursor: pointer;
-    background-color: $button-background;
-    color: $button-color;
-    font-family: $button-font-family;
-    font-weight: $button-font-weight;
-    text-align: $button-text-align;
-    text-decoration: $button-text-decoration;
-    text-transform: $button-text-transform;
-    transition: $button-transition;
-
-    &:hover {
-        border: $button_hover-border;
-        background-color: $button_hover-background;
-        color: $button_hover-color;
+  }
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    right: rem(17);
+    transform-origin: center;
+  }
+  &:after {
+    top: rem(17);
+    width: rem(7);
+    height: rem(7);
+    border-right: rem(2) solid $yellow;
+    border-bottom: rem(2) solid $yellow;
+    transform: rotate(-45deg);
+  }
+  &:before {
+    width: rem(0);
+    border-bottom: rem(2) solid $yellow;
+    top: rem(20.375);
+    transition: 0.2s width ease-in-out;
+    transform-origin: center left;
+  }
+  &:hover {
+    background-color: $red2;
+    color: $white;
+    padding-right: rem(40);
+    &:before {
+      width: rem(14);
     }
+  }
 }

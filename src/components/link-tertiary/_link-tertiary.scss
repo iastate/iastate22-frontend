@@ -1,0 +1,44 @@
+.link-tertiary {
+  display: inline-block;
+  appearance: none;
+  margin: rem(10) 0;
+  cursor: pointer;
+  color: $red2;
+  font-family: $nimbus-sans-bold;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: (26 / 18);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  position: relative;
+  transition: 0.2s text-decoration-color ease-in-out;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    right: rem(-23);
+    transform-origin: center;
+    opacity: 0;
+    transition: 0.2s opacity ease-in-out;
+  }
+  &:after {
+    top: rem(8);
+    width: rem(8);
+    height: rem(7);
+    border-right: rem(2) solid $red2;
+    border-bottom: rem(2) solid $red2;
+    transform: rotate(-45deg);
+  }
+  &:before {
+    width: rem(14);
+    border-bottom: rem(2) solid $red2;
+    top: rem(11.253);
+  }
+  &:hover {
+    text-decoration-color: $red2;
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+  }
+}

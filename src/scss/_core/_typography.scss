@@ -2,177 +2,179 @@
 ========================================================================== */
 
 @font-face {
-    font-family: "nimbus_sans_lregular";
-    src: url("../../fonts/NimbusSanL-Reg-webfont.woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "nimbus_sans_lregular";
+  src: url("../../fonts/NimbusSanL-Reg-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "nimbus_sans_lregular_italic";
-    src: url("../../fonts/NimbusSanL-RegIta-webfont.woff");
-    font-weight: normal;
-    font-style: italic;
+  font-family: "nimbus_sans_lregular_italic";
+  src: url("../../fonts/NimbusSanL-RegIta-webfont.woff");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: "nimbus_sans_lbold";
-    src: url("../../fonts/NimbusSanL-Bol-webfont.woff");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "nimbus_sans_lbold";
+  src: url("../../fonts/NimbusSanL-Bol-webfont.woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "nimbus_sans_lbold_italic";
-    src: url("../../fonts/NimbusSanL-BolIta-webfont.woff");
-    font-weight: 700;
-    font-style: italic;
+  font-family: "nimbus_sans_lbold_italic";
+  src: url("../../fonts/NimbusSanL-BolIta-webfont.woff");
+  font-weight: 700;
+  font-style: italic;
 }
 
 /* Base
 ========================================================================== */
 
 body {
-    font-family: $nimbus-sans-regular;
-    font-size: rem(18);
-    line-height: (32 / 18);
-    color: $grey;
-    @include media-breakpoint-up(md) {
-        font-size: rem(16);
-        line-height: (29 / 16);
-    }
+  font-family: $nimbus-sans-regular;
+  font-size: rem(18);
+  line-height: (32 / 18);
+  color: $grey;
+  @include media-breakpoint-up(md) {
+    font-size: rem(16);
+    line-height: (29 / 16);
+  }
 }
 
 a {
-    .text-content & {
-        color: $red2;
-        font-weight: 700;
-        font-family: $nimbus-sans-bold;
-        text-decoration: underline;
-        transition: $link-transition;
-        &:hover {
-            color: $link_hover-color;
+  .text-content & {
+    color: $red2;
+    font-weight: 700;
+    font-family: $nimbus-sans-bold;
+    &.fancy-link {
+      color: $fancy-link-color;
+      font-family: $fancy-link-font-family;
+      font-size: $fancy-link-font-size;
+      font-weight: $fancy-link-font-weight;
+      margin-right: 1.1rem;
+      position: relative;
+      text-decoration: $fancy-link-text-decoration;
+      transition: $fancy-link-transition;
+      &:hover {
+        color: $fancy-link_hover-color;
+        &:after {
+          transform: translateX(66.667%);
         }
-        &.fancy-link {
-            color: $fancy-link-color;
-            font-family: $fancy-link-font-family;
-            font-size: $fancy-link-font-size;
-            font-weight: $fancy-link-font-weight;
-            margin-right: 1.1rem;
-            position: relative;
-            text-decoration: $fancy-link-text-decoration;
-            transition: $fancy-link-transition;
-            &:hover {
-                color: $fancy-link_hover-color;
-                &:after {
-                    transform: translateX(66.667%);
-                }
-            }
-            &:after {
-                content: $fancy-link-icon;
-                position: absolute;
-                transform: translateX(33.333%);
-                transition: $fancy-link-icon-transition;
-            }
-        }
+      }
+      &:after {
+        content: $fancy-link-icon;
+        position: absolute;
+        transform: translateX(33.333%);
+        transition: $fancy-link-icon-transition;
+      }
     }
+  }
 }
 
 p {
-    margin: rem(7) 0;
-    &:first-child {
-        margin-top: 0;
+  margin: rem(7) 0;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    text-decoration: underline;
+    transition: $link-transition;
+    &:hover {
+      color: $link_hover-color;
     }
-    &:last-child {
-        margin-bottom: 0;
-    }
+  }
 }
 
 ul,
 ol {
-    .text-content & {
-        margin: $list-margin;
-        padding: $list-padding;
-        li {
-            font-size: rem(18);
-            line-height: (32 / 18);
-            margin: $list-item-margin;
-            @include media-breakpoint-up(md) {
-                font-size: rem(16);
-                line-height: (29 / 16);
-            }
-            &:first-child {
-                margin-top: 0;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        ul,
-        ol {
-            margin: $list-list-margin;
-        }
+  .text-content & {
+    margin: $list-margin;
+    padding: $list-padding;
+    li {
+      font-size: rem(18);
+      line-height: (32 / 18);
+      margin: $list-item-margin;
+      @include media-breakpoint-up(md) {
+        font-size: rem(16);
+        line-height: (29 / 16);
+      }
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
-    .text-content > & {
+    ul,
+    ol {
+      margin: $list-list-margin;
+    }
+  }
+  .text-content > & {
+    &:first-child {
+      margin-top: 0;
+      ul,
+      ol,
+      li {
         &:first-child {
-            margin-top: 0;
-            ul,
-            ol,
-            li {
-                &:first-child {
-                    margin-top: 0;
-                }
-            }
+          margin-top: 0;
         }
-        &:last-child {
-            margin-bottom: 0;
-            ul,
-            ol,
-            li {
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
+      }
     }
+    &:last-child {
+      margin-bottom: 0;
+      ul,
+      ol,
+      li {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 
 ul {
-    .text-content & {
-        list-style-type: none;
+  .text-content & {
+    list-style-type: none;
+    li {
+      padding-left: rem(20);
+      text-indent: rem(-20);
+      &:before {
+        content: "•";
+        padding-right: rem(13);
+        color: $red2;
+      }
+      ul {
         li {
-            padding-left: rem(20);
-            text-indent: rem(-20);
-            &:before {
-                content: "•";
-                padding-right: rem(13);
-                color: $red2;
-            }
-            ul {
-                li {
-                    &:before {
-                        content: "–";
-                        padding-right: rem(10);
-                        color: $red2;
-                    }
-                }
-            }
+          &:before {
+            content: "–";
+            padding-right: rem(10);
+            color: $red2;
+          }
         }
+      }
     }
+  }
 }
 
 ol {
-    .text-content & {
-        list-style-type: none;
-        counter-reset: item;
-        li {
-            &:before {
-                content: counter(item) ". ";
-                counter-increment: item;
-                color: $red2;
-            }
-        }
+  .text-content & {
+    list-style-type: none;
+    counter-reset: item;
+    li {
+      &:before {
+        content: counter(item) ". ";
+        counter-increment: item;
+        color: $red2;
+      }
     }
+  }
 }
 
 /* Headings
@@ -196,102 +198,102 @@ h5,
 h6,
 .h6,
 %h6 {
-    line-height: $heading-line-height;
-    &:first-child {
-        margin-top: 0;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
+  line-height: $heading-line-height;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 h1,
 .h1,
 %h1 {
-    color: $red;
-    font-family: $merriweather;
-    font-size: rem(50);
-    font-weight: normal;
-    letter-spacing: 0;
-    line-height: (60 / 50);
-    margin: $h1-margin;
-    @include media-breakpoint-up(md) {
-        font-size: rem(70);
-        line-height: (93 / 70);
-    }
+  color: $red;
+  font-family: $merriweather;
+  font-size: rem(50);
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: (60 / 50);
+  margin: $h1-margin;
+  @include media-breakpoint-up(md) {
+    font-size: rem(70);
+    line-height: (93 / 70);
+  }
 }
 
 h2,
 .h2,
 %h2 {
-    color: $red;
-    font-family: $merriweather;
-    font-size: rem(30);
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: (42 / 30);
-    margin: $h2-margin;
-    padding-bottom: rem(28);
-    margin-bottom: rem(22);
-    position: relative;
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: rem(50);
-        border-bottom: rem(2) solid $yellow;
-        left: 0;
-    }
-    & + h3,
-    & + .h3,
-    & + %h3 {
-        margin-top: 0;
-    }
+  color: $red;
+  font-family: $merriweather;
+  font-size: rem(30);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: (42 / 30);
+  margin: $h2-margin;
+  padding-bottom: rem(28);
+  margin-bottom: rem(22);
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: rem(50);
+    border-bottom: rem(2) solid $yellow;
+    left: 0;
+  }
+  & + h3,
+  & + .h3,
+  & + %h3 {
+    margin-top: 0;
+  }
 }
 
 h3,
 .h3,
 %h3 {
-    color: $red;
-    font-family: $nimbus-sans-bold;
-    font-size: rem(21);
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: (30 / 21);
-    margin: rem(38) 0 rem(9) 0;
+  color: $red;
+  font-family: $nimbus-sans-bold;
+  font-size: rem(21);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: (30 / 21);
+  margin: rem(38) 0 rem(9) 0;
 }
 
 h4,
 .h4,
 %h4 {
-    color: $red2;
-    font-family: $nimbus-sans-bold;
-    font-size: rem(18);
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: (25 / 18);
-    margin: $h4-margin;
+  color: $red2;
+  font-family: $nimbus-sans-bold;
+  font-size: rem(18);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: (25 / 18);
+  margin: $h4-margin;
 }
 
 h5,
 .h5,
 %h5 {
-    color: $red2;
-    font-family: $nimbus-sans-bold;
-    font-size: rem(16);
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: (25 / 16);
-    margin: $h5-margin;
+  color: $red2;
+  font-family: $nimbus-sans-bold;
+  font-size: rem(16);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: (25 / 16);
+  margin: $h5-margin;
 }
 
 h6,
 .h6,
 %h6 {
-    color: $h6-color;
-    font-family: $h6-font-family;
-    font-size: $h6-font-size;
-    font-weight: $h6-font-weight;
-    letter-spacing: $h6-letter-spacing;
-    margin: $h6-margin;
+  color: $h6-color;
+  font-family: $h6-font-family;
+  font-size: $h6-font-size;
+  font-weight: $h6-font-weight;
+  letter-spacing: $h6-letter-spacing;
+  margin: $h6-margin;
 }

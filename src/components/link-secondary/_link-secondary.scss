@@ -1,0 +1,44 @@
+.link-secondary {
+  display: inline-block;
+  appearance: none;
+  margin: rem(10) 0;
+  cursor: pointer;
+  color: $red2;
+  font-family: $nimbus-sans-bold;
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: (25 / 18);
+  text-decoration: none;
+  position: relative;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    right: rem(-23);
+    transform-origin: center;
+  }
+  &:after {
+    top: rem(8);
+    width: rem(8);
+    height: rem(7);
+    border-right: rem(2) solid $red2;
+    border-bottom: rem(2) solid $red2;
+    transform: rotate(-45deg);
+    transition: 0.2s right ease-in-out;
+  }
+  &:before {
+    width: rem(14);
+    border-bottom: rem(2) solid $red2;
+    top: rem(11.253);
+    transition: 0.2s transform ease-in-out;
+    transform-origin: center left;
+  }
+  &:hover {
+    &:before {
+      transform: scaleX(1.5);
+    }
+    &:after {
+      right: rem(-31);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<div class="button-set">
+  <ul>
+    {% for item in items %}
+      <li>
+        <a class="button" href="{{ item.url }}" class="{{ style }}">{{ item.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
