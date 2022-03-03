@@ -1,0 +1,10 @@
+.multi-column-text {
+  @include media-breakpoint-up(md) {
+    display: flex;
+  }
+}
+.multi-column-text__column {
+  @include media-breakpoint-up(md) {
+    flex: 1 1 0px;
+  }
+}

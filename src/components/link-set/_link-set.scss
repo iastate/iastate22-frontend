@@ -1,3 +1,7 @@
+.paragraph-widget--link-set {
+  margin-bottom: rem(50);
+}
+
 .link-set__link {
   &[class="link-set__link"][href*="//"]:not([href*="iastate.edu"]) {
     color: $red2;

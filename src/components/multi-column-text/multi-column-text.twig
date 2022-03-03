@@ -1,0 +1,9 @@
+<div class="multi-column-text">
+  {% for column in columns %}
+  <div class="multi-column-text__column">
+    <div class="text-content">
+      {{ column | raw }}
+    </div>
+  </div>
+  {% endfor %}
+</div>
