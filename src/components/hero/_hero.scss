@@ -44,7 +44,7 @@
     transform: translate(-50%, -50%);
     padding: rem(20);
 
-    @include media("800") {
+    @include media-breakpoint-up(md) {
         max-width: 50%;
     }
 }

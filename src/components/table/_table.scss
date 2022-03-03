@@ -1,5 +1,3 @@
-@import "variables";
-
 // General Table Styles ------------------------------
 .table {
     width: 100%;
@@ -29,7 +27,7 @@
         display: table-row;
     }
 
-    @include media($silc-table-media-query) {
+    @include media-breakpoint-up(md) {
         thead {
             display: table-header-group;
         }
@@ -49,7 +47,8 @@
     thead {
         text-align: left;
         tr {
-            background-color: $silc-table-thead-background-color;
+            background-color: $black;
+            color: $white;
         }
         th {
             padding: rem(10);
@@ -58,10 +57,10 @@
 
     tbody {
         tr {
-            border-bottom: 1px solid $silc-table-border-color;
+            border-bottom: 1px solid $table-border-color;
 
             &:nth-child(odd) {
-                background-color: $silc-table-stripe-background;
+                background-color: $table-striped-bg;
             }
         }
     }

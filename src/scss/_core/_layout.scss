@@ -7,18 +7,14 @@
 
 .outer-pad {
     padding: rem(48) rem(16);
-    @include media("550") {
+    @include media-breakpoint-up(sm) {
         padding: rem(48) rem(32);
     }
-    @include media("800") {
+    @include media-breakpoint-up(md) {
         padding: rem(48) rem(64);
     }
 }
 
 .section {
     margin: rem(48) 0;
-}
-
-.silc-position--relative {
-    position: relative;
 }

@@ -1,14 +1,45 @@
 /* Font Declarations
 ========================================================================== */
 
+@font-face {
+    font-family: "nimbus_sans_lregular";
+    src: url("../../fonts/NimbusSanL-Reg-webfont.woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nimbus_sans_lregular_italic";
+    src: url("../../fonts/NimbusSanL-RegIta-webfont.woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "nimbus_sans_lbold";
+    src: url("../../fonts/NimbusSanL-Bol-webfont.woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "nimbus_sans_lbold_italic";
+    src: url("../../fonts/NimbusSanL-BolIta-webfont.woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
 /* Base
 ========================================================================== */
 
 body {
-    font-family: $base-font-family;
-    font-size: $base-font-size;
+    font-family: $nimbus-sans-regular;
+    font-size: rfs-value(18px);
     line-height: $base-line-height;
     color: $base-color;
+    @include media-breakpoint-up(md) {
+        font-size: rfs-value(16px);
+    }
 }
 
 a {
@@ -143,55 +174,64 @@ h6,
 h1,
 .h1,
 %h1 {
-    color: $h1-color;
-    font-family: $h1-font-family;
-    font-size: $h1-font-size;
-    font-weight: $h1-font-weight;
-    letter-spacing: $h1-letter-spacing;
+    color: $red;
+    font-family: $merriweather;
+    font-size: rfs-value(50px);
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: (60 / 50);
     margin: $h1-margin;
+    @include media-breakpoint-up(md) {
+        font-size: rfs-value(70px);
+        line-height: (93 / 70);
+    }
 }
 
 h2,
 .h2,
 %h2 {
-    color: $h2-color;
-    font-family: $h2-font-family;
-    font-size: $h2-font-size;
-    font-weight: $h2-font-weight;
-    letter-spacing: $h2-letter-spacing;
+    color: $red;
+    font-family: $merriweather;
+    font-size: rfs-value(30px);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: (42 / 30);
     margin: $h2-margin;
 }
 
 h3,
 .h3,
 %h3 {
-    color: $h3-color;
-    font-family: $h3-font-family;
-    font-size: $h3-font-size;
-    font-weight: $h3-font-weight;
-    letter-spacing: $h3-letter-spacing;
+    color: $red;
+    font-family: $nimbus-sans-bold;
+    font-size: rfs-value(21px);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: (30 / 21);
     margin: $h3-margin;
 }
 
 h4,
 .h4,
 %h4 {
-    color: $h4-color;
-    font-family: $h4-font-family;
-    font-size: $h4-font-size;
-    font-weight: $h4-font-weight;
-    letter-spacing: $h4-letter-spacing;
+    color: $red2;
+    font-family: $nimbus-sans-bold;
+    font-size: rfs-value(18px);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: (25 / 18);
     margin: $h4-margin;
 }
 
 h5,
 .h5,
 %h5 {
-    color: $h5-color;
-    font-family: $h5-font-family;
-    font-size: $h5-font-size;
-    font-weight: $h5-font-weight;
-    letter-spacing: $h5-letter-spacing;
+    color: $red2;
+    font-family: $nimbus-sans-bold;
+    font-size: rfs-value(16px);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: (25 / 16);
     margin: $h5-margin;
 }
 

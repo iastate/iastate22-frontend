@@ -1,15 +1,20 @@
 @import "~normalize-scss";
 
 // Silc Components
-@import "silc/overrides";
-@import "~silc-core/src/scss/index";
-@import "~silc-grid/src/scss/index";
 @import "~silc-accordion/src/scss/index";
-@import "~silc-nav/src/scss/index";
-@import "~silc-utilities/src/scss/index";
+
+// Variable Overrides
+@import "_core/variables";
+
+// Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/grid";
 
 // Core
-@import "_core/variables";
 @import "_core/placeholder-selectors";
 @import "_core/base";
 @import "_core/typography";
