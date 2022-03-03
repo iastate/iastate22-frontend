@@ -34,18 +34,21 @@
 
 body {
     font-family: $nimbus-sans-regular;
-    font-size: rfs-value(18px);
-    line-height: $base-line-height;
-    color: $base-color;
+    font-size: rem(18);
+    line-height: (32 / 18);
+    color: $grey;
     @include media-breakpoint-up(md) {
-        font-size: rfs-value(16px);
+        font-size: rem(16);
+        line-height: (29 / 16);
     }
 }
 
 a {
     .text-content & {
-        color: $link-color;
-        text-decoration: $link-text-decoration;
+        color: $red2;
+        font-weight: 700;
+        font-family: $nimbus-sans-bold;
+        text-decoration: underline;
         transition: $link-transition;
         &:hover {
             color: $link_hover-color;
@@ -76,7 +79,7 @@ a {
 }
 
 p {
-    margin: $base-margin;
+    margin: rem(7) 0;
     &:first-child {
         margin-top: 0;
     }
@@ -91,8 +94,13 @@ ol {
         margin: $list-margin;
         padding: $list-padding;
         li {
-            font-size: $list-item-font-size;
+            font-size: rem(18);
+            line-height: (32 / 18);
             margin: $list-item-margin;
+            @include media-breakpoint-up(md) {
+                font-size: rem(16);
+                line-height: (29 / 16);
+            }
             &:first-child {
                 margin-top: 0;
             }
@@ -131,13 +139,39 @@ ol {
 
 ul {
     .text-content & {
-        list-style-type: $unordered-list-style-type;
+        list-style-type: none;
+        li {
+            padding-left: rem(20);
+            text-indent: rem(-20);
+            &:before {
+                content: "•";
+                padding-right: rem(13);
+                color: $red2;
+            }
+            ul {
+                li {
+                    &:before {
+                        content: "–";
+                        padding-right: rem(10);
+                        color: $red2;
+                    }
+                }
+            }
+        }
     }
 }
 
 ol {
     .text-content & {
-        list-style-type: $ordered-list-style-type;
+        list-style-type: none;
+        counter-reset: item;
+        li {
+            &:before {
+                content: counter(item) ". ";
+                counter-increment: item;
+                color: $red2;
+            }
+        }
     }
 }
 
@@ -176,13 +210,13 @@ h1,
 %h1 {
     color: $red;
     font-family: $merriweather;
-    font-size: rfs-value(50px);
+    font-size: rem(50);
     font-weight: normal;
     letter-spacing: 0;
     line-height: (60 / 50);
     margin: $h1-margin;
     @include media-breakpoint-up(md) {
-        font-size: rfs-value(70px);
+        font-size: rem(70);
         line-height: (93 / 70);
     }
 }
@@ -192,11 +226,27 @@ h2,
 %h2 {
     color: $red;
     font-family: $merriweather;
-    font-size: rfs-value(30px);
+    font-size: rem(30);
     font-weight: 700;
     letter-spacing: 0;
     line-height: (42 / 30);
     margin: $h2-margin;
+    padding-bottom: rem(28);
+    margin-bottom: rem(22);
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: rem(50);
+        border-bottom: rem(2) solid $yellow;
+        left: 0;
+    }
+    & + h3,
+    & + .h3,
+    & + %h3 {
+        margin-top: 0;
+    }
 }
 
 h3,
@@ -204,11 +254,11 @@ h3,
 %h3 {
     color: $red;
     font-family: $nimbus-sans-bold;
-    font-size: rfs-value(21px);
+    font-size: rem(21);
     font-weight: 700;
     letter-spacing: 0;
     line-height: (30 / 21);
-    margin: $h3-margin;
+    margin: rem(38) 0 rem(9) 0;
 }
 
 h4,
@@ -216,7 +266,7 @@ h4,
 %h4 {
     color: $red2;
     font-family: $nimbus-sans-bold;
-    font-size: rfs-value(18px);
+    font-size: rem(18);
     font-weight: 700;
     letter-spacing: 0;
     line-height: (25 / 18);
@@ -228,7 +278,7 @@ h5,
 %h5 {
     color: $red2;
     font-family: $nimbus-sans-bold;
-    font-size: rfs-value(16px);
+    font-size: rem(16);
     font-weight: 700;
     letter-spacing: 0;
     line-height: (25 / 16);

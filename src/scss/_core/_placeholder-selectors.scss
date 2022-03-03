@@ -26,3 +26,23 @@
         }
     }
 }
+
+%outer-pad-x,
+.outer-pad-x {
+    padding-left: rem(36);
+    padding-right: rem(36);
+    @include media-breakpoint-up(md) {
+        padding-left: rem(70);
+        padding-right: rem(70);
+    }
+    @include media-breakpoint-up(xl) {
+        padding-left: rem(190);
+        padding-right: rem(298);
+    }
+}
+
+%outer-pad-y,
+.outer-pad-y {
+    padding-top: rem(48);
+    padding-bottom: rem(48);
+}

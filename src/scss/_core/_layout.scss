@@ -1,17 +1,17 @@
 .max-bound {
     width: 100%;
-    max-width: rem(1400);
+    max-width: rem(1600);
     margin: 0 auto;
     background-color: #fff;
 }
 
 .outer-pad {
-    padding: rem(48) rem(16);
+    @extend %outer-pad-x;
     @include media-breakpoint-up(sm) {
-        padding: rem(48) rem(32);
+        // padding: rem(48) rem(32);
     }
     @include media-breakpoint-up(md) {
-        padding: rem(48) rem(64);
+        // padding: rem(48) rem(64);
     }
 }
 

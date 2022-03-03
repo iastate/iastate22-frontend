@@ -15,6 +15,7 @@
 @import "~bootstrap/scss/grid";
 
 // Core
+@import "_core/functions";
 @import "_core/placeholder-selectors";
 @import "_core/base";
 @import "_core/typography";
