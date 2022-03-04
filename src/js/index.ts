@@ -13,6 +13,7 @@ import Modal from "../components/modal/modal";
 import lazyLoadInit from "../components/lazyload/_lazyload";
 import cardsInit from "../components/card/card";
 import privacyConsentInit from "../components/privacy-consent/privacy-consent";
+import accordionsInit from "./components/accordion";
 
 /**
  * Init
@@ -28,6 +29,7 @@ Modal.init();
 lazyLoadInit();
 cardsInit();
 privacyConsentInit();
+accordionsInit();
 
 /**
  * Example VueJS app
