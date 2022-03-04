@@ -5,7 +5,7 @@
     @include media-breakpoint-up(md) {
       max-width: 50%;
       float: left;
-      margin: rem(10) rem(45) rem(5) 0;
+      margin: rem(10) rem(45) rem(10) 0;
     }
     @include media-breakpoint-up(lg) {
       margin-right: rem(90);

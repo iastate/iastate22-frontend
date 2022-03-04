@@ -1,0 +1,9 @@
+<div class="callout-with-image-small-set">
+  <ul>
+    {% for callout in callouts %}
+    <li>
+        {% include "@callout-with-image--small" with callout %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

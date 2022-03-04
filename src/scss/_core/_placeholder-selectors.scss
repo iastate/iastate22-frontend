@@ -1,48 +1,79 @@
 %visible-for-screen-readers,
 .visible-for-screen-readers {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* Removes default list style and uses CSS before pseudo's instead to allow styling of numbers */
 %styled-ol,
 .styled-ol {
-    counter-reset: list;
-    list-style-type: none !important;
-    li {
-        position: relative;
-        &:before {
-            content: counter(list, $ordered-list-style-type) ".\00a0";
-            counter-increment: list;
-            display: inline-block;
-            margin-right: -1em;
-            position: absolute;
-            transform: translateX(-100%);
-        }
+  counter-reset: list;
+  list-style-type: none !important;
+  li {
+    position: relative;
+    &:before {
+      content: counter(list, $ordered-list-style-type) ".\00a0";
+      counter-increment: list;
+      display: inline-block;
+      margin-right: -1em;
+      position: absolute;
+      transform: translateX(-100%);
     }
+  }
 }
 
 %outer-pad-x,
 .outer-pad-x {
-    padding-left: rem(36);
-    padding-right: rem(36);
-    @include media-breakpoint-up(md) {
-        padding-left: rem(70);
-        padding-right: rem(70);
-    }
-    @include media-breakpoint-up(xl) {
-        padding-left: rem(190);
-        padding-right: rem(298);
-    }
+  padding-left: rem(36);
+  padding-right: rem(36);
+  @include media-breakpoint-up(md) {
+    padding-left: rem(70);
+    padding-right: rem(70);
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: rem(190);
+    padding-right: rem(298);
+  }
 }
 
 %outer-pad-y,
 .outer-pad-y {
-    padding-top: rem(48);
-    padding-bottom: rem(48);
+  padding-top: rem(48);
+  padding-bottom: rem(48);
+}
+
+%responsive-img,
+.responsive-img {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+%caption,
+.caption {
+  margin-top: rem(8);
+  font-family: $nimbus-sans-regular-italic;
+  font-size: rem(16);
+  line-height: (26 / 16);
+  @include media-breakpoint-up(lg) {
+    font-size: rem(14);
+    line-height: (22 / 14);
+  }
 }

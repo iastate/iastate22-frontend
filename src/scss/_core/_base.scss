@@ -16,6 +16,7 @@ body {
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 ul,
@@ -44,14 +45,7 @@ ol {
   figcaption {
     caption-side: bottom;
     display: table-caption;
-    margin-top: rem(8);
-    font-family: $nimbus-sans-regular-italic;
-    font-size: rem(16);
-    line-height: (26 / 16);
-    @include media-breakpoint-up(lg) {
-      font-size: rem(14);
-      line-height: (22 / 14);
-    }
+    @extend %caption;
   }
 }
 

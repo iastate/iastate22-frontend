@@ -1,10 +1,10 @@
-<div class="h2-callout-with-image">
-  <div class="h2-callout-with-image__media">
+<div class="callout-with-image callout-with-image--small">
+  <div class="callout-with-image__media">
     <img src="{{ image|path }}" alt="" width="622" height="414" />
   </div>
-  <div class="h2-callout-with-image__content">
-    <h2>{{title}}</h2>
+  <div class="callout-with-image__content text-content">
+    <h3>{{title}}</h3>
     <p>{{body_copy}}</p>
-    {% include "@button" with button %}
+    {% include "@link-set" with link_set %}
   </div>
 </div>

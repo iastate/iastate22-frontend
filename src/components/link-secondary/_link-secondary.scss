@@ -18,7 +18,7 @@
     transform-origin: center;
   }
   &:after {
-    top: rem(8);
+    top: rem(8.125);
     width: rem(8);
     height: rem(7);
     border-right: rem(2) solid $red2;
@@ -29,7 +29,7 @@
   &:before {
     width: rem(14);
     border-bottom: rem(2) solid $red2;
-    top: rem(11.253);
+    top: rem(10.21);
     transition: 0.2s transform ease-in-out;
     transform-origin: center left;
   }
