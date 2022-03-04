@@ -1,0 +1,10 @@
+<div class="h2-callout-with-image">
+  <div class="h2-callout-with-image__media">
+    <img src="{{ image|path }}" alt="" width="622" height="414" />
+  </div>
+  <div class="h2-callout-with-image__content">
+    <h2>{{title}}</h2>
+    <p>{{body_copy}}</p>
+    {% include "@button" with button %}
+  </div>
+</div>
