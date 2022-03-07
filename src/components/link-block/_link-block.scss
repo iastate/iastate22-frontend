@@ -1,7 +1,5 @@
 .paragraph-widget--link-block {
-  @include media-breakpoint-up(xl) {
-    margin-right: rem(-108);
-  }
+  @extend %extended-component-width;
 }
 
 .link-block {

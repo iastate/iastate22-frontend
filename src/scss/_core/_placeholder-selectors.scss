@@ -41,6 +41,12 @@
   }
 }
 
+%extended-component-width {
+  @include media-breakpoint-up(xl) {
+    margin-right: rem(-108);
+  }
+}
+
 %outer-pad-y,
 .outer-pad-y {
   padding-top: rem(48);

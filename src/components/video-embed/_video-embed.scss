@@ -1,7 +1,5 @@
 .paragraph-widget--video-embed {
-  @include media-breakpoint-up(xl) {
-    margin-right: rem(-108);
-  }
+  @extend %extended-component-width;
 }
 
 .video-embed__media-wrap {

@@ -1,8 +1,6 @@
 .paragraph-widget--external-news-story {
   margin-top: rem(60);
-  @include media-breakpoint-up(xl) {
-    margin-right: rem(-108);
-  }
+  @extend %extended-component-width;
 }
 
 .external-news-story {
