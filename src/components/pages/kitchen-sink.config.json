@@ -247,6 +247,17 @@
           }
         ]
       }
+    },
+    "pull_quote_no_author": {
+      "quote": "Being involved with Multicultural Student Affairs programs has helped me a lot and I have met people who inspire me to pursue higher education.",
+      "author": "Ser Paw",
+      "author_role": "International Studies Major"
+    },
+    "pull_quote_with_author": {
+      "quote": "Being involved with Multicultural Student Affairs programs has helped me a lot and I have met people who inspire me to pursue higher education.",
+      "author": "Ser Paw",
+      "author_role": "International Studies Major",
+      "portrait": "../../img/featured-quote.jpg"
     }
   }
 }

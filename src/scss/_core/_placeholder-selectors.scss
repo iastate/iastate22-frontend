@@ -47,6 +47,19 @@
   }
 }
 
+%full-width-component {
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-70);
+    margin-right: rem(-70);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-190);
+    margin-right: rem(-298);
+  }
+}
+
 %outer-pad-y,
 .outer-pad-y {
   padding-top: rem(48);
