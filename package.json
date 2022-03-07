@@ -79,7 +79,8 @@
     "silc-nav": "^1.0.8",
     "silc-utilities": "^0.3.2",
     "tablesaw": "^3.0.9",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "youtube-player": "^5.5.2"
   },
   "husky": {
     "hooks": {

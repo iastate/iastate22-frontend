@@ -97,6 +97,8 @@ ol {
 
 // paragraph widgets
 .paragraph-widget {
+  margin-top: rem(20);
+  margin-bottom: rem(30);
   @include media-breakpoint-up(lg) {
     margin-top: rem(30);
     margin-bottom: rem(40);

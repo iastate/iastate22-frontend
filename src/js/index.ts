@@ -14,6 +14,7 @@ import lazyLoadInit from "../components/lazyload/_lazyload";
 import cardsInit from "../components/card/card";
 import privacyConsentInit from "../components/privacy-consent/privacy-consent";
 import accordionsInit from "./components/accordion";
+import videoEmbedInit from "./components/video-embed";
 
 /**
  * Init
@@ -30,6 +31,7 @@ lazyLoadInit();
 cardsInit();
 privacyConsentInit();
 accordionsInit();
+videoEmbedInit();
 
 /**
  * Example VueJS app

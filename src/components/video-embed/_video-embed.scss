@@ -1,0 +1,75 @@
+.video-embed__media-wrap {
+  @extend %responsive-img;
+
+  &:before {
+    padding-top: 56.125%;
+  }
+
+  img {
+    transition: 0.2s opacity ease-in-out;
+  }
+
+  iframe {
+    transition: 0.2s opacity ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  &.video-playing {
+    img {
+      opacity: 0;
+    }
+    iframe {
+      opacity: 1;
+    }
+    .video-embed__button {
+      opacity: 0;
+    }
+  }
+}
+
+.video-embed__button {
+  background-image: url("data:image/svg+xml,%3Csvg width='82' height='82' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg opacity='.377' fill='%23FFF' fill-rule='nonzero' transform='translate(1 1)'%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3Cpath d='M40 0C17.909 0 0 17.909 0 40s17.909 40 40 40 40-17.909 40-40S62.091 0 40 0Zm0 1c21.54 0 39 17.46 39 39S61.54 79 40 79 1 61.54 1 40 18.46 1 40 1Z'/%3E%3C/g%3E%3Cpath d='M24 22.818h35V57.93H24z'/%3E%3Cpath d='m59.986 39.288-28.433-17.68c-2.073-1.363-3.767-.36-3.767 2.229V58.16c0 2.593 1.694 3.593 3.767 2.229l28.433-17.68c.565-.4.934-1.022 1.014-1.71a2.438 2.438 0 0 0-1.01-1.707l-.004-.004Z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: rem(60);
+  background-color: transparent;
+  border: none;
+  z-index: 5;
+  cursor: pointer;
+  width: rem(60);
+  height: rem(60);
+  margin-top: rem(-30);
+  margin-left: rem(-30);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 0.2s opacity ease-in-out, 0.2s transform ease-in-out;
+  @include media-breakpoint-up(lg) {
+    width: rem(80);
+    height: rem(80);
+    margin-top: rem(-40);
+    margin-left: rem(-40);
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.video-embed__caption {
+  @extend %caption;
+  @include media-breakpoint-up(md) {
+    padding-left: rem(53);
+    padding-right: rem(53);
+  }
+  @include media-breakpoint-up(lg) {
+    padding-left: rem(106);
+    padding-right: rem(106);
+    margin-top: rem(12);
+    line-height: (26 / 14);
+  }
+}
