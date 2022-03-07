@@ -1,0 +1,16 @@
+{
+  "context": {
+    "subhead": "Optional Subheading External News/Story Feature",
+    "image": "../../img/Component-Feature-News-Story-Image.jpg",
+    "headline": "Headline Nemo enim irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+    "body_copy": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni lorem ipsem. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "link_set": {
+      "links": [
+        {
+          "url": "https://www.google.com/",
+          "text": "External Link Style"
+        }
+      ]
+    }
+  }
+}

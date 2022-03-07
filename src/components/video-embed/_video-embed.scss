@@ -1,3 +1,9 @@
+.paragraph-widget--video-embed {
+  @include media-breakpoint-up(xl) {
+    margin-right: rem(-108);
+  }
+}
+
 .video-embed__media-wrap {
   @extend %responsive-img;
 

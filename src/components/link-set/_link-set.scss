@@ -22,6 +22,7 @@
     font-family: $nimbus-sans-bold;
     font-weight: 700;
     font-size: rem(18);
+    text-decoration: none;
     line-height: (25 / 18);
     &:after {
       content: "";
@@ -35,6 +36,9 @@
       position: relative;
       top: rem(4);
       margin-left: rem(12);
+    }
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

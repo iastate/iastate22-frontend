@@ -1,13 +1,17 @@
+.paragraph-widget--link-block {
+  @include media-breakpoint-up(xl) {
+    margin-right: rem(-108);
+  }
+}
+
 .link-block {
   background-color: $off-white;
-  padding: rem(55) rem(39) rem(60);
+  padding: rem(55) rem(39);
   @include media-breakpoint-up(md) {
     padding-left: rem(53);
     padding-right: rem(53);
   }
   @include media-breakpoint-up(lg) {
-    padding-left: rem(106);
-    padding-right: rem(106);
     padding: rem(60) rem(106);
   }
 
