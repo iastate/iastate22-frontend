@@ -196,6 +196,43 @@
       "title": "Your future starts now.",
       "video_id": "LjOmcZkXVcU",
       "caption": "Video caption lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    },
+    "link_block": {
+      "title": "Optional Subheading Lorem Ipsum Dolor",
+      "link_set": {
+        "links": [
+          {
+            "url": "https://iastate.edu",
+            "text": "Link Label Lorem Ipsum Dolor Sit",
+            "variant": "link-secondary"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Link Label Lorem Ipsum Dolor",
+            "variant": "link-secondary"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Link Label Lorem",
+            "variant": "link-secondary"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Link Name Lorem Ipsum",
+            "variant": "link-secondary"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Link Label Lorem Dolor",
+            "variant": "link-secondary"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Link Label Lorem Ipsum Dolor",
+            "variant": "link-secondary"
+          }
+        ]
+      }
     }
   }
 }
