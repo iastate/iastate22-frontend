@@ -1,0 +1,49 @@
+.paragraph-widget--card-set {
+  @extend %extended-component-width;
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-20);
+    margin-right: rem(-128);
+    margin-bottom: rem(60);
+  }
+}
+
+.card-set {
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    padding-bottom: rem(30);
+  }
+  &:after {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      background-color: $off-white;
+      position: absolute;
+      bottom: 0;
+      left: rem(-70);
+      right: rem(-70);
+      height: 62%;
+      max-height: rem(365);
+    }
+    @include media-breakpoint-up(xl) {
+      left: rem(-170);
+      right: rem(-170);
+      max-height: rem(340);
+    }
+  }
+  ul {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: rem(-40);
+    }
+    li {
+      max-width: rem(400);
+      margin: 0 auto rem(30);
+      @include media-breakpoint-up(lg) {
+        max-width: none;
+        flex: 0 1 auto;
+        width: 33.3%;
+        padding-right: rem(40);
+      }
+    }
+  }
+}

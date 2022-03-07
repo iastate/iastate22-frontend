@@ -1,5 +1,9 @@
 .paragraph-widget--pull-quote {
   @extend %full-width-component;
+  @include media-breakpoint-up(xl) {
+    margin-top: rem(60);
+    margin-bottom: rem(60);
+  }
 }
 
 .pull-quote {

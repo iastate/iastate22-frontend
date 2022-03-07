@@ -1,75 +1,109 @@
 @import "variables";
 
 .card {
-    border: $card-border;
-    border-radius: $card-border-radius;
-    box-shadow: $card-shadow;
-    background: $card-background;
-    box-sizing: $card-box-sizing;
-    overflow: $card-overflow;
-    &.card--clickable {
-        cursor: pointer;
+  box-shadow: 9px 9px 20px rgba($black, 0.2);
+  background: $white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  &.clickable {
+    cursor: pointer;
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+      .card__media {
+        img {
+          transform: scale(1.1);
+        }
+      }
     }
+  }
+  &:before {
+    content: "";
+    background-color: $yellow;
+    position: absolute;
+    top: rem(-8);
+    left: rem(-8);
+    right: rem(-8);
+    bottom: rem(-8);
+    z-index: 0;
+    opacity: 0;
+    transition: 0.2s opacity ease-in-out;
+  }
 }
 
 .card--hz {
-    display: flex;
-    border: $card--hz-border;
-    box-shadow: $card--hz-shadow;
+  display: flex;
+  border: $card--hz-border;
+  box-shadow: $card--hz-shadow;
 }
 
 .card__cta {
-    background-color: $card__cta-background;
-    color: $card__cta-color;
-    text-decoration: $card__cta-text-decoration;
-    transition: $card__cta_hover-transition;
-    will-change: $card__cta-will-change;
-    overflow: hidden;
-    &:hover {
-        background: $card__cta_hover-background;
-        color: $card__cta_hover-color;
-    }
+  font-family: $nimbus-sans-bold;
+  color: $red2;
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: (28 / 18);
+  transition: 0.2s color ease-in-out;
+  margin-top: rem(5);
+  display: inline-block;
+  &:hover {
+    color: $red;
+  }
 }
 
 .card__content {
-    margin: $card__content-margin;
-    padding: $card__content-padding;
+  margin: 0;
+  padding: rem(22) rem(41);
+  position: relative;
+  z-index: 2;
+  background-color: $white;
 
-    .card--hz & {
-        margin: $card--hz__content-margin;
-        padding: $card--hz__content-padding;
-        flex: 1;
-    }
+  .card--hz & {
+    margin: $card--hz__content-margin;
+    padding: $card--hz__content-padding;
+    flex: 1;
+  }
 }
 
 .card__media {
-    padding: $card__media-padding;
-    margin: $card__media-margin;
-    height: $card__media-height;
-    position: relative;
-    img {
-        display: block;
-        height: 100%;
-        width: 100%;
-        object-fit: $card__media-background-size;
-        object-position: $card__media-background-position;
-        position: absolute;
-        top: 0;
-        left: 0;
+  overflow: hidden;
+  z-index: 1;
+  .card:not(.card--hz) & {
+    @extend %responsive-img;
+    &:before {
+      content: "";
+      padding-top: 100%;
     }
+  }
 
-    .card:not(.card--hz) & {
-        &:before {
-            content: "";
-            display: block;
-            padding-top: $card__media-aspect-ratio;
-        }
-    }
+  img {
+    transition: 0.2s transform ease-in-out;
+  }
 
-    .card--hz & {
-        margin: $card--hz__media-margin;
-        padding: $card--hz__media-padding;
-        width: $card--hz__media-width;
-        height: $card--hz__media-height;
-    }
+  .card--hz & {
+    margin: $card--hz__media-margin;
+    padding: $card--hz__media-padding;
+    width: $card--hz__media-width;
+    height: $card--hz__media-height;
+  }
+}
+
+.card__title {
+  margin: 0;
+  padding: 0;
+  font-family: $nimbus-sans-bold;
+  font-weight: 700;
+  color: $red;
+  font-size: rem(21);
+  line-height: (30 / 21);
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+}
+
+.card__body {
+  margin-top: rem(5);
 }

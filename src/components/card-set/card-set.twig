@@ -1,0 +1,7 @@
+<div class="card-set">
+  <ul>
+    {% for card in cards %}
+    <li>{% include "@card" with card %}</li>
+    {% endfor %}
+  </ul>
+</div>

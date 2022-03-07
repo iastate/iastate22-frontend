@@ -258,6 +258,154 @@
       "author": "Ser Paw",
       "author_role": "International Studies Major",
       "portrait": "../../img/featured-quote.jpg"
+    },
+    "card_set_three_links": {
+      "cards": [
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-1.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-2.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-3.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        }
+      ]
+    },
+    "card_set_six": {
+      "cards": [
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-1.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-2.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-3.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-1.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-2.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-3.jpg",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        }
+      ]
+    },
+    "card_set_three_no_links": {
+      "cards": [
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-1.jpg"
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-2.jpg"
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "image": "../../img/Component-Card-Image-3.jpg"
+        }
+      ]
+    },
+    "card_set_three_links_no_images": {
+      "cards": [
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        },
+        {
+          "title": "Card Title Lorem Ipsum Dolor Sit Amet ",
+          "body": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>",
+          "url": "https://www.iastate.edu/",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Optional Link Text Lorem"
+          }
+        }
+      ]
     }
   }
 }

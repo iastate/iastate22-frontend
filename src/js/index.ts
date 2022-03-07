@@ -11,7 +11,7 @@ import { SilcCarouselInit } from "../components/carousel/carousel";
 import Tablesaw from "../components/table/table";
 import Modal from "../components/modal/modal";
 import lazyLoadInit from "../components/lazyload/_lazyload";
-import cardsInit from "../components/card/card";
+import cardsInit from "./components/card";
 import privacyConsentInit from "../components/privacy-consent/privacy-consent";
 import accordionsInit from "./components/accordion";
 import videoEmbedInit from "./components/video-embed";
