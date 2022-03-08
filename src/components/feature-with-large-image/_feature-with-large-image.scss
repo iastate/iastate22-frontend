@@ -1,0 +1,104 @@
+.paragraph-widget--feature-with-large-image {
+  @extend %full-width-component;
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(120);
+  }
+}
+
+.feature-with-large-image {
+  padding-left: rem(36);
+  padding-right: rem(36);
+  padding-bottom: rem(40);
+  background-color: $off-white;
+  border-top: rem(30) solid $red;
+  box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
+  @include media-breakpoint-up(lg) {
+    background-color: $white;
+    padding: 0;
+    border-top: none;
+    position: relative;
+    box-shadow: none;
+  }
+  h2 {
+    margin: 0 0 rem(25);
+    padding: 0;
+  }
+  .button-set {
+    margin-top: rem(25);
+  }
+  &:before {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      background-color: $red;
+      position: absolute;
+      top: rem(-60);
+      left: 0;
+      right: 0;
+      height: 50%;
+      max-height: rem(380);
+    }
+  }
+}
+
+.feature-with-large-image__media {
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  margin-bottom: rem(35);
+  position: relative;
+  @extend %responsive-img;
+  @include media-breakpoint-up(lg) {
+    width: 80%;
+    margin: 0 0 0 auto;
+    box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
+  }
+
+  &:before {
+    content: " ";
+    padding-top: 56.28%;
+  }
+  &:after {
+    content: "";
+    border-bottom: rem(8) solid $yellow;
+    bottom: rem(-4);
+    left: 50%;
+    margin-left: rem(-28);
+    width: rem(56);
+    height: rem(8);
+    position: absolute;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
+.feature-with-large-image__content {
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    width: 35%;
+    background-color: $off-white;
+    left: rem(40);
+    top: 50%;
+    transform: translateY(-50%);
+    padding: rem(25) rem(45);
+    box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
+  }
+  @include media-breakpoint-up(xl) {
+    width: rem(520);
+    left: rem(70);
+    padding: rem(40) rem(90) rem(30);
+  }
+
+  &:after {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      border-bottom: rem(8) solid $yellow;
+      top: rem(-4);
+      left: 50%;
+      margin-left: rem(-28);
+      width: rem(56);
+      height: rem(8);
+      position: absolute;
+    }
+  }
+}
+.feature-with-large-image__text {
+}

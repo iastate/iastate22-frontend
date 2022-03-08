@@ -9,19 +9,32 @@
 
 .card-set {
   position: relative;
+  padding-bottom: rem(20);
   @include media-breakpoint-up(lg) {
     padding-bottom: rem(30);
   }
   &:after {
+    content: "";
+    background-color: $off-white;
+    position: absolute;
+    bottom: 0;
+    left: rem(-36);
+    right: rem(-36);
+    height: 20%;
+    max-height: rem(342);
+    @include media-breakpoint-up(md) {
+      left: rem(-70);
+      right: rem(-70);
+    }
     @include media-breakpoint-up(lg) {
       content: "";
       background-color: $off-white;
+      max-height: rem(365);
       position: absolute;
       bottom: 0;
       left: rem(-70);
       right: rem(-70);
       height: 62%;
-      max-height: rem(365);
     }
     @include media-breakpoint-up(xl) {
       left: rem(-170);

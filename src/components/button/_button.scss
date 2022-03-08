@@ -1,3 +1,4 @@
+%button,
 .button {
   display: block;
   border: rem(2) solid $red2;
@@ -48,5 +49,18 @@
     &:before {
       width: rem(14);
     }
+  }
+}
+
+%button--reverse,
+.button--reverse {
+  border-color: $white;
+  &:hover {
+    background-color: $white;
+    color: $red2;
+  }
+  &:after,
+  &:before {
+    border-color: $red2;
   }
 }

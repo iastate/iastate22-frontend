@@ -1,7 +1,7 @@
 @import "variables";
 
 .card {
-  box-shadow: 9px 9px 20px rgba($black, 0.2);
+  box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
   background: $white;
   text-align: center;
   position: relative;
@@ -36,7 +36,7 @@
 .card--hz {
   display: flex;
   border: $card--hz-border;
-  box-shadow: $card--hz-shadow;
+  box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
 }
 
 .card__cta {
