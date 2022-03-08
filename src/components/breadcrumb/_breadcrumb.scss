@@ -1,38 +1,50 @@
-// --------------------------------------------------- \\
-// silc breadcrumb
-// Version: 0.0.1
-// Notes:
-// --------------------------------------------------- \\
-@import "variables";
-
-.silc-breadcrumb {
-    margin: $silc-breadcrumb-margin;
-    padding: $silc-breadcrumb-padding;
+.breadcrumb {
+  margin: 1rem 0;
+  padding: 0;
 }
 
-.silc-breadcrumb__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.breadcrumb__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 
-    a {
-        font-weight: $silc-breadcrumb-font-weight;
-        text-decoration: none;
-        border-bottom: 1px solid $silc-breadcrumb-border-color;
-        transition: border 0.3s;
-        color: $silc-breadcrumb-link-color;
-        &:hover,
-        &:focus {
-            border-bottom-width: 2px;
-        }
+  a {
+    font-weight: 700;
+    font-family: $nimbus-sans-bold;
+    font-size: rem(18);
+    line-height: (34 / 18);
+    color: $red2;
+    text-decoration: underline;
+    text-decoration-color: $red2;
+    text-decoration-thickness: rem(1);
+    text-underline-offset: rem(1);
+    transition: border 0.3s;
+    &:hover,
+    &:focus {
+      border-bottom-width: 2px;
     }
+    &[aria-current="page"] {
+      text-decoration: none;
+      pointer-events: none;
+    }
+  }
 
-    li {
-        display: inline-block;
-        &:not(:last-child) {
-            &:after {
-                content: $silc-breadcrumb-seperator;
-            }
-        }
+  li {
+    display: inline-block;
+    position: relative;
+    margin-right: rem(20);
+    &:not(:last-child) {
+      &:after {
+        content: "";
+        position: absolute;
+        top: rem(12);
+        right: rem(-15);
+        width: rem(8);
+        height: rem(8);
+        border-right: rem(2) solid $red2;
+        border-bottom: rem(2) solid $red2;
+        transform: rotate(-45deg);
+      }
     }
+  }
 }

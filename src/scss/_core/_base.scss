@@ -99,6 +99,9 @@ ol {
 .paragraph-widget {
   margin-top: rem(30);
   margin-bottom: rem(40);
+  @include media-breakpoint-up(xl) {
+    margin-bottom: rem(60);
+  }
 }
 
 // external link text for screen readers

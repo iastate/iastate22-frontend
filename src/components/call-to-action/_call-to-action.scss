@@ -4,6 +4,15 @@
   margin-top: rem(60);
 }
 
+.paragraph-widget--call-to-action--large {
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(75);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: rem(90);
+  }
+}
+
 .call-to-action--small {
   background-color: $off-white;
   padding: rem(58) rem(36) rem(40);
