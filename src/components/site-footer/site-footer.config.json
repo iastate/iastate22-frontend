@@ -1,3 +1,95 @@
 {
-  "context": {}
+  "context": {
+    "footer_nav": [
+      {
+        "title": "Request Info",
+        "url": "#"
+      },
+      {
+        "title": "Apply",
+        "url": "#"
+      },
+      {
+        "title": "Visit",
+        "url": "#"
+      },
+      {
+        "title": "Give",
+        "url": "#"
+      },
+      {
+        "title": "Contact",
+        "url": "#"
+      }
+    ],
+    "footer_secondary_nav": [
+      {
+        "title": "News",
+        "url": "#"
+      },
+      {
+        "title": "Events",
+        "url": "#"
+      },
+      {
+        "title": "Directory",
+        "url": "#"
+      },
+      {
+        "title": "A-Z Index",
+        "url": "#"
+      },
+      {
+        "title": "Athletics",
+        "url": "#"
+      },
+      {
+        "title": "Library",
+        "url": "#"
+      },
+      {
+        "title": "Extension and Outreach",
+        "url": "#"
+      },
+      {
+        "title": "Employment",
+        "url": "#"
+      },
+      {
+        "title": "COVID-19",
+        "url": "#"
+      }
+    ],
+    "footer_departments": [
+      {
+        "title": "General Information",
+        "email": "contact@iastate.edu",
+        "phone": "(515) 294-4111"
+      },
+      {
+        "title": "Admissions",
+        "email": "admissions@iastate.ede",
+        "phone": "(515) 294-5836"
+      }
+    ],
+    "footer_utility_nav": [
+      {
+        "title": "Privacy Policy",
+        "url": "#"
+      },
+      {
+        "title": "Non-discrimination Policy",
+        "url": "#"
+      },
+      {
+        "title": "Digital Access and Accessibility",
+        "url": "#"
+      },
+      {
+        "title": "Consumer Information",
+        "url": "#"
+      }
+    ],
+    "copyright": "Iowa State University of Science and Technology"
+  }
 }

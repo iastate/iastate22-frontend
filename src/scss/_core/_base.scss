@@ -108,3 +108,18 @@ ol {
     @extend %visible-for-screen-readers;
   }
 }
+
+.skip-link {
+  background-color: $white;
+  display: inline-block;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  &:focus {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
