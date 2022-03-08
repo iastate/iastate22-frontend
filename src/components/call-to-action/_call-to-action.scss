@@ -1,4 +1,5 @@
-.paragraph-widget--call-to-action--small {
+.paragraph-widget--call-to-action--small,
+.paragraph-widget--call-to-action--large {
   @extend %full-width-component;
   margin-top: rem(60);
 }
@@ -26,29 +27,94 @@
       background-color: transparent;
     }
   }
-}
 
-.call-to-action__copy-wrap {
-  padding-right: rem(39);
-  padding-left: rem(39);
-  text-align: right;
-  @include media-breakpoint-up(md) {
-    flex: 0 1 auto;
-    width: 60%;
-    padding-left: 0;
-    max-width: rem(520);
-  }
-  @include media-breakpoint-up(lg) {
-    width: 65%;
-  }
-  p {
+  .call-to-action__copy-wrap {
+    padding-right: rem(39);
+    padding-left: rem(39);
+    text-align: right;
     @include media-breakpoint-up(md) {
-      color: $red2;
+      flex: 0 1 auto;
+      width: 60%;
+      padding-left: 0;
+      max-width: rem(520);
+    }
+    @include media-breakpoint-up(lg) {
+      width: 65%;
+    }
+    p {
+      @include media-breakpoint-up(md) {
+        color: $red2;
+      }
+    }
+
+    .call-to-action__headline {
+      margin: 0 0 rem(5) 0;
+      padding: 0;
     }
   }
+}
 
-  .call-to-action__headline {
-    margin: 0 0 rem(5) 0;
-    padding: 0;
+.call-to-action--large {
+  position: relative;
+
+  .call-to-action__media {
+    @extend %responsive-img;
+
+    &:before {
+      padding-top: 37.44%;
+    }
+  }
+  .call-to-action__copy-wrap {
+    background-color: $red;
+    padding: rem(55) rem(36) rem(40);
+    position: relative;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: rem(-30);
+      right: 0;
+      width: 40%;
+      max-width: rem(520);
+      padding: rem(30) rem(36) rem(10);
+    }
+    @include media-breakpoint-up(xl) {
+      right: rem(40);
+    }
+    @include media-breakpoint-up(xxl) {
+      right: rem(82);
+      padding: rem(64) rem(83) rem(20);
+    }
+
+    &:before {
+      content: "";
+      border-bottom: rem(8) solid $yellow;
+      top: rem(-4);
+      left: 50%;
+      margin-left: rem(-28);
+      width: rem(56);
+      height: rem(8);
+      position: absolute;
+    }
+
+    .call-to-action__headline,
+    p {
+      color: $white;
+    }
+
+    .call-to-action__headline {
+      margin: 0 0 rem(23) 0;
+      padding: 0;
+    }
+
+    p {
+      font-family: $nimbus-sans-bold;
+      font-size: rem(16);
+      line-height: (29 / 16);
+    }
+  }
+  .button-set {
+    margin-top: rem(26);
+    .button {
+      @extend %button--reverse;
+    }
   }
 }

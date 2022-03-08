@@ -23,9 +23,17 @@
     {
       "name": "large",
       "context": {
-        "title": "Lorem Ipsum",
-        "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, amet, numquam quaerat atque autem totam veritatis perspiciatis inventore nihil quo debitis, quos praesentium. Culpa, nobis a harum recusandae ducimus dolorum!",
-        "media": "http://via.placeholder.com/1200x1200"
+        "title": "Large Call to Action Voluptate Lorem",
+        "body": "<p>Nemo enim ipsam voluptatem quia voluptas.</p>",
+        "image": "../../img/CTA-Large-Image_FPO.jpg",
+        "button_set": {
+          "items": [
+            {
+              "text": "Primary CTA Style",
+              "url": "https://iastate.edu"
+            }
+          ]
+        }
       }
     }
   ]
