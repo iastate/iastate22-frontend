@@ -436,6 +436,22 @@
           ]
         }
       }
+    },
+    "call_to_action_small": {
+      "title": "Small Call to Action Voluptate Lorem Ipsum Dolor",
+      "body": "<p>Nemo enim ipsam voluptatem quia voluptas.</p>",
+      "button_set": {
+        "items": [
+          {
+            "text": "Primary CTA Style",
+            "url": "https://iastate.edu"
+          },
+          {
+            "text": "Primary CTA Style",
+            "url": "https://iastate.edu"
+          }
+        ]
+      }
     }
   }
 }

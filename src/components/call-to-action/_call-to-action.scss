@@ -1,0 +1,54 @@
+.paragraph-widget--call-to-action--small {
+  @extend %full-width-component;
+  margin-top: rem(60);
+}
+
+.call-to-action--small {
+  background-color: $off-white;
+  padding: rem(58) rem(36) rem(40);
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include media-breakpoint-up(xl) {
+    padding-left: rem(280);
+  }
+  .button-set {
+    @include media-breakpoint-up(md) {
+      flex: 0 1 auto;
+      width: 40%;
+      margin: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      // width: 25%;
+    }
+    .button {
+      background-color: transparent;
+    }
+  }
+}
+
+.call-to-action__copy-wrap {
+  padding-right: rem(39);
+  padding-left: rem(39);
+  text-align: right;
+  @include media-breakpoint-up(md) {
+    flex: 0 1 auto;
+    width: 60%;
+    padding-left: 0;
+    max-width: rem(520);
+  }
+  @include media-breakpoint-up(lg) {
+    width: 65%;
+  }
+  p {
+    @include media-breakpoint-up(md) {
+      color: $red2;
+    }
+  }
+
+  .call-to-action__headline {
+    margin: 0 0 rem(5) 0;
+    padding: 0;
+  }
+}
