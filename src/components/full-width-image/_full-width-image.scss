@@ -1,0 +1,13 @@
+.full-width-image {
+  margin: 0;
+}
+
+.full-width-image__image {
+  @extend %responsive-img;
+  &:before {
+    padding-top: 66.66%;
+  }
+}
+.full-width-image__caption {
+  @extend %caption;
+}

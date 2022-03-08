@@ -12,6 +12,7 @@ import Tablesaw from "../components/table/table";
 import Modal from "../components/modal/modal";
 import lazyLoadInit from "../components/lazyload/_lazyload";
 import cardsInit from "./components/card";
+import subnavInit from "./components/subnav";
 import privacyConsentInit from "../components/privacy-consent/privacy-consent";
 import accordionsInit from "./components/accordion";
 import videoEmbedInit from "./components/video-embed";
@@ -31,6 +32,7 @@ lazyLoadInit();
 cardsInit();
 privacyConsentInit();
 accordionsInit();
+subnavInit();
 videoEmbedInit();
 
 /**
