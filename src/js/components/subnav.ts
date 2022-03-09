@@ -20,6 +20,7 @@ export class Subnav {
   private init() {
     this.createMobileToggle();
     this.handleResize();
+    this.setHorizontalVariantAttributes();
     this.handleToggleClick();
     this.handleListTransition();
   }
@@ -36,9 +37,18 @@ export class Subnav {
         this.list.removeAttribute("aria-hidden");
       }
     };
+    if (!this.element.classList.contains("subnav--horizontal")) {
+      window.addEventListener("resize", _debounce(resize, 150));
+      resize();
+    }
+  }
 
-    window.addEventListener("resize", _debounce(resize, 150));
-    resize();
+  private setHorizontalVariantAttributes() {
+    if (this.element.classList.contains("subnav--horizontal")) {
+      this.toggle.setAttribute("aria-expanded", `${this.expanded}`);
+      this.list.setAttribute("aria-labelledby", "subnav-toggle");
+      this.list.setAttribute("aria-hidden", `${!this.expanded}`);
+    }
   }
 
   private handleListTransition() {

@@ -55,4 +55,18 @@
   @include media-breakpoint-up(xl) {
     right: rem(-298);
   }
+
+  // top level lp horizontal version
+  .hero--top-level-lp & {
+    @include media-breakpoint-up(lg) {
+      top: initial;
+      right: initial;
+      left: 0;
+      position: relative;
+      margin-top: rem(-63);
+    }
+    @include media-breakpoint-up(xl) {
+      right: initial;
+    }
+  }
 }

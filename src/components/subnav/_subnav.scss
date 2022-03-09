@@ -45,6 +45,11 @@
       top: rem(30);
     }
   }
+  .subnav--horizontal & {
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
 }
 
 .subnav__list {
