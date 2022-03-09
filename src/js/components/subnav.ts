@@ -1,6 +1,6 @@
 import * as _debounce from "lodash.debounce";
 
-const mobileMQ = window.matchMedia("(max-width: 999px)");
+const mobileMQ = window.matchMedia("(max-width: 992px)");
 
 export class Subnav {
   private element: HTMLElement;

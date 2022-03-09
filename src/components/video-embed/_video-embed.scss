@@ -129,6 +129,7 @@
 }
 
 .video-embed__caption {
+  margin-top: rem(10);
   @extend %caption;
   @include media-breakpoint-up(md) {
     padding-left: rem(53);

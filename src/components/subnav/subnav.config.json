@@ -3,65 +3,52 @@
     "items": [
       {
         "url": "placeholder-link",
-        "title": "Academics",
+        "title": "Parent Page",
         "current": false,
+        "children": []
+      },
+      {
+        "url": "placeholder-link",
+        "title": "Sibling Page Title Lorem Ipsum",
+        "current": false,
+        "children": []
+      },
+      {
+        "url": "placeholder-link",
+        "title": "Sibling Page Title Lorem Ipsum",
+        "current": false,
+        "children": []
+      },
+      {
+        "url": "placeholder-link",
+        "title": "Sibling Page Title Lorem Ipsum",
+        "current": false,
+        "children": []
+      },
+      {
+        "url": "placeholder-link",
+        "title": "Kitchen Sink",
+        "current": true,
         "children": [
           {
             "url": "placeholder-link",
-            "title": "What Should I Study?",
+            "title": "Child Page Title Lorem",
             "current": false,
             "children": []
           },
           {
             "url": "placeholder-link",
-            "title": "Majors & Minors",
-            "current": true,
-            "children": [
-              {
-                "url": "placeholder-link",
-                "title": "Master’s Programs",
-                "children": [],
-                "current": false
-              },
-              {
-                "url": "placeholder-link",
-                "title": "Adult & Evening Programs",
-                "children": [],
-                "current": false
-              },
-              {
-                "url": "placeholder-link",
-                "title": "Carthage Curriculum",
-                "children": [],
-                "current": false
-              },
-              {
-                "url": "placeholder-link",
-                "title": "Study Abroad",
-                "children": [],
-                "current": false
-              },
-              {
-                "url": "placeholder-link",
-                "title": "Experiential Learning",
-                "children": [],
-                "current": false
-              },
-              {
-                "url": "placeholder-link",
-                "title": "Advising & Support",
-                "children": [],
-                "current": false
-              },
-              {
-                "url": "placeholder-link",
-                "title": "Calendars & Schedules",
-                "children": [],
-                "current": false
-              }
-            ]
+            "title": "Child Page Title Lorem",
+            "current": false,
+            "children": []
           }
         ]
+      },
+      {
+        "url": "placeholder-link",
+        "title": "Sibling Page Title Lorem Ipsum",
+        "current": false,
+        "children": []
       }
     ]
   }
