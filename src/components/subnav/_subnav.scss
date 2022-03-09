@@ -1,6 +1,11 @@
 .subnav {
   position: relative;
   box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.15);
+  &.subnav--horizontal {
+    @include media-breakpoint-up(lg) {
+      box-shadow: none;
+    }
+  }
 }
 
 .subnav__toggle {
@@ -34,6 +39,11 @@
     transform: rotate(45deg);
     transform-origin: center;
     transition: 0.2s transform ease-in-out, 0.2s top ease-in-out;
+    .subnav--horizontal & {
+      @include media-breakpoint-up(lg) {
+        top: rem(15);
+      }
+    }
   }
   &:hover,
   .user-tabbing &:focus {
@@ -43,11 +53,21 @@
     &:before {
       transform: rotate(225deg);
       top: rem(30);
+      .subnav--horizontal & {
+        @include media-breakpoint-up(lg) {
+          top: rem(21);
+        }
+      }
     }
   }
   .subnav--horizontal & {
     @include media-breakpoint-up(lg) {
       display: block;
+      max-width: rem(215);
+      font-size: rem(16);
+      line-height: (26 / 16);
+      height: rem(46);
+      padding: 0 rem(18);
     }
   }
 }
@@ -64,8 +84,21 @@
   }
   // sibling pages only
   & > ul {
+    .subnav--horizontal & {
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
     & > li {
       padding: 0 rem(30);
+      .subnav--horizontal & {
+        @include media-breakpoint-up(lg) {
+          flex: 0 1 auto;
+          width: 20%;
+          padding: 0 rem(20) 0 0;
+        }
+      }
       a {
         display: block;
         font-family: $nimbus-sans-bold;
@@ -131,6 +164,15 @@
             transition: 0.2s opacity ease-in-out;
           }
         }
+        .subnav--horizontal & {
+          @include media-breakpoint-up(lg) {
+            padding: 0;
+          }
+          &:before,
+          &:after {
+            display: none;
+          }
+        }
       }
       // first child parent page
       &:first-child {
@@ -177,6 +219,25 @@
                 left: rem(-8);
               }
             }
+            .subnav--horizontal & {
+              @include media-breakpoint-up(lg) {
+                background-color: transparent;
+                color: $red;
+              }
+            }
+          }
+          .subnav--horizontal & {
+            @include media-breakpoint-up(lg) {
+              padding: 0;
+              color: $red2;
+              font-size: rem(16);
+              line-height: (19 / 16);
+            }
+          }
+        }
+        .subnav--horizontal & {
+          @include media-breakpoint-up(lg) {
+            background-color: transparent;
           }
         }
       }
@@ -194,6 +255,11 @@
         @include media-breakpoint-up(lg) {
           display: block;
           margin-bottom: rem(10);
+        }
+        .subnav--horizontal & {
+          @include media-breakpoint-up(lg) {
+            display: none;
+          }
         }
         li {
           a {

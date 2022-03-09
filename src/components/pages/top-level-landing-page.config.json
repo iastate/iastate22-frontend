@@ -20,54 +20,35 @@
       },
       "title": "Kitchen Sink",
       "image": "../../img/Heroes-Kitchen_Sink.jpg",
-      "subnav": {
+      "subnav_horizontal": {
         "items": [
           {
-            "url": "placeholder-link",
-            "title": "Parent Page",
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem Ipsum",
             "current": false,
             "children": []
           },
           {
-            "url": "placeholder-link",
-            "title": "Sibling Page Title Lorem Ipsum",
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem",
             "current": false,
             "children": []
           },
           {
-            "url": "placeholder-link",
-            "title": "Sibling Page Title Lorem Ipsum",
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem Ipsum Dolor Sit Amet",
             "current": false,
             "children": []
           },
           {
-            "url": "placeholder-link",
-            "title": "Sibling Page Title Lorem Ipsum",
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem",
             "current": false,
             "children": []
           },
           {
-            "url": "placeholder-link",
-            "title": "Kitchen Sink",
-            "current": true,
-            "children": [
-              {
-                "url": "placeholder-link",
-                "title": "Child Page Title Lorem",
-                "current": false,
-                "children": []
-              },
-              {
-                "url": "placeholder-link",
-                "title": "Child Page Title Lorem",
-                "current": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "url": "placeholder-link",
-            "title": "Sibling Page Title Lorem Ipsum",
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem Ipsum Dolor",
             "current": false,
             "children": []
           }

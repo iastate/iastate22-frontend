@@ -70,6 +70,40 @@
           "children": []
         }
       ]
+    },
+    "subnav_horizontal": {
+      "items": [
+        {
+          "url": "https://www.iastate.edu/",
+          "title": "Level 2 Page Lorem Ipsum",
+          "current": false,
+          "children": []
+        },
+        {
+          "url": "https://www.iastate.edu/",
+          "title": "Level 2 Page Lorem",
+          "current": false,
+          "children": []
+        },
+        {
+          "url": "https://www.iastate.edu/",
+          "title": "Level 2 Page Lorem Ipsum Dolor Sit Amet",
+          "current": false,
+          "children": []
+        },
+        {
+          "url": "https://www.iastate.edu/",
+          "title": "Level 2 Page Lorem",
+          "current": false,
+          "children": []
+        },
+        {
+          "url": "https://www.iastate.edu/",
+          "title": "Level 2 Page Lorem Ipsum Dolor",
+          "current": false,
+          "children": []
+        }
+      ]
     }
   }
 }

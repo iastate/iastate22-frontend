@@ -2,42 +2,42 @@
   "context": {
     "items": [
       {
-        "url": "placeholder-link",
+        "url": "https://www.iastate.edu/",
         "title": "Parent Page",
         "current": false,
         "children": []
       },
       {
-        "url": "placeholder-link",
+        "url": "https://www.iastate.edu/",
         "title": "Sibling Page Title Lorem Ipsum",
         "current": false,
         "children": []
       },
       {
-        "url": "placeholder-link",
+        "url": "https://www.iastate.edu/",
         "title": "Sibling Page Title Lorem Ipsum",
         "current": false,
         "children": []
       },
       {
-        "url": "placeholder-link",
+        "url": "https://www.iastate.edu/",
         "title": "Sibling Page Title Lorem Ipsum",
         "current": false,
         "children": []
       },
       {
-        "url": "placeholder-link",
+        "url": "https://www.iastate.edu/",
         "title": "Kitchen Sink",
         "current": true,
         "children": [
           {
-            "url": "placeholder-link",
+            "url": "https://www.iastate.edu/",
             "title": "Child Page Title Lorem",
             "current": false,
             "children": []
           },
           {
-            "url": "placeholder-link",
+            "url": "https://www.iastate.edu/",
             "title": "Child Page Title Lorem",
             "current": false,
             "children": []
@@ -45,11 +45,50 @@
         ]
       },
       {
-        "url": "placeholder-link",
+        "url": "https://www.iastate.edu/",
         "title": "Sibling Page Title Lorem Ipsum",
         "current": false,
         "children": []
       }
     ]
-  }
+  },
+  "variants": [
+    {
+      "name": "horizontal",
+      "context": {
+        "items": [
+          {
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem Ipsum",
+            "current": false,
+            "children": []
+          },
+          {
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem",
+            "current": false,
+            "children": []
+          },
+          {
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem Ipsum Dolor Sit Amet",
+            "current": false,
+            "children": []
+          },
+          {
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem",
+            "current": false,
+            "children": []
+          },
+          {
+            "url": "https://www.iastate.edu/",
+            "title": "Level 2 Page Lorem Ipsum Dolor",
+            "current": false,
+            "children": []
+          }
+        ]
+      }
+    }
+  ]
 }
