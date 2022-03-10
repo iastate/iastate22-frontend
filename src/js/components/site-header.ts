@@ -3,7 +3,7 @@ import * as _debounce from "lodash.debounce";
 import Micromodal from "micromodal";
 import AccessibilityUtilities from "../utilities/accessibility";
 
-const mobileMQ = window.matchMedia("(max-width: 999px)");
+const mobileMQ = window.matchMedia("(max-width: 992px)");
 
 export class SiteHeader {
   private element: HTMLElement;
@@ -95,7 +95,6 @@ export class MegaMenu {
     this.handleEsc();
     this.handleTabbing();
     this.handleOpenButtonClick();
-    // this.handleCloseButtonClick();
     this.handleOutsideClick();
     this.handleMobileBackButtonClicks();
     this.handleMobileParentLinkClicks();
@@ -179,14 +178,6 @@ export class MegaMenu {
     });
   }
 
-  // private handleCloseButtonClick() {
-  //   this.closeButton.addEventListener("click", () => {
-  //     this.visible = false;
-  //     this.toggleVisibility();
-  //     this.openButton.focus();
-  //   });
-  // }
-
   private handleOutsideClick() {
     document.body.addEventListener("click", (event) => {
       const target = event.target as HTMLElement;
@@ -257,20 +248,22 @@ export class MegaMenu {
   }
 
   public toggleVisibility() {
-    this.openButton.setAttribute("aria-expanded", `${this.visible}`);
-    this.element.setAttribute("aria-hidden", `${!this.visible}`);
+    if (mobileMQ.matches) {
+      this.openButton.setAttribute("aria-expanded", `${this.visible}`);
+      this.element.setAttribute("aria-hidden", `${!this.visible}`);
 
-    for (let i = 0; i < this.focusableChildren.length; i++) {
-      this.focusableChildren[i].setAttribute("tabindex", this.visible ? "0" : "-1");
+      for (let i = 0; i < this.focusableChildren.length; i++) {
+        this.focusableChildren[i].setAttribute("tabindex", this.visible ? "0" : "-1");
+      }
+
+      if (this.visible) {
+        disableBodyScroll(this.scroller);
+      } else {
+        enableBodyScroll(this.scroller);
+      }
+
+      this.trigger(this.visible ? "show" : "hide");
     }
-
-    if (this.visible) {
-      disableBodyScroll(this.scroller);
-    } else {
-      enableBodyScroll(this.scroller);
-    }
-
-    this.trigger(this.visible ? "show" : "hide");
   }
 
   private toggleMobileNavSectionVisibility(index: number, visible: boolean) {
