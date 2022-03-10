@@ -1,20 +1,21 @@
 .max-bound {
-    width: 100%;
-    max-width: rem(1600);
-    margin: 0 auto;
-    background-color: #fff;
+  width: 100%;
+  max-width: rem(1600);
+  margin: 0 auto;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
 .outer-pad {
-    @extend %outer-pad-x;
-    @include media-breakpoint-up(sm) {
-        // padding: rem(48) rem(32);
-    }
-    @include media-breakpoint-up(md) {
-        // padding: rem(48) rem(64);
-    }
+  @extend %outer-pad-x;
+  @include media-breakpoint-up(sm) {
+    // padding: rem(48) rem(32);
+  }
+  @include media-breakpoint-up(md) {
+    // padding: rem(48) rem(64);
+  }
 }
 
 .section {
-    margin: rem(48) 0;
+  margin: rem(48) 0;
 }

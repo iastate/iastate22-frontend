@@ -24,33 +24,23 @@
         "items": [
           {
             "url": "https://www.iastate.edu/",
-            "title": "Level 2 Page Lorem Ipsum",
-            "current": false,
-            "children": []
+            "title": "Level 2 Page Lorem Ipsum"
           },
           {
             "url": "https://www.iastate.edu/",
-            "title": "Level 2 Page Lorem",
-            "current": false,
-            "children": []
+            "title": "Level 2 Page Lorem"
           },
           {
             "url": "https://www.iastate.edu/",
-            "title": "Level 2 Page Lorem Ipsum Dolor Sit Amet",
-            "current": false,
-            "children": []
+            "title": "Level 2 Page Lorem Ipsum Dolor Sit Amet"
           },
           {
             "url": "https://www.iastate.edu/",
-            "title": "Level 2 Page Lorem",
-            "current": false,
-            "children": []
+            "title": "Level 2 Page Lorem"
           },
           {
             "url": "https://www.iastate.edu/",
-            "title": "Level 2 Page Lorem Ipsum Dolor",
-            "current": false,
-            "children": []
+            "title": "Level 2 Page Lorem Ipsum Dolor"
           }
         ]
       }

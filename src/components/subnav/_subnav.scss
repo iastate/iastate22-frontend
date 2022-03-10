@@ -79,15 +79,39 @@
   &[aria-hidden="true"] {
     height: 0;
   }
-  &[aria-hidden="false"] {
-    padding-bottom: rem(20);
+  // yellow line for desktop horizontal variant
+  .subnav--horizontal & {
+    &:before {
+      @include media-breakpoint-up(lg) {
+        content: "";
+        position: absolute;
+        border-bottom: rem(2) solid $yellow;
+        left: rem(-70);
+        right: rem(-70);
+        bottom: 0;
+        opacity: 0;
+        transition: 0.2s opacity ease-in-out;
+      }
+      @include media-breakpoint-up(xl) {
+        left: rem(-190);
+        right: rem(-298);
+      }
+    }
+    &[aria-hidden="false"] {
+      &:before {
+        opacity: 1;
+      }
+    }
   }
   // sibling pages only
   & > ul {
+    padding-bottom: rem(20);
     .subnav--horizontal & {
       @include media-breakpoint-up(lg) {
         display: flex;
         flex-wrap: wrap;
+        padding: rem(35) rem(10) rem(25) 0;
+        position: relative;
       }
     }
     & > li {
@@ -97,6 +121,7 @@
           flex: 0 1 auto;
           width: 20%;
           padding: 0 rem(20) 0 0;
+          margin-bottom: rem(20);
         }
       }
       a {
