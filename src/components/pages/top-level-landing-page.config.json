@@ -10,15 +10,11 @@
           },
           {
             "url": "https://www.iastate.edu/",
-            "name": "Parent Page"
-          },
-          {
-            "url": "https://www.iastate.edu/",
-            "name": "Kitchen Sink"
+            "name": "Primary Nav 1"
           }
         ]
       },
-      "title": "Kitchen Sink",
+      "title": "Primary Nav 1",
       "image": "../../img/Heroes-Kitchen_Sink.jpg",
       "subnav_horizontal": {
         "items": [
