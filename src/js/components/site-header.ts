@@ -98,6 +98,7 @@ export class MegaMenu {
     this.handleOutsideClick();
     this.handleMobileBackButtonClicks();
     this.handleMobileParentLinkClicks();
+    this.handleDesktopParentLinkClicks();
     this.initMobileNav();
     this.toggleVisibility();
   }
@@ -209,6 +210,22 @@ export class MegaMenu {
         event.preventDefault();
         this.selectedMainNavSectionIndex = parseInt(parentLink.dataset.index);
         this.toggleMobileNavSectionVisibility(this.selectedMainNavSectionIndex, true);
+      }
+    });
+  }
+
+  private handleDesktopParentLinkClicks() {
+    this.element.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      const parentLink = target.closest(".site-header__mega-menu-main-nav-parent") as HTMLAnchorElement;
+      const dropdownMenu = parentLink.nextElementSibling as HTMLElement;
+      if (!mobileMQ.matches) {
+        event.preventDefault();
+        if (dropdownMenu.classList.contains("mega-menu-desktop-dropdown-open")) {
+          dropdownMenu.classList.remove("mega-menu-desktop-dropdown-open");
+        } else {
+          dropdownMenu.classList.add("mega-menu-desktop-dropdown-open");
+        }
       }
     });
   }
