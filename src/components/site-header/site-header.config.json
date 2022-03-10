@@ -1,3 +1,166 @@
 {
-  "context": {}
+  "context": {
+    "utility_nav": [
+      {
+        "title": "My Admissions Account",
+        "url": "placeholder-link"
+      },
+      {
+        "title": "Request Info",
+        "url": "placeholder-link"
+      },
+      {
+        "title": "Apply",
+        "url": "placeholder-link"
+      },
+      {
+        "title": "Give",
+        "url": "placeholder-link"
+      },
+      {
+        "title": "Sign Ons and Tools",
+        "url": "placeholder-link"
+      }
+    ],
+    "full_nav": [
+      {
+        "title": "Academics",
+        "url": "placeholder-link",
+        "children": [
+          {
+            "title": "Majors, Minors and Certificates",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Pre-Professional Programs",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Graduate Programs",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Veterinary Medicine",
+            "url": "placeholder-link"
+          }
+        ]
+      },
+      {
+        "title": "Admission & Aid",
+        "url": "placeholder-link",
+        "children": [
+          {
+            "title": "Admissions",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Tuition and Fees",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Affording College",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "New Student Programs",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Apply.",
+            "url": "placeholder-link"
+          }
+        ]
+      },
+      {
+        "title": "Learn By Doing",
+        "url": "placeholder-link",
+        "children": [
+          {
+            "title": "Research",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Innovation and Entrepreneurship",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Study Abroad",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Honors Program",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Career Preparation",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Industry Partnerships",
+            "url": "placeholder-link"
+          }
+        ]
+      },
+      {
+        "title": "Life at Iowa State",
+        "url": "placeholder-link",
+        "children": [
+          {
+            "title": "Student Learning Communities",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Faculty Mentorship",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Campus and Location",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Housing and Dining",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Health and Safety",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Athletics and Recreation",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Academic Support",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "4-Year Graduation Guarantee",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "History and Traditions",
+            "url": "placeholder-link"
+          }
+        ]
+      },
+      {
+        "title": "Diversity and Inclusion",
+        "url": "placeholder-link",
+        "children": [
+          {
+            "title": "Principles of Community",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Programs and Initiatives",
+            "url": "placeholder-link"
+          },
+          {
+            "title": "Student Resources",
+            "url": "placeholder-link"
+          }
+        ]
+      }
+    ]
+  }
 }

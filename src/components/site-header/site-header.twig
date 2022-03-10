@@ -1,0 +1,79 @@
+<header class="site-header">
+  <a href="placeholder-link" class="site-header__logo">
+    <img src="{{ "/img/iowa-state-university-logo-no-tagline-red.svg"|path }}" alt="Carthage College logo">
+  </a>
+  <div class="site-header__top">
+    <nav class="site-header__utility" aria-label="Utility">
+      <ul>
+        {% for link in utility_nav %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="site-header__search">
+      <a href="#site-search" class="site-header__search-toggle" data-micromodal-trigger="site-search">
+        <span class="visible-for-screen-readers">Search</span>
+        <span class="fak fa-id5-magnifying-glass"></span>
+      </a>
+    </div>
+  </div>
+  <div class="site-header__main">
+    <a href="#site-header-mega-menu" class="site-header__mega-menu-open" role="button" aria-controls="site-header-mega-menu">
+      <span class="site-header__mega-menu-open-label">Full Menu</span>
+      <div class="site-header__mega-menu-open-line-wrap">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </a>
+    <div class="site-header__mega-menu" id="site-header-mega-menu">
+      <div class="site-header__mega-menu-inner">
+        <div class="site-header__mega-menu-scroller">
+          <div>
+            <div class="site-header__mega-menu-main">
+              <div class="site-header__mega-menu-max-bound">
+                <nav class="site-header__mega-menu-main-nav" aria-label="Main">
+                  <ul>
+                    {% for link in full_nav %}
+                      <li>
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                        {% if link.children|length %}
+                          <ul>
+                            {% for child in link.children %}
+                              <li>
+                                <a href="{{ child.url }}">{{ child.title }}</a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="site-header__mega-menu-secondary">
+              <div class="site-header__mega-menu-max-bound">
+                <div class="silc-grid silc-grid--collapse">
+                  <div class="silc-grid__col silc-grid__col--6">
+                    <nav class="site-header__mega-menu-utility" aria-label="Utility">
+                      <ul>
+                        {% for link in utility_nav %}
+                          <li>
+                            <a href="{{ link.url }}">{{ link.title }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
