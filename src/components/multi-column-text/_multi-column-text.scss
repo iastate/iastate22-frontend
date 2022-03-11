@@ -1,22 +1,14 @@
-// .paragraph-widget--multicolumn-text {
-//   margin: rem(20) 0;
-// }
-
 .multi-column-text {
   @include media-breakpoint-up(md) {
     display: flex;
+    margin-right: rem(-40);
   }
 }
 .multi-column-text__column {
-  margin: rem(30) 0;
+  margin: rem(40) 0;
   @include media-breakpoint-up(md) {
     flex: 1 1 0px;
-    padding-right: rem(30);
+    padding-right: rem(40);
     margin-bottom: 0;
-  }
-  &:last-child {
-    @include media-breakpoint-up(md) {
-      padding-right: 0;
-    }
   }
 }
