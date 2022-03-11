@@ -1,67 +1,79 @@
-// General Table Styles ------------------------------
+.paragraph-widget--table {
+  margin-right: rem(-36);
+  @include media-breakpoint-up(md) {
+    margin-right: 0;
+  }
+}
+
+// table container - specific selector for accessibility
+[role="region"][aria-labelledby][tabindex] {
+  overflow: auto;
+}
+
+[role="region"][aria-labelledby][tabindex]:focus {
+  outline: 0.1em solid rgba(0, 0, 0, 0.1);
+}
+
+// table
 .table {
-    width: 100%;
-    max-width: 100%;
+  background: linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(255, 255, 255, 0), #fff 70%) 0 100%,
+    radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: $white;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-position: 0 0, 100%, 0 0, 100%;
+  background-attachment: local, local, scroll, scroll;
+
+  table {
     empty-cells: show;
     border-collapse: collapse;
     border: 0;
     padding: 0;
+    margin: 0;
     color: black;
+  }
 
+  caption {
+    @extend %visible-for-screen-readers;
+  }
+
+  thead {
+    text-align: left;
+    tr {
+      background-color: $red;
+      color: $white;
+    }
+    th {
+      padding: rem(25);
+      font-family: $nimbus-sans-bold;
+      font-size: rem(21);
+      line-height: (30 / 21);
+      font-weight: 700;
+      vertical-align: top;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: $table-striped-bg;
+      }
+    }
     td {
-        padding: rem(20) rem(10);
+      padding: rem(25);
+      min-width: rem(225);
+      max-width: 90vw;
+      vertical-align: top;
+      @include media-breakpoint-up(md) {
+        min-width: initial;
+      }
+      &:first-child {
+        font-family: $nimbus-sans-bold;
+        font-weight: 700;
+        color: $red;
+      }
     }
-}
-
-// Responsive behavior and structure -----------------
-.table--stacked {
-    thead {
-        display: none;
-    }
-
-    td {
-        display: block;
-    }
-
-    .tablesaw-cell-label {
-        display: table-row;
-    }
-
-    @include media-breakpoint-up(md) {
-        thead {
-            display: table-header-group;
-        }
-
-        td {
-            display: table-cell;
-        }
-
-        .tablesaw-cell-label {
-            display: none;
-        }
-    }
-}
-
-// General Theme, used for demo not production
-.table--theme-default {
-    thead {
-        text-align: left;
-        tr {
-            background-color: $black;
-            color: $white;
-        }
-        th {
-            padding: rem(10);
-        }
-    }
-
-    tbody {
-        tr {
-            border-bottom: 1px solid $table-border-color;
-
-            &:nth-child(odd) {
-                background-color: $table-striped-bg;
-            }
-        }
-    }
+  }
 }
