@@ -68,6 +68,7 @@ export class MegaMenu {
   private scroller: HTMLElement;
   private openButton: HTMLButtonElement;
   private closeButton: HTMLButtonElement;
+  private megaMenu: MegaMenu;
   private focusableChildren: NodeListOf<HTMLElement>;
   private parentNavItems: NodeListOf<HTMLElement>;
   public visible: boolean = false;
@@ -84,6 +85,7 @@ export class MegaMenu {
       this.openButton = AccessibilityUtilities.convertAnchorToButton(
         document.querySelector(`[aria-controls="${this.element.id}"]`)
       );
+      this.megaMenu = new MegaMenu(this.element.querySelector(".site-header__mega-menu"));
       this.focusableChildren = this.element.querySelectorAll("a, button, input");
       this.parentNavItems = this.element.querySelectorAll(".site-header__mega-menu-main-nav > ul > li");
       this.init();
@@ -108,6 +110,7 @@ export class MegaMenu {
       for (let i = 0; i < this.parentNavItems.length; i++) {
         const parentItem = this.parentNavItems[i];
         const parentLink = parentItem.querySelector("a") as HTMLAnchorElement;
+        const dropdownMenu = parentLink.nextElementSibling as HTMLElement;
         const childList = parentItem.querySelector("ul") as HTMLElement;
         const visible = this.selectedMainNavSectionIndex === i;
 
@@ -116,10 +119,8 @@ export class MegaMenu {
           parentLink.setAttribute("aria-haspopup", "true");
           this.toggleMobileNavSectionVisibility(i, visible);
         } else {
-          parentLink.removeAttribute("role");
-          parentLink.removeAttribute("aria-haspopup");
-          parentLink.removeAttribute("aria-expanded");
           childList.removeAttribute("aria-hidden");
+          dropdownMenu.setAttribute("aria-hidden", "true");
         }
       }
     };
@@ -223,7 +224,9 @@ export class MegaMenu {
         event.preventDefault();
         if (dropdownMenu.classList.contains("mega-menu-desktop-dropdown-open")) {
           dropdownMenu.classList.remove("mega-menu-desktop-dropdown-open");
+          dropdownMenu.setAttribute("aria-hidden", "true");
         } else {
+          dropdownMenu.setAttribute("aria-hidden", "false");
           dropdownMenu.classList.add("mega-menu-desktop-dropdown-open");
         }
       }

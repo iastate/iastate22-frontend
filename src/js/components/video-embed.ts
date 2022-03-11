@@ -4,7 +4,7 @@ export class VideoEmbed {
   private element: HTMLElement;
   private media: HTMLElement;
   private player: any;
-  private playPauseButton: HTMLButtonElement;
+  private playButton: HTMLButtonElement;
 
   constructor(element: HTMLElement) {
     if (!!element) {
@@ -16,9 +16,9 @@ export class VideoEmbed {
 
   private init() {
     this.createVideoPlayer();
-    this.createPlayPauseButton();
-    this.handlePlayPauseButtonClick();
-    this.handlePlayPauseButtonHover();
+    this.createPlayButton();
+    this.handlePlayButtonClick();
+    this.handlePlayButtonHover();
     this.handlePlayerEvents();
   }
 
@@ -29,17 +29,17 @@ export class VideoEmbed {
     });
   }
 
-  private handlePlayPauseButtonClick() {
-    this.playPauseButton.addEventListener("click", () => {
+  private handlePlayButtonClick() {
+    this.playButton.addEventListener("click", () => {
       this.player.playVideo();
     });
   }
 
-  private handlePlayPauseButtonHover() {
-    this.playPauseButton.addEventListener("mouseover", () => {
+  private handlePlayButtonHover() {
+    this.playButton.addEventListener("mouseover", () => {
       this.media.classList.add("video-embed__video-hover");
     });
-    this.playPauseButton.addEventListener("mouseout", () => {
+    this.playButton.addEventListener("mouseout", () => {
       this.media.classList.remove("video-embed__video-hover");
     });
   }
@@ -55,7 +55,7 @@ export class VideoEmbed {
     });
   }
 
-  private createPlayPauseButton() {
+  private createPlayButton() {
     const button = document.createElement("BUTTON") as HTMLButtonElement;
     button.className = "video-embed__button";
     const triangleDiv = document.createElement("DIV") as HTMLElement;
@@ -67,7 +67,7 @@ export class VideoEmbed {
     button.appendChild(label);
     this.media = this.element.querySelector(".video-embed__media-wrap");
     this.media.appendChild(button);
-    this.playPauseButton = button;
+    this.playButton = button;
   }
 }
 

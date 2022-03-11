@@ -6,28 +6,12 @@
   bottom: 0;
   left: 0;
   z-index: 11;
+  width: 100vw;
+  @include media-breakpoint-up(lg) {
+    width: auto;
+  }
   > * {
     pointer-events: initial;
-  }
-  &.headroom {
-    transition: 0.3s transform ease-in-out;
-  }
-  &.headroom--unpinned,
-  &.headroom--pinned.headroom--not-top {
-    position: fixed;
-  }
-  &.headroom--unpinned {
-    transform: translate3d(0, -150px, 0);
-  }
-  &.headroom--pinned {
-    transform: translate3d(0, 0, 0);
-  }
-  &.headroom--not-top {
-    top: 0 !important;
-  }
-  &.headroom--pinned.headroom--top {
-    position: absolute;
-    transition: none;
   }
 }
 
@@ -40,13 +24,33 @@
   top: rem(18);
   text-decoration: none;
   z-index: 1;
+  @include media-breakpoint-up(md) {
+    left: rem(70);
+  }
   @include media-breakpoint-up(lg) {
     max-width: rem(346);
+    top: rem(37);
+  }
+  @include media-breakpoint-up(xl) {
+    left: rem(82);
   }
 
   img {
     display: block;
     width: 100%;
+  }
+
+  .site-header__logo-mobile {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  .site-header__logo-desktop {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
   }
 }
 
@@ -66,9 +70,13 @@
   display: flex;
   height: rem(38);
   padding-right: rem(58);
+  padding-bottom: rem(54);
   justify-content: flex-end;
+  border-bottom: rem(1) solid $grey4;
   @include media-breakpoint-up(lg) {
-    padding-right: 0;
+    padding: 0 rem(60) 0;
+    height: rem(117);
+    align-items: flex-start;
   }
   ul {
     display: flex;
@@ -145,7 +153,7 @@
   justify-content: flex-end;
   pointer-events: none;
   @include media-breakpoint-up(lg) {
-    background-color: $white;
+    background-color: transparent;
     pointer-events: initial;
     padding-bottom: rem(20);
   }
@@ -200,6 +208,10 @@
 .site-header__mega-menu-scroller {
   height: 100%;
   overflow-y: auto;
+  @include media-breakpoint-up(lg) {
+    overflow: initial;
+    pointer-events: none;
+  }
 }
 
 .site-header__mega-menu-max-bound {
@@ -210,7 +222,7 @@
 .site-header__mega-menu-open {
   height: rem(55);
   width: rem(58);
-  top: rem(-38);
+  top: rem(-55);
   right: 0;
   transition: 0.3s background-color ease-in-out;
   display: flex;
@@ -312,6 +324,7 @@
         flex: 1 1 0px;
         margin-bottom: 0;
         transition: 0.3s opacity ease-in-out;
+        position: relative;
       }
       > a {
         @extend %button;
@@ -342,26 +355,33 @@
         transition: 0.3s opacity ease-in-out, 0.3s transform ease-in-out, 0.3s visibility ease-in-out;
         z-index: 1;
         @include media-breakpoint-up(lg) {
-          height: 0;
-          background-color: transparent;
+          background-color: $white;
           margin-top: rem(24);
-          padding: 0;
-          position: relative;
+          padding: rem(52) rem(52) rem(38);
+          top: 0;
+          right: initial;
+          left: initial;
+          bottom: initial;
+          box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
         }
-        &.mega-menu-desktop-dropdown-open {
-          height: initial;
+        &[aria-hidden="true"] {
+          opacity: 0;
+          transform: translate3d(100%, 0, 0);
+          visibility: hidden;
+          @include media-breakpoint-up(lg) {
+            transform: translate3d(0, #{rem(30)}, 0);
+          }
         }
+        &[aria-hidden="false"] {
+          opacity: 1;
+          transform: none;
+          visibility: visible;
+        }
+
         li {
           margin-bottom: rem(10);
           padding-left: rem(14);
-          @media (min-width: 1000px) and (max-height: 1000px) {
-            margin-bottom: rem(12);
-          }
-          a {
-            @media (min-width: 1000px) and (max-height: 1000px) {
-              font-size: rem(16);
-            }
-          }
+
           &.site-header__mega-menu-main-nav-dropdown-back-wrap {
             margin-bottom: rem(8);
           }
@@ -379,16 +399,6 @@
           &:last-child {
             margin-bottom: 0;
           }
-        }
-        &[aria-hidden="true"] {
-          opacity: 0;
-          transform: translate3d(100%, 0, 0);
-          visibility: hidden;
-        }
-        &[aria-hidden="false"] {
-          opacity: 1;
-          transform: none;
-          visibility: visible;
         }
       }
       &:last-child {

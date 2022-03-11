@@ -19,3 +19,10 @@
 .section {
   margin: rem(48) 0;
 }
+
+main {
+  padding-top: rem(55);
+  @include media-breakpoint-up(lg) {
+    padding-top: rem(117);
+  }
+}
