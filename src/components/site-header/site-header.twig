@@ -40,7 +40,7 @@
                       <li>
                         <a href="{{ link.url }}">{{ link.title }}</a>
                         {% if link.children|length %}
-                          <ul>
+                          <ul{% if link.children|length > 5 %} class="two-column-dropdown"{% endif %}>
                             {% for child in link.children %}
                               <li>
                                 <a href="{{ child.url }}">{{ child.title }}</a>

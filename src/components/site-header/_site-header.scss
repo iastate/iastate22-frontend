@@ -363,6 +363,7 @@
           left: initial;
           bottom: initial;
           box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
+          min-width: rem(405);
         }
         &[aria-hidden="true"] {
           opacity: 0;
@@ -424,7 +425,9 @@
     text-decoration-thickness: rem(1);
     text-underline-offset: rem(1);
     @include media-breakpoint-up(lg) {
-      color: $red;
+      color: $red2;
+      line-height: (34 / 18);
+      text-decoration-color: $red2;
     }
   }
 }
