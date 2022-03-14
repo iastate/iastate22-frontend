@@ -6,26 +6,12 @@ const mobileMQ = window.matchMedia("(max-width: 992px)");
 
 export class SiteHeader {
   private element: HTMLElement;
-  private megaMenu: MegaMenu;
-
-  constructor(element: HTMLElement) {
-    if (!!element) {
-      this.element = element;
-      this.megaMenu = new MegaMenu(this.element.querySelector(".site-header__mega-menu"));
-    }
-  }
-}
-
-export class MegaMenu {
-  private element: HTMLElement;
   private scroller: HTMLElement;
   private openButton: HTMLButtonElement;
-  private closeButton: HTMLButtonElement;
-  private megaMenu: MegaMenu;
   private focusableChildren: NodeListOf<HTMLElement>;
   private parentNavItems: NodeListOf<HTMLElement>;
   public visible: boolean = false;
-  private selectedMainNavSectionIndex: number;
+  private selectedMainNavSectionIndex: number = null;
   private eventHandlers: any = {
     show: [],
     hide: [],
@@ -38,7 +24,6 @@ export class MegaMenu {
       this.openButton = AccessibilityUtilities.convertAnchorToButton(
         document.querySelector(`[aria-controls="${this.element.id}"]`)
       );
-      this.megaMenu = new MegaMenu(this.element.querySelector(".site-header__mega-menu"));
       this.focusableChildren = this.element.querySelectorAll("a, button, input");
       this.parentNavItems = this.element.querySelectorAll(".site-header__mega-menu-main-nav > ul > li");
       this.init();
@@ -47,39 +32,34 @@ export class MegaMenu {
 
   private init() {
     this.handleResize();
+    this.initiallyHideDropdowns();
     this.handleEsc();
     this.handleTabbing();
     this.handleOpenButtonClick();
     this.handleOutsideClick();
     this.handleMobileBackButtonClicks();
-    this.handleMobileParentLinkClicks();
-    this.handleDesktopParentLinkClicks();
+    this.handleParentLinkClicks();
     this.initMobileNav();
     this.toggleVisibility();
   }
 
   private handleResize() {
     const resize = () => {
-      for (let i = 0; i < this.parentNavItems.length; i++) {
-        const parentItem = this.parentNavItems[i];
-        const parentLink = parentItem.querySelector("a") as HTMLAnchorElement;
-        const dropdownMenu = parentLink.nextElementSibling as HTMLElement;
-        const childList = parentItem.querySelector("ul") as HTMLElement;
-        const visible = this.selectedMainNavSectionIndex === i;
-
-        if (mobileMQ.matches) {
-          parentLink.setAttribute("role", "button");
-          parentLink.setAttribute("aria-haspopup", "true");
-          this.toggleMobileNavSectionVisibility(i, visible);
-        } else {
-          childList.removeAttribute("aria-hidden");
-          dropdownMenu.setAttribute("aria-hidden", "true");
-        }
+      if (!mobileMQ.matches && !this.visible && this.element.getAttribute("aria-hidden") === "true") {
+        this.element.setAttribute("aria-hidden", "false");
+      }
+      if (mobileMQ.matches && !this.visible && this.element.getAttribute("aria-hidden") === "false") {
+        this.element.setAttribute("aria-hidden", "true");
       }
     };
-
     window.addEventListener("resize", _debounce(resize, 100));
     resize();
+  }
+
+  private initiallyHideDropdowns() {
+    for (let i = 0; i < this.parentNavItems.length; i++) {
+      this.toggleNavSectionVisibility(i, false);
+    }
   }
 
   private handleEsc() {
@@ -136,12 +116,13 @@ export class MegaMenu {
   private handleOutsideClick() {
     document.body.addEventListener("click", (event) => {
       const target = event.target as HTMLElement;
+
       if (
         !target.closest(".site-header") ||
         (target.classList.contains("site-header__mega-menu-scroller") && !mobileMQ.matches)
       ) {
-        this.visible = false;
-        this.toggleVisibility();
+        this.toggleNavSectionVisibility(this.selectedMainNavSectionIndex, false);
+        this.selectedMainNavSectionIndex = null;
       }
     });
   }
@@ -150,38 +131,24 @@ export class MegaMenu {
     this.element.addEventListener("click", (event) => {
       const target = event.target as HTMLElement;
       if (!!target.closest(".site-header__mega-menu-main-nav-dropdown-back")) {
-        this.toggleMobileNavSectionVisibility(this.selectedMainNavSectionIndex, false);
+        this.toggleNavSectionVisibility(this.selectedMainNavSectionIndex, false);
         this.selectedMainNavSectionIndex = null;
       }
     });
   }
 
-  private handleMobileParentLinkClicks() {
+  private handleParentLinkClicks() {
     this.element.addEventListener("click", (event) => {
       const target = event.target as HTMLElement;
       const parentLink = target.closest(".site-header__mega-menu-main-nav-parent") as HTMLAnchorElement;
-      if (mobileMQ.matches && !!parentLink) {
+      if (!!parentLink) {
         event.preventDefault();
-        this.selectedMainNavSectionIndex = parseInt(parentLink.dataset.index);
-        this.toggleMobileNavSectionVisibility(this.selectedMainNavSectionIndex, true);
-      }
-    });
-  }
-
-  private handleDesktopParentLinkClicks() {
-    this.element.addEventListener("click", (event) => {
-      const target = event.target as HTMLElement;
-      const parentLink = target.closest(".site-header__mega-menu-main-nav-parent") as HTMLAnchorElement;
-      const dropdownMenu = parentLink.nextElementSibling as HTMLElement;
-      if (!mobileMQ.matches) {
-        event.preventDefault();
-        if (dropdownMenu.classList.contains("mega-menu-desktop-dropdown-open")) {
-          dropdownMenu.classList.remove("mega-menu-desktop-dropdown-open");
-          dropdownMenu.setAttribute("aria-hidden", "true");
-        } else {
-          dropdownMenu.setAttribute("aria-hidden", "false");
-          dropdownMenu.classList.add("mega-menu-desktop-dropdown-open");
+        console.log(this.selectedMainNavSectionIndex);
+        if (this.selectedMainNavSectionIndex !== null) {
+          this.toggleNavSectionVisibility(this.selectedMainNavSectionIndex, false);
         }
+        this.selectedMainNavSectionIndex = parseInt(parentLink.dataset.index);
+        this.toggleNavSectionVisibility(this.selectedMainNavSectionIndex, true);
       }
     });
   }
@@ -239,7 +206,7 @@ export class MegaMenu {
     }
   }
 
-  private toggleMobileNavSectionVisibility(index: number, visible: boolean) {
+  private toggleNavSectionVisibility(index: number, visible: boolean) {
     const parentItem = this.parentNavItems[index];
     const parentLink = parentItem.querySelector("a") as HTMLAnchorElement;
     const childList = parentItem.querySelector("ul") as HTMLElement;
@@ -276,6 +243,6 @@ export class MegaMenu {
 }
 
 export default function siteHeaderInit() {
-  const header = document.querySelector(".site-header") as HTMLElement;
+  const header = document.querySelector(".site-header__mega-menu") as HTMLElement;
   new SiteHeader(header);
 }
