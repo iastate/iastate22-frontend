@@ -63,7 +63,6 @@
 }
 
 .video-embed__button {
-  border: none;
   z-index: 5;
   cursor: pointer;
   width: rem(60);
@@ -73,59 +72,34 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: rgba($white, 0.4);
-  border-radius: 50%;
-  transition: 0.2s background-color ease-in-out;
+  border: none;
+  background-color: transparent;
+  padding: 0;
   @include media-breakpoint-up(lg) {
     width: rem(80);
     height: rem(80);
     margin-top: rem(-40);
     margin-left: rem(-40);
   }
-  &:hover {
-    background-color: rgba($white, 1);
-    .video-embed__triangle {
-      background-color: $red2;
+  .video-play-icon {
+    width: auto;
+    .outer-circle g {
+      transition: 0.2s opacity ease-in-out;
+    }
+    .arrow {
+      transition: 0.2s fill ease-in-out;
     }
   }
-}
-
-.video-embed__triangle {
-  position: relative;
-  background-color: $white;
-  text-align: left;
-  transition: 0.2s background-color ease-in-out;
-  margin-left: rem(20);
-  @include media-breakpoint-up(lg) {
-    margin-left: rem(28);
+  &:hover {
+    .video-play-icon {
+      .outer-circle g {
+        opacity: 1;
+      }
+      .arrow {
+        fill: $red2;
+      }
+    }
   }
-}
-.video-embed__triangle:before,
-.video-embed__triangle:after {
-  content: "";
-  position: absolute;
-  background-color: inherit;
-}
-.video-embed__triangle,
-.video-embed__triangle:before,
-.video-embed__triangle:after {
-  width: rem(17);
-  height: rem(17);
-  border-top-right-radius: 30%;
-  @include media-breakpoint-up(lg) {
-    width: rem(23);
-    height: rem(23);
-  }
-}
-
-.video-embed__triangle {
-  transform: rotate(30.5deg) skewX(-30deg) scale(1, 0.866);
-}
-.video-embed__triangle:before {
-  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translate(0, -50%);
-}
-.video-embed__triangle:after {
-  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
 }
 
 .video-embed__caption {
