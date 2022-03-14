@@ -4,161 +4,177 @@
       "utility_nav": [
         {
           "title": "My Admissions Account",
-          "url": "placeholder-link"
+          "url": "https://www.iastate.edu/"
         },
         {
           "title": "Request Info",
-          "url": "placeholder-link"
+          "url": "https://www.iastate.edu/"
         },
         {
           "title": "Apply",
-          "url": "placeholder-link"
+          "url": "https://www.iastate.edu/"
         },
         {
           "title": "Give",
-          "url": "placeholder-link"
+          "url": "https://www.iastate.edu/"
         },
         {
           "title": "Sign Ons and Tools",
-          "url": "placeholder-link"
+          "url": "https://www.iastate.edu/"
         }
       ],
       "full_nav": [
         {
           "title": "Academics",
-          "url": "placeholder-link",
+          "url": "https://www.iastate.edu/",
           "children": [
             {
               "title": "Majors, Minors and Certificates",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Pre-Professional Programs",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Graduate Programs",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Veterinary Medicine",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             }
           ]
         },
         {
           "title": "Admission & Aid",
-          "url": "placeholder-link",
+          "url": "https://www.iastate.edu/",
           "children": [
             {
               "title": "Admissions",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Tuition and Fees",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Affording College",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "New Student Programs",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
-              "title": "Apply.",
-              "url": "placeholder-link"
+              "title": "Apply",
+              "url": "https://www.iastate.edu/"
+            },
+            {
+              "title": "Request Info",
+              "url": "https://www.iastate.edu/"
+            },
+            {
+              "title": "Visit",
+              "url": "https://www.iastate.edu/"
+            },
+            {
+              "title": "Meet Your Admissions Counselor",
+              "url": "https://www.iastate.edu/"
+            },
+            {
+              "title": "Chat with Students and Staff",
+              "url": "https://www.iastate.edu/"
             }
           ]
         },
         {
           "title": "Learn By Doing",
-          "url": "placeholder-link",
+          "url": "https://www.iastate.edu/",
           "children": [
             {
               "title": "Research",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Innovation and Entrepreneurship",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Study Abroad",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Honors Program",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Career Preparation",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Industry Partnerships",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             }
           ]
         },
         {
           "title": "Life at Iowa State",
-          "url": "placeholder-link",
+          "url": "https://www.iastate.edu/",
           "children": [
             {
               "title": "Student Learning Communities",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Faculty Mentorship",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Campus and Location",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Housing and Dining",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Health and Safety",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Athletics and Recreation",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Academic Support",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "4-Year Graduation Guarantee",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "History and Traditions",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             }
           ]
         },
         {
           "title": "Diversity and Inclusion",
-          "url": "placeholder-link",
+          "url": "https://www.iastate.edu/",
           "children": [
             {
               "title": "Principles of Community",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Programs and Initiatives",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             },
             {
               "title": "Student Resources",
-              "url": "placeholder-link"
+              "url": "https://www.iastate.edu/"
             }
           ]
         }
