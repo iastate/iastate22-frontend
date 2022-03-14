@@ -1,5 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import * as _debounce from "lodash.debounce";
+import Micromodal from "micromodal";
 import AccessibilityUtilities from "../utilities/accessibility";
 
 const mobileMQ = window.matchMedia("(max-width: 992px)");
@@ -143,12 +144,13 @@ export class SiteHeader {
       const parentLink = target.closest(".site-header__mega-menu-main-nav-parent") as HTMLAnchorElement;
       if (!!parentLink) {
         event.preventDefault();
-        console.log(this.selectedMainNavSectionIndex);
+        const newIndex = parseInt(parentLink.dataset.index);
+        const newLinkClicked = newIndex !== this.selectedMainNavSectionIndex;
         if (this.selectedMainNavSectionIndex !== null) {
           this.toggleNavSectionVisibility(this.selectedMainNavSectionIndex, false);
         }
-        this.selectedMainNavSectionIndex = parseInt(parentLink.dataset.index);
-        this.toggleNavSectionVisibility(this.selectedMainNavSectionIndex, true);
+        this.toggleNavSectionVisibility(newIndex, newLinkClicked);
+        this.selectedMainNavSectionIndex = newLinkClicked ? newIndex : null;
       }
     });
   }
@@ -216,7 +218,7 @@ export class SiteHeader {
     for (let i = 0; i < focusableChildren.length; i++) {
       focusableChildren[i].setAttribute("tabindex", visible ? "0" : "-1");
     }
-    if (visible) {
+    if (visible && mobileMQ.matches) {
       disableBodyScroll(childList);
     } else {
       enableBodyScroll(childList);
