@@ -1,4 +1,4 @@
-<div class="multi-column-text">
+<div class="multi-column-text{% if columns|length < 3 %} multi-column-text-two-col{% endif %}">
   {% for column in columns %}
   <div class="multi-column-text__column">
     <div class="text-content">
