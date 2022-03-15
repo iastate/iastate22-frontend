@@ -1,5 +1,5 @@
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import * as _debounce from "lodash.debounce";
+import * as Headroom from "headroom.js";
 import AccessibilityUtilities from "../utilities/accessibility";
 
 const mobileMQ = window.matchMedia("(max-width: 1200px)");
@@ -7,6 +7,7 @@ const mobileMQ = window.matchMedia("(max-width: 1200px)");
 export class SiteHeader {
   private element: HTMLElement;
   private scroller: HTMLElement;
+  private headroom: Headroom;
   private openButton: HTMLButtonElement;
   private focusableChildren: NodeListOf<HTMLElement>;
   private parentNavItems: NodeListOf<HTMLElement>;
@@ -32,6 +33,7 @@ export class SiteHeader {
 
   private init() {
     this.handleResize();
+    this.initStickyNav();
     this.initiallyHideDropdowns();
     this.handleEsc();
     this.handleTabbing();
@@ -54,6 +56,14 @@ export class SiteHeader {
     };
     window.addEventListener("resize", _debounce(resize, 100));
     resize();
+  }
+
+  private initStickyNav() {
+    const siteHeaderRoot = document.querySelector(".site-header") as HTMLElement;
+    this.headroom = new Headroom(siteHeaderRoot, {
+      tolerance: 5,
+    });
+    this.headroom.init();
   }
 
   private initiallyHideDropdowns() {
@@ -197,30 +207,21 @@ export class SiteHeader {
         this.focusableChildren[i].setAttribute("tabindex", this.visible ? "0" : "-1");
       }
 
-      if (this.visible) {
-        disableBodyScroll(this.scroller);
-      } else {
-        enableBodyScroll(this.scroller);
-      }
-
       this.trigger(this.visible ? "show" : "hide");
     }
   }
 
   private toggleNavSectionVisibility(index: number, visible: boolean) {
-    const parentItem = this.parentNavItems[index];
-    const parentLink = parentItem.querySelector("a") as HTMLAnchorElement;
-    const childList = parentItem.querySelector("ul") as HTMLElement;
-    const focusableChildren = childList?.querySelectorAll("a, button") as NodeListOf<HTMLElement>;
-    parentLink.setAttribute("aria-expanded", `${visible}`);
-    childList.setAttribute("aria-hidden", `${!visible}`);
-    for (let i = 0; i < focusableChildren.length; i++) {
-      focusableChildren[i].setAttribute("tabindex", visible ? "0" : "-1");
-    }
-    if (visible && mobileMQ.matches) {
-      disableBodyScroll(childList);
-    } else {
-      enableBodyScroll(childList);
+    if (index !== null) {
+      const parentItem = this.parentNavItems[index];
+      const parentLink = parentItem.querySelector("a") as HTMLAnchorElement;
+      const childList = parentItem.querySelector("ul") as HTMLElement;
+      const focusableChildren = childList?.querySelectorAll("a, button") as NodeListOf<HTMLElement>;
+      parentLink.setAttribute("aria-expanded", `${visible}`);
+      childList.setAttribute("aria-hidden", `${!visible}`);
+      for (let i = 0; i < focusableChildren.length; i++) {
+        focusableChildren[i].setAttribute("tabindex", visible ? "0" : "-1");
+      }
     }
   }
 
