@@ -1,9 +1,8 @@
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import * as _debounce from "lodash.debounce";
-import Micromodal from "micromodal";
 import AccessibilityUtilities from "../utilities/accessibility";
 
-const mobileMQ = window.matchMedia("(max-width: 992px)");
+const mobileMQ = window.matchMedia("(max-width: 1200px)");
 
 export class SiteHeader {
   private element: HTMLElement;
