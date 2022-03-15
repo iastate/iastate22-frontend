@@ -1,7 +1,7 @@
 %button,
 .button {
   display: block;
-  border: rem(2) solid $red2;
+  border: rem(2) solid $iastate-maroon;
   border-radius: rem(30);
   padding: rem(5) rem(35) rem(5) rem(20);
   appearance: none;
@@ -9,7 +9,7 @@
   text-align: left;
   cursor: pointer;
   background-color: $white;
-  color: $red2;
+  color: $iastate-maroon;
   font-family: $nimbus-sans-bold;
   font-weight: 700;
   font-size: rem(18);
@@ -31,19 +31,19 @@
     top: rem(18);
     width: rem(7);
     height: rem(7);
-    border-right: rem(2) solid $yellow;
-    border-bottom: rem(2) solid $yellow;
+    border-right: rem(2) solid $iastate-gold;
+    border-bottom: rem(2) solid $iastate-gold;
     transform: rotate(-45deg);
   }
   &:before {
     width: rem(0);
-    border-bottom: rem(2) solid $yellow;
+    border-bottom: rem(2) solid $iastate-gold;
     top: rem(20.375);
     transition: 0.2s width ease-in-out;
     transform-origin: center left;
   }
   &:hover {
-    background-color: $red2;
+    background-color: $iastate-maroon;
     color: $white;
     padding-right: rem(40);
     &:before {
@@ -57,10 +57,10 @@
   border-color: $white;
   &:hover {
     background-color: $white;
-    color: $red2;
+    color: $iastate-maroon;
   }
   &:after,
   &:before {
-    border-color: $red2;
+    border-color: $iastate-maroon;
   }
 }

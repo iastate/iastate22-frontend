@@ -45,7 +45,7 @@ body {
 
 a {
   .text-content & {
-    color: $red2;
+    color: $iastate-maroon;
     font-weight: 700;
     font-family: $nimbus-sans-bold;
     &.fancy-link {
@@ -148,14 +148,14 @@ ul {
       &:before {
         content: "•";
         padding-right: rem(13);
-        color: $red2;
+        color: $iastate-maroon;
       }
       ul {
         li {
           &:before {
             content: "–";
             padding-right: rem(10);
-            color: $red2;
+            color: $iastate-maroon;
           }
         }
       }
@@ -171,7 +171,7 @@ ol {
       &:before {
         content: counter(item) ". ";
         counter-increment: item;
-        color: $red2;
+        color: $iastate-maroon;
       }
     }
   }
@@ -210,7 +210,7 @@ h6,
 h1,
 .h1,
 %h1 {
-  color: $red;
+  color: $iastate-red;
   font-family: $merriweather;
   font-size: rem(50);
   font-weight: normal;
@@ -226,7 +226,7 @@ h1,
 h2,
 .h2,
 %h2 {
-  color: $red;
+  color: $iastate-red;
   font-family: $merriweather;
   font-size: rem(30);
   font-weight: 700;
@@ -242,7 +242,7 @@ h2,
       position: absolute;
       bottom: 0;
       width: rem(50);
-      border-bottom: rem(2) solid $yellow;
+      border-bottom: rem(2) solid $iastate-gold;
       left: 0;
     }
   }
@@ -256,7 +256,7 @@ h2,
 h3,
 .h3,
 %h3 {
-  color: $red;
+  color: $iastate-red;
   font-family: $nimbus-sans-bold;
   font-size: rem(21);
   font-weight: 700;
@@ -268,7 +268,7 @@ h3,
 h4,
 .h4,
 %h4 {
-  color: $red2;
+  color: $iastate-maroon;
   font-family: $nimbus-sans-bold;
   font-size: rem(18);
   font-weight: 700;
@@ -280,7 +280,7 @@ h4,
 h5,
 .h5,
 %h5 {
-  color: $red2;
+  color: $iastate-maroon;
   font-family: $nimbus-sans-bold;
   font-size: rem(16);
   font-weight: 700;

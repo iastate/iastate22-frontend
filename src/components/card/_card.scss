@@ -21,7 +21,7 @@
   }
   &:before {
     content: "";
-    background-color: $yellow;
+    background-color: $iastate-gold;
     position: absolute;
     top: rem(-8);
     left: rem(-8);
@@ -41,7 +41,7 @@
 
 .card__cta {
   font-family: $nimbus-sans-bold;
-  color: $red2;
+  color: $iastate-maroon;
   font-weight: 700;
   font-size: rem(18);
   line-height: (28 / 18);
@@ -49,7 +49,7 @@
   margin-top: rem(5);
   display: inline-block;
   &:hover {
-    color: $red;
+    color: $iastate-red;
   }
 }
 
@@ -95,7 +95,7 @@
   padding: 0;
   font-family: $nimbus-sans-bold;
   font-weight: 700;
-  color: $red;
+  color: $iastate-red;
   font-size: rem(21);
   line-height: (30 / 21);
   a {

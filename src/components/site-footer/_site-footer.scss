@@ -1,5 +1,5 @@
 .site-footer {
-  background-color: $red;
+  background-color: $iastate-red;
   padding: rem(36) rem(36) 0;
   position: relative;
   @include media-breakpoint-up(xl) {
@@ -51,14 +51,14 @@
       margin-right: rem(30);
     }
     a {
-      border: rem(2) solid $yellow;
+      border: rem(2) solid $iastate-gold;
       border-radius: 50%;
       width: rem(52);
       height: rem(52);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $yellow;
+      color: $iastate-gold;
       transition: 0.2s color ease-in-out, 0.2s border-color ease-in-out;
       &:hover {
         color: $white;
@@ -86,13 +86,13 @@
       justify-content: flex-end;
     }
     li {
-      border-bottom: rem(2) solid $yellow;
+      border-bottom: rem(2) solid $iastate-gold;
       text-align: center;
       @include media-breakpoint-up(md) {
         padding: 0 rem(30);
       }
       &:first-child {
-        border-top: rem(2) solid $yellow;
+        border-top: rem(2) solid $iastate-gold;
         @include media-breakpoint-up(md) {
           border-top: none;
           padding-left: 0;
@@ -109,7 +109,7 @@
         transition: 0.2s color ease-in-out;
         white-space: nowrap;
         &:hover {
-          color: $yellow;
+          color: $iastate-gold;
         }
       }
     }
@@ -117,7 +117,7 @@
 }
 
 .site-footer__secondary-nav {
-  border-bottom: rem(2) solid $yellow;
+  border-bottom: rem(2) solid $iastate-gold;
   padding-bottom: rem(27);
   margin-bottom: rem(30);
   @include media-breakpoint-up(xl) {
@@ -219,7 +219,7 @@
         color: $white;
         transition: 0.2s color ease-in-out;
         &:hover {
-          color: $yellow;
+          color: $iastate-gold;
         }
         &.site-footer__section-email {
           text-decoration: none;
@@ -240,7 +240,7 @@
 }
 
 .site-footer__bottom-wrap {
-  background-color: $red2;
+  background-color: $iastate-maroon;
   margin-left: rem(-36);
   margin-right: rem(-36);
   padding-bottom: rem(20);
@@ -279,7 +279,7 @@
         font-size: rem(15);
         line-height: (26 / 15);
         &:hover {
-          color: $yellow;
+          color: $iastate-gold;
         }
       }
     }

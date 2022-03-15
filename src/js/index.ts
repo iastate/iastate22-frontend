@@ -8,7 +8,7 @@ import { silcCoreInit } from "silc-core";
 import { silcAccordionInit } from "silc-accordion";
 import { silcNavInit } from "silc-nav";
 import { SilcCarouselInit } from "../components/carousel/carousel";
-import Modal from "../components/modal/modal";
+import Modal from "./components/modal";
 import lazyLoadInit from "../components/lazyload/_lazyload";
 import siteHeaderInit from "./components/site-header";
 import cardsInit from "./components/card";

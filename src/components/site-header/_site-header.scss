@@ -118,7 +118,7 @@
   a {
     @include media-breakpoint-up(lg) {
       text-transform: none;
-      color: $red2;
+      color: $iastate-maroon;
       font-family: $nimbus-sans-regular;
       font-weight: 400;
       font-size: rem(14);
@@ -133,17 +133,17 @@
 }
 
 .site-header__search-toggle {
-  color: $red;
+  color: $iastate-red;
   display: block;
   font-size: rem(14);
   text-decoration: none;
   transition: 0.3s color ease-in-out;
   @include media-breakpoint-up(lg) {
-    color: $red2;
+    color: $iastate-maroon;
   }
   &:hover,
   .user-tabbing &:focus {
-    color: $red2;
+    color: $iastate-maroon;
   }
 }
 
@@ -214,7 +214,7 @@
 }
 
 .site-header__mega-menu-inner {
-  background-color: $red;
+  background-color: $iastate-red;
   height: 100%;
   overflow: hidden;
   pointer-events: none;
@@ -264,7 +264,7 @@
     span {
       display: block;
       width: 100%;
-      border-bottom: rem(2) solid $red;
+      border-bottom: rem(2) solid $iastate-red;
       margin-bottom: rem(7);
       transform-origin: center center;
       transition: 0.2s transform ease-in-out, 0.2s opacity ease-in-out, 0.2s border-color ease-in-out;
@@ -275,7 +275,7 @@
     }
     &:hover {
       span {
-        border-color: $red2;
+        border-color: $iastate-maroon;
       }
     }
   }
@@ -300,7 +300,7 @@
 }
 
 .site-header__mega-menu-main {
-  background-color: $red;
+  background-color: $iastate-red;
   padding: rem(60) rem(36);
   @include media-breakpoint-up(lg) {
     background-color: transparent;
@@ -332,7 +332,7 @@
           padding: 0;
           background-color: transparent;
           border: none;
-          color: $red;
+          color: $iastate-red;
           font-size: rem(16);
           line-height: (26 / 16);
           margin: 0;
@@ -349,11 +349,11 @@
               top: rem(5);
               width: rem(10);
               height: rem(10);
-              border-right: rem(2) solid $red;
-              border-bottom: rem(2) solid $red;
+              border-right: rem(2) solid $iastate-red;
+              border-bottom: rem(2) solid $iastate-red;
               transform: rotate(45deg);
               transform-origin: center;
-              transition: 0.2s transform ease-in-out, 0.2s top ease-in-out;
+              transition: 0.2s transform ease-in-out, 0.2s top ease-in-out, 0.2s border-color ease-in-out;
             }
           }
         }
@@ -363,15 +363,27 @@
             background-color: transparent;
             padding-right: 0;
           }
+          &:after {
+            @include media-breakpoint-up(lg) {
+              border-color: $iastate-maroon;
+            }
+          }
         }
         &[aria-expanded="true"] {
           @include media-breakpoint-up(lg) {
-            border-bottom: rem(7) solid $yellow;
+            border-bottom: rem(7) solid $iastate-gold;
+          }
+          &:after {
+            @include media-breakpoint-up(lg) {
+              transform: rotate(225deg);
+              top: rem(10);
+              border-color: $iastate-maroon;
+            }
           }
         }
       }
       ul {
-        background-color: $red;
+        background-color: $iastate-red;
         overflow-y: auto;
         padding: rem(20) rem(40);
         position: absolute;
@@ -483,9 +495,9 @@
     text-decoration-thickness: rem(1);
     text-underline-offset: rem(1);
     @include media-breakpoint-up(lg) {
-      color: $red2;
+      color: $iastate-maroon;
       line-height: (34 / 18);
-      text-decoration-color: $red2;
+      text-decoration-color: $iastate-maroon;
     }
   }
 }
@@ -544,7 +556,7 @@
   @include media-breakpoint-up(lg) {
     order: 1;
     width: 100% !important;
-    border-top: rem(2) solid $yellow;
+    border-top: rem(2) solid $iastate-gold;
     margin-top: rem(45);
     padding-top: rem(25);
   }
@@ -559,7 +571,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   text-decoration: none;
   margin-left: rem(-14);
   @include media-breakpoint-up(lg) {
-    color: $red2;
+    color: $iastate-maroon;
     font-size: rem(18);
     line-height: (31 / 18);
     margin-left: 0;
@@ -567,7 +579,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
 }
 
 .site-header__mega-menu-secondary {
-  background-color: $red;
+  background-color: $iastate-red;
   padding: 0 rem(36) rem(60);
   @include media-breakpoint-up(lg) {
     display: none;
@@ -605,7 +617,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   .modal__overlay {
     display: block;
     z-index: 11;
-    background-color: rgba($red, 0.95);
+    background-color: rgba($iastate-red, 0.95);
   }
   .modal__container {
     background-color: transparent;
@@ -641,7 +653,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     border: none;
     height: rem(44);
     background-color: $white;
-    color: $red2;
+    color: $iastate-maroon;
     font-size: rem(18);
     flex: 1 1 0px;
     line-height: (33 / 18);
@@ -654,7 +666,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
       font-family: $nimbus-sans-regular-italic;
       font-weight: 400;
       font-style: italic;
-      color: $red2;
+      color: $iastate-maroon;
       opacity: 0.8;
     }
   }

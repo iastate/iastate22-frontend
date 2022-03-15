@@ -12,9 +12,13 @@
       <div class="modal__content">
         <h2 class="modal__title" id="{{ id }}-title">{{ title }}</h2>
         {{ content|raw }}
-        <div class="modal__content-cta">
-          {{ call_to_action|raw }}
-        </div>
+        <form class="modal__content-form" method="post">
+          <label>
+            <div class="label-text">{{ form_field_label }}</div>
+            <input type="{{ input_type }}" name="{{ input_name }}" id="{{ input_id }}" {% if required %}required{% endif %}/>
+          </label>
+          <button type="submit" value="Submit">{{ form_input_text }}</button>
+        </form>
       </div>
     </div>
   </div>

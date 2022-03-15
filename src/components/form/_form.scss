@@ -9,10 +9,10 @@ form {
     font-size: rem(18);
     line-height: (25 / 18);
     font-weight: 700;
-    color: $red2;
+    color: $iastate-maroon;
     margin-bottom: rem(5);
     &.required {
-      color: $red;
+      color: $iastate-red;
     }
     .optional {
       font-family: $nimbus-sans-regular;
@@ -75,7 +75,7 @@ form {
         left: 0;
       }
       &:after {
-        background-color: $red2;
+        background-color: $iastate-maroon;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.854' height='15.2'%3E%3Cpath d='m1.03 8.087 5.117 4.832L14.628.862' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E");
         background-position: 50%;
         background-repeat: no-repeat;

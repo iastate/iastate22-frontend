@@ -9,7 +9,7 @@
 }
 
 .subnav__toggle {
-  background-color: $red;
+  background-color: $iastate-red;
   height: rem(66);
   color: $white;
   cursor: pointer;
@@ -34,8 +34,8 @@
     top: rem(25);
     width: rem(10);
     height: rem(10);
-    border-right: rem(2) solid $yellow;
-    border-bottom: rem(2) solid $yellow;
+    border-right: rem(2) solid $iastate-gold;
+    border-bottom: rem(2) solid $iastate-gold;
     transform: rotate(45deg);
     transform-origin: center;
     transition: 0.2s transform ease-in-out, 0.2s top ease-in-out;
@@ -85,7 +85,7 @@
       @include media-breakpoint-up(lg) {
         content: "";
         position: absolute;
-        border-bottom: rem(2) solid $yellow;
+        border-bottom: rem(2) solid $iastate-gold;
         left: rem(-70);
         right: rem(-70);
         bottom: 0;
@@ -130,7 +130,7 @@
         font-weight: 700;
         font-size: rem(18);
         line-height: (22 / 18);
-        color: $red2;
+        color: $iastate-maroon;
         text-decoration: none;
         padding: rem(15);
         position: relative;
@@ -145,7 +145,7 @@
         &:hover,
         &[aria-current="page"] {
           background-color: $off-white;
-          color: $red;
+          color: $iastate-red;
           @include media-breakpoint-up(lg) {
             background-color: $white;
           }
@@ -202,7 +202,7 @@
       // first child parent page
       &:first-child {
         @include media-breakpoint-up(lg) {
-          background-color: $red;
+          background-color: $iastate-red;
         }
         a {
           @include media-breakpoint-up(lg) {
@@ -218,13 +218,13 @@
             top: rem(21);
             width: rem(9);
             height: rem(9);
-            border-right: rem(2) solid $red2;
-            border-bottom: rem(2) solid $red2;
+            border-right: rem(2) solid $iastate-maroon;
+            border-bottom: rem(2) solid $iastate-maroon;
             transform: rotate(135deg);
             transform-origin: center;
             transition: 0.2s left ease-in-out;
             @include media-breakpoint-up(lg) {
-              border-color: $yellow;
+              border-color: $iastate-gold;
               top: rem(29);
               opacity: 1;
               background-color: transparent;
@@ -237,7 +237,7 @@
           }
           &:hover {
             @include media-breakpoint-up(lg) {
-              background-color: $red;
+              background-color: $iastate-red;
             }
             &:before {
               @include media-breakpoint-up(lg) {
@@ -247,14 +247,14 @@
             .subnav--horizontal & {
               @include media-breakpoint-up(lg) {
                 background-color: transparent;
-                color: $red;
+                color: $iastate-red;
               }
             }
           }
           .subnav--horizontal & {
             @include media-breakpoint-up(lg) {
               padding: 0;
-              color: $red2;
+              color: $iastate-maroon;
               font-size: rem(16);
               line-height: (19 / 16);
             }

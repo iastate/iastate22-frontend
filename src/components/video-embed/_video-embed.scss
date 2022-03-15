@@ -12,7 +12,7 @@
   // yellow square for hover
   &:after {
     content: "";
-    background-color: $yellow;
+    background-color: $iastate-gold;
     position: absolute;
     top: rem(-8);
     bottom: rem(-8);
@@ -96,7 +96,7 @@
         opacity: 1;
       }
       .arrow {
-        fill: $red2;
+        fill: $iastate-maroon;
       }
     }
   }

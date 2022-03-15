@@ -26,7 +26,7 @@
 
 .accordion-button {
   font-family: $nimbus-sans-bold;
-  color: $red;
+  color: $iastate-red;
   font-size: rem(21);
   line-height: (30 / 21);
   padding: rem(25) rem(50) rem(25) 0;
@@ -39,7 +39,7 @@
   }
   &:not(.collapsed) {
     background-color: transparent;
-    color: $red;
+    color: $iastate-red;
     box-shadow: none;
     &:after {
       transform: none;

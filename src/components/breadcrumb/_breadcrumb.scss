@@ -13,9 +13,9 @@
     font-family: $nimbus-sans-bold;
     font-size: rem(18);
     line-height: (34 / 18);
-    color: $red2;
+    color: $iastate-maroon;
     text-decoration: underline;
-    text-decoration-color: $red2;
+    text-decoration-color: $iastate-maroon;
     text-decoration-thickness: rem(1);
     text-underline-offset: rem(1);
     transition: border 0.3s;
@@ -41,8 +41,8 @@
         right: rem(-15);
         width: rem(8);
         height: rem(8);
-        border-right: rem(2) solid $red2;
-        border-bottom: rem(2) solid $red2;
+        border-right: rem(2) solid $iastate-maroon;
+        border-bottom: rem(2) solid $iastate-maroon;
         transform: rotate(-45deg);
       }
     }

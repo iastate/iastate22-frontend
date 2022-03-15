@@ -10,7 +10,7 @@
   padding-right: rem(36);
   padding-bottom: rem(40);
   background-color: $off-white;
-  border-top: rem(30) solid $red;
+  border-top: rem(30) solid $iastate-red;
   box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
   @include media-breakpoint-up(lg) {
     background-color: $white;
@@ -29,7 +29,7 @@
   &:before {
     @include media-breakpoint-up(lg) {
       content: "";
-      background-color: $red;
+      background-color: $iastate-red;
       position: absolute;
       top: rem(-60);
       left: 0;
@@ -58,7 +58,7 @@
   }
   &:after {
     content: "";
-    border-bottom: rem(8) solid $yellow;
+    border-bottom: rem(8) solid $iastate-gold;
     bottom: rem(-4);
     left: 50%;
     margin-left: rem(-28);
@@ -90,7 +90,7 @@
   &:after {
     @include media-breakpoint-up(lg) {
       content: "";
-      border-bottom: rem(8) solid $yellow;
+      border-bottom: rem(8) solid $iastate-gold;
       top: rem(-4);
       left: 50%;
       margin-left: rem(-28);

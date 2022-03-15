@@ -52,7 +52,7 @@
     }
     p {
       @include media-breakpoint-up(md) {
-        color: $red2;
+        color: $iastate-maroon;
       }
     }
 
@@ -74,7 +74,7 @@
     }
   }
   .call-to-action__copy-wrap {
-    background-color: $red;
+    background-color: $iastate-red;
     padding: rem(55) rem(36) rem(40);
     position: relative;
     @include media-breakpoint-up(lg) {
@@ -95,7 +95,7 @@
 
     &:before {
       content: "";
-      border-bottom: rem(8) solid $yellow;
+      border-bottom: rem(8) solid $iastate-gold;
       top: rem(-4);
       left: 50%;
       margin-left: rem(-28);

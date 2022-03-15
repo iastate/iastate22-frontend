@@ -42,7 +42,7 @@
   thead {
     text-align: left;
     tr {
-      background-color: $red;
+      background-color: $iastate-red;
       color: $white;
     }
     th {
@@ -72,7 +72,7 @@
       &:first-child {
         font-family: $nimbus-sans-bold;
         font-weight: 700;
-        color: $red;
+        color: $iastate-red;
       }
     }
   }

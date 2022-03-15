@@ -10,7 +10,7 @@
   .feature-with-large-image {
     z-index: 1;
     border-top-color: $off-white;
-    background-color: $red;
+    background-color: $iastate-red;
     @include media-breakpoint-up(lg) {
       background-color: transparent;
     }
@@ -22,7 +22,7 @@
   }
   .feature-with-large-image__content {
     @include media-breakpoint-up(lg) {
-      background-color: $red;
+      background-color: $iastate-red;
     }
 
     h2,
@@ -74,7 +74,7 @@
   &:before {
     content: "";
     position: absolute;
-    border-bottom: rem(2) solid $yellow;
+    border-bottom: rem(2) solid $iastate-gold;
     left: 50%;
     margin-left: rem(-25);
     width: rem(50);
