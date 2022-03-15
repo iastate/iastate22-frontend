@@ -12,4 +12,16 @@
       max-width: 35%;
     }
   }
+
+  &.statistic-with-text--right {
+    .statistic {
+      @include media-breakpoint-up(md) {
+        float: right;
+        margin: rem(10) 0 rem(10) rem(45);
+      }
+      @include media-breakpoint-up(lg) {
+        margin-left: rem(90);
+      }
+    }
+  }
 }
