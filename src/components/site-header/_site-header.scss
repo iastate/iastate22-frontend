@@ -7,11 +7,18 @@
   left: 0;
   z-index: 11;
   width: 100vw;
+  max-width: rem(1600);
+  margin: 0 auto;
   @include media-breakpoint-up(xl) {
     width: auto;
   }
   > * {
     pointer-events: initial;
+  }
+  // headroom styles
+  &.headroom--unpinned,
+  &.headroom--pinned {
+    position: fixed;
   }
 }
 
@@ -24,6 +31,7 @@
   top: rem(18);
   text-decoration: none;
   z-index: 1;
+  transition: 0.2s top ease-in-out;
   @include media-breakpoint-up(lg) {
     width: 25%;
     max-width: rem(293);
@@ -35,6 +43,11 @@
   @include media-breakpoint-up(xxl) {
     max-width: rem(346);
     left: rem(82);
+  }
+  .headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      top: rem(27);
+    }
   }
 
   img {
@@ -65,6 +78,7 @@
   padding-bottom: rem(54);
   justify-content: flex-end;
   border-bottom: rem(1) solid $grey4;
+  transition: 0.2s height ease-in-out;
   @include media-breakpoint-up(xl) {
     padding: 0 rem(32) 0;
     height: rem(117);
@@ -72,6 +86,11 @@
   }
   @include media-breakpoint-up(xxl) {
     padding: 0 rem(60) 0;
+  }
+  .headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      height: rem(93);
+    }
   }
   ul {
     display: flex;
@@ -99,6 +118,7 @@
 .site-header__utility {
   position: relative;
   display: none;
+  transition: 0.2s opacity ease-in-out;
   @include media-breakpoint-up(xl) {
     display: block;
     margin-top: rem(27);
@@ -110,6 +130,11 @@
   &.site-header__utility-search-open {
     transition: 0.2s margin-right ease-in-out;
     margin-right: 240px;
+  }
+  .headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      opacity: 0;
+    }
   }
   a {
     @include media-breakpoint-up(lg) {
@@ -133,6 +158,7 @@
   height: rem(54);
   width: rem(54);
   margin-right: rem(31);
+  transition: 0.2s opacity ease-in-out;
   @include media-breakpoint-up(xl) {
     position: relative;
     top: rem(14);
@@ -142,6 +168,11 @@
   }
   @include media-breakpoint-up(xxl) {
     margin-right: 0;
+  }
+  .headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      opacity: 0;
+    }
   }
 }
 
@@ -188,8 +219,14 @@
   right: 0;
   bottom: 0;
   left: 0;
+  transition: 0.2s transform ease-in-out;
   @include media-breakpoint-up(lg) {
     background-color: transparent;
+  }
+  .headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      transform: translateY(#{rem(-35)});
+    }
   }
   html:not(.js) & {
     display: none;
@@ -199,7 +236,7 @@
   }
   .js & {
     opacity: 0;
-    transition: 0.3s opacity ease-in-out, 0.3s visibility ease-in-out;
+    transition: 0.3s opacity ease-in-out, 0.3s visibility ease-in-out, 0.2s transform ease-in-out;
     visibility: hidden;
     &[aria-hidden="false"] {
       opacity: 1;
@@ -510,6 +547,12 @@
       color: $iastate-maroon;
       line-height: (34 / 18);
       text-decoration-color: $iastate-maroon;
+      font-size: rem(16);
+      line-height: (24 / 16);
+    }
+    @include media-breakpoint-up(xxl) {
+      font-size: rem(18);
+      line-height: (26 / 18);
     }
   }
 }
@@ -585,9 +628,13 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   position: relative;
   @include media-breakpoint-up(xl) {
     color: $iastate-maroon;
+    font-size: rem(16);
+    line-height: (27 / 16);
+    margin-left: 0;
+  }
+  @include media-breakpoint-up(xxl) {
     font-size: rem(18);
     line-height: (31 / 18);
-    margin-left: 0;
   }
   .arrow {
     background-color: $white;
