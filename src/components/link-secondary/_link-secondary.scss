@@ -10,35 +10,10 @@
   line-height: (25 / 18);
   text-decoration: none;
   position: relative;
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    right: rem(-23);
-    transform-origin: center;
-  }
-  &:after {
-    top: rem(8.125);
-    width: rem(8);
-    height: rem(7);
-    border-right: rem(2) solid $iastate-maroon;
-    border-bottom: rem(2) solid $iastate-maroon;
-    transform: rotate(-45deg);
-    transition: 0.2s right ease-in-out;
-  }
-  &:before {
-    width: rem(14);
-    border-bottom: rem(2) solid $iastate-maroon;
-    top: rem(10.21);
-    transition: 0.2s transform ease-in-out;
-    transform-origin: center left;
-  }
   &:hover {
-    &:before {
-      transform: scaleX(1.5);
-    }
-    &:after {
-      right: rem(-31);
+    .arrow {
+      width: rem(22);
+      right: rem(-33);
     }
   }
 }

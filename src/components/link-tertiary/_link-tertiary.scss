@@ -12,32 +12,14 @@
   text-decoration-color: transparent;
   position: relative;
   transition: 0.2s text-decoration-color ease-in-out;
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    right: rem(-23);
-    transform-origin: center;
+  .arrow {
     opacity: 0;
     transition: 0.2s opacity ease-in-out;
-  }
-  &:after {
-    top: rem(8.5);
-    width: rem(8);
-    height: rem(7);
-    border-right: rem(2) solid $iastate-maroon;
-    border-bottom: rem(2) solid $iastate-maroon;
-    transform: rotate(-45deg);
-  }
-  &:before {
-    width: rem(14);
-    border-bottom: rem(2) solid $iastate-maroon;
-    top: rem(11.253);
+    top: rem(10);
   }
   &:hover {
     text-decoration-color: $iastate-maroon;
-    &:before,
-    &:after {
+    .arrow {
       opacity: 1;
     }
   }

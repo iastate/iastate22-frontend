@@ -96,3 +96,32 @@
     line-height: (22 / 14);
   }
 }
+
+%arrow,
+.arrow {
+  position: absolute;
+  top: rem(12);
+  width: rem(12);
+  height: rem(2);
+  right: rem(-23);
+  background-color: $iastate-maroon;
+  transition: 0.2s width ease-in-out, 0.2s right ease-in-out;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    width: rem(8);
+    height: rem(2);
+    right: rem(-3);
+    background-color: $iastate-maroon;
+  }
+  &:after {
+    top: rem(-2.2);
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    top: rem(2);
+    transform: rotate(-45deg);
+  }
+}
