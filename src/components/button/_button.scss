@@ -20,34 +20,24 @@
   @include media-breakpoint-up(md) {
     display: inline-block;
   }
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
+  .arrow {
     right: rem(17);
-    transform-origin: center;
+    top: rem(20);
+    width: 0;
+    background-color: $iastate-gold;
+
+    &:after,
+    &:before {
+      background-color: $iastate-gold;
+    }
   }
-  &:after {
-    top: rem(18);
-    width: rem(7);
-    height: rem(7);
-    border-right: rem(2) solid $iastate-gold;
-    border-bottom: rem(2) solid $iastate-gold;
-    transform: rotate(-45deg);
-  }
-  &:before {
-    width: rem(0);
-    border-bottom: rem(2) solid $iastate-gold;
-    top: rem(20.375);
-    transition: 0.2s width ease-in-out;
-    transform-origin: center left;
-  }
+
   &:hover {
     background-color: $iastate-maroon;
     color: $white;
     padding-right: rem(40);
-    &:before {
-      width: rem(14);
+    .arrow {
+      width: rem(12);
     }
   }
 }
@@ -55,12 +45,15 @@
 %button--reverse,
 .button--reverse {
   border-color: $white;
+  .arrow {
+    background-color: $iastate-maroon;
+    &:after,
+    &:before {
+      background-color: $iastate-maroon;
+    }
+  }
   &:hover {
     background-color: $white;
     color: $iastate-maroon;
-  }
-  &:after,
-  &:before {
-    border-color: $iastate-maroon;
   }
 }

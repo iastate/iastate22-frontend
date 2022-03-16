@@ -34,6 +34,9 @@
     }
     .button {
       background-color: transparent;
+      &:hover {
+        color: $iastate-maroon;
+      }
     }
   }
 
