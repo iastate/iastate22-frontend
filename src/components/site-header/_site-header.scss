@@ -24,15 +24,16 @@
   top: rem(18);
   text-decoration: none;
   z-index: 1;
-  @include media-breakpoint-up(md) {
-    left: rem(70);
-  }
   @include media-breakpoint-up(lg) {
-    max-width: rem(346);
     width: 25%;
+    max-width: rem(293);
   }
   @include media-breakpoint-up(xl) {
     top: rem(37);
+    left: rem(32);
+  }
+  @include media-breakpoint-up(xxl) {
+    max-width: rem(346);
     left: rem(82);
   }
 
@@ -65,9 +66,12 @@
   justify-content: flex-end;
   border-bottom: rem(1) solid $grey4;
   @include media-breakpoint-up(xl) {
-    padding: 0 rem(60) 0;
+    padding: 0 rem(32) 0;
     height: rem(117);
     align-items: flex-start;
+  }
+  @include media-breakpoint-up(xxl) {
+    padding: 0 rem(60) 0;
   }
   ul {
     display: flex;
@@ -79,10 +83,10 @@
       padding-right: rem(18);
     }
     @include media-breakpoint-up(xl) {
-      padding-right: rem(25);
+      padding-right: rem(18);
     }
     @include media-breakpoint-up(xxl) {
-      padding-right: rem(46);
+      padding-right: rem(24);
     }
     &:last-child {
       @include media-breakpoint-up(xl) {
@@ -97,8 +101,11 @@
   display: none;
   @include media-breakpoint-up(xl) {
     display: block;
-    margin-right: rem(53);
     margin-top: rem(27);
+    margin-right: rem(16);
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-right: rem(53);
   }
   &.site-header__utility-search-open {
     transition: 0.2s margin-right ease-in-out;
@@ -114,25 +121,10 @@
       line-height: (24 / 14);
       text-decoration: none;
     }
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(xxl) {
       font-size: rem(16);
       line-height: (26 / 16);
     }
-  }
-}
-
-.site-header__search-toggle {
-  color: $iastate-red;
-  display: block;
-  font-size: rem(14);
-  text-decoration: none;
-  transition: 0.3s color ease-in-out;
-  @include media-breakpoint-up(lg) {
-    color: $iastate-maroon;
-  }
-  &:hover,
-  .user-tabbing &:focus {
-    color: $iastate-maroon;
   }
 }
 
@@ -144,22 +136,33 @@
   @include media-breakpoint-up(xl) {
     position: relative;
     top: rem(14);
-    margin-right: 0;
+    margin-right: rem(-16);
     display: flex;
     justify-content: center;
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-right: 0;
   }
 }
 
 .site-header__search-toggle {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  padding: 0 rem(16);
-  font-size: rem(20);
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+  display: none;
+  @include media-breakpoint-up(xl) {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding: 0 rem(16);
+    font-size: rem(20);
+    border: none;
+    background-color: transparent;
+    color: $iastate-maroon;
+    display: block;
+    font-size: rem(20);
+    text-decoration: none;
+    transition: 0.3s color ease-in-out;
+    cursor: pointer;
+  }
 }
 
 .site-header__main {
@@ -300,8 +303,11 @@
   padding: rem(60) rem(36);
   @include media-breakpoint-up(xl) {
     background-color: transparent;
-    padding: 0 rem(92) 0 0;
+    padding: 0 rem(51) 0 0;
     margin-top: rem(13);
+  }
+  @include media-breakpoint-up(xxl) {
+    padding: 0 rem(92) 0 0;
   }
 }
 
@@ -329,10 +335,14 @@
           background-color: transparent;
           border: none;
           color: $iastate-red;
-          font-size: rem(16);
-          line-height: (26 / 16);
+          font-size: rem(14);
+          line-height: (26 / 14);
           margin: 0;
           border-radius: 0;
+          @include media-breakpoint-up(xxl) {
+            font-size: rem(16);
+            line-height: (26 / 16);
+          }
           &:before {
             display: none;
           }
@@ -341,15 +351,21 @@
               content: "";
               display: block;
               position: absolute;
-              right: rem(-16);
-              top: rem(5);
-              width: rem(10);
-              height: rem(10);
+              right: rem(-13);
+              top: rem(7);
+              width: rem(7);
+              height: rem(7);
               border-right: rem(2) solid $iastate-red;
               border-bottom: rem(2) solid $iastate-red;
               transform: rotate(45deg);
               transform-origin: center;
               transition: 0.2s transform ease-in-out, 0.2s top ease-in-out, 0.2s border-color ease-in-out;
+              @include media-breakpoint-up(xxl) {
+                right: rem(-16);
+                top: rem(5);
+                width: rem(10);
+                height: rem(10);
+              }
             }
           }
         }

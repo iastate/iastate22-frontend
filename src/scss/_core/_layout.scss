@@ -22,7 +22,7 @@
 
 main {
   padding-top: rem(55);
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     padding-top: rem(117);
   }
 }
