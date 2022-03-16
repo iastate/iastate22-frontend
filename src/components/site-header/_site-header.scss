@@ -71,7 +71,7 @@
 
 .site-header__top {
   align-items: center;
-  background-color: $white;
+  background-color: rgba($white, 0.95);
   display: flex;
   height: rem(38);
   padding-right: rem(58);
@@ -721,6 +721,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     margin: 0;
     width: 0;
     transition: 0.2s width ease-in-out;
+    visibility: hidden;
     button[type="submit"] {
       display: none;
       font-size: rem(20);
@@ -730,6 +731,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   }
   &[aria-hidden="false"] {
     width: rem(270);
+    visibility: visible;
     button[type="submit"] {
       display: block;
       height: rem(44);

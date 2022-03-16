@@ -15,6 +15,7 @@ export class SiteHeader {
   private searchTrigger: HTMLElement;
   private closeSearchButton: HTMLButtonElement;
   private searchFormDesktop: HTMLFormElement;
+  private formInput: HTMLFormElement;
   public visible: boolean = false;
   private selectedMainNavSectionIndex: number = null;
   private eventHandlers: any = {
@@ -39,6 +40,7 @@ export class SiteHeader {
       this.closeSearchButton = AccessibilityUtilities.convertAnchorToButton(
         document.querySelector(".site-header__search-close")
       );
+      this.formInput = document.querySelector("#searchDesktop");
       this.init();
     }
   }
@@ -264,11 +266,15 @@ export class SiteHeader {
     this.searchFormDesktop.setAttribute("aria-hidden", "true");
     this.closeSearchButton.setAttribute("aria-hidden", "true");
     const utilityNav = document.querySelector(".site-header__utility");
+    const formInput = document.querySelector("#searchDesktop");
     this.searchTrigger.addEventListener("click", () => {
       this.searchTrigger.setAttribute("aria-expanded", "true");
       this.searchFormDesktop.setAttribute("aria-hidden", "false");
       utilityNav.classList.add("site-header__utility-search-open");
       this.closeSearchButton.setAttribute("aria-hidden", "false");
+      setTimeout(() => {
+        this.formInput.focus();
+      }, 300);
     });
     this.closeSearchButton.addEventListener("click", () => {
       this.searchTrigger.setAttribute("aria-expanded", "false");
