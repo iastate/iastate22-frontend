@@ -15,31 +15,5 @@
         "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>"
       }
     ]
-  },
-  "variants": [
-    {
-      "name": "become-tabs",
-      "context": {
-        "modifier": "become-tabs",
-        "id": "accordion-become-tabs-0"
-      }
-    },
-    {
-      "name": "tabs",
-      "context": {
-        "modifier": "tabs",
-        "id": "accordion-tabs-0",
-        "sections": [
-          {
-            "title": "Tab 1",
-            "content": "<p>This is the content area of tab 1</p>"
-          },
-          {
-            "title": "Tab 2",
-            "content": "<p>This is the content area of tab 2</p>"
-          }
-        ]
-      }
-    }
-  ]
+  }
 }
