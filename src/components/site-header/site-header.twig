@@ -14,10 +14,21 @@
       </ul>
     </nav>
     <div class="site-header__search">
-      <a href="#site-search" class="site-header__search-toggle" data-micromodal-trigger="site-search">
+      <a href="#site-search" class="site-header__search-toggle">
         <span class="visible-for-screen-readers">Search</span>
         <span class="fak fa-id5-magnifying-glass"></span>
       </a>
+      <a href="#" class="site-header__search-close">
+        <span class="visible-for-screen-readers">Close Search</span>
+        <span class="fa-light fa-xmark"></span>
+      </a>
+      <form class="site-header__search-form-desktop">
+        <div>
+          <span class="visible-for-screen-readers">Search</span>
+          <input type="search" id="searchDesktop" name="search">
+          <button type="submit"><span class="fak fa-id5-magnifying-glass"></span></button>
+        </div>
+      </form>
     </div>
   </div>
   <div class="site-header__main">
@@ -66,6 +77,11 @@
                           </li>
                         {% endfor %}
                       </ul>
+                      <form class="site-header__search-form-mobile">
+                        <span class="visible-for-screen-readers">Search</span>
+                        <input type="search" id="searchMobile" name="search">
+                        <button type="submit"><span class="fak fa-id5-magnifying-glass"></span></button>
+                      </form>
                     </nav>
                   </div>
                 </div>

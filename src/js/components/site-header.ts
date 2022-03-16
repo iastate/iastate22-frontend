@@ -11,6 +11,10 @@ export class SiteHeader {
   private openButton: HTMLButtonElement;
   private focusableChildren: NodeListOf<HTMLElement>;
   private parentNavItems: NodeListOf<HTMLElement>;
+  private searchBox: HTMLElement;
+  private searchTrigger: HTMLElement;
+  private closeSearchButton: HTMLButtonElement;
+  private searchFormDesktop: HTMLFormElement;
   public visible: boolean = false;
   private selectedMainNavSectionIndex: number = null;
   private eventHandlers: any = {
@@ -27,6 +31,14 @@ export class SiteHeader {
       );
       this.focusableChildren = this.element.querySelectorAll("a, button, input");
       this.parentNavItems = this.element.querySelectorAll(".site-header__mega-menu-main-nav > ul > li");
+      this.searchBox = this.element.querySelector(".site-header__search");
+      this.searchTrigger = AccessibilityUtilities.convertAnchorToButton(
+        document.querySelector(".site-header__search-toggle")
+      );
+      this.searchFormDesktop = document.querySelector(".site-header__search-form-desktop");
+      this.closeSearchButton = AccessibilityUtilities.convertAnchorToButton(
+        document.querySelector(".site-header__search-close")
+      );
       this.init();
     }
   }
@@ -43,6 +55,7 @@ export class SiteHeader {
     this.handleParentLinkClicks();
     this.initMobileNav();
     this.toggleVisibility();
+    this.handleSearch();
   }
 
   private handleResize() {
@@ -174,6 +187,7 @@ export class SiteHeader {
         const parentLink = parentItem.querySelector("a") as HTMLAnchorElement;
         const parentLinkClone = document.createElement("A") as HTMLAnchorElement;
         const backButton = document.createElement("BUTTON") as HTMLButtonElement;
+        const parentLinkCloneArrow = document.createElement("SPAN") as HTMLElement;
         parentLink.classList.add("site-header__mega-menu-main-nav-parent");
         parentLink.dataset.index = `${i}`;
         backButtonLI.classList.add("site-header__mega-menu-main-nav-dropdown-back-wrap");
@@ -185,6 +199,7 @@ export class SiteHeader {
           <span class="visible-for-screen-readers"> to top level of menu</span>
         `;
         parentLinkClone.classList.add("site-header__mega-menu-main-nav-dropdown-parent");
+        parentLinkCloneArrow.classList.add("arrow");
         parentLinkClone.textContent = Array.prototype.filter
           .call(parentLink.childNodes, (el) => el.nodeType === Node.TEXT_NODE)
           .map((el) => el.textContent)
@@ -192,6 +207,7 @@ export class SiteHeader {
         parentLinkClone.href = parentLink.href;
         backButtonLI.appendChild(backButton);
         clonedParentLI.appendChild(parentLinkClone);
+        parentLinkClone.appendChild(parentLinkCloneArrow);
         childList.insertBefore(clonedParentLI, childList.firstElementChild);
         childList.insertBefore(backButtonLI, clonedParentLI);
       }
@@ -241,6 +257,25 @@ export class SiteHeader {
     } else {
       throw new Error(`Event type "${eventType}" is not allowed for MegaMenu component.`);
     }
+  }
+
+  private handleSearch() {
+    this.searchTrigger.setAttribute("aria-expanded", "false");
+    this.searchFormDesktop.setAttribute("aria-hidden", "true");
+    this.closeSearchButton.setAttribute("aria-hidden", "true");
+    const utilityNav = document.querySelector(".site-header__utility");
+    this.searchTrigger.addEventListener("click", () => {
+      this.searchTrigger.setAttribute("aria-expanded", "true");
+      this.searchFormDesktop.setAttribute("aria-hidden", "false");
+      utilityNav.classList.add("site-header__utility-search-open");
+      this.closeSearchButton.setAttribute("aria-hidden", "false");
+    });
+    this.closeSearchButton.addEventListener("click", () => {
+      this.searchTrigger.setAttribute("aria-expanded", "false");
+      this.searchFormDesktop.setAttribute("aria-hidden", "true");
+      utilityNav.classList.remove("site-header__utility-search-open");
+      this.closeSearchButton.setAttribute("aria-hidden", "true");
+    });
   }
 }
 
