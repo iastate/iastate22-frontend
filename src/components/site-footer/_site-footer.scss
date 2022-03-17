@@ -59,10 +59,9 @@
       align-items: center;
       justify-content: center;
       color: $iastate-gold;
-      transition: 0.2s color ease-in-out, 0.2s border-color ease-in-out;
+      transition: 0.2s background-color ease-in-out;
       &:hover {
-        color: $iastate-maroon;
-        border-color: $iastate-maroon;
+        background-color: $red2;
       }
       svg {
         color: currentColor;
