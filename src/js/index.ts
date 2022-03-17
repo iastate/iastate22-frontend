@@ -3,12 +3,9 @@
  */
 import focusWithin from "focus-within";
 import * as objectFitImages from "object-fit-images";
-
 import { silcCoreInit } from "silc-core";
 import { silcAccordionInit } from "silc-accordion";
-import { silcNavInit } from "silc-nav";
 import Modal from "./components/modal";
-import lazyLoadInit from "../components/lazyload/_lazyload";
 import siteHeaderInit from "./components/site-header";
 import cardsInit from "./components/card";
 import subnavInit from "./components/subnav";
@@ -23,10 +20,8 @@ focusWithin(document);
 objectFitImages();
 silcCoreInit();
 silcAccordionInit();
-silcNavInit();
 siteHeaderInit();
 Modal.init();
-lazyLoadInit();
 cardsInit();
 privacyConsentInit();
 accordionsInit();

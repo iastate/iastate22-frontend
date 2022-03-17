@@ -292,10 +292,11 @@ h5,
 h6,
 .h6,
 %h6 {
-  color: $h6-color;
-  font-family: $h6-font-family;
-  font-size: $h6-font-size;
-  font-weight: $h6-font-weight;
-  letter-spacing: $h6-letter-spacing;
-  margin: $h6-margin;
+  color: $iastate-maroon;
+  font-family: $nimbus-sans-bold;
+  font-size: rem(16);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: (25 / 16);
+  margin: $h5-margin;
 }
