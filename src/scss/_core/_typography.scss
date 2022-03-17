@@ -49,28 +49,6 @@ a {
     color: $iastate-maroon;
     font-weight: 700;
     font-family: $nimbus-sans-bold;
-    &.fancy-link {
-      color: $fancy-link-color;
-      font-family: $fancy-link-font-family;
-      font-size: $fancy-link-font-size;
-      font-weight: $fancy-link-font-weight;
-      margin-right: 1.1rem;
-      position: relative;
-      text-decoration: $fancy-link-text-decoration;
-      transition: $fancy-link-transition;
-      &:hover {
-        color: $fancy-link_hover-color;
-        &:after {
-          transform: translateX(66.667%);
-        }
-      }
-      &:after {
-        content: $fancy-link-icon;
-        position: absolute;
-        transform: translateX(33.333%);
-        transition: $fancy-link-icon-transition;
-      }
-    }
   }
 }
 
@@ -86,7 +64,7 @@ p {
     text-decoration: underline;
     transition: $link-transition;
     &:hover {
-      color: $link_hover-color;
+      color: $iastate-red;
     }
   }
 }
