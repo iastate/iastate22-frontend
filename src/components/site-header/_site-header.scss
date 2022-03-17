@@ -338,6 +338,7 @@
 .site-header__mega-menu-main {
   background-color: $iastate-red;
   padding: rem(60) rem(36);
+  position: relative;
   @include media-breakpoint-up(xl) {
     background-color: transparent;
     padding: 0 rem(51) 0 0;
@@ -484,7 +485,9 @@
             }
           }
         }
-
+        html:not(.js) & {
+          z-index: -1;
+        }
         li {
           margin-bottom: rem(10);
           padding-left: rem(14);
@@ -778,4 +781,13 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     opacity: 1;
     visibility: visible;
   }
+}
+
+// close button for when js is disabled
+.nojs-close-menu {
+  text-align: right;
+  padding-right: 40px;
+  margin-top: 10px;
+  color: $white;
+  display: block;
 }
