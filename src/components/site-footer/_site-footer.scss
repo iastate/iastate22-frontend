@@ -61,8 +61,8 @@
       color: $iastate-gold;
       transition: 0.2s color ease-in-out, 0.2s border-color ease-in-out;
       &:hover {
-        color: $white;
-        border-color: $white;
+        color: $iastate-maroon;
+        border-color: $iastate-maroon;
       }
       svg {
         color: currentColor;
