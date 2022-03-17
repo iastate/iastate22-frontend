@@ -15,13 +15,14 @@
     line-height: (34 / 18);
     color: $iastate-maroon;
     text-decoration: underline;
-    text-decoration-color: $iastate-maroon;
+    text-decoration-color: currentColor;
     text-decoration-thickness: rem(1);
     text-underline-offset: rem(1);
-    transition: border 0.3s;
+    transition: 0.2s border ease-in-out, 0.2s color ease-in-out;
     &:hover,
     &:focus {
       border-bottom-width: 2px;
+      color: $iastate-red;
     }
     &[aria-current="page"] {
       text-decoration: none;
