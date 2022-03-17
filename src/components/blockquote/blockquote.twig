@@ -1,14 +1,15 @@
-
-<blockquote class="blockquote"{% if sourceUrl %} cite="{{ sourceUrl }}"{% endif %}>
-    <div class="blockquote__quote">
-        <p>{{ quote }}</p>
+<div class="iastate22-blockquote{% if portrait %} iastate22-blockquote--with-image{% else %} iastate22-blockquote--with-no-image{% endif %}">
+  <div class="iastate22-blockquote__inner-wrap">
+    {% if portrait %}
+    <div class="iastate22-blockquote__portrait">
+      <img src="{{ portrait|path }}" alt="" />
     </div>
-    <footer class="blockquote__footer">
-        &mdash; <span class="blockquote__author">{{ author }}</span>{% if source %}, <cite class="blockquote__source">{{ source }}</cite>{% endif %}
-        {% if portrait %}
-            <div class="blockquote__portrait">
-                <img src="{{ portrait|path }}" alt="portrait of {{ author }}">
-            </div>
-        {% endif %}
-    </footer>
-</blockquote>
+    {% endif %}
+    <div class="iastate22-blockquote__text-wrap">
+      <h2 class="iastate22-blockquote__quote">{{quote}}</h2>
+      {% if author %}
+      <p class="iastate22-blockquote__author">{{author}}{% if author_role %}, {{author_role}}{% endif %}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
