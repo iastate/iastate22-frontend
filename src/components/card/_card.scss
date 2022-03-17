@@ -1,6 +1,4 @@
-@import "variables";
-
-.card {
+.iastate22-card {
   box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
   background: $white;
   text-align: center;
@@ -12,7 +10,7 @@
       &:before {
         opacity: 1;
       }
-      .card__media {
+      .iastate22-card__media {
         img {
           transform: scale(1.1);
         }
@@ -33,13 +31,7 @@
   }
 }
 
-.card--hz {
-  display: flex;
-  border: $card--hz-border;
-  box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
-}
-
-.card__cta {
+.iastate22-card__cta {
   font-family: $nimbus-sans-bold;
   color: $iastate-maroon;
   font-weight: 700;
@@ -53,44 +45,29 @@
   }
 }
 
-.card__content {
+.iastate22-card__content {
   margin: 0;
   padding: rem(22) rem(41);
   position: relative;
   z-index: 2;
   background-color: $white;
-
-  .card--hz & {
-    margin: $card--hz__content-margin;
-    padding: $card--hz__content-padding;
-    flex: 1;
-  }
 }
 
-.card__media {
+.iastate22-card__media {
   overflow: hidden;
   z-index: 1;
-  .card:not(.card--hz) & {
-    @extend %responsive-img;
-    &:before {
-      content: "";
-      padding-top: 100%;
-    }
+  @extend %responsive-img;
+  &:before {
+    content: "";
+    padding-top: 100%;
   }
 
   img {
     transition: 0.2s transform ease-in-out;
   }
-
-  .card--hz & {
-    margin: $card--hz__media-margin;
-    padding: $card--hz__media-padding;
-    width: $card--hz__media-width;
-    height: $card--hz__media-height;
-  }
 }
 
-.card__title {
+.iastate22-card__title {
   margin: 0;
   padding: 0;
   font-family: $nimbus-sans-bold;
@@ -104,6 +81,6 @@
   }
 }
 
-.card__body {
+.iastate22-card__body {
   margin-top: rem(5);
 }

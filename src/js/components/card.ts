@@ -6,8 +6,8 @@ export interface CardOptions {
 
 const defaultOptions = {
   clickable: false,
-  titleClass: "card__title",
-  ctaClass: "card__cta",
+  titleClass: "iastate22-card__title",
+  ctaClass: "iastate22-card__cta",
 } as CardOptions;
 
 export class Card {
@@ -75,7 +75,7 @@ export class Card {
 }
 
 export default function cardsInit() {
-  const cards = document.querySelectorAll(".card") as NodeListOf<HTMLElement>;
+  const cards = document.querySelectorAll(".iastate22-card") as NodeListOf<HTMLElement>;
   for (let i = 0; i < cards.length; i++) {
     new Card(cards[i], {
       clickable: true,

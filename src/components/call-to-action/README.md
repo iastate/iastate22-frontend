@@ -6,4 +6,4 @@
 - The `--large` version contains an image, heading, text and button set
 - The `--small` version contains a heading and button set
 - The custom styles are imported into the `.index.scss` file as `@import "../components/call-to-action/call-to-action";`
-- There is a paragraph-widget wrappers for these components for use in page context `<div class="paragraph-widget paragraph-widget--call-to-action--large">` and `<div class="paragraph-widget paragraph-widget--call-to-action--small">`.
+- There are paragraph-widget wrappers for these components for use in page context `<div class="paragraph-widget paragraph-widget--call-to-action--large">` and `<div class="paragraph-widget paragraph-widget--call-to-action--small">`.

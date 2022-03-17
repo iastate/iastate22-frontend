@@ -1,20 +1,20 @@
-<div class="card">
+<div class="iastate22-card">
   {% if image %}
-  <div class="card__media">
+  <div class="iastate22-card__media">
 		<img src="{{ image|path }}" alt="">
 	</div>
   {% endif %}
-	<div class="card__content">
-		<h2 class="card__title"><a href="{{url}}">{{ title }}</a></h2>
-		<div class="card__body">
+	<div class="iastate22-card__content">
+		<h2 class="iastate22-card__title"><a href="{{url}}">{{ title }}</a></h2>
+		<div class="iastate22-card__body">
 			{{ body|raw }}
 		</div>
 		{% if cta.url %}
 			{% if cta.text %}
-				<a href="{{ cta.url }}" class="card__cta">{{ cta.text }}</a>
+				<a href="{{ cta.url }}" class="iastate22-card__cta">{{ cta.text }}</a>
 			{% else %}
 				{# Provide a screen-reader only fallback if no text is provided to allow JS to work properly #}
-				<a href="{{ cta.url }}" class="card__cta visible-for-screen-readers">Learn more about {{ title }}</a>
+				<a href="{{ cta.url }}" class="iastate22-card__cta visible-for-screen-readers">Learn more about {{ title }}</a>
 			{% endif %}
 		{% endif %}
 	</div>
