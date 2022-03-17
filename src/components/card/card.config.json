@@ -2,7 +2,7 @@
   "context": {
     "title": "Card Title",
     "body": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>",
-    "image": "http://via.placeholder.com/400x250/ddd/ddd",
+    "image": "../../img/Component-Card-Image-1.jpg",
     "url": "https://idfive.com",
     "cta": {
       "url": "https://idfive.com",
