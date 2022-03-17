@@ -768,8 +768,14 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     color: $iastate-red;
     transition: 0.2s color ease-in-out;
     cursor: pointer;
+    border-radius: 0;
+    margin: 0;
+    padding: 0 rem(7);
+    line-height: 1.3;
     &:hover {
       color: $iastate-maroon;
+      background-color: $white;
+      padding: 0 rem(7);
     }
   }
 }
