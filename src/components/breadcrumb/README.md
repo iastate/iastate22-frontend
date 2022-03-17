@@ -1,9 +1,5 @@
 # Breadcrumb
 
-## Design Notes
-Out of the box, the breadcrumb component supports quick customization of the following properties:
+This is a custom component (the class has been prefaced with `.iastate22-[classname]`).
 
-- `margin`, and `padding` of the root breadcrumb element
-- `color` of breacrumb links
-- `border-color` of the border under each link when hovered over
-- Character used as a separator between links
+The custom styles are imported into the `.index.scss` file as `@import "../components/breadcrumb/breadcrumb";`
