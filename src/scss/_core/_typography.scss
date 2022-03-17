@@ -44,7 +44,8 @@ body {
 }
 
 a {
-  .text-content & {
+  .text-content &,
+  .accordion-item & {
     color: $iastate-maroon;
     font-weight: 700;
     font-family: $nimbus-sans-bold;
@@ -92,7 +93,8 @@ p {
 
 ul,
 ol {
-  .text-content & {
+  .text-content &,
+  .accordion-item & {
     margin: $list-margin;
     padding: $list-padding;
     li {
@@ -115,7 +117,8 @@ ol {
       margin: $list-list-margin;
     }
   }
-  .text-content > & {
+  .text-content > &,
+  .accordion-item & {
     &:first-child {
       margin-top: 0;
       ul,
@@ -140,7 +143,8 @@ ol {
 }
 
 ul {
-  .text-content & {
+  .text-content &,
+  .accordion-item & {
     list-style-type: none;
     li {
       padding-left: rem(20);
@@ -164,7 +168,8 @@ ul {
 }
 
 ol {
-  .text-content & {
+  .text-content &,
+  .accordion-item & {
     list-style-type: none;
     counter-reset: item;
     li {
