@@ -230,6 +230,9 @@
   }
   html:not(.js) & {
     display: none;
+    @include media-breakpoint-up(xl) {
+      display: block;
+    }
     &:target {
       display: block;
     }
@@ -347,6 +350,11 @@
   @include media-breakpoint-up(xxl) {
     padding: 0 rem(92) 0 0;
   }
+  html:not(.js) & {
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(-23);
+    }
+  }
 }
 
 .site-header__mega-menu-main-nav {
@@ -364,6 +372,20 @@
         margin-bottom: 0;
         transition: 0.3s opacity ease-in-out;
         position: relative;
+      }
+      html:not(.js) & {
+        &:hover {
+          & > ul {
+            @include media-breakpoint-up(xl) {
+              display: block;
+            }
+          }
+          & > .two-column-dropdown {
+            @include media-breakpoint-up(xl) {
+              display: flex;
+            }
+          }
+        }
       }
       > a {
         @extend %iastate22-button;
@@ -487,6 +509,12 @@
         }
         html:not(.js) & {
           z-index: -1;
+          @include media-breakpoint-up(xl) {
+            display: none;
+            padding-bottom: rem(30);
+            margin-top: rem(14);
+            z-index: 1;
+          }
         }
         li {
           margin-bottom: rem(10);
@@ -785,9 +813,11 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
 
 // close button for when js is disabled
 .nojs-close-menu {
-  text-align: right;
-  padding-right: 40px;
-  margin-top: 10px;
-  color: $white;
-  display: block;
+  html:not(.js) & {
+    text-align: right;
+    padding-right: 40px;
+    margin-top: 10px;
+    color: $white;
+    display: block;
+  }
 }
