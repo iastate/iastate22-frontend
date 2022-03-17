@@ -8,5 +8,5 @@
   <div class="image-grid__image">
     <img src="{{ image_three|path }}" alt="" width="303" height="202" />
   </div>
-  <div class="image-grid__caption"><p>{{caption}}</p></div>
+  {% if caption %}<div class="image-grid__caption"><p>{{caption}}</p></div>{% endif %}
 </div>
