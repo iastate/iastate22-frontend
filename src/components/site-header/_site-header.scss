@@ -128,8 +128,15 @@
     margin-right: rem(53);
   }
   &.site-header__utility-search-open {
-    transition: 0.2s margin-right ease-in-out;
-    margin-right: 240px;
+    @include media-breakpoint-up(xl) {
+      transition: 0.2s margin-right ease-in-out;
+      margin-right: rem(240);
+    }
+  }
+  html:not(.js) & {
+    @include media-breakpoint-up(xl) {
+      margin-right: rem(240);
+    }
   }
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
@@ -729,6 +736,14 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     width: 100%;
     height: rem(48);
     border: none;
+    &::placeholder {
+      color: transparent;
+    }
+    html:not(.js) & {
+      &::placeholder {
+        color: currentColor;
+      }
+    }
   }
   button[type="submit"] {
     background-color: $white;
@@ -757,6 +772,8 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     width: 0;
     transition: 0.2s width ease-in-out;
     visibility: hidden;
+  }
+  @include media-breakpoint-up(xl) {
     button[type="submit"] {
       display: none;
       font-size: rem(20);
@@ -786,6 +803,20 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     padding: 0;
     transition: 0.2s border-color ease-in-out;
     pointer-events: none;
+
+    html:not(.js) & {
+      @include media-breakpoint-up(xl) {
+        pointer-events: all;
+        border: rem(2) solid $iastate-maroon;
+        padding: rem(8) rem(15);
+      }
+    }
+  }
+  html:not(.js) & {
+    @include media-breakpoint-up(xl) {
+      width: rem(270);
+      visibility: visible;
+    }
   }
 }
 .site-header__search-close {
