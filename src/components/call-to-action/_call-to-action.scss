@@ -23,7 +23,7 @@
   @include media-breakpoint-up(xl) {
     padding-left: rem(280);
   }
-  .button-set {
+  .iastate22-button-set {
     @include media-breakpoint-up(md) {
       flex: 0 1 auto;
       width: 40%;
@@ -123,8 +123,11 @@
       line-height: (29 / 16);
     }
   }
-  .button-set {
+  .iastate22-button-set {
     margin-top: rem(26);
+    @include media-breakpoint-up(md) {
+      margin-top: 0;
+    }
     .iastate22-button {
       @extend %iastate22-button--reverse;
     }
