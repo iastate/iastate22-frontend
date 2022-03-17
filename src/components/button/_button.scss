@@ -1,5 +1,5 @@
-%button,
-.button {
+%iastate22-button,
+.iastate22-button {
   display: block;
   border: rem(2) solid $iastate-maroon;
   border-radius: rem(30);
@@ -42,8 +42,8 @@
   }
 }
 
-%button--reverse,
-.button--reverse {
+%iastate22-button--reverse,
+.iastate22-button--reverse {
   border-color: $white;
   .arrow {
     background-color: $iastate-maroon;

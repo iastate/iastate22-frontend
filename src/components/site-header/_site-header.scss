@@ -365,8 +365,8 @@
         position: relative;
       }
       > a {
-        @extend %button;
-        @extend %button--reverse;
+        @extend %iastate22-button;
+        @extend %iastate22-button--reverse;
         @include media-breakpoint-up(xl) {
           padding: 0;
           background-color: transparent;

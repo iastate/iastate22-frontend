@@ -135,7 +135,7 @@
     }
   }
   button[type="submit"] {
-    @extend %button;
+    @extend %iastate22-button;
     margin-bottom: 0;
     @include media-breakpoint-up(md) {
       flex: 0 0 auto;

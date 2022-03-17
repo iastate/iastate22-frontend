@@ -30,8 +30,8 @@
       color: $white;
     }
   }
-  .button {
-    @extend %button--reverse;
+  .iastate22-button {
+    @extend %iastate22-button--reverse;
   }
   // off-white color in background
   &:after {

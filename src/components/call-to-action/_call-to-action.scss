@@ -32,7 +32,7 @@
     @include media-breakpoint-up(lg) {
       // width: 25%;
     }
-    .button {
+    .iastate22-button {
       background-color: transparent;
       &:hover {
         color: $iastate-maroon;
@@ -125,8 +125,8 @@
   }
   .button-set {
     margin-top: rem(26);
-    .button {
-      @extend %button--reverse;
+    .iastate22-button {
+      @extend %iastate22-button--reverse;
     }
   }
 }
