@@ -1,18 +1,18 @@
-<button class="iastate22-button" data-micromodal-trigger="{{ id }}">Modal Trigger</div>
+<button class="iastate22-button" data-micromodal-trigger="{{ id }}">Modal Trigger<span class="arrow"></span></div>
 
-<div class="modal" id="{{ id }}" aria-hidden="false">
-  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-    <div class="modal__container{% if image %} modal__container-with-media{% endif %}" id="{{ id }}-content" role="dialog" aria-modal="true" aria-labelledby="{{ id }}-title">
-      <button class="modal__close" aria-label="Close modal" data-micromodal-close><i class="fa-light fa-xmark"></i></button>
+<div class="iastate22-modal" id="{{ id }}" aria-hidden="false">
+  <div class="iastate22-modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="iastate22-modal__container{% if image %} iastate22-modal__container-with-media{% endif %}" id="{{ id }}-content" role="dialog" aria-modal="true" aria-labelledby="{{ id }}-title">
+      <button class="iastate22-modal__close" aria-label="Close modal" data-micromodal-close><i class="fa-light fa-xmark"></i></button>
       {% if image %}
-      <div class="modal__media">
+      <div class="iastate22-modal__media">
         <img src="{{ image|path }}" alt="">
       </div>
       {% endif %}
-      <div class="modal__content">
-        <h2 class="modal__title" id="{{ id }}-title">{{ title }}</h2>
+      <div class="iastate22-modal__content">
+        <h2 class="iastate22-modal__title" id="{{ id }}-title">{{ title }}</h2>
         {{ content|raw }}
-        <div class="modal__content-cta">
+        <div class="iastate22-modal__content-cta">
           {{ call_to_action|raw }}
         </div>
       </div>

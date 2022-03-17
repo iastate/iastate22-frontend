@@ -1,4 +1,4 @@
-.modal {
+.iastate22-modal {
   display: none;
 
   &.is-open {
@@ -6,7 +6,7 @@
   }
 }
 
-.modal__overlay {
+.iastate22-modal__overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
   background: rgba($white, 0.9);
 }
 
-.modal__container {
+.iastate22-modal__container {
   background-color: $white;
   max-width: rem(414);
   width: 80%;
@@ -36,7 +36,7 @@
   @include media-breakpoint-up(lg) {
     width: 100%;
   }
-  &.modal__container-with-media {
+  &.iastate22-modal__container-with-media {
     @include media-breakpoint-up(md) {
       display: flex;
       align-items: flex-start;
@@ -45,30 +45,30 @@
   }
 }
 
-.modal__header {
+.iastate22-modal__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.modal__content {
+.iastate22-modal__content {
   padding: rem(20) 0 0 0;
   @include media-breakpoint-up(md) {
     flex: 0 1 auto;
     width: 100%;
     padding: rem(45) rem(75) rem(45) rem(54);
   }
-  .modal__container-with-media & {
+  .iastate22-modal__container-with-media & {
     @include media-breakpoint-up(md) {
       width: 64%;
     }
   }
-  .modal__content-cta {
+  .iastate22-modal__content-cta {
     margin-top: rem(20);
   }
 }
 
-.modal__title {
+.iastate22-modal__title {
   margin: 0 0 rem(10) 0;
   padding: 0;
   font-family: $nimbus-sans-bold;
@@ -77,7 +77,7 @@
   font-weight: 700;
 }
 
-.modal__close {
+.iastate22-modal__close {
   background: transparent;
   z-index: 1;
   width: rem(44);
@@ -104,7 +104,7 @@
   }
 }
 
-.modal__media {
+.iastate22-modal__media {
   @extend %responsive-img;
   @include media-breakpoint-up(md) {
     flex: 0 1 auto;
@@ -115,7 +115,7 @@
   }
 }
 
-.modal__content-form {
+.iastate22-modal__content-form {
   margin-top: rem(20);
   @include media-breakpoint-up(md) {
     display: flex;
