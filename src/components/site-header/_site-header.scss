@@ -380,30 +380,34 @@
             font-size: rem(16);
             line-height: (26 / 16);
           }
-          &:before {
-            display: none;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          border-right: rem(2) solid $iastate-maroon;
+          border-bottom: rem(2) solid $iastate-maroon;
+          width: rem(12);
+          height: rem(12);
+          right: rem(16);
+          top: rem(14);
+          transform: rotate(315deg);
+          transform-origin: center;
+          @include media-breakpoint-up(xl) {
+            right: rem(-13);
+            top: rem(7);
+            width: rem(7);
+            height: rem(7);
+            border-right: rem(2) solid $iastate-red;
+            border-bottom: rem(2) solid $iastate-red;
+            transform: rotate(45deg);
+            transition: 0.2s transform ease-in-out, 0.2s top ease-in-out, 0.2s border-color ease-in-out;
           }
-          &:after {
-            @include media-breakpoint-up(xl) {
-              content: "";
-              display: block;
-              position: absolute;
-              right: rem(-13);
-              top: rem(7);
-              width: rem(7);
-              height: rem(7);
-              border-right: rem(2) solid $iastate-red;
-              border-bottom: rem(2) solid $iastate-red;
-              transform: rotate(45deg);
-              transform-origin: center;
-              transition: 0.2s transform ease-in-out, 0.2s top ease-in-out, 0.2s border-color ease-in-out;
-              @include media-breakpoint-up(xxl) {
-                right: rem(-16);
-                top: rem(5);
-                width: rem(10);
-                height: rem(10);
-              }
-            }
+          @include media-breakpoint-up(xxl) {
+            right: rem(-16);
+            top: rem(5);
+            width: rem(10);
+            height: rem(10);
           }
         }
 
