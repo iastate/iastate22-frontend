@@ -276,6 +276,7 @@
 .site-header__mega-menu-scroller {
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
   @include media-breakpoint-up(xl) {
     overflow: initial;
     pointer-events: none;
