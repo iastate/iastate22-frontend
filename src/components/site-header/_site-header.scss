@@ -210,8 +210,10 @@
   pointer-events: none;
   @include media-breakpoint-up(lg) {
     background-color: transparent;
-    pointer-events: initial;
     padding-bottom: rem(20);
+  }
+  @include media-breakpoint-up(xl) {
+    pointer-events: initial;
   }
   * {
     pointer-events: initial;
@@ -227,6 +229,7 @@
   bottom: 0;
   left: 0;
   transition: 0.2s transform ease-in-out;
+  height: 100vh;
   @include media-breakpoint-up(lg) {
     background-color: transparent;
   }

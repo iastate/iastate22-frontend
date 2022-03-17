@@ -6,6 +6,13 @@
       box-shadow: none;
     }
   }
+  &:hover {
+    html:not(.js) & {
+      .subnav__list {
+        height: auto;
+      }
+    }
+  }
 }
 
 .subnav__toggle {
@@ -78,6 +85,12 @@
   background-color: $white;
   &[aria-hidden="true"] {
     height: 0;
+  }
+  html:not(.js) & {
+    height: 0;
+    @include media-breakpoint-up(lg) {
+      height: auto;
+    }
   }
   // yellow line for desktop horizontal variant
   .subnav--horizontal & {

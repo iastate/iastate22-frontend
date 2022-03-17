@@ -18,6 +18,9 @@
 {% import _self as macros %}
 
 <nav class="subnav" aria-label="Sidebar">
+  <noscript>
+    <button class="subnav__toggle" id="subnav-toggle" aria-controls="subnav-list" aria-haspopup="true" aria-expanded="false"><span>Explore This Section</span></button>
+  </noscript>
   <div class="subnav__list" id="subnav-list">
     <ul>
       {{ macros.menu_items(items) }}
