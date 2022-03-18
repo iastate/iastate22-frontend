@@ -1,10 +1,9 @@
-.paragraph-widget--callout-with-image-small-set {
+.paragraph-widget--callout-set {
   margin: rem(30) 0 rem(50) 0;
-  .callout-with-image--small {
-    .callout-with-image__media {
-      @include media-breakpoint-up(xl) {
-        margin-left: rem(-112);
-      }
+  .callout--no-image .callout__content,
+  .callout__media {
+    @include media-breakpoint-up(xl) {
+      margin-left: rem(-112);
     }
   }
 }
