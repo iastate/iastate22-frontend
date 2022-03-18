@@ -14,14 +14,9 @@
   }
 
   h2 {
-    margin-bottom: rem(5);
     padding-bottom: 0;
-    @include media-breakpoint-up(md) {
-      margin-bottom: rem(12);
-    }
     @include media-breakpoint-up(lg) {
       width: 60%;
-      margin-bottom: rem(25);
     }
   }
 
