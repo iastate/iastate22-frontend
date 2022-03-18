@@ -29,15 +29,6 @@
       width: 40%;
       margin: 0;
     }
-    @include media-breakpoint-up(lg) {
-      // width: 25%;
-    }
-    .iastate22-button {
-      background-color: transparent;
-      &:hover {
-        color: $iastate-maroon;
-      }
-    }
   }
 
   .call-to-action__copy-wrap {
