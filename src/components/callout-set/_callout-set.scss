@@ -1,7 +1,7 @@
 .paragraph-widget--callout-set {
   margin: rem(30) 0 rem(50) 0;
-  .callout--no-image .callout__content,
-  .callout__media {
+  .iastate22-callout--no-image .iastate22-callout__content,
+  .iastate22-callout__media {
     @include media-breakpoint-up(xl) {
       margin-left: rem(-112);
     }
