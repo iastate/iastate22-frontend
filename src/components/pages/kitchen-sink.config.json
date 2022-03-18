@@ -201,8 +201,21 @@
             "links": [
               {
                 "url": "https://iastate.edu",
-                "text": "Link Lorem Ipsum Dolor",
+                "text": "Secondary Link Example",
                 "variant": "link-secondary"
+              },
+              {
+                "url": "https://iastate.edu",
+                "text": "Tertiary Link Example",
+                "variant": "link-tertiary"
+              },
+              {
+                "url": "https://iastate.edu",
+                "text": "Inline Link Example"
+              },
+              {
+                "url": "https://iastate.edu",
+                "text": "Inline Link Example"
               }
             ]
           }
