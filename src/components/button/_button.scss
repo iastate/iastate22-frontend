@@ -8,7 +8,7 @@
   margin: rem(10) 0;
   text-align: left;
   cursor: pointer;
-  background-color: $white;
+  background-color: transparent;
   color: $iastate-maroon;
   font-family: $nimbus-sans-bold;
   font-weight: 700;
@@ -45,6 +45,7 @@
 %iastate22-button--reverse,
 .iastate22-button--reverse {
   border-color: $white;
+  background-color: $white;
   .arrow {
     background-color: $iastate-maroon;
     &:after,
