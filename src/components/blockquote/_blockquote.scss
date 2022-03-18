@@ -39,6 +39,9 @@
   @extend %responsive-img;
   max-width: rem(166);
   margin: rem(-80) auto rem(28);
+  @include media-breakpoint-up(md) {
+    max-width: rem(230);
+  }
   @include media-breakpoint-up(xl) {
     flex: 0 0 auto;
     margin: 0;
