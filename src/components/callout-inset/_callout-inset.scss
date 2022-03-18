@@ -29,6 +29,13 @@
     .feature-with-large-image__text {
       color: $white;
     }
+
+    .feature-with-large-image__text {
+      p {
+        font-family: $nimbus-sans-bold;
+        font-weight: 700;
+      }
+    }
   }
   .iastate22-button {
     @extend %iastate22-button--reverse;
