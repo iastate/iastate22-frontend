@@ -179,8 +179,12 @@
         font-family: $nimbus-sans-bold;
         text-decoration-thickness: rem(1);
         text-underline-offset: rem(1);
+        transition: 0.2s color ease-in-out;
         @include media-breakpoint-up(xl) {
           white-space: nowrap;
+        }
+        &:hover {
+          color: $iastate-gold;
         }
       }
     }
