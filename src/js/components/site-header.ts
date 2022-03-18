@@ -272,6 +272,7 @@ export class SiteHeader {
       this.searchFormDesktop.setAttribute("aria-hidden", "false");
       utilityNav.classList.add("site-header__utility-search-open");
       this.closeSearchButton.setAttribute("aria-hidden", "false");
+      this.searchFormDesktop.style.visibility = "visible";
       setTimeout(() => {
         this.formInput.focus();
       }, 300);
@@ -281,6 +282,9 @@ export class SiteHeader {
       this.searchFormDesktop.setAttribute("aria-hidden", "true");
       utilityNav.classList.remove("site-header__utility-search-open");
       this.closeSearchButton.setAttribute("aria-hidden", "true");
+      setTimeout(() => {
+        this.searchFormDesktop.style.visibility = "hidden";
+      }, 300);
     });
   }
 }
