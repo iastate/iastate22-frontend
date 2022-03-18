@@ -1,22 +1,22 @@
-.multi-column-text {
+.multi-column-content {
   @include media-breakpoint-up(md) {
     display: flex;
     margin-right: rem(-40);
   }
-  &.multi-column-text-two-col {
+  &.multi-column-content-two-col {
     @include media-breakpoint-up(md) {
       margin-right: rem(-100);
     }
   }
 }
-.multi-column-text__column {
+.multi-column-content__column {
   margin: rem(40) 0;
   @include media-breakpoint-up(md) {
     flex: 1 1 0px;
     padding-right: rem(40);
     margin-bottom: 0;
   }
-  .multi-column-text-two-col & {
+  .multi-column-content-two-col & {
     @include media-breakpoint-up(md) {
       padding-right: rem(100);
     }
