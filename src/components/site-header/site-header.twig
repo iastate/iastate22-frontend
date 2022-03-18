@@ -70,24 +70,20 @@
             </div>
             <div class="site-header__mega-menu-secondary">
               <div class="site-header__mega-menu-max-bound">
-                <div class="silc-grid silc-grid--collapse">
-                  <div class="silc-grid__col silc-grid__col--6">
-                    <nav class="site-header__mega-menu-utility" aria-label="Utility">
-                      <ul>
-                        {% for link in utility_nav %}
-                          <li>
-                            <a href="{{ link.url }}">{{ link.title }}</a>
-                          </li>
-                        {% endfor %}
-                      </ul>
-                      <form class="site-header__search-form-mobile">
-                        <span class="visible-for-screen-readers">Search</span>
-                        <input type="search" id="searchMobile" name="search" placeholder="Search">
-                        <button type="submit"><span class="fak fa-id5-magnifying-glass"></span></button>
-                      </form>
-                    </nav>
-                  </div>
-                </div>
+                <nav class="site-header__mega-menu-utility" aria-label="Utility">
+                  <ul>
+                    {% for link in utility_nav %}
+                      <li>
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  <form class="site-header__search-form-mobile">
+                    <span class="visible-for-screen-readers">Search</span>
+                    <input type="search" id="searchMobile" name="search" placeholder="Search">
+                    <button type="submit"><span class="fak fa-id5-magnifying-glass"></span></button>
+                  </form>
+                </nav>
               </div>
             </div>
           </div>

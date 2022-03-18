@@ -235,8 +235,12 @@ export class SiteHeader {
       const parentLink = parentItem.querySelector("a") as HTMLAnchorElement;
       const childList = parentItem.querySelector("ul") as HTMLElement;
       const focusableChildren = childList?.querySelectorAll("a, button") as NodeListOf<HTMLElement>;
+      const secondaryMenu = document.querySelector(".site-header__mega-menu-secondary") as HTMLElement;
       parentLink.setAttribute("aria-expanded", `${visible}`);
       childList.setAttribute("aria-hidden", `${!visible}`);
+      if (mobileMQ.matches) {
+        secondaryMenu.setAttribute("aria-hidden", `${visible}`);
+      }
       for (let i = 0; i < focusableChildren.length; i++) {
         focusableChildren[i].setAttribute("tabindex", visible ? "0" : "-1");
       }
