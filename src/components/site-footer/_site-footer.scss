@@ -61,7 +61,7 @@
       color: $iastate-gold;
       transition: 0.2s background-color ease-in-out;
       &:hover {
-        background-color: $red2;
+        background-color: $iastate-maroon;
       }
       svg {
         color: currentColor;
@@ -86,9 +86,13 @@
     }
     li {
       border-bottom: rem(2) solid $iastate-gold;
-      text-align: center;
+      text-align: left;
+      margin-left: rem(-36);
+      margin-right: rem(-36);
       @include media-breakpoint-up(md) {
         padding: 0 rem(30);
+        margin-left: 0;
+        margin-right: 0;
       }
       &:first-child {
         border-top: rem(2) solid $iastate-gold;
@@ -100,15 +104,41 @@
       a {
         color: $white;
         text-decoration: none;
-        display: inline-block;
+        display: block;
         font-family: $nimbus-sans-bold;
         font-size: rem(21);
         line-height: (34 / 21);
         margin: rem(17) auto;
         transition: 0.2s color ease-in-out;
         white-space: nowrap;
+        max-width: rem(236);
+        position: relative;
+        @include media-breakpoint-up(md) {
+          text-align: center;
+          display: inline-block;
+          max-width: none;
+        }
         &:hover {
           color: $iastate-gold;
+          &:before {
+            right: rem(-5);
+          }
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: rem(12);
+          width: rem(9);
+          height: rem(9);
+          border-right: rem(2) solid $iastate-gold;
+          border-bottom: rem(2) solid $iastate-gold;
+          transform: rotate(315deg);
+          transform-origin: center;
+          transition: 0.2s right ease-in-out;
+          @include media-breakpoint-up(md) {
+            display: none;
+          }
         }
       }
     }
