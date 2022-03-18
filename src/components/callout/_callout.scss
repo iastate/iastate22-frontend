@@ -1,4 +1,4 @@
-.callout {
+.iastate22-callout {
   @include media-breakpoint-up(md) {
     display: flex;
     align-items: flex-start;
@@ -6,14 +6,14 @@
   @include media-breakpoint-up(lg) {
     align-items: center;
   }
-  &.callout--no-image {
+  &.iastate22-callout--no-image {
     @include media-breakpoint-up(md) {
       display: block;
     }
   }
 }
 
-.callout__media {
+.iastate22-callout__media {
   @extend %responsive-img;
   margin-bottom: rem(17);
   &:before {
@@ -28,7 +28,7 @@
   }
 }
 
-.callout__content {
+.iastate22-callout__content {
   @include media-breakpoint-up(md) {
     flex: 1 1 0px;
     padding-left: rem(45);
@@ -44,7 +44,7 @@
   p {
     margin-top: rem(20);
   }
-  .callout--no-image & {
+  .iastate22-callout--no-image & {
     background-color: $white;
     box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
     width: 100%;
