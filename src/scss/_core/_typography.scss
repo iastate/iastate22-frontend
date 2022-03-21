@@ -39,7 +39,7 @@ body {
   color: $grey;
   @include media-breakpoint-up(md) {
     font-size: rem(16);
-    line-height: (29 / 16);
+    line-height: (28 / 16);
   }
 }
 
@@ -53,7 +53,7 @@ a {
 }
 
 p {
-  margin: rem(8) 0;
+  margin: rem(18) 0;
   &:first-child {
     margin-top: 0;
   }
