@@ -103,6 +103,9 @@ ol {
   @include media-breakpoint-up(xl) {
     margin-bottom: rem(60);
   }
+  &.paragraph-widget--text-html {
+    margin-bottom: 0;
+  }
 }
 
 // external link text for screen readers

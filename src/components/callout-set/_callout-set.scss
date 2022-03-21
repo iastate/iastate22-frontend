@@ -26,7 +26,7 @@
     }
   }
   ul {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       padding-top: rem(60);
       padding-bottom: rem(10);
     }
