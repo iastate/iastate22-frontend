@@ -32,6 +32,9 @@
     }
     li {
       margin-bottom: rem(51);
+      @include media-breakpoint-up(xl) {
+        margin-bottom: rem(35);
+      }
     }
   }
   .link-set {
