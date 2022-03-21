@@ -8,10 +8,10 @@
   }
 }
 
-.callout-with-image-small-set {
+.callout-set {
   position: relative;
   &:before {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       content: "";
       background-color: $off-white;
       position: absolute;

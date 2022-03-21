@@ -1,9 +1,9 @@
 .iastate22-callout {
-  @include media-breakpoint-up(md) {
-    display: flex;
-    align-items: flex-start;
-  }
+  // @include media-breakpoint-up(md) {
+  //   align-items: flex-start;
+  // }
   @include media-breakpoint-up(lg) {
+    display: flex;
     align-items: center;
   }
   &.iastate22-callout--no-image {
