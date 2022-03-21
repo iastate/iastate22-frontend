@@ -1,0 +1,57 @@
+.home-hero {
+  position: relative;
+}
+
+.home-hero__media {
+  @extend %responsive-img;
+
+  &:before {
+    padding-top: 192.03%;
+    @include media-breakpoint-up(lg) {
+      padding-top: 65.63%;
+    }
+  }
+
+  .home-hero__media-mobile {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  .home-hero__media-desktop {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+}
+
+.home-hero__content-wrapper {
+  @extend %outer-pad-x;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.home-hero__title {
+  color: $white;
+  span {
+    color: $iastate-gold;
+  }
+}
+
+.home-hero__animation {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  mix-blend-mode: multiply;
+  width: 130%;
+  left: -10%;
+  svg {
+    width: 100%;
+    path {
+      fill: $iastate-red;
+      mix-blend-mode: multiply;
+      isolation: isolate;
+    }
+  }
+}
