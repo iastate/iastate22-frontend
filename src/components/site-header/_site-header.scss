@@ -86,10 +86,28 @@
   }
   @include media-breakpoint-up(xxl) {
     padding: 0 rem(60) 0;
+    position: relative;
   }
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
       height: rem(93);
+    }
+  }
+  // extend header background-color on wider monitors
+  &:before {
+    @include media-breakpoint-up(xxl) {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: rem(-1);
+      left: -50vw;
+      width: 150vw;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      background-color: rgba($white, 0.95);
+      border-bottom: rem(1) solid $grey4;
+      pointer-events: none;
     }
   }
   ul {

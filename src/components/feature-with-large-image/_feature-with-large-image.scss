@@ -37,6 +37,13 @@
       height: 50%;
       max-height: rem(380);
     }
+    @include media-breakpoint-up(xxl) {
+      left: -50vw;
+      width: 150vw;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
   }
 }
 

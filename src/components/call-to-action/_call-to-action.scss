@@ -13,6 +13,27 @@
   }
 }
 
+.paragraph-widget--call-to-action--small {
+  @include media-breakpoint-up(xxl) {
+    position: relative;
+  }
+  &:before {
+    @include media-breakpoint-up(xxl) {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -50vw;
+      width: 150vw;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      background-color: $off-white;
+      pointer-events: none;
+    }
+  }
+}
+
 .call-to-action--small {
   background-color: $off-white;
   padding: rem(58) rem(36) rem(40);
