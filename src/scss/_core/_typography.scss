@@ -151,6 +151,8 @@ ol {
     list-style-type: none;
     counter-reset: item;
     li {
+      padding-left: rem(20);
+      text-indent: rem(-20);
       &:before {
         content: counter(item) ". ";
         counter-increment: item;
