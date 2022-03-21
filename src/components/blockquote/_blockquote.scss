@@ -123,6 +123,7 @@
   font-family: $nimbus-sans-bold;
   font-weight: 700;
   margin-top: rem(20);
+  padding-right: rem(75);
   @include media-breakpoint-up(xl) {
     margin-top: rem(2);
   }
