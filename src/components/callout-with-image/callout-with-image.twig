@@ -6,5 +6,8 @@
     <h2>{{title}}</h2>
     <p>{{body_copy}}</p>
     {% include "@button" with button %}
+    {% if link_set %}
+      {% include "@link-set" with link_set %}
+    {% endif %}
   </div>
 </div>
