@@ -11,6 +11,9 @@
     z-index: 1;
     border-top-color: $off-white;
     background-color: $iastate-red;
+    @include media-breakpoint-up(sm) {
+      border-top: none;
+    }
     @include media-breakpoint-up(lg) {
       background-color: transparent;
     }
@@ -42,13 +45,17 @@
   }
   // off-white color in background
   &:after {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(sm) {
       content: "";
       position: absolute;
       background-color: $off-white;
       top: 0;
-      left: rem(100);
+      left: 0;
       bottom: 50%;
+      right: 0;
+    }
+    @include media-breakpoint-up(lg) {
+      left: rem(100);
       right: 50%;
       z-index: 0;
     }
@@ -63,8 +70,12 @@
   padding: rem(60) rem(36);
   position: relative;
   z-index: 1;
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(sm) {
     text-align: center;
+    padding-left: rem(108);
+    padding-right: rem(108);
+  }
+  @include media-breakpoint-up(lg) {
     margin-right: rem(100);
     margin-left: rem(100);
     padding: rem(60) rem(70) rem(80);
