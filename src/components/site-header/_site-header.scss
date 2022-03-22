@@ -100,6 +100,7 @@
   .home & {
     background-color: transparent;
     border-bottom: none;
+    transition: 0.2s height ease-in-out, 0.2s background-color ease-in-out;
     &:after {
       content: "";
       position: absolute;
@@ -108,6 +109,17 @@
       right: 0;
       background: transparent linear-gradient(180deg, #000000 0%, #00000000 100%) 0% 0% no-repeat padding-box;
       height: rem(165);
+      opacity: 1;
+      transition: 0.2s opacity ease-in-out;
+      visibility: visible;
+    }
+    &.site-header__top-open {
+      background-color: rgba($white, 0.95);
+      border-bottom: rem(1) solid $grey4;
+      &:after {
+        opacity: 0;
+        visibility: hidden;
+      }
     }
   }
   // extend header background-color on wider monitors
