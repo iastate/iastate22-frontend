@@ -124,8 +124,6 @@ export class SiteHeader {
     });
 
     this.openButton.addEventListener("click", () => {
-      // this.visible = true;
-      // this.toggleVisibility();
       this.visible = !this.visible;
       this.toggleVisibility();
       if (clickedViaKeyboard && this.visible) {
@@ -220,12 +218,17 @@ export class SiteHeader {
     if (mobileMQ.matches) {
       this.openButton.setAttribute("aria-expanded", `${this.visible}`);
       this.element.setAttribute("aria-hidden", `${!this.visible}`);
+      const siteHeaderContainer = document.querySelector(".site-header__top");
 
       for (let i = 0; i < this.focusableChildren.length; i++) {
         this.focusableChildren[i].setAttribute("tabindex", this.visible ? "0" : "-1");
       }
 
       this.trigger(this.visible ? "show" : "hide");
+
+      this.visible
+        ? siteHeaderContainer.classList.add("site-header__top-open")
+        : siteHeaderContainer.classList.remove("site-header__top-open");
     }
   }
 
