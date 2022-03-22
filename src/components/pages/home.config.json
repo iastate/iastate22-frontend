@@ -10,6 +10,13 @@
         "url": "#"
       }
     },
+    "home_annoucenemt_alert": {
+      "text": "Announcement Title Lorem Ipsum Dolor",
+      "link": {
+        "url": "#",
+        "text": "Read More"
+      }
+    },
     "community": {
       "label": "The Iowa State University Community",
       "headline": "Our Future Starts With You",
@@ -22,7 +29,11 @@
           "url": "#"
         },
         "imageOne": "../../img/HP_Our_Future_Photo_1.jpg",
-        "imageTwo": "../../img/HP_Our_Future_Photo_2.jpg"
+        "imageTwo": "../../img/HP_Our_Future_Photo_2.jpg",
+        "statistic": {
+          "stat": "90%",
+          "description": "First-year students participate in at least one learning community"
+        }
       }
     }
   }

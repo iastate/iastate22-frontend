@@ -1,0 +1,32 @@
+.home-announcement {
+  background-color: $iastate-dark-blue;
+  padding: rem(12) rem(60);
+  display: flex;
+  align-items: center;
+  max-width: rem(514);
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  transform: translateY(-50%);
+}
+
+.home-announcement__text {
+  color: $white;
+  font-family: $merriweather;
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: (26 / 16);
+  padding-left: rem(23);
+  a {
+    color: $iastate-gold;
+    margin-left: rem(2);
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.home-announcement__icon {
+  flex: 0 0 auto;
+  width: rem(32);
+}
