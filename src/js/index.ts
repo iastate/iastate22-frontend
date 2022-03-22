@@ -12,6 +12,7 @@ import subnavInit from "./components/subnav";
 import privacyConsentInit from "../components/privacy-consent/privacy-consent";
 import accordionsInit from "./components/accordion";
 import videoEmbedInit from "./components/video-embed";
+import homeInit from "./pages/home";
 
 /**
  * Init
@@ -27,6 +28,7 @@ privacyConsentInit();
 accordionsInit();
 subnavInit();
 videoEmbedInit();
+homeInit();
 
 /**
  * Example VueJS app

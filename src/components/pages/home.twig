@@ -1,17 +1,38 @@
+<script>
+  document.body.classList.add("home");
+</script>
+
 <div class="home-hero">
   <div class="home-hero__media">
-		<img class="home-hero__media-mobile" src="{{ hero.image_mobile|path }}" alt="">
-    <img class="home-hero__media-desktop" src="{{ hero.image_desktop|path }}" alt="">
+		<img class="home-hero__media-mobile" src="{{ hero.image_mobile|path }}" alt="" />
+    <img class="home-hero__media-desktop" src="{{ hero.image_desktop|path }}" alt="" />
 	</div>
   <div class="home-hero__animation">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 600" preserveAspectRatio="xMidYMid meet">
-      <path d="M 100 80 L 300 0 L 420 140 L 600 190 L 560 400 L 400 480 L 120 570 L 70 300 L 100 80 Z" >
-        <animate dur="5s" repeatCount="indefinite" attributeName="d" values="M 100 80 L 300 0 L 420 140 L 600 190 L 560 400 L 400 480 L 120 570 L 70 300 L 100 80 Z; M 150 140 L 280 60 L 470 150 L 670 250 L 520 450 L 340 490 L 170 530 L 20 220 L 150 140 Z; M 120 100 L 310 120 L 580 150 L 640 360 L 480 550 L 250 520 L 100 500 L 110 290 L 120 100 Z" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" />
-      </path>
-    </svg>
+    <svg viewBox="0 0 350 300"><path d=""></path></svg>
   </div>
   <div class="home-hero__content-wrapper">
     <h1 class="home-hero__title">{{ hero.title|raw }}</h1>
     {% include "@button--reverse" with hero.button %}
+  </div>
+  <button class="home-hero__animation-control">Play/Pause</button>
+</div>
+
+
+<div class="home-community">
+  <div class="home-community__label"><p>{{ community.label }}</p></div>
+  <h2 class="home-community__headline">{{ community.headline}}</h2>
+  <p class="home-community__body">{{ community.body}}</p>
+  <div class="home-community__callout">
+    <div class="home-community__callout-content">
+      <h2 class="home-community__callout-headline">{{ community.callout.headline }}</h2>
+      <p class="home-community__callout-body">{{ community.callout.body }}</p>
+      {% include "@button" with community.callout.button %}
+    </div>
+    <div class="home-community__callout-media">
+      <img src="{{ community.callout.imageOne|path }}" alt="" />
+    </div>
+    <div class="home-community__callout-media-two">
+      <img src="{{ community.callout.imageTwo|path }}" alt="" />
+    </div>
   </div>
 </div>

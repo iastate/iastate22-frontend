@@ -9,6 +9,21 @@
         "text": "See the lowa State Experience",
         "url": "#"
       }
+    },
+    "community": {
+      "label": "The Iowa State University Community",
+      "headline": "Our Future Starts With You",
+      "body": "At Iowa State lorem ipsum Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.",
+      "callout": {
+        "headline": "Learning Communities: Making Discovery a Team Sport",
+        "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+        "button": {
+          "text": "About Learning Communities",
+          "url": "#"
+        },
+        "imageOne": "../../img/HP_Our_Future_Photo_1.jpg",
+        "imageTwo": "../../img/HP_Our_Future_Photo_2.jpg"
+      }
     }
   }
 }

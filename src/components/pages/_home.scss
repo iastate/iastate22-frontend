@@ -7,19 +7,19 @@
 
   &:before {
     padding-top: 192.03%;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       padding-top: 65.63%;
     }
   }
 
   .home-hero__media-mobile {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       display: none;
     }
   }
   .home-hero__media-desktop {
     display: none;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       display: block;
     }
   }
@@ -52,6 +52,117 @@
       fill: $iastate-red;
       mix-blend-mode: multiply;
       isolation: isolate;
+      d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
+      animation: heartAnimation 5s forwards;
+      animation: heartAnimation 5s infinite;
+      @media (prefers-reduced-motion) {
+        animation: none;
+      }
     }
+  }
+  &.paused {
+    svg path {
+      animation-play-state: paused;
+    }
+  }
+}
+
+@keyframes heartAnimation {
+  0% {
+    d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
+  }
+
+  50% {
+    d: path("M 60 50 L 155 60 L 290 75 L 320 180 L 240 275 L 125 260 L 50 250 L 55 145 L 60 50 Z");
+  }
+
+  100% {
+    d: path("M 75 70 L 140 30 L 235 75 L 335 125 L 260 225 L 170 245 L 85 265 L 10 110 L 75 70 Z");
+  }
+}
+
+@keyframes heartAnimation {
+  0% {
+    d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
+  }
+
+  25% {
+    d: path("M 60 50 L 155 60 L 290 75 L 320 180 L 240 275 L 125 260 L 50 250 L 55 145 L 60 50 Z");
+  }
+
+  50% {
+    d: path("M 75 70 L 140 30 L 235 75 L 335 125 L 260 225 L 170 245 L 85 265 L 10 110 L 75 70 Z");
+  }
+
+  75% {
+    d: path("M 60 50 L 155 60 L 290 75 L 320 180 L 240 275 L 125 260 L 50 250 L 55 145 L 60 50 Z");
+  }
+
+  100% {
+    d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
+  }
+}
+
+// Home Community Section
+.home-community {
+  padding: rem(37);
+}
+.home-community__label {
+  font-family: $nimbus-sans-bold;
+  font-weight: 700;
+  color: $iastate-red;
+  font-size: rem(21);
+  line-height: (30 / 21);
+  text-align: center;
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: rem(21);
+    width: rem(37);
+    border-bottom: rem(2) solid $iastate-gold;
+  }
+  &:before {
+    left: rem(-37);
+  }
+  &:after {
+    right: rem(-37);
+  }
+}
+
+.home-community__headline {
+  text-align: center;
+  font-size: rem(37);
+  line-height: (48 / 37);
+  margin-top: rem(22);
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.home-community__body {
+  text-align: center;
+  color: $iastate-maroon;
+  line-height: (29 / 18);
+  margin-top: rem(15);
+}
+
+.home-community__callout {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.home-community__callout-media {
+  @extend %responsive-img;
+  box-shadow: 0 rem(12) rem(24) rgba($black, 0.2);
+  &:before {
+    padding-top: 77.49%;
+  }
+}
+
+.home-community__callout-media-two {
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
   }
 }
