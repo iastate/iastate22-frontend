@@ -83,7 +83,15 @@
   @include media-breakpoint-up(xl) {
     padding-left: rem(50);
   }
-  @include media-breakpoint-up(xxl) {
+}
+.iastate22-blockquote__quote {
+  color: $white;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    font-size: rem(40);
+    line-height: (58 / 40);
   }
   &:before,
   &:after {
@@ -105,17 +113,8 @@
   }
   &:after {
     transform: rotate(180deg);
-    bottom: rem(-28);
+    bottom: rem(-81);
     right: 0;
-  }
-}
-.iastate22-blockquote__quote {
-  color: $white;
-  padding: 0;
-  margin: 0;
-  @include media-breakpoint-up(md) {
-    font-size: rem(40);
-    line-height: (58 / 40);
   }
 }
 .iastate22-blockquote__author {
