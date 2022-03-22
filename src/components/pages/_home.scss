@@ -67,6 +67,15 @@
   }
 }
 
+.home-hero__animation-control {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: rem(30);
+  right: rem(30);
+  cursor: pointer;
+}
+
 @keyframes heartAnimation {
   0% {
     d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
@@ -150,6 +159,20 @@
 .home-community__callout {
   display: flex;
   flex-direction: column-reverse;
+  margin-top: rem(37);
+}
+
+.home-community__callout-content-wrap {
+  margin-top: rem(45);
+}
+
+.home-community__callout-headline {
+  @extend %h2-yellow-border;
+}
+
+.home-community__callout-body {
+  color: $iastate-maroon;
+  line-height: (29 / 18);
 }
 
 .home-community__callout-media {

@@ -125,3 +125,14 @@
     transform: rotate(-45deg);
   }
 }
+
+%h2-yellow-border {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: rem(50);
+    border-bottom: rem(2) solid $iastate-gold;
+    left: 0;
+  }
+}
