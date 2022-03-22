@@ -24,8 +24,10 @@ export class PlayPauseAnimation {
     this.playPauseButton.addEventListener("click", () => {
       if (!this.animationContainer.classList.contains("paused")) {
         this.animationContainer.classList.add("paused");
+        this.playPauseButton.classList.add("paused");
       } else {
         this.animationContainer.classList.remove("paused");
+        this.playPauseButton.classList.remove("paused");
       }
     });
   }

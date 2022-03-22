@@ -31,7 +31,7 @@
   top: rem(18);
   text-decoration: none;
   z-index: 1;
-  transition: 0.2s top ease-in-out;
+  transition: 0.2s top ease-in-out, 0.2s filter ease-in-out;
   @include media-breakpoint-up(lg) {
     width: 25%;
     max-width: rem(293);
@@ -49,6 +49,19 @@
       top: rem(27);
     }
   }
+  .home & {
+    filter: brightness(0) invert(1);
+  }
+  .site-header-open & {
+    .home & {
+      filter: none;
+    }
+  }
+  .headroom--not-top & {
+    .home & {
+      filter: none;
+    }
+  }
 
   img {
     display: block;
@@ -58,9 +71,6 @@
   .site-header__logo-mobile {
     @include media-breakpoint-up(xl) {
       display: none;
-    }
-    .home & {
-      filter: brightness(0) invert(1);
     }
   }
 
@@ -112,8 +122,20 @@
       opacity: 1;
       transition: 0.2s opacity ease-in-out;
       visibility: visible;
+      pointer-events: none;
     }
-    &.site-header__top-open {
+  }
+  .headroom--not-top & {
+    .home & {
+      background-color: rgba($white, 0.95);
+      border-bottom: rem(1) solid $grey4;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .site-header-open & {
+    .home & {
       background-color: rgba($white, 0.95);
       border-bottom: rem(1) solid $grey4;
       &:after {
@@ -137,6 +159,10 @@
       background-color: rgba($white, 0.95);
       border-bottom: rem(1) solid $grey4;
       pointer-events: none;
+    }
+    .home & {
+      background-color: transparent;
+      border-bottom: none;
     }
   }
   ul {
@@ -166,6 +192,7 @@
   position: relative;
   display: none;
   transition: 0.2s opacity ease-in-out;
+  z-index: 1;
   @include media-breakpoint-up(xl) {
     display: block;
     margin-top: rem(27);
@@ -205,6 +232,18 @@
       font-size: rem(16);
       line-height: (26 / 16);
     }
+    .home & {
+      @include media-breakpoint-up(xl) {
+        color: $white;
+      }
+    }
+    .headroom--not-top & {
+      .home & {
+        @include media-breakpoint-up(xl) {
+          color: $iastate-red;
+        }
+      }
+    }
     &:hover {
       @include media-breakpoint-up(xl) {
         color: $iastate-red;
@@ -219,6 +258,7 @@
   width: rem(54);
   margin-right: rem(31);
   transition: 0.2s opacity ease-in-out;
+  z-index: 1;
   @include media-breakpoint-up(xl) {
     position: relative;
     top: rem(14);
@@ -253,6 +293,18 @@
     text-decoration: none;
     transition: 0.2s color ease-in-out;
     cursor: pointer;
+  }
+  .home & {
+    @include media-breakpoint-up(xl) {
+      color: $white;
+    }
+  }
+  .headroom--not-top & {
+    .home & {
+      @include media-breakpoint-up(xl) {
+        color: $iastate-red;
+      }
+    }
   }
   &:hover {
     @include media-breakpoint-up(xl) {
@@ -383,6 +435,16 @@
       .home & {
         border-bottom-color: $white;
       }
+      .site-header-open & {
+        .home & {
+          border-bottom-color: $iastate-red;
+        }
+      }
+      .headroom--not-top & {
+        .home & {
+          border-bottom-color: $iastate-red;
+        }
+      }
     }
     &:hover {
       span {
@@ -391,6 +453,20 @@
       .home & {
         span {
           border-bottom-color: $white;
+        }
+      }
+      .site-header-open & {
+        .home & {
+          span {
+            border-bottom-color: $iastate-maroon;
+          }
+        }
+      }
+      .headroom--not-top & {
+        .home & {
+          span {
+            border-bottom-color: $iastate-maroon;
+          }
         }
       }
     }
@@ -481,6 +557,18 @@
             line-height: (26 / 16);
           }
         }
+        .home & {
+          @include media-breakpoint-up(xl) {
+            color: $white;
+          }
+        }
+        .headroom--not-top & {
+          .home & {
+            @include media-breakpoint-up(xl) {
+              color: $iastate-red;
+            }
+          }
+        }
 
         &:after {
           content: "";
@@ -509,6 +597,18 @@
             width: rem(10);
             height: rem(10);
           }
+          .home & {
+            @include media-breakpoint-up(xl) {
+              border-color: $white;
+            }
+          }
+          .headroom--not-top & {
+            .home & {
+              @include media-breakpoint-up(xl) {
+                border-color: $iastate-red;
+              }
+            }
+          }
         }
 
         &:hover {
@@ -519,6 +619,11 @@
           &:after {
             @include media-breakpoint-up(xl) {
               border-color: $iastate-maroon;
+            }
+            .home & {
+              @include media-breakpoint-up(xl) {
+                border-color: $white;
+              }
             }
           }
         }

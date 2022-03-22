@@ -1,9 +1,13 @@
 .home-hero {
   position: relative;
+  max-height: 95vh;
+  min-height: rem(600);
 }
 
 .home-hero__media {
   @extend %responsive-img;
+  max-height: 95vh;
+  min-height: rem(600);
 
   &:before {
     padding-top: 192.03%;
@@ -44,8 +48,12 @@
   top: 50%;
   transform: translateY(-50%);
   mix-blend-mode: multiply;
-  width: 130%;
-  left: -10%;
+  width: 132%;
+  left: -11%;
+  @include media-breakpoint-up(md) {
+    max-width: rem(700);
+    left: 0;
+  }
   svg {
     width: 100%;
     path {
@@ -73,7 +81,36 @@
   position: absolute;
   bottom: rem(30);
   right: rem(30);
+  width: rem(44);
+  height: rem(44);
   cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .home-hero__animation-control-line {
+    height: rem(25);
+    border-left: rem(6) solid $white;
+    display: block;
+    margin-right: rem(5);
+    & + .home-hero__animation-control-line {
+      margin-right: 0;
+    }
+  }
+  &.paused {
+    .home-hero__animation-control-line {
+      border-left: rem(18) solid $white;
+      border-right: rem(18) solid transparent;
+      border-bottom: rem(13) solid transparent;
+      border-top: rem(13) solid transparent;
+      margin: 0;
+      position: relative;
+      left: rem(10);
+      & + .home-hero__animation-control-line {
+        display: none;
+      }
+    }
+  }
 }
 
 @keyframes heartAnimation {

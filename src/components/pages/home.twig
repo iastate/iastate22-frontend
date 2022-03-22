@@ -14,7 +14,11 @@
     <h1 class="home-hero__title">{{ hero.title|raw }}</h1>
     {% include "@button--reverse" with hero.button %}
   </div>
-  <button class="home-hero__animation-control">Play/Pause</button>
+  <button class="home-hero__animation-control">
+    <span class="home-hero__animation-control-line"></span>
+    <span class="home-hero__animation-control-line"></span>
+    <span class="visible-for-screen-readers">Pause Animation</span>
+  </button>
 </div>
 
 
