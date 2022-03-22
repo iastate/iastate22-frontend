@@ -59,6 +59,9 @@
     @include media-breakpoint-up(xl) {
       display: none;
     }
+    .home & {
+      filter: brightness(0) invert(1);
+    }
   }
 
   .site-header__logo-desktop {
@@ -91,6 +94,20 @@
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
       height: rem(93);
+    }
+  }
+  // different background for homepage
+  .home & {
+    background-color: transparent;
+    border-bottom: none;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: transparent linear-gradient(180deg, #000000 0%, #00000000 100%) 0% 0% no-repeat padding-box;
+      height: rem(165);
     }
   }
   // extend header background-color on wider monitors
@@ -351,10 +368,18 @@
       &:last-child {
         margin-bottom: 0;
       }
+      .home & {
+        border-bottom-color: $white;
+      }
     }
     &:hover {
       span {
         border-color: $iastate-maroon;
+      }
+      .home & {
+        span {
+          border-bottom-color: $white;
+        }
       }
     }
   }
