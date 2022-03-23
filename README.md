@@ -57,6 +57,16 @@ All images should be added to `src/images` which compiles to `build/images/*`.
 - All CSS to be written as SCSS, and compiled via Webpack.
 - All CSS compiled from `src/scss/index.scss`
 
+#### Utility Classes
+
+- In `_base.scss`, `.align-left`, `.align-right`, and `.align-center` handle images placed in WYSIWYG sections
+- In `_base.scss`, the `.skip-link` class is for the "Skip To Main Content" button for accessibility
+- In `_placeholder-selectors.scss`, `.visible-for-screen-readers` is used to hide content but allow it to be accessibly read/spoken
+- In `_placeholder-selectors.scss`, `.outer-pad-x` handles horiztonal padding throughout various parts of the site
+- In `_placeholder-selectors.scss`, `%responsive-img` is a placeholder selector which sets up object-fit for images and the padding-top percentage for the associated pseudo element which sets the height of the image
+- In `_placeholder-selectors.scss`, `.caption` is a re-used type style for image and video captions
+- In `_placeholder-selectors.scss`, `.arrow` is the arrow shape used throughout various button and nav styles
+
 ### JS
 
 - All theme JS is written as TypeScript, and compiled to stable, browser-compliant JS via Webpack.
