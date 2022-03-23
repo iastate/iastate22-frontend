@@ -1,13 +1,21 @@
 .home-hero {
   position: relative;
   max-height: 95vh;
-  min-height: rem(600);
+  min-height: rem(667);
+  @include media-breakpoint-up(md) {
+    min-height: 100vh;
+    max-height: none;
+  }
 }
 
 .home-hero__media {
   @extend %responsive-img;
   max-height: 95vh;
-  min-height: rem(600);
+  min-height: rem(667);
+  @include media-breakpoint-up(md) {
+    min-height: 100vh;
+    max-height: none;
+  }
 
   &:before {
     padding-top: 192.03%;
@@ -16,11 +24,17 @@
     }
   }
 
+  .home-hero__media-mobile,
+  .home-hero__media-desktop {
+    object-position: center top;
+  }
+
   .home-hero__media-mobile {
     @include media-breakpoint-up(md) {
       display: none;
     }
   }
+
   .home-hero__media-desktop {
     display: none;
     @include media-breakpoint-up(md) {
@@ -34,10 +48,28 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  .iastate22-button {
+    display: inline-block;
+  }
 }
 
 .home-hero__title {
   color: $white;
+  @include media-breakpoint-up(sm) {
+    font-size: 11vw;
+    width: 93%;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 8vw;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 6vw;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: rem(110);
+    line-height: (118 / 110);
+    width: 90%;
+  }
   span {
     color: $iastate-gold;
   }
@@ -50,9 +82,20 @@
   mix-blend-mode: multiply;
   width: 132%;
   left: -11%;
+  pointer-events: none;
+  @include media-breakpoint-up(sm) {
+    left: -10%;
+    width: 115%;
+  }
   @include media-breakpoint-up(md) {
-    max-width: rem(700);
+    max-width: rem(900);
     left: 0;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: rem(1400);
+    transform: translateY(-40%);
+    width: 90%;
+    left: -5%;
   }
   svg {
     width: 100%;
