@@ -3,6 +3,8 @@
 
   &.is-open {
     display: block;
+    position: relative;
+    z-index: 1;
   }
 }
 

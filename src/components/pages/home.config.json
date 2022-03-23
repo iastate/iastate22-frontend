@@ -35,6 +35,20 @@
           "description": "First-year students participate in at least one learning community"
         }
       }
+    },
+    "home_blockquote": {
+      "quote": "Lorem Ipsum Dolor Sit Amet duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur sit amet suis aut dolor.",
+      "author": "FirstName LastName",
+      "author_role": "Role",
+      "portrait": "../../img/featured-quote.jpg",
+      "modal": {
+        "id": "modal-1",
+        "video": {
+          "wallpaper": "../../img/Home_Video_Thumbnail_FPO.jpg",
+          "title": "Your future starts now.",
+          "video_id": "LjOmcZkXVcU"
+        }
+      }
     }
   }
 }
