@@ -11,7 +11,7 @@ Notes:
 - All CSS/JS is scoped to not interfere with Boostrap, using a prefix of "iastate22-" on relevant classes
 - All components live in the `src/components` directory
 
-### Dependencies
+## Dependencies
 
 Dependencies need to be installed with [node/npm](https://docs.npmjs.com/getting-started/installing-node), and is best pinned to stable versions via [nvm](https://github.com/nvm-sh/nvm). More on [node usage at idfive](https://developers.idfive.com/#/front-end/node).
 
@@ -37,25 +37,25 @@ To build your code for production, run the following:
 
 This will generate `build` and `fractal` folders at the root of your project. The `build` folder contains all of your compiled assets (CSS, JavaScript etc.), while the `fractal` folder contains a static generated version of your Fractal component library, which can be used for previews and an online reference to your component library. See the [Clearleft Fractal Library](http://fractal.clearleft.com) as an example.
 
-### Compiling CSS/JS
+## Compiling CSS/JS
 
 All CSS/JS/Images will be compiled from `src/*`.
 
-#### Markup
+### Markup
 
 - Written using Twig templates
 - Proper ARIA functionality is used to meet WCAG accessibility guidelines
 
-#### Images
+### Images
 
 All images should be added to `src/images` which compiles to `build/images/*`.
 
-#### CSS
+### CSS
 
 - All CSS to be written as SCSS, and compiled via Webpack.
 - All CSS compiled from `src/scss/index.scss`
 
-#### JS
+### JS
 
 - All theme JS is written as TypeScript, and compiled to stable, browser-compliant JS via Webpack.
 - ALL JS to be compiled from Typescript in `src/js/index.ts`
