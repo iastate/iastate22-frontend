@@ -3,5 +3,7 @@
     <img src="{{ wallpaper|path }}" alt="" />
     <div class="video-embed__video" aria-label="YouTube Video: {{ title }}" data-vid="{{ video_id }}"></div>
   </div>
-  <div class="video-embed__caption">{{caption}}</div>
+  {% if caption %}
+    <div class="video-embed__caption">{{ caption }}</div>
+  {% endif %}
 </div>
