@@ -34,8 +34,8 @@ To start the fractal development server:
 
 To build your code for production, run the following:
 
-`npm run build`
-`npm run fractal:build`
+- `npm run build`
+- `npm run fractal:build`
 
 This will generate `build` and `fractal` folders at the root of your project. The `build` folder contains all of your compiled assets (CSS, JavaScript etc.), while the `fractal` folder contains a static generated version of your Fractal component library, which can be used for previews and an online reference to your component library.
 
