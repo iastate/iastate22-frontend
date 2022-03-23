@@ -23,21 +23,20 @@
         <span class="fa-light fa-xmark"></span>
       </a>
       <form class="site-header__search-form-desktop">
-        <div>
-          <span class="visible-for-screen-readers">Search</span>
-          <input type="search" id="searchDesktop" name="search" placeholder="Search">
-          <button type="submit"><span class="fak fa-id5-magnifying-glass"></span></button>
-        </div>
+        <label class="visible-for-screen-readers" for="searchDesktop">Search</label>
+        <input type="search" id="searchDesktop" name="search" placeholder="Search">
+        <button type="submit"><span class="fak fa-id5-magnifying-glass"></span><span class="visible-for-screen-readers">Submit Search</span></button>
       </form>
     </div>
   </div>
   <div class="site-header__main">
     <a href="#site-header-mega-menu" class="site-header__mega-menu-open" role="button" aria-controls="site-header-mega-menu">
-      <div class="site-header__mega-menu-open-line-wrap">
+      <span class="visible-for-screen-readers">Toggle Menu</span>
+      <span class="site-header__mega-menu-open-line-wrap">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </span>
     </a>
     <div class="site-header__mega-menu" id="site-header-mega-menu">
       <div class="site-header__mega-menu-inner">
@@ -79,9 +78,9 @@
                     {% endfor %}
                   </ul>
                   <form class="site-header__search-form-mobile">
-                    <span class="visible-for-screen-readers">Search</span>
+                    <label class="visible-for-screen-readers" for="searchMobile">Search</label>
                     <input type="search" id="searchMobile" name="search" placeholder="Search">
-                    <button type="submit"><span class="fak fa-id5-magnifying-glass"></span></button>
+                    <button type="submit"><span class="fak fa-id5-magnifying-glass"></span><span class="visible-for-screen-readers">Submit Search</span></button>
                   </form>
                 </nav>
               </div>

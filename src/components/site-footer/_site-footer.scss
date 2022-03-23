@@ -76,13 +76,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $iastate-gold;
+      color: $white;
       transition: 0.2s background-color ease-in-out;
       &:hover {
         background-color: $iastate-maroon;
       }
       svg {
-        color: currentColor;
+        color: $iastate-gold;
         font-size: rem(25);
       }
     }

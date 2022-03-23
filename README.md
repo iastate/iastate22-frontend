@@ -1,24 +1,18 @@
-# idfive component library
+# Iowa State University Front End Library
 
-The idfive component library is a front-end framework/starter, focusing on functionality over opinionated styles. It features purposeful and semantic HTML, minimal JavaScript, and SASS variables for easy customization.
+- Staging site: [staging2.idfive.com](https://staging2.idfive.com/iowa-state-university/fractal/), currently displaying the master branch. Use `guest/guest` for username/password.
+- Repo: [Bitbucket private](https://bitbucket.org/idfivellc/iowa-state-frontend/src/master/).
+- Build pipelines: [Buddy](https://app.buddy.works/idfive/iowa-state-frontend/), idfive access only.
 
-It is designed to be modified once downloaded, and all CSS/JS/etc to be modified per specific project. It acts as a starter, with common, accessible components present in a vanilla way, that can be used or not, and styles as needed.
+Notes:
 
-## Installation
+- Installed Boostrap 5.1, the site uses the default breakpoints
+- Using Iowa State color variables
+- Using Iowa State Font Awesome for social media icons and various elements
+- All CSS/JS is scoped to not interfere with Boostrap, using a prefix of "iastate22-" on relevant classes
+- All components live in the `src/components` directory
 
-### Scaffolding
-
-Depending on the project, this can be downloaded/cloned in several different places, but best practice is to keep the folder named "idfive-component-library", wherever you choose to utilize it.
-
-- Drupal: "/themes/custom/client_theme/idfive-component-library"
-
-### Remove .git tracking
-
-Remove the repo git, as the desire is to commit all to your new client theme.
-
-- `rm -R .git`
-
-### Dependencies
+## Dependencies
 
 Dependencies need to be installed with [node/npm](https://docs.npmjs.com/getting-started/installing-node), and is best pinned to stable versions via [nvm](https://github.com/nvm-sh/nvm). More on [node usage at idfive](https://developers.idfive.com/#/front-end/node).
 
@@ -36,90 +30,50 @@ To start the fractal development server:
 - `nvm use` (if have not previously)
 - `npm run fractal`
 
-Referencing images from within your component handlebars templates:
-
-```html
-<img src="{{path '/img/image.png'}}" alt="" />
-```
-
-### Watch mode
-
-If you do not wish to use Fractal, or simply want to watch for changes without launching a development server, you can run the watch command:
-
-`npm run watch`
-
-### Webpack server
-
-If you do not wish to use Fractal in development, you can use the webpack development server:
-
-`npm run serve`
-
 ## Building for production
 
 To build your code for production, run the following:
 
-`npm run build`
+- `npm run build`
+- `npm run fractal:build`
 
-This will generate `build` and `fractal` folders at the root of your project. The `build` folder contains all of your compiled assets (CSS, JavaScript etc.), while the `fractal` folder contains a static generated version of your Fractal component library, which can be used for previews and an online reference to your component library. See the [Clearleft Fractal Library](http://fractal.clearleft.com) as an example.
+This will generate `build` and `fractal` folders at the root of your project. The `build` folder contains all of your compiled assets (CSS, JavaScript etc.), while the `fractal` folder contains a static generated version of your Fractal component library, which can be used for previews and an online reference to your component library.
 
-### Passing parameters to your npm scrips
+## Compiling CSS/JS
 
-It is possible to pass parameters to your build scripts, which will then be exposed in JS via `process.env`. Example:
+All CSS/JS/Images will be compiled from `src/*`.
 
-`npm run build --apiBase=http://prod.com`
+### Markup
 
-In your JS file:
+- Written using Twig templates
+- Proper ARIA functionality is used to meet WCAG accessibility guidelines
 
-`const apiBase = process.env.apiBase || 'http://localapi.com';`
+### Images
 
-## Silc
+All images should be added to `src/images` which compiles to `build/images/*`.
 
-The idfive component library includes the [silc](https://silc.io) suite of modules, which includes:
+### CSS
 
-- [silc core](https://github.com/nickrigby/silc-core)
-- [silc grid](https://github.com/nickrigby/silc-grid)
-- [silc accordion](https://github.com/nickrigby/silc-accordion)
-- [silc nav](https://github.com/nickrigby/silc-nav)
-- [silc offcanvas](https://github.com/nickrigby/silc-offcanvas)
-- [silc utilities](https://github.com/nickrigby/silc-utilities)
+- All CSS to be written as SCSS, and compiled via Webpack.
+- All CSS compiled from `src/scss/index.scss`
 
-## Overriding silc styles
+#### Utility Classes
 
-Each silc component contains a number of default SASS variables that can be easily overridden by adding the variable to the [silc/\_overrides.scss file](src/scss/silc/_overrides.scss). For example, to add your own breakpoints, you would create the following variable in the overrides file:
+- In `_base.scss`, `.align-left`, `.align-right`, and `.align-center` handle images placed in WYSIWYG sections
+- In `_base.scss`, the `.skip-link` class is for the "Skip To Main Content" button for accessibility
+- In `_placeholder-selectors.scss`, `.visible-for-screen-readers` is used to hide content but allow it to be accessibly read/spoken
+- In `_placeholder-selectors.scss`, `.outer-pad-x` handles horiztonal padding throughout various parts of the site
+- In `_placeholder-selectors.scss`, `%responsive-img` is a placeholder selector which sets up object-fit for images and the padding-top percentage for the associated pseudo element which sets the height of the image
+- In `_placeholder-selectors.scss`, `.caption` is a re-used type style for image and video captions
+- In `_placeholder-selectors.scss`, `.arrow` is the arrow shape used throughout various button and nav styles
 
-```scss
-$silc-core--breakpoints: (
-  ("sm", "(min-width:400px)"),
-  ("md", "(min-width:600px)"),
-  ("lg", "(min-width:1000px)"),
-  ("xl", "(min-width:1400px)")
-);
-```
+### JS
 
-## Extending silc classes
+- All theme JS is written as TypeScript, and compiled to stable, browser-compliant JS via Webpack.
+- ALL JS to be compiled from Typescript in `src/js/index.ts`
 
-Some silc modules contain JavaScript classes that can be easily extended for your own needs. To extend a class, you need to import the class and then remove the call to the original module init function e.g. `silcOffcanvasInit`
+## Acceptance Standards
 
-```javascript
-import { SilcOffcanvas } from 'silc-offcanvas';
-class MyOffcanvas extends SilcOffcanvas {
-
-    constructor(el) {
-        super(el);
-    }
-
-    protected toggle(event) {
-        super.toggle(event); // Call parent toggle function
-        console.log('Toggle!'); // Your own functionality
-    }
-
-}
-```
-
-You can then write your own init function to apply your new class to the appropriate elements.
-
-```javascript
-[].forEach.call(document.querySelectorAll(".silc-offcanvas__trigger"), el => {
-  new MyOffcanvas(el);
-});
-```
+- [W3C Validation](https://validator.w3.org/)
+- Passes Accessibility check using WAVE and Google Lighthouse
+- Provides fallback of full content for non-JS users.
