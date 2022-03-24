@@ -11,6 +11,7 @@ Notes:
 - Using Iowa State Font Awesome for social media icons and various elements
 - All CSS/JS is scoped to not interfere with Boostrap, using a prefix of "iastate22-" on relevant classes
 - All components live in the `src/components` directory
+- The page structure can be found in `src/components/_page-preview.twig`. For individual components, the structure is located in `src/components/_preview.twig`
 
 ## Dependencies
 

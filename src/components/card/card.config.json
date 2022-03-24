@@ -3,9 +3,9 @@
     "title": "Card Title",
     "body": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur.</p>",
     "image": "../../img/Component-Card-Image-1.jpg",
-    "url": "https://idfive.com",
+    "url": "https://www.iastate.edu/",
     "cta": {
-      "url": "https://idfive.com",
+      "url": "https://www.iastate.edu/",
       "text": "Learn More"
     }
   },
