@@ -13,10 +13,10 @@
     {
       "name": "linked-image",
       "context": {
-        "image": "../../img/Component-Card-Image-1.jpg",
+        "image": "../../img/IMG-HP_Find_My_Major_FPO.jpg",
         "cta": {
-          "url": "https://idfive.com",
-          "text": "Learn More"
+          "url": "https://www.iastate.edu/",
+          "text": "Find My Major"
         }
       }
     }

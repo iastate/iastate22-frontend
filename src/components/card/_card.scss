@@ -4,6 +4,10 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  &.iastate22-card--linked-image {
+    box-shadow: none;
+    text-align: left;
+  }
   &.clickable {
     cursor: pointer;
     &:hover {
@@ -13,6 +17,13 @@
       .iastate22-card__media {
         img {
           transform: scale(1.1);
+        }
+      }
+    }
+    &.iastate22-card--linked-image {
+      &:hover {
+        .arrow {
+          width: rem(12);
         }
       }
     }
@@ -42,6 +53,30 @@
   display: inline-block;
   &:hover {
     color: $iastate-red;
+  }
+  .iastate22-card--linked-image & {
+    position: absolute;
+    background-color: $iastate-red;
+    padding: rem(31) rem(26);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: $white;
+    text-decoration: none;
+    min-width: rem(249);
+    text-align: left;
+    .arrow {
+      transform: translateX(#{rem(13)});
+      right: initial;
+      top: 49%;
+      width: 0;
+      background-color: $iastate-gold;
+
+      &:after,
+      &:before {
+        background-color: $iastate-gold;
+      }
+    }
   }
 }
 
