@@ -117,3 +117,13 @@
     </div>
   </div>
 </div>
+
+<div class="home-location">
+  <div class="home-location__media">
+    <img src="{{ location.image|path }}" alt="" />
+  </div>
+  <div class="home-location__caption">
+    <i class="fa-solid fa-location-dot"></i>
+    <div class="home-location__caption-text"><p>{{ location.caption.text }} <a href="{{ location.caption.link.url }}">{{ location.caption.link.text }}</a></p></div>
+  </div>
+</div>

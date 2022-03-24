@@ -3,16 +3,26 @@
 		<img src="{{ image|path }}" alt="">
 	</div>
 	<div class="iastate22-card__content">
-		<h2 class="iastate22-card__title"><a href="{{url}}">{{ title }}</a></h2>
+		<h2 class="iastate22-card__title">{{ title }}</h2>
 		<div class="iastate22-card__name"><p>{{ name }}</p></div>
     <div class="iastate22-card__role"><p>{{ role }}</p></div>
-		{% if cta.url %}
-			{% if cta.text %}
-				<a href="{{ cta.url }}" class="iastate22-card__cta">{{ cta.text }}</a>
-			{% else %}
-				{# Provide a screen-reader only fallback if no text is provided to allow JS to work properly #}
-				<a href="{{ cta.url }}" class="iastate22-card__cta visible-for-screen-readers">Learn more about {{ title }}</a>
-			{% endif %}
-		{% endif %}
+    <button class="iastate22-card__cta" data-micromodal-trigger="{{ modal.id }}">{{ cta.text }}</button>
+    <div class="iastate22-modal" id="{{ modal.id }}" aria-hidden="false">
+      <div class="iastate22-modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="iastate22-modal__container{% if image %} iastate22-modal__container-with-media{% endif %}" id="{{ modal.id }}-content" role="dialog" aria-modal="true" aria-labelledby="{{ modal.id }}-title">
+          <button class="iastate22-modal__close" aria-label="Close modal" data-micromodal-close><i class="fa-light fa-xmark"></i></button>
+          <div class="iastate22-modal__media">
+            <img src="{{ modal.image|path }}" alt="">
+          </div>
+          <div class="iastate22-modal__content">
+            <h2 class="iastate22-modal__title" id="{{ modal.id }}-title">{{ modal.title }}</h2>
+            {{ modal.content|raw }}
+            <div class="iastate22-modal__content-cta">
+              {{ modal.call_to_action|raw }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 	</div>
 </div>

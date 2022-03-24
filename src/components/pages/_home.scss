@@ -445,10 +445,59 @@
   line-height: (29 / 18);
 }
 
+.home-solutions__carousel-holder {
+  margin-top: rem(47);
+}
+
 .home-solutions__carousel-slide {
   width: 66%;
   margin-right: rem(40);
   &:last-child {
     margin-right: 0;
+  }
+}
+
+// home location section
+.home-location {
+  position: relative;
+}
+
+.home-location__media {
+  @extend %responsive-img;
+
+  &:before {
+    padding-top: 55.56%;
+  }
+}
+
+.home-location__caption {
+  background-color: $iastate-dark-blue;
+  padding: rem(33) rem(36);
+  position: relative;
+  z-index: 1;
+  .fa-location-dot {
+    color: $iastate-gold;
+    position: absolute;
+    font-size: rem(48);
+    top: rem(-27);
+  }
+}
+
+.home-location__caption-text {
+  color: $white;
+  font-family: $merriweather;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: (21 / 16);
+  a {
+    color: $iastate-gold;
+    font-family: $nimbus-sans-bold;
+    font-weight: 700;
+    text-decoration-thickness: rem(1);
+    text-underline-offset: rem(2);
+    transition: 0.2s color ease-in-out;
+    &:hover {
+      color: $white;
+    }
   }
 }
