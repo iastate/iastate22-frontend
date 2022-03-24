@@ -8,6 +8,9 @@
     box-shadow: none;
     text-align: left;
   }
+  &.iastate22-card--profile-with-modal {
+    cursor: grab;
+  }
   &.clickable {
     cursor: pointer;
     &:hover {
@@ -78,6 +81,19 @@
       }
     }
   }
+  .iastate22-card--profile-with-modal & {
+    color: $iastate-red;
+    margin-top: rem(50);
+    margin-bottom: rem(5);
+    font-size: rem(16);
+    line-height: (26 / 16);
+    text-decoration: underline;
+    text-underline-offset: rem(1);
+    position: absolute;
+    bottom: rem(13);
+    left: 0;
+    right: 0;
+  }
 }
 
 .iastate22-card__content {
@@ -86,6 +102,10 @@
   position: relative;
   z-index: 2;
   background-color: $white;
+  .iastate22-card--profile-with-modal & {
+    padding: rem(12) rem(22);
+    min-height: rem(210);
+  }
 }
 
 .iastate22-card__media {
@@ -98,6 +118,12 @@
   .iastate22-card--linked-image & {
     &:before {
       padding-top: 86.47%;
+    }
+  }
+
+  .iastate22-card--profile-with-modal & {
+    &:before {
+      padding-top: 94.67%;
     }
   }
 
@@ -114,6 +140,12 @@
   color: $iastate-red;
   font-size: rem(21);
   line-height: (30 / 21);
+  .iastate22-card--profile-with-modal & {
+    color: $iastate-maroon;
+    font-size: rem(18);
+    line-height: (23 / 18);
+    margin-bottom: rem(13);
+  }
   a {
     color: currentColor;
     text-decoration: none;
@@ -122,4 +154,23 @@
 
 .iastate22-card__body {
   margin-top: rem(5);
+}
+
+// These styles only on profile-with-modal variant
+.iastate22-card__name {
+  .iastate22-card--profile-with-modal & {
+    color: $iastate-maroon;
+    font-family: $nimbus-sans-bold;
+    font-weight: 700;
+    font-size: rem(16);
+    line-height: (20 / 16);
+  }
+}
+.iastate22-card__role {
+  .iastate22-card--profile-with-modal & {
+    color: $iastate-maroon;
+    font-size: rem(16);
+    line-height: (20 / 16);
+    padding-bottom: rem(30);
+  }
 }

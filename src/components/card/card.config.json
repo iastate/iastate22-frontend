@@ -19,6 +19,20 @@
           "text": "Find My Major"
         }
       }
+    },
+    {
+      "name": "profile-with-modal",
+      "context": {
+        "title": "Advocating for Social Justice",
+        "clickable": false,
+        "image": "../../img/HP_Finding_Solutions_Story_1_FPO.jpg",
+        "name": "Zakariyah Hill, ’21",
+        "role": "Founder Supply Hive",
+        "cta": {
+          "url": "https://www.iastate.edu/",
+          "text": "Read More"
+        }
+      }
     }
   ]
 }
