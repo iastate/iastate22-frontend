@@ -8,5 +8,17 @@
       "url": "https://idfive.com",
       "text": "Learn More"
     }
-  }
+  },
+  "variants": [
+    {
+      "name": "linked-image",
+      "context": {
+        "image": "../../img/Component-Card-Image-1.jpg",
+        "cta": {
+          "url": "https://idfive.com",
+          "text": "Learn More"
+        }
+      }
+    }
+  ]
 }

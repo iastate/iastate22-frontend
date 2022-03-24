@@ -58,8 +58,12 @@
   z-index: 1;
   @extend %responsive-img;
   &:before {
-    content: "";
     padding-top: 100%;
+  }
+  .iastate22-card--linked-image & {
+    &:before {
+      padding-top: 86.47%;
+    }
   }
 
   img {

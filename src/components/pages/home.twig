@@ -48,7 +48,7 @@
   </div>
 </div>
 
-{# Homepage blockquote is different from standard blockquote component as it contains a video modal #}
+{# Homepage blockquote is different from standard kitchen sink blockquote component as it contains a video modal #}
 <div class="home-iastate22-blockquote iastate22-blockquote{% if home_blockquote.portrait %} iastate22-blockquote--with-image{% else %} iastate22-blockquote--with-no-image{% endif %}">
   <div class="iastate22-blockquote__inner-wrap">
     {% if home_blockquote.portrait %}
@@ -76,5 +76,30 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div class="home-academics">
+  <h2 class="home-academics__headline">{{ academics.headline }}</h2>
+  <p class="home-academics__intro-copy">{{ academics.intro_copy }}</p>
+  {# Homepage image grid is different from standard kitchen sink component as it contains links #}
+  <div class="home-academics__image-grid image-grid">
+    <div class="image-grid__image">
+      <img src="{{ academics.image_grid.image_one|path }}" alt="" width="627" height="418" />
+    </div>
+    <div class="image-grid__image">
+      <img src="{{ academics.image_grid.image_two|path }}" alt="" width="303" height="202" />
+    </div>
+    <div class="image-grid__image">
+      <img src="{{ academics.image_grid.image_three|path }}" alt="" width="303" height="202" />
+    </div>
+  </div>
+  <div class="home-academics__explore">
+    <h3 class="home-academics__explore-label">{{ academics.explore.label}}</h3>
+    <ul>
+      {% for link in academics.explore.links %}
+        <li><a href="{{link.url}}">{{link.title}}</a></li>
+      {% endfor %}
+    </ul>
   </div>
 </div>

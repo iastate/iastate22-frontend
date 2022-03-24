@@ -37,9 +37,8 @@
       }
     },
     "home_blockquote": {
-      "quote": "Lorem Ipsum Dolor Sit Amet duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur sit amet suis aut dolor.",
-      "author": "FirstName LastName",
-      "author_role": "Role",
+      "quote": "Throughout my time at ISU, I’ve always felt encouraged, supported, and mentored by faculty—and my classmates too.",
+      "author": "Eliza, ’23 on her experience at ISU",
       "portrait": "../../img/featured-quote.jpg",
       "modal": {
         "id": "modal-1",
@@ -48,6 +47,44 @@
           "title": "Your future starts now.",
           "video_id": "LjOmcZkXVcU"
         }
+      }
+    },
+    "academics": {
+      "headline": "Learning That Matters to You and the World",
+      "intro_copy": "Academic programs at Iowa State University of Science and Technology develop practical STEM skills and knowledge of the human condition.",
+      "image_grid": {
+        "image_one": "../../img/IMG-HP_Find_My_Major_FPO.jpg",
+        "image_two": "../../img/IMG-HP_Graduate_Programs.jpg",
+        "image_three": "../../img/IMG-HP_Veterinary_Medicine.jpg"
+      },
+      "explore": {
+        "label": "Explore Programs",
+        "links": [
+          {
+            "title": "Agriculture and Life Sciences",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Business",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Design",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Engineering",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Human Services",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Liberal Arts and Sciences",
+            "url": "https://www.iastate.edu/"
+          }
+        ]
       }
     }
   }

@@ -284,11 +284,13 @@
   display: flex;
   align-items: center;
   background-color: $light-grey;
-  padding: rem(38) rem(20);
+  padding: rem(30) rem(20);
   position: relative;
-  margin: 0 auto;
+  margin: rem(50) auto rem(-120);
   max-width: rem(342);
   order: 1;
+  z-index: 1;
+
   &:before {
     content: "";
     border-bottom: rem(8) solid $iastate-gold;
@@ -325,6 +327,7 @@
 
 // Home Blockquote Section
 .home-iastate22-blockquote {
+  padding-top: rem(241);
   .iastate22-blockquote__portrait {
     cursor: pointer;
   }
@@ -333,14 +336,59 @@
     width: 100%;
     max-width: rem(1000);
   }
+  .iastate22-blockquote__portrait {
+    max-width: none;
+    width: 75%;
+  }
+  .video-embed__button {
+    top: 78%;
+  }
   .iastate22-modal__media {
     &:before {
       display: none;
+    }
+    .video-embed__button {
+      top: 50%;
     }
   }
   .video-embed__media-wrap {
     &:after {
       display: none;
+    }
+  }
+}
+
+// home academics section
+.home-academics {
+  @extend %outer-pad-x;
+  padding-top: rem(70);
+  padding-bottom: rem(60);
+}
+
+.home-academics__headline {
+  @extend %h2-yellow-border;
+}
+
+.home-academics__intro-copy {
+  color: $iastate-maroon;
+  line-height: (29 / 18);
+}
+
+.home-academics__explore {
+  margin-top: rem(48);
+  ul {
+    margin-top: rem(14);
+    li {
+      margin-bottom: rem(3);
+      a {
+        color: $iastate-maroon;
+        font-family: $nimbus-sans-bold;
+        font-weight: 700;
+        transition: 0.2s color ease-in-out;
+        &:hover {
+          color: $iastate-red;
+        }
+      }
     }
   }
 }
