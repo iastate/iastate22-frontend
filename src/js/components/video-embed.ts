@@ -1,4 +1,4 @@
-import * as YoutubePlayer from "youtube-player";
+import YoutubePlayer from "youtube-player";
 
 export class VideoEmbed {
   private element: HTMLElement;

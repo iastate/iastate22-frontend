@@ -328,6 +328,7 @@
 // Home Blockquote Section
 .home-iastate22-blockquote {
   padding-top: rem(241);
+  padding-bottom: rem(80);
   .iastate22-blockquote__portrait {
     cursor: pointer;
   }
@@ -351,6 +352,17 @@
       top: 50%;
     }
   }
+  .iastate22-blockquote__quote {
+    line-height: (38 / 30);
+    &:after {
+      bottom: rem(-116);
+    }
+  }
+  .iastate22-blockquote__author {
+    width: 67%;
+    padding-right: 0;
+    margin-top: rem(55);
+  }
   .video-embed__media-wrap {
     &:after {
       display: none;
@@ -367,11 +379,23 @@
 
 .home-academics__headline {
   @extend %h2-yellow-border;
+  width: 80%;
 }
 
 .home-academics__intro-copy {
   color: $iastate-maroon;
   line-height: (29 / 18);
+}
+
+.home-academics__image-grid {
+  margin: rem(50) rem(-36);
+
+  .image-grid__image {
+    margin-bottom: rem(10);
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .home-academics__explore {
@@ -390,5 +414,41 @@
         }
       }
     }
+  }
+}
+
+// home solutions section
+.home-solutions {
+  @extend %outer-pad-x;
+  padding-top: rem(70);
+  padding-bottom: rem(60);
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: rem(530);
+    background-color: $off-white;
+  }
+}
+
+.home-solutions__headline {
+  @extend %h2-yellow-border;
+}
+
+.home-solutions__intro-copy {
+  position: relative;
+  z-index: 1;
+  color: $iastate-maroon;
+  line-height: (29 / 18);
+}
+
+.home-solutions__carousel-slide {
+  width: 66%;
+  margin-right: rem(40);
+  &:last-child {
+    margin-right: 0;
   }
 }

@@ -2,7 +2,7 @@
  * Modules
  */
 import focusWithin from "focus-within";
-import * as objectFitImages from "object-fit-images";
+import objectFitImages from "object-fit-images";
 import { silcCoreInit } from "silc-core";
 import { silcAccordionInit } from "silc-accordion";
 import Modal from "./components/modal";

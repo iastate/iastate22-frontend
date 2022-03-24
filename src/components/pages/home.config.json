@@ -53,9 +53,27 @@
       "headline": "Learning That Matters to You and the World",
       "intro_copy": "Academic programs at Iowa State University of Science and Technology develop practical STEM skills and knowledge of the human condition.",
       "image_grid": {
-        "image_one": "../../img/IMG-HP_Find_My_Major_FPO.jpg",
-        "image_two": "../../img/IMG-HP_Graduate_Programs.jpg",
-        "image_three": "../../img/IMG-HP_Veterinary_Medicine.jpg"
+        "image_one": {
+          "image": "../../img/IMG-HP_Find_My_Major_FPO.jpg",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Find My Major"
+          }
+        },
+        "image_two": {
+          "image": "../../img/IMG-HP_Graduate_Programs.jpg",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Graduate Programs"
+          }
+        },
+        "image_three": {
+          "image": "../../img/IMG-HP_Veterinary_Medicine.jpg",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Veterinary Medicine"
+          }
+        }
       },
       "explore": {
         "label": "Explore Programs",
@@ -86,6 +104,48 @@
           }
         ]
       }
+    },
+    "solutions": {
+      "headline": "Finding the Solutions That Matter Most",
+      "intro_copy": "See how the Iowa State University community has tackled today’s issues…Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, magni dolores eos.",
+      "cards": [
+        {
+          "title": "Advocating for Social Justice",
+          "image": "../../img/HP_Finding_Solutions_Story_1_FPO.jpg",
+          "name": "Zakariyah Hill, ’21",
+          "role": "Founder Supply Hive",
+          "url": "https://www.iastate.edu/",
+          "clickable": false,
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Read More"
+          }
+        },
+        {
+          "title": "Challenge Lorem Ipsum Dolor Amet",
+          "image": "../../img/HP_Finding_Solutions_Story_2_FPO.jpg",
+          "name": "Fname Lastname ’19",
+          "role": "Role Lorem Ipsum Dolor",
+          "url": "https://www.iastate.edu/",
+          "clickable": false,
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Read More"
+          }
+        },
+        {
+          "title": "Eliminating Plastics to Combat Climate Change",
+          "image": "../../img/HP_Finding_Solutions_Story_3_FPO.jpg",
+          "name": "Keith Forst",
+          "role": "Polymer and Food Protection Consortium",
+          "url": "https://www.iastate.edu/",
+          "clickable": false,
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Read More"
+          }
+        }
+      ]
     }
   }
 }

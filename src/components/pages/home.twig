@@ -82,16 +82,16 @@
 <div class="home-academics">
   <h2 class="home-academics__headline">{{ academics.headline }}</h2>
   <p class="home-academics__intro-copy">{{ academics.intro_copy }}</p>
-  {# Homepage image grid is different from standard kitchen sink component as it contains links #}
+  {# Homepage image grid is different from standard kitchen sink component as it contains card--linked-image component #}
   <div class="home-academics__image-grid image-grid">
     <div class="image-grid__image">
-      <img src="{{ academics.image_grid.image_one|path }}" alt="" width="627" height="418" />
+      {% include "@card--linked-image" with academics.image_grid.image_one %}
     </div>
     <div class="image-grid__image">
-      <img src="{{ academics.image_grid.image_two|path }}" alt="" width="303" height="202" />
+      {% include "@card--linked-image" with academics.image_grid.image_two %}
     </div>
     <div class="image-grid__image">
-      <img src="{{ academics.image_grid.image_three|path }}" alt="" width="303" height="202" />
+      {% include "@card--linked-image" with academics.image_grid.image_three %}
     </div>
   </div>
   <div class="home-academics__explore">
@@ -101,5 +101,19 @@
         <li><a href="{{link.url}}">{{link.title}}</a></li>
       {% endfor %}
     </ul>
+  </div>
+</div>
+
+<div class="home-solutions">
+  <h2 class="home-solutions__headline">{{ solutions.headline }}</h2>
+  <p class="home-solutions__intro-copy">{{ solutions.intro_copy }}</p>
+  <div class="home-solutions__carousel-holder">
+    <div class="home-solutions__carousel">
+      {% for card in solutions.cards %}
+      <div class="home-solutions__carousel-slide">
+        {% include "@card--profile-with-modal" with card %}
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </div>

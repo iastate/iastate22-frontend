@@ -1,5 +1,5 @@
-import * as _debounce from "lodash.debounce";
-import * as Headroom from "headroom.js";
+import _debounce from "lodash.debounce";
+import Headroom from "headroom.js";
 import AccessibilityUtilities from "../utilities/accessibility";
 
 const mobileMQ = window.matchMedia("(max-width: 1200px)");
