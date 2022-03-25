@@ -747,6 +747,250 @@
   }
 }
 
+// home resources section
+.home-resources {
+  @extend %outer-pad-x;
+  padding-top: rem(40);
+  @include media-breakpoint-up(lg) {
+    padding-top: rem(70);
+  }
+
+  .link-set {
+    flex: 1 1 0;
+    padding-left: rem(12);
+    @include media-breakpoint-up(lg) {
+      flex: 0 1 auto;
+      width: 50%;
+    }
+    ul {
+      @include media-breakpoint-up(lg) {
+        column-count: 2;
+      }
+      li {
+        line-height: (25 / 18);
+        margin-bottom: rem(18);
+        a {
+          color: $iastate-maroon;
+          font-family: $nimbus-sans-bold;
+          font-weight: 700;
+          font-size: rem(18);
+        }
+      }
+    }
+  }
+}
+
+.home-resources__headline {
+  @extend %h2-yellow-border;
+  text-align: center;
+  margin: 0 auto;
+  font-size: rem(37);
+  line-height: (48 / 37);
+  @include media-breakpoint-up(lg) {
+    font-size: rem(53);
+    line-height: (66 / 53);
+  }
+  &:after {
+    left: 50%;
+    margin-left: -25px;
+  }
+}
+
+.home-resources__subhead-link-wrap {
+  display: flex;
+  margin-top: rem(35);
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem(50);
+  }
+}
+
+.home-resources__subhead {
+  flex: 1 1 0;
+  font-family: $merriweather;
+  font-weight: 700;
+  text-align: right;
+  padding-right: rem(12);
+  font-size: rem(23);
+  line-height: (35 / 23);
+  @include media-breakpoint-up(lg) {
+    flex: 0 1 auto;
+    width: 50%;
+  }
+}
+
+.home-resources__questions-image-wrap {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: rem(-80);
+  }
+}
+
+.home-resources__questions {
+  margin-top: rem(40);
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 0;
+  }
+}
+
+.home-resources__questions-subhead {
+  text-align: center;
+  color: $iastate-maroon;
+  font-size: rem(30);
+  line-height: (26 / 30);
+  position: relative;
+  padding-bottom: rem(28);
+  @extend %h2-yellow-border;
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+  &:after {
+    left: 50%;
+    margin-left: -25px;
+    @include media-breakpoint-up(lg) {
+      left: 0;
+      margin: 0;
+    }
+  }
+}
+
+.home-resources__questions-links {
+  width: 75%;
+  margin: rem(15) auto;
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+  }
+}
+
+.home-resources__image {
+  margin-top: rem(30);
+  margin-left: rem(-36);
+  margin-bottom: rem(30);
+  width: 85%;
+  position: relative;
+  box-shadow: rem(4) rem(13) rem(27) rgba($black, 0.2);
+  z-index: 1;
+  @extend %responsive-img;
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 0;
+    margin: 0 rem(54) 0 0;
+    width: auto;
+  }
+  img {
+    z-index: 1;
+  }
+
+  &:before {
+    padding-top: 72.41%;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: rem(-30);
+    left: rem(-36);
+    background-color: $iastate-red;
+    height: rem(135);
+    width: 150vw;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
+
+// home ctas (calls to action) section
+.home-ctas {
+  background-color: $iastate-red;
+  @extend %outer-pad-x;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: rem(47);
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &:before {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      background-color: $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: rem(200);
+    }
+  }
+  .iastate22-button-set {
+    @include media-breakpoint-up(lg) {
+      flex: 1 1 0;
+    }
+    ul {
+      li {
+        margin-bottom: rem(26);
+        @include media-breakpoint-up(lg) {
+          margin-bottom: rem(5);
+        }
+        a {
+          @extend %iastate22-button--reverse;
+          @include media-breakpoint-up(lg) {
+            min-width: rem(304);
+          }
+        }
+      }
+    }
+  }
+}
+
+.home-ctas__headline-button-wrap {
+  order: 2;
+  margin-top: rem(70);
+  margin-bottom: rem(20);
+  @include media-breakpoint-up(lg) {
+    order: 3;
+    flex: 0 1 auto;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.home-ctas__headline {
+  color: $white;
+  font-size: rem(54);
+  line-height: (64 / 54);
+  padding: 0;
+  margin-bottom: rem(43);
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 0;
+  }
+}
+
+.home-ctas__image {
+  @extend %responsive-img;
+  order: 3;
+  box-shadow: rem(4) rem(13) rem(27) rgba($black, 0.2);
+  margin-right: rem(-36);
+  @include media-breakpoint-up(md) {
+    margin-right: rem(-70);
+  }
+  @include media-breakpoint-up(lg) {
+    order: 1;
+    margin: 0;
+    flex: 0 1 auto;
+    width: 50%;
+  }
+  &:before {
+    padding-top: 62.43%;
+  }
+  & + .home-ctas__image {
+    order: 1;
+    &:before {
+      padding-top: 72.49%;
+    }
+  }
+}
+
 // home full width campus photo section
 .home-full-width-campus-photo {
   @extend %responsive-img;
@@ -767,6 +1011,43 @@
   .home-full-width-campus-photo__mobile {
     @include media-breakpoint-up(sm) {
       display: none;
+    }
+  }
+}
+
+// unique home button
+.home-link-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $iastate-maroon;
+  font-family: $nimbus-sans-bold;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: (26 / 16);
+  text-decoration: none;
+  .home-link-button__arrow-wrap {
+    border: rem(2) solid $iastate-maroon;
+    border-radius: rem(25);
+    width: rem(48);
+    height: rem(46);
+    display: inline-block;
+    transition: 0.2s width ease-in-out;
+    margin-right: rem(12);
+    flex: 0 0 auto;
+    .arrow {
+      right: initial;
+      top: 49%;
+      left: rem(26);
+      width: rem(0);
+    }
+  }
+  &:hover {
+    .home-link-button__arrow-wrap {
+      width: rem(58);
+      .arrow {
+        width: rem(15);
+      }
     }
   }
 }

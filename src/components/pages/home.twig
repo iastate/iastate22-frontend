@@ -182,11 +182,41 @@ Events
 </div>
 
 <div class="home-resources">
-Resources
+  <h2 class="home-resources__headline">{{ resources.headline }}</h2>
+  <div class="home-resources__subhead-link-wrap">
+    <h3 class="home-resources__subhead">{{ resources.subhead }}</h3>
+    {% include "@link-set" with resources.link_set %}
+  </div>
+  <div class="home-resources__questions-image-wrap">
+    <div class="home-resources__questions">
+      <h3 class="home-resources__questions-subhead">{{ resources.questions.subhead }}</h2>
+      <div class="home-resources__questions-links">
+        <ul>
+          {% for link in resources.questions.links %}
+          <li>
+            <a class="home-link-button" href="{{link.url}}"><span class="home-link-button__arrow-wrap"><span class="arrow"></span></span>{{link.text}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="home-resources__image">
+      <img src="{{ resources.image|path }}" alt="" width="290" height="210" />
+    </div>
+  </div>
 </div>
 
-<div class="home-calls-to-action">
-Calls to action
+<div class="home-ctas">
+  <div class="home-ctas__headline-button-wrap">
+    <h2 class="home-ctas__headline">{{ ctas.headline }}</h2>
+    {% include "@button-set" with ctas.button_set %}
+  </div>
+  <div class="home-ctas__image">
+    <img src="{{ ctas.images.one|path }}" alt="" width="378" height="236" />
+  </div>
+  <div class="home-ctas__image">
+    <img src="{{ ctas.images.two|path }}" alt="" width="378" height="274" />
+  </div>
 </div>
 
 <div class="home-full-width-campus-photo">

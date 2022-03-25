@@ -186,6 +186,71 @@
         "three": "../../img/HP_Cyclones_Social_Photo_3.jpg"
       }
     },
+    "resources": {
+      "headline": "Start Your Future With Us",
+      "subhead": "Resources for Future Students",
+      "link_set": {
+        "links": [
+          {
+            "url": "https://iastate.edu",
+            "text": "How to Apply"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Tuition and Fees"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Scholarships"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Housing and Dining"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "New Student Programs"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "My Admissions Account"
+          }
+        ]
+      },
+      "questions": {
+        "subhead": "Questions?",
+        "links": [
+          {
+            "url": "https://iastate.edu",
+            "text": "Meet Your Admissions Counselor"
+          }
+        ]
+      },
+      "image": "../../img/HP_Start-Your-Future_Photo_1.jpg"
+    },
+    "ctas": {
+      "headline": "Take the Next Step",
+      "button_set": {
+        "items": [
+          {
+            "text": "Request Information",
+            "url": "https://iastate.edu"
+          },
+          {
+            "text": "Apply",
+            "url": "https://iastate.edu"
+          },
+          {
+            "text": "Visit",
+            "url": "https://iastate.edu"
+          }
+        ]
+      },
+      "images": {
+        "one": "../../img/HP_Start-Your-Future_Photo_2.jpg",
+        "two": "../../img/HP_Start-Your-Future_Photo_3.jpg"
+      }
+    },
     "campus_photo": {
       "image_mobile": "../../img/HP_Footer_Campus_Mobile.jpg",
       "image_desktop": "../../img/HP_Footer_Campus_Desktop.jpg"
