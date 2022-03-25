@@ -607,10 +607,24 @@
   @extend %outer-pad-x;
   display: flex;
   flex-direction: column-reverse;
+  @include media-breakpoint-up(xl) {
+    flex-direction: row;
+    align-items: center;
+    padding-right: 0;
+  }
 }
 
 .home-social__headline-icons-wrap {
   margin: rem(40) 0 rem(26);
+  @include media-breakpoint-up(xl) {
+    flex: 0 1 auto;
+    width: 35%;
+    margin: 0;
+  }
+  @include media-breakpoint-up(xxl) {
+    flex: 0 1 auto;
+    width: 25%;
+  }
 }
 
 .home-social__headline {
@@ -618,6 +632,12 @@
   width: 50%;
   padding: 0;
   margin-bottom: rem(20);
+  @include media-breakpoint-up(xl) {
+    width: auto;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 50%;
+  }
 }
 
 .home-social__social-links {
@@ -630,13 +650,9 @@
   }
   @include media-breakpoint-up(xl) {
     margin: 0;
-    justify-content: flex-end;
   }
   li {
     margin-right: rem(15);
-    @include media-breakpoint-up(md) {
-      margin-right: rem(30);
-    }
     a {
       border: rem(2) solid $iastate-gold;
       border-radius: 50%;
@@ -660,7 +676,21 @@
 
 .home-social__images-wrap {
   position: relative;
-  &:before {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  @include media-breakpoint-up(xl) {
+    flex: 0 1 auto;
+    width: 65%;
+  }
+  @include media-breakpoint-up(xxl) {
+    flex: 0 1 auto;
+    width: 75%;
+  }
+  &:before,
+  &:after {
     content: "";
     position: absolute;
     top: 0;
@@ -668,17 +698,48 @@
     right: rem(-36);
     background-color: $white;
     height: rem(48);
+    @include media-breakpoint-up(md) {
+      left: rem(-70);
+      right: rem(-70);
+    }
+    @include media-breakpoint-up(xl) {
+      width: 150vw;
+      left: -50vw;
+      height: rem(18);
+    }
+    @include media-breakpoint-up(xxl) {
+      height: rem(27);
+    }
+  }
+  &:after {
+    display: none;
+    @include media-breakpoint-up(xl) {
+      display: block;
+      top: initial;
+      bottom: 0;
+    }
   }
 }
 
 .home-social__images-image {
   @extend %responsive-img;
   box-shadow: 0 rem(13) rem(16) rgba($black, 0.2);
+  position: relative;
+  z-index: 1;
+  @include media-breakpoint-up(md) {
+    flex: 1 1 0;
+    margin-right: rem(15);
+  }
   &:nth-child(2),
   &:last-child {
     display: none;
     @include media-breakpoint-up(md) {
       display: block;
+    }
+  }
+  &:last-child {
+    @include media-breakpoint-up(md) {
+      margin-right: 0;
     }
   }
   &:before {
