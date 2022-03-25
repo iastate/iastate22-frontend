@@ -26,24 +26,28 @@
 {% endif %}
 
 <div class="home-community">
-  <div class="home-community__label"><p>{{ community.label }}</p></div>
-  <h2 class="home-community__headline">{{ community.headline}}</h2>
-  <p class="home-community__body">{{ community.body}}</p>
+  <div class="home-community__content-wrap">
+    <div class="home-community__label"><p>{{ community.label }}</p></div>
+    <h2 class="home-community__headline">{{ community.headline}}</h2>
+    <p class="home-community__body">{{ community.body}}</p>
+  </div>
   <div class="home-community__callout">
     <div class="home-community__callout-content-wrap">
       <h2 class="home-community__callout-headline">{{ community.callout.headline }}</h2>
       <p class="home-community__callout-body">{{ community.callout.body }}</p>
       {% include "@button" with community.callout.button %}
     </div>
-    <div class="home-community__callout-media">
-      <img src="{{ community.callout.imageOne|path }}" alt="" />
-    </div>
-    <div class="home-community__callout-media-two">
-      <img src="{{ community.callout.imageTwo|path }}" alt="" />
-    </div>
-    <div class="home-community__callout-statistic">
-      <h3 class="home-community__callout-statistic-stat">{{ community.callout.statistic.stat }}</h3>
-      <p class="home-community__callout-statistic-description">{{ community.callout.statistic.description }}</p>
+    <div class="home-community__callout-media-statistic-wrap">
+      <div class="home-community__callout-media">
+        <img src="{{ community.callout.imageOne|path }}" alt="" />
+      </div>
+      <div class="home-community__callout-media-two">
+        <img src="{{ community.callout.imageTwo|path }}" alt="" />
+      </div>
+      <div class="home-community__callout-statistic">
+        <h3 class="home-community__callout-statistic-stat">{{ community.callout.statistic.stat }}</h3>
+        <p class="home-community__callout-statistic-description">{{ community.callout.statistic.description }}</p>
+      </div>
     </div>
   </div>
 </div>
@@ -80,8 +84,10 @@
 </div>
 
 <div class="home-academics">
-  <h2 class="home-academics__headline">{{ academics.headline }}</h2>
-  <p class="home-academics__intro-copy">{{ academics.intro_copy }}</p>
+  <div class="home-academics__copy-wrap">
+    <h2 class="home-academics__headline">{{ academics.headline }}</h2>
+    <p class="home-academics__intro-copy">{{ academics.intro_copy }}</p>
+  </div>
   {# Homepage image grid is different from standard kitchen sink component as it contains card--linked-image component #}
   <div class="home-academics__image-grid image-grid">
     <div class="image-grid__image">
@@ -126,4 +132,64 @@
     <i class="fa-solid fa-location-dot"></i>
     <div class="home-location__caption-text"><p>{{ location.caption.text }} <a href="{{ location.caption.link.url }}">{{ location.caption.link.text }}</a></p></div>
   </div>
+</div>
+
+<div class="home-events">
+Events
+</div>
+
+<div class="home-social">
+  <div class="home-social__headline-icons-wrap">
+    <h2 class="home-social__headline">{{ social.headline }}</h2>
+    <ul class="home-social__social-links">
+      <li>
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+          <span class="visible-for-screen-readers">Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank">
+          <i class="fak fa-id5-instagram"></i>
+          <span class="visible-for-screen-readers">Instagram</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+          <span class="visible-for-screen-readers">Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-youtube"></i>
+          <span class="visible-for-screen-readers">YouTube</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="home-social__images-wrap">
+    <div class="home-social__images-image">
+      <img src="{{ social.images.one|path }}" alt="" width="301" height="301" />
+    </div>
+    <div class="home-social__images-image">
+      <img src="{{ social.images.two|path }}" alt="" width="301" height="301" />
+    </div>
+    <div class="home-social__images-image">
+      <img src="{{ social.images.three|path }}" alt="" width="301" height="301" />
+    </div>
+  </div>
+</div>
+
+<div class="home-resources">
+Resources
+</div>
+
+<div class="home-calls-to-action">
+Calls to action
+</div>
+
+<div class="home-full-width-campus-photo">
+    <img class="home-full-width-campus-photo__mobile" src="{{ campus_photo.image_mobile|path }}" alt="" />
+    <img class="home-full-width-campus-photo__desktop" src="{{ campus_photo.image_desktop|path }}" alt="" />
 </div>

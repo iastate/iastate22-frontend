@@ -177,6 +177,18 @@
           "text": "Explore Our Campus & Location"
         }
       }
+    },
+    "social": {
+      "headline": "Cyclones on Social",
+      "images": {
+        "one": "../../img/HP_Cyclones_Social_Photo_1.jpg",
+        "two": "../../img/HP_Cyclones_Social_Photo_2.jpg",
+        "three": "../../img/HP_Cyclones_Social_Photo_3.jpg"
+      }
+    },
+    "campus_photo": {
+      "image_mobile": "../../img/HP_Footer_Campus_Mobile.jpg",
+      "image_desktop": "../../img/HP_Footer_Campus_Desktop.jpg"
     }
   }
 }
