@@ -2,7 +2,7 @@ import Flickity from "flickity";
 import "flickity-imagesloaded";
 import debounce from "lodash.debounce";
 
-const mobileMQ = window.matchMedia("(max-width: 992px)");
+const mobileMQ = window.matchMedia("(max-width: 991px)");
 
 export class PlayPauseAnimation {
   private element: HTMLElement;
