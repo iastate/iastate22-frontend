@@ -48,6 +48,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  @include media-breakpoint-up(xl) {
+    padding-right: rem(190);
+  }
   .iastate22-button {
     margin-top: rem(30);
     display: inline-block;
@@ -205,6 +208,9 @@
   @extend %outer-pad-x;
   @include media-breakpoint-up(lg) {
     padding-top: rem(50);
+  }
+  @include media-breakpoint-up(xl) {
+    padding-right: rem(190);
   }
 }
 
@@ -450,6 +456,9 @@
   @extend %outer-pad-x;
   padding-top: rem(70);
   padding-bottom: rem(60);
+  @include media-breakpoint-up(xl) {
+    padding-right: rem(190);
+  }
 }
 
 .home-academics__headline {
@@ -498,6 +507,9 @@
   padding-top: rem(70);
   padding-bottom: rem(60);
   position: relative;
+  @include media-breakpoint-up(xl) {
+    padding-right: rem(190);
+  }
   &:before {
     content: "";
     position: absolute;
@@ -754,6 +766,10 @@
   @include media-breakpoint-up(lg) {
     padding-top: rem(70);
   }
+  @include media-breakpoint-up(xl) {
+    padding-top: rem(95);
+    padding-right: rem(190);
+  }
 
   .link-set {
     flex: 1 1 0;
@@ -761,6 +777,11 @@
     @include media-breakpoint-up(lg) {
       flex: 0 1 auto;
       width: 50%;
+      padding-left: rem(29);
+      padding-top: rem(5);
+    }
+    @include media-breakpoint-up(xxl) {
+      padding-left: rem(55);
     }
     ul {
       @include media-breakpoint-up(lg) {
@@ -769,11 +790,20 @@
       li {
         line-height: (25 / 18);
         margin-bottom: rem(18);
+        @include media-breakpoint-up(lg) {
+          margin-bottom: rem(10);
+        }
         a {
           color: $iastate-maroon;
           font-family: $nimbus-sans-bold;
           font-weight: 700;
           font-size: rem(18);
+          text-decoration-thickness: rem(1);
+          text-underline-offset: rem(2);
+          transition: 0.2s color ease-in-out;
+          &:hover {
+            color: $iastate-red;
+          }
         }
       }
     }
@@ -802,18 +832,37 @@
   @include media-breakpoint-up(lg) {
     margin-bottom: rem(50);
   }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-65);
+  }
+}
+
+.home-resources__subhead-wrap {
+  flex: 1 1 0;
+  padding-right: rem(12);
+  @include media-breakpoint-up(lg) {
+    flex: 0 1 auto;
+    width: 50%;
+    padding-right: rem(26);
+  }
+  @include media-breakpoint-up(xxl) {
+    padding-right: rem(55);
+  }
 }
 
 .home-resources__subhead {
-  flex: 1 1 0;
   font-family: $merriweather;
   font-weight: 700;
   text-align: right;
-  padding-right: rem(12);
   font-size: rem(23);
   line-height: (35 / 23);
   @include media-breakpoint-up(lg) {
-    flex: 0 1 auto;
+    font-size: rem(30);
+    line-height: (44 / 30);
+    width: 75%;
+    margin-left: auto;
+  }
+  @include media-breakpoint-up(xl) {
     width: 50%;
   }
 }
@@ -823,6 +872,13 @@
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: rem(-80);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-52);
+    margin-top: rem(90);
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-bottom: rem(-150);
   }
 }
 
@@ -850,6 +906,8 @@
     @include media-breakpoint-up(lg) {
       left: 0;
       margin: 0;
+      bottom: initial;
+      top: rem(-40);
     }
   }
 }
@@ -876,6 +934,11 @@
     margin: 0 rem(54) 0 0;
     width: auto;
   }
+  @include media-breakpoint-up(xxl) {
+    margin-right: rem(97);
+    left: rem(-15);
+  }
+
   img {
     z-index: 1;
   }
@@ -910,6 +973,10 @@
     flex-wrap: wrap;
     align-items: flex-end;
   }
+  @include media-breakpoint-up(xl) {
+    padding-right: rem(81);
+    padding-left: rem(81);
+  }
   &:before {
     @include media-breakpoint-up(lg) {
       content: "";
@@ -918,12 +985,18 @@
       top: 0;
       left: 0;
       right: 0;
-      height: rem(200);
+      height: 40%;
+    }
+    @include media-breakpoint-up(xl) {
+      height: 46%;
     }
   }
   .iastate22-button-set {
     @include media-breakpoint-up(lg) {
       flex: 1 1 0;
+      margin: 0;
+      position: relative;
+      left: rem(27);
     }
     ul {
       li {
@@ -953,6 +1026,15 @@
     display: flex;
     align-items: flex-end;
   }
+  @include media-breakpoint-up(xl) {
+    margin-top: rem(100);
+  }
+}
+
+.home-ctas__headline-wrap {
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 0;
+  }
 }
 
 .home-ctas__headline {
@@ -962,7 +1044,11 @@
   padding: 0;
   margin-bottom: rem(43);
   @include media-breakpoint-up(lg) {
-    flex: 1 1 0;
+    width: 75%;
+    margin-left: auto;
+  }
+  @include media-breakpoint-up(xl) {
+    width: 50%;
   }
 }
 
@@ -979,14 +1065,38 @@
     margin: 0;
     flex: 0 1 auto;
     width: 50%;
+    position: relative;
+    top: rem(100);
+    left: rem(-26);
+  }
+  @include media-breakpoint-up(xl) {
+    left: rem(-50);
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 43%;
+    left: 0;
   }
   &:before {
     padding-top: 62.43%;
+    @include media-breakpoint-up(lg) {
+      padding-top: 60%;
+    }
   }
   & + .home-ctas__image {
     order: 1;
+    @include media-breakpoint-up(lg) {
+      top: 0;
+      left: rem(27);
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 50%;
+      margin-left: rem(84);
+    }
     &:before {
       padding-top: 72.49%;
+      @include media-breakpoint-up(lg) {
+        padding-top: 71.91%;
+      }
     }
   }
 }

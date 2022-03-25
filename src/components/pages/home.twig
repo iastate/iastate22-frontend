@@ -184,7 +184,7 @@ Events
 <div class="home-resources">
   <h2 class="home-resources__headline">{{ resources.headline }}</h2>
   <div class="home-resources__subhead-link-wrap">
-    <h3 class="home-resources__subhead">{{ resources.subhead }}</h3>
+    <div class="home-resources__subhead-wrap"><h3 class="home-resources__subhead">{{ resources.subhead }}</h3></div>
     {% include "@link-set" with resources.link_set %}
   </div>
   <div class="home-resources__questions-image-wrap">
@@ -208,7 +208,7 @@ Events
 
 <div class="home-ctas">
   <div class="home-ctas__headline-button-wrap">
-    <h2 class="home-ctas__headline">{{ ctas.headline }}</h2>
+    <div class="home-ctas__headline-wrap"><h2 class="home-ctas__headline">{{ ctas.headline }}</h2></div>
     {% include "@button-set" with ctas.button_set %}
   </div>
   <div class="home-ctas__image">
