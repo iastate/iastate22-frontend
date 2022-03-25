@@ -407,8 +407,12 @@
 
 // Home Blockquote Section
 .home-iastate22-blockquote {
-  padding-top: rem(241);
-  padding-bottom: rem(80);
+  padding-top: rem(230);
+  padding-bottom: rem(90);
+  @include media-breakpoint-up(lg) {
+    padding-top: rem(158);
+    padding-bottom: rem(190);
+  }
   .iastate22-modal__container {
     padding: rem(45) 0 0 0;
     width: 100%;
@@ -435,14 +439,24 @@
   }
   .iastate22-blockquote__quote {
     line-height: (38 / 30);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(41);
+      line-height: (57 / 41);
+    }
     &:after {
       bottom: rem(-116);
+      @include media-breakpoint-up(lg) {
+        bottom: rem(-70);
+      }
     }
   }
   .iastate22-blockquote__author {
     width: 67%;
     padding-right: 0;
     margin-top: rem(55);
+    @include media-breakpoint-up(lg) {
+      margin-top: rem(10);
+    }
   }
   .video-embed__media-wrap {
     &:after {
@@ -456,8 +470,19 @@
   @extend %outer-pad-x;
   padding-top: rem(70);
   padding-bottom: rem(60);
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   @include media-breakpoint-up(xl) {
     padding-right: rem(190);
+  }
+}
+
+.home-academics__copy-explore-wrap {
+  @include media-breakpoint-up(lg) {
+    flex: 0 1 auto;
+    width: 40%;
   }
 }
 
@@ -469,10 +494,19 @@
 .home-academics__intro-copy {
   color: $iastate-maroon;
   line-height: (29 / 18);
+  @include media-breakpoint-up(lg) {
+    font-size: rem(21);
+    line-height: (33 / 21);
+  }
 }
 
 .home-academics__image-grid {
   margin: rem(50) rem(-36);
+  @include media-breakpoint-up(lg) {
+    flex: 0 1 auto;
+    width: 60%;
+    margin: rem(-130) 0 0 0;
+  }
 
   .image-grid__image {
     margin-bottom: rem(10);
@@ -518,11 +552,23 @@
     right: 0;
     height: rem(530);
     background-color: $off-white;
+    @include media-breakpoint-up(lg) {
+      height: rem(444);
+    }
   }
 }
 
 .home-solutions__headline {
   @extend %h2-yellow-border;
+  @include media-breakpoint-up(lg) {
+    text-align: center;
+  }
+  &:after {
+    @include media-breakpoint-up(lg) {
+      left: 50%;
+      margin-left: rem(-25);
+    }
+  }
 }
 
 .home-solutions__intro-copy {
@@ -530,6 +576,11 @@
   z-index: 1;
   color: $iastate-maroon;
   line-height: (29 / 18);
+  @include media-breakpoint-up(lg) {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 
 .home-solutions__carousel-holder {

@@ -84,9 +84,19 @@
 </div>
 
 <div class="home-academics">
-  <div class="home-academics__copy-wrap">
-    <h2 class="home-academics__headline">{{ academics.headline }}</h2>
-    <p class="home-academics__intro-copy">{{ academics.intro_copy }}</p>
+  <div class="home-academics__copy-explore-wrap">
+    <div class="home-academics__copy-wrap">
+      <h2 class="home-academics__headline">{{ academics.headline }}</h2>
+      <p class="home-academics__intro-copy">{{ academics.intro_copy }}</p>
+    </div>
+    <div class="home-academics__explore">
+      <h3 class="home-academics__explore-label">{{ academics.explore.label}}</h3>
+      <ul>
+        {% for link in academics.explore.links %}
+          <li><a href="{{link.url}}">{{link.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
   {# Homepage image grid is different from standard kitchen sink component as it contains card--linked-image component #}
   <div class="home-academics__image-grid image-grid">
@@ -99,14 +109,6 @@
     <div class="image-grid__image">
       {% include "@card--linked-image" with academics.image_grid.image_three %}
     </div>
-  </div>
-  <div class="home-academics__explore">
-    <h3 class="home-academics__explore-label">{{ academics.explore.label}}</h3>
-    <ul>
-      {% for link in academics.explore.links %}
-        <li><a href="{{link.url}}">{{link.title}}</a></li>
-      {% endfor %}
-    </ul>
   </div>
 </div>
 

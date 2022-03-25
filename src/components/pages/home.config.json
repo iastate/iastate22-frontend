@@ -124,8 +124,12 @@
             "id": "modal-2",
             "image": "../../img/Component-Modal-Square-Image_FPO.jpg",
             "title": "Modal Title Lorem Ipsum Dolor Sit Amet",
-            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>",
-            "call_to_action": "<a href=\"#\" class=\"iastate22-button\">Button Label Lorem</a>"
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+            "call_to_action_intro": "ISU Can Help You Accomplish Great Things Lorem Ipsum",
+            "call_to_action": {
+              "url": "https://www.iastate.edu/",
+              "title": "Innovation & Entrepreneurship"
+            }
           }
         },
         {
@@ -144,7 +148,11 @@
             "image": "../../img/Component-Modal-Square-Image_FPO.jpg",
             "title": "Modal Title Lorem Ipsum Dolor Sit Amet",
             "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>",
-            "call_to_action": "<a href=\"#\" class=\"iastate22-button\">Button Label Lorem</a>"
+            "call_to_action_intro": "Lorem Ipsum",
+            "call_to_action": {
+              "url": "https://www.iastate.edu/",
+              "title": "Link Title"
+            }
           }
         },
         {
@@ -163,7 +171,11 @@
             "image": "../../img/Component-Modal-Square-Image_FPO.jpg",
             "title": "Modal Title Lorem Ipsum Dolor Sit Amet",
             "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>",
-            "call_to_action": "<a href=\"#\" class=\"iastate22-button\">Button Label Lorem</a>"
+            "call_to_action_intro": "Lorem Ipsum",
+            "call_to_action": {
+              "url": "https://www.iastate.edu/",
+              "title": "Link Title"
+            }
           }
         }
       ]
