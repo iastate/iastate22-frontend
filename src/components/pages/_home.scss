@@ -670,9 +670,16 @@
   padding-top: rem(55);
   padding-bottom: rem(55);
   background-color: $off-white;
+  position: relative;
   @include media-breakpoint-up(xl) {
     padding-left: rem(79);
     padding-right: rem(79);
+  }
+  html:not(.js) & {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
   .home-link-button {
     justify-content: center;
@@ -684,16 +691,23 @@
   width: 60%;
   margin: 0 auto;
   line-height: (37 / 30);
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg) {
     text-align: left;
     width: auto;
+    margin-left: rem(111);
   }
   &:after {
     left: 50%;
     margin-left: -25px;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       left: 0;
       margin: 0;
+    }
+  }
+  html:not(.js) & {
+    @include media-breakpoint-up(lg) {
+      flex: 0 1 auto;
+      width: 100%;
     }
   }
 }
@@ -714,7 +728,7 @@
     font-weight: 700;
     font-size: rem(20);
     line-height: (30 / 20);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
@@ -724,9 +738,6 @@
     background-color: $white;
     margin-top: rem(65);
     margin-bottom: rem(30);
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
 
     li {
       margin-bottom: rem(26);
@@ -739,6 +750,10 @@
         text-decoration-thickness: rem(1);
         text-underline-offset: rem(2);
         transition: 0.2s color ease-in-out;
+        @include media-breakpoint-up(lg) {
+          font-size: rem(21);
+          line-height: (31 / 21);
+        }
         &:hover {
           color: $iastate-red;
         }
@@ -755,7 +770,48 @@
   }
 }
 
+.home-events__event-list,
+.home-events__news-list {
+  @include media-breakpoint-up(lg) {
+    position: absolute;
+    left: 60%;
+    top: rem(54);
+    margin-bottom: rem(40);
+  }
+  html:not(.js) & {
+    @include media-breakpoint-up(lg) {
+      position: static;
+      flex: 0 1 auto;
+      width: 50%;
+      margin: 0;
+      left: initial;
+      top: initial;
+    }
+  }
+
+  .visible-for-screen-readers {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+  ul {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+    html:not(.js) & {
+      @include media-breakpoint-up(lg) {
+        display: block;
+      }
+    }
+  }
+}
+
 .home-events__event-list {
+  html:not(.js) & {
+    @include media-breakpoint-up(lg) {
+      padding-right: rem(15);
+    }
+  }
   ul {
     li {
       display: flex;
@@ -785,8 +841,13 @@
 
 .home-events__news-list {
   margin-top: rem(105);
-  @include media-breakpoint-up(md) {
-    margin: 0;
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(65);
+  }
+  html:not(.js) & {
+    @include media-breakpoint-up(lg) {
+      padding-left: rem(15);
+    }
   }
   &:before {
     content: "News";
@@ -798,7 +859,7 @@
     left: rem(-36);
     right: rem(-36);
     border-top: rem(2) solid $iastate-gold;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
@@ -811,9 +872,11 @@
 
 // desktop version of combined news and events grid
 .home-news-events-grid-wrap {
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(110);
+  }
   .home-news-events-grid {
-    @include media-breakpoint-up(md) {
-      display: block;
+    @include media-breakpoint-up(lg) {
       box-shadow: none;
       padding: 0;
       background-color: transparent;
@@ -821,44 +884,81 @@
       margin-bottom: rem(30);
     }
     li {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         box-shadow: rem(9) rem(13) rem(20) rgba($black, 0.16);
         padding: rem(32) rem(20) rem(16);
         background-color: $white;
-        width: 30%;
-        margin-bottom: rem(30);
+        width: 31%;
+        margin-bottom: rem(45);
+        position: relative;
       }
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         width: 32%;
       }
-      // odd events items
+      &:before {
+        @include media-breakpoint-up(lg) {
+          content: "Event";
+          position: absolute;
+          top: rem(-19);
+          z-index: 1;
+          left: rem(25);
+          background-color: $iastate-red;
+          padding: rem(4) rem(16);
+          color: $white;
+          font-family: $nimbus-sans-bold;
+          font-weight: 700;
+          font-size: rem(20);
+          line-height: (30 / 20);
+        }
+      }
+      // events items(odd)
       &:nth-child(odd) {
-        display: flex;
-        align-items: flex-start;
+        @include media-breakpoint-up(lg) {
+          display: flex;
+          align-items: flex-start;
+          min-height: rem(175);
+        }
         .home-events__event-date {
-          flex: 0 0 auto;
-          width: rem(50);
-          text-align: center;
+          @include media-breakpoint-up(lg) {
+            flex: 0 0 auto;
+            width: rem(50);
+            text-align: center;
+          }
         }
         a {
-          margin-left: rem(53);
-          position: relative;
-          top: rem(-4);
+          @include media-breakpoint-up(lg) {
+            margin-left: rem(53);
+            position: relative;
+            top: rem(-4);
+          }
           &:before {
-            content: "";
-            position: absolute;
-            top: rem(6);
-            bottom: 0;
-            left: rem(-32);
-            min-height: rem(50);
-            border-left: rem(2) solid $iastate-gold;
+            @include media-breakpoint-up(lg) {
+              content: "";
+              position: absolute;
+              top: rem(6);
+              bottom: 0;
+              left: rem(-32);
+              min-height: rem(115);
+              border-left: rem(2) solid $iastate-gold;
+            }
           }
         }
       }
-      // Select even news items
+      // news items (even)
       &:nth-child(even) {
+        @include media-breakpoint-up(lg) {
+          min-height: rem(470);
+          padding: rem(40) rem(40) 0;
+        }
+        &:before {
+          @include media-breakpoint-up(lg) {
+            content: "News";
+          }
+        }
         a {
-          display: block;
+          @include media-breakpoint-up(lg) {
+            display: block;
+          }
         }
       }
     }
@@ -867,7 +967,7 @@
 
 .home-news-events-grid__image {
   @extend %responsive-img;
-  margin: rem(-32) rem(-20) rem(20) rem(-20);
+  margin: rem(-40) rem(-40) rem(35) rem(-40);
 
   &:before {
     padding-top: 69.66%;

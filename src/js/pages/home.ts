@@ -100,40 +100,56 @@ export class NewsAndEvents {
 
   private init() {
     if (!!this.element) {
-      this.combineLists();
-      this.applyMasonry();
+      this.handleResize();
     }
   }
 
+  private handleResize() {
+    const resize = () => {
+      this.combineLists();
+      this.applyMasonry();
+    };
+    window.addEventListener("resize", debounce(resize, 100));
+    resize();
+  }
+
   private combineLists() {
-    const gridWrap = document.createElement("DIV") as HTMLElement;
-    const grid = document.createElement("UL") as HTMLElement;
-    gridWrap.classList.add("home-news-events-grid-wrap");
-    grid.classList.add("home-news-events-grid");
-    gridWrap.appendChild(grid);
-    this.element.appendChild(gridWrap);
-    for (let i = 0; i < 3; i++) {
-      const newsClone = this.newsList[i].cloneNode(true) as HTMLElement;
-      const newsImageWrap = document.createElement("DIV") as HTMLElement;
-      newsImageWrap.classList.add("home-news-events-grid__image");
-      const newsImage = document.createElement("IMG") as HTMLImageElement;
-      newsImageWrap.appendChild(newsImage);
-      newsImage.src = newsClone.dataset.image;
-      newsImage.alt = "";
-      newsClone.appendChild(newsImageWrap);
-      newsClone.insertBefore(newsImageWrap, newsClone.firstElementChild);
-      grid.appendChild(this.eventsList[i].cloneNode(true));
-      grid.appendChild(newsClone);
+    if (!mobileMQ.matches) {
+      const gridWrap = document.createElement("DIV") as HTMLElement;
+      const grid = document.createElement("UL") as HTMLElement;
+      gridWrap.classList.add("home-news-events-grid-wrap");
+      grid.classList.add("home-news-events-grid");
+      gridWrap.appendChild(grid);
+      this.element.appendChild(gridWrap);
+      for (let i = 0; i < 3; i++) {
+        const newsClone = this.newsList[i].cloneNode(true) as HTMLElement;
+        const newsCloneLabel = document.createElement("SPAN") as HTMLElement;
+        newsCloneLabel.classList.add("visible-for-screen-readers");
+        newsCloneLabel.innerText = `News`;
+        newsClone.appendChild(newsCloneLabel);
+        const newsImageWrap = document.createElement("DIV") as HTMLElement;
+        newsImageWrap.classList.add("home-news-events-grid__image");
+        const newsImage = document.createElement("IMG") as HTMLImageElement;
+        newsImageWrap.appendChild(newsImage);
+        newsImage.src = newsClone.dataset.image;
+        newsImage.alt = "";
+        newsClone.appendChild(newsImageWrap);
+        newsClone.insertBefore(newsImageWrap, newsClone.firstElementChild);
+        grid.appendChild(this.eventsList[i].cloneNode(true));
+        grid.appendChild(newsClone);
+      }
     }
   }
 
   private applyMasonry() {
-    var grid = document.querySelector(".home-news-events-grid");
-    var msnry = new Masonry(grid, {
-      gutter: 20,
-      horizontalOrder: true,
-      percentPosition: true,
-    });
+    if (!mobileMQ.matches) {
+      var grid = document.querySelector(".home-news-events-grid");
+      var msnry = new Masonry(grid, {
+        gutter: 20,
+        horizontalOrder: true,
+        percentPosition: true,
+      });
+    }
   }
 }
 
@@ -144,6 +160,6 @@ export default function homeInit() {
   const carousel = document.querySelector(".home-solutions__carousel-holder") as HTMLElement;
   new FeaturedStoryCarousel(carousel);
 
-  const newsEvensSection = document.querySelector(".home-events") as HTMLElement;
-  new NewsAndEvents(newsEvensSection);
+  const newsEventsSection = document.querySelector(".home-events") as HTMLElement;
+  new NewsAndEvents(newsEventsSection);
 }
