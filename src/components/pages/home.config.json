@@ -190,6 +190,63 @@
         }
       }
     },
+    "events_news": {
+      "headline": "What We’re Up To Now",
+      "event_list": [
+        {
+          "date": "11-10-2022",
+          "link": {
+            "url": "https://www.iastate.edu/",
+            "title": "Experience Iowa State: General Open House"
+          }
+        },
+        {
+          "date": "18-10-2022",
+          "link": {
+            "url": "https://www.iastate.edu/",
+            "title": "Latino Family Visit Day"
+          }
+        },
+        {
+          "date": "1-11-2022",
+          "link": {
+            "url": "https://www.iastate.edu/",
+            "title": "Multicultural Student Experience Day"
+          }
+        }
+      ],
+      "all_events_link": {
+        "url": "https://www.iastate.edu/",
+        "title": "View Full Event Calendar"
+      },
+      "news_list": [
+        {
+          "date": "9-9-2022",
+          "link": {
+            "url": "https://www.iastate.edu/",
+            "title": "Climate forecast troubling, but there’s hope"
+          }
+        },
+        {
+          "date": "9-9-2022",
+          "link": {
+            "url": "https://www.iastate.edu/",
+            "title": "Enrollment numbers reflect student interest in STEM fields"
+          }
+        },
+        {
+          "date": "9-9-2022",
+          "link": {
+            "url": "https://www.iastate.edu/",
+            "title": "Mosquito immune cells may hold answers to disease transmission"
+          }
+        }
+      ],
+      "all_news_link": {
+        "url": "https://www.iastate.edu/",
+        "title": "View All News"
+      }
+    },
     "social": {
       "headline": "Cyclones on Social",
       "images": {

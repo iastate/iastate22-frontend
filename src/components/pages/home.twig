@@ -137,7 +137,33 @@
 </div>
 
 <div class="home-events">
-Events
+  <h2 class="home-events__headline">{{ events_news.headline }}</h2>
+  <div class="home-events__event-list">
+    <span class="visible-for-screen-readers">Event</span>
+    <ul>
+      {% for event in events_news.event_list %}
+      <li>
+        <span class="home-events__event-date">{{ event.date|date("M d") }}</span>
+        <a href="{{ event.link.url}}">{{ event.link.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="home-link-button" href="{{events_news.all_events_link.url}}"><span class="home-link-button__arrow-wrap"><span class="arrow"></span></span>{{events_news.all_events_link.title}}</a>
+  </div>
+
+  <div class="home-events__news-list">
+    <span class="visible-for-screen-readers">News</span>
+    <ul>
+      {% for news in events_news.news_list %}
+      <li>
+        <a href="{{ news.link.url}}">{{ news.link.title}}</a>
+        <span class="home-events__news-date">{{ news.date|date("F d") }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+    <a class="home-link-button" href="{{events_news.all_news_link.url}}"><span class="home-link-button__arrow-wrap"><span class="arrow"></span></span>{{events_news.all_news_link.title}}</a>
+  </div>
+
 </div>
 
 <div class="home-social">
