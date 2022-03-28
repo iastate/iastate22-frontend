@@ -222,6 +222,7 @@
       "news_list": [
         {
           "date": "9-9-2022",
+          "imageSrc": "../../img/HP_News_Story_1_FPO.jpg",
           "link": {
             "url": "https://www.iastate.edu/",
             "title": "Climate forecast troubling, but there’s hope"
@@ -229,6 +230,7 @@
         },
         {
           "date": "9-9-2022",
+          "imageSrc": "../../img/HP_News_Story_2_FPO.jpg",
           "link": {
             "url": "https://www.iastate.edu/",
             "title": "Enrollment numbers reflect student interest in STEM fields"
@@ -236,6 +238,7 @@
         },
         {
           "date": "9-9-2022",
+          "imageSrc": "../../img/HP_News_Story_3_FPO.jpg",
           "link": {
             "url": "https://www.iastate.edu/",
             "title": "Mosquito immune cells may hold answers to disease transmission"

@@ -155,7 +155,8 @@
     <span class="visible-for-screen-readers">News</span>
     <ul>
       {% for news in events_news.news_list %}
-      <li>
+      <li data-image="{{ news.imageSrc }}">
+        {# <div style="display: block; width: 100%; height: 300px; background-color: red;"></div> #}
         <a href="{{ news.link.url}}">{{ news.link.title}}</a>
         <span class="home-events__news-date">{{ news.date|date("F d") }}</span>
       </li>
