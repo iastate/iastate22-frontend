@@ -473,9 +473,10 @@
   @include media-breakpoint-up(lg) {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
   @include media-breakpoint-up(xl) {
-    padding-right: rem(190);
+    padding-right: rem(82);
   }
 }
 
@@ -512,6 +513,36 @@
     margin-bottom: rem(10);
     &:before {
       display: none;
+    }
+    &:nth-child(2),
+    &:last-child {
+      @include media-breakpoint-up(md) {
+        width: calc(50% - #{rem(5)});
+      }
+      .iastate22-card__cta {
+        @include media-breakpoint-up(lg) {
+          min-width: initial;
+          width: 100%;
+          padding-top: rem(10);
+          padding-bottom: rem(10);
+        }
+        @include media-breakpoint-up(xxl) {
+          min-width: rem(249);
+          width: auto;
+          padding-top: rem(31);
+          padding-bottom: rem(31);
+        }
+      }
+    }
+    &:nth-child(2) {
+      @include media-breakpoint-up(md) {
+        margin-right: rem(5);
+      }
+    }
+    &:last-child {
+      @include media-breakpoint-up(md) {
+        margin-left: rem(5);
+      }
     }
   }
 }
