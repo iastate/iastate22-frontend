@@ -348,7 +348,9 @@
   @extend %responsive-img;
   box-shadow: 0 rem(12) rem(24) rgba($black, 0.2);
   order: 3;
+  margin-top: rem(20);
   @include media-breakpoint-up(md) {
+    margin-top: 0;
     flex: 0 1 auto;
     order: initial;
     width: 80%;
@@ -801,6 +803,9 @@
   padding-bottom: rem(55);
   background-color: $off-white;
   position: relative;
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(30);
+  }
   @include media-breakpoint-up(xl) {
     padding-left: rem(79);
     padding-right: rem(79);
@@ -809,6 +814,17 @@
     @include media-breakpoint-up(lg) {
       display: flex;
       flex-wrap: wrap;
+    }
+  }
+  &:before {
+    @include media-breakpoint-up(lg) {
+      content: "";
+      background-color: $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: rem(293);
     }
   }
   .home-link-button {
