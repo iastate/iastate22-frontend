@@ -239,19 +239,24 @@
     line-height: (31 / 22);
     margin-bottom: rem(13);
   }
-  &:before,
-  &:after {
+  &:before {
     content: "";
     position: absolute;
     top: rem(21);
-    width: rem(37);
     border-bottom: rem(2) solid $iastate-gold;
-  }
-  &:before {
     left: rem(-37);
-  }
-  &:after {
     right: rem(-37);
+    @include media-breakpoint-up(lg) {
+      max-width: rem(644);
+      left: 50%;
+      margin-left: rem(-322);
+    }
+  }
+  p {
+    background-color: $white;
+    position: relative;
+    display: inline-block;
+    padding: 0 rem(20);
   }
 }
 
