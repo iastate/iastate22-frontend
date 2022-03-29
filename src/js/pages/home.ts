@@ -2,6 +2,7 @@ import Flickity from "flickity";
 import "flickity-imagesloaded";
 import debounce from "lodash.debounce";
 import Masonry from "masonry-layout";
+import { Card, CardOptions } from "../components/card";
 
 const mobileMQ = window.matchMedia("(max-width: 991px)");
 
@@ -88,6 +89,8 @@ export class NewsAndEvents {
   private element: HTMLElement;
   private eventsList: NodeListOf<HTMLElement>;
   private newsList: NodeListOf<HTMLElement>;
+  private grid: HTMLElement;
+  private masonry: Masonry;
 
   constructor(element: HTMLElement) {
     if (!!element) {
@@ -99,22 +102,19 @@ export class NewsAndEvents {
   }
 
   private init() {
-    if (!!this.element) {
-      this.handleResize();
-    }
+    this.handleResize();
   }
 
   private handleResize() {
     const resize = () => {
-      this.combineLists();
-      this.applyMasonry();
+      this.createMasonryGrid();
     };
     window.addEventListener("resize", debounce(resize, 100));
     resize();
   }
 
-  private combineLists() {
-    if (!mobileMQ.matches) {
+  private createMasonryGrid() {
+    if (!mobileMQ.matches && !this.grid && !this.masonry) {
       const gridWrap = document.createElement("DIV") as HTMLElement;
       const grid = document.createElement("UL") as HTMLElement;
       gridWrap.classList.add("home-news-events-grid-wrap");
@@ -123,10 +123,7 @@ export class NewsAndEvents {
       this.element.appendChild(gridWrap);
       for (let i = 0; i < 3; i++) {
         const newsClone = this.newsList[i].cloneNode(true) as HTMLElement;
-        const newsCloneLabel = document.createElement("SPAN") as HTMLElement;
-        newsCloneLabel.classList.add("visible-for-screen-readers");
-        newsCloneLabel.innerText = `News`;
-        newsClone.appendChild(newsCloneLabel);
+        const eventsClone = this.eventsList[i].cloneNode(true) as HTMLElement;
         const newsImageWrap = document.createElement("DIV") as HTMLElement;
         newsImageWrap.classList.add("home-news-events-grid__image");
         const newsImage = document.createElement("IMG") as HTMLImageElement;
@@ -135,16 +132,14 @@ export class NewsAndEvents {
         newsImage.alt = "";
         newsClone.appendChild(newsImageWrap);
         newsClone.insertBefore(newsImageWrap, newsClone.firstElementChild);
-        grid.appendChild(this.eventsList[i].cloneNode(true));
+        grid.appendChild(eventsClone);
         grid.appendChild(newsClone);
+        new Card(newsClone, { clickable: true, titleClass: "home-events-news__item-title" });
+        new Card(eventsClone, { clickable: true, titleClass: "home-events-news__item-title" });
       }
-    }
-  }
+      this.grid = grid;
 
-  private applyMasonry() {
-    if (!mobileMQ.matches) {
-      var grid = document.querySelector(".home-news-events-grid");
-      var msnry = new Masonry(grid, {
+      this.masonry = new Masonry(this.grid, {
         gutter: 20,
         horizontalOrder: true,
         percentPosition: true,
@@ -160,6 +155,6 @@ export default function homeInit() {
   const carousel = document.querySelector(".home-solutions__carousel-holder") as HTMLElement;
   new FeaturedStoryCarousel(carousel);
 
-  const newsEventsSection = document.querySelector(".home-events") as HTMLElement;
+  const newsEventsSection = document.querySelector(".home-events-news") as HTMLElement;
   new NewsAndEvents(newsEventsSection);
 }

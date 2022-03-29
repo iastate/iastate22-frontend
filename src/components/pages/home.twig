@@ -71,12 +71,11 @@
       {% endif %}
     </div>
   </div>
-  <div class="iastate22-modal" id="{{ home_blockquote.modal.id }}" aria-hidden="false">
+  <div class="iastate22-modal iastate22-modal--video" id="{{ home_blockquote.modal.id }}" aria-hidden="false">
     <div class="iastate22-modal__overlay" tabindex="-1" data-micromodal-close>
       <div class="iastate22-modal__container{% if home_blockquote.modal.image %} iastate22-modal__container-with-media{% endif %}" id="{{ home_blockquote.modal.id }}-content" role="dialog" aria-modal="true" aria-labelledby="{{ home_blockquote.modal.id }}-title">
-        <button class="iastate22-modal__close" aria-label="Close modal" data-micromodal-close><i class="fa-light fa-xmark"></i></button>
-        <div class="iastate22-modal__media">
-          {% include "@video-embed" with home_blockquote.modal.video %}
+        <button class="iastate22-modal__close" aria-label="Close modal" data-micromodal-close><span class="visible-for-screen-readers">Close YouTube Video: {{ home_blockquote.modal.video.title }}</span><i class="fa-light fa-xmark"></i></button>
+        <div class="iastate22-modal__media" data-vid="{{ home_blockquote.modal.video.video_id }}">
         </div>
       </div>
     </div>
@@ -136,15 +135,16 @@
   </div>
 </div>
 
-<div class="home-events">
+<div class="home-events-news">
   <h2 class="home-events__headline">{{ events_news.headline }}</h2>
   <div class="home-events__event-list">
-    <span class="visible-for-screen-readers">Event</span>
     <ul>
       {% for event in events_news.event_list %}
       <li>
-        <span class="home-events__event-date">{{ event.date|date("M d") }}</span>
-        <a href="{{ event.link.url}}">{{ event.link.title}}</a>
+        <article>
+          <span class="home-events__event-date">{{ event.date|date("M d") }}</span>
+          <h2 class="home-events-news__item-title"><a href="{{ event.link.url}}">{{ event.link.title}}</a></h2>
+        </article>
       </li>
       {% endfor %}
     </ul>
@@ -152,13 +152,13 @@
   </div>
 
   <div class="home-events__news-list">
-    <span class="visible-for-screen-readers">News</span>
     <ul>
       {% for news in events_news.news_list %}
       <li data-image="{{ news.imageSrc }}">
-        {# <div style="display: block; width: 100%; height: 300px; background-color: red;"></div> #}
-        <a href="{{ news.link.url}}">{{ news.link.title}}</a>
-        <span class="home-events__news-date">{{ news.date|date("F d") }}</span>
+        <article>
+          <h2 class="home-events-news__item-title"><a href="{{ news.link.url}}">{{ news.link.title}}</a></h2>
+          <span class="home-events__news-date">{{ news.date|date("F d") }}</span>
+        </article>
       </li>
       {% endfor %}
     </ul>
