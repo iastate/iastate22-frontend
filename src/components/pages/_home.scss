@@ -111,17 +111,9 @@
       fill: $iastate-red;
       mix-blend-mode: multiply;
       isolation: isolate;
-      d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
-      animation: heartAnimation 5s forwards;
-      animation: heartAnimation 5s infinite;
       @media (prefers-reduced-motion) {
         animation: none;
       }
-    }
-  }
-  &.paused {
-    svg path {
-      animation-play-state: paused;
     }
   }
 }
@@ -164,42 +156,6 @@
   }
   .home-hero--with-announcement & {
     bottom: rem(60);
-  }
-}
-
-@keyframes heartAnimation {
-  0% {
-    d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
-  }
-
-  50% {
-    d: path("M 60 50 L 155 60 L 290 75 L 320 180 L 240 275 L 125 260 L 50 250 L 55 145 L 60 50 Z");
-  }
-
-  100% {
-    d: path("M 75 70 L 140 30 L 235 75 L 335 125 L 260 225 L 170 245 L 85 265 L 10 110 L 75 70 Z");
-  }
-}
-
-@keyframes heartAnimation {
-  0% {
-    d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
-  }
-
-  25% {
-    d: path("M 60 50 L 155 60 L 290 75 L 320 180 L 240 275 L 125 260 L 50 250 L 55 145 L 60 50 Z");
-  }
-
-  50% {
-    d: path("M 75 70 L 140 30 L 235 75 L 335 125 L 260 225 L 170 245 L 85 265 L 10 110 L 75 70 Z");
-  }
-
-  75% {
-    d: path("M 60 50 L 155 60 L 290 75 L 320 180 L 240 275 L 125 260 L 50 250 L 55 145 L 60 50 Z");
-  }
-
-  100% {
-    d: path("M 50 40 L 150 0 L 210 70 L 300 95 L 280 200 L 200 240 L 60 285 L 35 150 L 50 40 Z");
   }
 }
 
@@ -751,6 +707,7 @@
   @include media-breakpoint-up(lg) {
     padding-left: rem(79);
     padding-right: rem(79);
+    margin-top: rem(36);
   }
 }
 

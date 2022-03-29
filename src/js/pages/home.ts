@@ -5,35 +5,44 @@ import Masonry from "masonry-layout";
 import { Card, CardOptions } from "../components/card";
 
 const mobileMQ = window.matchMedia("(max-width: 991px)");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 export class PlayPauseAnimation {
   private element: HTMLElement;
   private playPauseButton: HTMLButtonElement;
   private animationContainer: HTMLElement;
+  private animatedSVG: SVGSVGElement;
 
   constructor(element: HTMLElement) {
     if (!!element) {
       this.element = element;
       this.playPauseButton = this.element.querySelector(".home-hero__animation-control");
       this.animationContainer = this.element.querySelector(".home-hero__animation");
+      this.animatedSVG = this.element.querySelector(".home-hero__animation svg");
       this.init();
     }
   }
 
   private init() {
     if (!!this.playPauseButton) {
-      this.handleHover();
+      this.pausePlayAnimatedSVG();
     }
   }
 
-  private handleHover() {
+  private pausePlayAnimatedSVG() {
+    if (reducedMotion.matches) {
+      this.animatedSVG.pauseAnimations();
+    }
+
     this.playPauseButton.addEventListener("click", () => {
       if (!this.animationContainer.classList.contains("paused")) {
         this.animationContainer.classList.add("paused");
         this.playPauseButton.classList.add("paused");
+        this.animatedSVG.pauseAnimations();
       } else {
         this.animationContainer.classList.remove("paused");
         this.playPauseButton.classList.remove("paused");
+        this.animatedSVG.unpauseAnimations();
       }
     });
   }
