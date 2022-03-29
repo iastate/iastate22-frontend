@@ -506,6 +506,9 @@
   }
   .video-embed__button {
     top: 78%;
+    max-width: rem(56);
+    max-height: rem(56);
+    margin-left: rem(-28);
   }
   .iastate22-modal__media {
     &:before {
