@@ -10,6 +10,7 @@
   }
   &.iastate22-card--profile-with-modal {
     cursor: grab;
+    height: 100%;
     @include media-breakpoint-up(lg) {
       cursor: auto;
     }
@@ -92,10 +93,7 @@
     line-height: (26 / 16);
     text-decoration: underline;
     text-underline-offset: rem(1);
-    position: absolute;
-    bottom: rem(13);
-    left: 0;
-    right: 0;
+    margin: auto 0 rem(5);
     border: none;
     background-color: transparent;
     @include media-breakpoint-up(lg) {
@@ -117,6 +115,8 @@
   .iastate22-card--profile-with-modal & {
     padding: rem(12) rem(22);
     min-height: rem(210);
+    display: flex;
+    flex-direction: column;
     @include media-breakpoint-up(lg) {
       padding: rem(23);
       min-height: rem(239);

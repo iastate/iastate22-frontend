@@ -674,7 +674,8 @@
   padding-bottom: rem(60);
   position: relative;
   @include media-breakpoint-up(xl) {
-    padding-right: rem(190);
+    padding-right: rem(170);
+    padding-left: rem(170);
   }
   &:before {
     content: "";
@@ -686,6 +687,14 @@
     background-color: $off-white;
     @include media-breakpoint-up(lg) {
       height: rem(444);
+    }
+    @include media-breakpoint-up(xl) {
+      left: rem(41);
+      right: rem(41);
+    }
+    @include media-breakpoint-up(xxl) {
+      left: rem(82);
+      right: rem(82);
     }
   }
 }
