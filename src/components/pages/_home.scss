@@ -966,7 +966,7 @@
   }
   ul {
     li {
-      article {
+      .home-events-news__item {
         display: flex;
         align-items: flex-start;
         .home-events__event-date {
@@ -1080,7 +1080,7 @@
         @include media-breakpoint-up(lg) {
           min-height: rem(175);
         }
-        article {
+        .home-events-news__item {
           @include media-breakpoint-up(lg) {
             display: flex;
             align-items: flex-start;
