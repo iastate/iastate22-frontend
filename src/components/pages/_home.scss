@@ -837,7 +837,7 @@
     justify-content: center;
   }
 }
-.home-events__headline {
+.home-events-news__headline {
   text-align: center;
   @extend %h2-yellow-border;
   width: 60%;
@@ -864,8 +864,8 @@
   }
 }
 
-.home-events__event-list,
-.home-events__news-list,
+.home-events-news__event-list,
+.home-events-news__news-list,
 .home-news-events-grid-wrap {
   position: relative;
   &:before {
@@ -928,8 +928,8 @@
   }
 }
 
-.home-events__event-list,
-.home-events__news-list {
+.home-events-news__event-list,
+.home-events-news__news-list {
   @include media-breakpoint-up(lg) {
     position: absolute;
     left: 60%;
@@ -964,7 +964,7 @@
   }
 }
 
-.home-events__event-list {
+.home-events-news__event-list {
   html:not(.js) & {
     @include media-breakpoint-up(lg) {
       padding-right: rem(15);
@@ -999,7 +999,7 @@
   }
 }
 
-.home-events__news-list {
+.home-events-news__news-list {
   margin-top: rem(105);
   @include media-breakpoint-up(lg) {
     margin-top: rem(65);

@@ -95,8 +95,8 @@ export class NewsAndEvents {
   constructor(element: HTMLElement) {
     if (!!element) {
       this.element = element;
-      this.eventsList = this.element.querySelectorAll(".home-events__event-list ul li");
-      this.newsList = this.element.querySelectorAll(".home-events__news-list ul li");
+      this.eventsList = this.element.querySelectorAll(".home-events-news__event-list ul li");
+      this.newsList = this.element.querySelectorAll(".home-events-news__news-list ul li");
       this.init();
     }
   }

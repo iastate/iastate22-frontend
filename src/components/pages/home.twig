@@ -137,8 +137,8 @@
 </div>
 
 <div class="home-events-news">
-  <h2 class="home-events__headline">{{ events_news.headline }}</h2>
-  <div class="home-events__event-list">
+  <h2 class="home-events-news__headline">{{ events_news.headline }}</h2>
+  <div class="home-events-news__event-list">
     <ul>
       {% for event in events_news.event_list %}
       <li>
@@ -152,7 +152,7 @@
     <a class="home-link-button" href="{{events_news.all_events_link.url}}"><span class="home-link-button__arrow-wrap"><span class="arrow"></span></span>{{events_news.all_events_link.title}}</a>
   </div>
 
-  <div class="home-events__news-list">
+  <div class="home-events-news__news-list">
     <ul>
       {% for news in events_news.news_list %}
       <li data-image="{{ news.imageSrc }}">
