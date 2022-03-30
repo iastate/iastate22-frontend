@@ -253,6 +253,18 @@
       @include media-breakpoint-up(xl) {
         color: $iastate-red;
       }
+      .home & {
+        @include media-breakpoint-up(xl) {
+          color: $iastate-gold;
+        }
+      }
+      .headroom--not-top & {
+        .home & {
+          @include media-breakpoint-up(xl) {
+            color: $iastate-maroon;
+          }
+        }
+      }
     }
   }
 }
@@ -314,6 +326,18 @@
   &:hover {
     @include media-breakpoint-up(xl) {
       color: $iastate-red;
+    }
+    .home & {
+      @include media-breakpoint-up(xl) {
+        color: $iastate-gold;
+      }
+    }
+    .headroom--not-top & {
+      .home & {
+        @include media-breakpoint-up(xl) {
+          color: $iastate-maroon;
+        }
+      }
     }
   }
 }
@@ -621,13 +645,32 @@
             background-color: transparent;
             padding-right: 0;
           }
+          .home & {
+            @include media-breakpoint-up(xl) {
+              color: $iastate-gold;
+            }
+          }
+          .headroom--not-top & {
+            .home & {
+              @include media-breakpoint-up(xl) {
+                color: $iastate-maroon;
+              }
+            }
+          }
           &:after {
             @include media-breakpoint-up(xl) {
               border-color: $iastate-maroon;
             }
             .home & {
               @include media-breakpoint-up(xl) {
-                border-color: $white;
+                border-color: $iastate-gold;
+              }
+            }
+            .headroom--not-top & {
+              .home & {
+                @include media-breakpoint-up(xl) {
+                  border-color: $iastate-maroon;
+                }
               }
             }
           }
