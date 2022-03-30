@@ -2,7 +2,7 @@
   document.body.classList.add("home");
 </script>
 
-<div class="home-hero{% if home_annoucenemt_alert %} home-hero--with-announcement{% endif %}">
+<div class="home-hero{% if home_announcement_alert %} home-hero--with-announcement{% endif %}">
   <div class="home-hero__media">
 		<img class="home-hero__media-mobile" src="{{ hero.image_mobile|path }}" alt="" />
     <img class="home-hero__media-desktop" src="{{ hero.image_desktop|path }}" alt="" />
@@ -25,8 +25,8 @@
   </button>
 </div>
 
-{% if home_annoucenemt_alert %}
-  {% include "@home-announcement--alert" with home_annoucenemt_alert %}
+{% if home_announcement_alert %}
+  {% include "@home-announcement--alert" with home_announcement_alert %}
 {% endif %}
 
 <div class="home-community">
