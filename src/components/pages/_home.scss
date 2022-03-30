@@ -102,8 +102,8 @@
   @include media-breakpoint-up(xl) {
     max-width: rem(1400);
     transform: translateY(-40%);
-    width: 90%;
-    left: -5%;
+    width: 92%;
+    left: -2%;
   }
   svg {
     width: 100%;
@@ -131,6 +131,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (prefers-reduced-motion: reduce) {
+    display: none;
+    visibility: hidden;
+  }
   .home-hero__animation-control-line {
     height: rem(25);
     border-left: rem(6) solid $white;
@@ -154,6 +158,7 @@
       }
     }
   }
+
   .home-hero--with-announcement & {
     bottom: rem(60);
   }
@@ -180,19 +185,12 @@
 .home-community__content-wrap {
   margin: 0 auto;
   max-width: rem(842);
+  text-align: center;
 }
 
 .home-community__label {
-  font-family: $nimbus-sans-bold;
-  font-weight: 700;
-  color: $iastate-red;
-  font-size: rem(21);
-  line-height: (30 / 21);
-  text-align: center;
   position: relative;
   @include media-breakpoint-up(lg) {
-    font-size: rem(22);
-    line-height: (31 / 22);
     margin-bottom: rem(13);
   }
   &:before {
@@ -208,15 +206,25 @@
       margin-left: rem(-322);
     }
   }
-  p {
+  h2 {
     background-color: $white;
     position: relative;
     display: inline-block;
     padding: 0 rem(20);
+    font-family: $nimbus-sans-bold;
+    font-weight: 700;
+    color: $iastate-red;
+    font-size: rem(21);
+    line-height: (30 / 21);
+    @include media-breakpoint-up(lg) {
+      font-size: rem(22);
+      line-height: (31 / 22);
+    }
   }
 }
 
 .home-community__headline {
+  @extend %h2;
   text-align: center;
   font-size: rem(37);
   line-height: (48 / 37);
@@ -733,11 +741,12 @@
     align-items: center;
     max-width: rem(432);
     top: rem(40);
+    padding: rem(26) rem(36);
   }
   @include media-breakpoint-up(xl) {
     top: rem(81);
   }
-  .fa-location-dot {
+  .fa-iastate22-map-pin {
     color: $iastate-gold;
     position: absolute;
     font-size: rem(48);
@@ -745,6 +754,7 @@
     @include media-breakpoint-up(lg) {
       position: relative;
       top: 0;
+      font-size: rem(32);
     }
   }
 }

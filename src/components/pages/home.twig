@@ -31,8 +31,8 @@
 
 <div class="home-community">
   <div class="home-community__content-wrap">
-    <div class="home-community__label"><p>{{ community.label }}</p></div>
-    <h2 class="home-community__headline">{{ community.headline}}</h2>
+    <div class="home-community__label"><h2>{{ community.label }}</h2></div>
+    <h3 class="home-community__headline">{{ community.headline}}</h3>
     <p class="home-community__body">{{ community.body}}</p>
   </div>
   <div class="home-community__callout">
@@ -77,7 +77,7 @@
   </div>
   <div class="iastate22-modal iastate22-modal--video" id="{{ home_blockquote.modal.id }}" aria-hidden="false">
     <div class="iastate22-modal__overlay" tabindex="-1" data-micromodal-close>
-      <div class="iastate22-modal__container{% if home_blockquote.modal.image %} iastate22-modal__container-with-media{% endif %}" id="{{ home_blockquote.modal.id }}-content" role="dialog" aria-modal="true" aria-labelledby="{{ home_blockquote.modal.id }}-title">
+      <div class="iastate22-modal__container{% if home_blockquote.modal.image %} iastate22-modal__container-with-media{% endif %}" id="{{ home_blockquote.modal.id }}-content" role="dialog" aria-modal="true" aria-label="{{ home_blockquote.modal.id }}-title">
         <button class="iastate22-modal__close" aria-label="Close modal" data-micromodal-close><span class="visible-for-screen-readers">Close YouTube Video: {{ home_blockquote.modal.video.title }}</span><i class="fa-light fa-xmark" aria-hidden="true"></i></button>
         <div class="iastate22-modal__media-wrap">
           <div class="iastate22-modal__media" data-vid="{{ home_blockquote.modal.video.video_id }}"></div>
@@ -135,7 +135,7 @@
     <img src="{{ location.image|path }}" alt="" />
   </div>
   <div class="home-location__caption">
-    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+    <span class="fak fa-iastate22-map-pin" aria-hidden="true"></span>
     <div class="home-location__caption-text"><p>{{ location.caption.text }} <a href="{{ location.caption.link.url }}">{{ location.caption.link.text }}</a></p></div>
   </div>
 </div>
@@ -184,7 +184,7 @@
       </li>
       <li>
         <a href="#" target="_blank">
-          <i class="fak fa-id5-instagram" aria-hidden="true"></i>
+          <i class="fak fa-iastate22-instagram" aria-hidden="true"></i>
           <span class="visible-for-screen-readers">Instagram</span>
         </a>
       </li>
