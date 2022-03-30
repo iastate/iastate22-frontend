@@ -159,6 +159,7 @@
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
       opacity: 0;
+      visibility: hidden;
     }
   }
   a {
