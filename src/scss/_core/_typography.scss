@@ -222,14 +222,7 @@ h2,
   margin-bottom: rem(22);
   position: relative;
   .text-content & {
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      width: rem(50);
-      border-bottom: rem(2) solid $iastate-gold;
-      left: 0;
-    }
+    @extend %h2-yellow-border;
   }
   & + h3,
   & + .h3,

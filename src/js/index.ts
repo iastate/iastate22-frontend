@@ -2,16 +2,17 @@
  * Modules
  */
 import focusWithin from "focus-within";
-import * as objectFitImages from "object-fit-images";
+import objectFitImages from "object-fit-images";
 import { silcCoreInit } from "silc-core";
 import { silcAccordionInit } from "silc-accordion";
-import Modal from "./components/modal";
+import modalsInit from "./components/modal";
 import siteHeaderInit from "./components/site-header";
 import cardsInit from "./components/card";
 import subnavInit from "./components/subnav";
 import privacyConsentInit from "../components/privacy-consent/privacy-consent";
 import accordionsInit from "./components/accordion";
 import videoEmbedInit from "./components/video-embed";
+import homeInit from "./pages/home";
 
 /**
  * Init
@@ -21,12 +22,13 @@ objectFitImages();
 silcCoreInit();
 silcAccordionInit();
 siteHeaderInit();
-Modal.init();
+modalsInit();
 cardsInit();
 privacyConsentInit();
 accordionsInit();
 subnavInit();
 videoEmbedInit();
+homeInit();
 
 /**
  * Example VueJS app

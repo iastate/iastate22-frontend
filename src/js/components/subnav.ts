@@ -1,4 +1,4 @@
-import * as _debounce from "lodash.debounce";
+import _debounce from "lodash.debounce";
 
 const mobileMQ = window.matchMedia("(max-width: 992px)");
 
