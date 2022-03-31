@@ -9,7 +9,7 @@
   font-size: rem(16);
   line-height: (26 / 18);
   text-decoration: underline;
-  text-decoration-color: transparent;
+  text-decoration-color: $iastate-maroon;
   position: relative;
   transition: 0.2s text-decoration-color ease-in-out;
   .arrow {
@@ -18,7 +18,7 @@
     top: rem(10);
   }
   &:hover {
-    text-decoration-color: $iastate-maroon;
+    text-decoration-color: transparent;
     .arrow {
       opacity: 1;
     }

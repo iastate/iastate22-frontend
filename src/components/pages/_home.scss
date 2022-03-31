@@ -663,15 +663,8 @@
   ul {
     margin-top: rem(14);
     li {
-      margin-bottom: rem(3);
       a {
-        color: $iastate-maroon;
-        font-family: $nimbus-sans-bold;
-        font-weight: 700;
-        transition: 0.2s color ease-in-out;
-        &:hover {
-          color: $iastate-red;
-        }
+        margin-bottom: 0;
       }
     }
   }

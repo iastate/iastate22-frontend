@@ -97,7 +97,7 @@
       <h3 class="home-academics__explore-label">{{ academics.explore.label}}</h3>
       <ul>
         {% for link in academics.explore.links %}
-          <li><a href="{{link.url}}">{{link.title}}</a></li>
+          <li><a class="link-tertiary" href="{{link.url}}">{{link.title}}<span class="arrow"></span></a></li>
         {% endfor %}
       </ul>
     </div>
