@@ -1,9 +1,14 @@
 export default class AccessibilityUtilities {
   private static userTabbing: boolean = false;
 
+  public static get focusableChildSelector(): string {
+    return `a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])`;
+  }
+
   public static init() {
     this.handleKeydown();
     this.handleMouseDown();
+    this.disableTabbingWithinHiddenElements();
   }
 
   private static handleKeydown() {
@@ -60,6 +65,42 @@ export default class AccessibilityUtilities {
       anchor.parentElement.replaceChild(button, anchor);
       return button;
     }
+  }
+
+  /**
+   * Use a MutationObserver to watch for elements with aria-hidden or hidden attribute changes
+   * and deterministically update tabindex for focusable children of the target element.
+   */
+  private static disableTabbingWithinHiddenElements() {
+    const observer = new MutationObserver((mutations: MutationRecord[]) => {
+      for (let i = 0; i < mutations.length; i++) {
+        const mutation = mutations[i] as MutationRecord;
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName !== null &&
+          ["aria-hidden", "hidden"].indexOf(mutation.attributeName) !== -1 &&
+          mutation.target.nodeType === Node.ELEMENT_NODE
+        ) {
+          const isHidden =
+            (mutation.attributeName === "hidden" && mutation.oldValue === null) ||
+            (mutation.attributeName === "aria-hidden" && (mutation.oldValue === "false" || mutation.oldValue === null));
+          const target = mutation.target as HTMLElement;
+          const focusableChildren = target.querySelectorAll(this.focusableChildSelector) as NodeListOf<HTMLElement>;
+          for (let i = 0; i < focusableChildren.length; i++) {
+            const child = focusableChildren[i] as HTMLElement;
+            // Prevent unintentionally toggling tabindex for children of nested hidden elements
+            if (child.closest("[aria-hidden]") === target) {
+              child.tabIndex = isHidden ? -1 : 0;
+            }
+          }
+        }
+      }
+    });
+    observer.observe(document.body, {
+      subtree: true,
+      attributes: true,
+      attributeOldValue: true,
+    });
   }
 }
 
