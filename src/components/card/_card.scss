@@ -96,7 +96,7 @@
     margin: auto 0 rem(5);
     border: none;
     background-color: transparent;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       bottom: rem(30);
     }
     cursor: pointer;
@@ -117,7 +117,7 @@
     min-height: rem(210);
     display: flex;
     flex-direction: column;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       padding: rem(23);
       min-height: rem(239);
     }
@@ -161,7 +161,7 @@
     font-size: rem(18);
     line-height: (23 / 18);
     margin-bottom: rem(13);
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       font-size: rem(21);
       line-height: (29 / 21);
       margin-bottom: rem(23);
