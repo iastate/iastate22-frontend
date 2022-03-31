@@ -78,3 +78,31 @@ All images should be added to `src/images` which compiles to `build/images/*`.
 - [W3C Validation](https://validator.w3.org/)
 - Passes Accessibility check using WAVE and Google Lighthouse
 - Provides fallback of full content for non-JS users.
+
+## Page Wrapper and Overall Structure
+
+This structure below shows the overall wrappers and ordering needed to properly display the layout:
+
+```
+<body>
+  <a class="skip-link" href="#main-content">Skip To Main Content</a>
+  <div class="off-canvas">
+    <div class="max-bound">
+      {% include "@site-header" with header %}
+      <main id="main-content">
+        {{ yield }}
+      </main>
+      {% include "@site-footer" with footer %}
+    </div>
+  </div>
+  <!-- Scripts -->
+</body>
+```
+
+- The `.skip-link` link is provided for accessibility purposes
+- The `.off-canvas` div is in use to set `overflow-x: hidden;` on the whole page to prevent unwanted horizontal scrolling
+- Next is the `.max-bound` div, which provides a max-width, (and 100% width), centers the content and provides a background-color the the whole document
+- Next our main site header is added `{% include "@site-header" with header %}`
+- Then the `<main id="main-content">` is added which contains all of the page content `{{ yield }}`
+- After the closing `<main>` tag, the footer is added `{% include "@site-footer" with footer %}`
+- Kitchen sink pages have an additional tag `<div class="outer-pad">` directly after `<main>`, which provides left and right padding for the page
