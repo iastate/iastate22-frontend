@@ -627,7 +627,6 @@
     }
     &:nth-child(2),
     &:last-child {
-      margin-bottom: 0;
       @include media-breakpoint-up(md) {
         width: calc(50% - #{rem(5)});
       }
@@ -646,12 +645,14 @@
         }
       }
     }
+
     &:nth-child(2) {
       @include media-breakpoint-up(md) {
         margin-right: rem(5);
       }
     }
     &:last-child {
+      margin-bottom: 0;
       @include media-breakpoint-up(md) {
         margin-left: rem(5);
       }
