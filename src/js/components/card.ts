@@ -16,6 +16,8 @@ export class Card {
   protected cta: HTMLAnchorElement;
   protected options: CardOptions;
   protected clickable: boolean = false;
+  protected clickHandler: (this: HTMLElement, ev: MouseEvent) => any;
+
   constructor(element: HTMLElement, options: CardOptions = defaultOptions) {
     if (element) {
       this.element = element;
@@ -31,6 +33,7 @@ export class Card {
       this.init();
     }
   }
+
   get href(): string {
     if (!!this.titleLink) {
       return this.titleLink.href;
@@ -39,6 +42,7 @@ export class Card {
     }
     return "";
   }
+
   get target(): string {
     if (!!this.element.dataset.target) {
       return this.element.dataset.target;
@@ -49,17 +53,19 @@ export class Card {
     }
     return "";
   }
+
   init() {
     if (this.clickable) {
       this.makeEntireCardClickable();
     }
   }
+
   /**
    * Force the root card div to act like an anchor tag
    */
   makeEntireCardClickable() {
     this.element.classList.add("clickable");
-    this.element.addEventListener("click", (event) => {
+    this.clickHandler = (event) => {
       const target = event.target as HTMLElement;
       // Prevent redirect from occuring if a child link was clicked
       if (target.tagName !== "A") {
@@ -70,15 +76,25 @@ export class Card {
           window.location.href = this.href;
         }
       }
-    });
+    };
+    this.element.addEventListener("click", this.clickHandler);
+  }
+
+  /**
+   * Destroy instantiated card instance
+   */
+  public destroy() {
+    this.element.classList.remove("clickable");
+    this.element.removeEventListener("click", this.clickHandler);
   }
 }
 
 export default function cardsInit() {
   const cards = document.querySelectorAll(".iastate22-card") as NodeListOf<HTMLElement>;
   for (let i = 0; i < cards.length; i++) {
-    new Card(cards[i], {
+    const card = new Card(cards[i], {
       clickable: true,
     });
+    card.destroy();
   }
 }
