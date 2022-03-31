@@ -69,9 +69,20 @@ export class FeaturedStoryCarousel {
   private handleResize() {
     const resize = () => {
       this.convertToCarouselOnMobile();
+      this.makeCardClickableOnDesktop();
     };
     window.addEventListener("resize", debounce(resize, 100));
     resize();
+  }
+
+  private makeCardClickableOnDesktop() {
+    if (!mobileMQ.matches) {
+      const card = document.querySelectorAll(".iastate22-card--profile-with-modal") as NodeListOf<HTMLElement>;
+      for (let i = 0; i < 3; i++) {
+        console.log(card[i]);
+        card[i].setAttribute("data-clickable", "true");
+      }
+    }
   }
 
   private convertToCarouselOnMobile() {
