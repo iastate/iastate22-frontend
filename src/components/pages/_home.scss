@@ -500,7 +500,6 @@
       line-height: (57 / 41);
     }
     &:after {
-      bottom: rem(-116);
       @include media-breakpoint-up(lg) {
         bottom: rem(-70);
       }
@@ -509,7 +508,6 @@
   .iastate22-blockquote__author {
     width: 67%;
     padding-right: 0;
-    margin-top: rem(55);
     @include media-breakpoint-up(lg) {
       margin-top: rem(10);
     }
