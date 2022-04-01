@@ -185,8 +185,13 @@
 
 // Home Community Section
 .home-community {
-  @extend %outer-pad-x;
+  padding-left: rem(36);
+  padding-right: rem(36);
   padding-top: rem(50);
+  @include media-breakpoint-up(md) {
+    padding-left: rem(53);
+    padding-right: rem(53);
+  }
   @include media-breakpoint-up(xl) {
     padding-right: rem(110);
     padding-left: rem(80);
@@ -341,7 +346,7 @@
     margin-top: 0;
     flex: 0 1 auto;
     order: initial;
-    width: 80%;
+    width: 87%;
     right: rem(-12);
     top: rem(14);
   }
@@ -370,13 +375,13 @@
     order: 1;
     z-index: 2;
     margin-bottom: rem(-100);
-    width: 96%;
+    width: 87%;
     left: rem(30);
-    top: rem(-20);
+    top: rem(22);
   }
   @include media-breakpoint-up(lg) {
-    margin-bottom: rem(-55);
-    margin-top: rem(-30);
+    margin-bottom: rem(-40);
+    margin-top: rem(155);
     top: initial;
   }
   @include media-breakpoint-up(xl) {
@@ -413,21 +418,20 @@
     justify-content: center;
     padding: rem(30) rem(50);
     left: rem(-20);
+    top: rem(-12);
   }
   @include media-breakpoint-up(lg) {
-    left: rem(-70);
-    margin-top: rem(-30);
-    z-index: 2;
-  }
-  @include media-breakpoint-up(xl) {
     position: absolute;
     left: rem(-30);
-    z-index: 2;
-    margin-top: rem(130);
+    margin-top: 36%;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: rem(180);
   }
   @include media-breakpoint-up(xxl) {
     left: initial;
-    right: rem(510);
+    right: rem(490);
+    margin-top: rem(240);
   }
 
   &:before {
