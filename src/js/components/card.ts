@@ -58,6 +58,10 @@ export class Card {
     this.makeEntireCardClickable();
   }
 
+  /**
+   * Creates a MutationObserver to automatically toggle the
+   * clickable state when the data-clickable attribute changes
+   */
   createMutationObserver() {
     const observer = new MutationObserver((mutations: MutationRecord[]) => {
       for (let i = 0; i < mutations.length; i++) {
@@ -83,6 +87,10 @@ export class Card {
    * Force the root card div to act like an anchor tag
    */
   makeEntireCardClickable() {
+    // Initially add clickable class
+    if (this.clickable) {
+      this.element.classList.add("clickable");
+    }
     this.element.addEventListener("click", (event) => {
       if (this.clickable) {
         const target = event.target as HTMLElement;
