@@ -186,9 +186,7 @@
 // Home Community Section
 .home-community {
   @extend %outer-pad-x;
-  @include media-breakpoint-up(lg) {
-    padding-top: rem(50);
-  }
+  padding-top: rem(50);
   @include media-breakpoint-up(xl) {
     padding-right: rem(110);
     padding-left: rem(80);
@@ -250,6 +248,9 @@
   margin-top: rem(22);
   margin-bottom: 0;
   padding-bottom: 0;
+  @include media-breakpoint-up(md) {
+    margin-top: rem(45);
+  }
   @include media-breakpoint-up(lg) {
     font-size: rem(53);
     line-height: (66 / 53);
@@ -263,6 +264,10 @@
   color: $iastate-maroon;
   line-height: (29 / 18);
   margin-top: rem(15);
+  @include media-breakpoint-up(md) {
+    font-size: rem(18);
+    line-height: (29 / 18);
+  }
   @include media-breakpoint-up(lg) {
     font-size: rem(21);
     line-height: (33 / 21);
