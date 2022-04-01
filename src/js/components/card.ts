@@ -86,13 +86,21 @@ export class Card {
     this.element.addEventListener("click", (event) => {
       if (this.clickable) {
         const target = event.target as HTMLElement;
-        // Prevent redirect from occuring if a child link was clicked
-        if (target.tagName !== "A") {
-          if (this.target === "_blank") {
-            const newTab = window.open();
-            newTab.location.href = this.href;
-          } else {
-            window.location.href = this.href;
+        // If the cta is a link, redirect to the link's href. Otherwise
+        // click the cta
+        if (!!this.href) {
+          // Prevent redirect from occuring if a child link was clicked
+          if (target.tagName !== "A") {
+            if (this.target === "_blank") {
+              const newTab = window.open();
+              newTab.location.href = this.href;
+            } else {
+              window.location.href = this.href;
+            }
+          }
+        } else {
+          if (!target.closest(`.${this.options.ctaClass}`)) {
+            this.cta.click();
           }
         }
       }
