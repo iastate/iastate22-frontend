@@ -37,8 +37,9 @@
   }
   &:before {
     content: "";
-    background-color: $iastate-gold;
+    background-color: transparent;
     position: absolute;
+    border: rem(8) solid $iastate-gold;
     top: rem(-8);
     left: rem(-8);
     right: rem(-8);

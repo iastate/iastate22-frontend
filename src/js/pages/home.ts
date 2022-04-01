@@ -76,11 +76,12 @@ export class FeaturedStoryCarousel {
   }
 
   private makeCardClickableOnDesktop() {
-    if (!mobileMQ.matches) {
-      const card = document.querySelectorAll(".iastate22-card--profile-with-modal") as NodeListOf<HTMLElement>;
-      for (let i = 0; i < 3; i++) {
-        console.log(card[i]);
+    const card = document.querySelectorAll(".iastate22-card--profile-with-modal") as NodeListOf<HTMLElement>;
+    for (let i = 0; i < 3; i++) {
+      if (!mobileMQ.matches) {
         card[i].setAttribute("data-clickable", "true");
+      } else {
+        card[i].setAttribute("data-clickable", "false");
       }
     }
   }
