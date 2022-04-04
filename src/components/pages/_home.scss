@@ -59,6 +59,7 @@
   }
   @include media-breakpoint-up(xxl) {
     left: rem(200);
+    top: 55%;
   }
   .iastate22-button {
     margin-top: rem(30);
@@ -116,7 +117,8 @@
     left: -2%;
   }
   @include media-breakpoint-up(xxl) {
-    left: rem(200);
+    left: rem(112);
+    transform: translateY(-45%);
   }
   svg {
     width: 100%;
@@ -200,6 +202,7 @@
   }
   @include media-breakpoint-up(xxl) {
     padding-right: rem(157);
+    padding-top: rem(80);
   }
   .iastate22-button {
     white-space: nowrap;
