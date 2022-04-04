@@ -3,8 +3,9 @@
   max-height: 95vh;
   min-height: rem(667);
   @include media-breakpoint-up(md) {
-    min-height: 100vh;
-    max-height: none;
+    min-height: rem(800);
+    height: 100vh;
+    max-height: rem(1500);
   }
   @include media-breakpoint-up(xxl) {
     margin-left: rem(-200);
@@ -17,8 +18,9 @@
   max-height: 95vh;
   min-height: rem(667);
   @include media-breakpoint-up(md) {
-    min-height: 100vh;
-    max-height: none;
+    min-height: rem(800);
+    height: 100vh;
+    max-height: rem(1500);
   }
 
   &:before {
