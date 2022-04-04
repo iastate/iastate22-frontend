@@ -595,8 +595,10 @@
         @extend %iastate22-button--reverse;
         @include media-breakpoint-up(md) {
           display: block;
+          max-width: rem(676);
         }
         @include media-breakpoint-up(xl) {
+          max-width: none;
           padding: 0;
           background-color: transparent;
           border: none;
@@ -1004,6 +1006,10 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
 }
 
 .site-header__mega-menu-utility {
+  max-width: rem(676);
+  @include media-breakpoint-up(xl) {
+    max-width: none;
+  }
   ul {
     column-count: 2;
     li {
