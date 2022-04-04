@@ -401,7 +401,7 @@
   overflow: hidden;
   pointer-events: none;
   position: relative;
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     background-color: transparent;
   }
 }
@@ -580,6 +580,7 @@
             line-height: (26 / 16);
           }
         }
+
         .home & {
           @include media-breakpoint-up(xl) {
             color: $white;
@@ -719,6 +720,11 @@
           opacity: 1;
           transform: none;
           visibility: visible;
+          height: 100vh;
+          z-index: 2;
+          @include media-breakpoint-up(xl) {
+            height: auto;
+          }
         }
         &.two-column-dropdown {
           @include media-breakpoint-up(xl) {
@@ -802,6 +808,7 @@
     text-decoration-color: $white;
     text-decoration-thickness: rem(1);
     text-underline-offset: rem(1);
+    margin: 0;
     @include media-breakpoint-up(xl) {
       color: $iastate-maroon;
       line-height: (34 / 18);
@@ -812,6 +819,19 @@
     @include media-breakpoint-up(xxl) {
       font-size: rem(18);
       line-height: (26 / 18);
+    }
+    .arrow {
+      background-color: $white;
+      @include media-breakpoint-up(xl) {
+        background-color: $iastate-maroon;
+      }
+      &:before,
+      &:after {
+        background-color: $white;
+        @include media-breakpoint-up(xl) {
+          background-color: $iastate-maroon;
+        }
+      }
     }
   }
 }
