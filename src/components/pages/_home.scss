@@ -1407,6 +1407,7 @@
   padding-top: rem(40);
   @include media-breakpoint-up(md) {
     margin-bottom: rem(50);
+    padding-top: rem(50);
   }
   @include media-breakpoint-up(lg) {
     padding-top: rem(70);
