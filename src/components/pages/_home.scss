@@ -1704,7 +1704,7 @@
 .home-ctas__headline-button-wrap {
   order: 2;
   margin-top: rem(70);
-  margin-bottom: rem(20);
+  margin-bottom: rem(70);
   @include media-breakpoint-up(md) {
     order: 3;
     flex: 0 1 auto;
@@ -1714,6 +1714,7 @@
   }
   @include media-breakpoint-up(lg) {
     align-items: flex-end;
+    margin-bottom: rem(20);
   }
   @include media-breakpoint-up(xl) {
     margin-top: rem(100);
