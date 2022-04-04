@@ -593,6 +593,9 @@
       > a {
         @extend %iastate22-button;
         @extend %iastate22-button--reverse;
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
         @include media-breakpoint-up(xl) {
           padding: 0;
           background-color: transparent;
@@ -735,7 +738,7 @@
         z-index: 1;
         @include media-breakpoint-up(xl) {
           background-color: $white;
-          margin-top: rem(23);
+          margin-top: rem(22);
           padding: rem(40) rem(52) rem(5) rem(52);
           top: rem(11);
           right: initial;
