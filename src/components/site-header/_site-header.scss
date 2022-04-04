@@ -116,8 +116,6 @@
       content: "";
       position: absolute;
       top: 0;
-      // left: -50vw;
-      // width: 150vw;
       left: rem(-200);
       right: rem(-200);
       background: transparent linear-gradient(180deg, #000000 0%, #00000000 100%) 0% 0% no-repeat padding-box;
@@ -136,8 +134,10 @@
         background-color: transparent;
       }
       &:after {
+        display: none;
         @include media-breakpoint-up(xxl) {
           content: "";
+          display: block;
           position: absolute;
           top: 0;
           bottom: rem(-1);
