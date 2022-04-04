@@ -198,7 +198,7 @@ export class SiteHeader {
           <span class="site-header__mega-menu-main-nav-dropdown-back-label">Back</span>
           <span class="visible-for-screen-readers"> to top level of menu</span>
         `;
-        parentLinkClone.classList.add("site-header__mega-menu-main-nav-dropdown-parent");
+        parentLinkClone.classList.add("site-header__mega-menu-main-nav-dropdown-parent", "link-secondary");
         parentLinkCloneArrow.classList.add("arrow");
         parentLinkClone.textContent = Array.prototype.filter
           .call(parentLink.childNodes, (el) => el.nodeType === Node.TEXT_NODE)

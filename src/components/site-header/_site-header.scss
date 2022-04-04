@@ -707,6 +707,18 @@
               top: rem(10);
               border-color: $iastate-maroon;
             }
+            .home & {
+              @include media-breakpoint-up(xl) {
+                border-color: $iastate-gold;
+              }
+            }
+            .headroom--not-top & {
+              .home & {
+                @include media-breakpoint-up(xl) {
+                  border-color: $iastate-maroon;
+                }
+              }
+            }
           }
         }
       }
@@ -723,7 +735,7 @@
         z-index: 1;
         @include media-breakpoint-up(xl) {
           background-color: $white;
-          margin-top: rem(24);
+          margin-top: rem(23);
           padding: rem(40) rem(52) rem(5) rem(52);
           top: rem(11);
           right: initial;
@@ -944,10 +956,10 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   }
   .arrow {
     background-color: $white;
-    top: rem(14);
+    top: rem(17);
     @include media-breakpoint-up(xl) {
       background-color: $iastate-maroon;
-      top: rem(12);
+      top: rem(14);
     }
     &:before,
     &:after {
