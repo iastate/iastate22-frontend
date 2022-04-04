@@ -1,6 +1,5 @@
 import MicroModal from "micromodal";
 import YoutubePlayer from "youtube-player";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import AccessibilityUtilities from "../utilities/accessibility";
 
 export class Modal {
@@ -66,8 +65,6 @@ export class Modal {
               composed: false,
             });
 
-            disableBodyScroll(modal.querySelector(".iastate22-modal__container"));
-
             window.dispatchEvent(event);
 
             if (this.isVideo) {
@@ -85,8 +82,6 @@ export class Modal {
               cancelable: true,
               composed: false,
             });
-
-            enableBodyScroll(modal.querySelector(".iastate22-modal__container"));
 
             window.dispatchEvent(event);
 
