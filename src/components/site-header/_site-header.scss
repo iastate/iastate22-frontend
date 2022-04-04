@@ -313,17 +313,9 @@
     transition: 0.2s color ease-in-out;
     cursor: pointer;
   }
-  .home & {
-    @include media-breakpoint-up(xl) {
-      color: $white;
-    }
-  }
-  .headroom--not-top & {
-    .home & {
-      @include media-breakpoint-up(xl) {
-        color: $iastate-red;
-      }
-    }
+  &[aria-expanded="true"] {
+    opacity: 0;
+    visibility: hidden;
   }
   &:hover {
     @include media-breakpoint-up(xl) {
@@ -1001,7 +993,6 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   }
 
   button[type="submit"] {
-    background-color: $white;
     border: none;
     font-size: rem(25);
     position: absolute;
@@ -1016,7 +1007,6 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     line-height: 1.3;
     &:hover {
       color: $iastate-maroon;
-      background-color: $white;
       padding: 0 rem(7);
     }
   }
@@ -1083,7 +1073,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
 .site-header__search-close {
   z-index: 11;
   position: relative;
-  background-color: $white;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: rem(26);
