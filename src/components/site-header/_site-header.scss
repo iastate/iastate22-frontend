@@ -100,6 +100,7 @@
   @include media-breakpoint-up(xxl) {
     padding: 0 rem(60) 0;
     position: relative;
+    background-color: transparent;
   }
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
@@ -115,9 +116,10 @@
       content: "";
       position: absolute;
       top: 0;
-      left: -50vw;
-      width: 150vw;
-      right: 0;
+      // left: -50vw;
+      // width: 150vw;
+      left: rem(-200);
+      right: rem(-200);
       background: transparent linear-gradient(180deg, #000000 0%, #00000000 100%) 0% 0% no-repeat padding-box;
       height: rem(165);
       opacity: 1;
@@ -130,8 +132,25 @@
     .home & {
       background-color: rgba($white, 0.95);
       border-bottom: rem(1) solid $grey4;
+      @include media-breakpoint-up(xxl) {
+        background-color: transparent;
+      }
       &:after {
-        display: none;
+        @include media-breakpoint-up(xxl) {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: rem(-1);
+          left: -50vw;
+          width: 150vw;
+          height: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: -1;
+          background: rgba($white, 0.95);
+          border-bottom: rem(1) solid $grey4;
+          pointer-events: none;
+        }
       }
     }
   }
@@ -316,6 +335,14 @@
   &[aria-expanded="true"] {
     opacity: 0;
     visibility: hidden;
+  }
+  .home & {
+    color: $white;
+  }
+  .headroom--not-top & {
+    .home & {
+      color: $iastate-red;
+    }
   }
   &:hover {
     @include media-breakpoint-up(xl) {
