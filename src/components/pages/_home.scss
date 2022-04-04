@@ -1514,14 +1514,15 @@
     margin-top: rem(40);
   }
   @include media-breakpoint-up(lg) {
-    margin-bottom: rem(-80);
+    margin-bottom: rem(-130);
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-52);
     margin-top: rem(90);
+    margin-bottom: rem(-140);
   }
   @include media-breakpoint-up(xxl) {
-    margin-bottom: rem(-150);
+    margin-bottom: rem(-180);
   }
 }
 
@@ -1614,7 +1615,7 @@
   flex-direction: column;
   padding-bottom: rem(47);
   position: relative;
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-end;
@@ -1681,6 +1682,7 @@
           @extend %iastate22-button--reverse;
           @include media-breakpoint-up(md) {
             min-width: rem(304);
+            text-align: center;
           }
         }
       }
@@ -1740,17 +1742,17 @@
     order: 1;
     margin: 0;
     flex: 0 1 auto;
-    width: 50%;
     position: relative;
     top: rem(100);
-    left: rem(-26);
+    width: 50%;
+    left: rem(-27);
   }
-  @include media-breakpoint-up(lg) {
-    left: rem(-50);
+  @include media-breakpoint-up(xl) {
+    width: 47%;
+    left: rem(-22);
   }
-  @include media-breakpoint-up(lg) {
-    width: 43%;
-    left: 0;
+  @include media-breakpoint-up(xxl) {
+    width: 45%;
   }
   &:before {
     padding-top: 62.43%;
@@ -1768,10 +1770,11 @@
     @include media-breakpoint-up(lg) {
       top: 0;
       left: rem(27);
-    }
-    @include media-breakpoint-up(lg) {
       width: 50%;
-      margin-left: rem(84);
+      margin: 0;
+    }
+    @include media-breakpoint-up(xxl) {
+      left: rem(59);
     }
     &:before {
       padding-top: 72.49%;
