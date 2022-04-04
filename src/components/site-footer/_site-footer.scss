@@ -368,6 +368,7 @@
   ul {
     @include media-breakpoint-up(md) {
       column-count: 2;
+      column-gap: 0;
     }
     @include media-breakpoint-up(xl) {
       column-count: 1;
