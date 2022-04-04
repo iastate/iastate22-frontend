@@ -1562,6 +1562,12 @@
   @include media-breakpoint-up(md) {
     margin: 0;
   }
+  .home-link-button {
+    justify-content: center;
+    @include media-breakpoint-up(xl) {
+      justify-content: flex-start;
+    }
+  }
 }
 
 .home-resources__image {
@@ -1774,7 +1780,7 @@
       margin: 0;
     }
     @include media-breakpoint-up(xxl) {
-      left: rem(59);
+      left: rem(84);
     }
     &:before {
       padding-top: 72.49%;
@@ -1832,7 +1838,7 @@
   font-family: $nimbus-sans-bold;
   font-weight: 700;
   font-size: rem(16);
-  line-height: (26 / 16);
+  line-height: (23 / 16);
   text-decoration: none;
   .home-link-button__arrow-wrap {
     border: rem(2) solid $iastate-maroon;
