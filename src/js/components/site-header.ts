@@ -59,6 +59,7 @@ export class SiteHeader {
     this.initMobileNav();
     this.toggleVisibility();
     this.handleSearch();
+    this.handleInternetExplorer();
   }
 
   private handleResize() {
@@ -308,6 +309,16 @@ export class SiteHeader {
         this.searchFormDesktop.style.visibility = "hidden";
       }, 300);
     });
+  }
+
+  private handleInternetExplorer() {
+    var ua = window.navigator.userAgent;
+    var isIE = /MSIE|Trident/.test(ua);
+
+    if (isIE) {
+      //IE specific code goes here
+      alert("IE");
+    }
   }
 }
 
