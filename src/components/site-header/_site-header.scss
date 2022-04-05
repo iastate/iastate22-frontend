@@ -1072,6 +1072,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     line-height: 1.3;
     &:hover {
       color: $iastate-maroon;
+      background-color: transparent;
       padding: 0 rem(7);
     }
   }
