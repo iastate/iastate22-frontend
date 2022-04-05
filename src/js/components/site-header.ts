@@ -294,7 +294,6 @@ export class SiteHeader {
     this.searchTrigger.addEventListener("click", () => {
       this.searchTrigger.setAttribute("aria-expanded", "true");
       this.searchFormDesktop.setAttribute("aria-hidden", "false");
-      utilityNav.classList.add("site-header__utility-search-open");
       this.closeSearchButton.setAttribute("aria-hidden", "false");
       this.searchFormDesktop.style.visibility = "visible";
       setTimeout(() => {
@@ -304,7 +303,6 @@ export class SiteHeader {
     this.closeSearchButton.addEventListener("click", () => {
       this.searchTrigger.setAttribute("aria-expanded", "false");
       this.searchFormDesktop.setAttribute("aria-hidden", "true");
-      utilityNav.classList.remove("site-header__utility-search-open");
       this.closeSearchButton.setAttribute("aria-hidden", "true");
       setTimeout(() => {
         this.searchFormDesktop.style.visibility = "hidden";
