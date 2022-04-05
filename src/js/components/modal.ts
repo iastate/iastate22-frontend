@@ -71,7 +71,6 @@ export class Modal {
             window.dispatchEvent(event);
 
             if (this.isVideo) {
-              console.log("test");
               this.player.playVideo();
             }
           },
