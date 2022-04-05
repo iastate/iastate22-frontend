@@ -55,6 +55,7 @@ export class SiteHeader {
     this.handleOutsideClick();
     this.handleMobileBackButtonClicks();
     this.handleParentLinkClicks();
+    this.handleTransitionEnd();
     this.initMobileNav();
     this.toggleVisibility();
     this.handleSearch();
@@ -177,6 +178,16 @@ export class SiteHeader {
     });
   }
 
+  private handleTransitionEnd() {
+    this.element.addEventListener("transitionend", (event) => {
+      if (event.target === event.currentTarget) {
+        if (this.element.classList.contains("transitioning")) {
+          this.element.classList.remove("transitioning");
+        }
+      }
+    });
+  }
+
   private initMobileNav() {
     for (let i = 0; i < this.parentNavItems.length; i++) {
       const parentItem = this.parentNavItems[i];
@@ -204,10 +215,15 @@ export class SiteHeader {
           .call(parentLink.childNodes, (el) => el.nodeType === Node.TEXT_NODE)
           .map((el) => el.textContent)
           .join("");
-        parentLinkClone.href = parentLink.href;
+        parentLinkClone.href = parentLink.getAttribute("href");
         backButtonLI.appendChild(backButton);
-        clonedParentLI.appendChild(parentLinkClone);
-        parentLinkClone.appendChild(parentLinkCloneArrow);
+        if (parentLinkClone.getAttribute("href") !== "#") {
+          clonedParentLI.appendChild(parentLinkClone);
+          parentLinkClone.appendChild(parentLinkCloneArrow);
+        } else {
+          AccessibilityUtilities.convertAnchorToButton(parentLink);
+          clonedParentLI.classList.add("site-header__mega-menu-main-nav-dropdown-parent-wrap-no-href");
+        }
         childList.insertBefore(clonedParentLI, childList.firstElementChild);
         childList.insertBefore(backButtonLI, clonedParentLI);
       }
@@ -218,6 +234,7 @@ export class SiteHeader {
     if (mobileMQ.matches) {
       this.openButton.setAttribute("aria-expanded", `${this.visible}`);
       this.element.setAttribute("aria-hidden", `${!this.visible}`);
+      this.element.classList.add("transitioning");
       const siteHeaderContainer = document.querySelector(".site-header");
 
       for (let i = 0; i < this.focusableChildren.length; i++) {
@@ -235,7 +252,7 @@ export class SiteHeader {
   private toggleNavSectionVisibility(index: number, visible: boolean) {
     if (index !== null) {
       const parentItem = this.parentNavItems[index];
-      const parentLink = parentItem.querySelector("a") as HTMLAnchorElement;
+      const parentLink = parentItem.querySelector("button, a") as HTMLButtonElement | HTMLAnchorElement;
       const childList = parentItem.querySelector("ul") as HTMLElement;
       const focusableChildren = childList?.querySelectorAll("a, button") as NodeListOf<HTMLElement>;
       const secondaryMenu = document.querySelector(".site-header__mega-menu-secondary") as HTMLElement;

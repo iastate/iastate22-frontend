@@ -25,6 +25,28 @@
       ],
       "full_nav": [
         {
+          "title": "Test",
+          "url": "#",
+          "children": [
+            {
+              "title": "Sub Test",
+              "url": "https://www.iastate.edu/"
+            },
+            {
+              "title": "Sub Test 2",
+              "url": "https://www.iastate.edu/"
+            },
+            {
+              "title": "Sub Test 3",
+              "url": "https://www.iastate.edu/"
+            },
+            {
+              "title": "Sub Test 4",
+              "url": "https://www.iastate.edu/"
+            }
+          ]
+        },
+        {
           "title": "Academics",
           "url": "https://www.iastate.edu/",
           "children": [

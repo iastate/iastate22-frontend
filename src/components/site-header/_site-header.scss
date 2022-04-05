@@ -409,7 +409,6 @@
   }
   .js & {
     opacity: 0;
-    transition: 0.3s opacity ease-in-out, 0.3s visibility ease-in-out, 0.2s transform ease-in-out;
     visibility: hidden;
     &[aria-hidden="false"] {
       opacity: 1;
@@ -418,6 +417,9 @@
     @include media-breakpoint-up(xl) {
       opacity: 1;
       visibility: visible;
+    }
+    &.transitioning {
+      transition: 0.3s opacity ease-in-out, 0.3s visibility ease-in-out;
     }
   }
 }
@@ -590,9 +592,11 @@
           }
         }
       }
-      > a {
+      > a,
+      > button {
         @extend %iastate22-button;
         @extend %iastate22-button--reverse;
+        width: 100%;
         @include media-breakpoint-up(md) {
           display: block;
           max-width: rem(676);
@@ -741,7 +745,7 @@
         @include media-breakpoint-up(xl) {
           background-color: $white;
           margin-top: rem(22);
-          padding: rem(40) rem(52) rem(5) rem(52);
+          padding: rem(40) rem(52);
           top: rem(11);
           right: initial;
           left: initial;
@@ -804,14 +808,17 @@
             margin-bottom: rem(8);
           }
           &.site-header__mega-menu-main-nav-dropdown-parent-wrap {
-            margin-bottom: 0;
-            &:after {
-              content: "";
-              background-size: auto 100%;
-              display: block;
-              height: rem(10);
-              width: 100%;
-              margin: 0 0 rem(10);
+            margin-bottom: rem(20);
+            @include media-breakpoint-up(xl) {
+              order: 1;
+              width: 100% !important;
+              border-top: rem(2) solid $iastate-gold;
+              margin-top: rem(45);
+              margin-bottom: rem(-15);
+              padding-top: rem(25);
+            }
+            &.site-header__mega-menu-main-nav-dropdown-parent-wrap-no-href {
+              display: none;
             }
           }
           &:last-child {
@@ -928,16 +935,6 @@
   left: 0;
   transform: translate3d(0, -55%, 0);
   transition: 0.3s transform ease-in-out;
-}
-
-.site-header__mega-menu-main-nav-dropdown-parent-wrap {
-  @include media-breakpoint-up(xl) {
-    order: 1;
-    width: 100% !important;
-    border-top: rem(2) solid $iastate-gold;
-    margin-top: rem(45);
-    padding-top: rem(25);
-  }
 }
 
 a.site-header__mega-menu-main-nav-dropdown-parent {
