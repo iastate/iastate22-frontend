@@ -66,8 +66,12 @@
 
 .admission-aid-hero__content-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: 25%;
   z-index: 1;
+}
+
+.admission-aid-hero__title {
+  color: $white;
 }
 
 .admission-aid-hero__graphic {
@@ -75,8 +79,10 @@
   position: absolute;
   svg {
     mix-blend-mode: multiply;
+    width: 100%;
     path {
       fill: $iastate-red;
+      fill: green;
       isolation: isolate;
     }
   }
