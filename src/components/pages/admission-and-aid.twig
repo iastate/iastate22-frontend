@@ -60,25 +60,45 @@
 </div>
 
 <div class="admission-aid-afford">
-  <div class="admission-aid-afford__content">
-    <h2 class="admission-aid-afford__title">{{ afford.title }}</h2>
-    <div class="admission-aid-afford__intro">{{ afford.intro|raw }}</div>
+  <div class="admission-aid-afford__intro">
+    <h2 class="admission-aid-afford__intro-title">{{ afford.title }}</h2>
+    <div class="admission-aid-afford__intro-copy">{{ afford.intro|raw }}</div>
     {% include "@link-set" with afford.link_set %}
   </div>
-  <ul>
+  <div class="admission-aid-afford__columns">
+    <ul>
       {% for section in afford.sections %}
       <li>
-        <div class="admission-aid-afford__section-graphic">{{ section.svg|raw }}</div>
+        <div class="admission-aid-afford__media">
+          <img src="{{ section.icon|path }}" alt="" />
+        </div>
         <div class="admission-aid-afford__section-content">
           <h3 class="admission-aid-afford__section-title">{{ section.title }}</h3>
+          <div class="admission-aid-afford__section-description">{{ section.description|raw }}</div>
           <a class="link-tertiary" href="{{ section.link.url }}">{{ section.link.title }}<span class="arrow"></span></a>
         </div>
       </li>
       {% endfor %}
     </ul>
+  </div>
 </div>
 
-<div class="admission-aid-apply"></div>
+<div class="admission-aid-apply callout-inset">
+  <div class="callout-inset_inset">
+    <h2 class="callout-inset_inset-headline">{{ apply.title }}</h2>
+    <div>{{ apply.intro_text|raw }}</div>
+    {% include "@button-set" with apply.button_set %}
+  </div>
+  <div class="feature-with-large-image">
+    <div class="feature-with-large-image__media">
+      <img src="{{ apply.image|path }}" alt="" />
+    </div>
+    <div class="feature-with-large-image__content">
+      <h2>{{apply.subtitle}}</h2>
+      {% include "@link-set" with apply.link_set %}
+    </div>
+  </div>
+</div>
 
 <div class="admission-aid-links"></div>
 

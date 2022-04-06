@@ -196,6 +196,23 @@
   @include media-breakpoint-up(lg) {
     display: flex;
     align-items: flex-start;
+    position: relative;
+    padding-top: rem(100);
+    padding-bottom: rem(100);
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: rem(1) solid $light-grey;
+  }
+  &:before {
+    top: 0;
+  }
+  &:after {
+    bottom: 0;
   }
 }
 .admission-aid-why__callouts {
@@ -331,13 +348,13 @@
 
 // Afford Section
 .admission-aid-afford {
-  padding: rem(115) rem(36) rem(50);
+  padding: rem(60) rem(36) rem(50);
   .link-set {
     text-align: center;
   }
 }
 
-.admission-aid-afford__title {
+.admission-aid-afford__intro-title {
   @extend %h2-yellow-border;
   text-align: center;
   font-size: rem(37);
@@ -352,9 +369,73 @@
   }
 }
 
-.admission-aid-afford__intro {
+.admission-aid-afford__intro-copy {
   text-align: center;
-  margin: rem(32) auto rem(46);
+  margin: 0 auto rem(20);
   max-width: rem(628);
   line-height: (29 / 18);
+}
+
+.admission-aid-afford__columns {
+  ul {
+    text-align: center;
+    margin-top: rem(60);
+    @include media-breakpoint-up(md) {
+      display: flex;
+      margin-right: rem(-74);
+    }
+    li {
+      margin-bottom: rem(40);
+      @include media-breakpoint-up(md) {
+        flex: 1 1 0px;
+        padding-right: rem(74);
+        position: relative;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: rem(2);
+        border-right: rem(2) solid $off-white;
+        right: rem(37);
+      }
+    }
+  }
+  .link-tertiary {
+    font-size: rem(18);
+    line-height: (25 / 18);
+    padding: 0 rem(13);
+    @include media-breakpoint-up(md) {
+      padding: 0;
+    }
+    .arrow {
+      top: rem(11);
+    }
+  }
+}
+
+// Apply Section
+.admission-aid-apply {
+  .callout-inset_inset {
+    .iastate22-button-set {
+      margin-bottom: 0;
+      .iastate22-button {
+        border-color: $iastate-maroon;
+        background-color: transparent;
+      }
+    }
+  }
+  .feature-with-large-image__content {
+    .link-secondary {
+      color: $white;
+      .arrow {
+        background-color: $white;
+        &:before,
+        &:after {
+          background-color: $white;
+        }
+      }
+    }
+  }
 }

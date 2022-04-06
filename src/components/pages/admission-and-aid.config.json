@@ -109,14 +109,61 @@
       },
       "sections": [
         {
-          "svg": "../../img/admission-why-callout-1.jpg",
-          "title": "Study Science, Arts and Technology",
+          "icon": "../../img/icons/multicolor-icon-tuition-fees.svg",
+          "title": "Tuition and Fees",
+          "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
           "link": {
             "url": "https://www.iastate.edu/",
-            "title": "Majors, Minors and Certificates"
+            "title": "View Cost of Attendance"
+          }
+        },
+        {
+          "icon": "../../img/icons/multicolor-icon-scholarships.svg",
+          "title": "Scholarships",
+          "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
+          "link": {
+            "url": "https://www.iastate.edu/",
+            "title": "Apply for Scholarships"
+          }
+        },
+        {
+          "icon": "../../img/icons/multicolor-icon-financial-aid.svg",
+          "title": "Financial Aid",
+          "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
+          "link": {
+            "url": "https://www.iastate.edu/",
+            "title": "Learn about Financial Aid"
           }
         }
       ]
+    },
+    "apply": {
+      "title": "Apply",
+      "intro_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+      "button_set": {
+        "items": [
+          {
+            "text": "Apply to Iowa State",
+            "url": "https://iastate.edu"
+          }
+        ]
+      },
+      "image": "../../img/admission_feature_cyclone_fpo.jpg",
+      "subtitle": "Already a Cyclone?",
+      "link_set": {
+        "links": [
+          {
+            "url": "https://iastate.edu",
+            "text": "New Student Programs",
+            "variant": "link-secondary"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Admitted Student Information",
+            "variant": "link-secondary"
+          }
+        ]
+      }
     }
   }
 }
