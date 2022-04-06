@@ -41,6 +41,16 @@
           }
         ]
       }
+    },
+    "explore": {
+      "title": "Explore",
+      "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+      "video_embed": {
+        "wallpaper": "../../img/admission-video-cover.jpg",
+        "title": "Your future starts now.",
+        "video_id": "Pxu7m8QehcY",
+        "caption": "Video caption lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+      }
     }
   }
 }
