@@ -15,7 +15,10 @@
   .arrow {
     opacity: 0;
     transition: 0.2s opacity ease-in-out;
-    top: rem(10);
+    bottom: rem(11);
+    top: initial;
+    right: initial;
+    margin-left: rem(11);
   }
   &:hover {
     text-decoration-color: transparent;

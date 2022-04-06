@@ -10,10 +10,15 @@
   line-height: (25 / 18);
   text-decoration: none;
   position: relative;
+  .arrow {
+    bottom: rem(11);
+    top: initial;
+    right: initial;
+    margin-left: rem(11);
+  }
   &:hover {
     .arrow {
       width: rem(22);
-      right: rem(-33);
     }
   }
 }
