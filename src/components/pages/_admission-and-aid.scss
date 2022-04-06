@@ -390,6 +390,10 @@
         flex: 1 1 0px;
         padding-right: rem(74);
         position: relative;
+        margin-bottom: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
       }
       &:after {
         content: "";
@@ -418,11 +422,32 @@
 // Apply Section
 .admission-aid-apply {
   .callout-inset_inset {
+    .callout-inset_inset-headline {
+      text-align: center;
+      font-size: rem(37);
+      line-height: (48 / 37);
+      @include media-breakpoint-up(lg) {
+        font-size: rem(43);
+        line-height: (66 / 43);
+      }
+    }
+    .callout-inset_inset-text {
+      text-align: center;
+      line-height: (29 / 18);
+      margin-bottom: rem(30);
+    }
     .iastate22-button-set {
       margin-bottom: 0;
       .iastate22-button {
         border-color: $iastate-maroon;
         background-color: transparent;
+        .arrow {
+          background-color: $iastate-gold;
+          &:before,
+          &:after {
+            background-color: $iastate-gold;
+          }
+        }
       }
     }
   }
