@@ -193,6 +193,7 @@
 
 // Why Iowa State Section
 .admission-aid-why {
+  position: relative;
   @include media-breakpoint-up(lg) {
     display: flex;
     align-items: flex-start;
@@ -202,11 +203,13 @@
   }
   &:before,
   &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    border-top: rem(1) solid $light-grey;
+    @include media-breakpoint-up(lg) {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      border-top: rem(1) solid $light-grey;
+    }
   }
   &:before {
     top: 0;
@@ -245,7 +248,7 @@
       padding: 0;
     }
     .arrow {
-      top: rem(11);
+      bottom: rem(12);
     }
   }
 }
@@ -348,6 +351,7 @@
 
 // Afford Section
 .admission-aid-afford {
+  position: relative;
   padding: rem(60) rem(36) rem(50);
   .link-set {
     text-align: center;
@@ -396,13 +400,15 @@
         margin-bottom: 0;
       }
       &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: rem(2);
-        border-right: rem(2) solid $off-white;
-        right: rem(37);
+        @include media-breakpoint-up(md) {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: rem(2);
+          border-right: rem(2) solid $off-white;
+          right: rem(37);
+        }
       }
     }
   }
@@ -414,7 +420,7 @@
       padding: 0;
     }
     .arrow {
-      top: rem(11);
+      bottom: rem(12);
     }
   }
 }
