@@ -28,3 +28,58 @@
   </div>
   {% include "@video-embed" with explore.video_embed %}
 </div>
+
+<div class="admission-aid-why">
+  <div class="admission-aid-why__callouts">
+    <h2 class="admission-aid-why__callouts-label">{{why_iowa.label}}</h2>
+    <ul>
+      {% for callout in why_iowa.callouts %}
+      <li>
+        <div class="admission-aid-why__callout-media">
+          <img src="{{ callout.image|path }}" alt="" />
+        </div>
+        <div class="admission-aid-why__callout-content">
+          <h3 class="admission-aid-why__callout-title">{{ callout.title }}</h3>
+          <a class="link-tertiary" href="{{ callout.link.url }}">{{ callout.link.title }}<span class="arrow"></span></a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="admission-aid-why__statistic statistic">
+    <h2 class="admission-aid-why__statistic-label">{{ why_iowa.statistic_label }}</h2>
+    <ul>
+      {% for statistic in why_iowa.statistics %}
+      <li>
+        <h2 class="statistic__title">{{ statistic.statistic_title }}</h2>
+        <p class="statistic__text">{{ statistic.statistic_text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
+</div>
+
+<div class="admission-aid-afford">
+  <div class="admission-aid-afford__content">
+    <h2 class="admission-aid-afford__title">{{ afford.title }}</h2>
+    <div class="admission-aid-afford__intro">{{ afford.intro|raw }}</div>
+    {% include "@link-set" with afford.link_set %}
+  </div>
+  <ul>
+      {% for section in afford.sections %}
+      <li>
+        <div class="admission-aid-afford__section-graphic">{{ section.svg|raw }}</div>
+        <div class="admission-aid-afford__section-content">
+          <h3 class="admission-aid-afford__section-title">{{ section.title }}</h3>
+          <a class="link-tertiary" href="{{ section.link.url }}">{{ section.link.title }}<span class="arrow"></span></a>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
+
+<div class="admission-aid-apply"></div>
+
+<div class="admission-aid-links"></div>
+
+<div class="admission-aid-connect"></div>
