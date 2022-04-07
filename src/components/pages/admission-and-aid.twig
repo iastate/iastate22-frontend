@@ -109,10 +109,12 @@
     <ul>
       {% for link in links.link_list %}
         <li>
-          <div class="admission-aid-links__link-list-icon">
-            <img src="{{ link.icon|path }}" alt="" />
-          </div>
-          <a class="admission-aid-links__link-list-link" href="{{ link.url }}">{{ link.text }}</a>
+          <a href="" class="admission-aid-links__link-list-link">
+            <div class="admission-aid-links__link-list-icon">
+              <img src="{{ link.icon|path }}" alt="" />
+            </div>
+            <span class="admission-aid-links__link-list-link-text" href="{{ link.url }}">{{ link.text }}</span>
+          </a>
         </li>
       {% endfor %}
     </ul>
@@ -147,6 +149,17 @@
           <span class="visible-for-screen-readers">Twitter</span>
         </a>
       </li>
+    </ul>
+  </div>
+  <div class="admission-aid-connect__sections">
+    <ul>
+      {% for section in connect.sections %}
+      <li>
+        <h3 class="admission-aid-connect__section-title">{{ section.title }}</h3>
+        <div class="dmission-aid-connect__section-description">{{ section.description|raw }}</div>
+        {% include "@link-set" with section.link_set %}
+      </li>
+      {% endfor %}
     </ul>
   </div>
 </div>

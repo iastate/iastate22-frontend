@@ -8,7 +8,9 @@
     <img src="{{image}}" alt="">
   </div>
   {% endif %}
+  {% if subnav_horizontal %}
   <div class="hero__subnav-wrap">
     {% include "@subnav--horizontal" with subnav_horizontal %}
   </div>
+  {% endif %}
 </div>

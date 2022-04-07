@@ -202,7 +202,63 @@
       ]
     },
     "connect": {
-      "title": "Connect with Admissions"
+      "title": "Connect with Admissions",
+      "sections": [
+        {
+          "title": "Request Info",
+          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>",
+          "link_set": {
+            "links": [
+              {
+                "url": "https://iastate.edu",
+                "text": "Request Admission Information",
+                "variant": "link-tertiary"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Visit",
+          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>",
+          "link_set": {
+            "links": [
+              {
+                "url": "https://iastate.edu",
+                "text": "Campus Tours",
+                "variant": "link-tertiary"
+              },
+              {
+                "url": "https://iastate.edu",
+                "text": "Virtual Office Sessions",
+                "variant": "link-tertiary"
+              },
+              {
+                "url": "https://iastate.edu",
+                "text": "Virtual Tour",
+                "variant": "link-tertiary"
+              }
+            ]
+          }
+        },
+        {
+          "title": "Connect",
+          "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>",
+          "link_set": {
+            "links": [
+              {
+                "url": "https://iastate.edu",
+                "text": "Meet Your Admissions Counselor",
+                "variant": "link-tertiary"
+              },
+              {
+                "url": "https://iastate.edu",
+                "text": "Chat with Students and Staff",
+                "variant": "link-tertiary"
+              }
+            ]
+          }
+        }
+      ]
     }
   }
 }
