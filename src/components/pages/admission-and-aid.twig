@@ -100,6 +100,23 @@
   </div>
 </div>
 
-<div class="admission-aid-links"></div>
+<div class="admission-aid-links">
+  <div class="admission-aid-links__intro">
+    <h2 class="admission-aid-links__intro-subtitle">{{ links.subtitle }}</h2>
+    <h3 class="admission-aid-links__intro-title">{{ links.title }}</h3>
+  </div>
+  <div class="admission-aid-links__link-list">
+    <ul>
+      {% for link in links.link_list %}
+        <li>
+          <div class="admission-aid-links__link-list-icon">
+            <img src="{{ link.icon|path }}" alt="" />
+          </div>
+          <a class="admission-aid-links__link-list-link" href="{{ link.url }}">{{ link.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 <div class="admission-aid-connect"></div>

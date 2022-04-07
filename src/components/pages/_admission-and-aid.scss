@@ -470,3 +470,63 @@
     }
   }
 }
+
+// Links Section
+
+.admission-aid-links {
+  padding: rem(52) rem(36);
+}
+.admission-aid-links__intro {
+  text-align: center;
+}
+.admission-aid-links__intro-subtitle {
+  @extend %h3;
+  padding: 0;
+  margin: 0 0 rem(8);
+}
+.admission-aid-links__intro-title {
+  @extend %h2;
+  margin: 0 0 rem(20) 0;
+  padding: 0;
+  font-size: rem(37);
+  line-height: (48 / 37);
+}
+.admission-aid-links__link-list {
+  margin-top: rem(55);
+  ul {
+    li {
+      border-bottom: rem(2) solid $iastate-gold;
+      margin-left: rem(-36);
+      margin-right: rem(-36);
+      padding: rem(11) rem(36);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+      &:first-child {
+        border-top: rem(2) solid $iastate-gold;
+      }
+    }
+  }
+}
+.admission-aid-links__link-list-icon {
+  flex: 0 0 auto;
+  width: rem(65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admission-aid-links__link-list-link {
+  flex: 1 1 0px;
+  font-family: $nimbus-sans-bold;
+  font-weight: 700;
+  color: $iastate-maroon;
+  font-size: rem(21);
+  line-height: (30 / 21);
+  text-decoration: none;
+  padding: 0 rem(20);
+  transition: 0.2s color ease-in-out;
+  &:hover {
+    color: $iastate-red;
+  }
+}

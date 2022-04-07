@@ -164,6 +164,42 @@
           }
         ]
       }
+    },
+    "links": {
+      "subtitle": "Start your journey.",
+      "title": "I am an incoming...",
+      "link_list": [
+        {
+          "icon": "../../img/icons/multicolor-icon-undergraduate.svg",
+          "url": "https://iastate.edu",
+          "text": "Undergraduate Student"
+        },
+        {
+          "icon": "../../img/icons/multicolor-icon-graduate.svg",
+          "url": "https://iastate.edu",
+          "text": "Graduate Student"
+        },
+        {
+          "icon": "../../img/icons/multicolor-icon-transfer.svg",
+          "url": "https://iastate.edu",
+          "text": "Transfer Student"
+        },
+        {
+          "icon": "../../img/icons/multicolor-icon-non-degree.svg",
+          "url": "https://iastate.edu",
+          "text": "Non-Degree Student"
+        },
+        {
+          "icon": "../../img/icons/multicolor-icon-military-non-traditional.svg",
+          "url": "https://iastate.edu",
+          "text": "Military or Nontraditional Student"
+        },
+        {
+          "icon": "../../img/icons/multicolor-icon-international.svg",
+          "url": "https://iastate.edu",
+          "text": "International Student"
+        }
+      ]
     }
   }
 }
