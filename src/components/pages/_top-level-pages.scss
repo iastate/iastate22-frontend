@@ -1,6 +1,59 @@
+// Majors Minors and Certificates
 .maj-min-cert-statistic {
   .statistic-with-text {
     display: flex;
     flex-direction: column-reverse;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
   }
+}
+
+.maj-min-cert-explore {
+  background-color: $off-white;
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  @extend %outer-pad-x;
+  padding-top: rem(55);
+  padding-bottom: rem(35);
+  .iastate22-button-set {
+    ul {
+      li {
+        margin-bottom: rem(32);
+      }
+    }
+  }
+}
+
+.maj-min-cert-explore__title {
+  padding: 0;
+  margin-bottom: rem(30);
+}
+
+.maj-min-cert-program-search {
+  background-color: $iastate-red;
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  @extend %outer-pad-x;
+  padding-top: rem(55);
+  padding-bottom: rem(30);
+  .search-label {
+    color: $white;
+    font-size: rem(20);
+    line-height: (30 / 20);
+  }
+  input[type="text"] {
+    border: none;
+  }
+  button[type="submit"] {
+    margin-top: rem(40);
+    width: 100%;
+    @extend %iastate22-button--reverse;
+  }
+}
+
+.maj-min-cert-program-search__title {
+  color: $white;
+  padding: 0 rem(30) 0 0;
+  margin-bottom: rem(27);
 }
