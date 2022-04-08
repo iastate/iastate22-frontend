@@ -6,6 +6,13 @@
     @include media-breakpoint-up(lg) {
       display: block;
     }
+    .statistic {
+      @include media-breakpoint-up(xl) {
+        margin-right: rem(108);
+        max-width: 25%;
+        min-width: rem(300);
+      }
+    }
   }
 }
 
@@ -16,10 +23,54 @@
   @extend %outer-pad-x;
   padding-top: rem(55);
   padding-bottom: rem(35);
+  position: relative;
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-70);
+    margin-right: rem(-70);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-190);
+    margin-right: rem(-190);
+    padding-top: rem(25);
+    padding-bottom: rem(25);
+    padding: rem(25) rem(170) rem(25) rem(232);
+  }
+  @include media-breakpoint-up(xxl) {
+    display: flex;
+    align-items: center;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $off-white;
+    left: -50vw;
+    width: 150vw;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
   .iastate22-button-set {
+    @include media-breakpoint-up(xl) {
+      margin: rem(30) 0 0;
+    }
+    @include media-breakpoint-up(xxl) {
+      flex: 0 1 auto;
+      width: 66.66%;
+      padding-left: rem(20);
+    }
     ul {
+      @include media-breakpoint-up(md) {
+        column-count: 2;
+        column-gap: rem(30);
+      }
       li {
         margin-bottom: rem(32);
+        .iastate22-button {
+          @include media-breakpoint-up(md) {
+            display: block;
+            margin: 0;
+          }
+        }
       }
     }
   }
@@ -28,6 +79,13 @@
 .maj-min-cert-explore__title {
   padding: 0;
   margin-bottom: rem(30);
+  @include media-breakpoint-up(xxl) {
+    flex: 0 1 auto;
+    width: 35%;
+    text-align: right;
+    margin: 0;
+    padding-right: rem(30);
+  }
 }
 
 .maj-min-cert-program-search {
@@ -36,19 +94,68 @@
   margin-right: rem(-36);
   @extend %outer-pad-x;
   padding-top: rem(55);
-  padding-bottom: rem(30);
+  padding-bottom: rem(35);
+  position: relative;
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-70);
+    margin-right: rem(-70);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: rem(65);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-190);
+    margin-right: rem(-190);
+    padding-right: rem(184);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $iastate-red;
+    left: -50vw;
+    width: 150vw;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
   .search-label {
     color: $white;
     font-size: rem(20);
     line-height: (30 / 20);
+    @include media-breakpoint-up(md) {
+      flex: 0 1 auto;
+      width: 100%;
+    }
   }
   input[type="text"] {
     border: none;
+    @include media-breakpoint-up(md) {
+      flex: 0 1 auto;
+      width: 60%;
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 75%;
+    }
   }
-  button[type="submit"] {
+  .form-item {
     margin-top: rem(40);
-    width: 100%;
-    @extend %iastate22-button--reverse;
+    @include media-breakpoint-up(md) {
+      flex: 0 1 auto;
+      width: 40%;
+      margin: 0;
+      padding-left: rem(20);
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 25%;
+    }
+    button[type="submit"] {
+      width: 100%;
+      margin: 0;
+      @extend %iastate22-button--reverse;
+    }
   }
 }
 
@@ -56,4 +163,100 @@
   color: $white;
   padding: 0 rem(30) 0 0;
   margin-bottom: rem(27);
+  @include media-breakpoint-up(md) {
+    flex: 0 1 auto;
+    width: 100%;
+  }
+}
+
+.maj-min-cert-program-list {
+  padding-top: rem(55);
+  padding-bottom: rem(55);
+  @include media-breakpoint-up(xl) {
+    margin-right: rem(21);
+  }
+  > ul {
+    @include media-breakpoint-up(md) {
+      column-count: 2;
+      column-gap: rem(50);
+      @include media-breakpoint-up(lg) {
+        column-gap: rem(120);
+      }
+      @include media-breakpoint-up(xl) {
+        column-gap: rem(240);
+      }
+    }
+    > li {
+      margin-bottom: rem(40);
+      > ul {
+        margin-top: rem(20);
+        padding-right: rem(20);
+        @include media-breakpoint-up(lg) {
+          margin-top: rem(35);
+        }
+        > li {
+          margin-bottom: rem(20);
+          @include media-breakpoint-up(lg) {
+            margin-bottom: rem(35);
+          }
+          .link-secondary {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.maj-min-cert-program-list__letter-label {
+  padding: 0;
+  margin: 0;
+}
+
+.maj-min-cert-program-list__program-type {
+  margin: 0;
+}
+
+.maj-min-cert-program-list-cta--small {
+  position: relative;
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-70);
+    margin-right: rem(-70);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-190);
+    margin-right: rem(-190);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $off-white;
+    left: -50vw;
+    width: 150vw;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .call-to-action--small {
+    @include media-breakpoint-up(xl) {
+      padding: rem(60) rem(190);
+      justify-content: space-between;
+    }
+  }
+  .call-to-action__copy-wrap {
+    max-width: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include media-breakpoint-up(xxl) {
+      width: 70%;
+    }
+  }
+  .iastate22-button-set {
+    @include media-breakpoint-up(xxl) {
+      width: 30%;
+    }
+  }
 }

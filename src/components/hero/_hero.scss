@@ -5,6 +5,13 @@
     padding-top: rem(40);
     margin-bottom: 0;
   }
+  &.hero--top-level-lp {
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(lg) {
+      padding-top: rem(10);
+      margin-bottom: rem(65);
+    }
+  }
 }
 
 .hero__title {
@@ -18,6 +25,13 @@
   margin-bottom: rem(10);
   @include media-breakpoint-up(xl) {
     margin-left: rem(-108);
+  }
+  .hero--top-level-lp & {
+    margin-top: rem(24);
+    margin-bottom: rem(20);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(10);
+    }
   }
 }
 
@@ -34,7 +48,15 @@
     margin-left: rem(-190);
     margin-right: rem(-110);
   }
-
+  .hero--top-level-lp & {
+    margin-right: rem(-36);
+    @include media-breakpoint-up(md) {
+      margin-right: rem(-70);
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: 0;
+    }
+  }
   &:before {
     padding-top: 37.4%;
   }

@@ -1,4 +1,4 @@
-<div class="outer-pad">
+<div class="outer-pad outer-pad--top-level">
   {% include "@hero--top-level-lp" with hero %}
   
   <div class="maj-min-cert-statistic">
@@ -23,4 +23,25 @@
     </div>
   </form>
 
+  <div class="maj-min-cert-program-list">
+    <ul>
+    {% for list in program_list.section %}
+      <li>
+        <h2 class="maj-min-cert-program-list__letter-label">{{ list.letter }}</h2>
+        <ul>
+          {% for list_item in list.listings %}
+          <li>
+            <a href="{{ list_item.url }}" class="link-secondary">{{ list_item.title }}<span class="arrow"></span></a>
+            <p class="maj-min-cert-program-list__program-type">{{ list_item.program_type }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  <div class="maj-min-cert-program-list-cta--small">
+    {% include "@call-to-action--small" with call_to_action_small %}
+  </div>
 </div>

@@ -10,11 +10,11 @@
 
 .outer-pad {
   @extend %outer-pad-x;
-  @include media-breakpoint-up(sm) {
-    // padding: rem(48) rem(32);
-  }
-  @include media-breakpoint-up(md) {
-    // padding: rem(48) rem(64);
+  &.outer-pad--top-level {
+    @include media-breakpoint-up(xl) {
+      padding-left: rem(190);
+      padding-right: rem(190);
+    }
   }
 }
 
