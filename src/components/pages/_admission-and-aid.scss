@@ -53,12 +53,13 @@
     min-height: rem(600);
   }
   @include media-breakpoint-up(lg) {
-    min-height: none;
+    min-height: initial;
   }
 
   &:before {
     padding-top: 172.46%;
     @include media-breakpoint-up(md) {
+      padding-top: 57.5%;
       padding-top: 54.1%;
     }
   }
@@ -218,7 +219,7 @@
   }
   @include media-breakpoint-up(xl) {
     padding-left: rem(190);
-    padding-right: rem(190);
+    padding-right: rem(82);
   }
   &:before,
   &:after {
