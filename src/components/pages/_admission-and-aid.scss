@@ -162,6 +162,8 @@
   @include media-breakpoint-up(xl) {
     padding-left: rem(190);
     padding-right: rem(190);
+    padding-bottom: rem(65);
+    padding-top: rem(80);
   }
 
   .video-embed {
@@ -214,8 +216,8 @@
     display: flex;
     align-items: flex-start;
     position: relative;
-    padding-top: rem(100);
-    padding-bottom: rem(100);
+    padding-top: rem(60);
+    padding-bottom: rem(12);
   }
   @include media-breakpoint-up(xl) {
     padding-left: rem(190);
@@ -368,6 +370,7 @@
   padding-bottom: rem(50);
   @extend %outer-pad-x;
   @include media-breakpoint-up(xl) {
+    padding-top: rem(40);
     padding-left: rem(190);
     padding-right: rem(190);
   }
@@ -399,6 +402,9 @@
 }
 
 .admission-aid-afford__columns {
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem(40);
+  }
   ul {
     text-align: center;
     margin-top: rem(60);
@@ -483,6 +489,11 @@
   }
   .feature-with-large-image__content {
     margin: rem(57) 0 rem(20);
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+      padding-top: rem(50);
+      padding-bottom: rem(50);
+    }
     .link-secondary {
       color: $white;
       .arrow {
@@ -674,11 +685,17 @@
       flex-wrap: wrap;
       margin-right: rem(-40);
     }
+    @include media-breakpoint-up(xl) {
+      margin-right: rem(-80);
+    }
     > li {
       margin-bottom: rem(54);
       @include media-breakpoint-up(lg) {
         flex: 1 1 0px;
         padding-right: rem(40);
+      }
+      @include media-breakpoint-up(xl) {
+        padding-right: rem(80);
       }
     }
   }

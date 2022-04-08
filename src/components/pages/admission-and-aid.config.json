@@ -109,7 +109,7 @@
       },
       "sections": [
         {
-          "icon": "../../img/icons/multicolor-icon-tuition-fees.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-tuition-fees.svg",
           "title": "Tuition and Fees",
           "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
           "link": {
@@ -118,7 +118,7 @@
           }
         },
         {
-          "icon": "../../img/icons/multicolor-icon-scholarships.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-scholarships.svg",
           "title": "Scholarships",
           "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
           "link": {
@@ -127,7 +127,7 @@
           }
         },
         {
-          "icon": "../../img/icons/multicolor-icon-financial-aid.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-financial-aid.svg",
           "title": "Financial Aid",
           "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
           "link": {
@@ -170,32 +170,32 @@
       "title": "I am an incoming...",
       "link_list": [
         {
-          "icon": "../../img/icons/multicolor-icon-undergraduate.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-undergraduate.svg",
           "url": "https://iastate.edu",
           "text": "Undergraduate Student"
         },
         {
-          "icon": "../../img/icons/multicolor-icon-graduate.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-graduate.svg",
           "url": "https://iastate.edu",
           "text": "Graduate Student"
         },
         {
-          "icon": "../../img/icons/multicolor-icon-transfer.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-transfer.svg",
           "url": "https://iastate.edu",
           "text": "Transfer Student"
         },
         {
-          "icon": "../../img/icons/multicolor-icon-non-degree.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-non-degree.svg",
           "url": "https://iastate.edu",
           "text": "Non-Degree Student"
         },
         {
-          "icon": "../../img/icons/multicolor-icon-military-non-traditional.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-military-non-traditional.svg",
           "url": "https://iastate.edu",
           "text": "Military or Nontraditional Student"
         },
         {
-          "icon": "../../img/icons/multicolor-icon-international.svg",
+          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-international.svg",
           "url": "https://iastate.edu",
           "text": "International Student"
         }
