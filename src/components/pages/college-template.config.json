@@ -1,0 +1,72 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "hero": {
+      "breadcrumbs": {
+        "links": [
+          {
+            "url": "https://www.iastate.edu/",
+            "name": "Home"
+          },
+          {
+            "url": "https://www.iastate.edu/",
+            "name": "Academics"
+          },
+          {
+            "url": "https://www.iastate.edu/",
+            "name": "Majors, Minors and Certificates"
+          },
+          {
+            "url": "https://www.iastate.edu/",
+            "name": "Agriculture and Life Sciences"
+          }
+        ]
+      },
+      "image_mobile": "../../img/college-template-hero-fpo-mobile.jpg",
+      "image_desktop": "../../img/college-template-hero-fpo-desktop.jpg",
+      "title": "Agriculture and Life Sciences"
+    },
+    "overview": {
+      "title": "Solve Real World Problems Lorem Ipsum Dolor",
+      "intro": "<p>The College of Agriculture and Life Sciences is one of the world’s leading institutions of agriculture, with more than 160 years of leadership in science, education and extension. The college educates future leaders, conducts mission-oriented research and shares new knowledge for the betterment of Iowa and the world. The college is one of eight colleges at Iowa State University, which is one of the most influential land grant universities in the nation.</p>",
+      "button_set": {
+        "items": [
+          {
+            "text": "Visit College Site",
+            "url": "https://iastate.edu"
+          }
+        ]
+      },
+      "image": "../../img/college-agriculture-intro-fpo.jpg"
+    },
+    "in_page_nav": {
+      "title": "On This Page",
+      "navigation": [
+        {
+          "title": "What Can I Study?",
+          "url": "#"
+        },
+        {
+          "title": "Research",
+          "url": "#"
+        },
+        {
+          "title": "Innovation and Entrepreneurship",
+          "url": "#"
+        },
+        {
+          "title": "Opportunities",
+          "url": "#"
+        },
+        {
+          "title": "Success at lowa State",
+          "url": "#"
+        },
+        {
+          "title": "Take the Next Step",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<script>
+  document.body.classList.add("college", "top-level-page");
+</script>
+
+<div class="outer-pad outer-pad--top-level">
+    <div class="college-hero">
+      <div class="college-hero__breadcrumbs">
+        {% include "@breadcrumb--top-level-pages" with hero.breadcrumbs %}
+      </div>
+      <div class="college-hero__media">
+        <img class="college-hero__media-mobile" src="{{ hero.image_mobile|path }}" alt="" />
+        <img class="college-hero__media-desktop" src="{{ hero.image_desktop|path }}" alt="" />
+      </div>
+      <h1 class="college-hero__title">{{ hero.title }}</h1>
+      <div class="college-hero__graphic">
+        <svg viewBox="0 0 1120 680" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+          <path d="m176.5 242.613 884.121-187.942 211.016 233.864 15.7 427.392-851.774-107.764Z" transform="rotate(180 643.668 357.964)" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="college-overview">
+      <div class="college-overview__copy-wrap">
+        <h2 class="college-overview__title">{{ overview.title }}</h2>
+        <div class="college-overview__intro">{{ overview.intro|raw}}</div>
+        {% include "@button-set" with overview.button_set %}
+      </div>
+      <div class="college-overview__media">
+        <img src="{{ overview.image|path }}" alt="" />
+      </div>
+    </div>
+
+    <div class="college-in-page-nav">
+      <h2 class="college-in-page-nav_title">{{ in_page_nav.title }}</h2>
+      <nav class="college-in-page-nav__nav">
+        <ul>
+          {% for nav in in_page_nav.navigation %}
+          <li>
+            <a href="{{ nav.url }}" class="link-tertiary">{{ nav.title }}<span class="arrow"></span></a>
+          </li>
+          {% endfor %}
+        </ul>
+    </div>
+</div>

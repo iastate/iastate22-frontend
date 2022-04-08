@@ -52,7 +52,7 @@
       @include media-breakpoint-up(md) {
         display: inline-block;
       }
-      &:first-child {
+      &:nth-last-child(2) {
         display: inline-block;
         padding-left: rem(13);
         @include media-breakpoint-up(md) {
