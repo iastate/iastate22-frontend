@@ -133,28 +133,18 @@
   input[type="text"] {
     border: none;
     @include media-breakpoint-up(md) {
-      flex: 0 1 auto;
-      width: 60%;
-    }
-    @include media-breakpoint-up(xxl) {
-      width: 75%;
+      flex: 1 1 0px;
     }
   }
-  .form-item {
-    margin-top: rem(40);
+
+  button[type="submit"] {
+    width: 100%;
+    margin-top: rem(40) 0 0 0;
+    @extend %iastate22-button--reverse;
     @include media-breakpoint-up(md) {
-      flex: 0 1 auto;
-      width: 40%;
-      margin: 0;
-      padding-left: rem(20);
-    }
-    @include media-breakpoint-up(xxl) {
-      width: 25%;
-    }
-    button[type="submit"] {
-      width: 100%;
-      margin: 0;
-      @extend %iastate22-button--reverse;
+      flex: 0 0 auto;
+      width: auto;
+      margin: 0 0 0 rem(20);
     }
   }
 }
@@ -241,7 +231,7 @@
   }
   .call-to-action--small {
     @include media-breakpoint-up(xl) {
-      padding: rem(60) rem(190);
+      padding: rem(50) rem(190);
       justify-content: space-between;
     }
   }
