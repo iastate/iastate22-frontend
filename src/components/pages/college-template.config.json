@@ -44,7 +44,7 @@
       "navigation": [
         {
           "title": "What Can I Study?",
-          "url": "#"
+          "url": "#majors-minors-certificates"
         },
         {
           "title": "Research",
@@ -67,6 +67,297 @@
           "url": "#"
         }
       ]
+    },
+    "maj_min_certs": {
+      "id": "majors-minors-certificates",
+      "image": "../../img/what-can-i-study.jpg",
+      "title": "What Can I Study?",
+      "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+      "subhead": "Majors, Minors and Certificates",
+      "listings": [
+        {
+          "title": "Agricultural Business",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Minor"
+        },
+        {
+          "title": "Agricultural Studies",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Minor"
+        },
+        {
+          "title": "Agricultural Systems Technology",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major"
+        },
+        {
+          "title": "Agricultural and Life Sciences",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major"
+        },
+        {
+          "title": "Agronomy",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Certificate"
+        },
+        {
+          "title": "Animal Ecology",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Minor"
+        },
+        {
+          "title": "Animal Ecology",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Minor"
+        },
+        {
+          "title": "Animal Science",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Biology",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Culinary Food Sciences",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Minor"
+        },
+        {
+          "title": "Dietetics",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Minor"
+        },
+        {
+          "title": "Diet and Exercise Science",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Dietetics",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Environmental Science",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Minor"
+        },
+        {
+          "title": "Food Science",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Minor"
+        },
+        {
+          "title": "Forestry",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major"
+        },
+        {
+          "title": "Genetics",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Major, Minor"
+        },
+        {
+          "title": "Major/Minor/Certificate Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Major/Minor/Certificate Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Major/Minor/Certificate Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Major/Minor/Certificate Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Major/Minor/Certificate Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Major/Minor/Certificate Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Major/Minor/Certificate Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        },
+        {
+          "title": "Major/Minor/Certificate Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/",
+          "program_type": "Program Type Lorem"
+        }
+      ]
+    },
+    "research": {
+      "title": "Research",
+      "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>",
+      "button_set": {
+        "items": [
+          {
+            "text": "Research Opportunities",
+            "url": "https://iastate.edu"
+          }
+        ]
+      },
+      "external_news_story": {
+        "subhead": "Featured Research",
+        "image": "../../img/featured-research-fpo.jpg",
+        "headline": "Researchers Using Hair to Gauge Stress Response in Pigs",
+        "body_copy": "Animal science researchers at lowa State are trying to if find out if trimming pigs' hair can provide insight into how they respond to stressors they encounter through life, including disease.",
+        "link_set": {
+          "links": [
+            {
+              "url": "https://www.google.com/",
+              "text": "Read Story"
+            }
+          ]
+        }
+      }
+    },
+    "innovation": {
+      "title": "Innovation and Entrepreneurship",
+      "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden.</p>",
+      "external_news_story": {
+        "subhead": "Start Something in the College of Lorem Ipsum",
+        "image": "../../img/innovation-fpo.jpg",
+        "headline": "Researchers Using Hair to Gauge Stress Response in Pigs",
+        "body_copy": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+        "link_set": {
+          "links": [
+            {
+              "url": "https://www.google.com/",
+              "text": "Read Story"
+            }
+          ]
+        }
+      }
+    },
+    "opportunities": {
+      "callout_inset": {
+        "title": "Opportunities",
+        "intro_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
+        "feature_with_large_image": {
+          "image": "../../img/Feature-Image-Inset-Large_FPO.jpg",
+          "title": "Study Abroad Lorem Ipsum",
+          "text": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni lorem ipsem.</p>",
+          "button_set": {
+            "items": [
+              {
+                "text": "Link Lorem Ipsum Dolor",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "success": {
+      "title": "Success at Iowa State",
+      "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
+      "link_set": {
+        "links": [
+          {
+            "url": "https://iastate.edu",
+            "text": "Learn More About Career Preparation",
+            "variant": "link-secondary"
+          }
+        ]
+      },
+      "career_paths": {
+        "title": "Agriculture and Life Sciences Career Paths",
+        "paths": [
+          "Ut enim ad minim veniam",
+          "Quis nostrud exercitation ullamco",
+          "Laboris nisi ut aliquip ex ea",
+          "Commodo consequat",
+          "Ut enim ad minim veniam",
+          "Quis nostrud exercitation ullamco",
+          "Ut enim ad minim veniam",
+          "Quis nostrud exercitation ullamco",
+          "Laboris nisi ut aliquip ex ea",
+          "Commodo consequat",
+          "Ut enim ad minim veniam"
+        ]
+      },
+      "featured_story": {
+        "title": "Featured Story",
+        "card": {
+          "title": "Eliminating Plastics to Combat Climate Change",
+          "clickable": true,
+          "image": "../../img/HP_Finding_Solutions_Story_3_FPO.jpg",
+          "name": "Keith Forst",
+          "role": "Polymer and Food Protection Consortium",
+          "cta": {
+            "url": "https://www.iastate.edu/",
+            "text": "Read More"
+          },
+          "modal": {
+            "id": "modal-1",
+            "image": "../../img/Component-Modal-Square-Image_FPO.jpg",
+            "title": "Modal Title Lorem Ipsum Dolor Sit Amet",
+            "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+            "call_to_action_intro": "ISU Can Help You Accomplish Great Things Lorem Ipsum",
+            "call_to_action": {
+              "url": "https://www.iastate.edu/",
+              "title": "Innovation & Entrepreneurship"
+            }
+          }
+        }
+      }
+    },
+    "ctas": {
+      "cta_one": {
+        "title": "I'm Ready to Apply",
+        "intro": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Aliqui.</p>",
+        "button_set": {
+          "items": [
+            {
+              "text": "Apply Today",
+              "url": "https://iastate.edu"
+            }
+          ]
+        }
+      },
+      "image": "../../img/ready-to-apply-campus-photo.jpg",
+      "cta_two": {
+        "title": "I'm Ready to Accept",
+        "intro": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>",
+        "button_set": {
+          "items": [
+            {
+              "text": "My Admissions Account",
+              "url": "https://iastate.edu"
+            }
+          ]
+        }
+      }
+    },
+    "keep_exploring": {
+      "call_to_action_small": {
+        "title": "See All That Iowa State Offers Lorem",
+        "button_set": {
+          "items": [
+            {
+              "text": "View All Majors and Minors",
+              "url": "https://iastate.edu"
+            }
+          ]
+        }
+      }
     }
   }
 }

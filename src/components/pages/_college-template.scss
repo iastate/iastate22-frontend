@@ -181,6 +181,7 @@
   @include media-breakpoint-up(lg) {
     display: flex;
     align-items: flex-start;
+    padding-top: rem(60);
     padding-bottom: rem(30);
   }
   @include media-breakpoint-up(xl) {
@@ -209,11 +210,24 @@
 .college-overview__title {
   color: $white;
   @extend %h2-yellow-border;
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 0;
+  }
+  &:after {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
 }
 
 .college-overview__intro {
   color: $white;
   line-height: (29 / 18);
+  @include media-breakpoint-up(xl) {
+    font-family: $nimbus-sans-bold;
+    font-weight: 700;
+    line-height: (29 / 16);
+  }
 }
 
 .college-overview__media {
@@ -236,11 +250,18 @@
 // In-page Nav section
 .college-in-page-nav {
   background-color: $off-white;
-  margin-top: -100px;
+  margin-top: rem(-100);
+  margin-bottom: rem(60);
   padding: rem(48) rem(28);
   @include media-breakpoint-up(lg) {
     width: 45%;
     margin-top: rem(-80);
+  }
+  @include media-breakpoint-up(xl) {
+    width: 80%;
+    margin-top: rem(-20);
+    margin-left: rem(-109);
+    padding: rem(38) rem(109);
   }
 }
 
@@ -253,10 +274,249 @@
 
 .college-in-page-nav__nav {
   ul {
+    @include media-breakpoint-up(xl) {
+      column-count: 2;
+    }
     li {
       .link-tertiary {
         font-size: rem(18);
         line-height: (22 / 18);
+      }
+    }
+  }
+}
+
+// What Can I Study
+.college-maj-min-certs {
+  .maj-min-cert-program-list {
+    padding-top: rem(30);
+    padding-bottom: rem(16);
+  }
+}
+.college-maj-min-certs__media {
+  @extend %responsive-img;
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-70);
+    margin-right: rem(-70);
+  }
+  &:before {
+    padding-top: 47.1%;
+  }
+}
+.college-maj-min-certs__intro-wrap {
+  margin-top: rem(30);
+}
+.college-maj-min-certs__title {
+  @extend %h2-yellow-border;
+  text-align: center;
+  &:after {
+    left: 50%;
+    margin-left: rem(-25);
+  }
+}
+.college-maj-min-certs__intro {
+  line-height: (29 / 18);
+}
+.college-maj-min-certs__subhead {
+  text-align: center;
+  padding: 0 rem(30);
+}
+
+// Research Section
+.college-research {
+  .paragraph-widget--external-news-story {
+    margin-left: rem(-36);
+    margin-right: rem(-36);
+    @include media-breakpoint-up(md) {
+      margin-left: rem(-70);
+      margin-right: rem(-70);
+    }
+    .external-news-story__content {
+      p {
+        line-height: (29 / 18);
+      }
+    }
+  }
+}
+.college-research__title {
+  @extend %h2-yellow-border;
+}
+
+// Innovation and Entrepreneurship Section
+.college-innovation {
+  padding: rem(20) 0 0 0;
+  .paragraph-widget--external-news-story {
+    margin-left: rem(-36);
+    margin-right: rem(-36);
+    margin-bottom: 0;
+    @include media-breakpoint-up(md) {
+      margin-left: rem(-70);
+      margin-right: rem(-70);
+    }
+    .external-news-story__content {
+      p {
+        line-height: (29 / 18);
+      }
+    }
+  }
+}
+
+.college-innovation__title {
+  @extend %h2-yellow-border;
+}
+
+.college-innovation__intro {
+  line-height: (29 / 18);
+}
+
+// Opportunities Section
+.college-opportunities {
+  .paragraph-widget--callout-inset {
+    margin-top: 0;
+    .callout-inset_inset {
+      padding-bottom: rem(70);
+      p {
+        line-height: (29 / 18);
+      }
+    }
+  }
+}
+
+// Success Section
+.college-success {
+  padding: rem(18) 0 rem(28);
+}
+
+.college-success__title {
+  @extend %h2-yellow-border;
+}
+
+.college-success__intro {
+  line-height: (29 / 18);
+  margin-bottom: rem(17);
+}
+
+.college-success__career-paths {
+  margin-top: rem(48);
+  ul {
+    margin-top: rem(15);
+    li {
+      margin-bottom: rem(8);
+      padding-left: rem(16);
+      &:before {
+        content: "\2022";
+        display: inline-block;
+        color: $iastate-red;
+        margin-left: rem(-16);
+        float: left;
+      }
+    }
+  }
+}
+
+.college-success__featured-story {
+  margin-top: rem(45);
+  margin-bottom: rem(40);
+  .iastate22-card--profile-with-modal {
+    &:hover {
+      .iastate22-card__cta {
+        color: $iastate-red;
+      }
+    }
+  }
+  .iastate22-card__content {
+    padding: rem(20);
+  }
+  .iastate22-card__title {
+    color: $iastate-red;
+    font-size: rem(21);
+    line-height: (29 / 21);
+    margin-bottom: rem(25);
+  }
+  .iastate22-card__name,
+  .iastate22-card__role {
+    color: $black;
+  }
+  .iastate22-card__cta {
+    color: $iastate-maroon;
+    margin-top: rem(28);
+    margin-bottom: rem(13);
+  }
+}
+
+.college-success__featured-story-title {
+  margin-bottom: rem(15);
+}
+
+// Calls To Action Section
+.college-ctas {
+  background-color: $iastate-red;
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-70);
+    margin-right: rem(-70);
+  }
+}
+
+.college-ctas__cta {
+  @extend %outer-pad-x;
+  padding-top: rem(60);
+  padding-bottom: rem(40);
+  position: relative;
+  &:before {
+    content: "";
+    border-bottom: rem(8) solid $iastate-gold;
+    top: rem(-4);
+    left: 50%;
+    margin-left: rem(-28);
+    width: rem(56);
+    height: rem(8);
+    position: absolute;
+  }
+  .iastate22-button {
+    @extend %iastate22-button--reverse;
+    margin-top: rem(30);
+  }
+}
+
+.college-ctas__cta-title {
+  color: $white;
+  margin: 0 0 rem(22);
+  padding: 0;
+}
+
+.college-ctas__cta-intro {
+  color: $white;
+  line-height: (29 / 18);
+  font-family: $nimbus-sans-bold;
+  font-weight: 700;
+}
+
+.college-ctas__cta-media {
+  @extend %responsive-img;
+
+  &:before {
+    padding-top: 56.25%;
+  }
+}
+
+// Keep Exploring Section
+.college-keep-exploring {
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-70);
+    margin-right: rem(-70);
+  }
+  .call-to-action--small {
+    padding-bottom: rem(60);
+    .call-to-action__copy-wrap {
+      padding: 0;
+      .call-to-action__headline {
+        text-align: left;
       }
     }
   }

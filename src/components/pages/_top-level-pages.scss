@@ -189,12 +189,12 @@
           @include media-breakpoint-up(lg) {
             margin-bottom: rem(35);
           }
-          .link-secondary {
-            margin: 0;
-          }
         }
       }
     }
+  }
+  .link-secondary {
+    margin: 0;
   }
 }
 
