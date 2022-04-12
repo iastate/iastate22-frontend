@@ -91,20 +91,22 @@
     </div>
 
     <div class="college-success">
-      <div class="college-success__intro-wrap">
-        <h2 class="college-success__title">{{ success.title }}</h2>
-        <div class="college-success__intro">{{ success.intro|raw }}</div>
-        {% include "@link-set" with success.link_set %}
-      </div>
-      <div class="college-success__career-paths">
-        <h3 class="college-success__career-paths-title">{{ success.career_paths.title }}</h3>
-        <ul>
-        {% for path in success.career_paths.paths %}
-          <li>
-            <p>{{ path }}</p>
-          </li>
-        {% endfor %}
-        </ul>
+      <div class="college-success__intro-career-paths-wrap">
+        <div class="college-success__intro-wrap">
+          <h2 class="college-success__title">{{ success.title }}</h2>
+          <div class="college-success__intro">{{ success.intro|raw }}</div>
+          {% include "@link-set" with success.link_set %}
+        </div>
+        <div class="college-success__career-paths">
+          <h3 class="college-success__career-paths-title">{{ success.career_paths.title }}</h3>
+          <ul>
+          {% for path in success.career_paths.paths %}
+            <li>
+              <p>{{ path }}</p>
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
       </div>
       <div class="college-success__featured-story">
         <h3 class="college-success__featured-story-title">{{ success.featured_story.title }}</h3>

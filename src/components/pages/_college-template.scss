@@ -199,7 +199,7 @@
 .college-overview__copy-wrap {
   @include media-breakpoint-up(lg) {
     flex: 0 1 auto;
-    width: 45%;
+    width: 57%;
     margin-right: 5%;
   }
   @include media-breakpoint-up(xl) {
@@ -240,7 +240,7 @@
     margin-bottom: rem(-25);
   }
   @include media-breakpoint-up(xl) {
-    width: 35%;
+    width: 40%;
   }
   &:before {
     padding-top: 100%;
@@ -255,13 +255,17 @@
   padding: rem(48) rem(28);
   @include media-breakpoint-up(lg) {
     width: 45%;
-    margin-top: rem(-80);
+    margin-top: rem(-30);
   }
   @include media-breakpoint-up(xl) {
-    width: 80%;
+    width: 78%;
     margin-top: rem(-20);
     margin-left: rem(-109);
     padding: rem(38) rem(109);
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-top: rem(-100);
+    width: 75%;
   }
 }
 
@@ -274,8 +278,17 @@
 
 .college-in-page-nav__nav {
   ul {
+    @include media-breakpoint-up(md) {
+      column-count: 2;
+      column-gap: rem(30);
+    }
+    @include media-breakpoint-up(lg) {
+      column-count: 1;
+      column-gap: 0;
+    }
     @include media-breakpoint-up(xl) {
       column-count: 2;
+      column-gap: rem(30);
     }
     li {
       .link-tertiary {
@@ -291,6 +304,26 @@
   .maj-min-cert-program-list {
     padding-top: rem(30);
     padding-bottom: rem(16);
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem(50);
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: rem(60);
+      margin-bottom: rem(80);
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: rem(135);
+      max-width: rem(1060);
+    }
+    ul {
+      li {
+        @include media-breakpoint-up(lg) {
+          margin-bottom: rem(34);
+        }
+      }
+    }
   }
 }
 .college-maj-min-certs__media {
@@ -301,12 +334,25 @@
     margin-left: rem(-70);
     margin-right: rem(-70);
   }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-110);
+    margin-right: rem(-110);
+  }
   &:before {
     padding-top: 47.1%;
   }
 }
 .college-maj-min-certs__intro-wrap {
   margin-top: rem(30);
+  background-color: $white;
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(-150);
+    padding: rem(65) rem(50) 0;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-top: rem(-241);
+  }
 }
 .college-maj-min-certs__title {
   @extend %h2-yellow-border;
@@ -318,10 +364,18 @@
 }
 .college-maj-min-certs__intro {
   line-height: (29 / 18);
+  @include media-breakpoint-up(lg) {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+  }
 }
 .college-maj-min-certs__subhead {
   text-align: center;
   padding: 0 rem(30);
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(50);
+  }
 }
 
 // Research Section
@@ -333,12 +387,30 @@
       margin-left: rem(-70);
       margin-right: rem(-70);
     }
-    .external-news-story__content {
-      p {
-        line-height: (29 / 18);
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(30);
+      margin-bottom: rem(40);
+    }
+    .external-news-story {
+      @include media-breakpoint-up(lg) {
+        padding-top: rem(45);
+        padding-bottom: rem(45);
+      }
+      h2 {
+        @include media-breakpoint-up(lg) {
+          padding-bottom: rem(20);
+        }
+      }
+      .external-news-story__content {
+        p {
+          line-height: (29 / 18);
+        }
       }
     }
   }
+}
+.college-research__intro-wrap {
+  max-width: rem(844);
 }
 .college-research__title {
   @extend %h2-yellow-border;
@@ -362,13 +434,18 @@
     }
   }
 }
-
+.college-innovation__intro-wrap {
+  max-width: rem(844);
+}
 .college-innovation__title {
   @extend %h2-yellow-border;
 }
 
 .college-innovation__intro {
   line-height: (29 / 18);
+  @include media-breakpoint-up(lg) {
+    line-height: (29 / 16);
+  }
 }
 
 // Opportunities Section
@@ -387,6 +464,18 @@
 // Success Section
 .college-success {
   padding: rem(18) 0 rem(28);
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.college-success__intro-career-paths-wrap {
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 0px;
+  }
 }
 
 .college-success__title {
@@ -402,6 +491,10 @@
   margin-top: rem(48);
   ul {
     margin-top: rem(15);
+    @include media-breakpoint-up(md) {
+      column-count: 2;
+      column-gap: rem(30);
+    }
     li {
       margin-bottom: rem(8);
       padding-left: rem(16);
@@ -419,6 +512,16 @@
 .college-success__featured-story {
   margin-top: rem(45);
   margin-bottom: rem(40);
+  @include media-breakpoint-up(sm) {
+    max-width: rem(344);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+    flex: 0 0 auto;
+    margin-left: rem(60);
+  }
   .iastate22-card--profile-with-modal {
     &:hover {
       .iastate22-card__cta {
@@ -452,12 +555,16 @@
 
 // Calls To Action Section
 .college-ctas {
-  background-color: $iastate-red;
   margin-left: rem(-36);
   margin-right: rem(-36);
+  position: relative;
   @include media-breakpoint-up(md) {
     margin-left: rem(-70);
     margin-right: rem(-70);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-190);
+    margin-right: rem(-190);
   }
 }
 
@@ -466,6 +573,16 @@
   padding-top: rem(60);
   padding-bottom: rem(40);
   position: relative;
+  background-color: $iastate-red;
+  z-index: 1;
+  @include media-breakpoint-up(xl) {
+    max-width: rem(520);
+    margin-left: auto;
+    margin-right: rem(82);
+    padding-left: rem(85);
+    padding-right: rem(85);
+  }
+
   &:before {
     content: "";
     border-bottom: rem(8) solid $iastate-gold;
@@ -497,7 +614,13 @@
 
 .college-ctas__cta-media {
   @extend %responsive-img;
-
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
   &:before {
     padding-top: 56.25%;
   }
@@ -511,12 +634,22 @@
     margin-left: rem(-70);
     margin-right: rem(-70);
   }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-190);
+    margin-right: rem(-190);
+  }
   .call-to-action--small {
     padding-bottom: rem(60);
     .call-to-action__copy-wrap {
       padding: 0;
+      @include media-breakpoint-up(md) {
+        padding-right: rem(39);
+      }
       .call-to-action__headline {
         text-align: left;
+        @include media-breakpoint-up(md) {
+          text-align: right;
+        }
       }
     }
   }
