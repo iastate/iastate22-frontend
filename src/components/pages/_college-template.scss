@@ -70,8 +70,7 @@
   &:before {
     padding-top: 172.46%;
     @include media-breakpoint-up(md) {
-      padding-top: 57.5%;
-      padding-top: 54.1%;
+      padding-top: 59.24%;
     }
   }
   &:after {
@@ -124,6 +123,7 @@
     font-size: rem(70);
     line-height: (93 / 70);
     width: 50%;
+    max-width: rem(648);
   }
   @include media-breakpoint-up(lg) {
     width: auto;
@@ -149,13 +149,13 @@
     transform: none;
     top: initial;
     bottom: rem(-61);
-    max-width: rem(1100);
+    max-width: rem(1120);
   }
   @include media-breakpoint-up(lg) {
-    bottom: rem(-70);
+    bottom: rem(-56);
   }
   @include media-breakpoint-up(xl) {
-    left: rem(22);
+    left: rem(45);
   }
 
   svg {
