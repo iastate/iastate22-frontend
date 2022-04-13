@@ -173,16 +173,15 @@
   margin-right: rem(-36);
   padding-top: rem(65);
   padding-bottom: rem(160);
+  position: relative;
   @extend %outer-pad-x;
   @include media-breakpoint-up(md) {
     margin-left: rem(-70);
     margin-right: rem(-70);
   }
   @include media-breakpoint-up(lg) {
-    display: flex;
-    align-items: flex-start;
     padding-top: rem(60);
-    padding-bottom: rem(30);
+    padding-bottom: rem(60);
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
@@ -198,12 +197,13 @@
 
 .college-overview__copy-wrap {
   @include media-breakpoint-up(lg) {
-    flex: 0 1 auto;
-    width: 57%;
-    margin-right: 5%;
+    width: 48%;
   }
   @include media-breakpoint-up(xl) {
-    width: 60%;
+    width: 45%;
+  }
+  @include media-breakpoint-up(xxl) {
+    width: 58%;
   }
 }
 
@@ -234,13 +234,15 @@
   margin-top: rem(65);
   @extend %responsive-img;
   @include media-breakpoint-up(lg) {
-    flex: 0 1 auto;
-    width: 50%;
+    position: absolute;
+    width: 40%;
+    right: rem(70);
     top: rem(70);
-    margin-bottom: rem(-25);
+    margin: rem(105) 0 0;
   }
   @include media-breakpoint-up(xl) {
-    width: 40%;
+    width: rem(432);
+    right: rem(82);
   }
   &:before {
     padding-top: 100%;
@@ -253,19 +255,19 @@
   margin-top: rem(-100);
   margin-bottom: rem(60);
   padding: rem(48) rem(28);
+  position: relative;
   @include media-breakpoint-up(lg) {
-    width: 45%;
-    margin-top: rem(-30);
+    width: 48%;
+    margin-top: rem(-47);
   }
   @include media-breakpoint-up(xl) {
-    width: 78%;
-    margin-top: rem(-20);
+    width: 68%;
     margin-left: rem(-109);
-    padding: rem(38) rem(109);
+    padding: rem(24) rem(70) rem(50) rem(109);
   }
   @include media-breakpoint-up(xxl) {
-    margin-top: rem(-100);
     width: 75%;
+    max-width: rem(875);
   }
 }
 
@@ -274,6 +276,19 @@
   line-height: (42 / 21);
   padding: 0;
   margin-bottom: rem(8);
+  @extend %h2-yellow-border;
+  @include media-breakpoint-up(lg) {
+    padding-bottom: rem(18);
+    margin-bottom: rem(18);
+    font-size: rem(20);
+    line-height: (42 / 20);
+  }
+  &:after {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
 }
 
 .college-in-page-nav__nav {
@@ -286,14 +301,18 @@
       column-count: 1;
       column-gap: 0;
     }
-    @include media-breakpoint-up(xl) {
+    @include media-breakpoint-up(xxl) {
       column-count: 2;
-      column-gap: rem(30);
+      column-gap: rem(60);
     }
     li {
       .link-tertiary {
         font-size: rem(18);
         line-height: (22 / 18);
+        @include media-breakpoint-up(lg) {
+          font-size: rem(16);
+          line-height: (22 / 16);
+        }
       }
     }
   }
