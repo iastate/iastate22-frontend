@@ -179,6 +179,8 @@
   margin-bottom: rem(30);
   @include media-breakpoint-up(xl) {
     border-bottom: none;
+    min-height: rem(130);
+    min-width: rem(400);
   }
 
   ul {
