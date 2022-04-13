@@ -9,7 +9,7 @@
           {
             "url": "https://iastate.edu",
             "text": "Link Lorem Ipsum Dolor",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           }
         ]
       },
@@ -21,7 +21,7 @@
           {
             "url": "https://iastate.edu",
             "text": "Link Lorem Ipsum Dolor",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           }
         ]
       },
@@ -33,7 +33,7 @@
           {
             "url": "https://iastate.edu",
             "text": "Link Lorem Ipsum Dolor",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           }
         ]
       }
