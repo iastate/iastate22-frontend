@@ -87,7 +87,7 @@
         {
           "url": "https://iastate.edu",
           "text": "Secondary Link Style",
-          "variant": "link-secondary"
+          "variant": "iastate22-link-secondary"
         },
         {
           "url": "https://www.google.com/",
@@ -202,7 +202,7 @@
               {
                 "url": "https://iastate.edu",
                 "text": "Secondary Link Example",
-                "variant": "link-secondary"
+                "variant": "iastate22-link-secondary"
               },
               {
                 "url": "https://iastate.edu",
@@ -232,7 +232,7 @@
               {
                 "url": "https://iastate.edu",
                 "text": "Link Lorem Ipsum Dolor",
-                "variant": "link-secondary"
+                "variant": "iastate22-link-secondary"
               }
             ]
           }
@@ -250,7 +250,7 @@
               {
                 "url": "https://iastate.edu",
                 "text": "Link Lorem Ipsum Dolor",
-                "variant": "link-secondary"
+                "variant": "iastate22-link-secondary"
               }
             ]
           }
@@ -264,7 +264,7 @@
               {
                 "url": "https://iastate.edu",
                 "text": "Link Lorem Ipsum Dolor",
-                "variant": "link-secondary"
+                "variant": "iastate22-link-secondary"
               }
             ]
           }
@@ -282,7 +282,7 @@
               {
                 "url": "https://iastate.edu",
                 "text": "Link Lorem Ipsum Dolor",
-                "variant": "link-secondary"
+                "variant": "iastate22-link-secondary"
               }
             ]
           }
@@ -296,7 +296,7 @@
               {
                 "url": "https://iastate.edu",
                 "text": "Link Lorem Ipsum Dolor",
-                "variant": "link-secondary"
+                "variant": "iastate22-link-secondary"
               }
             ]
           }
@@ -310,7 +310,7 @@
               {
                 "url": "https://iastate.edu",
                 "text": "Link Lorem Ipsum Dolor",
-                "variant": "link-secondary"
+                "variant": "iastate22-link-secondary"
               }
             ]
           }
@@ -348,32 +348,32 @@
           {
             "url": "https://iastate.edu",
             "text": "Link Label Lorem Ipsum Dolor Sit",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           },
           {
             "url": "https://iastate.edu",
             "text": "Link Label Lorem Ipsum Dolor",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           },
           {
             "url": "https://iastate.edu",
             "text": "Link Label Lorem",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           },
           {
             "url": "https://iastate.edu",
             "text": "Link Name Lorem Ipsum",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           },
           {
             "url": "https://iastate.edu",
             "text": "Link Label Lorem Dolor",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           },
           {
             "url": "https://iastate.edu",
             "text": "Link Label Lorem Ipsum Dolor",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           }
         ]
       }
