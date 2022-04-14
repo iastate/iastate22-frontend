@@ -28,7 +28,8 @@
 }
 
 .accordion-button {
-  font-family: $nimbus-sans-bold;
+  font-family: $nimbus-sans-regular;
+  font-weight: 700;
   color: $iastate-red;
   font-size: rem(21);
   line-height: (30 / 21);

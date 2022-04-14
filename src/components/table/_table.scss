@@ -48,7 +48,7 @@
     }
     th {
       padding: rem(25);
-      font-family: $nimbus-sans-bold;
+      font-family: $nimbus-sans-regular;
       font-size: rem(21);
       line-height: (30 / 21);
       font-weight: 700;
@@ -75,7 +75,7 @@
         line-height: 1.75;
       }
       &:first-child {
-        font-family: $nimbus-sans-bold;
+        font-family: $nimbus-sans-regular;
         font-weight: 700;
         color: $iastate-red;
       }

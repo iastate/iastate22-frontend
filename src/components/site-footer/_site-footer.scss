@@ -129,7 +129,8 @@
         color: $white;
         text-decoration: none;
         display: block;
-        font-family: $nimbus-sans-bold;
+        font-family: $nimbus-sans-regular;
+        font-weight: 700;
         font-size: rem(21);
         line-height: (34 / 21);
         margin: rem(17) auto;
@@ -208,7 +209,8 @@
       a {
         color: currentColor;
         text-decoration: underline;
-        font-family: $nimbus-sans-bold;
+        font-family: $nimbus-sans-regular;
+        font-weight: 700;
         text-decoration-thickness: rem(1);
         text-underline-offset: rem(1);
         transition: 0.2s color ease-in-out;
@@ -266,7 +268,8 @@
     }
     li {
       text-align: center;
-      font-family: $nimbus-sans-bold;
+      font-family: $nimbus-sans-regular;
+      font-weight: 700;
       margin-bottom: rem(35);
       font-size: rem(18);
       line-height: (26 / 18);
@@ -388,7 +391,8 @@
       a {
         color: $white;
         transition: 0.2s color ease-in-out;
-        font-family: $nimbus-sans-bold;
+        font-family: $nimbus-sans-regular;
+        font-weight: 700;
         font-size: rem(15);
         line-height: (26 / 15);
         &:hover {

@@ -852,7 +852,8 @@
     color: $white;
     transition: 0.3s color ease-in-out, 0.3s text-decoration-color ease-in-out;
     text-decoration-color: transparent;
-    font-family: $nimbus-sans-bold;
+    font-family: $nimbus-sans-regular;
+    font-weight: 700;
     font-size: rem(18);
     line-height: (26 / 18);
     text-decoration: underline;
@@ -906,7 +907,8 @@
   transition: 0.3s color ease-in-out;
   margin-left: rem(-14);
   .site-header__mega-menu-main-nav-dropdown-back-label {
-    font-family: $nimbus-sans-bold;
+    font-family: $nimbus-sans-regular;
+    font-weight: 700;
     font-size: rem(16);
     line-height: (26 / 16);
     letter-spacing: em(0.96, 16);
@@ -926,7 +928,8 @@
 
 .site-header__mega-menu-main-nav-dropdown-back-icon {
   color: $white;
-  font-family: $nimbus-sans-bold;
+  font-family: $nimbus-sans-regular;
+  font-weight: 700;
   font-size: rem(16);
   line-height: (26 / 16);
   letter-spacing: em(0.96, 16);
@@ -938,7 +941,7 @@
 }
 
 a.site-header__mega-menu-main-nav-dropdown-parent {
-  font-family: $nimbus-sans-bold;
+  font-family: $nimbus-sans-regular;
   font-size: rem(21);
   line-height: (37 / 21);
   font-weight: 700;
@@ -1018,7 +1021,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     }
     a {
       color: $white;
-      font-family: $nimbus-sans-bold;
+      font-family: $nimbus-sans-regular;
       font-size: rem(18);
       font-weight: 700;
       text-decoration: underline;
