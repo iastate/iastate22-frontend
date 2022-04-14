@@ -5,7 +5,7 @@
   label,
   .label {
     display: block;
-    font-family: $nimbus-sans-regular;
+    font-family: $typeface-sans-serif;
     font-size: rem(18);
     line-height: (25 / 18);
     font-weight: 700;
@@ -15,14 +15,14 @@
       color: $iastate-red;
     }
     .optional {
-      font-family: $nimbus-sans-regular;
+      font-family: $typeface-sans-serif;
       color: $grey;
       margin-left: rem(15);
     }
   }
   input,
   textarea {
-    font-family: $nimbus-sans-regular;
+    font-family: $typeface-sans-serif;
     font-size: rem(16);
     font-weight: 400;
     line-height: (29 / 16);
@@ -40,7 +40,7 @@
   }
   select {
     width: 100%;
-    font-family: $nimbus-sans-regular;
+    font-family: $typeface-sans-serif;
     font-size: rem(16);
     line-height: (29 / 16);
     color: $grey;
@@ -111,7 +111,7 @@
   input[type="radio"] {
     & + label {
       display: inline;
-      font-family: $nimbus-sans-regular;
+      font-family: $typeface-sans-serif;
       font-size: rem(16);
       line-height: (29 / 16);
       color: $grey;

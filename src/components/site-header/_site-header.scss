@@ -247,7 +247,7 @@
     @include media-breakpoint-up(xl) {
       text-transform: none;
       color: $iastate-maroon;
-      font-family: $nimbus-sans-regular;
+      font-family: $typeface-sans-serif;
       font-weight: 400;
       font-size: rem(14);
       line-height: (24 / 14);
@@ -852,7 +852,7 @@
     color: $white;
     transition: 0.3s color ease-in-out, 0.3s text-decoration-color ease-in-out;
     text-decoration-color: transparent;
-    font-family: $nimbus-sans-regular;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     font-size: rem(18);
     line-height: (26 / 18);
@@ -907,7 +907,7 @@
   transition: 0.3s color ease-in-out;
   margin-left: rem(-14);
   .site-header__mega-menu-main-nav-dropdown-back-label {
-    font-family: $nimbus-sans-regular;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     font-size: rem(16);
     line-height: (26 / 16);
@@ -928,7 +928,7 @@
 
 .site-header__mega-menu-main-nav-dropdown-back-icon {
   color: $white;
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-weight: 700;
   font-size: rem(16);
   line-height: (26 / 16);
@@ -941,7 +941,7 @@
 }
 
 a.site-header__mega-menu-main-nav-dropdown-parent {
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(21);
   line-height: (37 / 21);
   font-weight: 700;
@@ -1021,7 +1021,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     }
     a {
       color: $white;
-      font-family: $nimbus-sans-regular;
+      font-family: $typeface-sans-serif;
       font-size: rem(18);
       font-weight: 700;
       text-decoration: underline;

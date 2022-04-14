@@ -22,7 +22,7 @@
   cursor: pointer;
   display: block;
   border: none;
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(18);
   font-weight: 700;
   line-height: (26 / 18);
@@ -139,7 +139,7 @@
       }
       a {
         display: block;
-        font-family: $nimbus-sans-regular;
+        font-family: $typeface-sans-serif;
         font-weight: 700;
         font-size: rem(18);
         line-height: (22 / 18);
@@ -301,7 +301,7 @@
         }
         li {
           a {
-            font-family: $nimbus-sans-regular;
+            font-family: $typeface-sans-serif;
             font-weight: 400;
             text-decoration: underline;
             text-decoration-thickness: rem(1);

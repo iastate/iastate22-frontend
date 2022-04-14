@@ -129,7 +129,7 @@
         color: $white;
         text-decoration: none;
         display: block;
-        font-family: $nimbus-sans-regular;
+        font-family: $typeface-sans-serif;
         font-weight: 700;
         font-size: rem(21);
         line-height: (34 / 21);
@@ -209,7 +209,7 @@
       a {
         color: currentColor;
         text-decoration: underline;
-        font-family: $nimbus-sans-regular;
+        font-family: $typeface-sans-serif;
         font-weight: 700;
         text-decoration-thickness: rem(1);
         text-underline-offset: rem(1);
@@ -268,7 +268,7 @@
     }
     li {
       text-align: center;
-      font-family: $nimbus-sans-regular;
+      font-family: $typeface-sans-serif;
       font-weight: 700;
       margin-bottom: rem(35);
       font-size: rem(18);
@@ -391,7 +391,7 @@
       a {
         color: $white;
         transition: 0.2s color ease-in-out;
-        font-family: $nimbus-sans-regular;
+        font-family: $typeface-sans-serif;
         font-weight: 700;
         font-size: rem(15);
         line-height: (26 / 15);
@@ -406,7 +406,7 @@
 .site-footer__copyright {
   text-align: center;
   color: $white;
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(15);
   line-height: (28 / 15);
   @include media-breakpoint-up(md) {

@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: "nimbus_sans_lbold_italic";
+  font-family: "nimbus_sans_lregular";
   src: url("../../fonts/NimbusSanL-BolIta-webfont.woff");
   font-weight: 700;
   font-style: italic;
@@ -33,7 +33,7 @@
 ========================================================================== */
 
 body {
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(18);
   line-height: (32 / 18);
   color: $grey;
@@ -48,7 +48,7 @@ a {
   .accordion-item & {
     color: $iastate-maroon;
     font-weight: 700;
-    font-family: $nimbus-sans-regular;
+    font-family: $typeface-sans-serif;
   }
 }
 
@@ -235,7 +235,7 @@ h3,
 .h3,
 %h3 {
   color: $iastate-red;
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(21);
   font-weight: 700;
   letter-spacing: 0;
@@ -247,7 +247,7 @@ h4,
 .h4,
 %h4 {
   color: $iastate-maroon;
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(18);
   font-weight: 700;
   letter-spacing: 0;
@@ -259,7 +259,7 @@ h5,
 .h5,
 %h5 {
   color: $iastate-maroon;
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(16);
   font-weight: 700;
   letter-spacing: 0;
@@ -271,7 +271,7 @@ h6,
 .h6,
 %h6 {
   color: $iastate-maroon;
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(16);
   font-weight: 700;
   letter-spacing: 0;
