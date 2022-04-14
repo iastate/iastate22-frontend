@@ -19,7 +19,7 @@
 .link-set__link {
   &[class="link-set__link"][href*="//"]:not([href*="iastate.edu"]) {
     color: $iastate-maroon;
-    font-family: $nimbus-sans-bold;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     font-size: rem(18);
     text-decoration: none;

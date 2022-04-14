@@ -10,21 +10,21 @@
 }
 
 @font-face {
-  font-family: "nimbus_sans_lregular_italic";
+  font-family: "nimbus_sans_lregular";
   src: url("../../fonts/NimbusSanL-RegIta-webfont.woff");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "nimbus_sans_lbold";
+  font-family: "nimbus_sans_lregular";
   src: url("../../fonts/NimbusSanL-Bol-webfont.woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "nimbus_sans_lbold_italic";
+  font-family: "nimbus_sans_lregular";
   src: url("../../fonts/NimbusSanL-BolIta-webfont.woff");
   font-weight: 700;
   font-style: italic;
@@ -34,7 +34,7 @@
 ========================================================================== */
 
 body {
-  font-family: $nimbus-sans-regular;
+  font-family: $typeface-sans-serif;
   font-size: rem(18);
   line-height: (32 / 18);
   color: $grey;
@@ -49,7 +49,7 @@ a {
   .accordion-item & {
     color: $iastate-maroon;
     font-weight: 700;
-    font-family: $nimbus-sans-bold;
+    font-family: $typeface-sans-serif;
   }
 }
 
@@ -197,7 +197,7 @@ h1,
 .h1,
 %h1 {
   color: $iastate-red;
-  font-family: $merriweather;
+  font-family: $typeface-serif;
   font-size: rem(50);
   font-weight: normal;
   letter-spacing: 0;
@@ -213,7 +213,7 @@ h2,
 .h2,
 %h2 {
   color: $iastate-red;
-  font-family: $merriweather;
+  font-family: $typeface-serif;
   font-size: rem(30);
   font-weight: 700;
   letter-spacing: 0;
@@ -236,7 +236,7 @@ h3,
 .h3,
 %h3 {
   color: $iastate-red;
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-size: rem(21);
   font-weight: 700;
   letter-spacing: 0;
@@ -248,7 +248,7 @@ h4,
 .h4,
 %h4 {
   color: $iastate-maroon;
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-size: rem(18);
   font-weight: 700;
   letter-spacing: 0;
@@ -260,7 +260,7 @@ h5,
 .h5,
 %h5 {
   color: $iastate-maroon;
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-size: rem(16);
   font-weight: 700;
   letter-spacing: 0;
@@ -272,7 +272,7 @@ h6,
 .h6,
 %h6 {
   color: $iastate-maroon;
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-size: rem(16);
   font-weight: 700;
   letter-spacing: 0;

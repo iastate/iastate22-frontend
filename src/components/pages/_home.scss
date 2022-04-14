@@ -238,7 +238,7 @@
     position: relative;
     display: inline-block;
     padding: 0 rem(20);
-    font-family: $nimbus-sans-bold;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     color: $iastate-red;
     font-size: rem(21);
@@ -455,7 +455,7 @@
   flex: 0 1 auto;
   width: 40%;
   text-align: center;
-  font-family: $merriweather;
+  font-family: $typeface-serif;
   font-weight: 700;
   font-size: rem(51);
   line-height: (51 / 51);
@@ -470,7 +470,7 @@
   color: $iastate-maroon;
   flex: 0 1 auto;
   width: 60%;
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-weight: 700;
   font-size: rem(18);
   line-height: (26 / 18);
@@ -813,7 +813,7 @@
 
 .home-location__caption-text {
   color: $white;
-  font-family: $merriweather;
+  font-family: $typeface-serif;
   font-weight: 700;
   font-size: rem(16);
   line-height: (21 / 16);
@@ -822,7 +822,7 @@
   }
   a {
     color: $iastate-gold;
-    font-family: $nimbus-sans-bold;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     text-decoration-thickness: rem(1);
     text-underline-offset: rem(2);
@@ -921,7 +921,7 @@
     background-color: $iastate-red;
     padding: rem(4) rem(16);
     color: $white;
-    font-family: $nimbus-sans-bold;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     font-size: rem(20);
     line-height: (30 / 20);
@@ -942,7 +942,7 @@
         margin: 0;
         padding: 0;
         color: $iastate-maroon;
-        font-family: $nimbus-sans-bold;
+        font-family: $typeface-sans-serif;
         font-weight: 700;
         font-size: rem(20);
         line-height: (31 / 20);
@@ -975,7 +975,7 @@
       .home-events__event-date,
       .home-events__news-date {
         color: $iastate-red;
-        font-family: $nimbus-sans-bold;
+        font-family: $typeface-sans-serif;
         font-weight: 700;
         font-size: rem(18);
         line-height: (25 / 18);
@@ -1142,7 +1142,7 @@
           background-color: $iastate-red;
           padding: rem(4) rem(16);
           color: $white;
-          font-family: $nimbus-sans-bold;
+          font-family: $typeface-sans-serif;
           font-weight: 700;
           font-size: rem(20);
           line-height: (30 / 20);
@@ -1441,7 +1441,7 @@
         }
         a {
           color: $iastate-maroon;
-          font-family: $nimbus-sans-bold;
+          font-family: $typeface-sans-serif;
           font-weight: 700;
           font-size: rem(18);
           text-decoration-thickness: rem(1);
@@ -1497,7 +1497,7 @@
 }
 
 .home-resources__subhead {
-  font-family: $merriweather;
+  font-family: $typeface-serif;
   font-weight: 700;
   text-align: right;
   font-size: rem(23);
@@ -1842,7 +1842,7 @@
   display: flex;
   align-items: center;
   color: $iastate-maroon;
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-weight: 700;
   font-size: rem(16);
   line-height: (23 / 16);

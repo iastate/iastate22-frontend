@@ -51,7 +51,7 @@
 }
 
 .iastate22-card__cta {
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   color: $iastate-maroon;
   font-weight: 700;
   font-size: rem(18);
@@ -152,7 +152,7 @@
 .iastate22-card__title {
   margin: 0;
   padding: 0;
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-weight: 700;
   color: $iastate-red;
   font-size: rem(21);
@@ -182,7 +182,7 @@
 .iastate22-card__name {
   .iastate22-card--profile-with-modal & {
     color: $iastate-maroon;
-    font-family: $nimbus-sans-bold;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     font-size: rem(16);
     line-height: (20 / 16);
@@ -248,7 +248,7 @@
     }
   }
   .iastate22-modal__title {
-    font-family: $merriweather;
+    font-family: $typeface-serif;
     font-weight: 700;
     font-size: rem(30);
     line-height: (44 / 30);
@@ -261,7 +261,7 @@
 
   .iastate22-modal__content-cta {
     color: $iastate-maroon;
-    font-family: $nimbus-sans-bold;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     font-size: rem(18);
     line-height: (26 / 18);
