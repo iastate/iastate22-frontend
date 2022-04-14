@@ -16,7 +16,7 @@
 }
 
 @font-face {
-  font-family: "nimbus_sans_lbold";
+  font-family: "nimbus_sans_lregular";
   src: url("../../fonts/NimbusSanL-Bol-webfont.woff");
   font-weight: 700;
   font-style: normal;
@@ -196,7 +196,7 @@ h1,
 .h1,
 %h1 {
   color: $iastate-red;
-  font-family: $merriweather;
+  font-family: $typeface-serif;
   font-size: rem(50);
   font-weight: normal;
   letter-spacing: 0;
@@ -212,7 +212,7 @@ h2,
 .h2,
 %h2 {
   color: $iastate-red;
-  font-family: $merriweather;
+  font-family: $typeface-serif;
   font-size: rem(30);
   font-weight: 700;
   letter-spacing: 0;
@@ -236,6 +236,7 @@ h3,
 %h3 {
   color: $iastate-red;
   font-family: $nimbus-sans-bold;
+  font-family: $nimbus-sans-regular;
   font-size: rem(21);
   font-weight: 700;
   letter-spacing: 0;
