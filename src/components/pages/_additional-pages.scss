@@ -251,8 +251,8 @@
   }
 }
 
-// A-Z Index Page
-.a-z-index-hero {
+// Red Background Hero - In use on the A-Z Index & Search Pages
+.red-bkgrnd-hero {
   background-color: $iastate-red;
   margin: 0 rem(-36);
   padding: rem(7) rem(36) rem(40);
@@ -278,7 +278,7 @@
   }
 }
 
-.a-z-index-hero__title {
+.red-bkgrnd-hero__title {
   color: $white;
   margin: 0 0 rem(19);
   @include media-breakpoint-up(lg) {
@@ -286,13 +286,22 @@
   }
 }
 
-.a-z-index-hero__message {
-  color: $white;
-  font-family: $typeface-sans-serif;
-  font-weight: 700;
-  line-height: (29 / 18);
-  @include media-breakpoint-up(xxl) {
+.red-bkgrnd-hero__message {
+  @include media-breakpoint-up(xl) {
     margin-left: rem(110);
+  }
+  h2,
+  p {
+    color: $white;
+  }
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
+  p {
+    font-family: $typeface-sans-serif;
+    font-weight: 700;
+    line-height: (29 / 18);
   }
   a {
     color: $white;
@@ -301,6 +310,7 @@
   }
 }
 
+// A-Z Index Page
 .a-z-index-letter-list {
   background-color: $off-white;
   margin: 0 rem(-36);
@@ -416,4 +426,300 @@
     font-size: rem(30);
     line-height: (42 / 30);
   }
+}
+
+// Search Page
+.search-hero {
+  @include media-breakpoint-up(xl) {
+    padding-bottom: rem(40);
+  }
+}
+.search-wrapper__label {
+  position: relative;
+  &:after {
+    content: "";
+    background-color: $iastate-red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: rem(-36);
+    right: rem(-36);
+    pointer-events: none;
+    @include media-breakpoint-up(md) {
+      left: rem(-70);
+      right: rem(-70);
+    }
+    @include media-breakpoint-up(xl) {
+      left: rem(-190);
+      right: rem(-190);
+    }
+  }
+  h3 {
+    color: $white;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+#___gcse_0 {
+  margin-left: rem(-36);
+  margin-right: rem(-36);
+  padding-left: rem(23);
+  padding-right: rem(23);
+  position: relative;
+  z-index: 1;
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-70);
+    margin-right: rem(-70);
+    padding-left: rem(56);
+    padding-right: rem(56);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-190);
+    margin-right: rem(-190);
+    padding-left: rem(175);
+    padding-right: rem(175);
+  }
+}
+
+.gsc-control-cse {
+  padding: 0;
+}
+table.gsc-search-box {
+  position: relative;
+  &:after {
+    content: "";
+    background-color: $iastate-red;
+    position: absolute;
+    top: rem(-14);
+    bottom: rem(-50);
+    left: rem(-37);
+    right: rem(-37);
+    z-index: -1;
+    pointer-events: none;
+    @include media-breakpoint-up(md) {
+      left: rem(-70);
+      right: rem(-70);
+    }
+    @include media-breakpoint-up(xl) {
+      left: rem(-189);
+      right: rem(-189);
+      bottom: rem(-100);
+    }
+  }
+}
+
+#recaptcha-wrapper {
+  margin-top: rem(65) !important;
+}
+
+.gsc-search-box {
+  position: relative;
+  z-index: 100;
+}
+
+input.gsc-input {
+  height: rem(37) !important;
+  border: none !important;
+  font-family: $typeface-sans-serif !important;
+}
+
+.gsst_a .gscb_a {
+  color: rgba($grey4, 0.5) !important;
+  margin-top: rem(4);
+}
+.gsc-search-button-v2 {
+  position: relative;
+  cursor: pointer;
+  background-color: $white !important;
+  border: rem(2) solid $white !important;
+  border-radius: rem(30) !important;
+  padding: rem(8) rem(35) rem(8) rem(20) !important;
+  text-align: center !important;
+  background-image: none !important;
+  height: rem(45);
+  &:hover {
+    &:before {
+      color: $iastate-red !important;
+    }
+  }
+
+  &:before {
+    content: "Search";
+    font-size: rem(18) !important;
+    color: $iastate-maroon !important;
+    font-family: $typeface-sans-serif !important;
+    font-weight: 700 !important;
+    line-height: (25 / 18) !important;
+    transition: 0.2s color ease-in-out;
+  }
+  &:after {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.551' height='12.273'%3E%3Cpath data-name='Path 52' d='m.707.707 5.43 5.429-5.43 5.43' fill='none' stroke='%237c2529' stroke-width='2'/%3E%3C/svg%3E") !important;
+    position: absolute;
+    right: rem(14);
+    top: rem(14);
+  }
+  svg {
+    display: none;
+  }
+}
+
+.gs-result .gs-title * {
+  color: $iastate-maroon !important;
+  font-family: $typeface-sans-serif !important;
+  font-weight: 700 !important;
+  font-size: rem(21) !important;
+  line-height: (30 / 21) !important;
+}
+
+.gsc-results-wrapper-visible {
+  position: relative;
+  z-index: 100;
+}
+
+.gsc-wrapper {
+  min-height: rem(32);
+}
+
+.gsc-above-wrapper-area {
+  border: none !important;
+  margin-bottom: rem(30);
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem(80);
+  }
+}
+
+form.gsc-search-box {
+  margin-bottom: rem(20) !important;
+}
+
+.gsc-result-info {
+  color: $white !important;
+  font-family: $typeface-sans-serif !important;
+  font-weight: 700 !important;
+  @include media-breakpoint-up(lg) {
+    font-size: rem(16) !important;
+    line-height: (33 / 16) !important;
+  }
+}
+
+.gsc-orderby-container {
+  display: none;
+}
+.gs-webResult.gs-result {
+  display: flex;
+  flex-direction: column;
+}
+
+.gsc-url-top {
+  order: 1;
+  margin-top: rem(10) !important;
+}
+
+.gsc-webResult.gsc-result {
+  padding-bottom: rem(30) !important;
+  margin-bottom: rem(20) !important;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: rem(-18);
+    right: rem(-18);
+    border-bottom: rem(1) solid $light-grey !important;
+    @include media-breakpoint-up(xl) {
+      left: rem(-112);
+      right: rem(-112);
+    }
+  }
+}
+
+.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet {
+  font-family: $typeface-sans-serif !important;
+  line-height: (29 / 16) !important;
+  @include media-breakpoint-up(lg) {
+    font-size: rem(16) !important;
+    margin-top: rem(10) !important;
+  }
+}
+
+.gs-webResult div.gs-visibleUrl {
+  color: $grey3 !important;
+  font-family: $typeface-sans-serif !important;
+  font-size: rem(13) !important;
+  font-style: italic !important;
+}
+
+.gsc-cursor-box {
+  text-align: center !important;
+  @include media-breakpoint-up(lg) {
+    margin-top: rem(50) !important;
+    margin-bottom: rem(50) !important;
+  }
+}
+
+.gsc-cursor-page {
+  font-family: $typeface-sans-serif !important;
+  font-weight: 700 !important;
+  font-size: rem(21) !important;
+  line-height: (40 / 21) !important;
+  color: $iastate-maroon !important;
+  width: rem(21) !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  position: relative !important;
+  @include media-breakpoint-up(lg) {
+    font-size: rem(30) !important;
+    line-height: (40 / 30) !important;
+    width: rem(40) !important;
+  }
+  &.gsc-cursor-current-page {
+    color: $iastate-red !important;
+    &:before {
+      opacity: 1;
+      border-color: $iastate-red;
+    }
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: rem(3);
+    width: rem(22);
+    left: 50%;
+    margin-left: rem(-11);
+    border-bottom: rem(3) solid $iastate-maroon;
+    opacity: 0;
+    transition: 0.2s opacity ease-in-out;
+    @include media-breakpoint-up(lg) {
+      width: rem(38);
+      margin-left: rem(-19);
+      bottom: rem(-7);
+    }
+  }
+}
+
+.gs-no-results-result .gs-snippet {
+  background-color: transparent !important;
+  border: none !important;
+  font-family: $typeface-sans-serif !important;
+  font-weight: 700 !important;
+  font-size: rem(21) !important;
+  line-height: (40 / 21) !important;
+  color: $iastate-maroon !important;
+}
+
+.gcsc-find-more-on-google {
+  display: none !important;
+}
+
+// hiding ads for styling purposes, disable for production
+// University should be able to use non-profit status to hide ads
+// https://support.google.com/programmable-search/answer/4542102?hl=en&ctx=topic
+.gsc-adBlock {
+  display: none !important;
 }
