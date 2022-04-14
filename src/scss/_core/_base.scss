@@ -109,6 +109,15 @@ ol {
   }
 }
 
+// helper class to negate paragraph widgets for flush components
+.paragraph-widget-no-margin-top {
+  margin-top: 0 !important;
+}
+
+.paragraph-widget-no-margin-bottom {
+  margin-bottom: 0 !important;
+}
+
 // external link text for screen readers
 [target="_blank"] {
   &:after {
