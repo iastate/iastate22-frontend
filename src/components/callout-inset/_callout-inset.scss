@@ -71,7 +71,7 @@
       bottom: 0;
     }
     @include media-breakpoint-up(xl) {
-      left: rem(180);
+      left: rem(190);
     }
   }
 }
@@ -92,9 +92,15 @@
     padding: rem(60) rem(70) rem(80);
   }
   @include media-breakpoint-up(xl) {
-    margin-right: rem(180);
-    margin-left: rem(180);
+    margin-right: rem(190);
+    margin-left: rem(190);
     padding: rem(60) rem(114) rem(107);
+  }
+  p {
+    line-height: (29 / 18);
+    @include media-breakpoint-up(md) {
+      line-height: (26 / 16);
+    }
   }
 }
 
