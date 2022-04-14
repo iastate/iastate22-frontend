@@ -155,12 +155,12 @@
           {
             "url": "https://iastate.edu",
             "text": "New Student Programs",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           },
           {
             "url": "https://iastate.edu",
             "text": "Admitted Student Information",
-            "variant": "link-secondary"
+            "variant": "iastate22-link-secondary"
           }
         ]
       }

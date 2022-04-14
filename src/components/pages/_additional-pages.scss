@@ -193,7 +193,7 @@
       }
     }
   }
-  .link-secondary {
+  .iastate22-link-secondary {
     margin: 0;
   }
 }
@@ -288,7 +288,7 @@
 
 .a-z-index-hero__message {
   color: $white;
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-weight: 700;
   line-height: (29 / 18);
   @include media-breakpoint-up(xxl) {
@@ -334,7 +334,7 @@
         text-decoration: none;
         color: $iastate-maroon;
         text-decoration: none;
-        font-family: $nimbus-sans-bold;
+        font-family: $typeface-sans-serif;
         font-weight: 700;
         font-size: rem(21);
         line-height: (40 / 21);

@@ -224,7 +224,7 @@
   color: $white;
   line-height: (29 / 18);
   @include media-breakpoint-up(xl) {
-    font-family: $nimbus-sans-bold;
+    font-family: $typeface-sans-serif;
     font-weight: 700;
     line-height: (29 / 16);
   }
@@ -629,7 +629,7 @@
 .college-ctas__cta-intro {
   color: $white;
   line-height: (29 / 18);
-  font-family: $nimbus-sans-bold;
+  font-family: $typeface-sans-serif;
   font-weight: 700;
 }
 
