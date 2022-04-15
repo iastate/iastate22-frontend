@@ -50,8 +50,8 @@
                 <nav class="site-header__mega-menu-main-nav" aria-label="Main">
                   <ul>
                     {% for link in full_nav %}
-                      <li>
-                        <a href="{{ link.url }}">{{ link.title }}</a>
+                      <li {% if not link.children %}class="site-header__parent-link-no-subnav-wrap" {% endif %}>
+                        <a {% if not link.children %}class="site-header__parent-link-no-subnav" {% endif %}href="{{ link.url }}" {% if link.newtab %}target="_blank"{% endif %}>{{ link.title }}</a>
                         {% if link.children|length %}
                           <ul{% if link.children|length > 5 %} class="two-column-dropdown"{% endif %}>
                             {% for child in link.children %}
