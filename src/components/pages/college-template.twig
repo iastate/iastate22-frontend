@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="college-research">
+    <div class="college-research" id="{{ research.id }}">
       <div class="college-research__intro-wrap">
         <h2 class="college-research__title">{{ research.title }}</h2>
         <div class="college-research__intro">{{ research.intro|raw }}</div>
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="college-innovation">
+    <div class="college-innovation" id="{{ innovation.id }}">
       <div class="college-innovation__intro-wrap">
         <h2 class="college-innovation__title">{{ innovation.title }}</h2>
         <div class="college-innovation__intro">{{ innovation.intro|raw }}</div>
@@ -84,13 +84,13 @@
       </div>
     </div>
 
-    <div class="college-opportunities">
+    <div class="college-opportunities" id="{{ opportunities.id }}">
       <div class="paragraph-widget paragraph-widget--callout-inset">
         {% include "@callout-inset" with opportunities.callout_inset %}
       </div>
     </div>
 
-    <div class="college-success">
+    <div class="college-success" id="{{ success.id }}">
       <div class="college-success__intro-career-paths-wrap">
         <div class="college-success__intro-wrap">
           <h2 class="college-success__title">{{ success.title }}</h2>
@@ -114,7 +114,7 @@
       </div>
     </div>
 
-    <div class="college-ctas">
+    <div class="college-ctas" id="{{ ctas.id }}">
       <div class="college-ctas__cta college-ctas__cta-top">
         <h2 class="college-ctas__cta-title">{{ ctas.cta_one.title }}</h2>
         <div class="college-ctas__cta-intro">{{ ctas.cta_one.intro|raw }}</div>
@@ -130,7 +130,7 @@
       </div>
     </div>
 
-    <div class="college-keep-exploring">
+    <div class="college-keep-exploring" id="{{ keep_exploring.id }}">
       {% include "@call-to-action--small" with keep_exploring.call_to_action_small %}
     </div>
 </div>

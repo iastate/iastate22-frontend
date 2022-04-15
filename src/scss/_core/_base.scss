@@ -1,7 +1,11 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  scroll-padding-top: rem(70);
+  @include media-breakpoint-up(xl) {
+    scroll-padding-top: rem(120);
+  }
 }
 
 *,

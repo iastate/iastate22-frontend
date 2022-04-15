@@ -48,23 +48,23 @@
         },
         {
           "title": "Research",
-          "url": "#"
+          "url": "#research"
         },
         {
           "title": "Innovation and Entrepreneurship",
-          "url": "#"
+          "url": "#innovation-entrepreneurship"
         },
         {
           "title": "Opportunities",
-          "url": "#"
+          "url": "#opportunities"
         },
         {
           "title": "Success at lowa State",
-          "url": "#"
+          "url": "#success"
         },
         {
           "title": "Take the Next Step",
-          "url": "#"
+          "url": "#keep-exploring"
         }
       ]
     },
@@ -198,6 +198,7 @@
       ]
     },
     "research": {
+      "id": "research",
       "title": "Research",
       "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>",
       "button_set": {
@@ -224,6 +225,7 @@
       }
     },
     "innovation": {
+      "id": "innovation-entrepreneurship",
       "title": "Innovation and Entrepreneurship",
       "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proiden.</p>",
       "external_news_story": {
@@ -242,6 +244,7 @@
       }
     },
     "opportunities": {
+      "id": "opportunities",
       "callout_inset": {
         "title": "Opportunities",
         "intro_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>",
@@ -261,6 +264,7 @@
       }
     },
     "success": {
+      "id": "success",
       "title": "Success at Iowa State",
       "intro": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
       "link_set": {
@@ -315,6 +319,7 @@
       }
     },
     "ctas": {
+      "id": "calls-to-action",
       "cta_one": {
         "title": "I'm Ready to Apply",
         "intro": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Aliqui.</p>",
@@ -342,6 +347,7 @@
       }
     },
     "keep_exploring": {
+      "id": "keep-exploring",
       "call_to_action_small": {
         "title": "See All That Iowa State Offers Lorem",
         "button_set": {
