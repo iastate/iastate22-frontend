@@ -107,35 +107,37 @@
           }
         ]
       },
-      "sections": [
-        {
-          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-tuition-fees.svg",
-          "title": "Tuition and Fees",
-          "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
-          "link": {
-            "url": "https://www.iastate.edu/",
-            "title": "View Cost of Attendance"
+      "columns": {
+        "columns": [
+          {
+            "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-tuition-fees.svg",
+            "title": "Tuition and Fees",
+            "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
+            "link": {
+              "url": "https://www.iastate.edu/",
+              "title": "View Cost of Attendance"
+            }
+          },
+          {
+            "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-scholarships.svg",
+            "title": "Scholarships",
+            "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
+            "link": {
+              "url": "https://www.iastate.edu/",
+              "title": "Apply for Scholarships"
+            }
+          },
+          {
+            "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-financial-aid.svg",
+            "title": "Financial Aid",
+            "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
+            "link": {
+              "url": "https://www.iastate.edu/",
+              "title": "Learn about Financial Aid"
+            }
           }
-        },
-        {
-          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-scholarships.svg",
-          "title": "Scholarships",
-          "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
-          "link": {
-            "url": "https://www.iastate.edu/",
-            "title": "Apply for Scholarships"
-          }
-        },
-        {
-          "icon": "https://cdn.theme.iastate.edu/img/iastate22/icons/multicolor-icon-financial-aid.svg",
-          "title": "Financial Aid",
-          "description": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>",
-          "link": {
-            "url": "https://www.iastate.edu/",
-            "title": "Learn about Financial Aid"
-          }
-        }
-      ]
+        ]
+      }
     },
     "apply": {
       "title": "Apply",
