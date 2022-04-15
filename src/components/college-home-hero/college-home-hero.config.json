@@ -1,3 +1,44 @@
 {
-  "context": {}
+  "context": {},
+  "variants": [
+    {
+      "name": "featured-image",
+      "context": {
+        "hero": {
+          "image": "../../img/college-hero-featured_fpo.jpg",
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      },
+      "name": "no-image",
+      "context": {
+        "hero": {
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
 }

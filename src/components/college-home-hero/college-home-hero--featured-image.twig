@@ -1,0 +1,9 @@
+<div class="college-home-hero college-home-hero--featured-image">
+  <div class="college-home-hero__media">
+    <img src="{{ hero.image }}" alt="">
+  </div>
+  <div class="college-home-hero__content">
+    <h1 class="college-home-hero__title">{{ hero.title }}</h1>
+    {% include "@button-set" with hero.button_set %}
+  </div>
+</div>
