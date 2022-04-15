@@ -35,7 +35,6 @@ title: Additional Pages Guide
 - Custom section for this page
 - Contains an `h2` title
 - The callout sections below the title are custom to this page and contain an image, title and tertiary link (`.link-tertiary`)
-- The inline `img` elements are sized using the css `object-fit` property (see the home hero section for more info if needed), there is room for three total images, two of which are hidden on mobile and become visible again on tablet sizes
 - The statistic section with room for multiple statistics is custom to this page (the Kitchen Sink `statistic` component only contains room for one statistic)
 
 ## Afford Section
@@ -110,21 +109,49 @@ title: Additional Pages Guide
 
 ## Overview Section
 
-## In Page Nav
+- Custom section for this page
+- Contains an `h2` title, intro text (which outputs raw HTML), and an image
+
+## In-Page Nav
+
+- Custom section for this page
+- The In-Page navigation section contains anchor links to quickly go to individual sections of the college page
+- The links are tertiary links (`.link-tertiary`)
 
 ## Majors, Minors and Certificates (What Can I Study) Section
 
+- Custom section for this page
+- Contains an `h2` title, intro text (which outputs raw HTML), an `h3` subhead and an image, as well as the listing section
+- In the listings section, each listing contains a secondary link (`.iastate22-link-secondary`) with the linked program name, and a `p` which outputs the program type
+
 ## Research Section
+
+- Custom section for this page
+- Contains an `h2` title, intro text (which outputs raw HTML), an instance of the `button-set` component, and an instance of the `external-news-story` component
 
 ## Innovation and Entrepreneurship Section
 
+- Custom section for this page
+- Contains an `h2` title, intro text (which outputs raw HTML), an instance of the `button-set` component, and an instance of the `external-news-story` component
+
 ## Opportunities Section
+
+- This section is an instance of the `callout-inset` component
 
 ## Success Section
 
+- Custom section for this page
+- Contains an `h2` title, intro text (which outputs raw HTML), an instance of the `link-set` component, a list of career paths (output in a `ul`), and a featured news story - which contains an `h3` title an instance of the `card--profile-with-modal` component
+
 ## Call To Action Section
 
+- Custom section for this page
+- Contains two calls to action and a large image
+- Each call to action contains an `h2` title, intro text (which outputs raw HTML), and an instance of the `button-set` component
+
 ## Keep Exploring Section
+
+- This section is an instance of the `call-to-action--small` component
 
 <br>
 <hr>
@@ -132,8 +159,42 @@ title: Additional Pages Guide
 
 # A-Z Index
 
+## Hero Section
+
+- A custom hero section `.red-bkgrnd-hero` is in use for this page, as well as the search page
+- Uses breadcrumb variant `breadcrumb--top-level-pages`
+- Contains an `h1` title and message text (which outputs raw HTML)
+
+## Letter Section
+
+- This section links to each letter of the alphabet for each part of the index
+- If the letter has an entry it will appear as a link, if the letter does not have any entries it will appear greyed out, using a `span` instead of a link
+- A `current_page` attribute is set in the config file, if set to `true` the current page's letter will appear with an active state (similar to the hover state of the other links)
+
+## Entry List Section
+
+- This section lists out all of the index entries per letter (depending on which page the user is currently viewing)
+- The current letter being displayed is output above the listings in an `h2` tag
+- Each entry appears as a secondary-link (`.iastate22-link-secondary`)
+
 <br>
 <hr>
 <br>
 
 # Search
+
+## Hero Section
+
+- A custom hero section `.red-bkgrnd-hero` is in use for this page (also in use on the A-Z Index page)
+
+## Search Section
+
+- The search in use on this page is an instance of [Google Programmable Search](https://programmablesearchengine.google.com/)
+- The form and results are wrapped in div with a class of `search-wrapper`, an `h3` search label has been added above the input field
+- The account used to instantiate the search is a personal account (for styling purposes), the script source should be swapped out for an official Iowa State University instance when used for production
+- Some of the settings in the [control panel](https://programmablesearchengine.google.com/) will need replicated in order to have this appear properly:
+  - Under the Look & Feel tab: Layout: this needs to be set to Full width instead of the default Overlay
+  - Under the Look & Feel tab: Thumbnails: Automatic thumbnails in search results should be turned off
+  - Under the Look & Feel tab: Customize: Google Branding: Google Branding should be set to Disable
+- Ads will be visible in the search results, however Iowa State University should be able to use non-profit status to hide the ads from the results
+  [Google Support Article: Information for non-profits](https://support.google.com/programmable-search/answer/4542102?hl=en&ctx=topic)

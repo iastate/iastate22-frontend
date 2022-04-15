@@ -716,10 +716,3 @@ form.gsc-search-box {
 .gcsc-find-more-on-google {
   display: none !important;
 }
-
-// hiding ads for styling purposes, disable for production
-// University should be able to use non-profit status to hide ads
-// https://support.google.com/programmable-search/answer/4542102?hl=en&ctx=topic
-.gsc-adBlock {
-  display: none !important;
-}
