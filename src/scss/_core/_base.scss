@@ -1,6 +1,11 @@
 html {
   box-sizing: border-box;
   height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: rem(70);
+  @include media-breakpoint-up(xl) {
+    scroll-padding-top: rem(120);
+  }
 }
 
 *,
@@ -106,6 +111,15 @@ ol {
   &.paragraph-widget--text-html {
     margin-bottom: 0;
   }
+}
+
+// helper class to negate paragraph widgets for flush components
+.paragraph-widget-no-margin-top {
+  margin-top: 0 !important;
+}
+
+.paragraph-widget-no-margin-bottom {
+  margin-bottom: 0 !important;
 }
 
 // external link text for screen readers

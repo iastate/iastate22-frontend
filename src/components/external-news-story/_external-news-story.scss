@@ -1,6 +1,18 @@
 .paragraph-widget--external-news-story {
   margin-top: rem(60);
   @extend %extended-component-width;
+  .top-level-page & {
+    margin-left: rem(-36);
+    margin-right: rem(-36);
+    @include media-breakpoint-up(md) {
+      margin-left: rem(-70);
+      margin-right: rem(-70);
+    }
+    @include media-breakpoint-up(xl) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 .external-news-story {
@@ -28,14 +40,21 @@
 .external-news-story__flex-wrap {
   @include media-breakpoint-up(md) {
     display: flex;
+    align-items: flex-start;
   }
 }
 
 .external-news-story__media {
   margin: 0 0 rem(10) 0;
+  @extend %responsive-img;
   @include media-breakpoint-up(md) {
     flex: 0 1 auto;
     width: 37%;
+    min-width: rem(285);
+    margin: 0;
+  }
+  &:before {
+    padding-top: 66.45%;
   }
 }
 

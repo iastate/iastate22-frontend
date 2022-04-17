@@ -21,6 +21,9 @@
   line-height: (68 / 55);
   margin: 0;
   padding: 0;
+  &:after {
+    display: none;
+  }
 }
 
 .statistic__text {

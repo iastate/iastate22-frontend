@@ -57,7 +57,7 @@ title: Homepage Guide
 **Parent class**: `.home-community`
 
 - Section contains room for a subhead, headline, statistic, photography, and a callout with it's own headline, intro copy and button (an instance of the `button` component)
-- The inline `img` elements and are sized using the css `object-fit` property (see the home hero section for more info if needed), there is room for three total images, two of which are hidden on mobile and become visible again on tablet sizes
+- The inline `img` elements are sized using the css `object-fit` property (see the home hero section for more info if needed), there is room for three total images, two of which are hidden on mobile and become visible again on tablet sizes
 
 <hr>
 <br>

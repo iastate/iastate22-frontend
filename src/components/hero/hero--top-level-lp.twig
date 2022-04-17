@@ -1,6 +1,6 @@
 <div class="hero hero--top-level-lp">
   <div class="hero__text-wrap">
-    {% include "@breadcrumb" with breadcrumbs %}
+    {% include "@breadcrumb--top-level-pages" with breadcrumbs %}
     <h1 class="hero__title">{{title}}</h1>
   </div>
   {% if image %}
@@ -8,7 +8,9 @@
     <img src="{{image}}" alt="">
   </div>
   {% endif %}
+  {% if subnav_horizontal %}
   <div class="hero__subnav-wrap">
     {% include "@subnav--horizontal" with subnav_horizontal %}
   </div>
+  {% endif %}
 </div>

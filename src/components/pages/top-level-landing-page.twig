@@ -1,3 +1,6 @@
+<script>
+  document.body.classList.add("top-level-page");
+</script>
 
 <div class="outer-pad">
   {% include "@hero--top-level-lp" with hero %}
@@ -143,9 +146,14 @@
   <div class="paragraph-widget paragraph-widget--blockquote">
     {% include "@blockquote" with pull_quote_no_author %}
   </div>
-  <div class="paragraph-widget paragraph-widget--blockquote">
+  <div class="paragraph-widget paragraph-widget--blockquote paragraph-widget-no-margin-top paragraph-widget-no-margin-bottom">
     {% include "@blockquote" with pull_quote_with_author %}
   </div>
+  {# Temporary to test flush spacing #}
+  <div class="paragraph-widget paragraph-widget--feature-with-large-image paragraph-widget-no-margin-top paragraph-widget-no-margin-bottom">
+    {% include "@feature-with-large-image" with feature_with_large_image %}
+  </div>
+  {# Temporary to test flush spacing #}
   <div class="paragraph-widget paragraph-widget--text-html">
     <div class="text-content">
       <h2>3 Cards—with Images and Links</h2>

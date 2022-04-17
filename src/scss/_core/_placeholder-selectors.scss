@@ -45,6 +45,11 @@
   @include media-breakpoint-up(xl) {
     margin-right: rem(-108);
   }
+  .top-level-page & {
+    @include media-breakpoint-up(xl) {
+      margin-right: 0;
+    }
+  }
 }
 
 %full-width-component {
@@ -57,6 +62,11 @@
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
     margin-right: rem(-298);
+  }
+  .top-level-page & {
+    @include media-breakpoint-up(xl) {
+      margin-right: rem(-190);
+    }
   }
 }
 
