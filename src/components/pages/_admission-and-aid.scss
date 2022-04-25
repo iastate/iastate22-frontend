@@ -318,9 +318,11 @@
 }
 
 .admission-aid-why__statistic {
-  margin-left: rem(36);
-  margin-right: rem(36);
   padding-top: rem(55);
+  @include media-breakpoint-up(sm) {
+    margin-left: rem(36);
+    margin-right: rem(36);
+  }
   @include media-breakpoint-up(lg) {
     margin: 0;
     flex: 0 0 auto;
