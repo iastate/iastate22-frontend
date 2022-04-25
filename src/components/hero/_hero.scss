@@ -69,6 +69,7 @@
     position: absolute;
     top: 0;
     right: rem(-70);
+    left: initial;
     max-width: rem(278);
   }
   @include media-breakpoint-up(xl) {
