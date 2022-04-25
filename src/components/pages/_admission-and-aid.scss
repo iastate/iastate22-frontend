@@ -498,14 +498,17 @@
     }
     .iastate22-button-set {
       margin-bottom: 0;
-      .iastate22-button {
-        border-color: $iastate-maroon;
-        background-color: transparent;
-        .arrow {
-          background-color: $iastate-gold;
-          &:before,
-          &:after {
+      li {
+        .iastate22-button {
+          border-color: $iastate-maroon;
+          background-color: transparent;
+          text-align: center;
+          .arrow {
             background-color: $iastate-gold;
+            &:before,
+            &:after {
+              background-color: $iastate-gold;
+            }
           }
         }
       }
