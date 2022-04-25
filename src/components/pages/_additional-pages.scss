@@ -321,6 +321,9 @@
     color: $white;
     text-decoration-thickness: rem(1);
     text-underline-offset: rem(1);
+    &:hover {
+      color: $iastate-gold;
+    }
   }
 }
 
