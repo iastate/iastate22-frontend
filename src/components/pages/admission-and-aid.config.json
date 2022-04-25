@@ -102,8 +102,9 @@
       "link_set": {
         "links": [
           {
-            "url": "https://www.google.com/",
-            "text": "Try Our Net Price Calculator"
+            "url": "https://iastate.edu",
+            "text": "Try Our Net Price Calculator",
+            "variant": "iastate22-link-external"
           }
         ]
       },

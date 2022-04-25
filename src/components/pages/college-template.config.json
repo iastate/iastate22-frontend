@@ -237,8 +237,9 @@
         "link_set": {
           "links": [
             {
-              "url": "https://www.google.com/",
-              "text": "Read Story"
+              "url": "https://iastate.edu",
+              "text": "Read Story",
+              "variant": "iastate22-link-external"
             }
           ]
         }
@@ -256,8 +257,9 @@
         "link_set": {
           "links": [
             {
-              "url": "https://www.google.com/",
-              "text": "Read Story"
+              "url": "https://iastate.edu",
+              "text": "Read Story",
+              "variant": "iastate22-link-external"
             }
           ]
         }

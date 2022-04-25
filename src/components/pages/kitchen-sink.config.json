@@ -90,8 +90,9 @@
           "variant": "iastate22-link-secondary"
         },
         {
-          "url": "https://www.google.com/",
-          "text": "External Link Style"
+          "url": "https://iastate.edu",
+          "text": "External Link Style",
+          "variant": "iastate22-link-external"
         },
         {
           "url": "https://iastate.edu",
@@ -386,8 +387,9 @@
       "link_set": {
         "links": [
           {
-            "url": "https://www.google.com/",
-            "text": "External Link Style"
+            "url": "https://iastate.edu",
+            "text": "External Link Style",
+            "variant": "iastate22-link-external"
           }
         ]
       }
