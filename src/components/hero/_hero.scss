@@ -63,15 +63,12 @@
 }
 
 .hero__subnav-wrap {
-  position: absolute;
   z-index: 2;
-  left: 0;
-  right: rem(36);
   max-width: rem(342);
   @include media-breakpoint-up(lg) {
+    position: absolute;
     top: 0;
     right: rem(-70);
-    left: initial;
     max-width: rem(278);
   }
   @include media-breakpoint-up(xl) {
