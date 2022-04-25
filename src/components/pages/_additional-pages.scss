@@ -141,10 +141,15 @@
     width: 100%;
     margin: rem(40) 0 0 0;
     @extend %iastate22-button--reverse;
+    transition: 0.2s color ease-in-out, 0.2s background-color ease-in-out, 0.2s padding ease-in-out,
+      0.2s margin-right ease-in-out;
     @include media-breakpoint-up(md) {
       flex: 0 0 auto;
       width: auto;
       margin: 0 0 0 rem(20);
+    }
+    &:hover {
+      margin-right: -5px;
     }
   }
 }
