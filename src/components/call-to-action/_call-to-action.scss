@@ -97,10 +97,11 @@
       right: 0;
       width: 40%;
       max-width: rem(520);
-      padding: rem(30) rem(36) rem(10);
+      padding: rem(25) rem(45);
     }
     @include media-breakpoint-up(xl) {
       right: rem(40);
+      padding: rem(40) rem(90) rem(30);
     }
     @include media-breakpoint-up(xxl) {
       right: rem(82);
