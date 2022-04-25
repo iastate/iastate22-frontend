@@ -42,6 +42,9 @@
       }
       a {
         color: $white;
+        &:hover {
+          color: $iastate-gold;
+        }
       }
     }
   }
