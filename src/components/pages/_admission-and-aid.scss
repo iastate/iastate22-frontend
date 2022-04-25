@@ -510,6 +510,10 @@
               background-color: $iastate-gold;
             }
           }
+          &:hover {
+            color: $white;
+            background-color: $iastate-maroon;
+          }
         }
       }
     }
