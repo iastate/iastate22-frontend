@@ -557,6 +557,16 @@ table.gsc-search-box {
   z-index: 100;
 }
 
+.gsc-input-box {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+  padding-right: rem(12) !important;
+}
+
 input.gsc-input {
   height: rem(37) !important;
   border: none !important;
@@ -621,10 +631,24 @@ input.gsc-input {
 }
 
 .gsc-above-wrapper-area {
+  display: block !important;
   border: none !important;
   margin-bottom: rem(30);
+  background-color: $iastate-red;
+  position: relative;
   @include media-breakpoint-up(lg) {
     margin-bottom: rem(80);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $iastate-red;
+    top: 0;
+    left: -50vw;
+    width: 150vw;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
   }
 }
 
@@ -752,6 +776,20 @@ form.gsc-search-box {
   color: $iastate-maroon !important;
 }
 
+.gcsc-find-more-on-google-root,
 .gcsc-find-more-on-google {
   display: none !important;
+}
+
+.gsc-cursor-next-page,
+.gsc-cursor-numbered-page,
+.gsc-cursor-final-page {
+  font-size: rem(16) !important;
+  color: $iastate-maroon !important;
+  font-family: $typeface-sans-serif;
+  font-weight: 700;
+}
+
+.gsc-cursor-chevron {
+  fill: $iastate-maroon !important;
 }
