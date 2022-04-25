@@ -182,7 +182,7 @@
       }
     }
     > li {
-      margin-bottom: rem(40);
+      margin-bottom: rem(48);
       > ul {
         margin-top: rem(20);
         padding-right: rem(20);
@@ -190,7 +190,7 @@
           margin-top: rem(35);
         }
         > li {
-          margin-bottom: rem(20);
+          margin-bottom: rem(28);
           @include media-breakpoint-up(lg) {
             margin-bottom: rem(35);
           }
