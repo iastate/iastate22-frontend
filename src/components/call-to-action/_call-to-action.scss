@@ -53,13 +53,12 @@
   }
 
   .call-to-action__copy-wrap {
-    padding-right: rem(39);
-    padding-left: rem(39);
-    text-align: right;
+    text-align: left;
     @include media-breakpoint-up(md) {
+      text-align: right;
       flex: 0 1 auto;
       width: 60%;
-      padding-left: 0;
+      padding-right: rem(39);
       max-width: rem(520);
     }
     @include media-breakpoint-up(lg) {
