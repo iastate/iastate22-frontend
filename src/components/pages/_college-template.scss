@@ -244,6 +244,7 @@
   @include media-breakpoint-up(lg) {
     width: 48%;
     margin-top: rem(-47);
+    padding: rem(48) rem(44);
   }
   @include media-breakpoint-up(xl) {
     width: 68%;
