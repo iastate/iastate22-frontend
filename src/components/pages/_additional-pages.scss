@@ -481,8 +481,9 @@
       right: rem(-70);
     }
     @include media-breakpoint-up(xl) {
-      left: rem(-190);
-      right: rem(-190);
+      left: -50vw;
+      width: 150vw;
+      right: initial;
     }
   }
   h3 {
@@ -533,9 +534,10 @@ table.gsc-search-box {
       right: rem(-70);
     }
     @include media-breakpoint-up(xl) {
-      left: rem(-189);
-      right: rem(-189);
       bottom: rem(-100);
+      left: -50vw;
+      width: 150vw;
+      right: initial;
     }
   }
 }
