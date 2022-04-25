@@ -34,7 +34,7 @@
 
 .college-hero__breadcrumbs {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: rem(20);
   top: rem(60);
   @include media-breakpoint-up(md) {
@@ -97,7 +97,6 @@
   position: absolute;
   top: 83%;
   transform: translateY(-83%);
-  z-index: 1;
   left: rem(36);
   margin: 0;
   padding: 0;
@@ -125,9 +124,9 @@
   width: 130vw;
   left: rem(-80);
   mix-blend-mode: multiply;
-  // top: 98%;
-  // transform: translateY(-95%);
+  z-index: 1;
   bottom: 0;
+  pointer-events: none;
   @include media-breakpoint-up(md) {
     left: rem(-3);
     width: 90vw;
