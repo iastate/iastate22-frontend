@@ -191,6 +191,7 @@
         }
         > li {
           margin-bottom: rem(28);
+          break-inside: avoid;
           @include media-breakpoint-up(lg) {
             margin-bottom: rem(35);
           }
