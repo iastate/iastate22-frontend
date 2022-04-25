@@ -139,7 +139,7 @@
 
   button[type="submit"] {
     width: 100%;
-    margin-top: rem(40) 0 0 0;
+    margin: rem(40) 0 0 0;
     @extend %iastate22-button--reverse;
     @include media-breakpoint-up(md) {
       flex: 0 0 auto;
