@@ -69,6 +69,10 @@
   @include media-breakpoint-up(lg) {
     min-height: initial;
   }
+  @include media-breakpoint-up(xxl) {
+    margin-left: rem(-200);
+    margin-right: rem(-200);
+  }
 
   &:before {
     padding-top: 172.46%;
@@ -140,6 +144,9 @@
   }
   @include media-breakpoint-up(xl) {
     left: rem(45);
+  }
+  @include media-breakpoint-up(xxl) {
+    max-width: rem(1450);
   }
 
   svg {
