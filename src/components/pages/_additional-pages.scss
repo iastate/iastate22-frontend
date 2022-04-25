@@ -521,7 +521,7 @@
 }
 
 .gsc-control-cse {
-  padding: 0;
+  padding-bottom: 0 !important;
 }
 table.gsc-search-box {
   position: relative;
@@ -653,7 +653,10 @@ input.gsc-input {
 }
 
 form.gsc-search-box {
-  margin-bottom: rem(20) !important;
+  margin-bottom: 0 !important;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem(20) !important;
+  }
 }
 
 .gsc-result-info {
