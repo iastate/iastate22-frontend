@@ -22,8 +22,28 @@
           }
         ]
       },
-      "image_mobile": "../../img/college-template-hero-fpo-mobile.jpg",
-      "image_desktop": "../../img/college-template-hero-fpo-desktop.jpg",
+      "images": [
+        {
+          "mobile": {
+            "src": "http://via.placeholder.com/621x989",
+            "alt": "lorem alt text"
+          },
+          "desktop": {
+            "src": "http://via.placeholder.com/2160x1149",
+            "alt": "lorem alt text"
+          }
+        },
+        {
+          "mobile": {
+            "src": "/img/college-template-hero-fpo-mobile.jpg",
+            "alt": "lorem alt text"
+          },
+          "desktop": {
+            "src": "/img/college-template-hero-fpo-desktop.jpg",
+            "alt": "lorem alt text"
+          }
+        }
+      ],
       "title": "Agriculture and Life Sciences"
     },
     "overview": {
@@ -217,8 +237,9 @@
         "link_set": {
           "links": [
             {
-              "url": "https://www.google.com/",
-              "text": "Read Story"
+              "url": "https://iastate.edu",
+              "text": "Read Story",
+              "variant": "iastate22-link-external"
             }
           ]
         }
@@ -236,8 +257,9 @@
         "link_set": {
           "links": [
             {
-              "url": "https://www.google.com/",
-              "text": "Read Story"
+              "url": "https://iastate.edu",
+              "text": "Read Story",
+              "variant": "iastate22-link-external"
             }
           ]
         }

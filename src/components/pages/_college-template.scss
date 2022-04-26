@@ -34,7 +34,7 @@
 
 .college-hero__breadcrumbs {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: rem(20);
   top: rem(60);
   @include media-breakpoint-up(md) {
@@ -53,6 +53,9 @@
       }
       a {
         color: $white;
+        &:hover {
+          color: $iastate-gold;
+        }
       }
     }
   }
@@ -65,6 +68,10 @@
   }
   @include media-breakpoint-up(lg) {
     min-height: initial;
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-left: rem(-200);
+    margin-right: rem(-200);
   }
 
   &:before {
@@ -82,24 +89,6 @@
     left: 0;
     right: 0;
   }
-
-  .college-hero__media-mobile,
-  .college-hero__media-desktop {
-    object-position: center top;
-  }
-
-  .college-hero__media-mobile {
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
-  }
-
-  .college-hero__media-desktop {
-    display: none;
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
-  }
 }
 
 .college-hero__title {
@@ -112,7 +101,6 @@
   position: absolute;
   top: 83%;
   transform: translateY(-83%);
-  z-index: 1;
   left: rem(36);
   margin: 0;
   padding: 0;
@@ -140,9 +128,9 @@
   width: 130vw;
   left: rem(-80);
   mix-blend-mode: multiply;
-  // top: 98%;
-  // transform: translateY(-95%);
+  z-index: 1;
   bottom: 0;
+  pointer-events: none;
   @include media-breakpoint-up(md) {
     left: rem(-3);
     width: 90vw;
@@ -156,6 +144,9 @@
   }
   @include media-breakpoint-up(xl) {
     left: rem(45);
+  }
+  @include media-breakpoint-up(xxl) {
+    max-width: rem(1450);
   }
 
   svg {
@@ -187,6 +178,19 @@
     margin-left: rem(-190);
     margin-right: rem(-190);
     padding-right: rem(82);
+  }
+  &:before {
+    @include media-breakpoint-up(xl) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: rem(-200);
+      right: rem(-200);
+      bottom: 0;
+      background-color: $iastate-red;
+      z-index: -1;
+      max-width: 2000px;
+    }
   }
   .iastate22-button-set {
     .iastate22-button {
@@ -254,7 +258,7 @@
   background-color: $off-white;
   margin-top: rem(-100);
   margin-bottom: rem(60);
-  padding: rem(48) rem(28);
+  padding: rem(48) rem(44);
   position: relative;
   @include media-breakpoint-up(lg) {
     width: 48%;
@@ -540,8 +544,6 @@
   margin-bottom: rem(40);
   @include media-breakpoint-up(sm) {
     max-width: rem(344);
-    margin-left: auto;
-    margin-right: auto;
   }
   @include media-breakpoint-up(lg) {
     flex: 0 0 auto;
@@ -630,7 +632,6 @@
   }
   .iastate22-button {
     @extend %iastate22-button--reverse;
-    margin-top: rem(30);
   }
 }
 
@@ -665,6 +666,7 @@
 .college-keep-exploring {
   margin-left: rem(-36);
   margin-right: rem(-36);
+  position: relative;
   @include media-breakpoint-up(md) {
     margin-left: rem(-70);
     margin-right: rem(-70);
@@ -672,6 +674,18 @@
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
     margin-right: rem(-190);
+  }
+  &:before {
+    @include media-breakpoint-up(xl) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50vw;
+      width: 150vw;
+      bottom: 0;
+      background-color: $off-white;
+      z-index: -1;
+    }
   }
   .call-to-action--small {
     padding-bottom: rem(60);

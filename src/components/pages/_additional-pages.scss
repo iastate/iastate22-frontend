@@ -139,12 +139,17 @@
 
   button[type="submit"] {
     width: 100%;
-    margin-top: rem(40) 0 0 0;
+    margin: rem(40) 0 0 0;
     @extend %iastate22-button--reverse;
+    transition: 0.2s color ease-in-out, 0.2s background-color ease-in-out, 0.2s padding ease-in-out,
+      0.2s margin-right ease-in-out;
     @include media-breakpoint-up(md) {
       flex: 0 0 auto;
       width: auto;
       margin: 0 0 0 rem(20);
+    }
+    &:hover {
+      margin-right: -5px;
     }
   }
 }
@@ -177,7 +182,7 @@
       }
     }
     > li {
-      margin-bottom: rem(40);
+      margin-bottom: rem(48);
       > ul {
         margin-top: rem(20);
         padding-right: rem(20);
@@ -185,7 +190,8 @@
           margin-top: rem(35);
         }
         > li {
-          margin-bottom: rem(20);
+          margin-bottom: rem(28);
+          break-inside: avoid;
           @include media-breakpoint-up(lg) {
             margin-bottom: rem(35);
           }
@@ -239,7 +245,9 @@
     max-width: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    @include media-breakpoint-up(xl) {
+      justify-content: flex-end;
+    }
     @include media-breakpoint-up(xxl) {
       width: 70%;
     }
@@ -256,6 +264,7 @@
   background-color: $iastate-red;
   margin: 0 rem(-36);
   padding: rem(7) rem(36) rem(40);
+  position: relative;
   @include media-breakpoint-up(md) {
     margin-left: rem(-70);
     margin-right: rem(-70);
@@ -266,6 +275,19 @@
     margin-right: rem(-190);
     padding: rem(30) rem(82) rem(60);
   }
+  &:before {
+    @include media-breakpoint-up(xl) {
+      content: "";
+      position: absolute;
+      background-color: $iastate-red;
+      top: 0;
+      left: -50vw;
+      width: 150vw;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
   .iastate22-breadcrumb__list {
     li {
       &:after {
@@ -273,6 +295,9 @@
       }
       a {
         color: $white;
+        &:hover {
+          color: $iastate-gold;
+        }
       }
     }
   }
@@ -307,6 +332,9 @@
     color: $white;
     text-decoration-thickness: rem(1);
     text-underline-offset: rem(1);
+    &:hover {
+      color: $iastate-gold;
+    }
   }
 }
 
@@ -315,6 +343,7 @@
   background-color: $off-white;
   margin: 0 rem(-36);
   padding: rem(19) rem(36) rem(14);
+  position: relative;
   @include media-breakpoint-up(md) {
     margin-left: rem(-70);
     margin-right: rem(-70);
@@ -324,6 +353,19 @@
     margin-left: rem(-190);
     margin-right: rem(-190);
     padding: rem(40) rem(70) rem(35);
+  }
+  &:before {
+    @include media-breakpoint-up(xl) {
+      content: "";
+      position: absolute;
+      background-color: $off-white;
+      top: 0;
+      left: -50vw;
+      width: 150vw;
+      bottom: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
   }
   ul {
     display: flex;
@@ -450,8 +492,9 @@
       right: rem(-70);
     }
     @include media-breakpoint-up(xl) {
-      left: rem(-190);
-      right: rem(-190);
+      left: -50vw;
+      width: 150vw;
+      right: initial;
     }
   }
   h3 {
@@ -483,7 +526,7 @@
 }
 
 .gsc-control-cse {
-  padding: 0;
+  padding-bottom: 0 !important;
 }
 table.gsc-search-box {
   position: relative;
@@ -502,9 +545,10 @@ table.gsc-search-box {
       right: rem(-70);
     }
     @include media-breakpoint-up(xl) {
-      left: rem(-189);
-      right: rem(-189);
       bottom: rem(-100);
+      left: -50vw;
+      width: 150vw;
+      right: initial;
     }
   }
 }
@@ -516,6 +560,16 @@ table.gsc-search-box {
 .gsc-search-box {
   position: relative;
   z-index: 100;
+}
+
+.gsc-input-box {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-radius: 0 !important;
+}
+
+.gsc-search-box-tools .gsc-search-box .gsc-input {
+  padding-right: rem(12) !important;
 }
 
 input.gsc-input {
@@ -582,15 +636,32 @@ input.gsc-input {
 }
 
 .gsc-above-wrapper-area {
+  display: block !important;
   border: none !important;
   margin-bottom: rem(30);
+  background-color: $iastate-red;
+  position: relative;
   @include media-breakpoint-up(lg) {
     margin-bottom: rem(80);
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: $iastate-red;
+    top: 0;
+    left: -50vw;
+    width: 150vw;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
   }
 }
 
 form.gsc-search-box {
-  margin-bottom: rem(20) !important;
+  margin-bottom: 0 !important;
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem(20) !important;
+  }
 }
 
 .gsc-result-info {
@@ -713,6 +784,20 @@ form.gsc-search-box {
   color: $iastate-maroon !important;
 }
 
+.gcsc-find-more-on-google-root,
 .gcsc-find-more-on-google {
   display: none !important;
+}
+
+.gsc-cursor-next-page,
+.gsc-cursor-numbered-page,
+.gsc-cursor-final-page {
+  font-size: rem(16) !important;
+  color: $iastate-maroon !important;
+  font-family: $typeface-sans-serif;
+  font-weight: 700;
+}
+
+.gsc-cursor-chevron {
+  fill: $iastate-maroon !important;
 }

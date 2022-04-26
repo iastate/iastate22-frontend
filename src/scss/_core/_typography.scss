@@ -2,32 +2,32 @@
 ========================================================================== */
 
 @font-face {
-  font-family: "nimbus_sans_lregular";
-  src: url("../../fonts/NimbusSanL-Reg-webfont.woff");
-  // src: url('https://cdn.theme.iastate.edu/nimbus-sans/fonts/NimbusSanL-Lig.woff') format('woff');
-  font-weight: normal;
+  font-family: "Nimbus Sans";
+  src: url("https://cdn.theme.iastate.edu/fonts/NimbusSanL-Reg.woff") format("woff"),
+    url("https://cdn.theme.iastate.edu/fonts/NimbusSanL-Reg.ttf") format("truetype");
   font-style: normal;
+  font-weight: 400;
 }
-
 @font-face {
-  font-family: "nimbus_sans_lregular";
-  src: url("../../fonts/NimbusSanL-RegIta-webfont.woff");
-  font-weight: normal;
+  font-family: "Nimbus Sans";
+  src: url("https://cdn.theme.iastate.edu/fonts/NimbusSanL-RegIta.woff") format("woff"),
+    url("https://cdn.theme.iastate.edu/fonts/NimbusSanL-RegIta.ttf") format("truetype");
   font-style: italic;
+  font-weight: 400;
 }
-
 @font-face {
-  font-family: "nimbus_sans_lregular";
-  src: url("../../fonts/NimbusSanL-Bol-webfont.woff");
-  font-weight: 700;
+  font-family: "Nimbus Sans";
+  src: url("https://cdn.theme.iastate.edu/fonts/NimbusSanL-Bol.woff") format("woff"),
+    url("https://cdn.theme.iastate.edu/fonts/NimbusSanL-Bol.ttf") format("truetype");
   font-style: normal;
-}
-
-@font-face {
-  font-family: "nimbus_sans_lregular";
-  src: url("../../fonts/NimbusSanL-BolIta-webfont.woff");
   font-weight: 700;
+}
+@font-face {
+  font-family: "Nimbus Sans";
+  src: url("https://cdn.theme.iastate.edu/fonts/NimbusSanL-BolIta.woff") format("woff"),
+    url("https://cdn.theme.iastate.edu/fonts/NimbusSanL-BolIta.ttf") format("truetype");
   font-style: italic;
+  font-weight: 700;
 }
 
 /* Base

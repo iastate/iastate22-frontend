@@ -46,7 +46,8 @@ title: Additional Pages Guide
 
 ## Apply Section
 
-- Modified version of the `callout-inset` component
+- Modified version of the `callout-inset` component, which features a button in the first "inset" part, and secondary links in the bottom cta part
+- The markup has been pulled from the `callout-inset` component, but since there are differences, the actual component is not in use here
 
 ## Links Section
 

@@ -15,6 +15,7 @@ import privacyConsentInit from "../components/privacy-consent/privacy-consent";
 import accordionsInit from "./components/accordion";
 import videoEmbedInit from "./components/video-embed";
 import homeInit from "./pages/home";
+import initCollegeHeroes from "./pages/college-template";
 
 /**
  * Init
@@ -31,6 +32,7 @@ accordionsInit();
 subnavInit();
 videoEmbedInit();
 homeInit();
+initCollegeHeroes();
 
 /**
  * Example VueJS app
