@@ -668,6 +668,7 @@
 .college-keep-exploring {
   margin-left: rem(-36);
   margin-right: rem(-36);
+  position: relative;
   @include media-breakpoint-up(md) {
     margin-left: rem(-70);
     margin-right: rem(-70);
@@ -675,6 +676,18 @@
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
     margin-right: rem(-190);
+  }
+  &:before {
+    @include media-breakpoint-up(xl) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50vw;
+      width: 150vw;
+      bottom: 0;
+      background-color: $off-white;
+      z-index: -1;
+    }
   }
   .call-to-action--small {
     padding-bottom: rem(60);
