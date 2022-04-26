@@ -67,6 +67,7 @@ All images should be added to `src/images` which compiles to `build/images/*`.
 - In `_placeholder-selectors.scss`, `%responsive-img` is a placeholder selector which sets up object-fit for images and the padding-top percentage for the associated pseudo element which sets the height of the image
 - In `_placeholder-selectors.scss`, `.caption` is a re-used type style for image and video captions
 - In `_placeholder-selectors.scss`, `.arrow` is the arrow shape used throughout various button and nav styles
+- In `_base.scss`, there are two helper classes for remove the space above and below paragraph widgets. `.paragraph-widget-no-margin-bottom` will reduce the `margin-bottom` of the widget to zero and `.paragraph-widget-no-margin-top` will reduce the `margin-top` top zero. These both have `!important` tags attached to ensure there are no conflicts.
 
 ### JS
 
