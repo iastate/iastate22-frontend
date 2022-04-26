@@ -25,21 +25,31 @@
       "images": [
         {
           "mobile": {
-            "src": "http://via.placeholder.com/621x989",
-            "alt": "lorem alt text"
-          },
-          "desktop": {
-            "src": "http://via.placeholder.com/2160x1149",
-            "alt": "lorem alt text"
-          }
-        },
-        {
-          "mobile": {
             "src": "/img/college-template-hero-fpo-mobile.jpg",
             "alt": "lorem alt text"
           },
           "desktop": {
             "src": "/img/college-template-hero-fpo-desktop.jpg",
+            "alt": "lorem alt text"
+          }
+        },
+        {
+          "mobile": {
+            "src": "/img/college-template-hero-fpo-mobile-2.jpg",
+            "alt": "lorem alt text"
+          },
+          "desktop": {
+            "src": "/img/college-template-hero-fpo-desktop-2.jpg",
+            "alt": "lorem alt text"
+          }
+        },
+        {
+          "mobile": {
+            "src": "/img/college-template-hero-fpo-mobile-3.jpg",
+            "alt": "lorem alt text"
+          },
+          "desktop": {
+            "src": "/img/college-template-hero-fpo-desktop-3.jpg",
             "alt": "lorem alt text"
           }
         }
@@ -343,7 +353,7 @@
     "ctas": {
       "id": "calls-to-action",
       "cta_one": {
-        "title": "I'm Ready to Apply",
+        "title": "I&rsquo;m Ready to Apply",
         "intro": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut Aliqui.</p>",
         "button_set": {
           "items": [
@@ -356,7 +366,7 @@
       },
       "image": "../../img/ready-to-apply-campus-photo.jpg",
       "cta_two": {
-        "title": "I'm Ready to Accept",
+        "title": "I&rsquo;m Ready to Accept",
         "intro": "<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>",
         "button_set": {
           "items": [
