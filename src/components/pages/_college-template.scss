@@ -179,6 +179,19 @@
     margin-right: rem(-190);
     padding-right: rem(82);
   }
+  &:before {
+    @include media-breakpoint-up(xl) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: rem(-200);
+      right: rem(-200);
+      bottom: 0;
+      background-color: $iastate-red;
+      z-index: -1;
+      max-width: 2000px;
+    }
+  }
   .iastate22-button-set {
     .iastate22-button {
       @extend %iastate22-button--reverse;
