@@ -245,7 +245,9 @@
     max-width: none;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    @include media-breakpoint-up(xl) {
+      justify-content: flex-end;
+    }
     @include media-breakpoint-up(xxl) {
       width: 70%;
     }
