@@ -20,10 +20,33 @@
             ]
           }
         }
-      },
+      }
+    },
+    {
       "name": "no-image",
       "context": {
         "hero": {
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "supporting-image",
+      "context": {
+        "hero": {
+          "image": "../../img/college-hero-supporting_fpo.jpg",
           "title": "Hero Title Lorem Ipsum Dolor",
           "button_set": {
             "items": [

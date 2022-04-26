@@ -2,17 +2,12 @@
   position: relative;
   &.college-home-hero--no-image {
     background-color: $iastate-red;
-    // margin: 0 rem(-36);
-    padding: rem(7) rem(36) rem(40);
+    padding: rem(50) rem(36);
     @include media-breakpoint-up(md) {
-      // margin-left: rem(-70);
-      // margin-right: rem(-70);
-      padding: rem(17) rem(70) rem(50);
+      padding: rem(60) rem(70);
     }
     @include media-breakpoint-up(xl) {
-      // margin-left: rem(-190);
-      // margin-right: rem(-190);
-      padding: rem(30) rem(82) rem(60);
+      padding: rem(105) rem(82);
     }
   }
 
@@ -68,6 +63,11 @@
     @include media-breakpoint-up(lg) {
       width: 60%;
       max-width: rem(750);
+    }
+  }
+  .college-home-hero--no-image & {
+    .iastate22-button-set {
+      margin-bottom: 0;
     }
   }
 }
