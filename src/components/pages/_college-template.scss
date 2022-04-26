@@ -544,8 +544,6 @@
   margin-bottom: rem(40);
   @include media-breakpoint-up(sm) {
     max-width: rem(344);
-    margin-left: auto;
-    margin-right: auto;
   }
   @include media-breakpoint-up(lg) {
     flex: 0 0 auto;
