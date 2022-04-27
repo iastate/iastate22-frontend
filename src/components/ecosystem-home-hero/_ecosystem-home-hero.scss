@@ -11,6 +11,15 @@
     }
   }
 
+  &.ecosystem-home-hero--supporting-image {
+    background-color: $iastate-red;
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+  }
+
   .iastate22-button-set {
     ul {
       @include media-breakpoint-up(md) {
@@ -33,7 +42,7 @@
 
   .ecosystem-home-hero--featured-image & {
     &:before {
-      padding-top: 172.46%;
+      padding-top: 128%;
       @include media-breakpoint-up(md) {
         padding-top: 53.19%;
       }
@@ -49,15 +58,31 @@
       z-index: 1;
     }
   }
+
   .ecosystem-home-hero--background-video & {
     iframe {
       position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       z-index: 1;
       pointer-events: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 177.77vh;
+      @include media-breakpoint-up(md) {
+        min-width: initial;
+      }
+    }
+  }
+
+  .ecosystem-home-hero--supporting-image & {
+    @include media-breakpoint-up(md) {
+      flex: 0 1 auto;
+      width: 40%;
+    }
+    &:before {
+      padding-top: 100%;
     }
   }
 }
@@ -78,9 +103,18 @@
       max-width: rem(750);
     }
   }
+
   .ecosystem-home-hero--no-image & {
     .iastate22-button-set {
       margin-bottom: 0;
+    }
+  }
+
+  .ecosystem-home-hero--supporting-image & {
+    padding: rem(38);
+    @include media-breakpoint-up(md) {
+      flex: 0 1 auto;
+      width: 60%;
     }
   }
 }

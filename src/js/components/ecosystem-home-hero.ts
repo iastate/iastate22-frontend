@@ -56,7 +56,6 @@ export class CollegeHeroBackgroundVideo {
   }
 
   private handlePlayButtonClick() {
-    console.log(this.media);
     this.playButton.addEventListener("click", () => {
       if (this.media.classList.contains("ecosystem-home-hero__media-playing")) {
         this.player.pauseVideo();
