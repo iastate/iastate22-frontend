@@ -16,7 +16,8 @@
     @include media-breakpoint-up(md) {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-start;
+      align-items: center;
+      margin-right: rem(82);
     }
   }
 
@@ -80,6 +81,7 @@
     @include media-breakpoint-up(md) {
       flex: 0 1 auto;
       width: 40%;
+      align-self: flex-start;
     }
     &:before {
       padding-top: 100%;
@@ -115,6 +117,9 @@
     @include media-breakpoint-up(md) {
       flex: 0 1 auto;
       width: 60%;
+    }
+    @include media-breakpoint-up(lg) {
+      padding: 0 rem(83);
     }
   }
 }
