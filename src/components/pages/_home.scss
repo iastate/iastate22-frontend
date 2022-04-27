@@ -133,60 +133,6 @@
   }
 }
 
-.home-hero__animation-control {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  bottom: rem(30);
-  right: rem(30);
-  width: rem(44);
-  height: rem(44);
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media screen and (prefers-reduced-motion: reduce) {
-    display: none;
-    visibility: hidden;
-  }
-  @include media-breakpoint-up(xxl) {
-    right: rem(230);
-  }
-  html:not(.js) & {
-    display: none;
-    visibility: hidden;
-  }
-
-  .home-hero__animation-control-line {
-    height: rem(25);
-    border-left: rem(6) solid $white;
-    display: block;
-    margin-right: rem(5);
-    & + .home-hero__animation-control-line {
-      margin-right: 0;
-    }
-  }
-  &.paused {
-    .home-hero__animation-control-line {
-      border-left: rem(18) solid $white;
-      border-right: rem(18) solid transparent;
-      border-bottom: rem(13) solid transparent;
-      border-top: rem(13) solid transparent;
-      margin: 0;
-      position: relative;
-      left: rem(10);
-      & + .home-hero__animation-control-line {
-        display: none;
-      }
-    }
-  }
-
-  .home-hero--with-announcement & {
-    bottom: rem(60);
-  }
-}
-
 // Home Community Section
 .home-community {
   padding-left: rem(36);
