@@ -23,6 +23,28 @@
       }
     },
     {
+      "name": "background-video",
+      "context": {
+        "hero": {
+          "image": "../../img/college-hero-featured_fpo.jpg",
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "video_id": "LjOmcZkXVcU",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "no-image",
       "context": {
         "hero": {

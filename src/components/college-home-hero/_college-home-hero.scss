@@ -48,6 +48,12 @@
       right: 0;
     }
   }
+  .college-home-hero--background-video & {
+    iframe {
+      position: relative;
+      z-index: 20;
+    }
+  }
 }
 
 .college-home-hero__content {

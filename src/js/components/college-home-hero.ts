@@ -1,0 +1,93 @@
+import YoutubePlayer from "youtube-player";
+
+export class CollegeHeroBackgroundVideo {
+  private element: HTMLElement;
+  private media: HTMLElement;
+  private player: any;
+  private playButton: HTMLButtonElement;
+
+  constructor(element: HTMLElement) {
+    if (!!element) {
+      this.element = element;
+      this.init();
+      this.media = this.element.querySelector(".college-home-hero__media");
+    }
+  }
+
+  private init() {
+    this.createVideoPlayer();
+    this.createPlayButton();
+    // this.handlePlayButtonClick();
+    // this.handlePlayButtonHover();
+    this.handlePlayerEvents();
+  }
+
+  private createVideoPlayer() {
+    const playerRoot = this.element.querySelector(".college-home-hero__video") as HTMLElement;
+    this.player = new YoutubePlayer(playerRoot, {
+      videoId: playerRoot.dataset.vid,
+      playerVars: {
+        autoplay: 1, // Auto-play the video on load
+        autohide: 1, // Hide video controls when playing
+        disablekb: 1,
+        mute: 1,
+        playsinline: 1,
+        controls: 0, // Hide pause/play buttons in player
+        showinfo: 0, // Hide the video title
+        modestbranding: 1, // Hide the Youtube Logo
+        loop: 1, // Run the video in a loop
+        fs: 0, // Hide the full screen button
+        rel: 0,
+        enablejsapi: 1,
+      },
+    });
+  }
+
+  // private handlePlayButtonClick() {
+  //   this.playButton.addEventListener("click", () => {
+  //     this.player.playVideo();
+  //   });
+  // }
+
+  // private handlePlayButtonHover() {
+  //   this.playButton.addEventListener("mouseover", () => {
+  //     this.media.classList.add("video-embed__video-hover");
+  //   });
+  //   this.playButton.addEventListener("mouseout", () => {
+  //     this.media.classList.remove("video-embed__video-hover");
+  //   });
+  // }
+
+  private handlePlayerEvents() {
+    this.player.on("stateChange", (event) => {
+      if (!this.media.classList.contains("video-playing")) {
+        this.media.classList.add("video-playing");
+      }
+      if (event.data == 0) {
+        this.media.classList.remove("video-playing");
+      }
+    });
+  }
+
+  private createPlayButton() {
+    const button = document.createElement("BUTTON") as HTMLButtonElement;
+    button.className = "video-embed__button";
+    button.innerHTML = `<svg viewBox = "0 0 83 83" preserveAspectRatio="xMidYMid meet" class="video-play-icon" xmlns="http://www.w3.org/2000/svg"><g class="outer-circle" fill="none" fill-rule="evenodd"><g opacity=".377" fill="#FFF" fill-rule="nonzero" transform="translate(1 1)"><circle cx="40" cy="40" r="40"/><path d="M40 0C17.909 0 0 17.909 0 40s17.909 40 40 40 40-17.909 40-40S62.091 0 40 0Zm0 1c21.54 0 39 17.46 39 39S61.54 79 40 79 1 61.54 1 40 18.46 1 40 1Z"/></g><path d="M24 22.818h35V57.93H24z"/><path class="arrow" d="m59.986 39.288-28.433-17.68c-2.073-1.363-3.767-.36-3.767 2.229V58.16c0 2.593 1.694 3.593 3.767 2.229l28.433-17.68c.565-.4.934-1.022 1.014-1.71a2.438 2.438 0 0 0-1.01-1.707l-.004-.004Z" fill="#FFF" fill-rule="nonzero"/></g></svg>`;
+    const label = document.createElement("SPAN") as HTMLElement;
+    label.className = "visible-for-screen-readers";
+    label.textContent = "Play Video";
+    button.appendChild(label);
+    this.media = this.element.querySelector(".video-embed__media-wrap");
+    this.media.appendChild(button);
+    this.playButton = button;
+  }
+}
+
+export default function collegeHeroBackgroundVideo() {
+  const collegeHeroBackgroundVideo = document.querySelectorAll(".college-home-hero--background-video") as NodeListOf<
+    HTMLElement
+  >;
+  for (let i = 0; i < collegeHeroBackgroundVideo.length; i++) {
+    new CollegeHeroBackgroundVideo(collegeHeroBackgroundVideo[i]);
+  }
+}
