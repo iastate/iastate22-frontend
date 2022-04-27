@@ -1,6 +1,6 @@
-.college-home-hero {
+.ecosystem-home-hero {
   position: relative;
-  &.college-home-hero--no-image {
+  &.ecosystem-home-hero--no-image {
     background-color: $iastate-red;
     padding: rem(50) rem(36);
     @include media-breakpoint-up(md) {
@@ -28,10 +28,10 @@
   }
 }
 
-.college-home-hero__media {
+.ecosystem-home-hero__media {
   @extend %responsive-img;
 
-  .college-home-hero--featured-image & {
+  .ecosystem-home-hero--featured-image & {
     &:before {
       padding-top: 172.46%;
       @include media-breakpoint-up(md) {
@@ -46,22 +46,29 @@
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 1;
     }
   }
-  .college-home-hero--background-video & {
+  .ecosystem-home-hero--background-video & {
     iframe {
-      position: relative;
-      z-index: 20;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
     }
   }
 }
 
-.college-home-hero__content {
-  .college-home-hero--featured-image & {
+.ecosystem-home-hero__content {
+  .ecosystem-home-hero--featured-image & {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     margin: 0 rem(32);
+    z-index: 2;
     @include media-breakpoint-up(md) {
       margin: 0 rem(82);
       width: 80%;
@@ -71,13 +78,36 @@
       max-width: rem(750);
     }
   }
-  .college-home-hero--no-image & {
+  .ecosystem-home-hero--no-image & {
     .iastate22-button-set {
       margin-bottom: 0;
     }
   }
 }
 
-.college-home-hero__title {
+.ecosystem-home-hero__title {
   color: $white;
+}
+
+// Styles for Background Video Variant only
+.ecosystem-home-hero__video-button {
+  padding: 0 0 0 rem(7);
+  height: rem(20);
+  background-color: transparent;
+  border: none;
+  border-left: rem(7) solid $white;
+  border-right: rem(7) solid $white;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: rem(40);
+  right: rem(40);
+  cursor: pointer;
+
+  &.ecosystem-home-hero__video-button-play {
+    border-right: none;
+    border-top: rem(10) solid transparent;
+    border-bottom: rem(10) solid transparent;
+    border-left: rem(10) solid $white;
+  }
 }
