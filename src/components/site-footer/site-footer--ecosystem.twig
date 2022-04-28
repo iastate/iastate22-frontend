@@ -1,0 +1,110 @@
+<footer class="site-footer site-footer--ecosystem">
+  <div class="site-footer__flex-wrap">
+    <img class="site-footer__logo" src="{{ "https://cdn.theme.iastate.edu/img/iastate22/iowa-state-university-logo-with-tagline-sci-tech.svg"|path }}" alt="Iowa State University of Science and Technology" />
+
+    <div class="site-footer__social-links-wrap">
+      {% if social_links %}
+      <ul class="site-footer__social">
+        {% if social_links.instagram %}
+        <li>
+          <a href="{{ social_links.instagram }}" target="_blank">
+            <i class="fak fa-iastate22-instagram" aria-hidden="true"></i>
+            <span class="visible-for-screen-readers">Instagram</span>
+          </a>
+        </li>
+        {% endif %}
+        {% if social_links.youtube %}
+        <li>
+          <a href="{{ social_links.youtube }}" target="_blank">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            <span class="visible-for-screen-readers">YouTube</span>
+          </a>
+        </li>
+        {% endif %}
+        {% if social_links.facebook %}
+        <li>
+          <a href="{{ social_links.facebook }}" target="_blank">
+            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            <span class="visible-for-screen-readers">Facebook</span>
+          </a>
+        </li>
+        {% endif %}
+        {% if social_links.twitter %}
+        <li>
+          <a href="{{ social_links.twitter }}" target="_blank">
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            <span class="visible-for-screen-readers">Twitter</span>
+          </a>
+        </li>
+        {% endif %}
+        {% if social_links.linkedin %}
+        <li>
+          <a href="{{ social_links.linkedin }}" target="_blank">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            <span class="visible-for-screen-readers">LinkedIn</span>
+          </a>
+        </li>
+        {% endif %}
+        {% if social_links.flickr %}
+        <li>
+          <a href="{{ social_links.flickr }}" target="_blank">
+            <i class="fa-brands fa-flickr" aria-hidden="true"></i>
+            <span class="visible-for-screen-readers">Flickr</span>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
+      {% endif %}
+      {% if footer_nav %}
+      <nav class="site-footer__primary-nav" aria-label="Footer Primary">
+        <ul>
+          {% for link in footer_nav %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {% endif %}
+    </div>
+    
+
+    <nav class="site-footer__secondary-nav" aria-label="Footer Secondary">
+      <h2 class="site-footer__section-label">Quick Links</h2>
+      <ul>
+        {% for link in footer_secondary_nav %}
+        <li>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {# <nav class="site-footer__departments-nav" aria-label="Footer Departments"> #}
+    <div class="site-footer__site-org-contact-info">
+      <h2 class="site-footer__site-org-contact-info-label">{{ site_org_contact.name }}</h2>
+      <ul>
+        {# {% for department in footer_departments %}
+        <li>
+          <p class="site-footer__section-label">{{ department.title }}</p>
+          <a class="site-footer__section-email" href="mailto:{{ department.email }}">{{ department.email }}</a>
+          <a class="site-footer__section-phone" href="tel:{{ department.phone }}">{{ department.phone }}</a>
+        </li>
+        {% endfor %} #}
+      </ul>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom-wrap">
+    <nav class="site-footer__utility-nav" aria-label="Footer Utility">
+      <ul>
+        {% for link in footer_utility_nav %}
+        <li>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="site-footer__copyright"><p>&copy; {{copyright}}</p></div>
+  </div>
+</footer>

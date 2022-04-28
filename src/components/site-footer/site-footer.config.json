@@ -91,5 +91,49 @@
       }
     ],
     "copyright": "Iowa State University of Science and Technology"
-  }
+  },
+  "variants": [
+    {
+      "name": "ecosystem",
+      "context": {
+        "social_links": {
+          "instagram": "#",
+          "youtube": "#",
+          "facebook": "#",
+          "twitter": "#",
+          "linkedin": "#",
+          "flickr": "#"
+        },
+        "footer_nav": [
+          {
+            "title": "Footer Link 1",
+            "url": "#"
+          },
+          {
+            "title": "Footer Link 2",
+            "url": "#"
+          },
+          {
+            "title": "Footer Link 3",
+            "url": "#"
+          },
+          {
+            "title": "Footer Link 4",
+            "url": "#"
+          },
+          {
+            "title": "Footer Link 5",
+            "url": "#"
+          },
+          {
+            "title": "Footer Link 6",
+            "url": "#"
+          }
+        ],
+        "site_org_contact": {
+          "name": "Site Name/Org Name Lorem Ipsum"
+        }
+      }
+    }
+  ]
 }
