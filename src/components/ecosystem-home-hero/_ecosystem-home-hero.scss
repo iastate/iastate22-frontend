@@ -24,17 +24,35 @@
     }
   }
 
+  &.ecosystem-home-hero--atmospheric-image {
+    .iastate22-button-set {
+      ul {
+        @include media-breakpoint-up(md) {
+          justify-content: center;
+        }
+        .iastate22-button {
+          border-color: $iastate-maroon;
+          .arrow {
+            background-color: $iastate-gold;
+            &:before,
+            &:after {
+              background-color: $iastate-gold;
+            }
+          }
+        }
+      }
+    }
+  }
+
   .iastate22-button-set {
     ul {
       @include media-breakpoint-up(md) {
         display: flex;
       }
-      li {
-        .iastate22-button {
-          @extend %iastate22-button--reverse;
-          @include media-breakpoint-up(md) {
-            margin-right: rem(20);
-          }
+      .iastate22-button {
+        @extend %iastate22-button--reverse;
+        @include media-breakpoint-up(md) {
+          margin-right: rem(20);
         }
       }
     }
@@ -98,6 +116,11 @@
       }
     }
   }
+  .ecosystem-home-hero--atmospheric-image & {
+    &:before {
+      padding-top: 47.08%;
+    }
+  }
 }
 
 .ecosystem-home-hero__content {
@@ -133,11 +156,33 @@
       padding: rem(40) 0 0 rem(83);
     }
   }
+
+  .ecosystem-home-hero--atmospheric-image & {
+    padding: rem(38);
+    @include media-breakpoint-up(md) {
+      background-color: $white;
+      position: relative;
+      top: rem(-75);
+      margin-right: rem(40);
+      margin-left: rem(40);
+    }
+    @include media-breakpoint-up(lg) {
+      top: rem(-120);
+      margin-right: rem(82);
+      margin-left: rem(82);
+      padding-top: rem(50);
+    }
+    @include media-breakpoint-up(xl) {
+      top: rem(-162);
+      padding-top: rem(60);
+    }
+  }
 }
 
 .ecosystem-home-hero__title {
   color: $white;
-  .ecosystem-home-hero--supporting-image & {
+  .ecosystem-home-hero--supporting-image &,
+  .ecosystem-home-hero--atmospheric-image & {
     @include media-breakpoint-up(md) {
       font-size: rem(55);
       line-height: (75 / 55);
@@ -146,6 +191,10 @@
       font-size: rem(70);
       line-height: (93 / 70);
     }
+  }
+  .ecosystem-home-hero--atmospheric-image & {
+    color: $iastate-red;
+    text-align: center;
   }
 }
 

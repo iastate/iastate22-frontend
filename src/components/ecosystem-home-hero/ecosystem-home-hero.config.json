@@ -5,7 +5,7 @@
       "name": "featured-image",
       "context": {
         "hero": {
-          "image": "../../img/college-hero-featured_fpo.jpg",
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
           "title": "Hero Title Lorem Ipsum Dolor",
           "button_set": {
             "items": [
@@ -26,7 +26,7 @@
       "name": "background-video",
       "context": {
         "hero": {
-          "image": "../../img/college-hero-featured_fpo.jpg",
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
           "title": "Hero Title Lorem Ipsum Dolor",
           "video_id": "LjOmcZkXVcU",
           "button_set": {
@@ -68,7 +68,28 @@
       "name": "supporting-image",
       "context": {
         "hero": {
-          "image": "../../img/college-hero-supporting_fpo.jpg",
+          "image": "../../img/ecosystem-hero-supporting_fpo.jpg",
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "atmospheric-image",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-atmospheric_fpo.jpg",
           "title": "Hero Title Lorem Ipsum Dolor",
           "button_set": {
             "items": [
