@@ -130,13 +130,23 @@
       width: 54%;
     }
     @include media-breakpoint-up(lg) {
-      padding: 0 rem(40) 0 rem(83);
+      padding: rem(40) 0 0 rem(83);
     }
   }
 }
 
 .ecosystem-home-hero__title {
   color: $white;
+  .ecosystem-home-hero--supporting-image & {
+    @include media-breakpoint-up(md) {
+      font-size: rem(55);
+      line-height: (75 / 55);
+    }
+    @include media-breakpoint-up(xl) {
+      font-size: rem(70);
+      line-height: (93 / 70);
+    }
+  }
 }
 
 // Styles for Background Video Variant only
