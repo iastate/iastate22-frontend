@@ -45,6 +45,9 @@ export class CollegeHeroBackgroundVideo {
   }
 
   private handlePlayerEvents() {
+    this.player.on("ready", (event) => {
+      this.media.classList.add("ecosystem-home-hero__media-playing");
+    });
     this.player.on("stateChange", (event) => {
       if (!this.media.classList.contains("ecosystem-home-hero__media-playing")) {
         this.media.classList.add("ecosystem-home-hero__media-playing");
