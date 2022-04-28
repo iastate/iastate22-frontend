@@ -1,0 +1,93 @@
+{
+  "preview": "@page-preview",
+  "context": {
+    "faculty_bio_info_card": {
+      "image": "../../img/faculty-bio-photo_fpo.jpg",
+      "name": "FirstName LastName",
+      "titles": [
+        "Medium Title 1 Lorem Ipsum Dolor Sit Amet",
+        "Short Title 2 Lorem",
+        "Long Title 3 Lorem Ipsum Dolor Sit Amet, Consecteteur Lorem Ipsum Dolor Sit Amet"
+      ],
+      "link_set": {
+        "links": [
+          {
+            "url": "https://iastate.edu",
+            "text": "Department/Unit Name Lorem Ipsum",
+            "variant": "iastate22-link-secondary"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Department/Unit Name Lorem Ipsum Dolor Sit Amet",
+            "variant": "iastate22-link-secondary"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "External Link Name Lorem Ipsum",
+            "variant": "iastate22-link-external"
+          }
+        ]
+      },
+      "contact_box": {
+        "label": "Contact",
+        "email": "smryan@iastate.edu",
+        "phone": "(515) 294-4347",
+        "address": {
+          "building": "3017 Black Engr.",
+          "street": "2529 Union Dr.",
+          "city_state_zip": "Ames, IA 50011-2030"
+        },
+        "social_links": {
+          "instagram": "#",
+          "youtube": "#",
+          "facebook": "#",
+          "twitter": "#"
+        }
+      }
+    },
+    "biography": {
+      "bio_text": "<p>Sarah Ryan's research examines the planning and operation of manufacturing and service systems under uncertainty. Currently, she is focusing on electric power systems and assembly systems. Issues under study by her research group include short term power system scheduling to accommodate renewable generation; analysis of the impact of gas system uncertainty on power system operations; and assessment of input reliability and solution quality in stochastic programming. Her work has been supported by the National Science Foundation, including a CAREER award, an AT&amp;T Industrial Ecology Faculty Fellowship, the Department of Energy, and electric power systems consortia.</p>",
+      "button_set": {
+        "items": [
+          {
+            "text": "Download CV",
+            "url": "https://iastate.edu"
+          }
+        ]
+      }
+    },
+    "education": [
+      "PhD, Industrial and Operations Engineering, The University of Michigan",
+      "MSE, Industrial and Operations Engineering, The University of Michigan",
+      "BS (with high distinction), Systems Engineering, The University of Virginia"
+    ],
+    "affiliations_link_set": {
+      "links": [
+        {
+          "url": "https://iastate.edu",
+          "text": "DataFEWSion Graduate Traineeship",
+          "variant": "iastate22-link-secondary"
+        },
+        {
+          "url": "https://iastate.edu",
+          "text": "The Engineering Economist",
+          "variant": "iastate22-link-secondary"
+        }
+      ]
+    },
+    "publications": [
+      "Didem Sari and Sarah M. Ryan, \"Observational Data-based Quality Assessment of Scenario Generation for Stochastic Programs,\" Computational Management Science (2018). <a href=\"#\">DOI: 10.1007/s10287-019-00349-1</a>",
+      "Dan Hu and Sarah M. Ryan, Stochastic vs. deterministic scheduling of a combined natural gas and power system with uncertain wind energy, International Journal of Electric Power and Energy Systems 108, 303-313 (2019). <a href=\"#\">DOI: 10.1016/j.ijepes.2018.12.047</a>.",
+      "A. Arif, S. Ma, Z. Wang, J. Wang, S. M. Ryan, and C. Chen, \"Optimizing Service Restoration in Distribution Systems with Uncertain Repair Time and Demand,\" IEEE Transactions on Power Systems, 33(6), 6828-6838 (2018). DOI: <a href=\"#\">10.1109/tpwrs.2018.2855102</a>.",
+      "Ali Haddadsisakht and Sarah M. Ryan, \"Closed-loop supply chain network design with multiple transportation modes under stochastic demand and uncertain carbon tax,\" International Journal of Production Economics 195, 118-131 (2018). <a href=\"#\">DOI: /10.1016/j.ijpe.2017.09.009</a>.",
+      "Narges Kazemzadeh, Sarah M. Ryan and Mahdi Hamzeei, \"Robust optimization vs. stochastic programming incorporating risk measures for unit commitment with uncertain variable renewable generation,\" Energy Systems, published online 2017. DOI: 10.1007/s12667-017-0265-5.",
+      "Didem Sari and Sarah M. Ryan, \"Reliability of wind power scenarios and stochastic unit commitment cost,\" Energy Systems published online 2017. DOI: 10.1007/s12667-017-0255-7.",
+      "Dinakar Gade, Gabriel Hackebeil, Sarah M. Ryan, Jean-Paul Watson, Roger J-B Wets, and David L. Woodruff, \"Obtaining Lower Bounds from the Progressive Hedging Algorithm for Stochastic Mixed-Integer Programs\", Mathematical Programming 157(1), 47-57 (2016). DOI: 10.1007/s10107-016-1000-z",
+      "Keyvanshokooh ,E. S. M. Ryan and E. Kabir, \"Hybrid Robust and Stochastic Optimization for Closed-Loop Supply Chain Network Design using Accelerated Benders Decomposition,\" European Journal of Operational Research, 249(1), 76-92 (2016). DOI: 10.1016/j.ejor.2015.08.028",
+      "Feng, Y. and S. M. Ryan, \"Solution Sensitivity-Based Scenario Reduction for Stochastic Unit Commitment,\" Computational Management Science, 13(1), 29-62 (2016). DOI: 10.1007/s10287-014-0220-z",
+      "Guo, G., G. Hackebiel, S. M. Ryan, J-P Watson, and D. L. Woodruff, \"Integration of Progressive Hedging and Dual Decomposition in Stochastic Integer Programs,\" Operations Research Letters 43(3), 311-316 (2015). DOI: 10.1016/j.orl.2015.03.008",
+      "Feng, Y., I. Rios, S. Ryan, K. Spurkel, J-P Watson, R. Wets, and D. Woodruff. \"Toward Scalable Stochastic Unit Commitment - Part I: Load Scenario Generation,\" Energy Systems (2015). DOI: 10.1007/s12667-015-0146-8",
+      "Cheung, K., D. Gade, C. Silva-Monroy, S. Ryan, J-P Watson, R. Wets, and D. Woodruff. \"Toward Scalable Stochastic Unit Commitment - Part II: Assessing Solver Performance,\" Energy Systems (2015). DOI: 10.1007/s12667-015-0148-6"
+    ]
+  }
+}

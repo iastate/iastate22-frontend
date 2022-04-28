@@ -1,0 +1,40 @@
+<script>
+  document.body.classList.add("faculty-bio");
+</script>
+
+<div class="outer-pad outer-pad--top-level">
+  <div class="faculty-bio-info-card_wrap">
+    {% include "@faculty-bio-info-card" with faculty_bio_info_card %}
+  </div>
+  <div class="faculty-bio__content">
+    <div class="faculty-bio__content-bio">
+      <h2>Bio</h2>
+      {{ biography.bio_text|raw }}
+      {% include "@button-set" with biography.button_set %}
+    </div>
+    <div class="faculty-bio__content-education-affiliations-wrap">
+      <div class="faculty-bio__content-education">
+        <h2>Education</h2>
+        <ul>
+          {% for entry in education %}
+          <li>
+            {{ entry }}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="faculty-bio__content-affiliations">
+        <h2>Affiliations</h2>
+        {% include "@link-set" with affiliations_link_set %}
+      </div>
+    </div>
+    <div class="faculty-bio__content-publications">
+      <h2>Selected Publications</h2>
+      <ul>
+          {% for publication in publications %}
+          <li>{{ publication|raw }}</li>
+          {% endfor %}
+        </ul>
+    </div>
+  </div>
+</div>
