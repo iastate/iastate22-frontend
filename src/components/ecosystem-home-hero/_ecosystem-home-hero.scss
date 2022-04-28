@@ -17,7 +17,10 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      margin-right: rem(82);
+    }
+    @include media-breakpoint-up(lg) {
+      padding-bottom: rem(84);
+      margin-right: rem(190);
     }
   }
 
@@ -80,11 +83,19 @@
   .ecosystem-home-hero--supporting-image & {
     @include media-breakpoint-up(md) {
       flex: 0 1 auto;
-      width: 40%;
+      width: 46%;
       align-self: flex-start;
+    }
+    @include media-breakpoint-up(lg) {
+      right: rem(-108);
     }
     &:before {
       padding-top: 100%;
+    }
+    img {
+      @include media-breakpoint-up(lg) {
+        z-index: 1;
+      }
     }
   }
 }
@@ -116,10 +127,10 @@
     padding: rem(38);
     @include media-breakpoint-up(md) {
       flex: 0 1 auto;
-      width: 60%;
+      width: 54%;
     }
     @include media-breakpoint-up(lg) {
-      padding: 0 rem(83);
+      padding: 0 rem(40) 0 rem(83);
     }
   }
 }
