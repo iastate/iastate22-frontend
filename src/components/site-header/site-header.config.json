@@ -178,5 +178,14 @@
         ]
       }
     ]
-  }
+  },
+  "variants": [
+    {
+      "name": "ecosystem",
+      "context": {
+        "parent_unit_name": "Parent Unit Name Lorem Ipsum",
+        "website_title": "Website Title Lorem Ipsum"
+      }
+    }
+  ]
 }

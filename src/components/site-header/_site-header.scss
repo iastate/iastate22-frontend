@@ -107,6 +107,7 @@
       height: rem(93);
     }
   }
+
   // different background for homepage
   .home & {
     background-color: transparent;
@@ -163,6 +164,10 @@
         visibility: hidden;
       }
     }
+  }
+  .site-header--ecosystem & {
+    flex-wrap: wrap;
+    border-bottom: none;
   }
   // extend header background-color on wider monitors
   &:before {
@@ -422,6 +427,9 @@
       transition: 0.3s opacity ease-in-out, 0.3s visibility ease-in-out;
     }
   }
+  .site-header--ecosystem & {
+    top: rem(90);
+  }
 }
 
 .site-header__mega-menu-inner {
@@ -559,6 +567,9 @@
     @include media-breakpoint-up(xl) {
       margin-top: rem(-23);
     }
+  }
+  .site-header--ecosystem & {
+    padding-top: rem(30);
   }
 }
 
@@ -1187,5 +1198,47 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     margin-top: 10px;
     color: $white;
     display: block;
+  }
+}
+
+// Styles for ecosystem site header variant only
+.site-header__parent-unit-name {
+  position: absolute;
+  top: rem(52);
+  left: rem(35);
+  font-family: $typeface-sans-serif;
+  font-size: rem(18);
+  line-height: (23 / 18);
+  color: $iastate-red;
+  opacity: 0;
+  transition: 0.2s opacity ease-in-out;
+  .site-header-open & {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+.site-header__website-title {
+  background-color: $off-white;
+  flex: 0 1 auto;
+  width: 100vw;
+  margin-top: rem(54);
+  margin-right: rem(-58);
+  padding: rem(10) rem(38);
+  font-family: $typeface-sans-serif;
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: (23 / 18);
+  color: $iastate-maroon;
+  transition: 0.2s opacity ease-in-out;
+  .site-header-open & {
+    opacity: 0;
+  }
+  .site-header__mega-menu-main & {
+    opacity: 1;
+    margin: 0 0 rem(28) 0;
+    background: transparent;
+    width: auto;
+    padding: 0;
+    color: $white;
   }
 }

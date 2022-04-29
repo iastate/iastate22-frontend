@@ -4,6 +4,8 @@
       <img class="site-header__logo-mobile" src="{{ "https://cdn.theme.iastate.edu/img/iastate22/iowa-state-university-logo-no-tagline-red.svg"|path }}" alt="Iowa State University">
       <img class="site-header__logo-desktop" src="{{ "https://cdn.theme.iastate.edu/img/iastate22/iowa-state-university-logo-with-tagline-red.svg"|path }}" alt="Iowa State University of Science and Technology">
     </a>
+    {% if parent_unit_name %}<div class="site-header__parent-unit-name">{{ parent_unit_name }}</div>{% endif %}
+    <div class="site-header__website-title">{{ website_title }}</div>
     <nav class="site-header__utility" aria-label="Utility">
       <ul>
         {% for link in utility_nav %}
@@ -47,6 +49,7 @@
           <div>
             <div class="site-header__mega-menu-main">
               <div class="site-header__mega-menu-max-bound">
+                <div class="site-header__website-title">{{ website_title }}</div>
                 <nav class="site-header__mega-menu-main-nav" aria-label="Main">
                   <ul>
                     {% for link in full_nav %}
