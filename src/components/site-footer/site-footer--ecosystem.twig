@@ -1,8 +1,8 @@
 <footer class="site-footer site-footer--ecosystem">
   <div class="site-footer__flex-wrap">
-    <img class="site-footer__logo" src="{{ "https://cdn.theme.iastate.edu/img/iastate22/iowa-state-university-logo-with-tagline-sci-tech.svg"|path }}" alt="Iowa State University of Science and Technology" />
-
-    <div class="site-footer__social-links-wrap">
+    <div class="site-footer__logo-social-links-wrap">
+      <img class="site-footer__logo" src="{{ "https://cdn.theme.iastate.edu/img/iastate22/iowa-state-university-logo-with-tagline-sci-tech.svg"|path }}" alt="Iowa State University of Science and Technology" />
+      
       {% if social_links %}
       <ul class="site-footer__social">
         {% if social_links.instagram %}
@@ -55,23 +55,25 @@
         {% endif %}
       </ul>
       {% endif %}
-      {% if footer_nav %}
-      <nav class="site-footer__primary-nav" aria-label="Footer Primary">
-        <ul>
-          {% for link in footer_nav %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-      {% endif %}
     </div>
+
+    {% if footer_nav %}
+    <nav class="site-footer__primary-nav" aria-label="Footer Primary">
+      <ul>
+        {% for link in footer_nav %}
+        <li>
+          <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  
     
 
     <nav class="site-footer__secondary-nav" aria-label="Footer Secondary">
-      <h2 class="site-footer__section-label">Quick Links</h2>
-      <ul>
+      {% if footer_secondary_nav|length > 3 %}<h2 class="site-footer__section-label">Quick Links</h2>{% endif %}
+      <ul{% if footer_secondary_nav|length < 3 %} class="site-footer__secondary-nav-short"{% endif %}>
         {% for link in footer_secondary_nav %}
         <li>
           <a href="{{ link.url }}">{{ link.title }}</a>
@@ -80,18 +82,31 @@
       </ul>
     </nav>
 
-    {# <nav class="site-footer__departments-nav" aria-label="Footer Departments"> #}
     <div class="site-footer__site-org-contact-info">
-      <h2 class="site-footer__site-org-contact-info-label">{{ site_org_contact.name }}</h2>
-      <ul>
-        {# {% for department in footer_departments %}
-        <li>
-          <p class="site-footer__section-label">{{ department.title }}</p>
-          <a class="site-footer__section-email" href="mailto:{{ department.email }}">{{ department.email }}</a>
-          <a class="site-footer__section-phone" href="tel:{{ department.phone }}">{{ department.phone }}</a>
-        </li>
-        {% endfor %} #}
-      </ul>
+      <h2 class="site-footer__section-label">{{ site_org_contact.name }}</h2>      
+      {% if site_org_contact.address %}
+      <div class="site-footer__site-org-contact-address">
+        <p>{% if site_org_contact.address.building %}{{ site_org_contact.address.building }}<br>{% endif %}
+        {{ site_org_contact.address.street }}<br>
+        {{ site_org_contact.address.city_state_zip }}</p>
+      </div>
+      {% endif %}
+      <div class="site-footer__site-org-contact-email-phone-wrap">
+        {% if site_org_contact.phone %}
+        <div class="site-footer__site-org-contact-phone">
+          {% for phone in site_org_contact.phone %}
+          <p>{% if phone.label %}{{ phone.label }}: {% endif %}{{ phone.phone_number }}</p>
+          {% endfor %}
+        </div>
+        {% endif %}
+        {% if site_org_contact.email %}
+        <div class="site-footer__site-org-contact-email">
+          {% for email in site_org_contact.email %}
+          <p>{% if email.label %}{{ email.label }}: {% endif %}<a href="mailto:{{ email.email_address }}">{{ email.email_address }}</a></p>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
     </div>
   </div>
 
