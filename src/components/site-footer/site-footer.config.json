@@ -132,11 +132,27 @@
         ],
         "footer_secondary_nav": [
           {
-            "title": "Sign Ons and Tools",
+            "title": "Quick Link 1",
             "url": "#"
           },
           {
-            "title": "Log In",
+            "title": "Quick Link 2",
+            "url": "#"
+          },
+          {
+            "title": "Quick Link 3",
+            "url": "#"
+          },
+          {
+            "title": "Quick Link 4",
+            "url": "#"
+          },
+          {
+            "title": "Quick Link 5",
+            "url": "#"
+          },
+          {
+            "title": "Sign Ons and Tools",
             "url": "#"
           }
         ],

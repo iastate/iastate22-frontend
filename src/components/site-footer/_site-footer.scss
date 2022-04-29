@@ -224,8 +224,15 @@
     @include media-breakpoint-up(xl) {
       flex: 1 1 0;
       display: flex;
+      flex-wrap: wrap;
       align-items: flex-end;
       padding-bottom: rem(7);
+    }
+    .site-footer__section-label {
+      @include media-breakpoint-up(xl) {
+        flex: 0 1 auto;
+        width: 100%;
+      }
     }
   }
 
@@ -236,6 +243,9 @@
     }
     @include media-breakpoint-up(xl) {
       max-width: rem(500);
+    }
+    .site-footer--ecosystem & {
+      column-count: 2;
     }
     &.site-footer__secondary-nav-short {
       column-count: 1;
