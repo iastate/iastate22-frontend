@@ -7,29 +7,32 @@
       {% if parent_unit_name %}<div class="site-header__parent-unit-name">{{ parent_unit_name }}</div>{% endif %}
     </div>
     <div class="site-header__website-title">{{ website_title }}</div>
-    <nav class="site-header__utility" aria-label="Utility">
-      <ul>
-        {% for link in utility_nav %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-    <div class="site-header__search">
-      <a href="#site-search" class="site-header__search-toggle">
-        <span class="visible-for-screen-readers">Search</span>
-        <span class="fak fa-iastate22-magnifying-glass" aria-hidden="true"></span>
-      </a>
-      <a href="#" class="site-header__search-close">
-        <span class="visible-for-screen-readers">Close Search</span>
-        <span class="fa-light fa-xmark"></span>
-      </a>
-      <form class="site-header__search-form-desktop">
-        <label class="visible-for-screen-readers" for="searchDesktop">Search</label>
-        <input type="search" id="searchDesktop" name="search" placeholder="Search">
-        <button type="submit"><span class="fak fa-iastate22-magnifying-glass" aria-hidden="true"></span><span class="visible-for-screen-readers">Submit Search</span></button>
-      </form>
+    <div class="site-header__utility-search-wrap">
+      <nav class="site-header__utility" aria-label="Utility">
+        <ul>
+          {% for link in utility_nav %}
+            <li>
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <div class="site-header__search">
+        <a href="#site-search" class="site-header__search-toggle">
+          <span class="visible-for-screen-readers">Search</span>
+          <span class="fak fa-iastate22-magnifying-glass" aria-hidden="true"></span>
+        </a>
+        <a href="#" class="site-header__search-close">
+          <span class="visible-for-screen-readers">Close Search</span>
+          <span class="fa-light fa-xmark"></span>
+        </a>
+        <form class="site-header__search-form-desktop">
+          <label class="visible-for-screen-readers" for="searchDesktop">Search</label>
+          <input type="search" id="searchDesktop" name="search" placeholder="Search">
+          <button type="submit"><span class="fak fa-iastate22-magnifying-glass" aria-hidden="true"></span><span class="visible-for-screen-readers">Submit Search</span></button>
+        </form>
+      </div>
+      {% if utility_button %}<a class="site-header__utility-button" href="{{ utility_button.url }}">{{ utility_button.title }}<span></span></a>{% endif %}
     </div>
   </div>
   <div class="site-header__main">
@@ -81,6 +84,7 @@
                       </li>
                     {% endfor %}
                   </ul>
+                  {% if utility_button %}<a class="site-header__utility-button" href="{{ utility_button.url }}">{{ utility_button.title }}<span></span></a>{% endif %}
                   <form class="site-header__search-form-mobile">
                     <label class="visible-for-screen-readers" for="searchMobile">Search</label>
                     <input type="search" id="searchMobile" name="search" placeholder="Search">

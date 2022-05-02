@@ -66,6 +66,10 @@
     @include media-breakpoint-up(lg) {
       max-width: rem(224);
     }
+    @include media-breakpoint-up(xl) {
+      position: static;
+      width: 100%;
+    }
   }
 
   img {
@@ -110,6 +114,15 @@
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
       height: rem(93);
+    }
+  }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include media-breakpoint-up(xxl) {
+      padding: 0 rem(48) 0 rem(83);
     }
   }
 
@@ -255,7 +268,8 @@
   }
   .site-header--ecosystem & {
     @include media-breakpoint-up(xl) {
-      margin-top: rem(54);
+      margin-top: 0;
+      margin-right: rem(5);
     }
   }
   a {
@@ -329,7 +343,7 @@
   }
   .site-header--ecosystem & {
     @include media-breakpoint-up(xl) {
-      top: rem(42);
+      top: rem(-12);
     }
   }
 }
@@ -1286,15 +1300,12 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   transition: 0.2s opacity ease-in-out;
   max-width: rem(275);
   @include media-breakpoint-up(xl) {
+    position: static;
     opacity: 1;
     font-size: rem(16);
     line-height: (23 / 16);
     font-weight: 700;
-    top: rem(60);
-    left: rem(31);
-  }
-  @include media-breakpoint-up(xxl) {
-    left: rem(83);
+    margin-top: rem(6);
   }
   .site-header-open & {
     opacity: 1;
@@ -1327,10 +1338,74 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     width: auto;
     padding: 0;
     color: $white;
+    max-width: rem(250);
     @include media-breakpoint-up(xl) {
       color: $iastate-maroon;
       display: block;
       margin: 0;
     }
+  }
+}
+
+.site-header__utility-button {
+  background-color: $iastate-red;
+  color: $white;
+  padding: rem(2) rem(30) rem(2) rem(15);
+  top: rem(-2);
+  margin-left: rem(5);
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s background-color ease-in-out;
+  display: none;
+  @include media-breakpoint-up(xl) {
+    display: block;
+  }
+  &:hover {
+    background-color: $iastate-maroon;
+  }
+  span {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      border-right: rem(2) solid $iastate-gold;
+      border-bottom: rem(2) solid $iastate-gold;
+      width: rem(10);
+      height: rem(10);
+      margin-left: rem(4);
+      top: rem(7);
+      transform: rotate(-45deg);
+    }
+  }
+  .site-header__mega-menu-utility & {
+    background-color: $white;
+    color: $iastate-maroon;
+    margin-top: rem(30);
+    display: inline-block;
+    position: static;
+    transition: 0.2s background-color ease-in-out, 0.2s color ease-in-out;
+    &:hover {
+      color: $iastate-red;
+      background-color: $off-white;
+      span {
+        &:after {
+          border-color: $iastate-red;
+        }
+      }
+    }
+    span {
+      &:after {
+        transition: 0.2s border-color ease-in-out;
+        border-color: $iastate-maroon;
+      }
+    }
+  }
+}
+
+.site-header__utility-search-wrap {
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    align-items: flex-end;
   }
 }
