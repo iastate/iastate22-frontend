@@ -122,7 +122,7 @@
       align-items: center;
     }
     @include media-breakpoint-up(xxl) {
-      padding: 0 rem(48) 0 rem(83);
+      padding: 0 rem(64) 0 rem(83);
     }
   }
 
@@ -343,7 +343,7 @@
   }
   .site-header--ecosystem & {
     @include media-breakpoint-up(xl) {
-      top: rem(-12);
+      top: rem(13);
     }
   }
 }
@@ -628,7 +628,7 @@
     padding-top: rem(30);
     @include media-breakpoint-up(xl) {
       margin-top: rem(-5);
-      padding: rem(30) 0;
+      padding: rem(20) 0;
       background-color: $off-white;
       &:before {
         content: "";
@@ -658,7 +658,6 @@
       @include media-breakpoint-up(xl) {
         width: 100%;
         flex-wrap: wrap;
-        max-width: rem(870);
       }
     }
     > li {
@@ -686,6 +685,11 @@
       &.site-header__parent-link-no-subnav-wrap {
         @include media-breakpoint-up(xl) {
           padding-right: rem(30);
+        }
+      }
+      .site-header--ecosystem & {
+        @include media-breakpoint-up(xl) {
+          padding: rem(7) 0 rem(7) rem(40);
         }
       }
 
@@ -940,6 +944,11 @@
         &.site-header__parent-link-no-subnav-wrap {
           @include media-breakpoint-up(xl) {
             margin-right: rem(-20);
+          }
+          .site-header--ecosystem & {
+            @include media-breakpoint-up(xl) {
+              margin-right: 0;
+            }
           }
         }
       }
@@ -1338,8 +1347,8 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     width: auto;
     padding: 0;
     color: $white;
-    max-width: rem(250);
     @include media-breakpoint-up(xl) {
+      max-width: rem(250);
       color: $iastate-maroon;
       display: block;
       margin: 0;
@@ -1351,8 +1360,8 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   background-color: $iastate-red;
   color: $white;
   padding: rem(2) rem(30) rem(2) rem(15);
-  top: rem(-2);
-  margin-left: rem(5);
+  top: rem(3);
+  margin-left: rem(20);
   position: relative;
   text-decoration: none;
   font-weight: 700;
@@ -1360,6 +1369,9 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   display: none;
   @include media-breakpoint-up(xl) {
     display: block;
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-left: rem(5);
   }
   &:hover {
     background-color: $iastate-maroon;
