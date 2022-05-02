@@ -1284,6 +1284,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   color: $iastate-red;
   opacity: 0;
   transition: 0.2s opacity ease-in-out;
+  max-width: rem(275);
   @include media-breakpoint-up(xl) {
     opacity: 1;
     font-size: rem(16);
@@ -1291,6 +1292,9 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     font-weight: 700;
     top: rem(60);
     left: rem(31);
+  }
+  @include media-breakpoint-up(xxl) {
+    left: rem(83);
   }
   .site-header-open & {
     opacity: 1;
