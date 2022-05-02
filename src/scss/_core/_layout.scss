@@ -36,3 +36,10 @@ main {
     padding-top: 0;
   }
 }
+
+.site-header--ecosystem + main {
+  padding-top: rem(120);
+  @include media-breakpoint-up(xl) {
+    padding-top: rem(235);
+  }
+}

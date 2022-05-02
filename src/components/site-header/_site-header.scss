@@ -272,6 +272,13 @@
       margin-right: rem(5);
     }
   }
+  .site-header--ecosystem & {
+    + .site-header__utility-button {
+      @include media-breakpoint-up(xl) {
+        margin-left: rem(30);
+      }
+    }
+  }
   a {
     @include media-breakpoint-up(xl) {
       text-transform: none;
@@ -343,7 +350,8 @@
   }
   .site-header--ecosystem & {
     @include media-breakpoint-up(xl) {
-      top: rem(13);
+      top: rem(2);
+      height: auto;
     }
   }
 }
@@ -1361,13 +1369,13 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   color: $white;
   padding: rem(2) rem(30) rem(2) rem(15);
   top: rem(3);
-  margin-left: rem(20);
   position: relative;
   text-decoration: none;
   font-weight: 700;
   transition: 0.2s background-color ease-in-out;
   display: none;
   @include media-breakpoint-up(xl) {
+    margin-left: rem(20);
     display: block;
   }
   @include media-breakpoint-up(xxl) {
