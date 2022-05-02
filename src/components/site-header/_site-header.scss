@@ -62,6 +62,11 @@
       filter: none;
     }
   }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(lg) {
+      max-width: rem(224);
+    }
+  }
 
   img {
     display: block;
@@ -248,6 +253,11 @@
       visibility: hidden;
     }
   }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(54);
+    }
+  }
   a {
     @include media-breakpoint-up(xl) {
       text-transform: none;
@@ -315,6 +325,11 @@
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
       opacity: 0;
+    }
+  }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      top: rem(42);
     }
   }
 }
@@ -432,6 +447,7 @@
     @include media-breakpoint-up(xl) {
       position: relative;
       top: 0;
+      width: 100%;
     }
   }
 }
@@ -460,11 +476,28 @@
     overflow: initial;
     pointer-events: none;
   }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      pointer-events: initial;
+    }
+  }
 }
 
 .site-header__mega-menu-max-bound {
   margin: 0 auto;
   max-width: rem(1660);
+
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 rem(46) 0 rem(32);
+    }
+    @include media-breakpoint-up(xxl) {
+      padding: 0 rem(83) 0 rem(83);
+    }
+  }
 }
 
 .site-header__mega-menu-open {
@@ -581,8 +614,20 @@
     padding-top: rem(30);
     @include media-breakpoint-up(xl) {
       margin-top: rem(-5);
-      padding-top: 0;
+      padding: rem(30) 0;
       background-color: $off-white;
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: $off-white;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 150vw;
+        left: -50vw;
+        z-index: -1;
+      }
     }
   }
 }
@@ -752,6 +797,7 @@
         &[aria-expanded="true"] {
           @include media-breakpoint-up(xl) {
             border-bottom: rem(7) solid $iastate-gold;
+            margin-bottom: rem(-7);
           }
           &:after {
             @include media-breakpoint-up(xl) {
@@ -798,6 +844,11 @@
           left: rem(-120);
           display: flex;
           flex-wrap: wrap;
+        }
+        .site-header--ecosystem & {
+          @include media-breakpoint-up(xl) {
+            background-color: $off-white;
+          }
         }
         &[aria-hidden="true"] {
           opacity: 0;
@@ -1233,6 +1284,14 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   color: $iastate-red;
   opacity: 0;
   transition: 0.2s opacity ease-in-out;
+  @include media-breakpoint-up(xl) {
+    opacity: 1;
+    font-size: rem(16);
+    line-height: (23 / 16);
+    font-weight: 700;
+    top: rem(60);
+    left: rem(31);
+  }
   .site-header-open & {
     opacity: 1;
     z-index: 1;
@@ -1252,9 +1311,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   color: $iastate-maroon;
   transition: 0.2s opacity ease-in-out;
   @include media-breakpoint-up(xl) {
-    position: absolute;
-    left: 0;
-    top: rem(48);
+    display: none;
   }
   .site-header-open & {
     opacity: 0;
@@ -1267,7 +1324,9 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     padding: 0;
     color: $white;
     @include media-breakpoint-up(xl) {
-      display: none;
+      color: $iastate-maroon;
+      display: block;
+      margin: 0;
     }
   }
 }
