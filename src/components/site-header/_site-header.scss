@@ -429,6 +429,10 @@
   }
   .site-header--ecosystem & {
     top: rem(90);
+    @include media-breakpoint-up(xl) {
+      position: relative;
+      top: 0;
+    }
   }
 }
 
@@ -440,6 +444,11 @@
   position: relative;
   @include media-breakpoint-up(xl) {
     background-color: transparent;
+  }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      overflow: visible;
+    }
   }
 }
 
@@ -570,6 +579,11 @@
   }
   .site-header--ecosystem & {
     padding-top: rem(30);
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(-5);
+      padding-top: 0;
+      background-color: $off-white;
+    }
   }
 }
 
@@ -580,6 +594,13 @@
       justify-content: flex-end;
       width: 65%;
       margin: 0 0 0 auto;
+    }
+    .site-header--ecosystem & {
+      @include media-breakpoint-up(xl) {
+        width: 100%;
+        flex-wrap: wrap;
+        max-width: rem(870);
+      }
     }
     > li {
       margin-bottom: rem(22);
@@ -1230,6 +1251,11 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   line-height: (23 / 18);
   color: $iastate-maroon;
   transition: 0.2s opacity ease-in-out;
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    left: 0;
+    top: rem(48);
+  }
   .site-header-open & {
     opacity: 0;
   }
@@ -1240,5 +1266,8 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     width: auto;
     padding: 0;
     color: $white;
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
   }
 }
