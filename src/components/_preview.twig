@@ -20,10 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <div class="max-bound">
-            {{ yield }}
-        </div>
-        {% render "@privacy-consent" %}
+        {{ yield }}
         <script src="{{ '/js/index.js'|path }}"></script>
         <script src="https://kit.fontawesome.com/b658fac974.js" crossorigin="anonymous"></script>
         <link media="print" rel="stylesheet" href="{{ '/css/print.css'|path }}">
