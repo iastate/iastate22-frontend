@@ -1,5 +1,12 @@
 .ecosystem-home-hero {
   position: relative;
+  margin: 0 rem(-36) rem(40);
+  @include media-breakpoint-up(md) {
+    margin: 0 rem(-70) rem(40);
+  }
+  @include media-breakpoint-up(xl) {
+    margin: 0 rem(-190) rem(40);
+  }
   &.ecosystem-home-hero--no-image {
     background-color: $iastate-red;
     padding: rem(50) rem(36);

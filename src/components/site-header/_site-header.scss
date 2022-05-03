@@ -420,6 +420,11 @@
   * {
     pointer-events: initial;
   }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      pointer-events: none;
+    }
+  }
 }
 
 .site-header__mega-menu {
@@ -497,11 +502,6 @@
   @include media-breakpoint-up(xl) {
     overflow: initial;
     pointer-events: none;
-  }
-  .site-header--ecosystem & {
-    @include media-breakpoint-up(xl) {
-      pointer-events: initial;
-    }
   }
 }
 
