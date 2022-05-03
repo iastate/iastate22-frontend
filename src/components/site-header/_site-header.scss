@@ -904,6 +904,7 @@
         .site-header--ecosystem & {
           @include media-breakpoint-up(xl) {
             background-color: $off-white;
+            margin-top: rem(29);
           }
         }
         &[aria-hidden="true"] {

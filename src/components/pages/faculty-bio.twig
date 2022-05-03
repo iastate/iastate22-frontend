@@ -1,10 +1,17 @@
+{% extends "@page" %}
+
+{% block header %}
+  {% include "@site-header--ecosystem" %}
+{% endblock %}
+
+{% block content %}
 <script>
   document.body.classList.add("faculty-bio");
 </script>
 
 <div class="outer-pad outer-pad--top-level">
   <div class="faculty-bio-info-card_wrap">
-    {% include "@faculty-bio-info-card" with faculty_bio_info_card %}
+    {% include "@faculty-bio-info-card" %}
   </div>
   <div class="faculty-bio__content">
     <div class="faculty-bio__content-bio">
@@ -38,3 +45,4 @@
     </div>
   </div>
 </div>
+{% endblock %}
