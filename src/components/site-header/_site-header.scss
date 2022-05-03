@@ -121,9 +121,15 @@
     @include media-breakpoint-up(xl) {
       justify-content: space-between;
       align-items: center;
+      transition: 0.2s height ease-in-out, 0.2s opacity ease-in-out;
     }
     @include media-breakpoint-up(xxl) {
       padding: 0 rem(64) 0 rem(83);
+    }
+  }
+  .site-header--ecosystem.headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      opacity: 0;
     }
   }
 
@@ -441,7 +447,6 @@
     background-color: transparent;
   }
   @include media-breakpoint-up(xl) {
-    height: auto;
     bottom: auto;
   }
   .headroom--unpinned & {
@@ -476,9 +481,15 @@
   .site-header--ecosystem & {
     top: rem(90);
     @include media-breakpoint-up(xl) {
+      height: auto;
       position: relative;
       top: 0;
       width: 100%;
+    }
+  }
+  .site-header--ecosystem.headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      transform: translateY(#{rem(-88)});
     }
   }
 }
