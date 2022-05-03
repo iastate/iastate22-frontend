@@ -127,6 +127,21 @@
       padding: 0 rem(64) 0 rem(83);
     }
   }
+  .site-header--ecosystem.site-header-open & {
+    &:before {
+      content: "";
+      background-color: rgba($white, 0.95);
+      position: absolute;
+      top: rem(54);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      @include media-breakpoint-up(xl) {
+        display: none;
+      }
+    }
+  }
   .site-header--ecosystem.headroom--unpinned & {
     @include media-breakpoint-up(xl) {
       opacity: 0;
@@ -1152,8 +1167,10 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
 
 .site-header__mega-menu-utility {
   max-width: rem(676);
+  margin-bottom: rem(150);
   @include media-breakpoint-up(xl) {
     max-width: none;
+    margin-bottom: 0;
   }
   ul {
     column-count: 2;
