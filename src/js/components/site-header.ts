@@ -80,6 +80,7 @@ export class SiteHeader {
       const mainMenu = document.querySelector(".site-header") as HTMLElement;
       const headerTop = document.querySelector(".site-header__top") as HTMLElement;
       const megaMenuMain = document.querySelector(".site-header__mega-menu-main") as HTMLElement;
+      const siteHeaderMain = document.querySelector(".site-header__main") as HTMLElement;
       const siteTitle = document.querySelector(".site-header__website-title") as HTMLElement;
       const mainContent = document.querySelector("main") as HTMLElement;
 
@@ -87,7 +88,7 @@ export class SiteHeader {
         mainContent.style.paddingTop = headerTop.offsetHeight + siteTitle.offsetHeight + "px";
       }
       if (!mobileMQ.matches && mainMenu.classList.contains("site-header--ecosystem")) {
-        mainContent.style.paddingTop = headerTop.offsetHeight + megaMenuMain.offsetHeight + "px";
+        mainContent.style.paddingTop = headerTop.offsetHeight + siteHeaderMain.offsetHeight + "px";
       }
       if (!mainMenu.classList.contains("site-header--ecosystem")) {
         mainContent.style.paddingTop = headerTop.offsetHeight + "px";
