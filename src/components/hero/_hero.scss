@@ -7,7 +7,7 @@
   }
   &.hero--top-level-lp {
     @include media-breakpoint-up(lg) {
-      padding-top: rem(10);
+      padding-top: rem(25);
       margin-bottom: rem(65);
     }
   }

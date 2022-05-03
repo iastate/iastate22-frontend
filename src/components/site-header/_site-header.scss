@@ -11,6 +11,7 @@
   margin: 0 auto;
   @include media-breakpoint-up(xl) {
     width: auto;
+    bottom: auto;
   }
   > * {
     pointer-events: initial;
@@ -412,7 +413,6 @@
   pointer-events: none;
   @include media-breakpoint-up(lg) {
     background-color: transparent;
-    padding-bottom: rem(20);
   }
   @include media-breakpoint-up(xl) {
     pointer-events: initial;
@@ -439,6 +439,10 @@
   height: 100vh;
   @include media-breakpoint-up(lg) {
     background-color: transparent;
+  }
+  @include media-breakpoint-up(xl) {
+    height: auto;
+    bottom: auto;
   }
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
@@ -1316,6 +1320,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   opacity: 0;
   transition: 0.2s opacity ease-in-out;
   max-width: rem(275);
+
   @include media-breakpoint-up(xl) {
     position: static;
     opacity: 1;
