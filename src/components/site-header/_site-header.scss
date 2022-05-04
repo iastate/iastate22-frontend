@@ -1257,12 +1257,9 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     transition: 0.2s width ease-in-out;
     visibility: hidden;
   }
-  @include media-breakpoint-up(xl) {
-    button[type="submit"] {
-      display: none;
-      font-size: rem(20);
-      top: rem(13);
-      right: rem(40);
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      top: rem(-7);
     }
   }
   &[aria-hidden="false"] {
@@ -1279,6 +1276,14 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
       border: rem(2) solid $iastate-maroon;
       pointer-events: all;
       padding: rem(8) rem(15);
+    }
+  }
+  button[type="submit"] {
+    @include media-breakpoint-up(xl) {
+      display: none;
+      font-size: rem(20);
+      top: rem(13);
+      right: rem(40);
     }
   }
   input {
@@ -1321,8 +1326,13 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   display: none;
   &[aria-hidden="false"] {
     display: block;
+    position: absolute;
+    left: initial;
     opacity: 1;
     visibility: visible;
+    .site-header--ecosystem & {
+      top: rem(-5);
+    }
   }
 }
 
