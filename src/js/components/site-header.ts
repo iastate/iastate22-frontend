@@ -84,16 +84,19 @@ export class SiteHeader {
       const siteTitle = document.querySelector(".site-header__website-title") as HTMLElement;
       const mainContent = document.querySelector("main") as HTMLElement;
 
-      if (mobileMQ.matches && mainMenu.classList.contains("site-header--ecosystem")) {
-        mainContent.style.paddingTop = headerTop.offsetHeight + siteTitle.offsetHeight + "px";
-      }
-      if (!mobileMQ.matches && mainMenu.classList.contains("site-header--ecosystem")) {
-        mainContent.style.paddingTop = headerTop.offsetHeight + siteHeaderMain.offsetHeight + "px";
-      }
-      if (!mainMenu.classList.contains("site-header--ecosystem")) {
-        mainContent.style.paddingTop = headerTop.offsetHeight + "px";
+      if (mainContent) {
+        if (mobileMQ.matches && mainMenu.classList.contains("site-header--ecosystem")) {
+          mainContent.style.paddingTop = headerTop.offsetHeight + siteTitle.offsetHeight + "px";
+        }
+        if (!mobileMQ.matches && mainMenu.classList.contains("site-header--ecosystem")) {
+          mainContent.style.paddingTop = headerTop.offsetHeight + siteHeaderMain.offsetHeight + "px";
+        }
+        if (!mainMenu.classList.contains("site-header--ecosystem")) {
+          mainContent.style.paddingTop = headerTop.offsetHeight + "px";
+        }
       }
     };
+
     window.addEventListener("resize", _debounce(resize, 100));
     resize();
   }
