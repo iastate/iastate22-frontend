@@ -20,12 +20,10 @@
 
   &.ecosystem-home-hero--supporting-image {
     background-color: $iastate-red;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-    }
-    @include media-breakpoint-up(lg) {
       padding-bottom: rem(84);
       margin-right: 0;
     }
@@ -111,12 +109,10 @@
   }
 
   .ecosystem-home-hero--supporting-image & {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       flex: 0 1 auto;
       width: 46%;
       align-self: flex-start;
-    }
-    @include media-breakpoint-up(lg) {
       right: rem(-108);
     }
     &:before {
@@ -160,11 +156,9 @@
 
   .ecosystem-home-hero--supporting-image & {
     padding: rem(38);
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       flex: 0 1 auto;
       width: 54%;
-    }
-    @include media-breakpoint-up(lg) {
       padding: rem(40) 0 0 rem(83);
     }
   }
