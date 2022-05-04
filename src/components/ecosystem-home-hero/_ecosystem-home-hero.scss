@@ -2,10 +2,10 @@
   position: relative;
   margin: 0 rem(-36) rem(40);
   @include media-breakpoint-up(md) {
-    margin: 0 rem(-70) rem(40);
+    margin: 0 rem(-70) rem(60);
   }
   @include media-breakpoint-up(xl) {
-    margin: 0 rem(-190) rem(40);
+    margin: 0 rem(-190) rem(70);
   }
   &.ecosystem-home-hero--no-image {
     background-color: $iastate-red;
@@ -171,15 +171,18 @@
       top: rem(-75);
       margin-right: rem(40);
       margin-left: rem(40);
+      margin-bottom: rem(-75);
     }
     @include media-breakpoint-up(lg) {
       top: rem(-120);
       margin-right: rem(82);
       margin-left: rem(82);
       padding-top: rem(50);
+      margin-bottom: rem(-120);
     }
     @include media-breakpoint-up(xl) {
       top: rem(-162);
+      margin-bottom: rem(-162);
       padding-top: rem(60);
     }
   }
