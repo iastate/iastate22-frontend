@@ -33,7 +33,7 @@ main {
     padding-top: rem(117);
   }
   .home & {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
 }
 
