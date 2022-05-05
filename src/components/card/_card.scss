@@ -60,6 +60,7 @@
   transition: 0.2s color ease-in-out;
   margin-top: rem(5);
   display: inline-block;
+  cursor: pointer;
   &:hover {
     color: $iastate-red;
   }
@@ -87,7 +88,8 @@
       }
     }
   }
-  .iastate22-card--profile-with-modal & {
+  .iastate22-card--profile-with-modal &,
+  .iastate22-card--with-modal & {
     color: $iastate-red;
     margin-top: rem(50);
     margin-bottom: rem(5);
@@ -273,5 +275,12 @@
     &:hover {
       color: $iastate-maroon;
     }
+  }
+}
+
+// modal popup window styles for iastate22-card--with-modal variant
+.iastate22-modal__body-content {
+  + .link-set {
+    margin-top: rem(15);
   }
 }

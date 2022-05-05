@@ -1,7 +1,11 @@
 <div class="card-set">
   <ul>
     {% for card in cards %}
+    {% if with_modal %}
+    <li>{% include "@card--with-modal" with card %}</li>
+    {% else %}
     <li>{% include "@card" with card %}</li>
+    {% endif %}
     {% endfor %}
   </ul>
 </div>
