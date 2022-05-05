@@ -119,6 +119,15 @@ ol {
   }
 }
 
+.text-content {
+  &:last-child {
+    margin-bottom: rem(40);
+    @include media-breakpoint-up(xl) {
+      margin-bottom: rem(60);
+    }
+  }
+}
+
 // helper classes to negate paragraph widgets for flush components
 .paragraph-widget-no-margin-top {
   margin-top: 0 !important;
