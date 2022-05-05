@@ -14,7 +14,7 @@ import subnavInit from "./components/subnav";
 import privacyConsentInit from "../components/privacy-consent/privacy-consent";
 import accordionsInit from "./components/accordion";
 import videoEmbedInit from "./components/video-embed";
-import collegeHeroBackgroundVideo from "./components/ecosystem-home-hero";
+import ecosystemHeroBackgroundVideo from "./components/ecosystem-home-hero";
 import homeInit from "./pages/home";
 import initCollegeHeroes from "./pages/college-template";
 
@@ -32,7 +32,7 @@ privacyConsentInit();
 accordionsInit();
 subnavInit();
 videoEmbedInit();
-collegeHeroBackgroundVideo();
+ecosystemHeroBackgroundVideo();
 homeInit();
 initCollegeHeroes();
 

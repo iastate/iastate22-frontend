@@ -1,6 +1,6 @@
 import YoutubePlayer from "youtube-player";
 
-export class CollegeHeroBackgroundVideo {
+export class EcosystemHeroBackgroundVideo {
   private element: HTMLElement;
   private media: HTMLElement;
   private player: any;
@@ -83,7 +83,7 @@ export class CollegeHeroBackgroundVideo {
   }
 }
 
-export default function collegeHeroBackgroundVideo() {
-  const collegeHeroBackgroundVideo = document.querySelector(".ecosystem-home-hero--background-video") as HTMLElement;
-  new CollegeHeroBackgroundVideo(collegeHeroBackgroundVideo);
+export default function ecosystemHeroBackgroundVideo() {
+  const ecosystemHeroBackgroundVideo = document.querySelector(".ecosystem-home-hero--background-video") as HTMLElement;
+  new EcosystemHeroBackgroundVideo(ecosystemHeroBackgroundVideo);
 }
