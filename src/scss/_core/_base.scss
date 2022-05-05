@@ -110,6 +110,12 @@ ol {
   }
   &.paragraph-widget--text-html {
     margin-bottom: 0;
+    &:last-child {
+      margin-bottom: rem(40);
+      @include media-breakpoint-up(xl) {
+        margin-bottom: rem(60);
+      }
+    }
   }
 }
 
