@@ -1,3 +1,6 @@
+{% extends "@page" %}
+
+{% block content %}
 <div class="outer-pad outer-pad--top-level">
   {% include "@hero--top-level-lp" with hero %}
   
@@ -43,3 +46,4 @@
     {% include "@call-to-action--small" with call_to_action_small %}
   </div>
 </div>
+{% endblock %}
