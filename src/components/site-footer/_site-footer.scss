@@ -68,6 +68,13 @@
     @include media-breakpoint-up(md) {
       margin-right: rem(30);
     }
+    .site-footer--ecosystem & {
+      &:last-child {
+        @include media-breakpoint-up(md) {
+          margin-right: 0;
+        }
+      }
+    }
     a {
       border: rem(2) solid $iastate-gold;
       border-radius: 50%;
@@ -93,6 +100,7 @@
   margin: rem(33) auto rem(43) auto;
   @include media-breakpoint-up(xl) {
     margin: rem(10) 0 rem(35) 0;
+    width: 100%;
   }
   ul {
     @include media-breakpoint-up(md) {
@@ -103,6 +111,15 @@
     @include media-breakpoint-up(xl) {
       justify-content: flex-end;
       border-bottom: none;
+    }
+    .site-footer--ecosystem & {
+      @include media-breakpoint-up(md) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      @include media-breakpoint-up(xl) {
+        justify-content: flex-end;
+      }
     }
     li {
       border-bottom: rem(2) solid $iastate-gold;
@@ -118,6 +135,11 @@
       @include media-breakpoint-up(xl) {
         border-bottom: rem(2) solid $iastate-gold;
       }
+      .site-footer--ecosystem & {
+        @include media-breakpoint-up(md) {
+          padding: 0 rem(30) 0 0;
+        }
+      }
       &:first-child {
         border-top: rem(2) solid $iastate-gold;
         @include media-breakpoint-up(md) {
@@ -125,6 +147,14 @@
           padding-left: 0;
         }
       }
+      &:last-child {
+        .site-footer--ecosystem & {
+          @include media-breakpoint-up(md) {
+            padding-right: 0;
+          }
+        }
+      }
+
       a {
         color: $white;
         text-decoration: none;
@@ -135,8 +165,8 @@
         line-height: (34 / 21);
         margin: rem(17) auto;
         transition: 0.2s color ease-in-out;
-        white-space: nowrap;
         max-width: rem(236);
+        white-space: nowrap;
         position: relative;
         @include media-breakpoint-up(md) {
           text-align: center;
@@ -146,6 +176,13 @@
         }
         @include media-breakpoint-up(xl) {
           margin: rem(17) auto;
+        }
+        .site-footer--ecosystem & {
+          @include media-breakpoint-up(md) {
+            font-size: rem(18);
+            line-height: (32 / 18);
+            margin-bottom: rem(7);
+          }
         }
         &:hover {
           color: $iastate-gold;
@@ -183,6 +220,21 @@
     min-height: rem(130);
     min-width: rem(400);
   }
+  .site-footer--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      flex: 1 1 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      padding-bottom: rem(7);
+    }
+    .site-footer__section-label {
+      @include media-breakpoint-up(xl) {
+        flex: 0 1 auto;
+        width: 100%;
+      }
+    }
+  }
 
   ul {
     column-count: 2;
@@ -190,7 +242,13 @@
       column-count: 3;
     }
     @include media-breakpoint-up(xl) {
-      max-width: rem(400);
+      max-width: rem(500);
+    }
+    .site-footer--ecosystem & {
+      column-count: 2;
+    }
+    &.site-footer__secondary-nav-short {
+      column-count: 1;
     }
     li {
       color: $white;
@@ -214,9 +272,6 @@
         text-decoration-thickness: rem(1);
         text-underline-offset: rem(1);
         transition: 0.2s color ease-in-out;
-        @include media-breakpoint-up(xl) {
-          white-space: nowrap;
-        }
         &:hover {
           color: $iastate-gold;
         }
@@ -416,5 +471,75 @@
     font-size: rem(18);
     line-height: (28 / 18);
     text-align: center;
+  }
+}
+
+// Styles for ecosystem footer variant only
+.site-footer__logo-social-links-wrap {
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.site-footer__site-org-contact-info {
+  text-align: center;
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+  }
+  @include media-breakpoint-up(xl) {
+    flex: 1 1 0;
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-right: rem(144);
+  }
+
+  .site-footer__section-label {
+    color: $white;
+    padding: 0;
+    @include media-breakpoint-up(md) {
+      flex: 0 1 auto;
+      width: 100%;
+    }
+  }
+
+  p {
+    color: $white;
+    font-weight: 700;
+    // @include media-breakpoint-up(md) {
+    //   font-size: rem(18);
+    //   line-height: (32 / 18);
+    // }
+    a {
+      color: currentColor;
+      text-decoration-thickness: rem(1);
+      text-underline-offset: rem(1);
+      color: $white;
+      transition: 0.2s color ease-in-out;
+      &:hover {
+        color: $iastate-gold;
+      }
+    }
+  }
+}
+
+.site-footer__site-org-contact-address,
+.site-footer__site-org-contact-email,
+.site-footer__site-org-contact-phone {
+  margin-bottom: rem(20);
+  @include media-breakpoint-up(xl) {
+    margin-bottom: 0;
+  }
+}
+
+.site-footer__site-org-contact-email,
+.site-footer__site-org-contact-phone {
+  p {
+    margin: 0;
   }
 }

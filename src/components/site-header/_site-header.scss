@@ -11,6 +11,7 @@
   margin: 0 auto;
   @include media-breakpoint-up(xl) {
     width: auto;
+    bottom: auto;
   }
   > * {
     pointer-events: initial;
@@ -62,6 +63,15 @@
       filter: none;
     }
   }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(lg) {
+      max-width: rem(224);
+    }
+    @include media-breakpoint-up(xl) {
+      position: static;
+      width: 100%;
+    }
+  }
 
   img {
     display: block;
@@ -107,6 +117,37 @@
       height: rem(93);
     }
   }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      justify-content: space-between;
+      align-items: center;
+      transition: 0.2s height ease-in-out, 0.2s opacity ease-in-out;
+    }
+    @include media-breakpoint-up(xxl) {
+      padding: 0 rem(64) 0 rem(83);
+    }
+  }
+  .site-header--ecosystem.site-header-open & {
+    &:before {
+      content: "";
+      background-color: rgba($white, 0.95);
+      position: absolute;
+      top: rem(54);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      @include media-breakpoint-up(xl) {
+        display: none;
+      }
+    }
+  }
+  .site-header--ecosystem.headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      opacity: 0;
+    }
+  }
+
   // different background for homepage
   .home & {
     background-color: transparent;
@@ -163,6 +204,10 @@
         visibility: hidden;
       }
     }
+  }
+  .site-header--ecosystem & {
+    flex-wrap: wrap;
+    border-bottom: none;
   }
   // extend header background-color on wider monitors
   &:before {
@@ -243,6 +288,19 @@
       visibility: hidden;
     }
   }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      margin-top: 0;
+      margin-right: rem(5);
+    }
+  }
+  .site-header--ecosystem & {
+    + .site-header__utility-button {
+      @include media-breakpoint-up(xl) {
+        margin-left: rem(30);
+      }
+    }
+  }
   a {
     @include media-breakpoint-up(xl) {
       text-transform: none;
@@ -312,6 +370,12 @@
       opacity: 0;
     }
   }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      top: rem(2);
+      height: auto;
+    }
+  }
 }
 
 .site-header__search-toggle {
@@ -370,13 +434,17 @@
   pointer-events: none;
   @include media-breakpoint-up(lg) {
     background-color: transparent;
-    padding-bottom: rem(20);
   }
   @include media-breakpoint-up(xl) {
     pointer-events: initial;
   }
   * {
     pointer-events: initial;
+  }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      pointer-events: none;
+    }
   }
 }
 
@@ -392,6 +460,9 @@
   height: 100vh;
   @include media-breakpoint-up(lg) {
     background-color: transparent;
+  }
+  @include media-breakpoint-up(xl) {
+    bottom: auto;
   }
   .headroom--unpinned & {
     @include media-breakpoint-up(xl) {
@@ -422,6 +493,20 @@
       transition: 0.3s opacity ease-in-out, 0.3s visibility ease-in-out;
     }
   }
+  .site-header--ecosystem & {
+    top: rem(90);
+    @include media-breakpoint-up(xl) {
+      height: auto;
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .site-header--ecosystem.headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      transform: translateY(#{rem(-88)});
+    }
+  }
 }
 
 .site-header__mega-menu-inner {
@@ -432,6 +517,11 @@
   position: relative;
   @include media-breakpoint-up(xl) {
     background-color: transparent;
+  }
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      overflow: visible;
+    }
   }
 }
 
@@ -448,6 +538,18 @@
 .site-header__mega-menu-max-bound {
   margin: 0 auto;
   max-width: rem(1660);
+
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 rem(46) 0 rem(32);
+    }
+    @include media-breakpoint-up(xxl) {
+      padding: 0 rem(83) 0 rem(83);
+    }
+  }
 }
 
 .site-header__mega-menu-open {
@@ -560,6 +662,26 @@
       margin-top: rem(-23);
     }
   }
+  .site-header--ecosystem & {
+    padding-top: rem(30);
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(-5);
+      padding: rem(20) 0;
+      background-color: $off-white;
+      &:before {
+        content: "";
+        position: absolute;
+        background-color: $off-white;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 150vw;
+        left: -50vw;
+        z-index: -1;
+      }
+    }
+  }
 }
 
 .site-header__mega-menu-main-nav {
@@ -569,6 +691,12 @@
       justify-content: flex-end;
       width: 65%;
       margin: 0 0 0 auto;
+    }
+    .site-header--ecosystem & {
+      @include media-breakpoint-up(xl) {
+        width: 100%;
+        flex-wrap: wrap;
+      }
     }
     > li {
       margin-bottom: rem(22);
@@ -595,6 +723,11 @@
       &.site-header__parent-link-no-subnav-wrap {
         @include media-breakpoint-up(xl) {
           padding-right: rem(30);
+        }
+      }
+      .site-header--ecosystem & {
+        @include media-breakpoint-up(xl) {
+          padding: rem(7) 0 rem(7) rem(40);
         }
       }
 
@@ -720,6 +853,7 @@
         &[aria-expanded="true"] {
           @include media-breakpoint-up(xl) {
             border-bottom: rem(7) solid $iastate-gold;
+            margin-bottom: rem(-7);
           }
           &:after {
             @include media-breakpoint-up(xl) {
@@ -766,9 +900,16 @@
           left: rem(-120);
           display: flex;
           flex-wrap: wrap;
+          opacity: 0;
+        }
+        .site-header--ecosystem & {
+          @include media-breakpoint-up(xl) {
+            background-color: $off-white;
+            margin-top: rem(29);
+          }
         }
         &[aria-hidden="true"] {
-          opacity: 0;
+          // opacity: 0;
           transform: translate3d(100%, 0, 0);
           visibility: hidden;
           @include media-breakpoint-up(xl) {
@@ -843,6 +984,11 @@
         &.site-header__parent-link-no-subnav-wrap {
           @include media-breakpoint-up(xl) {
             margin-right: rem(-20);
+          }
+          .site-header--ecosystem & {
+            @include media-breakpoint-up(xl) {
+              margin-right: 0;
+            }
           }
         }
       }
@@ -1023,8 +1169,10 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
 
 .site-header__mega-menu-utility {
   max-width: rem(676);
+  margin-bottom: rem(150);
   @include media-breakpoint-up(xl) {
     max-width: none;
+    margin-bottom: 0;
   }
   ul {
     column-count: 2;
@@ -1110,12 +1258,9 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     transition: 0.2s width ease-in-out;
     visibility: hidden;
   }
-  @include media-breakpoint-up(xl) {
-    button[type="submit"] {
-      display: none;
-      font-size: rem(20);
-      top: rem(13);
-      right: rem(40);
+  .site-header--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      top: rem(-7);
     }
   }
   &[aria-hidden="false"] {
@@ -1132,6 +1277,14 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
       border: rem(2) solid $iastate-maroon;
       pointer-events: all;
       padding: rem(8) rem(15);
+    }
+  }
+  button[type="submit"] {
+    @include media-breakpoint-up(xl) {
+      display: none;
+      font-size: rem(20);
+      top: rem(13);
+      right: rem(40);
     }
   }
   input {
@@ -1174,8 +1327,13 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   display: none;
   &[aria-hidden="false"] {
     display: block;
+    position: absolute;
+    left: initial;
     opacity: 1;
     visibility: visible;
+    .site-header--ecosystem & {
+      top: rem(-5);
+    }
   }
 }
 
@@ -1187,5 +1345,132 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     margin-top: 10px;
     color: $white;
     display: block;
+  }
+}
+
+// Styles for ecosystem site header variant only
+.site-header__parent-unit-name {
+  position: absolute;
+  top: rem(52);
+  left: rem(35);
+  font-family: $typeface-sans-serif;
+  font-size: rem(18);
+  line-height: (23 / 18);
+  color: $iastate-red;
+  opacity: 0;
+  transition: 0.2s opacity ease-in-out;
+  max-width: rem(275);
+
+  @include media-breakpoint-up(xl) {
+    position: static;
+    opacity: 1;
+    font-size: rem(16);
+    line-height: (23 / 16);
+    font-weight: 700;
+    margin-top: rem(6);
+  }
+  .site-header-open & {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+.site-header__website-title {
+  background-color: $off-white;
+  flex: 0 1 auto;
+  width: 100vw;
+  margin-top: rem(54);
+  margin-right: rem(-58);
+  padding: rem(10) rem(38);
+  font-family: $typeface-sans-serif;
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: (23 / 18);
+  color: $iastate-maroon;
+  transition: 0.2s opacity ease-in-out;
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+  .site-header-open & {
+    opacity: 0;
+  }
+  .site-header__mega-menu-main & {
+    opacity: 1;
+    margin: 0 0 rem(28) 0;
+    background: transparent;
+    width: auto;
+    padding: 0;
+    color: $white;
+    @include media-breakpoint-up(xl) {
+      max-width: rem(250);
+      color: $iastate-maroon;
+      display: block;
+      margin: 0;
+    }
+  }
+}
+
+.site-header__utility-button {
+  background-color: $iastate-red;
+  color: $white;
+  padding: rem(2) rem(30) rem(2) rem(15);
+  top: rem(3);
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.2s background-color ease-in-out;
+  display: none;
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(20);
+    display: block;
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-left: rem(5);
+  }
+  &:hover {
+    background-color: $iastate-maroon;
+  }
+  span {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      border-right: rem(2) solid $iastate-gold;
+      border-bottom: rem(2) solid $iastate-gold;
+      width: rem(10);
+      height: rem(10);
+      margin-left: rem(4);
+      top: rem(7);
+      transform: rotate(-45deg);
+    }
+  }
+  .site-header__mega-menu-utility & {
+    background-color: $white;
+    color: $iastate-maroon;
+    margin-top: rem(30);
+    display: inline-block;
+    position: static;
+    transition: 0.2s background-color ease-in-out, 0.2s color ease-in-out;
+    &:hover {
+      color: $iastate-red;
+      background-color: $off-white;
+      span {
+        &:after {
+          border-color: $iastate-red;
+        }
+      }
+    }
+    span {
+      &:after {
+        transition: 0.2s border-color ease-in-out;
+        border-color: $iastate-maroon;
+      }
+    }
+  }
+}
+
+.site-header__utility-search-wrap {
+  @include media-breakpoint-up(xl) {
+    display: flex;
+    align-items: flex-end;
   }
 }

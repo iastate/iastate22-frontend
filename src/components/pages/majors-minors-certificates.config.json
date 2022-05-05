@@ -1,5 +1,4 @@
 {
-  "preview": "@page-preview",
   "context": {
     "hero": {
       "breadcrumbs": {
@@ -19,7 +18,8 @@
         ]
       },
       "title": "Majors, Minors and Certificates",
-      "image": "../../img/hero-majors-minors-certs.jpg"
+      "image": "../../img/hero-majors-minors-certs.jpg",
+      "subnav_horizontal": []
     },
     "statistic_with_text": {
       "statistic": {
@@ -832,6 +832,7 @@
     },
     "call_to_action_small": {
       "title": "How to Apply Lorem Ipsum Dolor",
+      "body": "",
       "button_set": {
         "items": [
           {

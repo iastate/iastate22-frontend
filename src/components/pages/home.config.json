@@ -1,5 +1,4 @@
 {
-  "preview": "@page-preview",
   "context": {
     "hero": {
       "image_mobile": "../../img/Home-Hero-Mobile-FPO.jpg",

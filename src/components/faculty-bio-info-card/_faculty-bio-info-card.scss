@@ -1,0 +1,128 @@
+.faculty-bio-info-card_wrap {
+  margin-bottom: rem(50);
+  margin-top: rem(50);
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-158);
+    margin-right: rem(-158);
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-left: rem(-108);
+    margin-right: rem(-215);
+  }
+}
+
+.faculty-bio-info-card {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
+.faculty-bio-info-card__media {
+  @extend %responsive-img;
+  margin: 0 auto;
+  @include media-breakpoint-up(sm) {
+    max-width: rem(304);
+  }
+  @include media-breakpoint-up(md) {
+    flex: 0 0 auto;
+    width: rem(304);
+  }
+
+  &:before {
+    padding-top: 100%;
+  }
+}
+
+.faculty-bio-info-card__content-contact-box-wrap {
+  @include media-breakpoint-up(md) {
+    flex: 1 1 0;
+  }
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
+
+.faculty-bio-info-card__content {
+  padding: rem(38);
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 0;
+    padding-top: 0;
+  }
+}
+
+.faculty-bio-info-card__name {
+  @extend %h2-yellow-border;
+}
+
+.faculty-bio-info-card__titles {
+  margin-bottom: rem(30);
+  li {
+    margin-bottom: rem(12);
+  }
+}
+
+.faculty-bio-info-card__contact-box {
+  background-color: $off-white;
+  margin: rem(20) rem(38) 0;
+  padding: rem(38);
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    flex: 0 0 auto;
+    width: rem(350);
+    margin: 0;
+  }
+  @include media-breakpoint-up(xl) {
+    width: rem(412);
+    padding: rem(50) rem(60);
+  }
+  &:before {
+    content: "";
+    border-bottom: rem(8) solid $iastate-gold;
+    top: rem(-4);
+    left: 50%;
+    margin-left: rem(-28);
+    width: rem(56);
+    height: rem(8);
+    position: absolute;
+  }
+  p {
+    font-weight: 700;
+    a {
+      color: $grey;
+      text-decoration-thickness: rem(1);
+      text-underline-offset: rem(1);
+      transition: 0.2s color ease-in-out;
+      &:hover {
+        color: $iastate-red;
+      }
+    }
+  }
+}
+
+.faculty-bio-info-card__contact-box-social {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    margin-right: rem(10);
+    a {
+      border-radius: 50%;
+      border: rem(2) solid $iastate-red;
+      display: inline-block;
+      width: rem(30);
+      height: rem(30);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $iastate-red;
+      font-size: rem(13);
+      transition: 0.2s border-color ease-in-out, 0.2s color ease-in-out;
+      &:hover {
+        border-color: $iastate-maroon;
+        color: $iastate-maroon;
+      }
+    }
+  }
+}

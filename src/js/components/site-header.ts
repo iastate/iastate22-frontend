@@ -47,6 +47,7 @@ export class SiteHeader {
 
   private init() {
     this.handleResize();
+    this.handleBodyPadding();
     this.initStickyNav();
     this.initiallyHideDropdowns();
     this.handleEsc();
@@ -70,6 +71,32 @@ export class SiteHeader {
         this.element.setAttribute("aria-hidden", "true");
       }
     };
+    window.addEventListener("resize", _debounce(resize, 100));
+    resize();
+  }
+
+  private handleBodyPadding() {
+    const resize = () => {
+      const mainMenu = document.querySelector(".site-header") as HTMLElement;
+      const headerTop = document.querySelector(".site-header__top") as HTMLElement;
+      const megaMenuMain = document.querySelector(".site-header__mega-menu-main") as HTMLElement;
+      const siteHeaderMain = document.querySelector(".site-header__main") as HTMLElement;
+      const siteTitle = document.querySelector(".site-header__website-title") as HTMLElement;
+      const mainContent = document.querySelector("main") as HTMLElement;
+
+      if (mainContent) {
+        if (mobileMQ.matches && mainMenu.classList.contains("site-header--ecosystem")) {
+          mainContent.style.paddingTop = headerTop.offsetHeight + siteTitle.offsetHeight + "px";
+        }
+        if (!mobileMQ.matches && mainMenu.classList.contains("site-header--ecosystem")) {
+          mainContent.style.paddingTop = headerTop.offsetHeight + siteHeaderMain.offsetHeight + "px";
+        }
+        if (!mainMenu.classList.contains("site-header--ecosystem")) {
+          mainContent.style.paddingTop = headerTop.offsetHeight + "px";
+        }
+      }
+    };
+
     window.addEventListener("resize", _debounce(resize, 100));
     resize();
   }

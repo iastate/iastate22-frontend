@@ -1,6 +1,6 @@
 .admission-and-aid {
   main {
-    padding-top: 0;
+    padding-top: 0 !important;
   }
 }
 
@@ -80,7 +80,6 @@
   &:before {
     padding-top: 172.46%;
     @include media-breakpoint-up(md) {
-      padding-top: 57.5%;
       padding-top: 54.1%;
     }
   }

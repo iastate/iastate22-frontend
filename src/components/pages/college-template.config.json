@@ -1,5 +1,4 @@
 {
-  "preview": "@page-preview",
   "context": {
     "hero": {
       "breadcrumbs": {
@@ -382,6 +381,7 @@
       "id": "keep-exploring",
       "call_to_action_small": {
         "title": "See All That Iowa State Offers Lorem",
+        "body": "",
         "button_set": {
           "items": [
             {

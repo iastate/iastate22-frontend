@@ -1,3 +1,10 @@
+{% extends "@page" %}
+
+{% block header %}
+  {% include "@site-header--ecosystem" %}
+{% endblock %}
+
+{% block content %}
 <script>
   document.body.classList.add("top-level-page");
 </script>
@@ -199,3 +206,4 @@
     {% include "@call-to-action--large" with call_to_action_large %}
   </div>
 </div>
+{% endblock %}

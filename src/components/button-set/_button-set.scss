@@ -4,4 +4,14 @@
 
 .iastate22-button-set {
   margin: rem(20) 0;
+  ul {
+    padding: 0;
+    li {
+      padding-left: 0;
+      text-indent: initial;
+      &::before {
+        display: none;
+      }
+    }
+  }
 }
