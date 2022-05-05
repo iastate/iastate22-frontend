@@ -218,7 +218,7 @@
         ],
         "full_nav": [
           {
-            "title": "Link One",
+            "title": "Primary Nav 1",
             "url": "https://www.iastate.edu/",
             "children": [
               {
@@ -228,7 +228,7 @@
             ]
           },
           {
-            "title": "Link Two",
+            "title": "Primary Nav 2",
             "url": "https://www.iastate.edu/",
             "children": [
               {
@@ -238,7 +238,7 @@
             ]
           },
           {
-            "title": "Link Two That Is Long",
+            "title": "Primary Nav 3",
             "url": "https://www.iastate.edu/",
             "children": [
               {
@@ -248,7 +248,7 @@
             ]
           },
           {
-            "title": "Link Three That Is Really Long",
+            "title": "Primary Nav 4",
             "url": "https://www.iastate.edu/",
             "children": [
               {
@@ -258,7 +258,7 @@
             ]
           },
           {
-            "title": "Link Two That Is Really Long",
+            "title": "Primary Nav 5",
             "url": "https://www.iastate.edu/",
             "children": [
               {
@@ -268,7 +268,7 @@
             ]
           },
           {
-            "title": "Link Two That Is Really Long",
+            "title": "Primary Nav 6",
             "url": "https://www.iastate.edu/",
             "children": [
               {
@@ -278,17 +278,7 @@
             ]
           },
           {
-            "title": "Link Two That Is Really Long",
-            "url": "https://www.iastate.edu/",
-            "children": [
-              {
-                "title": "Principles of Community",
-                "url": "https://www.iastate.edu/"
-              }
-            ]
-          },
-          {
-            "title": "Link Two That Is Really Long",
+            "title": "Primary Nav 7",
             "url": "https://www.iastate.edu/",
             "children": [
               {
