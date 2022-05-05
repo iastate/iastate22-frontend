@@ -1,3 +1,6 @@
+{% extends "@page" %}
+
+{% block content %}
 <script>
   document.body.classList.add("home");
 </script>
@@ -252,3 +255,4 @@
     <img class="home-full-width-campus-photo__mobile" src="{{ campus_photo.image_mobile|path }}" alt="" />
     <img class="home-full-width-campus-photo__desktop" src="{{ campus_photo.image_desktop|path }}" alt="" />
 </div>
+{% endblock %}
