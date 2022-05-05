@@ -8,6 +8,7 @@
     </div>
     <div class="site-header__website-title">{{ website_title }}</div>
     <div class="site-header__utility-search-wrap">
+      {% if utility_nav %}
       <nav class="site-header__utility" aria-label="Utility">
         <ul>
           {% for link in utility_nav %}
@@ -17,6 +18,7 @@
           {% endfor %}
         </ul>
       </nav>
+      {% endif %}
       {% if search_visible == true %}
       <div class="site-header__search">
         <a href="#site-search" class="site-header__search-toggle">
@@ -56,6 +58,7 @@
             <div class="site-header__mega-menu-main">
               <div class="site-header__mega-menu-max-bound">
                 <div class="site-header__website-title">{{ website_title }}</div>
+                {% if full_nav %}
                 <nav class="site-header__mega-menu-main-nav" aria-label="Main">
                   <ul>
                     {% for link in full_nav %}
@@ -74,6 +77,7 @@
                     {% endfor %}
                   </ul>
                 </nav>
+                {% endif %}
               </div>
             </div>
             <div class="site-header__mega-menu-secondary">
