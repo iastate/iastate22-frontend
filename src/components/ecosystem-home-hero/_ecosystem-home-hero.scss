@@ -133,7 +133,13 @@
   }
 
   .ecosystem-home-hero--supporting-image & {
+    max-width: rem(475);
+    @include media-breakpoint-up(sm) {
+      margin-left: rem(38);
+    }
     @include media-breakpoint-up(lg) {
+      margin: 0;
+      max-width: none;
       flex: 0 1 auto;
       width: 46%;
       align-self: flex-start;
@@ -142,10 +148,25 @@
     &:before {
       padding-top: 100%;
     }
-    img {
-      @include media-breakpoint-up(lg) {
-        z-index: 1;
+    &:after {
+      content: "";
+      background-color: $white;
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      z-index: 0;
+      @include media-breakpoint-up(sm) {
+        left: rem(-38);
       }
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+    img {
+      z-index: 1;
     }
   }
   .ecosystem-home-hero--atmospheric-image & {
