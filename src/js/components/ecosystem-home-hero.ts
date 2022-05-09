@@ -48,7 +48,7 @@ export class EcosystemHeroBackgroundVideo {
   private handlePlayerEvents() {
     this.player.on("ready", () => {
       // This is necessary for autoplay on mobile
-      this.player.playVideo();
+      this.playButton.click();
     });
     this.player.on("stateChange", (event) => {
       if (event.data === 1) {
