@@ -190,6 +190,10 @@
 
 .ecosystem-home-hero__title {
   color: $white;
+  font-size: rem(42.8);
+  @include media-breakpoint-up(md) {
+    font-size: rem(70);
+  }
   .ecosystem-home-hero--supporting-image &,
   .ecosystem-home-hero--atmospheric-image & {
     @include media-breakpoint-up(md) {
