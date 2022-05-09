@@ -5,6 +5,7 @@ export class EcosystemHeroBackgroundVideo {
   private media: HTMLElement;
   private player: any;
   private playButton: HTMLButtonElement;
+  private isPlaying = false;
 
   constructor(element: HTMLElement) {
     if (!!element) {
@@ -16,56 +17,55 @@ export class EcosystemHeroBackgroundVideo {
 
   private init() {
     this.createVideoPlayer();
-    this.handlePlayerEvents();
     this.createPlayButton();
+    this.handlePlayerEvents();
     this.handlePlayButtonClick();
   }
 
   private createVideoPlayer() {
     const playerRoot = this.element.querySelector(".ecosystem-home-hero__video") as HTMLElement;
-    const youTubeVideoID = playerRoot.dataset.vid;
-    this.player = new YoutubePlayer(playerRoot, {
-      videoId: playerRoot.dataset.vid,
+    const videoId = playerRoot.dataset.vid;
+    this.player = YoutubePlayer(playerRoot, {
+      videoId,
       playerVars: {
         autoplay: 1,
-        autohide: 1,
-        disablekb: 1,
-        mute: 1,
-        playsinline: 1,
         controls: 0,
-        showinfo: 0,
-        modestbranding: 1,
-        loop: 1,
-        fs: 0,
-        rel: 0,
-        playlist: youTubeVideoID,
+        disablekb: 1,
         enablejsapi: 1,
+        fs: 0,
+        loop: 1,
+        modestbranding: 1,
+        rel: 0,
+        playlist: videoId,
+        playsinline: 1,
       },
     });
+    this.player.mute();
   }
 
   private handlePlayerEvents() {
     this.player.on("ready", (event) => {
-      this.media.classList.add("ecosystem-home-hero__media-playing");
+      console.log(event);
+      this.playButton.click();
     });
     this.player.on("stateChange", (event) => {
-      if (!this.media.classList.contains("ecosystem-home-hero__media-playing")) {
-        this.media.classList.add("ecosystem-home-hero__media-playing");
+      if (event.data === 1) {
+        this.isPlaying = true;
+        this.playButton.classList.remove("ecosystem-home-hero__video-button-play");
       }
-      if (event.data == 2) {
-        this.media.classList.remove("ecosystem-home-hero__media-playing");
+      if (event.data === 2) {
+        this.isPlaying = false;
+        this.playButton.classList.add("ecosystem-home-hero__video-button-play");
       }
     });
   }
 
   private handlePlayButtonClick() {
     this.playButton.addEventListener("click", () => {
-      if (this.media.classList.contains("ecosystem-home-hero__media-playing")) {
+      if (this.isPlaying) {
         this.player.pauseVideo();
-        this.playButton.classList.add("ecosystem-home-hero__video-button-play");
       } else {
         this.player.playVideo();
-        this.playButton.classList.remove("ecosystem-home-hero__video-button-play");
       }
     });
   }

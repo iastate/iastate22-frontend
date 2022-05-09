@@ -24,6 +24,7 @@
     "@frctl/fractal": "^1.2.1",
     "@frctl/twig": "^1.1.0",
     "@types/node": "^10.17.11",
+    "@types/youtube-player": "^5.5.6",
     "ajv": "^6.5.2",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
