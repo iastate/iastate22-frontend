@@ -5,7 +5,7 @@
     margin: 0 rem(-70) rem(60);
   }
   @include media-breakpoint-up(xl) {
-    margin: 0 rem(-190) rem(70);
+    margin: 0 rem(-298) rem(70) rem(-190);
   }
   &.ecosystem-home-hero--no-image {
     background-color: $iastate-red;
@@ -38,6 +38,9 @@
       align-items: center;
       padding-bottom: rem(84);
       margin-right: 0;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-right: rem(-110);
     }
     &:before {
       @include media-breakpoint-up(xl) {
