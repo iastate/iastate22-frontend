@@ -63,6 +63,22 @@
           </a>
         </li>
         {% endif %}
+        {% if contact_box.social_links.linkedin %}
+        <li>
+          <a href="{{ contact_box.social_links.linkedin }}" target="_blank">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+            <span class="visible-for-screen-readers">LinkedIn</span>
+          </a>
+        </li>
+        {% endif %}
+        {% if contact_box.social_links.flickr %}
+        <li>
+          <a href="{{ contact_box.social_links.flickr }}" target="_blank">
+            <i class="fak fa-iastate22-flickr" aria-hidden="true"></i>
+            <span class="visible-for-screen-readers">Flickr</span>
+          </a>
+        </li>
+        {% endif %}
       </ul>
       {% endif %}
     </div>
