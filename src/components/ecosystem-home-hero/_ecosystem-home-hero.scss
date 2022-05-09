@@ -39,6 +39,18 @@
       padding-bottom: rem(84);
       margin-right: 0;
     }
+    &:before {
+      @include media-breakpoint-up(xl) {
+        content: "";
+        background-color: $iastate-red;
+        position: absolute;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
   }
 
   &.ecosystem-home-hero--atmospheric-image {
