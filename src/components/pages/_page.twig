@@ -8,7 +8,9 @@
       {% block content %}
       {% endblock %}
     </main>
-    {% include "@site-footer" %}
+    {% block footer %}
+      {% include "@site-footer" %}
+    {% endblock %}
   </div>
 </div>
 {% render "@privacy-consent" %}
