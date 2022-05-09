@@ -15,6 +15,7 @@
   @include media-breakpoint-up(md) {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
 }
 
@@ -34,22 +35,14 @@
   }
 }
 
-.faculty-bio-info-card__content-contact-box-wrap {
-  @include media-breakpoint-up(md) {
-    flex: 1 1 0;
-  }
-  @include media-breakpoint-up(lg) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-}
-
 .faculty-bio-info-card__content {
   padding: rem(38);
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     flex: 1 1 0;
     padding-top: 0;
+  }
+  .faculty-bio-info-card--no-image & {
+    padding-left: 0;
   }
 }
 
@@ -69,15 +62,22 @@
   margin: rem(20) rem(38) 0;
   padding: rem(38);
   position: relative;
-  @include media-breakpoint-up(lg) {
-    flex: 0 0 auto;
-    width: rem(350);
+  @include media-breakpoint-up(md) {
+    flex: 0 1 auto;
+    width: 100%;
     margin: 0;
   }
   @include media-breakpoint-up(xl) {
-    width: rem(412);
     padding: rem(50) rem(60);
   }
+
+  .faculty-bio-info-card--no-image & {
+    @include media-breakpoint-up(md) {
+      flex: 0 0 auto;
+      width: rem(412);
+    }
+  }
+
   &:before {
     content: "";
     border-bottom: rem(8) solid $iastate-gold;
@@ -98,6 +98,28 @@
       &:hover {
         color: $iastate-red;
       }
+    }
+  }
+}
+
+.faculty-bio-info-card__contact-box-columns-wrap {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: rem(625);
+  }
+  .faculty-bio-info-card--no-image & {
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+}
+
+.faculty-bio-info-card__contact-box-column {
+  p {
+    @include media-breakpoint-up(md) {
+      margin: 0;
     }
   }
 }
