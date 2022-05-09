@@ -44,7 +44,7 @@ body {
   }
 }
 
-a {
+a:not(.iastate22-button):not(.iastate22-link-secondary):not(.iastate22-link-external):not(.link-tertiary) {
   .text-content &,
   .accordion-item & {
     color: $iastate-maroon;
