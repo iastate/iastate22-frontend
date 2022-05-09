@@ -16,6 +16,18 @@
     @include media-breakpoint-up(xl) {
       padding: rem(105) rem(82);
     }
+    &:before {
+      @include media-breakpoint-up(xl) {
+        content: "";
+        background-color: $iastate-red;
+        position: absolute;
+        top: 0;
+        left: -50vw;
+        width: 150vw;
+        bottom: 0;
+        z-index: -1;
+      }
+    }
   }
 
   &.ecosystem-home-hero--supporting-image {
