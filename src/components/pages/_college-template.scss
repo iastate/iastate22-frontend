@@ -15,7 +15,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
   }
   .hero__subnav-wrap {
     margin-top: rem(-33);
@@ -176,7 +176,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding-right: rem(82);
   }
   &:before {
@@ -338,7 +338,7 @@
       margin-right: auto;
       margin-left: auto;
       margin-bottom: rem(135);
-      max-width: rem(1060);
+      width: rem(1071);
     }
     ul {
       li {
@@ -359,7 +359,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-110);
-    margin-right: rem(-110);
+    margin-right: rem(-215);
   }
   &:before {
     padding-top: 47.1%;
@@ -375,6 +375,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-top: rem(-241);
+    margin-right: rem(-103);
   }
 }
 .college-maj-min-certs__title {
@@ -402,35 +403,6 @@
 }
 
 // Research Section
-.college-research {
-  .paragraph-widget--external-news-story {
-    margin-left: rem(-36);
-    margin-right: rem(-36);
-    @include media-breakpoint-up(md) {
-      margin-left: rem(-70);
-      margin-right: rem(-70);
-    }
-    @include media-breakpoint-up(xl) {
-      margin: rem(30) 0 rem(40) 0;
-    }
-    .external-news-story {
-      @include media-breakpoint-up(lg) {
-        padding-top: rem(45);
-        padding-bottom: rem(45);
-      }
-      h2 {
-        @include media-breakpoint-up(lg) {
-          padding-bottom: rem(20);
-        }
-      }
-      .external-news-story__content {
-        p {
-          line-height: (29 / 18);
-        }
-      }
-    }
-  }
-}
 .college-research__intro-wrap {
   max-width: rem(844);
 }
@@ -443,19 +415,6 @@
   padding: rem(20) 0 0 0;
   @include media-breakpoint-up(lg) {
     padding-bottom: rem(37);
-  }
-  .paragraph-widget--external-news-story {
-    margin-bottom: 0;
-
-    @include media-breakpoint-up(xl) {
-      margin-top: rem(30);
-      margin-bottom: rem(40);
-    }
-    .external-news-story__content {
-      p {
-        line-height: (29 / 18);
-      }
-    }
   }
 }
 .college-innovation__intro-wrap {
@@ -494,6 +453,9 @@
     align-items: flex-start;
     justify-content: space-between;
     padding-bottom: rem(187);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-right: rem(-102);
   }
 }
 
@@ -591,7 +553,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     min-height: rem(810);
   }
 }
@@ -673,7 +635,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
   }
   &:before {
     @include media-breakpoint-up(xl) {

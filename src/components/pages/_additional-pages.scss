@@ -1,5 +1,8 @@
 // Majors Minors and Certificates Page
 .maj-min-cert-statistic {
+  @include media-breakpoint-up(xl) {
+    margin-right: rem(-110);
+  }
   .statistic-with-text {
     display: flex;
     flex-direction: column-reverse;
@@ -30,7 +33,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding-top: rem(25);
     padding-bottom: rem(25);
     padding: rem(25) rem(170) rem(25) rem(232);
@@ -106,7 +109,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding-right: rem(184);
   }
 
@@ -168,7 +171,7 @@
   padding-top: rem(55);
   padding-bottom: rem(55);
   @include media-breakpoint-up(xl) {
-    margin-right: rem(21);
+    margin-right: rem(-110);
   }
   > ul {
     @include media-breakpoint-up(md) {
@@ -223,7 +226,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
   }
   &:before {
     content: "";
@@ -272,7 +275,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding: rem(30) rem(82) rem(60);
   }
   &:before {
@@ -351,7 +354,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding: rem(40) rem(70) rem(35);
   }
   &:before {
@@ -444,6 +447,7 @@
   }
   @include media-breakpoint-up(xl) {
     padding: rem(60) 0 rem(40);
+    margin-right: rem(-250);
   }
   ul {
     @include media-breakpoint-up(lg) {

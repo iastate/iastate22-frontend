@@ -13,13 +13,6 @@
 
 .outer-pad {
   @extend %outer-pad-x;
-  &.outer-pad--top-level,
-  .top-level-page & {
-    @include media-breakpoint-up(xl) {
-      padding-left: rem(190);
-      padding-right: rem(190);
-    }
-  }
 }
 
 .section {
