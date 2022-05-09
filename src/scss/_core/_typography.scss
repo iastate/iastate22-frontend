@@ -50,6 +50,10 @@ a {
     color: $iastate-maroon;
     font-weight: 700;
     font-family: $typeface-sans-serif;
+    transition: 0.2s color ease-in-out;
+    &:hover {
+      color: $iastate-red;
+    }
   }
 }
 
