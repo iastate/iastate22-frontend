@@ -183,7 +183,10 @@
     {
       "name": "ecosystem",
       "context": {
-        "parent_unit_name": "Parent Unit Name Lorem Ipsum",
+        "parent_unit": {
+          "name": "Parent Unit Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/"
+        },
         "website_title": "Website Title Lorem Ipsum Even Longer Lorem Ipsum",
         "search_visible": true,
         "utility_button": {

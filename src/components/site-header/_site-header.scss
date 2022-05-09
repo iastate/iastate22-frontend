@@ -1358,8 +1358,10 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   line-height: (23 / 18);
   color: $iastate-red;
   opacity: 0;
-  transition: 0.2s opacity ease-in-out;
+  transition: 0.2s opacity ease-in-out, 0.2s color ease-in-out;
   max-width: rem(275);
+  display: inline-block;
+  text-decoration: none;
 
   @include media-breakpoint-up(xl) {
     position: static;
@@ -1369,6 +1371,11 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     font-weight: 700;
     margin-top: rem(6);
   }
+
+  &:hover {
+    color: $iastate-maroon;
+  }
+
   .site-header-open & {
     opacity: 1;
     z-index: 1;
