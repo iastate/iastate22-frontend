@@ -34,7 +34,7 @@
 
   &:hover {
     background-color: $iastate-maroon;
-    color: $white;
+    color: $white !important;
     padding-right: rem(40);
     .arrow {
       width: rem(12);
