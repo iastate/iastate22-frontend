@@ -3,7 +3,7 @@
   margin-top: rem(50);
   @include media-breakpoint-up(xl) {
     margin-left: rem(-158);
-    margin-right: rem(-158);
+    margin-right: rem(-268);
   }
   @include media-breakpoint-up(xxl) {
     margin-left: rem(-108);
@@ -69,6 +69,8 @@
   }
   @include media-breakpoint-up(xl) {
     padding: rem(50) rem(60);
+    flex: 0 0 auto;
+    width: rem(412);
   }
 
   .faculty-bio-info-card--no-image & {
@@ -109,6 +111,10 @@
     align-items: flex-start;
     max-width: rem(625);
   }
+  @include media-breakpoint-up(xl) {
+    display: block;
+    max-width: none;
+  }
   .faculty-bio-info-card--no-image & {
     @include media-breakpoint-up(md) {
       display: block;
@@ -117,6 +123,7 @@
 }
 
 .faculty-bio-info-card__contact-box-column {
+  padding-bottom: rem(14);
   p {
     @include media-breakpoint-up(md) {
       margin: 0;
