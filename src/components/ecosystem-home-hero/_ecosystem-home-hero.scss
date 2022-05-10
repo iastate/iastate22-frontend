@@ -119,7 +119,15 @@
         padding-top: 56.2%;
       }
     }
+    // Only show the image as a fallback for users with reduced motion enabled
+    img {
+      display: none;
+      @media (prefers-reduced-motion) {
+        display: block;
+      }
+    }
     iframe {
+      opacity: 0; // Initially hide the video player until it starts playing.
       position: absolute;
       width: 100%;
       height: 100%;
@@ -264,9 +272,10 @@
   padding: 0 0 0 rem(7);
   height: rem(20);
   background-color: transparent;
-  border: none;
-  border-left: rem(7) solid $white;
-  border-right: rem(7) solid $white;
+  border-right: none;
+  border-top: rem(10) solid transparent;
+  border-bottom: rem(10) solid transparent;
+  border-left: rem(10) solid $white;
   position: absolute;
   z-index: 2;
   right: 0;
@@ -274,10 +283,9 @@
   right: rem(40);
   cursor: pointer;
 
-  &.ecosystem-home-hero__video-button-play {
-    border-right: none;
-    border-top: rem(10) solid transparent;
-    border-bottom: rem(10) solid transparent;
-    border-left: rem(10) solid $white;
+  &.ecosystem-home-hero__video-button--pause {
+    border: none;
+    border-left: rem(7) solid $white;
+    border-right: rem(7) solid $white;
   }
 }
