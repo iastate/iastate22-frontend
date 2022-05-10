@@ -142,11 +142,6 @@
       }
     }
   }
-  .site-header--ecosystem.headroom--unpinned & {
-    @include media-breakpoint-up(xl) {
-      opacity: 0;
-    }
-  }
 
   // different background for homepage
   .home & {
@@ -500,11 +495,6 @@
       position: relative;
       top: 0;
       width: 100%;
-    }
-  }
-  .site-header--ecosystem.headroom--unpinned & {
-    @include media-breakpoint-up(xl) {
-      transform: translateY(#{rem(-88)});
     }
   }
 }
@@ -1372,6 +1362,12 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     margin-top: rem(6);
   }
 
+  .headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      opacity: 0;
+    }
+  }
+
   &:hover {
     color: $iastate-maroon;
   }
@@ -1424,7 +1420,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   position: relative;
   text-decoration: none;
   font-weight: 700;
-  transition: 0.2s background-color ease-in-out;
+  transition: 0.2s background-color ease-in-out, 0.2s opacity ease-in-out;
   display: none;
   @include media-breakpoint-up(xl) {
     margin-left: rem(20);
@@ -1432,6 +1428,12 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   }
   @include media-breakpoint-up(xxl) {
     margin-left: rem(5);
+  }
+
+  .headroom--unpinned & {
+    @include media-breakpoint-up(xl) {
+      opacity: 0;
+    }
   }
   &:hover {
     background-color: $iastate-maroon;
