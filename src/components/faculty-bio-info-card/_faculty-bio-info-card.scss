@@ -39,7 +39,7 @@
   padding: rem(38) 0;
   @include media-breakpoint-up(md) {
     flex: 1 1 0;
-    padding-top: 0;
+    padding: 0 rem(38) rem(38) rem(38);
   }
   .faculty-bio-info-card--no-image & {
     padding-left: 0;

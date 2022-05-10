@@ -315,28 +315,30 @@ export class SiteHeader {
   }
 
   private handleSearch() {
-    this.searchTrigger.setAttribute("aria-expanded", "false");
-    this.searchFormDesktop.setAttribute("aria-hidden", "true");
-    this.closeSearchButton.setAttribute("aria-hidden", "true");
-    const utilityNav = document.querySelector(".site-header__utility");
-    const formInput = document.querySelector("#searchDesktop");
-    this.searchTrigger.addEventListener("click", () => {
-      this.searchTrigger.setAttribute("aria-expanded", "true");
-      this.searchFormDesktop.setAttribute("aria-hidden", "false");
-      this.closeSearchButton.setAttribute("aria-hidden", "false");
-      this.searchFormDesktop.style.visibility = "visible";
-      setTimeout(() => {
-        this.formInput.focus();
-      }, 300);
-    });
-    this.closeSearchButton.addEventListener("click", () => {
+    if (this.searchTrigger) {
       this.searchTrigger.setAttribute("aria-expanded", "false");
       this.searchFormDesktop.setAttribute("aria-hidden", "true");
       this.closeSearchButton.setAttribute("aria-hidden", "true");
-      setTimeout(() => {
-        this.searchFormDesktop.style.visibility = "hidden";
-      }, 300);
-    });
+      const utilityNav = document.querySelector(".site-header__utility");
+      const formInput = document.querySelector("#searchDesktop");
+      this.searchTrigger.addEventListener("click", () => {
+        this.searchTrigger.setAttribute("aria-expanded", "true");
+        this.searchFormDesktop.setAttribute("aria-hidden", "false");
+        this.closeSearchButton.setAttribute("aria-hidden", "false");
+        this.searchFormDesktop.style.visibility = "visible";
+        setTimeout(() => {
+          this.formInput.focus();
+        }, 300);
+      });
+      this.closeSearchButton.addEventListener("click", () => {
+        this.searchTrigger.setAttribute("aria-expanded", "false");
+        this.searchFormDesktop.setAttribute("aria-hidden", "true");
+        this.closeSearchButton.setAttribute("aria-hidden", "true");
+        setTimeout(() => {
+          this.searchFormDesktop.style.visibility = "hidden";
+        }, 300);
+      });
+    }
   }
 }
 
