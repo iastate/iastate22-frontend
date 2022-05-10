@@ -40,19 +40,15 @@ export class EcosystemHeroBackgroundVideo {
         playsinline: 1,
       },
     });
-
-    // This is necessary for autoplay on mobile
-    this.player.mute();
   }
 
   private handlePlayerEvents() {
     this.player.on("ready", () => {
-      // This is necessary for autoplay on mobile
-      setTimeout(() => {
-        if (!this.isPlaying) {
-          this.playButton.click();
-        }
-      }, 100);
+      if (!this.isPlaying) {
+        // This is necessary for autoplay on mobile
+        this.player.mute();
+        this.player.playVideo();
+      }
     });
     this.player.on("stateChange", (event) => {
       if (event.data === 1) {
