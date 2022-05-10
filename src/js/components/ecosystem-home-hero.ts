@@ -28,7 +28,7 @@ export class EcosystemHeroBackgroundVideo {
     this.player = YoutubePlayer(playerRoot, {
       videoId,
       playerVars: {
-        autoplay: 1,
+        // autoplay: 1,
         controls: 0,
         disablekb: 1,
         enablejsapi: 1,
@@ -48,7 +48,11 @@ export class EcosystemHeroBackgroundVideo {
   private handlePlayerEvents() {
     this.player.on("ready", () => {
       // This is necessary for autoplay on mobile
-      this.playButton.click();
+      setTimeout(() => {
+        if (!this.isPlaying) {
+          this.playButton.click();
+        }
+      }, 100);
     });
     this.player.on("stateChange", (event) => {
       if (event.data === 1) {
