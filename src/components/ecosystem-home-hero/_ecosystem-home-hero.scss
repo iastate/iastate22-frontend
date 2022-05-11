@@ -93,10 +93,6 @@
 
 .ecosystem-home-hero__media {
   @extend %responsive-img;
-  @include media-breakpoint-up(xxl) {
-    margin-left: rem(-200);
-    margin-right: rem(-200);
-  }
 
   .ecosystem-home-hero--featured-image & {
     &:before {
@@ -286,9 +282,6 @@
   bottom: rem(40);
   right: rem(40);
   cursor: pointer;
-  @include media-breakpoint-up(xxl) {
-    margin-right: rem(200);
-  }
 
   &.ecosystem-home-hero__video-button--pause {
     border: none;
