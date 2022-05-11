@@ -1111,6 +1111,9 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     font-size: rem(18);
     line-height: (31 / 18);
   }
+  &:hover {
+    color: $white;
+  }
   .arrow {
     background-color: $white;
     top: rem(17);
