@@ -1,5 +1,9 @@
 // Majors Minors and Certificates Page
 .maj-min-cert-statistic {
+  margin-top: rem(-70);
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
   @include media-breakpoint-up(xl) {
     margin-right: rem(-110);
   }
