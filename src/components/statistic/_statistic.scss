@@ -12,6 +12,40 @@
     height: rem(8);
     position: absolute;
   }
+
+  ul {
+    li {
+      margin-bottom: rem(29);
+      padding-top: rem(36);
+      position: relative;
+      &:last-child {
+        margin-bottom: 0;
+        &:after {
+          display: none;
+        }
+      }
+      &:first-child {
+        padding-top: 0;
+      }
+      &:after {
+        content: "";
+        border-bottom: rem(1) solid $iastate-gold;
+        position: absolute;
+        left: 50%;
+        width: rem(78);
+        margin-left: rem(-39);
+        bottom: rem(-32);
+      }
+    }
+  }
+}
+
+.statistics__label {
+  color: $white;
+  text-align: center;
+  margin: 0 0 rem(15) 0;
+  margin-bottom: rem(36);
+  padding: 0;
 }
 
 .statistic__title {
