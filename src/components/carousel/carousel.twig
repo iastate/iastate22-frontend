@@ -4,9 +4,9 @@
             <div class="carousel__slide">
                 <div class="carousel__slide-image" style="background-image:url({{ slide.image|path }})"></div>
                 <div class="carousel__slide-content">
-                    <p class="carousel__slide-content-caption">{{ slide.caption }}</p>
-                    <h3 class="carousel__slide-content-title">{{ slide.title }}</h3>
-                    <p class="carousel__slide-content-body">{{ slide.body }}</p>
+                    {% if slide.caption %}<p class="carousel__slide-content-caption">{{ slide.caption }}</p>{% endif %}
+                    {% if slide.title %}<h3 class="carousel__slide-content-title">{{ slide.title }}</h3>{% endif %}
+                    {% if slide.body %}<p class="carousel__slide-content-body">{{ slide.body }}</p>{% endif %}
                 </div>
             </div>
         {% endfor %}
