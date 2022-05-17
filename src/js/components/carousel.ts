@@ -90,12 +90,10 @@ export class Carousel {
         if (mobileMQ.matches) {
           carouselContent.style.marginTop = navDotsActualHeight + 33 + "px";
           this.elementNavDots.style.top = "0";
-          console.log("matches");
         }
         if (!mobileMQ.matches) {
           this.elementNavDots.style.top = "-" + navDotsActualHeight / 2 + "px";
           carouselContent.style.marginTop = "16px";
-          console.log("does not match");
         }
       }
     };
