@@ -1024,6 +1024,14 @@
       font-size: rem(18);
       line-height: (26 / 18);
     }
+    &.link-tertiary {
+      &:hover {
+        color: $white;
+        @include media-breakpoint-up(xl) {
+          color: $iastate-maroon;
+        }
+      }
+    }
     .arrow {
       background-color: $white;
       @include media-breakpoint-up(xl) {
@@ -1113,6 +1121,9 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   }
   &:hover {
     color: $white;
+    @include media-breakpoint-up(xl) {
+      color: $iastate-maroon;
+    }
   }
   .arrow {
     background-color: $white;
