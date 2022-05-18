@@ -589,6 +589,7 @@
     &:last-child {
       @include media-breakpoint-up(md) {
         width: calc(50% - #{rem(5)});
+        margin-bottom: 0;
       }
       .iastate22-card__cta {
         @include media-breakpoint-up(lg) {

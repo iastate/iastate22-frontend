@@ -1,5 +1,12 @@
 // Majors Minors and Certificates Page
 .maj-min-cert-statistic {
+  margin-top: rem(-70);
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+  @include media-breakpoint-up(xl) {
+    margin-right: rem(-110);
+  }
   .statistic-with-text {
     display: flex;
     flex-direction: column-reverse;
@@ -30,7 +37,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding-top: rem(25);
     padding-bottom: rem(25);
     padding: rem(25) rem(170) rem(25) rem(232);
@@ -106,7 +113,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding-right: rem(184);
   }
 
@@ -168,7 +175,7 @@
   padding-top: rem(55);
   padding-bottom: rem(55);
   @include media-breakpoint-up(xl) {
-    margin-right: rem(21);
+    margin-right: rem(-110);
   }
   > ul {
     @include media-breakpoint-up(md) {
@@ -223,7 +230,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
   }
   &:before {
     content: "";
@@ -272,7 +279,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding: rem(30) rem(82) rem(60);
   }
   &:before {
@@ -351,7 +358,7 @@
   }
   @include media-breakpoint-up(xl) {
     margin-left: rem(-190);
-    margin-right: rem(-190);
+    margin-right: rem(-298);
     padding: rem(40) rem(70) rem(35);
   }
   &:before {
@@ -444,6 +451,7 @@
   }
   @include media-breakpoint-up(xl) {
     padding: rem(60) 0 rem(40);
+    margin-right: rem(-250);
   }
   ul {
     @include media-breakpoint-up(lg) {
@@ -800,4 +808,59 @@ form.gsc-search-box {
 
 .gsc-cursor-chevron {
   fill: $iastate-maroon !important;
+}
+
+// Faculty Bio
+.faculty-bio__content {
+  h2 {
+    @extend %h2-yellow-border;
+  }
+}
+
+.faculty-bio__content,
+.faculty-bio__content-bio,
+.faculty-bio__content-education,
+.faculty-bio__content-affiliations {
+  margin-bottom: rem(60);
+}
+
+.faculty-bio__content-education-affiliations-wrap {
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.faculty-bio__content-education,
+.faculty-bio__content-affiliations {
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 0;
+    padding-right: rem(40);
+  }
+}
+
+.faculty-bio__content-education {
+  ul {
+    li {
+      margin-bottom: rem(12);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.faculty-bio__content-publications {
+  ul {
+    li {
+      padding-left: rem(20);
+      text-indent: rem(-20);
+      margin-bottom: rem(12);
+      &:before {
+        content: "•";
+        padding-right: rem(13);
+        color: $iastate-red;
+      }
+    }
+  }
 }

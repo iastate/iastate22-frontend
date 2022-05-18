@@ -10,7 +10,7 @@
     line-height: (25 / 18);
     font-weight: 700;
     color: $iastate-maroon;
-    margin-bottom: rem(5);
+    margin-bottom: rem(9.8);
     &.required {
       color: $iastate-red;
     }
@@ -115,6 +115,7 @@
       font-size: rem(16);
       line-height: (29 / 16);
       color: $grey;
+      font-weight: 400;
     }
   }
   button[type="submit"] {

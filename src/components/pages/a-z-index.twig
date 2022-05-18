@@ -1,8 +1,11 @@
+{% extends "@page" %}
+
+{% block content %}
 <script>
-  document.body.classList.add("a-z-index", "top-level-page");
+  document.body.classList.add("a-z-index");
 </script>
 
-<div class="outer-pad outer-pad--top-level">
+<div class="outer-pad">
   <div class="red-bkgrnd-hero">
     <div class="red-bkgrnd-hero__breadcrumbs">
     {% include "@breadcrumb--top-level-pages" with hero.breadcrumbs %}
@@ -36,3 +39,4 @@
     </ul>
   </div>
 </div>
+{% endblock %}

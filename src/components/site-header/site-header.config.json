@@ -178,5 +178,120 @@
         ]
       }
     ]
-  }
+  },
+  "variants": [
+    {
+      "name": "ecosystem",
+      "context": {
+        "parent_unit": {
+          "name": "Parent Unit Name Lorem Ipsum",
+          "url": "https://www.iastate.edu/"
+        },
+        "website_title": "Website Title Lorem Ipsum Even Longer Lorem Ipsum",
+        "search_visible": true,
+        "utility_button": {
+          "title": "Button",
+          "url": "https://www.iastate.edu/"
+        },
+        "utility_nav": [
+          {
+            "title": "Util 1",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Util 2",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Util 3",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Util 4",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Util 5",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Sign Ons and Tools",
+            "url": "https://www.iastate.edu/"
+          }
+        ],
+        "full_nav": [
+          {
+            "title": "Primary Nav 1",
+            "url": "https://www.iastate.edu/",
+            "children": [
+              {
+                "title": "Principles of Community",
+                "url": "https://www.iastate.edu/"
+              }
+            ]
+          },
+          {
+            "title": "Primary Nav 2",
+            "url": "https://www.iastate.edu/",
+            "children": [
+              {
+                "title": "Principles of Community",
+                "url": "https://www.iastate.edu/"
+              }
+            ]
+          },
+          {
+            "title": "Primary Nav 3",
+            "url": "https://www.iastate.edu/",
+            "children": [
+              {
+                "title": "Principles of Community",
+                "url": "https://www.iastate.edu/"
+              }
+            ]
+          },
+          {
+            "title": "Primary Nav 4",
+            "url": "https://www.iastate.edu/",
+            "children": [
+              {
+                "title": "Principles of Community",
+                "url": "https://www.iastate.edu/"
+              }
+            ]
+          },
+          {
+            "title": "Primary Nav 5",
+            "url": "https://www.iastate.edu/",
+            "children": [
+              {
+                "title": "Principles of Community",
+                "url": "https://www.iastate.edu/"
+              }
+            ]
+          },
+          {
+            "title": "Primary Nav 6",
+            "url": "https://www.iastate.edu/",
+            "children": [
+              {
+                "title": "Principles of Community",
+                "url": "https://www.iastate.edu/"
+              }
+            ]
+          },
+          {
+            "title": "Primary Nav 7",
+            "url": "https://www.iastate.edu/",
+            "children": [
+              {
+                "title": "Principles of Community",
+                "url": "https://www.iastate.edu/"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }

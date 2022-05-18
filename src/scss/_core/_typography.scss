@@ -30,7 +30,7 @@
   font-weight: 700;
 }
 
-/* Base
+/* Base Styles
 ========================================================================== */
 
 body {
@@ -44,12 +44,16 @@ body {
   }
 }
 
-a {
+a:not(.iastate22-button):not(.iastate22-link-secondary):not(.iastate22-link-external):not(.link-tertiary) {
   .text-content &,
   .accordion-item & {
     color: $iastate-maroon;
     font-weight: 700;
     font-family: $typeface-sans-serif;
+    transition: 0.2s color ease-in-out;
+    &:hover {
+      color: $iastate-red;
+    }
   }
 }
 

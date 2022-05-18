@@ -1,0 +1,267 @@
+{
+  "context": {},
+  "variants": [
+    {
+      "name": "featured-image",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "featured-image-no-buttons",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
+          "title": "Civil, Construction and Environmental Engineering",
+          "button_set": {
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "name": "form-with-featured-image-no-buttons",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
+          "title": "Civil, Construction and Environmental Engineering",
+          "button_set": {
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "name": "featured-image-one-button",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "background-video",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "video_id": "LjOmcZkXVcU",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "background-video-no-buttons",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
+          "title": "Civil, Construction and Environmental Engineering",
+          "video_id": "LjOmcZkXVcU",
+          "button_set": {
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "name": "background-video-one-button",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-featured_fpo.jpg",
+          "title": "Marston Hall",
+          "video_id": "LjOmcZkXVcU",
+          "button_set": {
+            "items": [
+              {
+                "text": "About the Rededication",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "supporting-image",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-supporting_fpo.jpg",
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "supporting-image-no-buttons",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-supporting_fpo.jpg",
+          "title": "Civil, Construction and Environmental Engineering",
+          "button_set": {
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "name": "supporting-image-one-button",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-supporting_fpo.jpg",
+          "title": "Marston Hall",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "atmospheric-image",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-atmospheric_fpo.jpg",
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "atmospheric-image-no-buttons",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-atmospheric_fpo.jpg",
+          "title": "Engineering at Iowa State University",
+          "button_set": {
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "name": "atmospheric-image-one-button",
+      "context": {
+        "hero": {
+          "image": "../../img/ecosystem-hero-atmospheric_fpo.jpg",
+          "title": "Marston Hall",
+          "button_set": {
+            "items": [
+              {
+                "text": "About the Rededication",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "no-image",
+      "context": {
+        "hero": {
+          "title": "Hero Title Lorem Ipsum Dolor",
+          "button_set": {
+            "items": [
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              },
+              {
+                "text": "Button Label",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "no-image-no-buttons",
+      "context": {
+        "hero": {
+          "title": "Engineering at Iowa State University",
+          "button_set": {
+            "items": []
+          }
+        }
+      }
+    },
+    {
+      "name": "no-image-one-button",
+      "context": {
+        "hero": {
+          "title": "Marston Hall",
+          "button_set": {
+            "items": [
+              {
+                "text": "About the Rededication",
+                "url": "https://iastate.edu"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
