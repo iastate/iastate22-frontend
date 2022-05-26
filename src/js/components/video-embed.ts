@@ -15,7 +15,6 @@ export class VideoEmbed {
   }
 
   private init() {
-    this.createVideoPlayer();
     this.createPlayButton();
     this.handlePlayButtonClick();
     this.handlePlayButtonHover();
@@ -27,11 +26,17 @@ export class VideoEmbed {
     this.player = YoutubePlayer(playerRoot, {
       videoId: playerRoot.dataset.vid,
     });
+
+    // Play the video automatically when it first is created.
+    this.player.on("ready", () => {
+      this.player.playVideo();
+    });
   }
 
   private handlePlayButtonClick() {
     this.playButton.addEventListener("click", () => {
-      this.player.playVideo();
+      // Lazily create the video player on click.
+      this.createVideoPlayer();
     });
   }
 
