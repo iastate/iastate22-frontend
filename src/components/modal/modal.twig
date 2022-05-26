@@ -6,7 +6,7 @@
       <button class="iastate22-modal__close" aria-label="Close modal" data-micromodal-close><i class="fa-light fa-xmark" aria-hidden="true"></i></button>
       {% if image %}
       <div class="iastate22-modal__media">
-        <img src="{{ image|path }}" alt="">
+        <img src="{{ image|path }}" alt="" loading="lazy" width="400" height="400">
       </div>
       {% endif %}
       <div class="iastate22-modal__content">

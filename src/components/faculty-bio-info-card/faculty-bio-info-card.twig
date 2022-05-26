@@ -1,7 +1,7 @@
 <div class="faculty-bio-info-card{% if not image %} faculty-bio-info-card--no-image{% endif %}">
   {% if image %}
   <div class="faculty-bio-info-card__media">
-    <img src="{{ image }}" alt="">
+    <img src="{{ image }}" alt="" loading="lazy" width="450" height="450">
   </div>
   {% endif %}
   
