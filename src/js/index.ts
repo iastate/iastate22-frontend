@@ -18,12 +18,14 @@ import ecosystemHeroBackgroundVideo from "./components/ecosystem-home-hero";
 import carouselsInit from "./components/carousel";
 import homeInit from "./pages/home";
 import initCollegeHeroes from "./pages/college-template";
+import AccessibilityUtilities from "./utilities/accessibility";
 
 /**
  * Init
  */
 focusWithin(document);
 objectFitImages();
+AccessibilityUtilities.init();
 silcCoreInit();
 silcAccordionInit();
 siteHeaderInit();
@@ -37,9 +39,3 @@ ecosystemHeroBackgroundVideo();
 homeInit();
 initCollegeHeroes();
 carouselsInit();
-
-/**
- * Example VueJS app
- */
-import { vueAppInit } from "./vue-app";
-vueAppInit("#vue-app");

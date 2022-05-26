@@ -10,7 +10,8 @@
     "fractal": "concurrently --kill-others-on-fail \"npm run watch\" \"fractal start --sync\"",
     "fractal:build": "fractal build",
     "fractal:component": "fractal create-component",
-    "format": "prettier --write 'src/**/*.js' 'src/**/*.ts' 'src/**/*.vue' 'src/**/*.scss' 'src/**/*.json'"
+    "format": "prettier --write 'src/**/*.js' 'src/**/*.ts' 'src/**/*.vue' 'src/**/*.scss' 'src/**/*.json'",
+    "imagemin": "cd src/img && npx @squoosh/cli --mozjpeg auto *.jpg"
   },
   "author": {
     "name": "idfive",
