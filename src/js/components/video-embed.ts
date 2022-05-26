@@ -18,7 +18,6 @@ export class VideoEmbed {
     this.createPlayButton();
     this.handlePlayButtonClick();
     this.handlePlayButtonHover();
-    this.handlePlayerEvents();
   }
 
   private createVideoPlayer() {
@@ -26,11 +25,7 @@ export class VideoEmbed {
     this.player = YoutubePlayer(playerRoot, {
       videoId: playerRoot.dataset.vid,
     });
-
-    // Play the video automatically when it first is created.
-    this.player.on("ready", () => {
-      this.player.playVideo();
-    });
+    this.handlePlayerEvents();
   }
 
   private handlePlayButtonClick() {
@@ -50,6 +45,10 @@ export class VideoEmbed {
   }
 
   private handlePlayerEvents() {
+    // Play the video automatically when it first is created.
+    this.player.on("ready", () => {
+      this.player.playVideo();
+    });
     this.player.on("stateChange", (event) => {
       if (!this.media.classList.contains("video-playing")) {
         this.media.classList.add("video-playing");
