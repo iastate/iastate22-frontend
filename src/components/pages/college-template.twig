@@ -15,7 +15,7 @@
         <picture>
           <source media="(min-width: 768px)" data-srcset="{{ image.desktop.src|path }}">
           <source data-srcset="{{ image.mobile.src|path }}">
-          <img data-src="{{ image.mobile.src|path }}" loading="lazy" alt="{{ hero.mobile.alt }}">
+          <img data-src="{{ image.mobile.src|path }}" loading="lazy" alt="{{ hero.mobile.alt }}" width="2160" height="1149">
         </picture>
         {% endfor %}
       </div>
@@ -34,7 +34,7 @@
         {% include "@button-set" with overview.button_set %}
       </div>
       <div class="college-overview__media">
-        <img src="{{ overview.image|path }}" alt="" />
+        <img src="{{ overview.image|path }}" alt="" loading="lazy" width="430" height="430">
       </div>
     </div>
 
@@ -52,7 +52,7 @@
 
     <div class="college-maj-min-certs" id="{{ maj_min_certs.id }}">
       <div class="college-maj-min-certs__media">
-        <img src="{{ maj_min_certs.image|path }}" alt="" />
+        <img src="{{ maj_min_certs.image|path }}" alt="" loading="lazy" width="1437" height="677">
       </div>
       <div class="college-maj-min-certs__intro-wrap">
         <h2 class="college-maj-min-certs__title">{{ maj_min_certs.title }}</h2>
@@ -129,7 +129,7 @@
         {% include "@button-set" with ctas.cta_one.button_set %}
       </div>
       <div class="college-ctas__cta-media">
-        <img src="{{ ctas.image|path }}" alt="" />
+        <img src="{{ ctas.image|path }}" alt="" loading="lazy" width="1600" height="810">
       </div>
       <div class="college-ctas__cta college-ctas__cta-bottom">
         <h2 class="college-ctas__cta-title">{{ ctas.cta_two.title }}</h2>

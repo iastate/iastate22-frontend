@@ -10,8 +10,8 @@
     {% include "@breadcrumb--top-level-pages" with hero.breadcrumbs %}
   </div>
   <div class="admission-aid-hero__media">
-		<img class="admission-aid-hero__media-mobile" src="{{ hero.image_mobile|path }}" alt="" />
-    <img class="admission-aid-hero__media-desktop" src="{{ hero.image_desktop|path }}" alt="" />
+		<img class="admission-aid-hero__media-mobile" src="{{ hero.image_mobile|path }}" alt="" loading="lazy" width="633" height="1092">
+    <img class="admission-aid-hero__media-desktop" src="{{ hero.image_desktop|path }}" alt="" loading="lazy" width="2000" height="1082">
 	</div>
   <h1 class="admission-aid-hero__title">{{ hero.title }}</h1>
   <div class="admission-aid-hero__graphic">
@@ -39,7 +39,7 @@
       {% for callout in why_iowa.callouts %}
       <li>
         <div class="admission-aid-why__callout-media">
-          <img src="{{ callout.image|path }}" alt="" />
+          <img src="{{ callout.image|path }}" alt="" loading="lazy" width="382" height="254">
         </div>
         <div class="admission-aid-why__callout-content">
           <h3 class="admission-aid-why__callout-title">{{ callout.title }}</h3>
@@ -73,7 +73,7 @@
   </div>
   <div class="feature-with-large-image">
     <div class="feature-with-large-image__media">
-      <img src="{{ apply.image|path }}" alt="" />
+      <img src="{{ apply.image|path }}" alt="" loading="lazy" width="1280" height="720">
     </div>
     <div class="feature-with-large-image__content">
       <h2>{{apply.subtitle}}</h2>
@@ -93,7 +93,7 @@
         <li>
           <a href="" class="admission-aid-links__link-list-link">
             <div class="admission-aid-links__link-list-icon">
-              <img src="{{ link.icon|path }}" alt="" />
+              <img src="{{ link.icon|path }}" alt="" loading="lazy" width="130" height="130">
             </div>
             <span class="admission-aid-links__link-list-link-text" href="{{ link.url }}">{{ link.text }}</span>
           </a>

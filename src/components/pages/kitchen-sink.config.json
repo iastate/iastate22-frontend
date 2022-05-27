@@ -115,8 +115,8 @@
     },
     "image_columns": {
       "columns": [
-        "<h3>2-Column With Image</h3><img src=\"../../img/Component-Feature-Image-Small.jpg\" alt=\"\">",
-        "<h3>2-Column With Image</h3><img src=\"../../img/Component-Feature-Image-Small.jpg\" alt=\"\">"
+        "<h3>2-Column With Image</h3><img src=\"../../img/Component-Feature-Image-Small.jpg\" width=\"445\" height=\"297\" alt=\"\">",
+        "<h3>2-Column With Image</h3><img src=\"../../img/Component-Feature-Image-Small.jpg\" width=\"445\" height=\"297\" alt=\"\">"
       ]
     },
     "full_width_image": {
