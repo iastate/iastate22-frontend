@@ -62,11 +62,16 @@
     }
     ul {
       @include media-breakpoint-up(md) {
-        column-count: 2;
-        column-gap: rem(30);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 rem(20);
       }
       li {
         margin-bottom: rem(32);
+        @include media-breakpoint-up(md) {
+          flex: 0 1 auto;
+          width: 48%;
+        }
         .iastate22-button {
           @include media-breakpoint-up(md) {
             display: block;
