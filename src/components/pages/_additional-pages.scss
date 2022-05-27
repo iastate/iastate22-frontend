@@ -8,11 +8,6 @@
     margin-right: rem(-110);
   }
   .statistic-with-text {
-    display: flex;
-    flex-direction: column-reverse;
-    @include media-breakpoint-up(lg) {
-      display: block;
-    }
     .statistic {
       @include media-breakpoint-up(xl) {
         margin-right: rem(108);

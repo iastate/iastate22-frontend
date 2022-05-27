@@ -36,6 +36,9 @@
         margin-left: rem(-39);
         bottom: rem(-32);
       }
+      &:before {
+        display: none;
+      }
     }
   }
 }
