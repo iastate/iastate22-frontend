@@ -18,6 +18,20 @@
         "url": "https://www.iastate.edu/"
       },
       {
+        "title": "Info For...",
+        "url": "https://www.iastate.edu/",
+        "children": [
+          {
+            "title": "Current Students",
+            "url": "https://www.iastate.edu/"
+          },
+          {
+            "title": "Faculty and Staff",
+            "url": "https://www.iastate.edu/"
+          }
+        ]
+      },
+      {
         "title": "Sign Ons and Tools",
         "url": "https://www.iastate.edu/"
       }

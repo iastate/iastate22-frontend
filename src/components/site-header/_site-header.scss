@@ -296,7 +296,8 @@
       }
     }
   }
-  a {
+  a,
+  .site-header__utility-dropdown-trigger {
     @include media-breakpoint-up(xl) {
       text-transform: none;
       color: $iastate-maroon;
@@ -306,6 +307,9 @@
       line-height: (24 / 14);
       text-decoration: none;
       transition: 0.2s color ease-in-out;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
     }
     @include media-breakpoint-up(xxl) {
       font-size: rem(16);
@@ -338,6 +342,82 @@
             color: $iastate-maroon;
           }
         }
+      }
+    }
+  }
+
+  .site-header__utility-dropdown-trigger {
+    @include media-breakpoint-up(xl) {
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
+    &[aria-expanded="true"] {
+      &:after {
+        @include media-breakpoint-up(xl) {
+          transform: rotate(225deg);
+          top: rem(1);
+        }
+      }
+    }
+    &:hover {
+      &:after {
+        @include media-breakpoint-up(xl) {
+          border-color: $iastate-red;
+        }
+      }
+    }
+    &:after {
+      @include media-breakpoint-up(xl) {
+        content: "";
+        display: inline-block;
+        position: relative;
+        margin-left: rem(7);
+        top: rem(-4);
+        width: rem(8);
+        height: rem(8);
+        border-right: rem(2) solid $iastate-maroon;
+        border-bottom: rem(2) solid $iastate-maroon;
+        transform: rotate(45deg);
+        transition: 0.2s transform ease-in-out, 0.2s top ease-in-out, 0.2s border-color ease-in-out;
+        transform-origin: center;
+      }
+    }
+  }
+}
+
+.site-header__utility-dropdown-menu {
+  @include media-breakpoint-up(xl) {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rem(9) rem(9) rem(20) rgba($black, 0.2);
+    padding: rem(20) rem(30);
+    background-color: $white;
+    transform: translateX(-25%);
+    transition: 0.3s transform ease-in-out, 0.3s opacity ease-in-out;
+    top: rem(33);
+  }
+  &[aria-hidden="true"] {
+    @include media-breakpoint-up(xl) {
+      visibility: hidden;
+      transform: translate3d(-25%, #{rem(30)}, 0);
+      opacity: 0;
+    }
+  }
+  &[aria-hidden="false"] {
+    @include media-breakpoint-up(xl) {
+      opacity: 1;
+    }
+  }
+  li {
+    @include media-breakpoint-up(xl) {
+      margin: 0 0 rem(10);
+      padding: 0;
+    }
+    &:last-child {
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 0;
       }
     }
   }

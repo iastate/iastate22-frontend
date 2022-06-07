@@ -18,6 +18,8 @@ export class SiteHeader {
   private formInput: HTMLFormElement;
   public visible: boolean = false;
   private selectedMainNavSectionIndex: number = null;
+  private utilityDropdownTrigger: HTMLButtonElement;
+  private utilityDropdownMenu: HTMLElement;
   private eventHandlers: any = {
     show: [],
     hide: [],
@@ -41,6 +43,9 @@ export class SiteHeader {
         document.querySelector(".site-header__search-close")
       );
       this.formInput = document.querySelector("#searchDesktop");
+      this.utilityDropdownTrigger = document.querySelector(".site-header__utility-dropdown-trigger");
+      this.utilityDropdownMenu = document.querySelector(".site-header__utility-dropdown-menu");
+
       this.init();
     }
   }
@@ -60,6 +65,7 @@ export class SiteHeader {
     this.initMobileNav();
     this.toggleVisibility();
     this.handleSearch();
+    this.handleUtilityDropdown();
   }
 
   private handleResize() {
@@ -337,6 +343,28 @@ export class SiteHeader {
         setTimeout(() => {
           this.searchFormDesktop.style.visibility = "hidden";
         }, 300);
+      });
+    }
+  }
+
+  private handleUtilityDropdown() {
+    if (this.utilityDropdownTrigger) {
+      this.utilityDropdownTrigger.setAttribute("aria-expanded", "false");
+      this.utilityDropdownMenu.setAttribute("aria-hidden", "true");
+      this.utilityDropdownTrigger.addEventListener("click", () => {
+        if (this.utilityDropdownTrigger.getAttribute("aria-expanded") === "false") {
+          this.utilityDropdownTrigger.setAttribute("aria-expanded", "true");
+          this.utilityDropdownMenu.setAttribute("aria-hidden", "false");
+          window.addEventListener("click", (e) => {
+            if (e.target != this.utilityDropdownMenu && e.target != this.utilityDropdownTrigger) {
+              this.utilityDropdownTrigger.setAttribute("aria-expanded", "false");
+              this.utilityDropdownMenu.setAttribute("aria-hidden", "true");
+            }
+          });
+        } else {
+          this.utilityDropdownTrigger.setAttribute("aria-expanded", "false");
+          this.utilityDropdownMenu.setAttribute("aria-hidden", "true");
+        }
       });
     }
   }

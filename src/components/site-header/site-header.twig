@@ -8,7 +8,18 @@
       <ul>
         {% for link in utility_nav %}
           <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% if not link.children %}
+            <a href="{{ link.url }}">{{ link.title }}</a>  
+            {% else %}
+            <button class="site-header__utility-dropdown-trigger">{{ link.title }}</button>
+            <ul class="site-header__utility-dropdown-menu">
+              {% for child in link.children %}
+              <li>
+                <a href="{{ child.url }}">{{ child.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>
@@ -72,9 +83,17 @@
                 <nav class="site-header__mega-menu-utility" aria-label="Utility">
                   <ul>
                     {% for link in utility_nav %}
-                      <li>
-                        <a href="{{ link.url }}">{{ link.title }}</a>
-                      </li>
+                      {% if not link.children %}
+                        <li>
+                          <a href="{{ link.url }}">{{ link.title }}</a>
+                        </li>
+                        {% else %}
+                          {% for child in link.children %}
+                          <li>
+                            <a href="{{ child.url }}">{{ child.title }}</a>
+                          </li>
+                          {% endfor %}
+                      {% endif %}
                     {% endfor %}
                   </ul>
                   <form class="site-header__search-form-mobile">
