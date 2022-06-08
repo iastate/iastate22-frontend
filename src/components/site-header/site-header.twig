@@ -83,12 +83,12 @@
                 <nav class="site-header__mega-menu-utility" aria-label="Utility">
                   <ul>
                     {% for link in utility_nav %}
-                      {% if not link.children %}
+                      {% if not link.info_for_dropdown %}
                         <li>
                           <a href="{{ link.url }}">{{ link.title }}</a>
                         </li>
                         {% else %}
-                          {% for child in link.children %}
+                          {% for child in link.info_for_dropdown %}
                           <li>
                             <a href="{{ child.url }}">{{ child.title }}</a>
                           </li>
