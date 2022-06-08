@@ -351,6 +351,10 @@ export class SiteHeader {
     if (this.utilityDropdownTrigger) {
       this.utilityDropdownTrigger.setAttribute("aria-expanded", "false");
       this.utilityDropdownMenu.setAttribute("aria-hidden", "true");
+      const mainDropdownTriggers = document.querySelectorAll(".site-header__mega-menu-main-nav-parent") as NodeListOf<
+        HTMLElement
+      >;
+
       this.utilityDropdownTrigger.addEventListener("click", () => {
         if (this.utilityDropdownTrigger.getAttribute("aria-expanded") === "false") {
           this.utilityDropdownTrigger.setAttribute("aria-expanded", "true");
@@ -361,6 +365,20 @@ export class SiteHeader {
               this.utilityDropdownMenu.setAttribute("aria-hidden", "true");
             }
           });
+          mainDropdownTriggers.forEach(function(link) {
+            if (link.getAttribute("aria-expanded") === "true") {
+              link.setAttribute("aria-expanded", "false");
+              link.nextElementSibling.setAttribute("aria-hidden", "true");
+            }
+          });
+          if (this.searchFormDesktop.getAttribute("aria-hidden") === "false") {
+            this.searchTrigger.setAttribute("aria-expanded", "false");
+            this.searchFormDesktop.setAttribute("aria-hidden", "true");
+            this.closeSearchButton.setAttribute("aria-hidden", "true");
+            setTimeout(() => {
+              this.searchFormDesktop.style.visibility = "hidden";
+            }, 300);
+          }
         } else {
           this.utilityDropdownTrigger.setAttribute("aria-expanded", "false");
           this.utilityDropdownMenu.setAttribute("aria-hidden", "true");

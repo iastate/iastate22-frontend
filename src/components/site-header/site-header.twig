@@ -8,12 +8,12 @@
       <ul>
         {% for link in utility_nav %}
           <li>
-            {% if not link.children %}
+            {% if not link.info_for_dropdown %}
             <a href="{{ link.url }}">{{ link.title }}</a>  
             {% else %}
             <button class="site-header__utility-dropdown-trigger">{{ link.title }}</button>
             <ul class="site-header__utility-dropdown-menu">
-              {% for child in link.children %}
+              {% for child in link.info_for_dropdown %}
               <li>
                 <a href="{{ child.url }}">{{ child.title }}</a>
               </li>

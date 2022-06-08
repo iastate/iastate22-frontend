@@ -20,7 +20,7 @@
       {
         "title": "Info For...",
         "url": "https://www.iastate.edu/",
-        "children": [
+        "info_for_dropdown": [
           {
             "title": "Current Students",
             "url": "https://www.iastate.edu/"
