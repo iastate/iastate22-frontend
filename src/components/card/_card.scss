@@ -49,6 +49,11 @@
     opacity: 0;
     transition: 0.2s opacity ease-in-out;
   }
+  p {
+    a {
+      color: $iastate-maroon;
+    }
+  }
 }
 
 .iastate22-card__cta {
