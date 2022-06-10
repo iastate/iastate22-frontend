@@ -31,6 +31,7 @@
   text-align: left;
   transition: 0.2s color ease-in-out;
   width: 100%;
+  margin-right: rem(13);
   @include media-breakpoint-up(lg) {
     display: none;
   }

@@ -15,9 +15,11 @@
       right: initial;
       max-width: none;
       margin-top: rem(-23);
+      width: calc(100% - #{rem(72)});
     }
     @include media-breakpoint-up(xl) {
       left: rem(181);
+      width: calc(100% - #{rem(362)});
     }
   }
   .subnav--horizontal .subnav__list {
