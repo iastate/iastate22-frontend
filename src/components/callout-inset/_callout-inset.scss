@@ -102,6 +102,18 @@
       line-height: (26 / 16);
     }
   }
+  .text-content {
+    ul,
+    ol {
+      text-align: left;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .callout-inset_inset-headline {

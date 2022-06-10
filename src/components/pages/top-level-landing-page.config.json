@@ -480,7 +480,7 @@
     },
     "call_to_action_small": {
       "title": "Small Call to Action Voluptate Lorem Ipsum Dolor",
-      "body": "<p>Nemo enim ipsam voluptatem quia voluptas.</p>",
+      "body": "Nemo enim ipsam voluptatem quia voluptas.",
       "button_set": {
         "items": [
           {

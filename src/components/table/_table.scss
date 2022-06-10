@@ -15,7 +15,9 @@
 }
 
 // table
-.iastate22-table {
+.iastate22-table,
+.text-content table,
+.accordion table {
   background: linear-gradient(to right, #fff 30%, rgba(255, 255, 255, 0)),
     linear-gradient(to right, rgba(255, 255, 255, 0), #fff 70%) 0 100%,
     radial-gradient(farthest-side at 0% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),

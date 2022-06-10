@@ -17,6 +17,7 @@
   }
 
   .statistic-with-text__text {
+    margin-bottom: 0;
     @include media-breakpoint-up(md) {
       flex: 1 1 0;
     }

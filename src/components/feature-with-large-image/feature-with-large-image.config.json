@@ -2,7 +2,7 @@
   "context": {
     "image": "../../img/feature_with_large_image.jpg",
     "title": "Feature with H2 and Large Image",
-    "text": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni lorem ipsem.</p>",
+    "text": "<p>Nemo <a href=\"#\">enim ipsam voluptatem quia</a> voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni lorem ipsem.</p><ul><li>List Item</li><li>uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur </li><li>List Item</li><li>uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur </li><li>List Item</li><li>uis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur </li></ul>",
     "button_set": {
       "items": [
         {

@@ -3,16 +3,6 @@
   @include media-breakpoint-up(lg) {
     display: flex;
   }
-  ul {
-    padding: 0;
-    li {
-      text-indent: 0;
-      padding: 0;
-      &:before {
-        display: none;
-      }
-    }
-  }
 }
 
 .image-grid-with-text__content,

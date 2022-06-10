@@ -30,7 +30,7 @@
     <div class="college-overview">
       <div class="college-overview__copy-wrap">
         <h2 class="college-overview__title">{{ overview.title }}</h2>
-        <div class="college-overview__intro">{{ overview.intro|raw}}</div>
+        <div class="college-overview__intro"><p>{{ overview.intro }}</p></div>
         {% include "@button-set" with overview.button_set %}
       </div>
       <div class="college-overview__media">
