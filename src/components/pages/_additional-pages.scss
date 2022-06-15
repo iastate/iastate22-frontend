@@ -181,15 +181,19 @@
     @include media-breakpoint-up(md) {
       column-count: 2;
       column-gap: rem(50);
-      @include media-breakpoint-up(lg) {
-        column-gap: rem(120);
-      }
-      @include media-breakpoint-up(xl) {
-        column-gap: rem(240);
-      }
+    }
+    @include media-breakpoint-up(lg) {
+      column-gap: rem(120);
+    }
+    @include media-breakpoint-up(xl) {
+      column-gap: rem(240);
     }
     > li {
       margin-bottom: rem(48);
+      @include media-breakpoint-up(md) {
+        display: inline-block;
+        width: 100%;
+      }
       > ul {
         margin-top: rem(20);
         padding-right: rem(20);
