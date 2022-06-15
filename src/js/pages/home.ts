@@ -110,6 +110,7 @@ export class NewsAndEvents {
 
   private init() {
     this.handleResize();
+    this.createMasonryGrid();
   }
 
   private handleResize() {
