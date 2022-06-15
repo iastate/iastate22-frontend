@@ -90,6 +90,12 @@
       display: block;
     }
   }
+  &.site-header__logo-no-parent-unit {
+    transition: 0.2s top ease-in-out, 0.2s filter ease-in-out, 0.2s transform ease-in-out;
+    .site-header--ecosystem.headroom--unpinned & {
+      transform: translateY(-100%);
+    }
+  }
 }
 
 .site-header__top {
