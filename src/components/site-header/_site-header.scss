@@ -364,6 +364,14 @@
       &:after {
         @include media-breakpoint-up(xl) {
           border-color: $iastate-red;
+          .home & {
+            border-color: $iastate-gold;
+          }
+          .headroom--not-top & {
+            .home & {
+              border-color: $iastate-maroon;
+            }
+          }
         }
       }
     }
@@ -381,6 +389,14 @@
         transform: rotate(45deg);
         transition: 0.2s transform ease-in-out, 0.2s top ease-in-out, 0.2s border-color ease-in-out;
         transform-origin: center;
+        .home & {
+          border-color: $white;
+        }
+        .headroom--not-top & {
+          .home & {
+            border-color: $iastate-red;
+          }
+        }
       }
     }
   }
@@ -418,6 +434,25 @@
     &:last-child {
       @include media-breakpoint-up(xl) {
         margin-bottom: 0;
+      }
+    }
+    a {
+      @include media-breakpoint-up(xl) {
+        white-space: nowrap;
+        .home & {
+          color: $iastate-maroon;
+          &:hover {
+            color: $iastate-red;
+          }
+        }
+        .headroom--not-top & {
+          .home & {
+            color: $iastate-maroon;
+            &:hover {
+              color: $iastate-red;
+            }
+          }
+        }
       }
     }
   }
