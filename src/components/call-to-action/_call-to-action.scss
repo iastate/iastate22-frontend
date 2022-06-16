@@ -40,6 +40,8 @@
   @include media-breakpoint-up(md) {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
   }
   @include media-breakpoint-up(xl) {
     padding-left: rem(280);
