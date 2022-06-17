@@ -698,6 +698,9 @@
   @include media-breakpoint-up(lg) {
     display: flex;
   }
+  .flickity-viewport {
+    overflow: visible;
+  }
 }
 
 .home-solutions__carousel-slide {

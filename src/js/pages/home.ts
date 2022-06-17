@@ -78,6 +78,7 @@ export class FeaturedStoryCarousel {
         contain: true,
         imagesLoaded: true,
         lazyLoad: 2,
+        dragThreshold: 0,
         wrapAround: false,
         prevNextButtons: false,
         adaptiveHeight: false,
