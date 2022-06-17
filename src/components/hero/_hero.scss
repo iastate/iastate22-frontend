@@ -16,6 +16,14 @@
 
 .hero__title {
   margin: 0;
+  font-size: rem(36);
+  @include media-breakpoint-up(sm) {
+    font-size: rem(50);
+  }
+  @include media-breakpoint-up(md) {
+    font-size: rem(70);
+    line-height: (93 / 70);
+  }
   @include media-breakpoint-up(lg) {
     margin: rem(25) 0 rem(10) 0;
   }
