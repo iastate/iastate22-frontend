@@ -17,8 +17,10 @@
 .hero__title {
   margin: 0;
   font-size: rem(36);
+  font-weight: 600;
   @include media-breakpoint-up(sm) {
     font-size: rem(50);
+    font-weight: 400;
   }
   @include media-breakpoint-up(md) {
     font-size: rem(70);
