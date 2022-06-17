@@ -1087,6 +1087,11 @@
           &:last-child {
             margin-bottom: 0;
           }
+          .link-tertiary {
+            .arrow {
+              right: rem(-23);
+            }
+          }
         }
       }
       &:last-child {
