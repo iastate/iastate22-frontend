@@ -193,21 +193,21 @@
       "headline": "What We’re Up To Now",
       "event_list": [
         {
-          "date": "11-10-2022",
+          "date": "July 10 - August 13",
           "link": {
             "url": "https://www.iastate.edu/",
             "title": "Experience Iowa State: General Open House"
           }
         },
         {
-          "date": "18-10-2022",
+          "date": "September 28",
           "link": {
             "url": "https://www.iastate.edu/",
             "title": "Latino Family Visit Day"
           }
         },
         {
-          "date": "1-11-2022",
+          "date": "June 2-19",
           "link": {
             "url": "https://www.iastate.edu/",
             "title": "Multicultural Student Experience Day"
@@ -220,7 +220,7 @@
       },
       "news_list": [
         {
-          "date": "9-9-2022",
+          "date": "October 10",
           "imageSrc": "../../img/HP_News_Story_1_FPO.jpg",
           "link": {
             "url": "https://www.iastate.edu/",
@@ -228,7 +228,7 @@
           }
         },
         {
-          "date": "9-9-2022",
+          "date": "November 10 - 14",
           "imageSrc": "../../img/HP_News_Story_2_FPO.jpg",
           "link": {
             "url": "https://www.iastate.edu/",
@@ -236,7 +236,7 @@
           }
         },
         {
-          "date": "9-9-2022",
+          "date": "May 3",
           "imageSrc": "../../img/HP_News_Story_3_FPO.jpg",
           "link": {
             "url": "https://www.iastate.edu/",

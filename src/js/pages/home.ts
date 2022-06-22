@@ -135,6 +135,8 @@ export class NewsAndEvents {
         const newsImageWrap = document.createElement("DIV") as HTMLElement;
         newsImageWrap.classList.add("home-news-events-grid__image");
         const newsImage = document.createElement("IMG") as HTMLImageElement;
+        newsImage.setAttribute("width", "461");
+        newsImage.setAttribute("height", "321");
         newsImageWrap.appendChild(newsImage);
         newsImage.src = newsClone.dataset.image;
         newsImage.alt = "";

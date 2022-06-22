@@ -983,7 +983,7 @@
         align-items: flex-start;
         .home-events__event-date {
           flex: 0 0 auto;
-          width: rem(50);
+          width: rem(100);
           text-align: center;
         }
         .home-events-news__item-title {
@@ -1122,23 +1122,33 @@
           @include media-breakpoint-up(lg) {
             display: flex;
             align-items: flex-start;
+            flex-direction: column;
+          }
+
+          @include media-breakpoint-up(xl) {
+            flex-direction: row;
           }
 
           .home-events__event-date {
             @include media-breakpoint-up(lg) {
               flex: 0 0 auto;
-              width: rem(50);
+              width: rem(100);
               text-align: center;
             }
           }
           .home-events-news__item-title {
             @include media-breakpoint-up(lg) {
-              margin-left: rem(53);
+              margin-left: rem(9);
+              margin-top: rem(9);
               position: relative;
               top: rem(-4);
             }
+            @include media-breakpoint-up(xl) {
+              margin-left: rem(53);
+              margin-top: 0;
+            }
             &:before {
-              @include media-breakpoint-up(lg) {
+              @include media-breakpoint-up(xl) {
                 content: "";
                 position: absolute;
                 top: rem(6);

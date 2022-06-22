@@ -145,7 +145,7 @@
       {% for event in events_news.event_list %}
       <li>
         <article class="home-events-news__item">
-          <span class="home-events__event-date">{{ event.date|date("M d") }}</span>
+          <span class="home-events__event-date">{{ event.date }}</span>
           <h2 class="home-events-news__item-title"><a href="{{ event.link.url}}">{{ event.link.title}}<span class="arrow"></span></a></h2>
         </article>
       </li>
@@ -160,7 +160,7 @@
       <li data-image="{{ news.imageSrc }}">
         <article class="home-events-news__item">
           <h2 class="home-events-news__item-title"><a href="{{ news.link.url}}">{{ news.link.title}}<span class="arrow"></span></a></h2>
-          <span class="home-events__news-date">{{ news.date|date("F d") }}</span>
+          <span class="home-events__news-date">{{ news.date }}</span>
         </article>
       </li>
       {% endfor %}
