@@ -290,11 +290,7 @@
       }
       // child page ul hidden on mobile
       > ul {
-        display: none;
-        @include media-breakpoint-up(lg) {
-          display: block;
-          margin-bottom: rem(10);
-        }
+        margin-bottom: rem(10);
         .subnav--horizontal & {
           @include media-breakpoint-up(lg) {
             display: none;
