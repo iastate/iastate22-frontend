@@ -95,7 +95,7 @@
             <div class="admission-aid-links__link-list-icon">
               <img src="{{ link.icon|path }}" alt="" loading="lazy" width="130" height="130">
             </div>
-            <span class="admission-aid-links__link-list-link-text" href="{{ link.url }}">{{ link.text }}</span>
+            <span class="admission-aid-links__link-list-link-text" href="{{ link.url }}">{{ link.text }}<span class="arrow"></span></span>
           </a>
         </li>
       {% endfor %}

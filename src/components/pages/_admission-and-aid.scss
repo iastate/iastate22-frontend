@@ -609,14 +609,20 @@
         max-width: rem(450);
         margin-left: auto;
         margin-right: auto;
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+        text-underline-offset: rem(1);
         color: $iastate-maroon;
+        transition: 0.3s text-decoration-color ease-in-out;
         @include media-breakpoint-up(lg) {
           max-width: none;
           flex-direction: column;
         }
         &:hover {
-          color: $iastate-red;
+          text-decoration-color: transparent;
+          .arrow {
+            opacity: 1;
+          }
         }
       }
     }
@@ -642,6 +648,15 @@
   line-height: (30 / 21);
   padding: 0 rem(20);
   transition: 0.2s color ease-in-out;
+  position: relative;
+  .arrow {
+    right: initial;
+    top: initial;
+    bottom: 14px;
+    margin-left: rem(10);
+    opacity: 0;
+    transition: 0.3s opacity ease-in-out;
+  }
 }
 
 // Connect Section
