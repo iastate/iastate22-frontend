@@ -97,9 +97,6 @@ export class SiteHeader {
         if (!mobileMQ.matches && mainMenu.classList.contains("site-header--ecosystem")) {
           mainContent.style.paddingTop = headerTop.offsetHeight + siteHeaderMain.offsetHeight + "px";
         }
-        if (!mainMenu.classList.contains("site-header--ecosystem")) {
-          mainContent.style.paddingTop = headerTop.offsetHeight + "px";
-        }
       }
     };
 
