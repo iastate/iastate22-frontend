@@ -814,6 +814,18 @@ form.gsc-search-box {
   fill: $iastate-maroon !important;
 }
 
+.gsc-tabsArea {
+  .gsc-tabHeader {
+    color: $iastate-red !important;
+    background-color: $white !important;
+    border-bottom: none !important;
+  }
+  .gsc-tabhInactive {
+    background-color: $iastate-red !important;
+    color: $white !important;
+  }
+}
+
 // Faculty Bio
 .faculty-bio__content {
   h2 {
