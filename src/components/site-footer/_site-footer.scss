@@ -243,6 +243,7 @@
     }
     @include media-breakpoint-up(xl) {
       max-width: rem(500);
+      column-gap: rem(70);
     }
     .site-footer--ecosystem & {
       column-count: 2;
@@ -541,5 +542,14 @@
 .site-footer__site-org-contact-phone {
   p {
     margin: 0;
+  }
+}
+
+.site-footer--ecosystem {
+  .site-footer__logo-social-links-wrap + .site-footer__secondary-nav,
+  .site-footer__logo-social-links-wrap + .site-footer__secondary-nav + .site-footer__site-org-contact-info {
+    @include media-breakpoint-up(xl) {
+      margin-top: rem(60);
+    }
   }
 }
