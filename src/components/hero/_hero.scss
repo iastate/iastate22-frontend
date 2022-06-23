@@ -12,6 +12,12 @@
       margin-right: rem(-110);
     }
   }
+  &.hero--no-media,
+  &.hero--top-level-lp--no-media {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: rem(40);
+    }
+  }
 }
 
 .hero__title {
@@ -101,5 +107,8 @@
       right: initial;
       margin-right: rem(-109);
     }
+  }
+  .hero--top-level-lp--no-media & {
+    margin-top: rem(30);
   }
 }

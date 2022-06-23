@@ -1,4 +1,4 @@
-<div class="hero">
+<div class="hero{% if not image %} hero--no-media{% endif %}">
   <div class="hero__text-wrap">
     {% include "@breadcrumb" with breadcrumbs %}
     <h1 class="hero__title">{{title}}</h1>
