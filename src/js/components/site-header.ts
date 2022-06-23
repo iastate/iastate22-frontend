@@ -327,6 +327,10 @@ export class SiteHeader {
       this.closeSearchButton.setAttribute("aria-hidden", "true");
       const utilityNav = document.querySelector(".site-header__utility");
       const formInput = document.querySelector("#searchDesktop");
+      const formInputBtn = document.querySelector('.site-header__search-form-desktop button[type="submit"]');
+      const formInputBtnSVG = document.querySelector(
+        '.site-header__search-form-desktop button[type="submit"] .fa-iastate22-magnifying-glass'
+      );
       this.searchTrigger.addEventListener("click", () => {
         this.searchTrigger.setAttribute("aria-expanded", "true");
         this.searchFormDesktop.setAttribute("aria-hidden", "false");
@@ -343,6 +347,23 @@ export class SiteHeader {
         setTimeout(() => {
           this.searchFormDesktop.style.visibility = "hidden";
         }, 300);
+      });
+      window.addEventListener("click", (e) => {
+        const target = e.target as Element;
+        if (
+          this.searchFormDesktop.offsetWidth > 0 &&
+          e.target != this.formInput &&
+          e.target != formInputBtn &&
+          e.target != formInputBtnSVG &&
+          !target.closest('.site-header__search-form-desktop button[type="submit"] .fa-iastate22-magnifying-glass')
+        ) {
+          this.searchTrigger.setAttribute("aria-expanded", "false");
+          this.searchFormDesktop.setAttribute("aria-hidden", "true");
+          this.closeSearchButton.setAttribute("aria-hidden", "true");
+          setTimeout(() => {
+            this.searchFormDesktop.style.visibility = "hidden";
+          }, 300);
+        }
       });
     }
   }
