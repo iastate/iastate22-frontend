@@ -201,7 +201,10 @@
           "name": "Parent Unit Name Lorem Ipsum",
           "url": "https://www.iastate.edu/"
         },
-        "website_title": "Website Title Lorem Ipsum Even Longer Lorem Ipsum",
+        "website_title": {
+          "text": "Website Title Lorem Ipsum Even Longer Lorem Ipsum",
+          "url": "#"
+        },
         "search_visible": true,
         "utility_button": {
           "title": "Button",

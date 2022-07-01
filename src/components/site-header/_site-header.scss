@@ -1550,6 +1550,14 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
       margin: 0;
     }
   }
+  a {
+    color: currentColor;
+    text-decoration: none;
+    transition: 0.3s color ease-in-out;
+    &:hover {
+      color: $iastate-red;
+    }
+  }
 }
 
 .site-header__utility-button {
