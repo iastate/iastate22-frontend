@@ -58,6 +58,7 @@ export class VideoEmbed {
         this.media.classList.add("video-playing");
       }
       if (event.data == 0) {
+        this.player.destroy();
         this.media.classList.remove("video-playing");
       }
     });
