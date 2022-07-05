@@ -22,8 +22,13 @@ export class VideoEmbed {
 
   private createVideoPlayer() {
     const playerRoot = this.element.querySelector(".video-embed__video") as HTMLElement;
+    const videoId = playerRoot.dataset.vid;
     this.player = YoutubePlayer(playerRoot, {
-      videoId: playerRoot.dataset.vid,
+      videoId,
+      playerVars: {
+        rel: 0,
+        playlist: videoId,
+      },
     });
     this.handlePlayerEvents();
   }
