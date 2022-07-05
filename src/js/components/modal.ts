@@ -51,7 +51,6 @@ export class Modal {
         videoId,
         playerVars: {
           rel: 0,
-          playlist: videoId,
         },
       });
     }

@@ -27,7 +27,6 @@ export class VideoEmbed {
       videoId,
       playerVars: {
         rel: 0,
-        playlist: videoId,
       },
     });
     this.handlePlayerEvents();
