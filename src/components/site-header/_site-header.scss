@@ -1555,7 +1555,11 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
     text-decoration: none;
     transition: 0.3s color ease-in-out;
     &:hover {
-      color: $iastate-red;
+      text-decoration: underline;
+      @include media-breakpoint-up(xl) {
+        color: $iastate-red;
+        text-decoration: none;
+      }
     }
   }
 }
