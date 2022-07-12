@@ -32,9 +32,14 @@ ol {
 }
 
 // basic page WYSIWYG image styles
+.alignleft,
 .align-left,
+.alignright,
 .align-right,
-.align-center {
+.aligncenter,
+.align-center,
+.alignnone,
+.align-none {
   margin: rem(36) 0;
   display: table;
   max-width: 100%;
@@ -54,6 +59,7 @@ ol {
   }
 }
 
+.aligncenter,
 .align-center {
   margin-top: rem(45);
   position: relative;
@@ -72,8 +78,9 @@ ol {
   }
 }
 
+.alignleft,
 .align-left,
-.align-right {
+.alignright .align-right {
   float: none;
   @include media-breakpoint-up(md) {
     max-width: 37%;
@@ -81,6 +88,7 @@ ol {
   }
 }
 
+.alignleft,
 .align-left {
   @include media-breakpoint-up(md) {
     margin-right: rem(55);
@@ -91,6 +99,7 @@ ol {
   }
 }
 
+.alignright,
 .align-right {
   @include media-breakpoint-up(md) {
     margin-left: rem(55);

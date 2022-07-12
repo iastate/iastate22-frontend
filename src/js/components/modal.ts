@@ -46,12 +46,8 @@ export class Modal {
   private createVideoPlayer() {
     if (this.isVideo) {
       const playerRoot = this.element.querySelector(".iastate22-modal__media") as HTMLElement;
-      const videoId = playerRoot.dataset.vid;
       this.player = YoutubePlayer(playerRoot, {
-        videoId,
-        playerVars: {
-          rel: 0,
-        },
+        videoId: playerRoot.dataset.vid,
       });
     }
   }
