@@ -80,7 +80,8 @@ ol {
 
 .alignleft,
 .align-left,
-.alignright .align-right {
+.alignright,
+.align-right {
   float: none;
   @include media-breakpoint-up(md) {
     max-width: 37%;

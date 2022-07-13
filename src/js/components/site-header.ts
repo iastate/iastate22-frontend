@@ -42,7 +42,7 @@ export class SiteHeader {
       this.closeSearchButton = AccessibilityUtilities.convertAnchorToButton(
         document.querySelector(".site-header__search-close")
       );
-      this.formInput = document.querySelector("input[name=s]");
+      this.formInput = document.querySelector("#searchDesktop");
       this.utilityDropdownTrigger = document.querySelector(".site-header__utility-dropdown-trigger");
       this.utilityDropdownMenu = document.querySelector(".site-header__utility-dropdown-menu");
 
