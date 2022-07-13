@@ -172,3 +172,12 @@ ol {
     pointer-events: initial;
   }
 }
+
+// Adding scroll-margin top only for ios anchors
+@supports (-webkit-touch-callout: none) {
+  #main-content {
+    *:target {
+      scroll-margin-top: rem(30);
+    }
+  }
+}
