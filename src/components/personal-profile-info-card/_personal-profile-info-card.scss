@@ -1,4 +1,4 @@
-.faculty-bio-info-card_wrap {
+.personal-profile-info-card_wrap {
   margin-bottom: rem(50);
   margin-top: rem(50);
   @include media-breakpoint-up(xl) {
@@ -11,7 +11,7 @@
   }
 }
 
-.faculty-bio-info-card {
+.personal-profile-info-card {
   @include media-breakpoint-up(md) {
     display: flex;
     align-items: flex-start;
@@ -19,7 +19,7 @@
   }
 }
 
-.faculty-bio-info-card__media {
+.personal-profile-info-card__media {
   @extend %responsive-img;
   margin: 0 auto;
   @include media-breakpoint-up(sm) {
@@ -35,29 +35,29 @@
   }
 }
 
-.faculty-bio-info-card__content {
+.personal-profile-info-card__content {
   padding: rem(38) 0;
   @include media-breakpoint-up(md) {
     flex: 1 1 0;
     padding: 0 rem(38) rem(38) rem(38);
   }
-  .faculty-bio-info-card--no-image & {
+  .personal-profile-info-card--no-image & {
     padding-left: 0;
   }
 }
 
-.faculty-bio-info-card__name {
+.personal-profile-info-card__name {
   @extend %h2-yellow-border;
 }
 
-.faculty-bio-info-card__titles {
+.personal-profile-info-card__titles {
   margin-bottom: rem(30);
   li {
     margin-bottom: rem(12);
   }
 }
 
-.faculty-bio-info-card__contact-box {
+.personal-profile-info-card__contact-box {
   background-color: $off-white;
   margin: rem(20) 0 0;
   padding: rem(38);
@@ -97,7 +97,7 @@
   }
 }
 
-.faculty-bio-info-card__contact-box-columns-wrap {
+.personal-profile-info-card__contact-box-columns-wrap {
   @include media-breakpoint-up(md) {
     display: flex;
     justify-content: space-between;
@@ -110,7 +110,7 @@
   }
 }
 
-.faculty-bio-info-card__contact-box-column {
+.personal-profile-info-card__contact-box-column {
   padding-bottom: rem(14);
   p {
     @include media-breakpoint-up(md) {
@@ -119,7 +119,7 @@
   }
 }
 
-.faculty-bio-info-card__contact-box-social {
+.personal-profile-info-card__contact-box-social {
   display: flex;
   flex-wrap: wrap;
   li {

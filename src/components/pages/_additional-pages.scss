@@ -826,36 +826,36 @@ form.gsc-search-box {
   }
 }
 
-// Faculty Bio
-.faculty-bio__content {
+// Personal Profile
+.personal-profile__content {
   h2 {
     @extend %h2-yellow-border;
   }
 }
 
-.faculty-bio__content,
-.faculty-bio__content-bio,
-.faculty-bio__content-education,
-.faculty-bio__content-affiliations {
+.personal-profile__content,
+.personal-profile__content-bio,
+.personal-profile__content-education,
+.personal-profile__content-affiliations {
   margin-bottom: rem(60);
 }
 
-.faculty-bio__content-education-affiliations-wrap {
+.personal-profile__content-education-affiliations-wrap {
   @include media-breakpoint-up(lg) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 
-.faculty-bio__content-education,
-.faculty-bio__content-affiliations {
+.personal-profile__content-education,
+.personal-profile__content-affiliations {
   @include media-breakpoint-up(lg) {
     flex: 1 1 0;
     padding-right: rem(40);
   }
 }
 
-.faculty-bio__content-education {
+.personal-profile__content-education {
   ul {
     li {
       margin-bottom: rem(12);
@@ -866,7 +866,7 @@ form.gsc-search-box {
   }
 }
 
-.faculty-bio__content-publications {
+.personal-profile__content-publications {
   ul {
     li {
       padding-left: rem(20);

@@ -1,14 +1,14 @@
-<div class="faculty-bio-info-card{% if not image %} faculty-bio-info-card--no-image{% endif %}">
+<div class="personal-profile-info-card{% if not image %} personal-profile-info-card--no-image{% endif %}">
   {% if image %}
-  <div class="faculty-bio-info-card__media">
+  <div class="personal-profile-info-card__media">
     <img src="{{ image }}" alt="" loading="lazy" width="450" height="450">
   </div>
   {% endif %}
   
-  <div class="faculty-bio-info-card__content">
-    <h2 class="faculty-bio-info-card__name">{{ name }}</h2>
+  <div class="personal-profile-info-card__content">
+    <h2 class="personal-profile-info-card__name">{{ name }}</h2>
     {% if titles %}
-    <ul class="faculty-bio-info-card__titles">
+    <ul class="personal-profile-info-card__titles">
       {% for title in titles %}
       <li>
         {{ title }}
@@ -20,14 +20,14 @@
     {% include "@link-set" with link_set %}
     {% endif %}
   </div>
-  <div class="faculty-bio-info-card__contact-box">
+  <div class="personal-profile-info-card__contact-box">
     <h3>{{ contact_box.label }}</h3>
-    <div class="faculty-bio-info-card__contact-box-columns-wrap">
-      <div class="faculty-bio-info-card__contact-box-column">
+    <div class="personal-profile-info-card__contact-box-columns-wrap">
+      <div class="personal-profile-info-card__contact-box-column">
         {% if contact_box.email %}<p><a href="mailto:{{ contact_box.email }}">{{ contact_box.email }}</a></p>{% endif %}
         {% if contact_box.phone %}<p>{{ contact_box.phone }}</p>{% endif %}
       </div>
-      <div class="faculty-bio-info-card__contact-box-column">
+      <div class="personal-profile-info-card__contact-box-column">
         {% if contact_box.address %}
         <p>{{ contact_box.address.building }}<br>
         {{ contact_box.address.street }}<br>
@@ -36,7 +36,7 @@
       </div>
     </div>
     {% if contact_box.social_links %}
-    <ul class="faculty-bio-info-card__contact-box-social">
+    <ul class="personal-profile-info-card__contact-box-social">
       {% if contact_box.social_links.instagram %}
       <li>
         <a href="{{ contact_box.social_links.instagram }}" target="_blank">
