@@ -1,76 +1,39 @@
-.statistic {
-  background-color: $iastate-red;
-  padding: rem(65) rem(40);
-  position: relative;
-  &:before {
-    content: "";
-    border-bottom: rem(8) solid $iastate-gold;
-    top: rem(-4);
-    left: 50%;
-    margin-left: rem(-28);
-    width: rem(56);
-    height: rem(8);
-    position: absolute;
+.statistic-with-text {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: flex-start;
+  }
+  .statistic {
+    margin-top: rem(28);
+    margin-bottom: rem(42);
+    @include media-breakpoint-up(md) {
+      flex: 0 0 auto;
+      width: rem(324);
+      margin: rem(10) rem(45) rem(10) 0;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-right: rem(90);
+    }
   }
 
-  ul {
-    li {
-      margin-bottom: rem(29);
-      padding-top: rem(36);
-      position: relative;
-      &:last-child {
-        margin-bottom: 0;
-        &:after {
-          display: none;
-        }
+  .statistic-with-text__text {
+    margin-bottom: 0;
+    @include media-breakpoint-up(md) {
+      flex: 1 1 0;
+    }
+  }
+
+  &.statistic-with-text--right {
+    @include media-breakpoint-up(md) {
+      flex-direction: row-reverse;
+    }
+    .statistic {
+      @include media-breakpoint-up(md) {
+        margin: rem(10) 0 rem(10) rem(45);
       }
-      &:first-child {
-        padding-top: 0;
-      }
-      &:after {
-        content: "";
-        border-bottom: rem(1) solid $iastate-gold;
-        position: absolute;
-        left: 50%;
-        width: rem(78);
-        margin-left: rem(-39);
-        bottom: rem(-32);
-      }
-      &:before {
-        display: none;
+      @include media-breakpoint-up(lg) {
+        margin-left: rem(90);
       }
     }
   }
-}
-
-.statistics__label {
-  color: $white;
-  text-align: center;
-  margin: 0 0 rem(15) 0;
-  margin-bottom: rem(36);
-  padding: 0;
-}
-
-.statistic__title {
-  color: $iastate-gold;
-  font-family: $typeface-serif;
-  font-weight: 700;
-  text-align: center;
-  font-size: rem(55);
-  line-height: (68 / 55);
-  margin: 0;
-  padding: 0;
-  &:after {
-    display: none;
-  }
-}
-
-.statistic__text {
-  margin: 0;
-  text-align: center;
-  color: $white;
-  font-family: $typeface-sans-serif;
-  font-weight: 700;
-  font-size: rem(18);
-  line-height: (30 / 18);
 }

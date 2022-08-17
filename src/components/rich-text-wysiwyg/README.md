@@ -1,4 +1,4 @@
-# Text Content
+# Rich Text/WYSIWYG
 
 **This is not intended to be output as a component - used mainly to style individual text elements**
 
