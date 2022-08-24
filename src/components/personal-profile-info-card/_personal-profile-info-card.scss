@@ -47,6 +47,12 @@
 }
 
 .personal-profile-info-card__name {
+  position: relative;
+  font-size: rem(30);
+  font-weight: 700;
+  padding-bottom: rem(20);
+  margin-top: rem(48);
+  margin-bottom: rem(22);
   @extend %h2-yellow-border;
 }
 
