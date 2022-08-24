@@ -43,6 +43,13 @@
         }
       }
     }
+    &.iastate22-card--teaser {
+      &:hover {
+        .iastate22-card__cta {
+          color: $iastate-red;
+        }
+      }
+    }
   }
   &:before {
     content: "";
