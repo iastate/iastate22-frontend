@@ -17,6 +17,16 @@
 
   .carousel__slide {
     width: 100%;
+    .video-embed__media-wrap {
+      &:before {
+        padding-top: 57.5%;
+      }
+    }
+    .video-embed__video-hover {
+      &:after {
+        opacity: 0;
+      }
+    }
   }
 
   .carousel__slide-image {
