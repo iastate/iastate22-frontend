@@ -39,7 +39,6 @@ export class VideoEmbed {
 
   private handlePlayButtonClick() {
     this.playButton.addEventListener("click", () => {
-      console.log(this.youtubeMedia);
       // Lazily create the video player on click.
       if (this.youtubeMedia !== null) {
         this.createVideoPlayer();
@@ -76,7 +75,6 @@ export class VideoEmbed {
 
   private playVimeoVid() {
     let vimeoplayer = new VimeoPlayer(this.vimeoMedia);
-    console.log(vimeoplayer);
     vimeoplayer.play().then(() => {
       if (!this.media.classList.contains("video-playing")) {
         this.media.classList.add("video-playing");
