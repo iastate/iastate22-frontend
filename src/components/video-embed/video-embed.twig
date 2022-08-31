@@ -1,7 +1,11 @@
 <div class="video-embed">
   <div class="video-embed__media-wrap">
     <img src="{{ wallpaper|path }}" alt="" />
-    <div class="video-embed__video" aria-label="YouTube Video: {{ title }}" data-vid="{{ video_id }}"></div>
+    {% if source=="youtube" %}
+      <div class="video-embed__video" aria-label="YouTube Video: {{ title }}" data-vid="{{ youtube_video_id }}"></div>
+    {% elseif source=="vimeo" %}
+      <div data-vimeo-id="{{ vimeo_video_id }}" class="video--vim"></div>
+    {% endif %}
   </div>
   {% if caption %}
     <div class="video-embed__caption">{{ caption }}</div>
