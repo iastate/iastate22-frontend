@@ -25,6 +25,7 @@
   }
   img {
     transition: 0.2s opacity ease-in-out;
+    z-index: 1;
   }
 
   iframe {
@@ -40,6 +41,7 @@
   &.video-playing {
     img {
       opacity: 0;
+      z-index: 0;
     }
     iframe {
       opacity: 1;
