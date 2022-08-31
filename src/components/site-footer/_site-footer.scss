@@ -37,6 +37,7 @@
 .site-footer__logo {
   width: 100%;
   max-width: rem(516);
+  height: 100%;
   @include media-breakpoint-up(xl) {
     flex: 0 1 auto;
     width: 35%;
@@ -64,6 +65,22 @@
     margin: 0;
     justify-content: flex-end;
   }
+  .site-footer--ecosystem & {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 52px);
+    gap: rem(15);
+    @include media-breakpoint-up(md) {
+      justify-content: space-between;
+    }
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(auto-fit, 52px);
+      max-width: 50%;
+    }
+    @include media-breakpoint-up(xxl) {
+      gap: rem(30);
+    }
+  }
+
   li {
     @include media-breakpoint-up(md) {
       margin-right: rem(30);
@@ -73,6 +90,11 @@
         @include media-breakpoint-up(md) {
           margin-right: 0;
         }
+      }
+    }
+    .site-footer--ecosystem & {
+      @include media-breakpoint-up(md) {
+        margin-right: 0;
       }
     }
     a {
@@ -311,6 +333,16 @@
   @include media-breakpoint-up(xxl) {
     right: rem(304);
   }
+  .site-footer--ecosystem & {
+    @include media-breakpoint-up(xl) {
+      position: static;
+      top: initial;
+      right: initial;
+    }
+    @include media-breakpoint-up(xxl) {
+      right: initial;
+    }
+  }
   ul {
     @include media-breakpoint-up(md) {
       display: flex;
@@ -512,10 +544,6 @@
   p {
     color: $white;
     font-weight: 700;
-    // @include media-breakpoint-up(md) {
-    //   font-size: rem(18);
-    //   line-height: (32 / 18);
-    // }
     a {
       color: currentColor;
       text-decoration-thickness: rem(1);

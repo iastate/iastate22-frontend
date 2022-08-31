@@ -1,8 +1,11 @@
 import YoutubePlayer from "youtube-player";
+import VimeoPlayer from "@vimeo/player";
 
 export class VideoEmbed {
   private element: HTMLElement;
   private media: HTMLElement;
+  private youtubeMedia: HTMLElement;
+  private vimeoMedia: HTMLElement;
   private player: any;
   private playButton: HTMLButtonElement;
 
@@ -11,6 +14,8 @@ export class VideoEmbed {
       this.element = element;
       this.init();
       this.media = this.element.querySelector(".video-embed__media-wrap");
+      this.youtubeMedia = this.element.querySelector(".video-embed__video");
+      this.vimeoMedia = this.element.querySelector(".video--vim");
     }
   }
 
@@ -34,8 +39,13 @@ export class VideoEmbed {
 
   private handlePlayButtonClick() {
     this.playButton.addEventListener("click", () => {
+      console.log(this.youtubeMedia);
       // Lazily create the video player on click.
-      this.createVideoPlayer();
+      if (this.youtubeMedia !== null) {
+        this.createVideoPlayer();
+      } else if (this.vimeoMedia !== null) {
+        this.playVimeoVid();
+      }
     });
   }
 
@@ -60,6 +70,16 @@ export class VideoEmbed {
       if (event.data == 0) {
         this.player.destroy();
         this.media.classList.remove("video-playing");
+      }
+    });
+  }
+
+  private playVimeoVid() {
+    let vimeoplayer = new VimeoPlayer(this.vimeoMedia);
+    console.log(vimeoplayer);
+    vimeoplayer.play().then(() => {
+      if (!this.media.classList.contains("video-playing")) {
+        this.media.classList.add("video-playing");
       }
     });
   }

@@ -69,6 +69,25 @@
           }
         }
       }
+    },
+    {
+      "name": "teaser-news",
+      "context": {
+        "image": "../../img/Component-Feature-News-Story-Image.jpg",
+        "url": "#",
+        "title": "Headline Nemo enim irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+        "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non lectus a lectus hendrerit facilisis quis ac augue. Sed quis sem eget felis venenatis aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam porttitor nibh feugiat magna dictum, malesuada euismod lectus pulvinar.",
+        "date": "June 16, 2022"
+      }
+    },
+    {
+      "name": "teaser-profile",
+      "context": {
+        "image": "../../img/faculty-bio-photo_fpo.jpg",
+        "url": "#",
+        "title": "FirstName LastName",
+        "body": "Short Title Lorem Ipsum"
+      }
     }
   ]
 }

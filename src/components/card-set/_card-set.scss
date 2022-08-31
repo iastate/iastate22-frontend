@@ -13,6 +13,46 @@
   @include media-breakpoint-up(lg) {
     padding-bottom: rem(30);
   }
+  &.card-set--teaser {
+    ul {
+      @include media-breakpoint-up(md) {
+        margin-right: 0;
+      }
+      li {
+        max-width: 100%;
+        margin-bottom: rem(100);
+        position: relative;
+        @include media-breakpoint-up(md) {
+          width: 100%;
+          padding-right: 0;
+        }
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+        &:after {
+          content: "";
+          border-bottom: rem(1) solid $light-grey;
+          position: absolute;
+          bottom: rem(-30);
+          left: 0;
+          right: 0;
+          z-index: 1;
+          @include media-breakpoint-up(md) {
+            bottom: rem(-46);
+          }
+          @include media-breakpoint-up(xl) {
+            left: rem(-108);
+            right: rem(-108);
+          }
+        }
+      }
+    }
+    &:after {
+      display: none;
+    }
+  }
   &:after {
     content: "";
     background-color: $off-white;
