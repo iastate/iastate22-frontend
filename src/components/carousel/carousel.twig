@@ -11,7 +11,7 @@
                     <img src="{{ slide.carousel_video.video.poster_image.url }}" alt="{{ slide.carousel_video.video.poster_image.alt }}" width="{{ slide.carousel_video.video.poster_image.width }}" height="{{ slide.carousel_video.video.poster_image.height }}" />
                   {% else %}
                     {% if slide.carousel_video.video.source == "youtube" %}
-                      <img src="https://img.youtube.com/vi/{{ slide.carousel_video.video.youtube_video_id }}/0.jpg" alt="Video Poster">
+                      <img src="https://img.youtube.com/vi/{{ slide.carousel_video.video.youtube_video_id }}/maxresdefault.jpg" alt="Video Poster">
                     {% elseif slide.carousel_video.video.source == "vimeo" %}
                       <img src="https://vumbnail.com/{{ slide.carousel_video.video.vimeo_video_id }}.jpg" alt="Video Poster">
                     {% endif %}
