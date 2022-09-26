@@ -1,0 +1,7 @@
+{
+    "name": "iastate/frontend-component-library",
+    "description": "Frontend componet library for Iowa State University.",
+    "type":"library",
+    "minimum-stability" : "stable"
+}
+  
