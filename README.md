@@ -13,6 +13,14 @@ Notes:
 - All components live in the `src/components` directory
 - The page structure can be found in `src/components/_page-preview.twig`. For individual components, the structure is located in `src/components/_preview.twig`
 
+## installation
+
+### Installing via composer
+
+Whenever possible, we reccomend using composer to instaall this library, to ensure all future updates can be pulled in to your project.
+
+`composer require iastate/frontend-component-library`
+
 ## Dependencies
 
 Dependencies need to be installed with [node/npm](https://docs.npmjs.com/getting-started/installing-node), and is best pinned to stable versions via [nvm](https://github.com/nvm-sh/nvm). More on [node usage at idfive](https://developers.idfive.com/#/front-end/node).
