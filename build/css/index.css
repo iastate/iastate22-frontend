@@ -4287,7 +4287,9 @@ main {
         right: 0;
         width: 40%;
         max-width: 32.5rem;
-        padding: 1.5625rem 2.8125rem; } }
+        padding: 1.5625rem 2.8125rem;
+        max-height: 41.5vw;
+        overflow: hidden; } }
     @media (min-width: 1200px) {
       .call-to-action--large .call-to-action__copy-wrap {
         right: 2.5rem;
@@ -4295,7 +4297,11 @@ main {
     @media (min-width: 1400px) {
       .call-to-action--large .call-to-action__copy-wrap {
         right: 5.125rem;
-        padding: 4rem 5.1875rem 1.25rem; } }
+        padding: 4rem 5.1875rem 1.25rem;
+        max-height: 37.5rem; } }
+    @media (min-width: 1600px) {
+      .call-to-action--large .call-to-action__copy-wrap {
+        max-height: 41.25rem; } }
     .call-to-action--large .call-to-action__copy-wrap:before {
       content: "";
       border-bottom: 0.5rem solid #f1be48;
