@@ -1,6 +1,6 @@
 - pipeline: "Deploy to Staging"
   trigger_mode: "ON_EVERY_PUSH"
-  ref_name: "master"
+  ref_name: "develop"
   ref_type: "BRANCH"
   target_site_url: "https://staging2.idfive.com/iowa-state-university/"
   actions:
