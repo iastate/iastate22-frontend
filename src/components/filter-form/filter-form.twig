@@ -1,5 +1,7 @@
 <div class="filter-form">
-  <h2 class="filter-form__label">{{ label }}</h2>
+  {% if label %}
+    <h2 class="filter-form__label">{{ label }}</h2>
+  {% endif %}
   <form class="iastate22-form iastate22-form--inline" id="InlineForm" action="#" method="post">
     <div class="form-item">
       <label for="name">Text Input</label>
