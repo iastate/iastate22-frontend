@@ -3,11 +3,13 @@ import _debounce from "lodash.debounce";
 export class ScrollPaddingTop {
   private element: HTMLElement;
   private htmlRoot: HTMLElement;
+  private styleSheet: HTMLStyleElement;
 
   constructor(element: HTMLElement) {
     if (!!element) {
       this.element = element;
       this.htmlRoot = document.querySelector("html");
+      this.styleSheet = document.createElement("style");
       this.init();
     }
   }
@@ -27,7 +29,8 @@ export class ScrollPaddingTop {
 
   private handleScrollPadding() {
     const siteHeaderHeight = this.element.offsetHeight;
-    this.htmlRoot.style.scrollPaddingTop = siteHeaderHeight + "px";
+    this.styleSheet.innerHTML = `html { scroll-padding-top: ${siteHeaderHeight}px }`;
+    document.head.appendChild(this.styleSheet);
   }
 }
 
