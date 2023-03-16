@@ -19,6 +19,7 @@ import carouselsInit from "./components/carousel";
 import homeInit from "./pages/home";
 import initCollegeHeroes from "./pages/college-template";
 import AccessibilityUtilities from "./utilities/accessibility";
+import scrollPaddingTopInit from "./utilities/scroll-padding-top";
 
 /**
  * Init
@@ -39,3 +40,4 @@ ecosystemHeroBackgroundVideo();
 homeInit();
 initCollegeHeroes();
 carouselsInit();
+scrollPaddingTopInit();
