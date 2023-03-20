@@ -1,4 +1,5 @@
 import "core-js/stable";
+import "bootstrap";
 
 /**
  * Modules
@@ -12,7 +13,7 @@ import siteHeaderInit from "./components/site-header";
 import cardsInit from "./components/card";
 import subnavInit from "./components/subnav";
 import privacyConsentInit from "../components/privacy-consent/privacy-consent";
-import accordionsInit from "./components/accordion";
+//import accordionsInit from "./components/accordion"; // disabling accordionsInit
 import videoEmbedInit from "./components/video-embed";
 import ecosystemHeroBackgroundVideo from "./components/ecosystem-home-hero";
 import carouselsInit from "./components/carousel";
@@ -33,7 +34,7 @@ siteHeaderInit();
 modalsInit();
 cardsInit();
 privacyConsentInit();
-accordionsInit();
+//accordionsInit(); // disabling accordionsInit
 subnavInit();
 videoEmbedInit();
 ecosystemHeroBackgroundVideo();

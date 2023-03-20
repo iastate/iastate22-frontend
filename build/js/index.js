@@ -1099,7 +1099,7 @@
   function(t, e, n) {
     var i, r;
     !(function(o, s) {
-      (i = [n(497)]),
+      (i = [n(496)]),
         void 0 ===
           (r = function(t) {
             return (function(t, e) {
@@ -1377,7 +1377,7 @@
   function(t, e, n) {
     var i, r;
     !(function(o, s) {
-      (i = [n(71), n(90), n(49), n(498), n(499), n(500)]),
+      (i = [n(71), n(90), n(49), n(497), n(498), n(499)]),
         void 0 ===
           (r = function(t, e, n, i, r, s) {
             return (function(t, e, n, i, r, o, s) {
@@ -3890,7 +3890,7 @@
      * https://flickity.metafizzy.co
      * Copyright 2015-2019 Metafizzy
      */ window,
-      (r = [n(60), n(501), n(503), n(504), n(505), n(506), n(507)]),
+      (r = [n(60), n(500), n(502), n(503), n(504), n(505), n(506)]),
       void 0 ===
         (o =
           "function" ==
@@ -6747,7 +6747,7 @@
             }
           })()),
           (e.default = T);
-      }.call(this, n(72), n(493).setImmediate);
+      }.call(this, n(72), n(492).setImmediate);
   },
   function(t, e, n) {
     var i, r;
@@ -6755,7 +6755,7 @@
      * Flickity imagesLoaded v2.0.0
      * enables imagesLoaded option for Flickity
      */ window,
-      (i = [n(150), n(508)]),
+      (i = [n(150), n(507)]),
       void 0 ===
         (r = function(t, e) {
           return (function(t, e, n) {
@@ -6794,7 +6794,7 @@
       function(t) {
         return t && t.__esModule ? t : { default: t };
       };
-    Object.defineProperty(e, "__esModule", { value: !0 }), n(210);
+    Object.defineProperty(e, "__esModule", { value: !0 }), n(210), n(514);
     var r = i(n(465)),
       o = i(n(466)),
       s = n(467),
@@ -6805,30 +6805,28 @@
       h = i(n(488)),
       f = i(n(489)),
       d = i(n(491)),
-      p = i(n(492)),
+      p = i(n(494)),
       g = i(n(495)),
-      v = i(n(496)),
-      m = i(n(509)),
-      y = i(n(513)),
-      b = i(n(149)),
-      _ = i(n(514));
+      v = i(n(508)),
+      m = i(n(512)),
+      y = i(n(149)),
+      b = i(n(513));
     r.default(document),
       o.default(),
-      b.default.init(),
+      y.default.init(),
       s.silcCoreInit(),
       a.silcAccordionInit(),
       u.default(),
       c.default(),
       l.default(),
       f.default(),
-      d.default(),
       h.default(),
+      d.default(),
       p.default(),
-      g.default(),
-      m.default(),
-      y.default(),
       v.default(),
-      _.default();
+      m.default(),
+      g.default(),
+      b.default();
   },
   function(t, e, n) {
     n(211),
@@ -14620,12 +14618,12 @@
               cache: null,
               bail: null,
               profile: null,
-              color: { level: 3, hasBasic: !0, has256: !0, has16m: !0 },
-              colors: { level: 3, hasBasic: !0, has256: !0, has16m: !0 },
+              color: { level: 2, hasBasic: !0, has256: !0, has16m: !1 },
+              colors: { level: 2, hasBasic: !0, has256: !0, has16m: !1 },
               mode: "production",
               "info-verbosity": "info",
               infoVerbosity: "info",
-              $0: "/Users/bradwalker/Sites/iowa-state-frontend/node_modules/.bin/webpack",
+              $0: "/Users/sheng/Desktop/projects/iastate/source-tree/node_modules/.bin/webpack",
             }.DEBUG),
           t
         );
@@ -15883,15 +15881,6 @@
   },
   function(t, e, n) {
     "use strict";
-    Object.defineProperty(e, "__esModule", { value: !0 });
-    var i = n(515);
-    e.default = function() {
-      for (var t = document.querySelectorAll(".accordion .collapse"), e = 0; e < t.length; e++)
-        return new i.Collapse(t[e]);
-    };
-  },
-  function(t, e, n) {
-    "use strict";
     var i =
       (this && this.__importDefault) ||
       function(t) {
@@ -16004,7 +15993,7 @@
               t._onTimeout && t._onTimeout();
             }, e));
         }),
-        n(494),
+        n(493),
         (e.setImmediate =
           ("undefined" != typeof self && self.setImmediate) ||
           (void 0 !== t && t.setImmediate) ||
@@ -16641,7 +16630,7 @@
   function(t, e, n) {
     var i, r;
     !(function(o, s) {
-      (i = [n(60), n(502), n(49)]),
+      (i = [n(60), n(501), n(49)]),
         void 0 ===
           (r = function(t, e, n) {
             return (function(t, e, n, i) {
@@ -17620,7 +17609,7 @@
     var r = i(n(150));
     n(205);
     var o = i(n(70)),
-      s = i(n(510)),
+      s = i(n(509)),
       a = n(203),
       c = window.matchMedia("(max-width: 991px)"),
       u = window.matchMedia("(prefers-reduced-motion: reduce)"),
@@ -17767,7 +17756,7 @@
      * MIT License
      * by David DeSandro
      */ window,
-      (r = [n(511), n(90)]),
+      (r = [n(510), n(90)]),
       void 0 ===
         (o =
           "function" ==
@@ -17883,7 +17872,7 @@
      * MIT license
      */ !(function(o, s) {
       "use strict";
-      (i = [n(71), n(90), n(49), n(512)]),
+      (i = [n(71), n(90), n(49), n(511)]),
         void 0 ===
           (r = function(t, e, n, i) {
             return (function(t, e, n, i, r) {
