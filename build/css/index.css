@@ -11660,7 +11660,8 @@ form.gsc-search-box {
     padding-bottom: 1.875rem; }
   .faculty-staff-directory-header .paragraph-widget--filter-form {
     margin: 0; }
-  .faculty-staff-directory-header .iastate22-form--search, .faculty-staff-directory-header .iastate22-form input[type='text'] {
+  .faculty-staff-directory-header .iastate22-form--search,
+  .faculty-staff-directory-header .iastate22-form input[type="text"] {
     width: 21.875rem; }
   .faculty-staff-directory-header .iastate22-form--select {
     width: 15.625rem; }
