@@ -15614,7 +15614,7 @@
       };
     Object.defineProperty(e, "__esModule", { value: !0 }), (e.Subnav = void 0);
     var r = i(n(70)),
-      o = window.matchMedia("(max-width: 992px)"),
+      o = window.matchMedia("(max-width: 1200px)"),
       s = (function() {
         function t(t) {
           (this.expanded = !1),
