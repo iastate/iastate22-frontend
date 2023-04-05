@@ -14627,7 +14627,7 @@
               mode: "production",
               "info-verbosity": "info",
               infoVerbosity: "info",
-              $0: "/Users/ryanbrown/Sites/iastate22-frontend/node_modules/.bin/webpack",
+              $0: "/Users/bradwalker/Sites/iowa-state-frontend/node_modules/.bin/webpack",
             }.DEBUG),
           t
         );
@@ -15614,7 +15614,7 @@
       };
     Object.defineProperty(e, "__esModule", { value: !0 }), (e.Subnav = void 0);
     var r = i(n(70)),
-      o = window.matchMedia("(max-width: 992px)"),
+      o = window.matchMedia("(max-width: 1200px)"),
       s = (function() {
         function t(t) {
           (this.expanded = !1),
@@ -15934,12 +15934,28 @@
   },
   function(t, e, n) {
     "use strict";
-    Object.defineProperty(e, "__esModule", { value: !0 });
-    var i = n(516);
-    e.default = function() {
-      for (var t = document.querySelectorAll(".accordion .collapse"), e = 0; e < t.length; e++)
-        return new i.Collapse(t[e]);
-    };
+    Object.defineProperty(e, "__esModule", { value: !0 }), (e.IAStateAccordion = void 0), n(516);
+    var i = (function() {
+      function t(t) {
+        t &&
+          ((this.element = t),
+          (this.firstAccordionTrigger = this.element.querySelector(".accordion-item:first-child .accordion-button")),
+          this.init());
+      }
+      return (
+        (t.prototype.init = function() {
+          this.openFirstAccordion();
+        }),
+        (t.prototype.openFirstAccordion = function() {
+          this.element.classList.contains("accordion--first-open") && this.firstAccordionTrigger.click();
+        }),
+        t
+      );
+    })();
+    (e.IAStateAccordion = i),
+      (e.default = function() {
+        for (var t = document.querySelectorAll(".accordion"), e = 0; e < t.length; e++) return new i(t[e]);
+      });
   },
   function(t, e, n) {
     "use strict";
@@ -19941,7 +19957,7 @@
         !t ||
         t.nodeType !== Node.ELEMENT_NODE ||
         !!t.classList.contains("disabled") ||
-          (void 0 !== t.disabled ? t.disabled : t.hasAttribute("disabled") && "false" !== t.getAttribute("disabled")),
+        (void 0 !== t.disabled ? t.disabled : t.hasAttribute("disabled") && "false" !== t.getAttribute("disabled")),
       Wt = (t) => {
         if (!document.documentElement.attachShadow) return null;
         if ("function" == typeof t.getRootNode) {
