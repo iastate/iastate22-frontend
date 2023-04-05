@@ -1,0 +1,29 @@
+.iastate-article__back-btn {
+  @include media-breakpoint-up(md) {
+    margin-left: rem(-30);
+  }
+  @include media-breakpoint-up(xl) {
+    margin-left: rem(-160);
+  }
+  @include media-breakpoint-up(xxl) {
+    margin-left: rem(-100);
+  }
+  padding-top: rem(50);
+  position: relative;
+  &:before {
+    content: "";
+    width: rem(10);
+    height: rem(10);
+    position: absolute;
+    border-left: solid rem(3) $iastate-maroon;
+    border-bottom: solid rem(3) $iastate-maroon;
+    transform: rotate(45deg);
+    top: rem(60);
+    left: rem(-15);
+  }
+  a {
+    color: $iastate-maroon;
+    font-size: rem(18);
+    font-weight: 600;
+  }
+}

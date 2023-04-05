@@ -13,12 +13,14 @@
     <ul class="faculty-staff-feed-item__content-contact">
       {% if email %}
       <li>
-        <a href="mailto:{{ email }}"><i class="fa-regular fa-circle-envelope"></i>{{ email }}</a>
+        <div class="faculty-staff-feed-item__content-icon"><a href="mailto:{{ email }}"><i class="fa-regular fa-circle-envelope"></i></a></div>
+        <div class="faculty-staff-feed-item__contact-field"><a href="mailto:{{ email }}">{{ email }}</a></div>
       </li>
       {% endif %}
       {% if phone %}
       <li>
-        <i class="fa-regular fa-circle-phone"></i>{{ phone }}
+        <div class="faculty-staff-feed-item__content-icon"><i class="fa-regular fa-circle-phone"></i></div>
+        <div class="faculty-staff-feed-item__contact-field">{{ phone }}</div>
       </li>
       {% endif %}
     </ul>

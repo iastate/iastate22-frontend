@@ -71,32 +71,6 @@
       "twitter": "#",
       "linkedin": "",
       "flickr": ""
-    },
-    "footer_nav": [],
-    "footer_secondary_nav": [
-      {
-        "title": "Sign Ons and Tools",
-        "url": "#"
-      }
-    ],
-    "site_org_contact": {
-      "name": "Sarah Ryan",
-      "email": [
-        {
-          "email_address": "sryan@iastate.edu"
-        }
-      ],
-      "phone": [
-        {
-          "label": "",
-          "phone_number": "(515) 294-3112"
-        }
-      ],
-      "address": {
-        "building": "5205 Adv Tch Res Bid (ATRB)",
-        "street": "2213 Pammel Dr",
-        "city_state_zip": "Ames, IA 50011-1101"
-      }
     }
   },
   "variants": [

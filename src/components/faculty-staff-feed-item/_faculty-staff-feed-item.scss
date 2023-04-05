@@ -33,13 +33,17 @@
       li {
         color: $iastate-maroon;
         margin-bottom: rem(20);
+        font-weight: 700;
+        display: flex;
         svg {
-          padding-right: rem(15);
           color: $iastate-maroon;
           font-size: rem(30);
         }
         a {
           color: $iastate-maroon;
+        }
+        .faculty-staff-feed-item__contact-field {
+          padding-left: rem(35);
         }
         &:before {
           content: "";

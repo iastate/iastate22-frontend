@@ -1,4 +1,5 @@
-.faculty-staff-directory-header {
+.faculty-staff-directory-header,
+.paragraph-widget--filter-form {
   margin-bottom: rem(50);
   .iastate22-breadcrumb__list li {
     &:after {
@@ -28,9 +29,17 @@
   .iastate22-form--search,
   .iastate22-form input[type="text"] {
     width: rem(350);
+    margin-bottom: rem(35);
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
   }
   .iastate22-form--select {
     width: rem(250);
+    margin-bottom: rem(35);
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
   }
   .a-z-index-letter-list {
     @include media-breakpoint-up(lg) {
@@ -44,6 +53,20 @@
         max-width: rem(33);
       }
     }
+  }
+  .filter-form-results {
+    color: $white;
+    a {
+      color: $white;
+      font-style: italic;
+    }
+  }
+}
+
+.iastate22-form.iastate22-form--inline {
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: flex;
   }
 }
 
@@ -78,11 +101,13 @@
       color: $grey;
     }
     .category-tags {
+      padding-left: 0;
       li {
         display: inline;
-        padding: 0 rem(10);
+        padding: 0 rem(20) 0 0;
         &:before {
           content: "";
+          padding: 0;
         }
       }
     }

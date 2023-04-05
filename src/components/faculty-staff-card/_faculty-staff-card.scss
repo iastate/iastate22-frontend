@@ -25,7 +25,9 @@
   }
   .faculty-staff-card__content {
     .faculty-staff-card__content-title {
-      font-size: rem(18);
+      .iastate22-link-secondary {
+        font-size: rem(21);
+      }
       margin: 0;
       a {
         margin: 0;
