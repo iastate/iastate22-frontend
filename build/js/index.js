@@ -14622,12 +14622,12 @@
               cache: null,
               bail: null,
               profile: null,
-              color: { level: 3, hasBasic: !0, has256: !0, has16m: !0 },
-              colors: { level: 3, hasBasic: !0, has256: !0, has16m: !0 },
+              color: { level: 2, hasBasic: !0, has256: !0, has16m: !1 },
+              colors: { level: 2, hasBasic: !0, has256: !0, has16m: !1 },
               mode: "production",
               "info-verbosity": "info",
               infoVerbosity: "info",
-              $0: "/Users/bradwalker/Sites/iowa-state-frontend/node_modules/.bin/webpack",
+              $0: "/Users/ryanbrown/Sites/iastate22-frontend/node_modules/.bin/webpack",
             }.DEBUG),
           t
         );
@@ -19957,7 +19957,7 @@
         !t ||
         t.nodeType !== Node.ELEMENT_NODE ||
         !!t.classList.contains("disabled") ||
-        (void 0 !== t.disabled ? t.disabled : t.hasAttribute("disabled") && "false" !== t.getAttribute("disabled")),
+          (void 0 !== t.disabled ? t.disabled : t.hasAttribute("disabled") && "false" !== t.getAttribute("disabled")),
       Wt = (t) => {
         if (!document.documentElement.attachShadow) return null;
         if ("function" == typeof t.getRootNode) {
