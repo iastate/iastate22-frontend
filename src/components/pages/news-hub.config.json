@@ -32,7 +32,7 @@
       "small_articles": [
         {
           "image": {
-            "url": "",
+            "url": "../../img/Component-Feature-Image-Small.jpg",
             "alt": "Lorem ipsum dolor sit amet"
           },
           "url": "#",
@@ -43,29 +43,7 @@
         },
         {
           "image": {
-            "url": "",
-            "alt": "Lorem ipsum dolor sit amet"
-          },
-          "url": "#",
-          "title": "Website Title Lorem Ipsum Even Longer Lorem Ipsum",
-          "excerpt": "Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Vel pharetra vel turpis nunc eget lorem. Sed augue lacus viverra vitae.",
-          "tags": ["Lorem ipsum", "dolor sit amet"],
-          "date": "September 12, 2023"
-        },
-        {
-          "image": {
-            "url": "",
-            "alt": "Lorem ipsum dolor sit amet"
-          },
-          "url": "#",
-          "title": "Lorem ipsum dolor sit amet",
-          "excerpt": "Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Vel pharetra vel turpis nunc eget lorem. Sed augue lacus viverra vitae.",
-          "tags": ["Lorem ipsum", "dolor sit amet"],
-          "date": "September 12, 2023"
-        },
-        {
-          "image": {
-            "url": "",
+            "url": "../../img/Component-Feature-Image-Small.jpg",
             "alt": "Lorem ipsum dolor sit amet"
           },
           "url": "#",
@@ -166,5 +144,71 @@
         }
       ]
     }
-  }
+  },
+  "variants": [
+    {
+      "name": "no-hero",
+      "context": {
+        "hero": {
+          "image": ""
+        }
+      }
+    },
+    {
+      "name": "no-hero-text-feature",
+      "context": {
+        "hero": {
+          "image": ""
+        },
+        "featured_news": {
+          "small_articles": [
+            {
+              "image": {
+                "url": "",
+                "alt": "Lorem ipsum dolor sit amet"
+              },
+              "url": "#",
+              "title": "Lorem ipsum dolor sit amet",
+              "excerpt": "Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Vel pharetra vel turpis nunc eget lorem. Sed augue lacus viverra vitae.",
+              "tags": ["consectetur adipiscing elit"],
+              "date": "September 12, 2023"
+            },
+            {
+              "image": {
+                "url": "",
+                "alt": "Lorem ipsum dolor sit amet"
+              },
+              "url": "#",
+              "title": "Lorem ipsum dolor sit amet",
+              "excerpt": "Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Vel pharetra vel turpis nunc eget lorem. Sed augue lacus viverra vitae.",
+              "tags": ["consectetur adipiscing elit"],
+              "date": "September 12, 2023"
+            },
+            {
+              "image": {
+                "url": "",
+                "alt": "Lorem ipsum dolor sit amet"
+              },
+              "url": "#",
+              "title": "Lorem ipsum dolor sit amet",
+              "excerpt": "Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Vel pharetra vel turpis nunc eget lorem. Sed augue lacus viverra vitae.",
+              "tags": ["consectetur adipiscing elit"],
+              "date": "September 12, 2023"
+            },
+            {
+              "image": {
+                "url": "",
+                "alt": "Lorem ipsum dolor sit amet"
+              },
+              "url": "#",
+              "title": "Website Title Lorem Ipsum Even Longer Lorem Ipsum",
+              "excerpt": "Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Vel pharetra vel turpis nunc eget lorem. Sed augue lacus viverra vitae.",
+              "tags": ["Lorem ipsum", "dolor sit amet"],
+              "date": "September 12, 2023"
+            }
+          ]
+        }
+      }
+    }
+  ]
 }
