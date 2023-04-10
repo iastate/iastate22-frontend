@@ -1,11 +1,12 @@
 .hero-stories-feed-item {
   display: flex;
   gap: 0;
-  margin-bottom: rem(50);
+  margin-bottom: rem(33);
   flex-direction: column;
   @include media-breakpoint-up(lg) {
     flex-direction: row;
     gap: rem(35);
+    margin-bottom: rem(50);
   }
   .hero-stories-feed-item__media {
     .hero-stories-feed-item__media-container {
@@ -35,7 +36,7 @@
         margin: 0;
         li {
           color: $iastate-red;
-          font-size: rem(18);
+          font-size: rem(16);
           font-weight: 600;
           display: inline;
           padding-right: rem(15);

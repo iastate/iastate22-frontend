@@ -12,10 +12,16 @@
         margin: rem(20) 0 0;
         li {
           color: $iastate-red;
-          font-size: rem(14);
+          font-size: rem(16);
           font-weight: 600;
-          display: inline;
           padding-right: rem(15);
+          display: none;
+          &:first-child {
+            display: inline;
+          }
+          @include media-breakpoint-up(lg) {
+            display: inline;
+          }
         }
       }
     }

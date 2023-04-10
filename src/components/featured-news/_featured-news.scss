@@ -6,10 +6,11 @@
   }
   .featured-news-container {
     display: flex;
-    gap: rem(50);
+    gap: rem(20);
     flex-direction: column;
     @include media-breakpoint-up(lg) {
       flex-direction: row;
+      gap: rem(50);
     }
     .featured-news__large-article {
       padding-right: 0;
@@ -58,10 +59,16 @@
             margin: rem(20) 0 0;
             li {
               color: $iastate-red;
-              font-size: rem(18);
+              font-size: rem(16);
               font-weight: 600;
-              display: inline;
               padding-right: rem(15);
+              display: none;
+              &:first-child {
+                display: inline;
+              }
+              @include media-breakpoint-up(lg) {
+                display: inline;
+              }
             }
           }
         }
@@ -90,7 +97,7 @@
         padding-right: rem(50);
       }
       .featured-news__small-article__container {
-        margin-bottom: rem(50);
+        margin-bottom: rem(25);
         &:last-child {
           margin-bottom: 0;
         }
@@ -115,10 +122,16 @@
             margin: rem(20) 0 0;
             li {
               color: $iastate-red;
-              font-size: rem(18);
+              font-size: rem(16);
               font-weight: 600;
-              display: inline;
               padding-right: rem(15);
+              display: none;
+              &:first-child {
+                display: inline;
+              }
+              @include media-breakpoint-up(lg) {
+                display: inline;
+              }
             }
           }
         }
@@ -127,6 +140,7 @@
           padding: 0;
           .iastate22-link-secondary {
             font-size: rem(22);
+            margin: 0;
           }
         }
         .featured-news__date {

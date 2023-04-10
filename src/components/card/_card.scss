@@ -171,14 +171,16 @@
   .iastate22-card--news-article & {
     text-align: left;
     .iastate22-card__content-tags {
-      ul {
+      .iastate22-card__content-tags__list {
         margin: 0;
-        li {
+        display: block;
+        .iastate22-card__content-tags__list-item {
           color: $iastate-red;
-          font-size: rem(18);
+          font-size: rem(16);
           font-weight: 600;
           display: inline;
           padding-right: rem(15);
+          line-height: rem(20);
         }
       }
     }
@@ -188,8 +190,13 @@
       .iastate22-link-secondary {
         font-size: rem(22);
         color: $iastate-maroon;
+        text-decoration: underline;
+        line-height: rem(26);
       }
     }
+  }
+  .iastate22-card--recent-article & {
+    padding: rem(15) rem(25);
   }
   .iastate22-card--news-article & {
     border-left: solid rem(2) #f1be48;
@@ -243,6 +250,11 @@
     }
     &:before {
       padding-top: 66.45%;
+    }
+  }
+  .iastate22-card--recent-article & {
+    &:before {
+      padding-top: 75%;
     }
   }
   .iastate22-card--teaser-profile & {
