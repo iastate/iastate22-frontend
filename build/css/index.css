@@ -12069,7 +12069,7 @@ form.gsc-search-box {
   .paragraph-widget--filter-form .iastate22-form--search,
   .paragraph-widget--filter-form .iastate22-form input[type="text"] {
     width: 21.875rem;
-    margin-bottom: 2.1875rem; }
+    margin-bottom: 1.5625rem; }
     @media (min-width: 768px) {
       .faculty-staff-directory-header .iastate22-form--search,
       .faculty-staff-directory-header .iastate22-form input[type="text"],
@@ -12079,7 +12079,7 @@ form.gsc-search-box {
   .faculty-staff-directory-header .iastate22-form--select,
   .paragraph-widget--filter-form .iastate22-form--select {
     width: 15.625rem;
-    margin-bottom: 2.1875rem; }
+    margin-bottom: 1.5625rem; }
     @media (min-width: 768px) {
       .faculty-staff-directory-header .iastate22-form--select,
       .paragraph-widget--filter-form .iastate22-form--select {
@@ -12194,8 +12194,8 @@ form.gsc-search-box {
       color: #c8102e;
       text-decoration: none;
       font-weight: 600;
-      -webkit-transition: color .25s linear;
-      transition: color .25s linear; }
+      -webkit-transition: color 0.25s linear;
+      transition: color 0.25s linear; }
       .paragraph-widget--article-category-tags .category-tags li a:hover {
         color: #7c2529; }
 
