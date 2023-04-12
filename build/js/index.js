@@ -14627,7 +14627,7 @@
               mode: "production",
               "info-verbosity": "info",
               infoVerbosity: "info",
-              $0: "/Users/bradwalker/Sites/iowa-state-frontend/node_modules/.bin/webpack",
+              $0: "/Users/ryanbrown/Sites/iastate22-frontend/node_modules/.bin/webpack",
             }.DEBUG),
           t
         );

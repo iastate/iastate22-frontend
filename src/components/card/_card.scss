@@ -187,11 +187,13 @@
     .iastate22-card__title {
       margin: 0;
       padding: 0;
+      line-height: rem(18);
       .iastate22-link-secondary {
         font-size: rem(22);
         color: $iastate-maroon;
         text-decoration: underline;
         line-height: rem(26);
+        margin-top: 0;
       }
     }
   }
