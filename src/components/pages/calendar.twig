@@ -1,0 +1,16 @@
+{% extends "@page" %}
+
+{% block header %}
+  {% include "@site-header--ecosystem" %}
+{% endblock %}
+
+{% block content %}
+  <div class="outer-pad">
+    {% include "@hero" with hero %}
+    <div class="calendar"></div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {% include "@site-footer--ecosystem" %}
+{% endblock %}
