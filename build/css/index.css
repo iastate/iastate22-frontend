@@ -2914,6 +2914,14 @@ main {
     transition: 0.2s opacity ease-in-out; }
   .iastate22-card p a {
     color: #7c2529; }
+  .iastate22-card.iastate22-card--event {
+    padding-bottom: 40px; }
+    .iastate22-card.iastate22-card--event .iastate22-card__title {
+      text-align: left; }
+  .iastate22-card.iastate22-card--feature-event .iastate22-card__time {
+    text-align: center; }
+  .iastate22-card.iastate22-card--feature-event .iastate22-card__body {
+    margin-bottom: 0; }
 
 .iastate22-card__cta {
   font-family: "Nimbus Sans", sans-serif;
@@ -3205,6 +3213,18 @@ main {
   text-align: left;
   color: #7c2529; }
 
+.iastate22-card__time {
+  display: block;
+  text-align: left;
+  color: #4a4a4a;
+  font-weight: 700;
+  line-height: 1.625rem;
+  margin: 16px 0; }
+
+.iastate22-card__location {
+  font-style: italic;
+  text-align: left; }
+
 @media (min-width: 1200px) {
   .paragraph-widget--card-set {
     margin-left: -1.25rem;
@@ -3435,6 +3455,72 @@ main {
       margin-right: -6.8125rem; } }
   .hero--top-level-lp--no-media .hero__subnav-wrap {
     margin-top: 1.875rem; }
+
+.event-details {
+  margin: 60px auto; }
+  @media (min-width: 992px) {
+    .event-details {
+      margin: 77px auto; } }
+
+.event-details__wrap {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap; }
+  .event-details__wrap > dt {
+    width: 42px;
+    height: 42px;
+    margin-right: 20px;
+    margin-right: 42px; }
+    .event-details__wrap > dt .icon, .event-details__wrap > dt .icon-spec {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      display: block; }
+    .event-details__wrap > dt .icon-spec {
+      background-color: #ED23CE; }
+  .event-details__wrap > dd {
+    width: calc(100% - 62px);
+    -webkit-margin-start: 0;
+            margin-inline-start: 0;
+    padding-top: 7px;
+    width: calc(100% - 84px); }
+    .event-details__wrap > dd p {
+      margin-bottom: 0;
+      font-size: 1.3125rem;
+      line-height: 1.5625rem;
+      font-weight: 700;
+      color: #4a4a4a; }
+    .event-details__wrap > dd [class^='iastate22-link'], .event-details__wrap > dd [class*='iastate22-link'] {
+      display: table; }
+    .event-details__wrap > dd [class^='iastate22-link'] + [class^='iastate22-link'], .event-details__wrap > dd [class^='iastate22-link'] + [class*='iastate22-link'], .event-details__wrap > dd [class^='iastate22-link'] + .event-details__phone-number, .event-details__wrap > dd [class^='iastate22-link'] + .event-details__tags, .event-details__wrap > dd [class*='iastate22-link'] + [class^='iastate22-link'], .event-details__wrap > dd [class*='iastate22-link'] + [class*='iastate22-link'], .event-details__wrap > dd [class*='iastate22-link'] + .event-details__phone-number, .event-details__wrap > dd [class*='iastate22-link'] + .event-details__tags, .event-details__wrap > dd .event-details__phone-number + [class^='iastate22-link'], .event-details__wrap > dd .event-details__phone-number + [class*='iastate22-link'], .event-details__wrap > dd .event-details__phone-number + .event-details__phone-number, .event-details__wrap > dd .event-details__phone-number + .event-details__tags, .event-details__wrap > dd .event-details__tags + [class^='iastate22-link'], .event-details__wrap > dd .event-details__tags + [class*='iastate22-link'], .event-details__wrap > dd .event-details__tags + .event-details__phone-number, .event-details__wrap > dd .event-details__tags + .event-details__tags {
+      margin-top: 28px; }
+  .event-details__wrap > dt + dd + dt,
+  .event-details__wrap > dt + dd + dt + dd {
+    margin-top: 30px; }
+
+.event-details__phone-number {
+  display: table;
+  color: #4a4a4a;
+  font-size: 1.3125rem;
+  line-height: 1.5625rem;
+  font-weight: 700; }
+
+.event-details__tags {
+  display: -webkit-box;
+  display: flex;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 60%; }
+  @media (min-width: 992px) {
+    .event-details__tags {
+      width: 45%; } }
+  .event-details__tags a {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: #7c2529;
+    margin-right: 30px;
+    margin-bottom: -20px; }
 
 @media (min-width: 992px) {
   .paragraph-widget--feature-with-large-image {
@@ -3728,6 +3814,51 @@ main {
       .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__date {
         font-style: italic;
         margin: 0; }
+
+.featured-events {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center; }
+  @media (min-width: 992px) {
+    .featured-events {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row;
+      -webkit-box-align: start;
+              align-items: flex-start; } }
+
+.featured-events__card {
+  max-width: 25rem;
+  margin-bottom: 60px; }
+  @media (min-width: 992px) {
+    .featured-events__card {
+      min-width: 300px; } }
+
+@media (min-width: 992px) {
+  .featured-events__listing {
+    margin-left: 7%; } }
+
+.featured-events__item {
+  padding: 29px 30px 29px 0;
+  border-bottom: solid 1px #EBEBEB; }
+  .featured-events__item:first-child {
+    padding-top: 0; }
+  .featured-events__item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0; }
+
+.featured-events__title {
+  margin-bottom: 15px; }
+  @media (min-width: 992px) {
+    .featured-events__title .iastate22-link-secondary {
+      font-size: 1.375rem; } }
+
+.featured-events__item time {
+  color: #4a4a4a; }
 
 @media (min-width: 992px) {
   .paragraph-widget--callout-inset {
@@ -8127,6 +8258,65 @@ html:not(.js) .nojs-close-menu {
   font-size: 1.3125rem;
   line-height: 1.19048; }
 
+.upcoming-events {
+  margin: 60px auto; }
+  @media (min-width: 992px) {
+    .upcoming-events {
+      margin: 133px auto 100px; } }
+
+.upcoming-events__wrap {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+          align-items: center; }
+  @media (min-width: 992px) {
+    .upcoming-events__wrap {
+      width: 80%; } }
+
+.upcoming-events__date {
+  width: 60px;
+  height: 60px;
+  background: #c8102e;
+  margin-right: 20px;
+  margin-bottom: 27px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center; }
+  @media (min-width: 992px) {
+    .upcoming-events__date {
+      width: 82px;
+      height: 82px; } }
+  .upcoming-events__date > time {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 700; }
+    @media (min-width: 992px) {
+      .upcoming-events__date > time {
+        font-size: 1.125rem; } }
+    .upcoming-events__date > time span {
+      display: block; }
+
+.upcoming-events__details {
+  width: calc(100% - 80px);
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  margin-bottom: 27px; }
+  @media (min-width: 992px) {
+    .upcoming-events__details {
+      width: calc(100% - 102px); } }
+
+.upcoming-events__title {
+  margin-bottom: 10px; }
+
 .faculty-staff-card {
   display: -webkit-box;
   display: flex;
@@ -8336,18 +8526,18 @@ html:not(.js) .nojs-close-menu {
     padding-top: 56.27%; }
 
 :root {
-  --fc-small-font-size: .85rem;
+  --fc-small-font-size: 0.85rem;
   --fc-page-bg-color: $white;
   --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
   --fc-neutral-text-color: $white;
   --fc-border-color: #ddd;
   --fc-button-text-color: #7c2529;
-  --fc-button-bg-color: #FFFFFF;
+  --fc-button-bg-color: #ffffff;
   --fc-button-border-color: #ebebeb;
-  --fc-button-hover-text-color: #FFFFFF;
+  --fc-button-hover-text-color: #ffffff;
   --fc-button-hover-bg-color: #7c2529;
   --fc-button-hover-border-color: #7c2529;
-  --fc-button-active-text-color: #FFFFFF;
+  --fc-button-active-text-color: #ffffff;
   --fc-button-active-bg-color: #7c2529;
   --fc-button-active-border-color: #7c2529;
   --fc-event-bg-color: #3788d8;
@@ -8376,12 +8566,12 @@ html:not(.js) .nojs-close-menu {
   color: var(--fc-button-active-text-color); }
 
 .fc .fc-button-primary:not(:disabled) {
-  -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   text-transform: capitalize; }
   .fc .fc-button-primary:not(:disabled):hover, .fc .fc-button-primary:not(:disabled):focus {
-    -webkit-transition: all .2s ease-out;
-    transition: all .2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
     color: var(--fc-button-hover-text-color);
     background: #c8102e; }
 
@@ -8400,7 +8590,8 @@ html:not(.js) .nojs-close-menu {
 .fc .fc-col-header-cell-cushion {
   padding: 0; }
 
-.fc .fc-next-button, .fc .fc-prev-button {
+.fc .fc-next-button,
+.fc .fc-prev-button {
   border: none; }
 
 .fc .fc-view-harness {
@@ -8480,7 +8671,7 @@ html:not(.js) .nojs-close-menu {
   -webkit-box-align: start;
           align-items: flex-start; }
   .fc .fc-event:after {
-    content: '';
+    content: "";
     position: relative;
     width: 12px;
     height: 12px;
@@ -8496,7 +8687,7 @@ html:not(.js) .nojs-close-menu {
 .fc .fc-event .fc-event-title {
   color: #7c2529;
   font-weight: 700;
-  opacity: .6;
+  opacity: 0.6;
   display: none; }
   @media (min-width: 992px) {
     .fc .fc-event .fc-event-title {
@@ -8508,18 +8699,18 @@ html:not(.js) .nojs-close-menu {
   -webkit-text-decoration-color: transparent;
           text-decoration-color: transparent;
   text-decoration-thickness: 2px;
-  -webkit-transition: -webkit-text-decoration-color .3s ease-out;
-  transition: -webkit-text-decoration-color .3s ease-out;
-  transition: text-decoration-color .3s ease-out;
-  transition: text-decoration-color .3s ease-out, -webkit-text-decoration-color .3s ease-out; }
+  -webkit-transition: -webkit-text-decoration-color 0.3s ease-out;
+  transition: -webkit-text-decoration-color 0.3s ease-out;
+  transition: text-decoration-color 0.3s ease-out;
+  transition: text-decoration-color 0.3s ease-out, -webkit-text-decoration-color 0.3s ease-out; }
 
 .fc .fc-event[href]:hover .fc-event-title, .fc .fc-event[href]:focus .fc-event-title {
   -webkit-text-decoration-color: #7c2529;
           text-decoration-color: #7c2529;
-  -webkit-transition: -webkit-text-decoration-color .2s ease-out;
-  transition: -webkit-text-decoration-color .2s ease-out;
-  transition: text-decoration-color .2s ease-out;
-  transition: text-decoration-color .2s ease-out, -webkit-text-decoration-color .2s ease-out; }
+  -webkit-transition: -webkit-text-decoration-color 0.2s ease-out;
+  transition: -webkit-text-decoration-color 0.2s ease-out;
+  transition: text-decoration-color 0.2s ease-out;
+  transition: text-decoration-color 0.2s ease-out, -webkit-text-decoration-color 0.2s ease-out; }
 
 .fc .fc-col-header-cell-cushion {
   font-size: 1.25rem; }

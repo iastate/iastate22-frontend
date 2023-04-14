@@ -23,13 +23,13 @@
               {% if detail.contact %}
                 {% for contact in detail.contact %}  
                   {% if contact.email %}
-                    <a href="mailto:{{contact.email.address}}">{{contact.email.label}}</a>
+                    <a href="mailto:{{contact.email.address}}" class="link-set__link iastate22-link-secondary">{{contact.email.label}}<span class="arrow"></span></a>
                   {% elseif contact.link %}
-                    <a href="{{contact.link.url}}">{{contact.link.label}}</a>
+                    <a href="{{contact.link.url}}" class="link-set__link iastate22-link-external">{{contact.link.label}}<span class="arrow"></span></a>
                   {% elseif contact.phone %}
-                    <span>{{contact.phone}}</span>
+                    <span class="event-details__phone-number">{{contact.phone}}</span>
                   {% elseif contact.tags %}
-                    <div class="event-detail__tags">
+                    <div class="event-details__tags">
                       {% for tag in contact.tags %}
                         <a href="{{tag.url}}">{{tag.label}}</a>
                       {% endfor %}
@@ -37,7 +37,7 @@
                   {% endif %}
                 {% endfor %}
               {% else %}
-                {{ detail.content }}
+                <p>{{ detail.content }}<p>
               {% endif %}
             </dd>
           {% endfor %}
