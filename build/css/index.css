@@ -3471,13 +3471,14 @@ main {
     height: 42px;
     margin-right: 20px;
     margin-right: 42px; }
-    .event-details__wrap > dt .icon, .event-details__wrap > dt .icon-spec {
+    .event-details__wrap > dt .icon,
+    .event-details__wrap > dt .icon-spec {
       width: 100%;
       height: 100%;
       border-radius: 100%;
       display: block; }
     .event-details__wrap > dt .icon-spec {
-      background-color: #ED23CE; }
+      background-color: #ed23ce; }
   .event-details__wrap > dd {
     width: calc(100% - 62px);
     -webkit-margin-start: 0;
@@ -3490,9 +3491,25 @@ main {
       line-height: 1.5625rem;
       font-weight: 700;
       color: #4a4a4a; }
-    .event-details__wrap > dd [class^='iastate22-link'], .event-details__wrap > dd [class*='iastate22-link'] {
+    .event-details__wrap > dd [class^="iastate22-link"],
+    .event-details__wrap > dd [class*="iastate22-link"] {
       display: table; }
-    .event-details__wrap > dd [class^='iastate22-link'] + [class^='iastate22-link'], .event-details__wrap > dd [class^='iastate22-link'] + [class*='iastate22-link'], .event-details__wrap > dd [class^='iastate22-link'] + .event-details__phone-number, .event-details__wrap > dd [class^='iastate22-link'] + .event-details__tags, .event-details__wrap > dd [class*='iastate22-link'] + [class^='iastate22-link'], .event-details__wrap > dd [class*='iastate22-link'] + [class*='iastate22-link'], .event-details__wrap > dd [class*='iastate22-link'] + .event-details__phone-number, .event-details__wrap > dd [class*='iastate22-link'] + .event-details__tags, .event-details__wrap > dd .event-details__phone-number + [class^='iastate22-link'], .event-details__wrap > dd .event-details__phone-number + [class*='iastate22-link'], .event-details__wrap > dd .event-details__phone-number + .event-details__phone-number, .event-details__wrap > dd .event-details__phone-number + .event-details__tags, .event-details__wrap > dd .event-details__tags + [class^='iastate22-link'], .event-details__wrap > dd .event-details__tags + [class*='iastate22-link'], .event-details__wrap > dd .event-details__tags + .event-details__phone-number, .event-details__wrap > dd .event-details__tags + .event-details__tags {
+    .event-details__wrap > dd [class^="iastate22-link"] + [class^="iastate22-link"],
+    .event-details__wrap > dd [class^="iastate22-link"] + [class*="iastate22-link"],
+    .event-details__wrap > dd [class^="iastate22-link"] + .event-details__phone-number,
+    .event-details__wrap > dd [class^="iastate22-link"] + .event-details__tags,
+    .event-details__wrap > dd [class*="iastate22-link"] + [class^="iastate22-link"],
+    .event-details__wrap > dd [class*="iastate22-link"] + [class*="iastate22-link"],
+    .event-details__wrap > dd [class*="iastate22-link"] + .event-details__phone-number,
+    .event-details__wrap > dd [class*="iastate22-link"] + .event-details__tags,
+    .event-details__wrap > dd .event-details__phone-number + [class^="iastate22-link"],
+    .event-details__wrap > dd .event-details__phone-number + [class*="iastate22-link"],
+    .event-details__wrap > dd .event-details__phone-number + .event-details__phone-number,
+    .event-details__wrap > dd .event-details__phone-number + .event-details__tags,
+    .event-details__wrap > dd .event-details__tags + [class^="iastate22-link"],
+    .event-details__wrap > dd .event-details__tags + [class*="iastate22-link"],
+    .event-details__wrap > dd .event-details__tags + .event-details__phone-number,
+    .event-details__wrap > dd .event-details__tags + .event-details__tags {
       margin-top: 28px; }
   .event-details__wrap > dt + dd + dt,
   .event-details__wrap > dt + dd + dt + dd {
@@ -3844,7 +3861,7 @@ main {
 
 .featured-events__item {
   padding: 29px 30px 29px 0;
-  border-bottom: solid 1px #EBEBEB; }
+  border-bottom: solid 1px #ebebeb; }
   .featured-events__item:first-child {
     padding-top: 0; }
   .featured-events__item:last-child {
@@ -8742,6 +8759,88 @@ html:not(.js) .nojs-close-menu {
 
 .fc .fc-daygrid-dot-event:hover, .fc .fc-daygrid-dot-event:focus {
   background: transparent; }
+
+/*---===/ List View \===---*/
+.fc .fc-listWeek-view .fc-list-event:hover td {
+  background: transparent; }
+
+.fc .fc-listWeek-view .fc-event:after {
+  display: none; }
+
+.fc .fc-listWeek-view .fc-list-event-title {
+  padding: 24px 20px; }
+
+.fc-listWeek-view .fc-list-event-time,
+.fc-listWeek-view .fc-list-event-graphic {
+  display: none; }
+
+.fc-listWeek-view .event-listing {
+  background: #ffffff; }
+  @media (min-width: 992px) {
+    .fc-listWeek-view .event-listing {
+      display: -webkit-box;
+      display: flex;
+      gap: 20px; } }
+
+.fc-listWeek-view .event-listing__image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 66%; }
+  @media (min-width: 992px) {
+    .fc-listWeek-view .event-listing__image {
+      width: 200px;
+      padding-bottom: 130px; } }
+  .fc-listWeek-view .event-listing__image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-family: "object-fit:cover";
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block; }
+
+.fc-listWeek-view .event-listing__image + .event-listing__content {
+  margin-top: 30px; }
+  @media (min-width: 992px) {
+    .fc-listWeek-view .event-listing__image + .event-listing__content {
+      margin-top: 0; } }
+
+.event-listing__title {
+  margin-bottom: 6px;
+  font-size: 1.375rem;
+  line-height: 1.9375rem; }
+
+.event-listing__date {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: #4a4a4a; }
+
+.event-listing__location {
+  font-style: italic; }
+
+/*---===/ Month View \===---*/
+.fc-dayGridMonth-view .event-listing {
+  position: absolute;
+  background: #ffffff;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  box-shadow: 9px 13px 20px #00000029;
+  padding: 24px 20px;
+  width: 344px;
+  opacity: 1;
+  z-index: -1; }
+
+.fc-dayGridMonth-view .event-listing__image > img {
+  display: block;
+  width: 100%; }
 
 .home-hero {
   position: relative;

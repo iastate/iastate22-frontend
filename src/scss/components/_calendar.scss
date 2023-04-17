@@ -269,3 +269,105 @@
     background: transparent;
   }
 }
+
+/*---===/ List View \===---*/
+
+.fc-listWeek-view {
+}
+
+.fc .fc-listWeek-view .fc-list-event:hover td {
+  background: transparent;
+}
+
+.fc .fc-listWeek-view .fc-event:after {
+  display: none;
+}
+.fc .fc-listWeek-view .fc-list-event-title {
+  padding: 24px 20px;
+}
+
+.fc-listWeek-view .fc-list-event-time,
+.fc-listWeek-view .fc-list-event-graphic {
+  display: none;
+}
+
+.fc-listWeek-view .event-listing {
+  background: $white;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.fc-listWeek-view .event-listing__image {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 66%;
+
+  @include media-breakpoint-up(lg) {
+    width: 200px;
+    padding-bottom: 130px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.fc-listWeek-view .event-listing__image + .event-listing__content {
+  margin-top: 30px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+  }
+}
+.event-listing__title {
+  margin-bottom: 6px;
+  font-size: rem(22);
+  line-height: rem(31);
+}
+
+.event-listing__date {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: rem(26);
+  color: $grey;
+}
+
+.event-listing__location {
+  font-style: italic;
+}
+
+/*---===/ Month View \===---*/
+
+.fc-dayGridMonth-view {
+}
+
+.fc-dayGridMonth-view .event-listing {
+  position: absolute;
+  background: $white;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  box-shadow: 9px 13px 20px #00000029;
+  padding: 24px 20px;
+  width: 344px;
+  opacity: 1; // Needs to be 0
+  z-index: -1;
+}
+
+.fc-dayGridMonth-view .event-listing__image {
+  > img {
+    display: block;
+    width: 100%;
+  }
+}
