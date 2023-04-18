@@ -6,16 +6,25 @@ import { formatDate } from "@fullcalendar/core";
 
 export class EventCalendar {
   private element: HTMLElement;
+  private eventCalendar: HTMLElement;
+  private calendarHeader: HTMLElement;
+  private monthButton: HTMLButtonElement;
+  private listButton: HTMLButtonElement;
+  private calendar: any;
 
   constructor(element: HTMLElement) {
     if (!!element) {
       this.element = element;
+      this.eventCalendar = this.element.querySelector(".calendar__wrap");
+      this.calendarHeader = this.element.querySelector(".calendar__header");
+      this.listButton = this.calendarHeader.querySelector(".calendar__views #list-btn");
+      this.monthButton = this.calendarHeader.querySelector(".calendar__views #month-btn");
       this.init();
     }
   }
 
   private init() {
-    let calendar = new Calendar(this.element, {
+    this.calendar = new Calendar(this.eventCalendar, {
       plugins: [dayGridPlugin, timeGridPlugin, listPlugin],
       initialView: "dayGridMonth",
       eventTimeFormat: {
@@ -26,15 +35,30 @@ export class EventCalendar {
       headerToolbar: {
         left: "prev,next today",
         center: "title",
-        right: "dayGridMonth,listWeek",
+        right: "",
       },
       eventMouseEnter: function(nfo) {
-        console.log(nfo);
-        console.log(nfo.event.extendedProps);
+        if (nfo.view.type === "dayGridMonth") {
+          nfo.el.classList.add("event-active");
+          let moreInfo = nfo.el.querySelector(".event-listing");
+          moreInfo.classList.add("on");
+          setTimeout(() => {
+            moreInfo.classList.add("active");
+          }, 50);
+        }
+      },
+
+      eventMouseLeave: function(nfo) {
+        if (nfo.view.type === "dayGridMonth") {
+          nfo.el.classList.remove("event-active");
+          let moreInfo = nfo.el.querySelector(".event-listing");
+          moreInfo.classList.remove("active");
+          setTimeout(() => {
+            moreInfo.classList.remove("on");
+          }, 300);
+        }
       },
       eventContent: (arg) => {
-        console.log("// Arg");
-        console.log(arg);
         let arrayOfDomNodes = [this.buildEventDOM(arg)];
         return { domNodes: arrayOfDomNodes };
       },
@@ -43,15 +67,15 @@ export class EventCalendar {
         console.log(arg.view.type);
       },
     });
-    calendar.render();
-    calendar.addEvent({
+    this.calendar.render();
+    this.calendar.addEvent({
       title: "March 9th Event",
       start: "2023-03-09 15:00",
       resourceId: "1",
       location: "University Library front lobby",
       interactive: true,
     });
-    calendar.addEvent({
+    this.calendar.addEvent({
       title: "March 16 Event",
       start: "2023-03-16",
       resourceId: "2",
@@ -59,7 +83,7 @@ export class EventCalendar {
       interactive: true,
       url: "https://idfive.com",
     });
-    calendar.addEvent({
+    this.calendar.addEvent({
       title: "April 12 Event",
       start: "2023-04-12 20:30",
       resourceId: "3",
@@ -67,14 +91,14 @@ export class EventCalendar {
       location: "Parts Unknown",
       interactive: true,
     });
-    calendar.addEvent({
+    this.calendar.addEvent({
       title: "Orioles Tickets! Orioles Tickets! Orioles Tickets!",
       resourceId: "4",
       start: "2023-04-19",
       location: "Oriole Park at Camden Yards",
       interactive: true,
     });
-    calendar.addEvent({
+    this.calendar.addEvent({
       title: "Floating Holiday",
       start: "2023-04-21",
       resourceId: "5",
@@ -82,12 +106,30 @@ export class EventCalendar {
       location: "Unknown",
       interactive: true,
     });
+    this.listButton.addEventListener("click", (e) => {
+      this.changeCalendar(e.target, "listWeek");
+    });
+
+    this.monthButton.addEventListener("click", (e) => {
+      this.changeCalendar(e.target, "dayGridMonth");
+    });
+  }
+
+  private changeCalendar(btn, view) {
+    this.calendar.changeView(view);
+    console.log(btn);
+    let rent = btn.parentElement,
+      activ = rent.querySelector("button[aria-pressed=true]");
+    if (activ) {
+      activ.setAttribute("aria-pressed", "false");
+    }
+    btn.setAttribute("aria-pressed", "true");
   }
 
   private buildEventDOM(arg) {
-    this.buildDate(arg.event.startStr);
-    this.buildTime(arg.event.startStr);
-    let contentArea = document.createElement("div");
+    let contentArea = document.createElement("div"),
+      ct = document.createElement("div");
+
     contentArea.classList.add("event-listing");
     contentArea.innerHTML +=
       "<div class='event-listing__image'><img src='http://placekitten.com/200/300' alt='placekitteh'/></div>";
@@ -108,7 +150,16 @@ export class EventCalendar {
     if (arg.event.extendedProps.description) {
       contentBlock.innerHTML += "<div class=''>" + arg.event.extendedProps.description + "</div>";
     }
-    return contentArea;
+
+    // Event Link Markup:
+
+    let contentLink = document.createElement("div");
+    contentLink.classList.add("event-link");
+    contentLink.innerHTML += "<div class='fc-event-time'>" + this.buildTime(arg.event.startStr) + "</div>";
+    contentLink.innerHTML += "<div class='fc-event-title'>" + arg.event.title + "</div>";
+    ct.appendChild(contentArea);
+    ct.appendChild(contentLink);
+    return ct;
   }
 
   private buildDate(dte) {
@@ -118,8 +169,6 @@ export class EventCalendar {
       day: "numeric",
       hour12: true,
     });
-    console.log("formatted Date:");
-    console.log(formattedDate);
     return formattedDate;
   }
 
@@ -129,8 +178,6 @@ export class EventCalendar {
       hour: "numeric",
       minute: "2-digit",
     });
-    console.log("formatted Time:");
-    console.log(formattedTime);
     return formattedTime;
   }
 }
