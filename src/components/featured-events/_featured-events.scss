@@ -1,0 +1,52 @@
+.featured-events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.featured-events__card {
+  max-width: 25rem;
+  margin-bottom: 60px;
+  @include media-breakpoint-up(lg) {
+    min-width: 300px;
+  }
+}
+
+.featured-events__listing {
+  @include media-breakpoint-up(lg) {
+    margin-left: 7%;
+  }
+}
+
+.featured-events__item {
+  padding: 29px 30px 29px 0;
+  border-bottom: solid 1px $off-white3;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.featured-events__title {
+  margin-bottom: 15px;
+
+  .iastate22-link-secondary {
+    @include media-breakpoint-up(lg) {
+      font-size: rem(22);
+    }
+  }
+}
+
+.featured-events__item time {
+  color: $grey;
+}
