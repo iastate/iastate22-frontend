@@ -111,6 +111,18 @@
   }
 }
 
+.fc .fc-header-toolbar {
+  @include media-breakpoint-down(md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.fc .fc-toolbar-title {
+  padding-bottom: 0;
+}
+
 .fc-scrollgrid-sync-table tbody tr:nth-child(even) {
   @include media-breakpoint-up(lg) {
     background-color: $off-white;
@@ -403,10 +415,14 @@
 .calendar__header {
   display: flex;
   margin-bottom: 40px;
+  flex-direction: column;
+  gap: 30px;
 
-  @include media-breakpoint-up(med) {
+  @include media-breakpoint-up(md) {
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   @include media-breakpoint-up(lg) {
@@ -416,13 +432,18 @@
 
 .calendar__search {
   position: relative;
-  @include media-breakpoint-up(med) {
+  @include media-breakpoint-up(md) {
     flex: 1 0 auto;
   }
   form {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     position: relative;
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
   }
   input[type="text"] {
     border: solid 1px $grey4;
@@ -445,13 +466,21 @@
   }
 
   input[type="text"] + button {
-    margin: 0 0 0 21px;
+    margin: 20px 0 0;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 0 0 21px;
+      flex: 1 0 auto;
+    }
   }
 }
 
 .calendar__views {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  @include media-breakpoint-up(md) {
+    justify-content: flex-end;
+  }
 }
 
 .calendar__views .btn {
@@ -492,8 +521,7 @@
 }
 
 .calendar__categories {
-  margin-top: 44px;
-  @include media-breakpoint-up(med) {
+  @include media-breakpoint-up(md) {
     flex: 1 0 100%;
     display: flex;
     align-items: flex-end;
@@ -502,7 +530,9 @@
 
 .calendar__categories-wrap {
   width: 100%;
-  max-width: 304px;
+  @include media-breakpoint-up(md) {
+    max-width: 304px;
+  }
 }
 
 .calendar__categories-wrap label {
@@ -514,7 +544,10 @@
 }
 
 .calendar__categories-toggle {
-  margin: 0 0 10px 20px;
+  margin: 20px 0 10px;
+  @include media-breakpoint-up(md) {
+    margin: 0 0 10px 20px;
+  }
 }
 
 .calendar__categories-wrap select {

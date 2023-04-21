@@ -6,7 +6,7 @@
 
 {% block content %}
   <div class="outer-pad">
-    <p class="iastate-article__back-btn"><a href="#">View All Events</a></p>
+    <p class="iastate-article__back-btn"><a href="#" class="link-set__link link-tertiary">View All Events<span class="arrow"></span></a></p>
     {% include "@stater-article-hero--event-components" with hero %}
     <div class="paragraph-widget paragraph-widget--text-html">
       <div class="text-content">
@@ -17,6 +17,7 @@
       {% include "@card-set" with card_set_three_links %}
     </div>
     {% include "@upcoming-events" %}
+    
     {% include "@featured-events" %}
 
   </div>

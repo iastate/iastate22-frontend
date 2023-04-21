@@ -6,6 +6,14 @@
   }
 }
 
+.upcoming-events h2 {
+  @extend %h2-yellow-border;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
+}
+
 .upcoming-events__wrap {
   display: flex;
   flex-wrap: wrap;
