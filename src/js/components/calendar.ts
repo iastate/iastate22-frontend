@@ -148,7 +148,7 @@ export class EventCalendar {
       contentBlock.innerHTML += "<div class='event-listing__location'>" + arg.event.extendedProps.location + "</div>";
     }
     if (arg.event.extendedProps.description) {
-      contentBlock.innerHTML += "<div class=''>" + arg.event.extendedProps.description + "</div>";
+      contentBlock.innerHTML += "<div class='event-listing__desc'>" + arg.event.extendedProps.description + "</div>";
     }
 
     // Event Link Markup:

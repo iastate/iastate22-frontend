@@ -8669,18 +8669,33 @@ html:not(.js) .nojs-close-menu {
         padding-bottom: 24px;
         border: none; } }
 
-@media (max-width: 767.98px) {
-  .fc .fc-header-toolbar {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-    -webkit-box-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-            align-items: center; } }
+.fc .fc-header-toolbar {
+  position: relative; }
+  @media (max-width: 767.98px) {
+    .fc .fc-header-toolbar {
+      -webkit-box-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column; } }
 
 .fc .fc-toolbar-title {
   padding-bottom: 0; }
+
+@media (max-width: 767.98px) {
+  .fc .fc-toolbar-chunk .fc-toolbar-title {
+    margin-top: 20px; } }
+
+@media (min-width: 768px) {
+  .fc .fc-toolbar-chunk .fc-toolbar-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 100px;
+    text-align: center; } }
 
 @media (min-width: 992px) {
   .fc-scrollgrid-sync-table tbody tr:nth-child(even) {
@@ -8698,8 +8713,13 @@ html:not(.js) .nojs-close-menu {
   background: transparent;
   border: none; }
 
-.fc .fc-daygrid-day-events {
+.fc .fc-daygrid-day-events, .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
   padding: 0 10px; }
+  @media (max-width: 767.98px) {
+    .fc .fc-daygrid-day-events, .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+      position: absolute;
+      bottom: 0;
+      width: 100%; } }
 
 .fc .fc-view-harness-active > .fc-view {
   position: relative; }
@@ -8756,7 +8776,7 @@ html:not(.js) .nojs-close-menu {
     display: block;
     background-color: #c8102e;
     border-radius: 100%;
-    bottom: -5px;
+    bottom: 0;
     left: calc(50% - 6px); }
     @media (min-width: 992px) {
       .fc .fc-event:after {
@@ -8792,6 +8812,23 @@ html:not(.js) .nojs-close-menu {
 
 .fc .fc-col-header-cell-cushion {
   font-size: 1.25rem; }
+  @media (max-width: 767.98px) {
+    .fc .fc-col-header-cell-cushion {
+      font-size: 0; }
+      .fc .fc-col-header-cell-cushion:first-letter {
+        font-size: 1.25rem; } }
+
+.fc .fc-daygrid-event-harness {
+  position: relative; }
+  @media (max-width: 991.98px) {
+    .fc .fc-daygrid-event-harness {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 45%; } }
+  @media (max-width: 767.98px) {
+    .fc .fc-daygrid-event-harness {
+      bottom: 15%; } }
 
 .fc .fc-daygrid-day-number {
   color: #c8102e;
@@ -8877,13 +8914,17 @@ html:not(.js) .nojs-close-menu {
 .event-listing__title {
   margin-bottom: 6px;
   font-size: 1.375rem;
-  line-height: 1.9375rem; }
+  line-height: 1.9375rem;
+  -webkit-box-ordinal-group: 2;
+          order: 1; }
 
 .event-listing__date {
   font-weight: 700;
   font-size: 1rem;
   line-height: 1.625rem;
-  color: #4a4a4a; }
+  color: #4a4a4a;
+  -webkit-box-ordinal-group: 1;
+          order: 0; }
 
 .event-listing__location {
   font-style: italic; }
@@ -8913,6 +8954,20 @@ html:not(.js) .nojs-close-menu {
   display: block;
   width: 100%; }
 
+.fc-dayGridMonth-view .event-listing__content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column; }
+
+.fc-dayGridMonth-view .event-listing__location {
+  display: none; }
+
+.fc-dayGridMonth-view .event-listing__desc {
+  -webkit-box-ordinal-group: 3;
+          order: 2; }
+
 /*---===/ Calendar Header \===---*/
 .calendar__header {
   display: -webkit-box;
@@ -8938,7 +8993,11 @@ html:not(.js) .nojs-close-menu {
 
 .calendar__search {
   position: relative; }
-  @media (min-width: 768px) {
+  @media (max-width: 991.98px) {
+    .calendar__search {
+      -webkit-box-flex: 1;
+              flex: 1 0 100%; } }
+  @media (min-width: 992px) {
     .calendar__search {
       -webkit-box-flex: 1;
               flex: 1 0 auto; } }
@@ -8951,7 +9010,7 @@ html:not(.js) .nojs-close-menu {
     -webkit-box-align: start;
             align-items: flex-start;
     position: relative; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .calendar__search form {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -8959,9 +9018,11 @@ html:not(.js) .nojs-close-menu {
   .calendar__search input[type="text"] {
     border: solid 1px #707070;
     padding-left: 40px;
-    max-width: 549px;
     width: 100%;
     font-size: 1rem; }
+    @media (min-width: 992px) {
+      .calendar__search input[type="text"] {
+        max-width: 549px; } }
   .calendar__search label {
     position: absolute;
     top: 10px;
@@ -8971,6 +9032,9 @@ html:not(.js) .nojs-close-menu {
       fill: #7c2529; }
   .calendar__search input[type="text"] + button {
     margin: 20px 0 0; }
+    @media (max-width: 767.98px) {
+      .calendar__search input[type="text"] + button {
+        width: 100%; } }
     @media (min-width: 992px) {
       .calendar__search input[type="text"] + button {
         margin: 0 0 0 21px;
@@ -8982,6 +9046,10 @@ html:not(.js) .nojs-close-menu {
   display: flex;
   -webkit-box-pack: center;
           justify-content: center; }
+  @media (max-width: 767.98px) {
+    .calendar__views {
+      -webkit-box-flex: 1;
+              flex: 1 0 100%; } }
   @media (min-width: 768px) {
     .calendar__views {
       -webkit-box-pack: end;
@@ -9004,6 +9072,12 @@ html:not(.js) .nojs-close-menu {
   gap: 10px;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out; }
+  @media (max-width: 767.98px) {
+    .calendar__views .btn {
+      -webkit-box-flex: 1;
+              flex: 1 0 50%;
+      -webkit-box-pack: center;
+              justify-content: center; } }
   .calendar__views .btn:hover, .calendar__views .btn:focus, .calendar__views .btn[aria-pressed="true"] {
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
@@ -9038,11 +9112,16 @@ html:not(.js) .nojs-close-menu {
       max-width: 304px; } }
 
 .calendar__categories-wrap label {
-  display: table;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
   font-size: 1.125rem;
   line-height: 1.5625rem;
   color: #7c2529;
   font-weight: 700; }
+  .calendar__categories-wrap label svg {
+    margin-right: 6px; }
 
 .calendar__categories-toggle {
   margin: 20px 0 10px; }
