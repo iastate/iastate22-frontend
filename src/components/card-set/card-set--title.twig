@@ -1,4 +1,5 @@
 <div class="card-set{% if teaser_news %} card-set--teaser{% elseif teaser_profile %} card-set--teaser {% elseif teaser_profile %} card-set--teaser{% endif %}">
+  <h2 class="card-set__title">Featured Events</h2>
   <ul>
     {% for card in cards %}
       {% if with_modal %}
