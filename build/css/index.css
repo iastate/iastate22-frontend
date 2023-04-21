@@ -3496,7 +3496,8 @@ main {
       color: #4a4a4a; }
     .event-details__wrap > dd [class^="iastate22-link"],
     .event-details__wrap > dd [class*="iastate22-link"] {
-      display: table; }
+      display: table;
+      word-break: break-word; }
     .event-details__wrap > dd [class^="iastate22-link"] + [class^="iastate22-link"],
     .event-details__wrap > dd [class^="iastate22-link"] + [class*="iastate22-link"],
     .event-details__wrap > dd [class^="iastate22-link"] + .event-details__phone-number,
