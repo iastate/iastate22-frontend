@@ -3360,6 +3360,9 @@ main {
           width: 33.3%;
           padding-right: 2.5rem; } }
 
+.card-set__title {
+  text-align: center; }
+
 .hero {
   margin-bottom: 7.875rem;
   position: relative; }
