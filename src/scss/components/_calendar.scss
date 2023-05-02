@@ -45,6 +45,15 @@
   }
 }
 
+.fc .fc-button-group {
+  z-index: 1;
+
+  + .fc-button {
+    z-index: 1;
+    position: relative;
+  }
+}
+
 .fc .fc-button-group > .fc-button.fc-button-active {
   color: var(--fc-button-active-text-color);
 }
@@ -74,6 +83,7 @@
 
   @include media-breakpoint-up(lg) {
     display: inherit;
+    font-weight: 400;
   }
 }
 
@@ -141,9 +151,7 @@
 }
 
 .fc-scrollgrid-sync-table tbody tr:nth-child(even) {
-  @include media-breakpoint-up(lg) {
-    background-color: $off-white;
-  }
+  background-color: $off-white;
 }
 
 .fc-scrollgrid-sync-table tbody tr td {
@@ -249,7 +257,6 @@
 .fc .fc-event .fc-event-title {
   color: $iastate-maroon;
   font-weight: 700;
-  opacity: 0.6;
   display: none;
 
   @include media-breakpoint-up(lg) {
@@ -299,6 +306,10 @@
 
   @include media-breakpoint-down(md) {
     bottom: 15%;
+  }
+
+  + .fc-daygrid-event-harness {
+    margin-top: 4px;
   }
 }
 
@@ -354,7 +365,8 @@
   display: none;
 }
 .fc .fc-listWeek-view .fc-list-event-title {
-  padding: 24px 20px;
+  padding: 24px 0;
+  border-width: 0 0 1px;
 }
 
 .fc-listWeek-view .fc-list-event-time,
@@ -365,7 +377,7 @@
 .fc-listWeek-view .event-listing {
   background: $white;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     display: flex;
     gap: 20px;
   }
@@ -377,7 +389,7 @@
   height: 0;
   padding-bottom: 66%;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     width: 200px;
     padding-bottom: 130px;
   }
@@ -401,15 +413,54 @@
 .fc-listWeek-view .event-listing__image + .event-listing__content {
   margin-top: 30px;
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     margin-top: 0;
   }
 }
+
+.event-listing {
+  &:hover,
+  &:focus-within {
+    .event-listing__title a {
+      text-decoration-color: currentColor;
+      transition: text-decoration-color 0.2s ease-out;
+
+      svg {
+        margin-left: 15px;
+        transition: margin 0.2s ease-out;
+      }
+    }
+  }
+}
+
+.fc-list-event-title {
+  &:hover,
+  &:focus-within {
+    .event-listing__title a svg {
+      margin-left: 15px;
+      transition: margin 0.2s ease-out;
+    }
+  }
+}
+
 .event-listing__title {
   margin-bottom: 6px;
   font-size: rem(22);
   line-height: rem(31);
   order: 1;
+}
+
+.fc .event-listing__title a {
+  color: $iastate-maroon;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s ease-out;
+
+  svg {
+    margin-left: 10px;
+    margin-bottom: 1px;
+    transition: margin 0.3s ease-out;
+  }
 }
 
 .event-listing__date {
@@ -549,14 +600,18 @@
 }
 
 .calendar__views {
-  display: flex;
   justify-content: center;
+  display: none;
 
   @include media-breakpoint-down(md) {
     flex: 1 0 100%;
   }
   @include media-breakpoint-up(md) {
     justify-content: flex-end;
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
   }
 }
 
@@ -637,6 +692,10 @@
   }
 }
 
+.fc .fc-day-past .fc-daygrid-day-top {
+  opacity: 0.3;
+}
+
 .calendar__categories-wrap select {
   // padding: 13px 20px 14px;
   // border: solid 1px $grey4;
@@ -650,4 +709,23 @@
   // &:-ms-expand {
   //   display: none;
   // }
+}
+.fc .fc-event + .fc-list-day > th {
+  padding-top: 40px;
+}
+
+.fc.fc-theme-standard .fc-list-day-cushion {
+  background-color: transparent;
+  display: flex;
+  gap: 10px;
+  padding-left: 0;
+}
+
+.fc-theme-standard .fc-list {
+  border: none;
+}
+
+.fc .fc-list-empty {
+  font-size: rem(24);
+  background-color: transparent;
 }
