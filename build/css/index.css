@@ -8463,8 +8463,8 @@ html:not(.js) .nojs-close-menu {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-          align-items: center; }
+  -webkit-box-align: start;
+          align-items: flex-start; }
   @media (min-width: 992px) {
     .upcoming-events__wrap {
       width: 80%; } }
@@ -8802,6 +8802,10 @@ html:not(.js) .nojs-close-menu {
   --fc-today-bg-color: rgba(255, 220, 40, 0.15);
   --fc-now-indicator-color: red; }
 
+@media (max-width: 1199.98px) {
+  .hero--no-media + .calendar {
+    margin-top: -100px; } }
+
 .calendar {
   margin-bottom: 60px; }
   @media (min-width: 992px) {
@@ -8876,6 +8880,10 @@ html:not(.js) .nojs-close-menu {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
               flex-direction: column; } }
+
+@media (max-width: 767.98px) {
+  .fc .fc-header-toolbar .fc-toolbar-chunk:first-of-type {
+    margin-left: -20px; } }
 
 .fc .fc-toolbar-title {
   padding-bottom: 0; }
