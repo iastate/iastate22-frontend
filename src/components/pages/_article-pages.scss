@@ -27,3 +27,33 @@
     font-weight: 600;
   }
 }
+
+.article-overview {
+  font-weight: 600;
+}
+
+.paragraph-widget--article-category-tags {
+  .category-title {
+    color: $grey;
+  }
+  .category-tags {
+    padding-left: 0;
+    li {
+      display: inline;
+      padding: 0 rem(20) 0 0;
+      &:before {
+        content: "";
+        padding: 0;
+      }
+      a {
+        color: $iastate-maroon;
+        text-decoration: underline;
+        font-weight: 600;
+        transition: color 0.25s linear;
+        &:hover {
+          color: $iastate-red;
+        }
+      }
+    }
+  }
+}

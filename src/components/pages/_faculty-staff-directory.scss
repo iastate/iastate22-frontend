@@ -29,14 +29,14 @@
   .iastate22-form--search,
   .iastate22-form input[type="text"] {
     width: rem(350);
-    margin-bottom: rem(35);
+    margin-bottom: rem(25);
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
     }
   }
   .iastate22-form--select {
     width: rem(250);
-    margin-bottom: rem(35);
+    margin-bottom: rem(25);
     @include media-breakpoint-up(md) {
       margin-bottom: 0;
     }

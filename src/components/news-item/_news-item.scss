@@ -1,7 +1,7 @@
 .news-items {
   display: flex;
   flex-direction: column;
-  gap: rem(50);
+  gap: rem(15);
   margin-bottom: rem(50);
   @include media-breakpoint-up(lg) {
     flex-direction: row;
@@ -12,10 +12,16 @@
         margin: rem(20) 0 0;
         li {
           color: $iastate-red;
-          font-size: rem(14);
+          font-size: rem(16);
           font-weight: 600;
-          display: inline;
           padding-right: rem(15);
+          display: none;
+          &:first-child {
+            display: inline;
+          }
+          @include media-breakpoint-up(lg) {
+            display: inline;
+          }
         }
       }
     }
