@@ -1960,15 +1960,15 @@ textarea.form-control-lg {
       margin-right: -18.625rem; } }
 
 .iastate22-card__media, .hero__media, .hero--news-article__media,
-.hero--event-detail__media, .feature-with-large-image__media, .iastate22-callout__media, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container, .external-news-story__media, .video-embed__media-wrap, .full-width-image__image, .call-to-action--large .call-to-action__media, .image-grid__image, .iastate22-blockquote__portrait, .iastate22-modal__media, .callout-with-image__media, .ecosystem-home-hero__media, .personal-profile-info-card__media, .grid-list__image, .faculty-staff-card .faculty-staff-card__media .faculty-staff-card__media-container, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container, .home-hero__media, .home-community__callout-media, .home-community__callout-media-two, .home-location__media, .home-news-events-grid__image, .home-social__images-image, .home-resources__image, .home-ctas__image, .home-full-width-campus-photo, .admission-aid-hero__media, .admission-aid-why__callout-media, .college-hero__media, .college-overview__media, .college-maj-min-certs__media, .college-ctas__cta-media,
+.hero--event-detail__media, .feature-with-large-image__media, .iastate22-callout__media, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container, .external-news-story__media, .video-embed__media-wrap, .full-width-image__image, .call-to-action--large .call-to-action__media, .image-grid__image, .iastate22-blockquote__portrait, .iastate22-modal__media, .callout-with-image__media, .ecosystem-home-hero__media, .personal-profile-info-card__media, .grid-list__image, .faculty-staff-card__media-container, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container, .home-hero__media, .home-community__callout-media, .home-community__callout-media-two, .home-location__media, .home-news-events-grid__image, .home-social__images-image, .home-resources__image, .home-ctas__image, .home-full-width-campus-photo, .admission-aid-hero__media, .admission-aid-why__callout-media, .college-hero__media, .college-overview__media, .college-maj-min-certs__media, .college-ctas__cta-media,
 .responsive-img {
   position: relative; }
   .iastate22-card__media:before, .hero__media:before, .hero--news-article__media:before,
-  .hero--event-detail__media:before, .feature-with-large-image__media:before, .iastate22-callout__media:before, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container:before, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container:before, .external-news-story__media:before, .video-embed__media-wrap:before, .full-width-image__image:before, .call-to-action--large .call-to-action__media:before, .image-grid__image:before, .iastate22-blockquote__portrait:before, .iastate22-modal__media:before, .callout-with-image__media:before, .ecosystem-home-hero__media:before, .personal-profile-info-card__media:before, .grid-list__image:before, .faculty-staff-card .faculty-staff-card__media .faculty-staff-card__media-container:before, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container:before, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container:before, .home-hero__media:before, .home-community__callout-media:before, .home-community__callout-media-two:before, .home-location__media:before, .home-news-events-grid__image:before, .home-social__images-image:before, .home-resources__image:before, .home-ctas__image:before, .home-full-width-campus-photo:before, .admission-aid-hero__media:before, .admission-aid-why__callout-media:before, .college-hero__media:before, .college-overview__media:before, .college-maj-min-certs__media:before, .college-ctas__cta-media:before,
+  .hero--event-detail__media:before, .feature-with-large-image__media:before, .iastate22-callout__media:before, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container:before, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container:before, .external-news-story__media:before, .video-embed__media-wrap:before, .full-width-image__image:before, .call-to-action--large .call-to-action__media:before, .image-grid__image:before, .iastate22-blockquote__portrait:before, .iastate22-modal__media:before, .callout-with-image__media:before, .ecosystem-home-hero__media:before, .personal-profile-info-card__media:before, .grid-list__image:before, .faculty-staff-card__media-container:before, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container:before, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container:before, .home-hero__media:before, .home-community__callout-media:before, .home-community__callout-media-two:before, .home-location__media:before, .home-news-events-grid__image:before, .home-social__images-image:before, .home-resources__image:before, .home-ctas__image:before, .home-full-width-campus-photo:before, .admission-aid-hero__media:before, .admission-aid-why__callout-media:before, .college-hero__media:before, .college-overview__media:before, .college-maj-min-certs__media:before, .college-ctas__cta-media:before,
   .responsive-img:before {
     content: "";
     display: block; }
-  .iastate22-card__media img, .hero__media img, .hero--news-article__media img, .hero--event-detail__media img, .feature-with-large-image__media img, .iastate22-callout__media img, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container img, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container img, .external-news-story__media img, .video-embed__media-wrap img, .full-width-image__image img, .call-to-action--large .call-to-action__media img, .image-grid__image img, .iastate22-blockquote__portrait img, .iastate22-modal__media img, .callout-with-image__media img, .ecosystem-home-hero__media img, .personal-profile-info-card__media img, .grid-list__image img, .faculty-staff-card .faculty-staff-card__media .faculty-staff-card__media-container img, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container img, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container img, .home-hero__media img, .home-community__callout-media img, .home-community__callout-media-two img, .home-location__media img, .home-news-events-grid__image img, .home-social__images-image img, .home-resources__image img, .home-ctas__image img, .home-full-width-campus-photo img, .admission-aid-hero__media img, .admission-aid-why__callout-media img, .college-hero__media img, .college-overview__media img, .college-maj-min-certs__media img, .college-ctas__cta-media img,
+  .iastate22-card__media img, .hero__media img, .hero--news-article__media img, .hero--event-detail__media img, .feature-with-large-image__media img, .iastate22-callout__media img, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container img, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container img, .external-news-story__media img, .video-embed__media-wrap img, .full-width-image__image img, .call-to-action--large .call-to-action__media img, .image-grid__image img, .iastate22-blockquote__portrait img, .iastate22-modal__media img, .callout-with-image__media img, .ecosystem-home-hero__media img, .personal-profile-info-card__media img, .grid-list__image img, .faculty-staff-card__media-container img, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container img, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container img, .home-hero__media img, .home-community__callout-media img, .home-community__callout-media-two img, .home-location__media img, .home-news-events-grid__image img, .home-social__images-image img, .home-resources__image img, .home-ctas__image img, .home-full-width-campus-photo img, .admission-aid-hero__media img, .admission-aid-why__callout-media img, .college-hero__media img, .college-overview__media img, .college-maj-min-certs__media img, .college-ctas__cta-media img,
   .responsive-img img {
     display: block;
     height: 100%;
@@ -4311,6 +4311,12 @@ main {
 
 .iastate22-form .form-item {
   margin-bottom: 1.875rem; }
+
+.iastate22-form .form-item .facetwp-icon {
+  display: none; }
+
+.iastate22-form .form-item .facetwp-facet {
+  margin-bottom: 0; }
 
 .iastate22-form label,
 .iastate22-form .label {
@@ -8596,59 +8602,63 @@ a.grid-list__item {
               flex-direction: row;
       gap: 1.25rem;
       max-width: 30.5rem; } }
-  .faculty-staff-card .faculty-staff-card__media {
-    margin-bottom: 0.9375rem; }
-    .faculty-staff-card .faculty-staff-card__media .faculty-staff-card__media-container {
-      position: relative;
-      width: 12.5rem; }
-      .faculty-staff-card .faculty-staff-card__media .faculty-staff-card__media-container img.faculty-staff-card__media-image {
-        height: 100%;
-        width: 100%;
-        font-family: "object-fit:cover;object-position:center";
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: center;
-           object-position: center;
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0; }
-      .faculty-staff-card .faculty-staff-card__media .faculty-staff-card__media-container:before {
-        padding-top: 100%; }
-  .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-title {
+
+.faculty-staff-card__media {
+  margin-bottom: 0.9375rem; }
+
+.faculty-staff-card__media-container {
+  position: relative;
+  width: 12.5rem; }
+  .faculty-staff-card__media-container:before {
+    padding-top: 100%; }
+
+.faculty-staff-card__content-title {
+  font-size: 1.3125rem;
+  color: #7c2529;
+  font-family: "Nimbus Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.38095;
+  color: #7c2529;
+  margin: 0; }
+  .faculty-staff-card__content-title .iastate22-link-secondary {
+    font-size: 1.3125rem; }
+    .faculty-staff-card__content-title .iastate22-link-secondary .arrow {
+      bottom: 0.8125rem; }
+  .faculty-staff-card__content-title a {
     margin: 0; }
-    .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-title .iastate22-link-secondary {
-      font-size: 1.3125rem; }
-    .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-title a {
-      margin: 0; }
-  .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-body {
-    color: #4a4a4a;
-    font-size: 1rem;
-    margin: 0 0 0.9375rem; }
-  .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact {
-    padding-left: 0; }
-    .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact li {
+
+.faculty-staff-card__content-body {
+  color: #4a4a4a;
+  font-size: 1rem;
+  margin: 0 0 0.9375rem; }
+
+.faculty-staff-card__content-contact {
+  padding-left: 0; }
+  .faculty-staff-card__content-contact li {
+    color: #7c2529;
+    margin: 0 0 0.625rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: flex; }
+    .faculty-staff-card__content-contact li .fa-iastate22-email,
+    .faculty-staff-card__content-contact li .fa-iastate22-phone {
       color: #7c2529;
-      margin: 0 0 0.625rem;
-      font-weight: 700;
-      display: -webkit-box;
-      display: flex; }
-      .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact li .fa-iastate22-email,
-      .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact li .fa-iastate22-phone {
-        color: #7c2529;
-        font-size: 1.875rem; }
-      .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact li a {
-        color: #7c2529; }
-      .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact li .faculty-staff-card__content-key {
-        font-weight: 700; }
-      .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact li .faculty-staff-card__contact-field {
-        padding-left: 1.25rem; }
-      .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact li .faculty-staff-card__contact-value {
-        padding-left: 0.3125rem; }
-      .faculty-staff-card .faculty-staff-card__content .faculty-staff-card__content-contact li:before {
-        content: "";
-        padding: 0;
-        margin-top: 0.3125rem; }
+      font-size: 1.875rem; }
+    .faculty-staff-card__content-contact li a {
+      color: #7c2529; }
+    .faculty-staff-card__content-contact li:before {
+      content: "";
+      padding: 0;
+      margin-top: 0.3125rem; }
+
+.faculty-staff-card__content-key {
+  font-weight: 700; }
+
+.faculty-staff-card__contact-field {
+  padding-left: 1.25rem; }
+
+.faculty-staff-card__contact-value {
+  padding-left: 0.3125rem; }
 
 .faculty-staff-card-set {
   display: block; }
@@ -12138,24 +12148,27 @@ a.grid-list__item {
       bottom: 0;
       pointer-events: none;
       z-index: -1; } }
-  .a-z-index-letter-list ul {
+  .a-z-index-letter-list ul, .a-z-index-letter-list .facetwp-facet {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap; }
-    .a-z-index-letter-list ul li {
+    .a-z-index-letter-list ul li, .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet li, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
       -webkit-box-flex: 0;
               flex: 0 1 auto;
       width: 14%;
       margin-bottom: 0.625rem;
       text-align: center; }
       @media (min-width: 576px) {
-        .a-z-index-letter-list ul li {
+        .a-z-index-letter-list ul li, .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet li, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
           max-width: 2.75rem; } }
       @media (min-width: 1200px) {
-        .a-z-index-letter-list ul li {
+        .a-z-index-letter-list ul li, .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet li, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
           margin-right: 0.3125rem; } }
       .a-z-index-letter-list ul li a,
-      .a-z-index-letter-list ul li span {
+      .a-z-index-letter-list ul li span, .a-z-index-letter-list ul .facetwp-alpha a,
+      .a-z-index-letter-list ul .facetwp-alpha span, .a-z-index-letter-list .facetwp-facet li a,
+      .a-z-index-letter-list .facetwp-facet li span, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a,
+      .a-z-index-letter-list .facetwp-facet .facetwp-alpha span {
         text-decoration: none;
         color: #7c2529;
         text-decoration: none;
@@ -12169,22 +12182,53 @@ a.grid-list__item {
         display: inline-block; }
         @media (min-width: 992px) {
           .a-z-index-letter-list ul li a,
-          .a-z-index-letter-list ul li span {
+          .a-z-index-letter-list ul li span, .a-z-index-letter-list ul .facetwp-alpha a,
+          .a-z-index-letter-list ul .facetwp-alpha span, .a-z-index-letter-list .facetwp-facet li a,
+          .a-z-index-letter-list .facetwp-facet li span, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha span {
             font-size: 1.875rem;
             line-height: 1.33333; } }
-        .a-z-index-letter-list ul li a.a-z-index-letter-list__active, .a-z-index-letter-list ul li a:hover,
+        .a-z-index-letter-list ul li a.a-z-index-letter-list__active, .a-z-index-letter-list ul li a:hover, .a-z-index-letter-list ul li a:focus, .a-z-index-letter-list ul li a.selected,
         .a-z-index-letter-list ul li span.a-z-index-letter-list__active,
-        .a-z-index-letter-list ul li span:hover {
+        .a-z-index-letter-list ul li span:hover,
+        .a-z-index-letter-list ul li span:focus,
+        .a-z-index-letter-list ul li span.selected, .a-z-index-letter-list ul .facetwp-alpha a.a-z-index-letter-list__active, .a-z-index-letter-list ul .facetwp-alpha a:hover, .a-z-index-letter-list ul .facetwp-alpha a:focus, .a-z-index-letter-list ul .facetwp-alpha a.selected,
+        .a-z-index-letter-list ul .facetwp-alpha span.a-z-index-letter-list__active,
+        .a-z-index-letter-list ul .facetwp-alpha span:hover,
+        .a-z-index-letter-list ul .facetwp-alpha span:focus,
+        .a-z-index-letter-list ul .facetwp-alpha span.selected, .a-z-index-letter-list .facetwp-facet li a.a-z-index-letter-list__active, .a-z-index-letter-list .facetwp-facet li a:hover, .a-z-index-letter-list .facetwp-facet li a:focus, .a-z-index-letter-list .facetwp-facet li a.selected,
+        .a-z-index-letter-list .facetwp-facet li span.a-z-index-letter-list__active,
+        .a-z-index-letter-list .facetwp-facet li span:hover,
+        .a-z-index-letter-list .facetwp-facet li span:focus,
+        .a-z-index-letter-list .facetwp-facet li span.selected, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.a-z-index-letter-list__active, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:hover, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:focus, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.selected,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha span.a-z-index-letter-list__active,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:hover,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:focus,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha span.selected {
           color: #c8102e;
           -webkit-text-decoration-color: #c8102e;
                   text-decoration-color: #c8102e; }
-          .a-z-index-letter-list ul li a.a-z-index-letter-list__active:after, .a-z-index-letter-list ul li a:hover:after,
+          .a-z-index-letter-list ul li a.a-z-index-letter-list__active:after, .a-z-index-letter-list ul li a:hover:after, .a-z-index-letter-list ul li a:focus:after, .a-z-index-letter-list ul li a.selected:after,
           .a-z-index-letter-list ul li span.a-z-index-letter-list__active:after,
-          .a-z-index-letter-list ul li span:hover:after {
+          .a-z-index-letter-list ul li span:hover:after,
+          .a-z-index-letter-list ul li span:focus:after,
+          .a-z-index-letter-list ul li span.selected:after, .a-z-index-letter-list ul .facetwp-alpha a.a-z-index-letter-list__active:after, .a-z-index-letter-list ul .facetwp-alpha a:hover:after, .a-z-index-letter-list ul .facetwp-alpha a:focus:after, .a-z-index-letter-list ul .facetwp-alpha a.selected:after,
+          .a-z-index-letter-list ul .facetwp-alpha span.a-z-index-letter-list__active:after,
+          .a-z-index-letter-list ul .facetwp-alpha span:hover:after,
+          .a-z-index-letter-list ul .facetwp-alpha span:focus:after,
+          .a-z-index-letter-list ul .facetwp-alpha span.selected:after, .a-z-index-letter-list .facetwp-facet li a.a-z-index-letter-list__active:after, .a-z-index-letter-list .facetwp-facet li a:hover:after, .a-z-index-letter-list .facetwp-facet li a:focus:after, .a-z-index-letter-list .facetwp-facet li a.selected:after,
+          .a-z-index-letter-list .facetwp-facet li span.a-z-index-letter-list__active:after,
+          .a-z-index-letter-list .facetwp-facet li span:hover:after,
+          .a-z-index-letter-list .facetwp-facet li span:focus:after,
+          .a-z-index-letter-list .facetwp-facet li span.selected:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.a-z-index-letter-list__active:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:hover:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:focus:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.selected:after,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha span.a-z-index-letter-list__active:after,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:hover:after,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:focus:after,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha span.selected:after {
             opacity: 1; }
-      .a-z-index-letter-list ul li a {
+      .a-z-index-letter-list ul li a, .a-z-index-letter-list ul .facetwp-alpha a, .a-z-index-letter-list .facetwp-facet li a, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a {
         position: relative; }
-        .a-z-index-letter-list ul li a:after {
+        .a-z-index-letter-list ul li a:after, .a-z-index-letter-list ul .facetwp-alpha a:after, .a-z-index-letter-list .facetwp-facet li a:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:after {
           content: "";
           position: absolute;
           bottom: 0.1875rem;
@@ -12196,16 +12240,38 @@ a.grid-list__item {
           -webkit-transition: 0.2s opacity ease-in-out;
           transition: 0.2s opacity ease-in-out; }
           @media (min-width: 992px) {
-            .a-z-index-letter-list ul li a:after {
+            .a-z-index-letter-list ul li a:after, .a-z-index-letter-list ul .facetwp-alpha a:after, .a-z-index-letter-list .facetwp-facet li a:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:after {
               width: 2.375rem;
               margin-left: -1.1875rem;
               bottom: -0.3125rem; } }
-      .a-z-index-letter-list ul li span {
+      .a-z-index-letter-list ul li span, .a-z-index-letter-list ul .facetwp-alpha span, .a-z-index-letter-list .facetwp-facet li span, .a-z-index-letter-list .facetwp-facet .facetwp-alpha span {
         text-decoration: none;
         color: rgba(74, 74, 74, 0.5); }
-        .a-z-index-letter-list ul li span:hover {
+        .a-z-index-letter-list ul li span:hover, .a-z-index-letter-list ul .facetwp-alpha span:hover, .a-z-index-letter-list .facetwp-facet li span:hover, .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:hover {
           text-decoration: none;
           color: rgba(74, 74, 74, 0.5); }
+    .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
+      text-decoration: none;
+      color: #7c2529;
+      text-decoration: none;
+      font-family: "Nimbus Sans", sans-serif;
+      font-weight: 700;
+      font-size: 1.3125rem;
+      line-height: 1.90476;
+      -webkit-transition: 0.2 color ease-in-out;
+      transition: 0.2 color ease-in-out;
+      width: 2.75rem;
+      display: inline-block; }
+      @media (min-width: 992px) {
+        .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
+          font-size: 1.875rem;
+          line-height: 1.33333; } }
+      .a-z-index-letter-list ul .facetwp-alpha:hover, .a-z-index-letter-list ul .facetwp-alpha:focus, .a-z-index-letter-list ul .facetwp-alpha.selected, .a-z-index-letter-list .facetwp-facet .facetwp-alpha:hover, .a-z-index-letter-list .facetwp-facet .facetwp-alpha:focus, .a-z-index-letter-list .facetwp-facet .facetwp-alpha.selected {
+        color: #c8102e;
+        -webkit-text-decoration-color: #c8102e;
+                text-decoration-color: #c8102e; }
+        .a-z-index-letter-list ul .facetwp-alpha:hover:after, .a-z-index-letter-list ul .facetwp-alpha:focus:after, .a-z-index-letter-list ul .facetwp-alpha.selected:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha:hover:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha:focus:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha.selected:after {
+          opacity: 1; }
 
 .a-z-index-entry-list {
   padding: 1.4375rem 0 2.5rem; }
@@ -13200,10 +13266,19 @@ form.gsc-search-box {
   .faculty-staff-directory-header .filter-form-results,
   .paragraph-widget--filter-form .filter-form-results {
     color: #ffffff; }
-    .faculty-staff-directory-header .filter-form-results a,
-    .paragraph-widget--filter-form .filter-form-results a {
+    .faculty-staff-directory-header .filter-form-results a, .faculty-staff-directory-header .filter-form-results button,
+    .paragraph-widget--filter-form .filter-form-results a,
+    .paragraph-widget--filter-form .filter-form-results button {
       color: #ffffff;
       font-style: italic; }
+    .faculty-staff-directory-header .filter-form-results button,
+    .paragraph-widget--filter-form .filter-form-results button {
+      text-decoration: underline;
+      background-color: transparent;
+      border: none; }
+  .faculty-staff-directory-header .filter-form-results .facetwp-counts,
+  .paragraph-widget--filter-form .filter-form-results .facetwp-counts {
+    display: inline; }
 
 .iastate22-form.iastate22-form--inline {
   display: block; }
