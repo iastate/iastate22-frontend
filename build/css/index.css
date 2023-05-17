@@ -2950,10 +2950,9 @@ main {
     min-width: 15.5625rem;
     text-align: left; }
     .iastate22-card--linked-image .iastate22-card__cta .arrow {
-      -webkit-transform: translateX(0.8125rem);
-              transform: translateX(0.8125rem);
-      right: initial;
-      top: 49%;
+      inset: auto;
+      -webkit-transform: translate(0.8125rem, 0.8125rem);
+              transform: translate(0.8125rem, 0.8125rem);
       width: 0;
       background-color: #f1be48; }
       .iastate22-card--linked-image .iastate22-card__cta .arrow:after, .iastate22-card--linked-image .iastate22-card__cta .arrow:before {
@@ -12148,26 +12147,39 @@ a.grid-list__item {
       bottom: 0;
       pointer-events: none;
       z-index: -1; } }
-  .a-z-index-letter-list ul, .a-z-index-letter-list .facetwp-facet {
+  .a-z-index-letter-list ul,
+  .a-z-index-letter-list .facetwp-facet {
     display: -webkit-box;
     display: flex;
     flex-wrap: wrap; }
-    .a-z-index-letter-list ul li, .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet li, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
+    .a-z-index-letter-list ul li,
+    .a-z-index-letter-list ul .facetwp-alpha,
+    .a-z-index-letter-list .facetwp-facet li,
+    .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
       -webkit-box-flex: 0;
               flex: 0 1 auto;
       width: 14%;
       margin-bottom: 0.625rem;
       text-align: center; }
       @media (min-width: 576px) {
-        .a-z-index-letter-list ul li, .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet li, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
+        .a-z-index-letter-list ul li,
+        .a-z-index-letter-list ul .facetwp-alpha,
+        .a-z-index-letter-list .facetwp-facet li,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
           max-width: 2.75rem; } }
       @media (min-width: 1200px) {
-        .a-z-index-letter-list ul li, .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet li, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
+        .a-z-index-letter-list ul li,
+        .a-z-index-letter-list ul .facetwp-alpha,
+        .a-z-index-letter-list .facetwp-facet li,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
           margin-right: 0.3125rem; } }
       .a-z-index-letter-list ul li a,
-      .a-z-index-letter-list ul li span, .a-z-index-letter-list ul .facetwp-alpha a,
-      .a-z-index-letter-list ul .facetwp-alpha span, .a-z-index-letter-list .facetwp-facet li a,
-      .a-z-index-letter-list .facetwp-facet li span, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a,
+      .a-z-index-letter-list ul li span,
+      .a-z-index-letter-list ul .facetwp-alpha a,
+      .a-z-index-letter-list ul .facetwp-alpha span,
+      .a-z-index-letter-list .facetwp-facet li a,
+      .a-z-index-letter-list .facetwp-facet li span,
+      .a-z-index-letter-list .facetwp-facet .facetwp-alpha a,
       .a-z-index-letter-list .facetwp-facet .facetwp-alpha span {
         text-decoration: none;
         color: #7c2529;
@@ -12182,9 +12194,12 @@ a.grid-list__item {
         display: inline-block; }
         @media (min-width: 992px) {
           .a-z-index-letter-list ul li a,
-          .a-z-index-letter-list ul li span, .a-z-index-letter-list ul .facetwp-alpha a,
-          .a-z-index-letter-list ul .facetwp-alpha span, .a-z-index-letter-list .facetwp-facet li a,
-          .a-z-index-letter-list .facetwp-facet li span, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a,
+          .a-z-index-letter-list ul li span,
+          .a-z-index-letter-list ul .facetwp-alpha a,
+          .a-z-index-letter-list ul .facetwp-alpha span,
+          .a-z-index-letter-list .facetwp-facet li a,
+          .a-z-index-letter-list .facetwp-facet li span,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha a,
           .a-z-index-letter-list .facetwp-facet .facetwp-alpha span {
             font-size: 1.875rem;
             line-height: 1.33333; } }
@@ -12192,15 +12207,27 @@ a.grid-list__item {
         .a-z-index-letter-list ul li span.a-z-index-letter-list__active,
         .a-z-index-letter-list ul li span:hover,
         .a-z-index-letter-list ul li span:focus,
-        .a-z-index-letter-list ul li span.selected, .a-z-index-letter-list ul .facetwp-alpha a.a-z-index-letter-list__active, .a-z-index-letter-list ul .facetwp-alpha a:hover, .a-z-index-letter-list ul .facetwp-alpha a:focus, .a-z-index-letter-list ul .facetwp-alpha a.selected,
+        .a-z-index-letter-list ul li span.selected,
+        .a-z-index-letter-list ul .facetwp-alpha a.a-z-index-letter-list__active,
+        .a-z-index-letter-list ul .facetwp-alpha a:hover,
+        .a-z-index-letter-list ul .facetwp-alpha a:focus,
+        .a-z-index-letter-list ul .facetwp-alpha a.selected,
         .a-z-index-letter-list ul .facetwp-alpha span.a-z-index-letter-list__active,
         .a-z-index-letter-list ul .facetwp-alpha span:hover,
         .a-z-index-letter-list ul .facetwp-alpha span:focus,
-        .a-z-index-letter-list ul .facetwp-alpha span.selected, .a-z-index-letter-list .facetwp-facet li a.a-z-index-letter-list__active, .a-z-index-letter-list .facetwp-facet li a:hover, .a-z-index-letter-list .facetwp-facet li a:focus, .a-z-index-letter-list .facetwp-facet li a.selected,
+        .a-z-index-letter-list ul .facetwp-alpha span.selected,
+        .a-z-index-letter-list .facetwp-facet li a.a-z-index-letter-list__active,
+        .a-z-index-letter-list .facetwp-facet li a:hover,
+        .a-z-index-letter-list .facetwp-facet li a:focus,
+        .a-z-index-letter-list .facetwp-facet li a.selected,
         .a-z-index-letter-list .facetwp-facet li span.a-z-index-letter-list__active,
         .a-z-index-letter-list .facetwp-facet li span:hover,
         .a-z-index-letter-list .facetwp-facet li span:focus,
-        .a-z-index-letter-list .facetwp-facet li span.selected, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.a-z-index-letter-list__active, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:hover, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:focus, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.selected,
+        .a-z-index-letter-list .facetwp-facet li span.selected,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.a-z-index-letter-list__active,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:hover,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:focus,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.selected,
         .a-z-index-letter-list .facetwp-facet .facetwp-alpha span.a-z-index-letter-list__active,
         .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:hover,
         .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:focus,
@@ -12212,23 +12239,41 @@ a.grid-list__item {
           .a-z-index-letter-list ul li span.a-z-index-letter-list__active:after,
           .a-z-index-letter-list ul li span:hover:after,
           .a-z-index-letter-list ul li span:focus:after,
-          .a-z-index-letter-list ul li span.selected:after, .a-z-index-letter-list ul .facetwp-alpha a.a-z-index-letter-list__active:after, .a-z-index-letter-list ul .facetwp-alpha a:hover:after, .a-z-index-letter-list ul .facetwp-alpha a:focus:after, .a-z-index-letter-list ul .facetwp-alpha a.selected:after,
+          .a-z-index-letter-list ul li span.selected:after,
+          .a-z-index-letter-list ul .facetwp-alpha a.a-z-index-letter-list__active:after,
+          .a-z-index-letter-list ul .facetwp-alpha a:hover:after,
+          .a-z-index-letter-list ul .facetwp-alpha a:focus:after,
+          .a-z-index-letter-list ul .facetwp-alpha a.selected:after,
           .a-z-index-letter-list ul .facetwp-alpha span.a-z-index-letter-list__active:after,
           .a-z-index-letter-list ul .facetwp-alpha span:hover:after,
           .a-z-index-letter-list ul .facetwp-alpha span:focus:after,
-          .a-z-index-letter-list ul .facetwp-alpha span.selected:after, .a-z-index-letter-list .facetwp-facet li a.a-z-index-letter-list__active:after, .a-z-index-letter-list .facetwp-facet li a:hover:after, .a-z-index-letter-list .facetwp-facet li a:focus:after, .a-z-index-letter-list .facetwp-facet li a.selected:after,
+          .a-z-index-letter-list ul .facetwp-alpha span.selected:after,
+          .a-z-index-letter-list .facetwp-facet li a.a-z-index-letter-list__active:after,
+          .a-z-index-letter-list .facetwp-facet li a:hover:after,
+          .a-z-index-letter-list .facetwp-facet li a:focus:after,
+          .a-z-index-letter-list .facetwp-facet li a.selected:after,
           .a-z-index-letter-list .facetwp-facet li span.a-z-index-letter-list__active:after,
           .a-z-index-letter-list .facetwp-facet li span:hover:after,
           .a-z-index-letter-list .facetwp-facet li span:focus:after,
-          .a-z-index-letter-list .facetwp-facet li span.selected:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.a-z-index-letter-list__active:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:hover:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:focus:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.selected:after,
+          .a-z-index-letter-list .facetwp-facet li span.selected:after,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.a-z-index-letter-list__active:after,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:hover:after,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:focus:after,
+          .a-z-index-letter-list .facetwp-facet .facetwp-alpha a.selected:after,
           .a-z-index-letter-list .facetwp-facet .facetwp-alpha span.a-z-index-letter-list__active:after,
           .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:hover:after,
           .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:focus:after,
           .a-z-index-letter-list .facetwp-facet .facetwp-alpha span.selected:after {
             opacity: 1; }
-      .a-z-index-letter-list ul li a, .a-z-index-letter-list ul .facetwp-alpha a, .a-z-index-letter-list .facetwp-facet li a, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a {
+      .a-z-index-letter-list ul li a,
+      .a-z-index-letter-list ul .facetwp-alpha a,
+      .a-z-index-letter-list .facetwp-facet li a,
+      .a-z-index-letter-list .facetwp-facet .facetwp-alpha a {
         position: relative; }
-        .a-z-index-letter-list ul li a:after, .a-z-index-letter-list ul .facetwp-alpha a:after, .a-z-index-letter-list .facetwp-facet li a:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:after {
+        .a-z-index-letter-list ul li a:after,
+        .a-z-index-letter-list ul .facetwp-alpha a:after,
+        .a-z-index-letter-list .facetwp-facet li a:after,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:after {
           content: "";
           position: absolute;
           bottom: 0.1875rem;
@@ -12240,17 +12285,27 @@ a.grid-list__item {
           -webkit-transition: 0.2s opacity ease-in-out;
           transition: 0.2s opacity ease-in-out; }
           @media (min-width: 992px) {
-            .a-z-index-letter-list ul li a:after, .a-z-index-letter-list ul .facetwp-alpha a:after, .a-z-index-letter-list .facetwp-facet li a:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:after {
+            .a-z-index-letter-list ul li a:after,
+            .a-z-index-letter-list ul .facetwp-alpha a:after,
+            .a-z-index-letter-list .facetwp-facet li a:after,
+            .a-z-index-letter-list .facetwp-facet .facetwp-alpha a:after {
               width: 2.375rem;
               margin-left: -1.1875rem;
               bottom: -0.3125rem; } }
-      .a-z-index-letter-list ul li span, .a-z-index-letter-list ul .facetwp-alpha span, .a-z-index-letter-list .facetwp-facet li span, .a-z-index-letter-list .facetwp-facet .facetwp-alpha span {
+      .a-z-index-letter-list ul li span,
+      .a-z-index-letter-list ul .facetwp-alpha span,
+      .a-z-index-letter-list .facetwp-facet li span,
+      .a-z-index-letter-list .facetwp-facet .facetwp-alpha span {
         text-decoration: none;
         color: rgba(74, 74, 74, 0.5); }
-        .a-z-index-letter-list ul li span:hover, .a-z-index-letter-list ul .facetwp-alpha span:hover, .a-z-index-letter-list .facetwp-facet li span:hover, .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:hover {
+        .a-z-index-letter-list ul li span:hover,
+        .a-z-index-letter-list ul .facetwp-alpha span:hover,
+        .a-z-index-letter-list .facetwp-facet li span:hover,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha span:hover {
           text-decoration: none;
           color: rgba(74, 74, 74, 0.5); }
-    .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
+    .a-z-index-letter-list ul .facetwp-alpha,
+    .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
       text-decoration: none;
       color: #7c2529;
       text-decoration: none;
@@ -12263,14 +12318,21 @@ a.grid-list__item {
       width: 2.75rem;
       display: inline-block; }
       @media (min-width: 992px) {
-        .a-z-index-letter-list ul .facetwp-alpha, .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
+        .a-z-index-letter-list ul .facetwp-alpha,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha {
           font-size: 1.875rem;
           line-height: 1.33333; } }
-      .a-z-index-letter-list ul .facetwp-alpha:hover, .a-z-index-letter-list ul .facetwp-alpha:focus, .a-z-index-letter-list ul .facetwp-alpha.selected, .a-z-index-letter-list .facetwp-facet .facetwp-alpha:hover, .a-z-index-letter-list .facetwp-facet .facetwp-alpha:focus, .a-z-index-letter-list .facetwp-facet .facetwp-alpha.selected {
+      .a-z-index-letter-list ul .facetwp-alpha:hover, .a-z-index-letter-list ul .facetwp-alpha:focus, .a-z-index-letter-list ul .facetwp-alpha.selected,
+      .a-z-index-letter-list .facetwp-facet .facetwp-alpha:hover,
+      .a-z-index-letter-list .facetwp-facet .facetwp-alpha:focus,
+      .a-z-index-letter-list .facetwp-facet .facetwp-alpha.selected {
         color: #c8102e;
         -webkit-text-decoration-color: #c8102e;
                 text-decoration-color: #c8102e; }
-        .a-z-index-letter-list ul .facetwp-alpha:hover:after, .a-z-index-letter-list ul .facetwp-alpha:focus:after, .a-z-index-letter-list ul .facetwp-alpha.selected:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha:hover:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha:focus:after, .a-z-index-letter-list .facetwp-facet .facetwp-alpha.selected:after {
+        .a-z-index-letter-list ul .facetwp-alpha:hover:after, .a-z-index-letter-list ul .facetwp-alpha:focus:after, .a-z-index-letter-list ul .facetwp-alpha.selected:after,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha:hover:after,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha:focus:after,
+        .a-z-index-letter-list .facetwp-facet .facetwp-alpha.selected:after {
           opacity: 1; }
 
 .a-z-index-entry-list {
@@ -13266,7 +13328,8 @@ form.gsc-search-box {
   .faculty-staff-directory-header .filter-form-results,
   .paragraph-widget--filter-form .filter-form-results {
     color: #ffffff; }
-    .faculty-staff-directory-header .filter-form-results a, .faculty-staff-directory-header .filter-form-results button,
+    .faculty-staff-directory-header .filter-form-results a,
+    .faculty-staff-directory-header .filter-form-results button,
     .paragraph-widget--filter-form .filter-form-results a,
     .paragraph-widget--filter-form .filter-form-results button {
       color: #ffffff;
