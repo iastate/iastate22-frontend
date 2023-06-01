@@ -15625,7 +15625,8 @@
       b = i(n(521)),
       _ = i(n(155)),
       w = i(n(522)),
-      E = i(n(523));
+      E = i(n(523)),
+      A = i(n(525));
     r.default(document),
       o.default(),
       _.default.init(),
@@ -15644,7 +15645,8 @@
       v.default(),
       w.default(),
       f.default(),
-      E.default();
+      E.default(),
+      A.default();
   },
   function(e, t, n) {
     n(218),
@@ -24748,7 +24750,7 @@
   },
   function(e, t, n) {
     "use strict";
-    Object.defineProperty(t, "__esModule", { value: !0 }), (t.IAStateAccordion = void 0), n(525);
+    Object.defineProperty(t, "__esModule", { value: !0 }), (t.IAStateAccordion = void 0), n(526);
     var i = (function() {
       function e(e) {
         e &&
@@ -27453,8 +27455,8 @@
     Object.defineProperty(t, "__esModule", { value: !0 }), (t.EventCalendar = void 0);
     var r = n(57),
       o = i(n(524)),
-      s = i(n(526)),
-      a = i(n(527)),
+      s = i(n(527)),
+      a = i(n(528)),
       l = n(57),
       c = window.matchMedia("(max-width: 990px)"),
       u = (function() {
@@ -27466,6 +27468,11 @@
             (this.listButton = this.calendarHeader.querySelector(".calendar__views #list-btn")),
             (this.monthButton = this.calendarHeader.querySelector(".calendar__views #month-btn")),
             (this.desktopView = "dayGridMonth"),
+            (this.calendarSearch = this.element.querySelector(".calendar__search form #event-search")),
+            (this.calendarCategories = this.element.querySelector(".calendar__categories #event-categories")),
+            (this.calendarSearchButton = this.element.querySelector(".calendar__search form button[type=submit]")),
+            (this.featuredCheck = this.element.querySelector(".calendar__categories-toggle #featured-events")),
+            (this.searchTerms = ["", ""]),
             this.init());
         }
         return (
@@ -27502,61 +27509,114 @@
               viewDidMount: function(e) {},
             })),
               this.calendar.render(),
-              this.calendar.addEvent({
-                title: "March 9th Event",
-                start: "2023-03-09 15:00",
-                resourceId: "1",
-                location: "University Library front lobby",
-                interactive: !0,
-              }),
-              this.calendar.addEvent({
-                title: "March 16 Event",
-                start: "2023-03-16",
-                resourceId: "2",
-                location: "Memorial Union Art Gallery",
-                interactive: !0,
-                url: "https://idfive.com",
-              }),
-              this.calendar.addEvent({
-                title: "April 12 Event",
-                start: "2023-04-12 20:30",
-                resourceId: "3",
-                url: "https://idfive.com",
-                location: "Parts Unknown",
-                interactive: !0,
-              }),
-              this.calendar.addEvent({
-                title: "Orioles Tickets!",
-                resourceId: "4",
-                start: "2023-05-19",
-                location: "Oriole Park at Camden Yards",
-                interactive: !0,
-              }),
-              this.calendar.addEvent({
-                title: "Aquarium Tickets!",
-                resourceId: "4",
-                start: "2023-05-19 16:00",
-                location: "Baltimore Aquarium",
-                interactive: !0,
-              }),
-              this.calendar.addEvent({
-                title: "Floating Holiday",
-                start: "2023-05-21",
-                resourceId: "5",
-                description: "I've got a day off! I've got a day off!",
-                location: "Unknown",
-                interactive: !0,
-              }),
+              (this.pageUrl = window.location.protocol + "//" + window.location.host),
+              (this.apiRoot = "/wp-json/wp/v2/"),
+              window.location.host.startsWith("localhost") &&
+                (this.pageUrl = window.location.protocol + "//isu-wp-composer.lndo.site"),
+              console.log(this.pageUrl + this.apiRoot + "events"),
+              fetch(this.pageUrl + this.apiRoot + "events")
+                .then(function(e) {
+                  return e.json();
+                })
+                .then(function(t) {
+                  return e.initCalendar(t);
+                })
+                .catch(function(e) {
+                  return console.log(e);
+                }),
               this.listButton.addEventListener("click", function(t) {
                 e.changeCalendar(t.target, "listWeek");
               }),
               this.monthButton.addEventListener("click", function(t) {
                 e.changeCalendar(t.target, "dayGridMonth");
               }),
+              this.calendarSearchButton.addEventListener("click", function(t) {
+                e.runSearch(t);
+              }),
+              this.calendarCategories.addEventListener("change", function(t) {
+                e.runSearch(t);
+              }),
+              this.featuredCheck.addEventListener("change", function(t) {
+                e.runSearch(t);
+              }),
               window.addEventListener("resize", function() {
                 e.breakpointCheck();
               }),
               this.breakpointCheck();
+          }),
+          (e.prototype.initCalendar = function(e) {
+            var t = this;
+            e.forEach(function(e, n) {
+              !0 === t.featuredCheck.checked && !0 === e.acf.featured
+                ? t.addItem(e)
+                : !1 === t.featuredCheck.checked && t.addItem(e);
+            });
+          }),
+          (e.prototype.addItem = function(e) {
+            var t,
+              n = this;
+            e.featured_media &&
+              fetch(this.pageUrl + this.apiRoot + "media/" + e.featured_media)
+                .then(function(e) {
+                  return e.json();
+                })
+                .then(function(e) {
+                  t = e;
+                })
+                .catch(function(e) {
+                  return console.log(e);
+                }),
+              fetch(this.pageUrl + this.apiRoot + "locations/" + e.acf.location)
+                .then(function(e) {
+                  return e.json();
+                })
+                .then(function(i) {
+                  return n.aggregateEntry(e, i.name, t);
+                })
+                .catch(function(e) {
+                  return console.log(e);
+                });
+          }),
+          (e.prototype.aggregateEntry = function(e, t, n) {
+            var i = void 0 !== n ? n.media_details.sizes.medium.source_url : void 0;
+            console.log(i),
+              this.calendar.addEvent({
+                title: e.title.rendered,
+                start: e.acf.event_date,
+                resourceId: e.id,
+                description: e.excerpt.rendered,
+                location: t,
+                interactive: !0,
+                url: e.link,
+                thumbnail: i,
+              });
+          }),
+          (e.prototype.runSearch = function(e) {
+            var t = this;
+            e.preventDefault();
+            var n = "";
+            (this.searchTerms[0] = this.calendarSearch.value),
+              (this.searchTerms[1] = this.calendarCategories.value),
+              "" !== this.searchTerms[0]
+                ? (n += "?search=" + this.searchTerms[0])
+                : "" !== this.searchTerms[1] &&
+                  ("" !== this.searchTerms[0]
+                    ? (n += "&locations=" + this.searchTerms[1])
+                    : (n += "?locations=" + this.searchTerms[1])),
+              this.calendar.removeAllEvents(),
+              fetch(this.pageUrl + this.apiRoot + "events" + n)
+                .then(function(e) {
+                  return e.json();
+                })
+                .then(function(e) {
+                  return t.initCalendar(e);
+                })
+                .catch(function(e) {
+                  return console.log(e);
+                }),
+              this.listButton.addEventListener("click", function(e) {
+                t.changeCalendar(e.target, "listWeek");
+              });
           }),
           (e.prototype.breakpointCheck = function() {
             c.matches
@@ -27574,8 +27634,11 @@
             var t = document.createElement("div"),
               n = document.createElement("div");
             t.classList.add("event-listing"),
-              (t.innerHTML +=
-                "<div class='event-listing__image'><img src='http://placekitten.com/200/300' alt='placekitteh'/></div>"),
+              void 0 !== e.event.extendedProps.thumbnail &&
+                (t.innerHTML +=
+                  "<div class='event-listing__image'><img src='" +
+                  e.event.extendedProps.thumbnail +
+                  "' alt='alt'/></div>"),
               (t.innerHTML += "<div class='event-listing__content'></div>");
             var i = t.querySelector(".event-listing__content");
             e.event.url
@@ -27640,6 +27703,62 @@
           dayGridMonth: { type: "dayGrid", duration: { months: 1 }, fixedWeekCount: !0 },
           dayGridYear: { type: "dayGrid", duration: { years: 1 } },
         },
+      });
+  },
+  function(e, t, n) {
+    "use strict";
+    Object.defineProperty(t, "__esModule", { value: !0 }), (t.Search = void 0);
+    var i = (function() {
+      function e(e) {
+        e &&
+          ((this.element = e),
+          (this.form = this.element),
+          (this.activeLetter = this.element.querySelector("input[name=search_letter]")),
+          (this.alphaBar = document.querySelector(".a-z-index-letter-list")),
+          (this.resetButton = this.element.parentElement.querySelector(".filter-form-results button[type=reset]")),
+          this.init());
+      }
+      return (
+        (e.prototype.init = function() {
+          var e = this;
+          this.alphaBar &&
+            ((this.letterButtons = this.alphaBar.querySelectorAll("a")),
+            this.letterButtons.forEach(function(t, n) {
+              t.addEventListener("click", function(t) {
+                e.searchLetter(t);
+              });
+            })),
+            this.resetButton &&
+              this.resetButton.addEventListener("click", function(t) {
+                e.reset(t);
+              });
+        }),
+        (e.prototype.searchLetter = function(e) {
+          e.preventDefault(), this.activeLetter.setAttribute("value", e.target.textContent), this.form.submit();
+        }),
+        (e.prototype.reset = function(e) {
+          e.preventDefault();
+          var t = this.element.querySelector("input#s"),
+            n = this.element.querySelectorAll("select");
+          t.setAttribute("value", ""),
+            this.activeLetter && this.activeLetter.setAttribute("value", ""),
+            n.forEach(function(e, t) {
+              e.querySelectorAll("option").forEach(function(e, t) {
+                e.removeAttribute("selected");
+              }),
+                (e.value = ""),
+                (e.selectedIndex = 0);
+            }),
+            this.form.reset(),
+            this.form.submit();
+        }),
+        e
+      );
+    })();
+    (t.Search = i),
+      (t.default = function() {
+        var e = document.querySelector("#searchform");
+        new i(e);
       });
   },
   function(e, t, n) {
@@ -28970,7 +29089,7 @@
         !e ||
         e.nodeType !== Node.ELEMENT_NODE ||
         !!e.classList.contains("disabled") ||
-        (void 0 !== e.disabled ? e.disabled : e.hasAttribute("disabled") && "false" !== e.getAttribute("disabled")),
+          (void 0 !== e.disabled ? e.disabled : e.hasAttribute("disabled") && "false" !== e.getAttribute("disabled")),
       We = (e) => {
         if (!document.documentElement.attachShadow) return null;
         if ("function" == typeof e.getRootNode) {
