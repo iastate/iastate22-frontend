@@ -275,17 +275,25 @@ export class EventCalendar {
     } else {
       contentBlock.innerHTML += "<h4 class='event-listing__title'>" + arg.event.title + "</h4>";
     }
-    if (arg.event.allDay !== true) {
-      contentBlock.innerHTML +=
-        "<time datetime ='" +
-        arg.event.startStr +
-        "' class='event-listing__date'><div class='event-listing__full-date'>" +
-        this.buildDate(arg.event.startStr) +
-        "</div><div class='event-listing__time'>" +
-        this.buildTime(arg.event.startStr);
+    contentBlock.innerHTML +=
+      "<time datetime ='" +
+      arg.event.startStr +
+      "' class='event-listing__date'><div class='event-listing__full-date'>" +
+      this.buildDate(arg.event.startStr) +
+      "</div>";
 
-      contentBlock.innerHTML += "</div></time>";
+    if (arg.event.allDay !== true) {
+      let timeString: string;
+      if (arg.event.endStr !== "") {
+        timeString = this.buildTime(arg.event.startStr) + " to " + this.buildTime(arg.event.endStr);
+      } else {
+        timeString = this.buildTime(arg.event.startStr);
+      }
+      contentBlock.querySelector("time").innerHTML +=
+        "<div class='event-listing__time'>" + timeString + "</div></time>";
     }
+    contentBlock.innerHTML += "</time>";
+
     if (arg.event.extendedProps.location) {
       contentBlock.innerHTML += "<div class='event-listing__location'>" + arg.event.extendedProps.location + "</div>";
     }

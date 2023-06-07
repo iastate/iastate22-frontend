@@ -9090,7 +9090,8 @@ a.grid-list__item {
 .fc .fc-daygrid-event-harness-abs {
   background: #7c2529;
   padding-left: 10px; }
-  .fc .fc-daygrid-event-harness-abs .fc-event-time, .fc .fc-daygrid-event-harness-abs .fc-event-title {
+  .fc .fc-daygrid-event-harness-abs .fc-event-time,
+  .fc .fc-daygrid-event-harness-abs .fc-event-title {
     color: #ffffff; }
 
 .fc .fc-daygrid-day-number {
