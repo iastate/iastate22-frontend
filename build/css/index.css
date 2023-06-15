@@ -3619,6 +3619,12 @@ main {
     margin-right: 30px;
     margin-bottom: 20px; }
 
+.event-details__text-label {
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  color: #7c2529;
+  font-weight: 700; }
+
 @media (min-width: 992px) {
   .paragraph-widget--feature-with-large-image {
     margin-top: 7.5rem; } }
