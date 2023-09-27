@@ -7983,11 +7983,20 @@ html:not(.js) .nojs-close-menu {
   display: flex;
   -webkit-box-align: center;
           align-items: center;
-  max-width: 32.125rem;
-  position: relative;
-  z-index: 1;
+  max-width: 2000px;
+  width: 100vw;
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   margin-left: auto;
-  margin-top: -2.25rem; }
+  margin-top: 0;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  transition: -webkit-transform .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+  transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out; }
   @media (min-width: 576px) {
     .home-announcement {
       padding-left: 1.25rem; } }
