@@ -1,4 +1,7 @@
 {% extends "@page" %}
+{% block header %}
+  {% include "@site-header--alert" %}
+{% endblock %}
 
 {% block content %}
 <script>
@@ -22,10 +25,6 @@
     {% include "@button--reverse" with hero.button %}
   </div>
 </div>
-
-{% if home_announcement_alert %}
-  {% include "@home-announcement--alert" with home_announcement_alert %}
-{% endif %}
 
 <div class="home-community">
   <div class="home-community__content-wrap">
