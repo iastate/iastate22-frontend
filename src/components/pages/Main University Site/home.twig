@@ -169,7 +169,7 @@
 
 </div>
 
-<div class="home-social">
+{# <div class="home-social">
   <div class="home-social__headline-icons-wrap">
     <h2 class="home-social__headline">{{ social.headline }}</h2>
     <ul class="home-social__social-links">
@@ -210,7 +210,8 @@
       <img src="{{ social.images.three|path }}" alt="" width="301" height="301" />
     </div>
   </div>
-</div>
+</div> #}
+{% include "@home-social" with social %}
 
 <div class="home-resources">
   <h2 class="home-resources__headline">{{ resources.headline }}</h2>
