@@ -1,59 +1,9 @@
-.itswd-section.itswd-section-full-width {
-  margin-left: -2.25rem;
-  margin-right: -2.25rem;
-}
-
-.itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-constrained {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-}
-
-.itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-full-width {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-}
-
-@media (min-width: 768px) {
-  .itswd-section.itswd-section-full-width {
-    margin-left: -4.375rem;
-    margin-right: -4.375rem;
-  }
-
-  .itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-constrained {
-    padding-left: 4.375rem;
-    padding-right: 4.375rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .itswd-section.itswd-section-full-width {
-    margin-left: -11.875rem;
-    margin-right: -18.625rem;
-  }
-
-  .itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-constrained {
-    padding-left: 11.875rem;
-    padding-right: 18.625rem;
-  }
-}
-
-@media (min-width: 100rem) {
-  .itswd-section.itswd-section-full-width {
-    margin-left: calc(-11.875rem - ((100vw - 100rem) / 2));
-    margin-right: calc(-18.625rem - ((100vw - 100rem) / 2));
-  }
-
-  .itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-constrained {
-    padding-left: calc(11.875rem + ((100vw - 100rem) / 2));
-    padding-right: calc(18.625rem + ((100vw - 100rem) / 2));
-  }
-}
 // home social section
-.home-social--gray {
+.home-social-follow {
   margin-top: rem(90);
   background-color: $off-white;
   @extend %outer-pad-x;
-  @extend %full-width-component;
+  // @extend %full-width-component;
   display: flex;
   flex-direction: column-reverse;
   position: relative;
@@ -83,7 +33,7 @@
   }
 }
 
-.home-social--gray__headline-icons-wrap {
+.home-social-follow__headline-icons-wrap {
   margin: rem(40) 0 rem(26);
   @include media-breakpoint-up(xl) {
     flex: 0 1 auto;
@@ -97,7 +47,7 @@
   }
 }
 
-.home-social--gray__headline {
+.home-social-follow__headline {
   color: $iastate-red;
   width: 80%;
   padding: 0;
@@ -111,7 +61,7 @@
   }
 }
 
-.home-social--gray__social-links {
+.home-social-follow__social-links {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -149,7 +99,7 @@
   }
 }
 
-.home-social--gray__images-wrap {
+.home-social-follow__images-wrap {
   position: relative;
   @include media-breakpoint-up(md) {
     display: flex;
@@ -199,7 +149,7 @@
   }
 }
 
-.home-social--gray__images-image {
+.home-social-follow__images-image {
   @extend %responsive-img;
   box-shadow: 0 rem(13) rem(16) rgba($black, 0.2);
   position: relative;

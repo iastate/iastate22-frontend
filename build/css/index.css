@@ -1925,17 +1925,17 @@ textarea.form-control-lg {
       -webkit-transform: translateX(-100%);
               transform: translateX(-100%); }
 
-.outer-pad, .filter-form, .full-width-image__caption, .iastate22-blockquote, .home-social, .home-social--gray, .home-hero__content-wrapper, .home-academics, .home-solutions, .home-events-news, .home-resources, .home-ctas, .admission-aid-explore, .admission-aid-why, .admission-aid-afford, .admission-aid-connect, .maj-min-cert-explore, .maj-min-cert-program-search, .college-overview, .college-ctas__cta,
+.outer-pad, .filter-form, .full-width-image__caption, .iastate22-blockquote, .home-social, .home-social-follow, .home-hero__content-wrapper, .home-academics, .home-solutions, .home-events-news, .home-resources, .home-ctas, .admission-aid-explore, .admission-aid-why, .admission-aid-afford, .admission-aid-connect, .maj-min-cert-explore, .maj-min-cert-program-search, .college-overview, .college-ctas__cta,
 .outer-pad-x {
   padding-left: 2.25rem;
   padding-right: 2.25rem; }
   @media (min-width: 768px) {
-    .outer-pad, .filter-form, .full-width-image__caption, .iastate22-blockquote, .home-social, .home-social--gray, .home-hero__content-wrapper, .home-academics, .home-solutions, .home-events-news, .home-resources, .home-ctas, .admission-aid-explore, .admission-aid-why, .admission-aid-afford, .admission-aid-connect, .maj-min-cert-explore, .maj-min-cert-program-search, .college-overview, .college-ctas__cta,
+    .outer-pad, .filter-form, .full-width-image__caption, .iastate22-blockquote, .home-social, .home-social-follow, .home-hero__content-wrapper, .home-academics, .home-solutions, .home-events-news, .home-resources, .home-ctas, .admission-aid-explore, .admission-aid-why, .admission-aid-afford, .admission-aid-connect, .maj-min-cert-explore, .maj-min-cert-program-search, .college-overview, .college-ctas__cta,
     .outer-pad-x {
       padding-left: 4.375rem;
       padding-right: 4.375rem; } }
   @media (min-width: 1200px) {
-    .outer-pad, .filter-form, .full-width-image__caption, .iastate22-blockquote, .home-social, .home-social--gray, .home-hero__content-wrapper, .home-academics, .home-solutions, .home-events-news, .home-resources, .home-ctas, .admission-aid-explore, .admission-aid-why, .admission-aid-afford, .admission-aid-connect, .maj-min-cert-explore, .maj-min-cert-program-search, .college-overview, .college-ctas__cta,
+    .outer-pad, .filter-form, .full-width-image__caption, .iastate22-blockquote, .home-social, .home-social-follow, .home-hero__content-wrapper, .home-academics, .home-solutions, .home-events-news, .home-resources, .home-ctas, .admission-aid-explore, .admission-aid-why, .admission-aid-afford, .admission-aid-connect, .maj-min-cert-explore, .maj-min-cert-program-search, .college-overview, .college-ctas__cta,
     .outer-pad-x {
       padding-left: 11.875rem;
       padding-right: 18.625rem; } }
@@ -1945,30 +1945,30 @@ textarea.form-control-lg {
     margin-right: -6.75rem; } }
 
 .paragraph-widget--feature-with-large-image, .paragraph-widget--callout-inset, .paragraph-widget--full-width-image, .paragraph-widget--call-to-action--small,
-.paragraph-widget--call-to-action--large, .paragraph-widget--blockquote, .home-social--gray, .home .feature-with-large-image {
+.paragraph-widget--call-to-action--large, .paragraph-widget--blockquote, .home .feature-with-large-image {
   margin-left: -2.25rem;
   margin-right: -2.25rem; }
   @media (min-width: 768px) {
     .paragraph-widget--feature-with-large-image, .paragraph-widget--callout-inset, .paragraph-widget--full-width-image, .paragraph-widget--call-to-action--small,
-    .paragraph-widget--call-to-action--large, .paragraph-widget--blockquote, .home-social--gray, .home .feature-with-large-image {
+    .paragraph-widget--call-to-action--large, .paragraph-widget--blockquote, .home .feature-with-large-image {
       margin-left: -4.375rem;
       margin-right: -4.375rem; } }
   @media (min-width: 1200px) {
     .paragraph-widget--feature-with-large-image, .paragraph-widget--callout-inset, .paragraph-widget--full-width-image, .paragraph-widget--call-to-action--small,
-    .paragraph-widget--call-to-action--large, .paragraph-widget--blockquote, .home-social--gray, .home .feature-with-large-image {
+    .paragraph-widget--call-to-action--large, .paragraph-widget--blockquote, .home .feature-with-large-image {
       margin-left: -11.875rem;
       margin-right: -18.625rem; } }
 
 .iastate22-card__media, .hero__media, .hero--news-article__media,
-.hero--event-detail__media, .feature-with-large-image__media, .iastate22-callout__media, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container, .external-news-story__media, .video-embed__media-wrap, .full-width-image__image, .call-to-action--large .call-to-action__media, .image-grid__image, .iastate22-blockquote__portrait, .iastate22-modal__media, .callout-with-image__media, .ecosystem-home-hero__media, .personal-profile-info-card__media, .grid-list__image, .faculty-staff-card__media-container, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container, .home-social__images-image, .home-social--gray__images-image, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container, .home-hero__media, .home-community__callout-media, .home-community__callout-media-two, .home-location__media, .home-news-events-grid__image, .home-resources__image, .home-ctas__image, .home-full-width-campus-photo, .admission-aid-hero__media, .admission-aid-why__callout-media, .college-hero__media, .college-overview__media, .college-maj-min-certs__media, .college-ctas__cta-media,
+.hero--event-detail__media, .feature-with-large-image__media, .iastate22-callout__media, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container, .external-news-story__media, .video-embed__media-wrap, .full-width-image__image, .call-to-action--large .call-to-action__media, .image-grid__image, .iastate22-blockquote__portrait, .iastate22-modal__media, .callout-with-image__media, .ecosystem-home-hero__media, .personal-profile-info-card__media, .grid-list__image, .faculty-staff-card__media-container, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container, .home-social__images-image, .home-social-follow__images-image, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container, .home-hero__media, .home-community__callout-media, .home-community__callout-media-two, .home-location__media, .home-news-events-grid__image, .home-resources__image, .home-ctas__image, .home-full-width-campus-photo, .admission-aid-hero__media, .admission-aid-why__callout-media, .college-hero__media, .college-overview__media, .college-maj-min-certs__media, .college-ctas__cta-media,
 .responsive-img {
   position: relative; }
   .iastate22-card__media:before, .hero__media:before, .hero--news-article__media:before,
-  .hero--event-detail__media:before, .feature-with-large-image__media:before, .iastate22-callout__media:before, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container:before, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container:before, .external-news-story__media:before, .video-embed__media-wrap:before, .full-width-image__image:before, .call-to-action--large .call-to-action__media:before, .image-grid__image:before, .iastate22-blockquote__portrait:before, .iastate22-modal__media:before, .callout-with-image__media:before, .ecosystem-home-hero__media:before, .personal-profile-info-card__media:before, .grid-list__image:before, .faculty-staff-card__media-container:before, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container:before, .home-social__images-image:before, .home-social--gray__images-image:before, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container:before, .home-hero__media:before, .home-community__callout-media:before, .home-community__callout-media-two:before, .home-location__media:before, .home-news-events-grid__image:before, .home-resources__image:before, .home-ctas__image:before, .home-full-width-campus-photo:before, .admission-aid-hero__media:before, .admission-aid-why__callout-media:before, .college-hero__media:before, .college-overview__media:before, .college-maj-min-certs__media:before, .college-ctas__cta-media:before,
+  .hero--event-detail__media:before, .feature-with-large-image__media:before, .iastate22-callout__media:before, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container:before, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container:before, .external-news-story__media:before, .video-embed__media-wrap:before, .full-width-image__image:before, .call-to-action--large .call-to-action__media:before, .image-grid__image:before, .iastate22-blockquote__portrait:before, .iastate22-modal__media:before, .callout-with-image__media:before, .ecosystem-home-hero__media:before, .personal-profile-info-card__media:before, .grid-list__image:before, .faculty-staff-card__media-container:before, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container:before, .home-social__images-image:before, .home-social-follow__images-image:before, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container:before, .home-hero__media:before, .home-community__callout-media:before, .home-community__callout-media-two:before, .home-location__media:before, .home-news-events-grid__image:before, .home-resources__image:before, .home-ctas__image:before, .home-full-width-campus-photo:before, .admission-aid-hero__media:before, .admission-aid-why__callout-media:before, .college-hero__media:before, .college-overview__media:before, .college-maj-min-certs__media:before, .college-ctas__cta-media:before,
   .responsive-img:before {
     content: "";
     display: block; }
-  .iastate22-card__media img, .hero__media img, .hero--news-article__media img, .hero--event-detail__media img, .feature-with-large-image__media img, .iastate22-callout__media img, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container img, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container img, .external-news-story__media img, .video-embed__media-wrap img, .full-width-image__image img, .call-to-action--large .call-to-action__media img, .image-grid__image img, .iastate22-blockquote__portrait img, .iastate22-modal__media img, .callout-with-image__media img, .ecosystem-home-hero__media img, .personal-profile-info-card__media img, .grid-list__image img, .faculty-staff-card__media-container img, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container img, .home-social__images-image img, .home-social--gray__images-image img, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container img, .home-hero__media img, .home-community__callout-media img, .home-community__callout-media-two img, .home-location__media img, .home-news-events-grid__image img, .home-resources__image img, .home-ctas__image img, .home-full-width-campus-photo img, .admission-aid-hero__media img, .admission-aid-why__callout-media img, .college-hero__media img, .college-overview__media img, .college-maj-min-certs__media img, .college-ctas__cta-media img,
+  .iastate22-card__media img, .hero__media img, .hero--news-article__media img, .hero--event-detail__media img, .feature-with-large-image__media img, .iastate22-callout__media img, .featured-news .featured-news-container .featured-news__large-article .featured-news__large-article__container .featured-news__large-article__image-container img, .featured-news .featured-news-container .featured-news__small-article .featured-news__small-article__container .featured-news__small-article__image-container img, .external-news-story__media img, .video-embed__media-wrap img, .full-width-image__image img, .call-to-action--large .call-to-action__media img, .image-grid__image img, .iastate22-blockquote__portrait img, .iastate22-modal__media img, .callout-with-image__media img, .ecosystem-home-hero__media img, .personal-profile-info-card__media img, .grid-list__image img, .faculty-staff-card__media-container img, .faculty-staff-feed-item .faculty-staff-feed-item__media .faculty-staff-feed-item__media-container img, .home-social__images-image img, .home-social-follow__images-image img, .hero-stories-feed-item .hero-stories-feed-item__media .hero-stories-feed-item__media-container img, .home-hero__media img, .home-community__callout-media img, .home-community__callout-media-two img, .home-location__media img, .home-news-events-grid__image img, .home-resources__image img, .home-ctas__image img, .home-full-width-campus-photo img, .admission-aid-hero__media img, .admission-aid-why__callout-media img, .college-hero__media img, .college-overview__media img, .college-maj-min-certs__media img, .college-ctas__cta-media img,
   .responsive-img img {
     display: block;
     height: 100%;
@@ -9091,43 +9091,7 @@ a.grid-list__item {
   .home-social__images-image:before {
     padding-top: 100%; }
 
-.itswd-section.itswd-section-full-width {
-  margin-left: -2.25rem;
-  margin-right: -2.25rem; }
-
-.itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-constrained {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem; }
-
-.itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-full-width {
-  padding-left: 2.25rem;
-  padding-right: 2.25rem; }
-
-@media (min-width: 768px) {
-  .itswd-section.itswd-section-full-width {
-    margin-left: -4.375rem;
-    margin-right: -4.375rem; }
-  .itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-constrained {
-    padding-left: 4.375rem;
-    padding-right: 4.375rem; } }
-
-@media (min-width: 1200px) {
-  .itswd-section.itswd-section-full-width {
-    margin-left: -11.875rem;
-    margin-right: -18.625rem; }
-  .itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-constrained {
-    padding-left: 11.875rem;
-    padding-right: 18.625rem; } }
-
-@media (min-width: 100rem) {
-  .itswd-section.itswd-section-full-width {
-    margin-left: calc(-11.875rem - ((100vw - 100rem) / 2));
-    margin-right: calc(-18.625rem - ((100vw - 100rem) / 2)); }
-  .itswd-section.itswd-section-full-width .itswd-section-content.itswd-section-content-constrained {
-    padding-left: calc(11.875rem + ((100vw - 100rem) / 2));
-    padding-right: calc(18.625rem + ((100vw - 100rem) / 2)); } }
-
-.home-social--gray {
+.home-social-follow {
   margin-top: 5.625rem;
   background-color: #f5f5f5;
   display: -webkit-box;
@@ -9137,7 +9101,7 @@ a.grid-list__item {
           flex-direction: column-reverse;
   position: relative; }
   @media (min-width: 1200px) {
-    .home-social--gray {
+    .home-social-follow {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
               flex-direction: row;
@@ -9147,7 +9111,7 @@ a.grid-list__item {
       padding-bottom: 2.5rem;
       padding-left: 5.125rem; } }
   @media (min-width: 1400px) {
-    .home-social--gray:before {
+    .home-social-follow:before {
       content: "";
       position: absolute;
       top: 0;
@@ -9159,38 +9123,38 @@ a.grid-list__item {
       z-index: -1;
       background-color: #f5f5f5;
       pointer-events: none; } }
-  .home-social--gray + .paragraph-widget--call-to-action--small {
+  .home-social-follow + .paragraph-widget--call-to-action--small {
     margin-top: 0; }
 
-.home-social--gray__headline-icons-wrap {
+.home-social-follow__headline-icons-wrap {
   margin: 2.5rem 0 1.625rem; }
   @media (min-width: 1200px) {
-    .home-social--gray__headline-icons-wrap {
+    .home-social-follow__headline-icons-wrap {
       -webkit-box-flex: 0;
               flex: 0 1 auto;
       width: 35%;
       margin: 0;
       padding-top: 0.625rem; } }
   @media (min-width: 1400px) {
-    .home-social--gray__headline-icons-wrap {
+    .home-social-follow__headline-icons-wrap {
       -webkit-box-flex: 0;
               flex: 0 1 auto;
       width: 25%; } }
 
-.home-social--gray__headline {
+.home-social-follow__headline {
   color: #c8102e;
   width: 80%;
   padding: 0;
   margin-bottom: 1.25rem; }
   @media (min-width: 1200px) {
-    .home-social--gray__headline {
+    .home-social-follow__headline {
       width: auto;
       padding-right: 1.25rem; } }
   @media (min-width: 1400px) {
-    .home-social--gray__headline {
+    .home-social-follow__headline {
       width: 90%; } }
 
-.home-social--gray__social-links {
+.home-social-follow__social-links {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: start;
@@ -9199,15 +9163,15 @@ a.grid-list__item {
           align-items: center;
   margin: 1.6875rem 0; }
   @media (min-width: 768px) {
-    .home-social--gray__social-links {
+    .home-social-follow__social-links {
       -webkit-box-pack: start;
               justify-content: flex-start; } }
   @media (min-width: 1200px) {
-    .home-social--gray__social-links {
+    .home-social-follow__social-links {
       margin: 0; } }
-  .home-social--gray__social-links li {
+  .home-social-follow__social-links li {
     margin-right: 0.9375rem; }
-    .home-social--gray__social-links li a {
+    .home-social-follow__social-links li a {
       border: 0.125rem solid #7c2529;
       border-radius: 50%;
       width: 3.25rem;
@@ -9221,36 +9185,36 @@ a.grid-list__item {
       color: #ffffff;
       -webkit-transition: 0.3s background-color ease-in-out;
       transition: 0.3s background-color ease-in-out; }
-      .home-social--gray__social-links li a:hover {
+      .home-social-follow__social-links li a:hover {
         background-color: #7c2529; }
-        .home-social--gray__social-links li a:hover svg {
+        .home-social-follow__social-links li a:hover svg {
           color: #ffffff; }
-      .home-social--gray__social-links li a svg {
+      .home-social-follow__social-links li a svg {
         color: #7c2529;
         font-size: 1.5625rem;
         -webkit-transition: 0.3s color ease-in-out;
         transition: 0.3s color ease-in-out; }
 
-.home-social--gray__images-wrap {
+.home-social-follow__images-wrap {
   position: relative; }
   @media (min-width: 768px) {
-    .home-social--gray__images-wrap {
+    .home-social-follow__images-wrap {
       display: -webkit-box;
       display: flex;
       -webkit-box-align: center;
               align-items: center;
       flex-wrap: wrap; } }
   @media (min-width: 1200px) {
-    .home-social--gray__images-wrap {
+    .home-social-follow__images-wrap {
       -webkit-box-flex: 0;
               flex: 0 1 auto;
       width: 65%; } }
   @media (min-width: 1400px) {
-    .home-social--gray__images-wrap {
+    .home-social-follow__images-wrap {
       -webkit-box-flex: 0;
               flex: 0 1 auto;
       width: 75%; } }
-  .home-social--gray__images-wrap:before, .home-social--gray__images-wrap:after {
+  .home-social-follow__images-wrap:before, .home-social-follow__images-wrap:after {
     content: "";
     position: absolute;
     top: 0;
@@ -9259,46 +9223,46 @@ a.grid-list__item {
     background-color: #ffffff;
     height: 3rem; }
     @media (min-width: 768px) {
-      .home-social--gray__images-wrap:before, .home-social--gray__images-wrap:after {
+      .home-social-follow__images-wrap:before, .home-social-follow__images-wrap:after {
         left: -4.375rem;
         right: -4.375rem; } }
     @media (min-width: 1200px) {
-      .home-social--gray__images-wrap:before, .home-social--gray__images-wrap:after {
+      .home-social-follow__images-wrap:before, .home-social-follow__images-wrap:after {
         width: 150vw;
         left: -50vw;
         height: 1.125rem; } }
     @media (min-width: 1400px) {
-      .home-social--gray__images-wrap:before, .home-social--gray__images-wrap:after {
+      .home-social-follow__images-wrap:before, .home-social-follow__images-wrap:after {
         height: 1.6875rem; } }
-  .home-social--gray__images-wrap:after {
+  .home-social-follow__images-wrap:after {
     display: none; }
     @media (min-width: 768px) {
-      .home-social--gray__images-wrap:after {
+      .home-social-follow__images-wrap:after {
         background-color: #f5f5f5; } }
     @media (min-width: 1200px) {
-      .home-social--gray__images-wrap:after {
+      .home-social-follow__images-wrap:after {
         display: block;
         top: initial;
         bottom: 0; } }
 
-.home-social--gray__images-image {
+.home-social-follow__images-image {
   box-shadow: 0 0.8125rem 1rem rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1; }
   @media (min-width: 768px) {
-    .home-social--gray__images-image {
+    .home-social-follow__images-image {
       -webkit-box-flex: 1;
               flex: 1 1 0;
       margin-right: 0.9375rem; } }
-  .home-social--gray__images-image:nth-child(2), .home-social--gray__images-image:last-child {
+  .home-social-follow__images-image:nth-child(2), .home-social-follow__images-image:last-child {
     display: none; }
     @media (min-width: 768px) {
-      .home-social--gray__images-image:nth-child(2), .home-social--gray__images-image:last-child {
+      .home-social-follow__images-image:nth-child(2), .home-social-follow__images-image:last-child {
         display: block; } }
   @media (min-width: 768px) {
-    .home-social--gray__images-image:last-child {
+    .home-social-follow__images-image:last-child {
       margin-right: 0; } }
-  .home-social--gray__images-image:before {
+  .home-social-follow__images-image:before {
     padding-top: 100%; }
 
 .home .feature-with-large-image {
