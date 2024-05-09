@@ -2176,6 +2176,15 @@ ol {
   .align-right {
     margin-left: 5.5rem; } }
 
+.text-align-left {
+  text-align: left; }
+
+.text-align-center {
+  text-align: center; }
+
+.text-align-right {
+  text-align: right; }
+
 .paragraph-widget {
   margin-top: 1.875rem;
   margin-bottom: 2.5rem; }
@@ -2544,6 +2553,21 @@ h2,
   .admission-aid-links__intro-title + .admission-aid-links__intro-subtitle,
   .admission-aid-connect__section-title + .admission-aid-links__intro-subtitle {
     margin-top: 0; }
+  h2.text-align-center:after,
+  .h2.text-align-center:after,
+  .text-align-center.home-community__headline:after,
+  .text-align-center.admission-aid-links__intro-title:after,
+  .text-align-center.admission-aid-connect__section-title:after {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  h2.text-align-right:after,
+  .h2.text-align-right:after,
+  .text-align-right.home-community__headline:after,
+  .text-align-right.admission-aid-links__intro-title:after,
+  .text-align-right.admission-aid-connect__section-title:after {
+    left: unset;
+    right: 0; }
 
 h3,
 .h3,
