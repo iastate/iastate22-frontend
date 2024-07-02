@@ -2732,6 +2732,10 @@ main {
     .site-header__mega-menu-main-nav > ul > li > button,
     .iastate22-button {
       display: inline-block; } }
+  .iastate22-form button:has(.icon-video)[type="submit"], .iastate22-modal__content-form button:has(.icon-video)[type="submit"], .site-header__mega-menu-main-nav > ul > li > a:has(.icon-video),
+  .site-header__mega-menu-main-nav > ul > li > button:has(.icon-video),
+  .iastate22-button:has(.icon-video) {
+    padding-right: 1.25rem; }
   .iastate22-form button[type="submit"] .arrow, .iastate22-modal__content-form button[type="submit"] .arrow, .site-header__mega-menu-main-nav > ul > li > a .arrow, .site-header__mega-menu-main-nav > ul > li > button .arrow,
   .iastate22-button .arrow {
     right: 1.0625rem;
@@ -2742,15 +2746,56 @@ main {
     .iastate22-button .arrow:after,
     .iastate22-button .arrow:before {
       background-color: #f1be48; }
+  .iastate22-form button[type="submit"] .icon-video, .iastate22-modal__content-form button[type="submit"] .icon-video, .site-header__mega-menu-main-nav > ul > li > a .icon-video, .site-header__mega-menu-main-nav > ul > li > button .icon-video,
+  .iastate22-button .icon-video {
+    padding-left: 2.5rem;
+    position: relative; }
+    .iastate22-form button[type="submit"] .icon-video svg, .iastate22-modal__content-form button[type="submit"] .icon-video svg, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg, .iastate22-form button[type="submit"] .icon-video svg path, .iastate22-modal__content-form button[type="submit"] .icon-video svg path, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg path, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg path,
+    .iastate22-button .icon-video svg,
+    .iastate22-button .icon-video svg path {
+      fill: #7c2529; }
+    .iastate22-form button[type="submit"] .icon-video svg, .iastate22-modal__content-form button[type="submit"] .icon-video svg, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg,
+    .iastate22-button .icon-video svg {
+      position: absolute;
+      left: 0.625rem;
+      top: 0.25rem;
+      -webkit-transition: opacity .3s ease-out;
+      transition: opacity .3s ease-out; }
+      .iastate22-form button[type="submit"] .icon-video svg.icon-video--inactive, .iastate22-modal__content-form button[type="submit"] .icon-video svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg.icon-video--inactive,
+      .iastate22-button .icon-video svg.icon-video--inactive {
+        opacity: 1; }
+      .iastate22-form button[type="submit"] .icon-video svg.icon-video--active, .iastate22-modal__content-form button[type="submit"] .icon-video svg.icon-video--active, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg.icon-video--active, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg.icon-video--active,
+      .iastate22-button .icon-video svg.icon-video--active {
+        opacity: 0; }
+        .iastate22-form button[type="submit"] .icon-video svg.icon-video--active path, .iastate22-modal__content-form button[type="submit"] .icon-video svg.icon-video--active path, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg.icon-video--active path, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg.icon-video--active path,
+        .iastate22-button .icon-video svg.icon-video--active path {
+          fill: #ffffff; }
   .iastate22-form button:hover[type="submit"], .iastate22-modal__content-form button:hover[type="submit"], .site-header__mega-menu-main-nav > ul > li > a:hover,
-  .site-header__mega-menu-main-nav > ul > li > button:hover,
-  .iastate22-button:hover {
+  .site-header__mega-menu-main-nav > ul > li > button:hover, .iastate22-form button:focus-visible[type="submit"], .iastate22-modal__content-form button:focus-visible[type="submit"], .site-header__mega-menu-main-nav > ul > li > a:focus-visible,
+  .site-header__mega-menu-main-nav > ul > li > button:focus-visible,
+  .iastate22-button:hover,
+  .iastate22-button:focus-visible {
     background-color: #7c2529;
     color: #ffffff;
     padding-right: 2.5rem; }
-    .iastate22-form button:hover[type="submit"] .arrow, .iastate22-modal__content-form button:hover[type="submit"] .arrow, .site-header__mega-menu-main-nav > ul > li > a:hover .arrow, .site-header__mega-menu-main-nav > ul > li > button:hover .arrow,
-    .iastate22-button:hover .arrow {
+    .iastate22-form button:hover[type="submit"] .arrow, .iastate22-modal__content-form button:hover[type="submit"] .arrow, .site-header__mega-menu-main-nav > ul > li > a:hover .arrow, .site-header__mega-menu-main-nav > ul > li > button:hover .arrow, .iastate22-form button:focus-visible[type="submit"] .arrow, .iastate22-modal__content-form button:focus-visible[type="submit"] .arrow, .site-header__mega-menu-main-nav > ul > li > a:focus-visible .arrow, .site-header__mega-menu-main-nav > ul > li > button:focus-visible .arrow,
+    .iastate22-button:hover .arrow,
+    .iastate22-button:focus-visible .arrow {
       width: 0.75rem; }
+    .iastate22-form button:hover[type="submit"] svg.icon-video--inactive, .iastate22-modal__content-form button:hover[type="submit"] svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > a:hover svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > button:hover svg.icon-video--inactive, .iastate22-form button:focus-visible[type="submit"] svg.icon-video--inactive, .iastate22-modal__content-form button:focus-visible[type="submit"] svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > a:focus-visible svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > button:focus-visible svg.icon-video--inactive,
+    .iastate22-button:hover svg.icon-video--inactive,
+    .iastate22-button:focus-visible svg.icon-video--inactive {
+      opacity: 0; }
+    .iastate22-form button:hover[type="submit"] svg.icon-video--active, .iastate22-modal__content-form button:hover[type="submit"] svg.icon-video--active, .site-header__mega-menu-main-nav > ul > li > a:hover svg.icon-video--active, .site-header__mega-menu-main-nav > ul > li > button:hover svg.icon-video--active, .iastate22-form button:focus-visible[type="submit"] svg.icon-video--active, .iastate22-modal__content-form button:focus-visible[type="submit"] svg.icon-video--active, .site-header__mega-menu-main-nav > ul > li > a:focus-visible svg.icon-video--active, .site-header__mega-menu-main-nav > ul > li > button:focus-visible svg.icon-video--active,
+    .iastate22-button:hover svg.icon-video--active,
+    .iastate22-button:focus-visible svg.icon-video--active {
+      opacity: 1; }
+  .iastate22-form button:has(.icon-video):hover[type="submit"], .iastate22-modal__content-form button:has(.icon-video):hover[type="submit"], .site-header__mega-menu-main-nav > ul > li > a:has(.icon-video):hover,
+  .site-header__mega-menu-main-nav > ul > li > button:has(.icon-video):hover, .iastate22-form button:has(.icon-video):focus-visible[type="submit"], .iastate22-modal__content-form button:has(.icon-video):focus-visible[type="submit"], .site-header__mega-menu-main-nav > ul > li > a:has(.icon-video):focus-visible,
+  .site-header__mega-menu-main-nav > ul > li > button:has(.icon-video):focus-visible,
+  .iastate22-button:has(.icon-video):hover,
+  .iastate22-button:has(.icon-video):focus-visible {
+    padding-right: 1.25rem; }
 
 .callout-inset .iastate22-button, .filter-form .form-item button[type="submit"], .call-to-action--large .iastate22-button-set .iastate22-button, .site-header__mega-menu-main-nav > ul > li > a,
 .site-header__mega-menu-main-nav > ul > li > button, .ecosystem-home-hero .iastate22-button-set ul .iastate22-button, .home-ctas .iastate22-button-set ul li a, .maj-min-cert-program-search button[type="submit"], .college-overview .iastate22-button-set .iastate22-button, .college-ctas__cta .iastate22-button,
@@ -2764,11 +2809,44 @@ main {
     .iastate22-button--reverse .arrow:after,
     .iastate22-button--reverse .arrow:before {
       background-color: #7c2529; }
+  .callout-inset .iastate22-button .icon-video svg.icon-video--active path, .filter-form .form-item button[type="submit"] .icon-video svg.icon-video--active path, .call-to-action--large .iastate22-button-set .iastate22-button .icon-video svg.icon-video--active path, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg.icon-video--active path, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg.icon-video--active path, .ecosystem-home-hero .iastate22-button-set ul .iastate22-button .icon-video svg.icon-video--active path, .home-ctas .iastate22-button-set ul li a .icon-video svg.icon-video--active path, .maj-min-cert-program-search button[type="submit"] .icon-video svg.icon-video--active path, .college-overview .iastate22-button-set .iastate22-button .icon-video svg.icon-video--active path, .college-ctas__cta .iastate22-button .icon-video svg.icon-video--active path,
+  .iastate22-button--reverse .icon-video svg.icon-video--active path {
+    fill: #7c2529; }
   .callout-inset .iastate22-button:hover, .filter-form .form-item button:hover[type="submit"], .call-to-action--large .iastate22-button-set .iastate22-button:hover, .site-header__mega-menu-main-nav > ul > li > a:hover,
-  .site-header__mega-menu-main-nav > ul > li > button:hover, .ecosystem-home-hero .iastate22-button-set ul .iastate22-button:hover, .home-ctas .iastate22-button-set ul li a:hover, .maj-min-cert-program-search button:hover[type="submit"], .college-overview .iastate22-button-set .iastate22-button:hover, .college-ctas__cta .iastate22-button:hover,
-  .iastate22-button--reverse:hover {
+  .site-header__mega-menu-main-nav > ul > li > button:hover, .ecosystem-home-hero .iastate22-button-set ul .iastate22-button:hover, .home-ctas .iastate22-button-set ul li a:hover, .maj-min-cert-program-search button:hover[type="submit"], .college-overview .iastate22-button-set .iastate22-button:hover, .college-ctas__cta .iastate22-button:hover, .callout-inset .iastate22-button:focus-visible, .filter-form .form-item button:focus-visible[type="submit"], .call-to-action--large .iastate22-button-set .iastate22-button:focus-visible, .site-header__mega-menu-main-nav > ul > li > a:focus-visible,
+  .site-header__mega-menu-main-nav > ul > li > button:focus-visible, .ecosystem-home-hero .iastate22-button-set ul .iastate22-button:focus-visible, .home-ctas .iastate22-button-set ul li a:focus-visible, .maj-min-cert-program-search button:focus-visible[type="submit"], .college-overview .iastate22-button-set .iastate22-button:focus-visible, .college-ctas__cta .iastate22-button:focus-visible,
+  .iastate22-button--reverse:hover,
+  .iastate22-button--reverse:focus-visible {
     background-color: #ffffff;
     color: #7c2529; }
+
+
+.iastate22-button--clear {
+  border: none;
+  background: transparent; }
+  
+  .iastate22-button--clear .icon-video svg.icon-video--active path {
+    fill: #7c2529; }
+  
+  .iastate22-button--clear:hover,
+  .iastate22-button--clear:focus-visible {
+    border: none;
+    background: transparent;
+    color: #7c2529; }
+
+
+.iastate22-button--clear-reverse {
+  border: none;
+  background: transparent;
+  color: #ffffff; }
+  
+  .iastate22-button--clear-reverse .icon-video svg path {
+    fill: #ffffff; }
+  
+  .iastate22-button--clear-reverse:hover,
+  .iastate22-button--clear-reverse:focus-visible {
+    border: none;
+    background: transparent; }
 
 .paragraph-widget--button-set {
   margin: 1.375rem 0 3.75rem; }
@@ -3004,12 +3082,33 @@ main {
     box-shadow: none; }
   .iastate22-card.clickable {
     cursor: pointer; }
-    .iastate22-card.clickable:hover:before {
+    .iastate22-card.clickable:hover:before, .iastate22-card.clickable[focus-within]:before {
       opacity: 1; }
-    .iastate22-card.clickable:hover .iastate22-card__media img {
+    .iastate22-card.clickable:hover:before, .iastate22-card.clickable:focus-within:before {
+      opacity: 1; }
+    .iastate22-card.clickable:hover .iastate22-card__media img, .iastate22-card.clickable[focus-within] .iastate22-card__media img {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
-    .iastate22-card.clickable.iastate22-card--linked-image:hover .arrow {
+    .iastate22-card.clickable:hover .iastate22-card__media img, .iastate22-card.clickable:focus-within .iastate22-card__media img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+    .iastate22-card.clickable:hover .icon-video svg, .iastate22-card.clickable[focus-within] .icon-video svg {
+      -webkit-transition: opacity .2s ease-out;
+      transition: opacity .2s ease-out; }
+    .iastate22-card.clickable:hover .icon-video svg, .iastate22-card.clickable:focus-within .icon-video svg {
+      -webkit-transition: opacity .2s ease-out;
+      transition: opacity .2s ease-out; }
+    .iastate22-card.clickable:hover .icon-video .icon-video--inactive, .iastate22-card.clickable[focus-within] .icon-video .icon-video--inactive {
+      opacity: 0; }
+    .iastate22-card.clickable:hover .icon-video .icon-video--inactive, .iastate22-card.clickable:focus-within .icon-video .icon-video--inactive {
+      opacity: 0; }
+    .iastate22-card.clickable:hover .icon-video .icon-video--active, .iastate22-card.clickable[focus-within] .icon-video .icon-video--active {
+      opacity: 1; }
+    .iastate22-card.clickable:hover .icon-video .icon-video--active, .iastate22-card.clickable:focus-within .icon-video .icon-video--active {
+      opacity: 1; }
+    .iastate22-card.clickable.iastate22-card--linked-image:hover .arrow, .iastate22-card.clickable.iastate22-card--linked-image[focus-within] .arrow {
+      width: 0.75rem; }
+    .iastate22-card.clickable.iastate22-card--linked-image:hover .arrow, .iastate22-card.clickable.iastate22-card--linked-image:focus-within .arrow {
       width: 0.75rem; }
     .iastate22-card.clickable.iastate22-card--teaser:hover .iastate22-card__cta {
       color: #c8102e; }
@@ -3047,8 +3146,10 @@ main {
   transition: 0.2s color ease-in-out;
   margin-top: 0.3125rem;
   display: inline-block;
+  background: transparent;
+  border: none;
   cursor: pointer; }
-  .iastate22-card__cta:hover {
+  .iastate22-card__cta:hover, .iastate22-card__cta:focus-visible {
     color: #c8102e; }
   .iastate22-card--linked-image .iastate22-card__cta {
     position: absolute;
@@ -3060,7 +3161,8 @@ main {
     color: #ffffff;
     text-decoration: none;
     min-width: 15.5625rem;
-    text-align: left; }
+    text-align: left;
+    border: none; }
     .iastate22-card--linked-image .iastate22-card__cta .arrow {
       inset: auto;
       -webkit-transform: translate(0.8125rem, 0.8125rem);
@@ -3069,6 +3171,25 @@ main {
       background-color: #f1be48; }
       .iastate22-card--linked-image .iastate22-card__cta .arrow:after, .iastate22-card--linked-image .iastate22-card__cta .arrow:before {
         background-color: #f1be48; }
+    .iastate22-card--linked-image .iastate22-card__cta .icon-video {
+      position: relative; }
+      .iastate22-card--linked-image .iastate22-card__cta .icon-video svg, .iastate22-card--linked-image .iastate22-card__cta .icon-video svg path {
+        fill: #f1be48; }
+  .iastate22-card__cta .icon-video {
+    padding-left: 2.5rem;
+    position: relative; }
+    .iastate22-card__cta .icon-video svg, .iastate22-card__cta .icon-video svg path {
+      fill: #7c2529; }
+    .iastate22-card__cta .icon-video svg {
+      position: absolute;
+      left: 0.625rem;
+      top: 0.25rem;
+      -webkit-transition: opacity .3s ease-out;
+      transition: opacity .3s ease-out; }
+      .iastate22-card__cta .icon-video svg.icon-video--inactive {
+        opacity: 1; }
+      .iastate22-card__cta .icon-video svg.icon-video--active {
+        opacity: 0; }
   .iastate22-card--profile-with-modal .iastate22-card__cta,
   .iastate22-card--with-modal .iastate22-card__cta {
     color: #c8102e;
@@ -5429,12 +5550,20 @@ a {
     .iastate22-modal__container {
       width: 100%; } }
   @media (min-width: 768px) {
+    .iastate22-modal--with-video .iastate22-modal__container {
+      padding: 2.8125rem 2.8125rem 0; } }
+  @media (min-width: 768px) {
     .iastate22-modal__container.iastate22-modal__container-with-media {
       display: -webkit-box;
       display: flex;
       -webkit-box-align: start;
               align-items: flex-start;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap; }
+      .iastate22-modal--with-video .iastate22-modal__container.iastate22-modal__container-with-media {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        flex-wrap: nowrap; } }
 
 .iastate22-modal__header {
   display: -webkit-box;
@@ -5451,10 +5580,14 @@ a {
       -webkit-box-flex: 0;
               flex: 0 1 auto;
       width: 100%;
-      padding: 2.8125rem 4.6875rem 2.8125rem 3.375rem; } }
+      padding: 2.8125rem 4.6875rem 2.8125rem 3.375rem; }
+      .iastate22-modal--with-video .iastate22-modal__content {
+        padding: 1.5rem 0 2.8125rem; } }
   @media (min-width: 768px) {
     .iastate22-modal__container-with-media .iastate22-modal__content {
-      width: 64%; } }
+      width: 64%; }
+      .iastate22-modal--with-video .iastate22-modal__container-with-media .iastate22-modal__content {
+        width: 100%; } }
   .iastate22-modal__content .iastate22-modal__content-cta {
     margin-top: 1.25rem; }
 
@@ -5493,10 +5626,16 @@ a {
   .iastate22-modal__media {
     -webkit-box-flex: 0;
             flex: 0 1 auto;
-    width: 36%; } }
+    width: 36%; }
+    .iastate22-modal--with-video .iastate22-modal__media {
+      width: 100%;
+      -webkit-box-flex: 0;
+              flex: 0 0 100%; } }
 
 .iastate22-modal__media:before {
   padding-top: 100%; }
+  .iastate22-modal--with-video .iastate22-modal__media:before {
+    display: none; }
 
 .iastate22-modal__content-form {
   margin-top: 1.25rem; }
@@ -5523,6 +5662,9 @@ a {
       .iastate22-modal__content-form button[type="submit"] {
         -webkit-box-flex: 0;
                 flex: 0 0 auto; } }
+
+.iastate22-modal--with-video .video-embed__caption {
+  display: none; }
 
 /*! Flickity v2.2.1
 https://flickity.metafizzy.co

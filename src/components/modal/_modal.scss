@@ -38,11 +38,22 @@
   @include media-breakpoint-up(lg) {
     width: 100%;
   }
+
+  .iastate22-modal--with-video & {
+    @include media-breakpoint-up(md) {
+      padding: rem(45) rem(45) 0;
+    }
+  }
   &.iastate22-modal__container-with-media {
     @include media-breakpoint-up(md) {
       display: flex;
       align-items: flex-start;
       flex-wrap: wrap;
+
+      .iastate22-modal--with-video & {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
     }
   }
 }
@@ -59,10 +70,18 @@
     flex: 0 1 auto;
     width: 100%;
     padding: rem(45) rem(75) rem(45) rem(54);
+
+    .iastate22-modal--with-video & {
+      padding: rem(24) 0 rem(45);
+    }
   }
   .iastate22-modal__container-with-media & {
     @include media-breakpoint-up(md) {
       width: 64%;
+
+      .iastate22-modal--with-video & {
+        width: 100%;
+      }
     }
   }
   .iastate22-modal__content-cta {
@@ -111,9 +130,18 @@
   @include media-breakpoint-up(md) {
     flex: 0 1 auto;
     width: 36%;
+
+    .iastate22-modal--with-video & {
+      width: 100%;
+      flex: 0 0 100%;
+    }
   }
   &:before {
     padding-top: 100%;
+
+    .iastate22-modal--with-video & {
+      display: none;
+    }
   }
 }
 
@@ -142,5 +170,14 @@
     @include media-breakpoint-up(md) {
       flex: 0 0 auto;
     }
+  }
+}
+
+.iastate22-modal--with-video {
+  .video-embed__caption {
+    display: none;
+  }
+
+  .video-embed {
   }
 }
