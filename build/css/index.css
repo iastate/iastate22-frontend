@@ -2750,7 +2750,11 @@ main {
   .iastate22-button .icon-video {
     padding-left: 2.5rem;
     position: relative; }
-    .iastate22-form button[type="submit"] .icon-video svg, .iastate22-modal__content-form button[type="submit"] .icon-video svg, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg, .iastate22-form button[type="submit"] .icon-video svg path, .iastate22-modal__content-form button[type="submit"] .icon-video svg path, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg path, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg path,
+    .iastate22-form button[type="submit"] .icon-video svg, .iastate22-modal__content-form button[type="submit"] .icon-video svg, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg,
+    .iastate22-form button[type="submit"] .icon-video svg path,
+    .iastate22-modal__content-form button[type="submit"] .icon-video svg path,
+    .site-header__mega-menu-main-nav > ul > li > a .icon-video svg path,
+    .site-header__mega-menu-main-nav > ul > li > button .icon-video svg path,
     .iastate22-button .icon-video svg,
     .iastate22-button .icon-video svg path {
       fill: #7c2529; }
@@ -2759,8 +2763,8 @@ main {
       position: absolute;
       left: 0.625rem;
       top: 0.25rem;
-      -webkit-transition: opacity .3s ease-out;
-      transition: opacity .3s ease-out; }
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; }
       .iastate22-form button[type="submit"] .icon-video svg.icon-video--inactive, .iastate22-modal__content-form button[type="submit"] .icon-video svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > a .icon-video svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > button .icon-video svg.icon-video--inactive,
       .iastate22-button .icon-video svg.icon-video--inactive {
         opacity: 1; }
@@ -3093,11 +3097,11 @@ main {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
     .iastate22-card.clickable:hover .icon-video svg, .iastate22-card.clickable[focus-within] .icon-video svg {
-      -webkit-transition: opacity .2s ease-out;
-      transition: opacity .2s ease-out; }
+      -webkit-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out; }
     .iastate22-card.clickable:hover .icon-video svg, .iastate22-card.clickable:focus-within .icon-video svg {
-      -webkit-transition: opacity .2s ease-out;
-      transition: opacity .2s ease-out; }
+      -webkit-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out; }
     .iastate22-card.clickable:hover .icon-video .icon-video--inactive, .iastate22-card.clickable[focus-within] .icon-video .icon-video--inactive {
       opacity: 0; }
     .iastate22-card.clickable:hover .icon-video .icon-video--inactive, .iastate22-card.clickable:focus-within .icon-video .icon-video--inactive {
@@ -3173,19 +3177,21 @@ main {
         background-color: #f1be48; }
     .iastate22-card--linked-image .iastate22-card__cta .icon-video {
       position: relative; }
-      .iastate22-card--linked-image .iastate22-card__cta .icon-video svg, .iastate22-card--linked-image .iastate22-card__cta .icon-video svg path {
+      .iastate22-card--linked-image .iastate22-card__cta .icon-video svg,
+      .iastate22-card--linked-image .iastate22-card__cta .icon-video svg path {
         fill: #f1be48; }
   .iastate22-card__cta .icon-video {
     padding-left: 2.5rem;
     position: relative; }
-    .iastate22-card__cta .icon-video svg, .iastate22-card__cta .icon-video svg path {
+    .iastate22-card__cta .icon-video svg,
+    .iastate22-card__cta .icon-video svg path {
       fill: #7c2529; }
     .iastate22-card__cta .icon-video svg {
       position: absolute;
       left: 0.625rem;
       top: 0.25rem;
-      -webkit-transition: opacity .3s ease-out;
-      transition: opacity .3s ease-out; }
+      -webkit-transition: opacity 0.3s ease-out;
+      transition: opacity 0.3s ease-out; }
       .iastate22-card__cta .icon-video svg.icon-video--inactive {
         opacity: 1; }
       .iastate22-card__cta .icon-video svg.icon-video--active {
@@ -5509,6 +5515,58 @@ a {
   @media (min-width: 1200px) {
     .iastate22-blockquote__author {
       margin-top: 0.125rem; } }
+
+.iastate22-blockquote__video-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  background-color: #c8102e;
+  border: solid 0.125rem #ffffff;
+  border-radius: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transform: translate(2%, -14%);
+          transform: translate(2%, -14%);
+  -webkit-transition: background-color .3s ease-out;
+  transition: background-color .3s ease-out; }
+  @media (min-width: 1200px) {
+    .iastate22-blockquote__video-button {
+      -webkit-transform: translate(15%, 10%);
+              transform: translate(15%, 10%); } }
+  .iastate22-blockquote__video-button svg path {
+    -webkit-transition: fill .3s ease-out;
+    transition: fill .3s ease-out; }
+  .iastate22-blockquote__video-button:hover, .iastate22-blockquote__video-button:focus-visible {
+    background-color: #ffffff;
+    -webkit-transition: background-color .2s ease-out;
+    transition: background-color .2s ease-out; }
+    .iastate22-blockquote__video-button:hover svg path, .iastate22-blockquote__video-button:focus-visible svg path {
+      -webkit-transition: fill .2s ease-out;
+      transition: fill .2s ease-out;
+      fill: #7c2529; }
+  .iastate22-blockquote__video-button:before {
+    content: '';
+    position: absolute;
+    bottom: -0.625rem;
+    right: -0.0625rem;
+    width: 20.75rem;
+    height: 20.75rem; }
+    @media (min-width: 1200px) {
+      .iastate22-blockquote__video-button:before {
+        bottom: 0.125rem;
+        right: 0.5rem;
+        width: 16.125rem;
+        height: 16.125rem; } }
 
 .iastate22-modal {
   display: none; }
