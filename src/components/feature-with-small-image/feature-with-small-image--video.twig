@@ -5,11 +5,15 @@
   <div class="callout-with-image__content text-content">
     <h2>{{title}}</h2>
     <div>{{body_copy}}</div>
-    {% if button %}
-      {% include "@button" with button %}
+    {% if buttons %}
+      <div class="callout-with-image__links">
+        {% for button in buttons %}
+          {% include "@button--video" with button %}
+        {% endfor %}
+      </div>
     {% endif %}
-    {% if link_set %}
+    {# {% if link_set %}
       {% include "@link-set" with link_set %}
-    {% endif %}
+    {% endif %} #}
   </div>
 </div>
