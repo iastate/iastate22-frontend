@@ -5,15 +5,11 @@
       {% if image %}
       <div class="iastate22-modal__media">
         {% include "@video-embed" with video %}
-        {# <img src="{{ image|path }}" alt="" loading="lazy" width="400" height="400"> #}
       </div>
       {% endif %}
       <div class="iastate22-modal__content">
         <h2 class="iastate22-modal__title" id="{{ id }}-title">{{ title }}</h2>
         {{ content|raw }}
-        {# <div class="iastate22-modal__content-cta">
-          {{ call_to_action|raw }}
-        </div> #}
       </div>
     </div>
   </div>

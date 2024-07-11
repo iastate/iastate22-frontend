@@ -4507,7 +4507,8 @@ main {
   .video-embed__media-wrap.video-playing iframe {
     opacity: 1; }
   .video-embed__media-wrap.video-playing .video-embed__button {
-    opacity: 0; }
+    opacity: 0;
+    z-index: -1; }
   .video-embed__media-wrap.video-playing .video-embed__video {
     pointer-events: all; }
   .video-embed__media-wrap.video-embed__video-hover:after {
@@ -4516,7 +4517,7 @@ main {
 .video-embed__video {
   pointer-events: none; }
 
-.video-embed__button {
+.video-embed__button:not(.iastate22-blockquote__video-button) {
   z-index: 5;
   cursor: pointer;
   width: 3.75rem;
@@ -4530,22 +4531,22 @@ main {
   background-color: transparent;
   padding: 0; }
   @media (min-width: 992px) {
-    .video-embed__button {
+    .video-embed__button:not(.iastate22-blockquote__video-button) {
       width: 5rem;
       height: 5rem;
       margin-top: -2.5rem;
       margin-left: -2.5rem; } }
-  .video-embed__button .video-play-icon {
+  .video-embed__button:not(.iastate22-blockquote__video-button) .video-play-icon {
     width: auto; }
-    .video-embed__button .video-play-icon .outer-circle g {
+    .video-embed__button:not(.iastate22-blockquote__video-button) .video-play-icon .outer-circle g {
       -webkit-transition: 0.2s opacity ease-in-out;
       transition: 0.2s opacity ease-in-out; }
-    .video-embed__button .video-play-icon .arrow {
+    .video-embed__button:not(.iastate22-blockquote__video-button) .video-play-icon .arrow {
       -webkit-transition: 0.2s fill ease-in-out;
       transition: 0.2s fill ease-in-out; }
-  .video-embed__button:hover .video-play-icon .outer-circle g {
+  .video-embed__button:not(.iastate22-blockquote__video-button):hover .video-play-icon .outer-circle g {
     opacity: 1; }
-  .video-embed__button:hover .video-play-icon .arrow {
+  .video-embed__button:not(.iastate22-blockquote__video-button):hover .video-play-icon .arrow {
     fill: #7c2529; }
 
 .video-embed__caption {
