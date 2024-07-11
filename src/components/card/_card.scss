@@ -121,6 +121,11 @@
   background: transparent;
   border: none;
   cursor: pointer;
+
+  &:has(.icon-video) {
+    display: inline-flex;
+  }
+
   &:hover,
   &:focus-visible {
     color: $iastate-red;

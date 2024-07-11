@@ -2928,7 +2928,8 @@ main {
 
 .link-video,
 .link-video--reverse {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: inline-flex;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -3235,6 +3236,9 @@ main {
   background: transparent;
   border: none;
   cursor: pointer; }
+  .iastate22-card__cta:has(.icon-video) {
+    display: -webkit-inline-box;
+    display: inline-flex; }
   .iastate22-card__cta:hover, .iastate22-card__cta:focus-visible {
     color: #c8102e; }
   .iastate22-card--linked-image .iastate22-card__cta {
