@@ -2735,7 +2735,9 @@ main {
   .iastate22-form button:has(.icon-video)[type="submit"], .iastate22-modal__content-form button:has(.icon-video)[type="submit"], .site-header__mega-menu-main-nav > ul > li > a:has(.icon-video),
   .site-header__mega-menu-main-nav > ul > li > button:has(.icon-video),
   .iastate22-button:has(.icon-video) {
-    padding-right: 1.25rem; }
+    padding-right: 1.25rem;
+    display: -webkit-inline-box;
+    display: inline-flex; }
   .iastate22-form button[type="submit"] .arrow, .iastate22-modal__content-form button[type="submit"] .arrow, .site-header__mega-menu-main-nav > ul > li > a .arrow, .site-header__mega-menu-main-nav > ul > li > button .arrow,
   .iastate22-button .arrow {
     right: 1.0625rem;

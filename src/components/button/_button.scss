@@ -23,6 +23,7 @@
 
   &:has(.icon-video) {
     padding-right: rem(20);
+    display: inline-flex;
   }
 
   .arrow {
