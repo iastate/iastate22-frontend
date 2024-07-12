@@ -26,7 +26,7 @@
               "video": {
                 "text": "Link Lorem Ipsum Dolor",
                 "modal": {
-                  "id": "Video-Modal-1",
+                  "id": "Video-Modal-FLI-1",
                   "title": "Video Modal",
                   "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>",
                   "video": {

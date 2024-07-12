@@ -23,7 +23,7 @@
         "button": {
           "text": "Link Lorem Ipsum Dolor",
           "modal": {
-            "id": "Video-Modal-1",
+            "id": "Video-Modal-FS-1",
             "title": "Video Modal",
             "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>",
             "video": {

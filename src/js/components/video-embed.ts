@@ -81,7 +81,10 @@ export class VideoEmbed {
   private stopVideo() {
     this.mediaModal.addEventListener("click", () => {
       setTimeout(() => {
-        if (this.mediaModal.classList.contains("is-open") === false) {
+        if (
+          this.mediaModal.classList.contains("is-open") === false &&
+          this.media.classList.contains("video-playing") === true
+        ) {
           this.player.pauseVideo();
         }
       }, 50);

@@ -7,6 +7,7 @@ export class Modal {
   private element: HTMLElement;
   private modalId: string;
   private isVideo: boolean = false;
+  private videoMediaWrap: HTMLElement;
   private player: any;
   private triggers: NodeListOf<HTMLButtonElement>;
   private closers: NodeListOf<HTMLButtonElement>;
@@ -16,7 +17,7 @@ export class Modal {
       this.element = element;
       this.modalId = this.element.id;
       this.isVideo = this.element.classList.contains("iastate22-modal--video");
-
+      this.videoMediaWrap = this.element.querySelector(".video-embed__media-wrap");
       this.init();
     }
   }
@@ -88,7 +89,6 @@ export class Modal {
               cancelable: true,
               composed: false,
             });
-
             enableBodyScroll(modal.querySelector(".iastate22-modal__container"));
 
             window.dispatchEvent(event);
