@@ -89,6 +89,20 @@ export class VideoEmbed {
         }
       }, 50);
     });
+    window.addEventListener("keydown", (event) => {
+      const key = event.key || event.keyCode;
+      // Close the nav when the esc key is pressed while it's open
+      if (key === "Escape" || key === "Esc" || key === 27) {
+        setTimeout(() => {
+          if (
+            this.mediaModal.classList.contains("is-open") === false &&
+            this.media.classList.contains("video-playing") === true
+          ) {
+            this.player.pauseVideo();
+          }
+        }, 50);
+      }
+    });
   }
 
   private playVimeoVid() {

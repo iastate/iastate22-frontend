@@ -5258,13 +5258,13 @@ a {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-gap: 2.25rem 2rem; } }
 
-[class^=image-collage__image] {
+[class^="image-collage__image"] {
   position: relative; }
-  [class^=image-collage__image]:before {
-    content: '';
+  [class^="image-collage__image"]:before {
+    content: "";
     display: block; }
 
-[class^=image-collage__image] > img {
+[class^="image-collage__image"] > img {
   display: block;
   position: absolute;
   inset: 0;
