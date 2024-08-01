@@ -4058,10 +4058,10 @@ main {
 
 .feature-with-large-image__text.text-content p > a:not(.iastate22-link-secondary):not(.iastate22-link-external):not(.link-tertiary) {
   color: #ffffff;
-  -webkit-transition: color .3s ease-in-out, -webkit-text-decoration-color .3s ease-in-out;
-  transition: color .3s ease-in-out, -webkit-text-decoration-color .3s ease-in-out;
-  transition: text-decoration-color .3s ease-in-out, color .3s ease-in-out;
-  transition: text-decoration-color .3s ease-in-out, color .3s ease-in-out, -webkit-text-decoration-color .3s ease-in-out; }
+  -webkit-transition: color 0.3s ease-in-out, -webkit-text-decoration-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, -webkit-text-decoration-color 0.3s ease-in-out;
+  transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: text-decoration-color 0.3s ease-in-out, color 0.3s ease-in-out, -webkit-text-decoration-color 0.3s ease-in-out; }
   .feature-with-large-image__text.text-content p > a:not(.iastate22-link-secondary):not(.iastate22-link-external):not(.link-tertiary):hover, .feature-with-large-image__text.text-content p > a:not(.iastate22-link-secondary):not(.iastate22-link-external):not(.link-tertiary):focus {
     color: #f1be48; }
 
