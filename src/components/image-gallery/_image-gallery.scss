@@ -1,0 +1,100 @@
+.image-gallery {
+  display: grid;
+  grid-gap: rem(14) rem(12);
+  grid-template-columns: 1fr;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.image-gallery__item {
+  position: relative;
+  overflow: hidden;
+
+  &:hover,
+  &:focus-within {
+    .image-gallery__image-contact {
+      border-color: $border-gold;
+      transition: border-color 0.2s ease-out;
+    }
+
+    .image-gallery__console .icon {
+      opacity: 0;
+      transition: opacity 0.2s ease-out;
+    }
+
+    .image-gallery__console {
+      width: 100%;
+      grid-template-rows: 1fr;
+    }
+
+    .image-gallery__console-wrap {
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 0.2s 0.3s ease-in-out, opacity 0.2s 0.3s ease-in-out;
+    }
+  }
+}
+
+.image-gallery__image-wrap {
+  position: relative;
+  aspect-ratio: 1/1;
+
+  > img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.image-gallery__image-contact {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: solid rem(5) rgba($border-gold, 0);
+  transition: border-color 0.3s ease-out;
+  z-index: 2;
+}
+
+.image-gallery__console {
+  background: $iastate-red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: rem(20);
+  z-index: 1;
+  width: rem(40);
+  height: auto;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out, width 0.3s ease-out;
+
+  .icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+  }
+}
+
+.image-gallery__console-wrap {
+  position: relative;
+  width: 100%;
+  min-width: rem(300);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  overflow: hidden;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}

@@ -1,0 +1,78 @@
+{
+  "context": {
+    "images": [
+      {
+        "src": "../../img/IMG-Campus-Location-Large-Image.jpg",
+        "alt": "Image One",
+        "title": "Optional Title Image One",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/IMG-Campus-Location-Small-Image-2.jpg",
+        "alt": "Image Two",
+        "title": "Optional Title Image Two",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/IMG_Inline_Left_FPO.jpg",
+        "alt": "Image Three",
+        "title": "Optional Title Image Three",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/carousel-slide_fpo.jpg",
+        "alt": "Image Four",
+        "title": "Optional Title Image Four",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/Component-Card-Image-1.jpg",
+        "alt": "Image Five",
+        "title": "Optional Title Image Five",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/Component-Card-Image-3.jpg",
+        "alt": "Image Six",
+        "title": "Optional Title Image Six",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/Component-Card-Image-2.jpg",
+        "alt": "Image Seven",
+        "title": "Optional Title Image Seven",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/Component-Feature-Image-Small.jpg",
+        "alt": "Image 8",
+        "title": "Optional Title Image 8",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/Heroes-Kitchen_Sink.jpg",
+        "alt": "Image Nine",
+        "title": "Optional Title Image Nine",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/IMG-Inline_Center_FPO.jpg",
+        "alt": "Image Ten",
+        "title": "Optional Title Image Ten",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/HP_Finding_Solutions_Story_1_FPO.jpg",
+        "alt": "Image Eleven",
+        "title": "Optional Title Image Eleven",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      },
+      {
+        "src": "../../img/ecosystem-hero-atmospheric_fpo.jpg",
+        "alt": "Image Twelve",
+        "title": "Optional Title Image Twelve",
+        "caption": "Optional caption nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores."
+      }
+    ]
+  }
+}
