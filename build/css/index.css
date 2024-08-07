@@ -5453,10 +5453,11 @@ a {
 
 .image-gallery {
   display: grid;
-  grid-gap: 0.875rem 0.75rem;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  grid-gap: 2.5rem; }
   @media (min-width: 768px) {
     .image-gallery {
+      grid-gap: 0.875rem 0.75rem;
       grid-template-columns: 1fr 1fr; } }
   @media (min-width: 992px) {
     .image-gallery {
@@ -5466,15 +5467,15 @@ a {
   position: relative;
   overflow: hidden; }
   .image-gallery__item:before, .image-gallery__item:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 0.3125rem;
     background: #f1be48;
     opacity: 0;
     left: 0;
-    -webkit-transition: opacity .3s ease-out;
-    transition: opacity .3s ease-out;
+    -webkit-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
     z-index: 3; }
   .image-gallery__item:before {
     top: 0; }
@@ -5482,32 +5483,32 @@ a {
     bottom: 0; }
   .image-gallery__item:hover:before, .image-gallery__item:hover:after, .image-gallery__item[focus-within]:before, .image-gallery__item[focus-within]:after {
     opacity: 1;
-    -webkit-transition: opacity .2s ease-out;
-    transition: opacity .2s ease-out; }
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out; }
   .image-gallery__item:hover:before, .image-gallery__item:hover:after, .image-gallery__item:focus-within:before, .image-gallery__item:focus-within:after {
     opacity: 1;
-    -webkit-transition: opacity .2s ease-out;
-    transition: opacity .2s ease-out; }
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out; }
   .image-gallery__item:hover .image-gallery__item-wrap:before, .image-gallery__item:hover .image-gallery__item-wrap:after, .image-gallery__item[focus-within] .image-gallery__item-wrap:before, .image-gallery__item[focus-within] .image-gallery__item-wrap:after {
     opacity: 1;
-    -webkit-transition: opacity .2s ease-out;
-    transition: opacity .2s ease-out; }
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out; }
   .image-gallery__item:hover .image-gallery__item-wrap:before, .image-gallery__item:hover .image-gallery__item-wrap:after, .image-gallery__item:focus-within .image-gallery__item-wrap:before, .image-gallery__item:focus-within .image-gallery__item-wrap:after {
     opacity: 1;
-    -webkit-transition: opacity .2s ease-out;
-    transition: opacity .2s ease-out; }
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out; }
   .image-gallery__item:hover .image-gallery__image-wrap > img, .image-gallery__item[focus-within] .image-gallery__image-wrap > img {
-    -webkit-transition: -webkit-transform .2s ease-out;
-    transition: -webkit-transform .2s ease-out;
-    transition: transform .2s ease-out;
-    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    transition: -webkit-transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
   .image-gallery__item:hover .image-gallery__image-wrap > img, .image-gallery__item:focus-within .image-gallery__image-wrap > img {
-    -webkit-transition: -webkit-transform .2s ease-out;
-    transition: -webkit-transform .2s ease-out;
-    transition: transform .2s ease-out;
-    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    transition: -webkit-transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+    transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
   .image-gallery__item:hover .image-gallery__console > .icon, .image-gallery__item[focus-within] .image-gallery__console > .icon {
@@ -5548,15 +5549,15 @@ a {
     transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.3s ease-out, -webkit-transform 0.2s 0.3s ease-out; }
 
 .image-gallery__item-wrap:before, .image-gallery__item-wrap:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 0.3125rem;
   height: 100%;
   background: #f1be48;
   opacity: 0;
   top: 0;
-  -webkit-transition: opacity .3s ease-out;
-  transition: opacity .3s ease-out;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
   z-index: 3; }
 
 .image-gallery__item-wrap:before {
@@ -5577,10 +5578,10 @@ a {
     height: 100%;
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-transition: -webkit-transform .3s ease-out;
-    transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out;
-    transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out; }
 
 .image-gallery__image-contact {
   position: absolute;
@@ -5601,16 +5602,16 @@ a {
   height: auto;
   display: grid;
   grid-template-rows: 0fr;
-  -webkit-transition: grid-template-rows 0.3s .2s ease-out, width 0.3s .2s ease-out;
-  transition: grid-template-rows 0.3s .2s ease-out, width 0.3s .2s ease-out;
-  transition: grid-template-rows 0.3s .2s ease-out, width 0.3s .2s ease-out, -ms-grid-rows 0.3s .2s ease-out; }
+  -webkit-transition: grid-template-rows 0.3s 0.2s ease-out, width 0.3s 0.2s ease-out;
+  transition: grid-template-rows 0.3s 0.2s ease-out, width 0.3s 0.2s ease-out;
+  transition: grid-template-rows 0.3s 0.2s ease-out, width 0.3s 0.2s ease-out, -ms-grid-rows 0.3s 0.2s ease-out; }
   .image-gallery__console > .icon {
     position: absolute;
     bottom: 0.375rem;
     right: 0.75rem;
     opacity: 1;
-    -webkit-transition: opacity 0.3s .5s ease-out;
-    transition: opacity 0.3s .5s ease-out; }
+    -webkit-transition: opacity 0.3s 0.5s ease-out;
+    transition: opacity 0.3s 0.5s ease-out; }
 
 .image-gallery__console-wrap {
   position: relative;
@@ -5628,11 +5629,12 @@ a {
   -webkit-box-pack: center;
           justify-content: center;
   gap: 1.75rem;
-  -webkit-transition: opacity 0.2s ease-in-out, width .3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: opacity 0.2s ease-in-out, width .3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, width .3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, width .3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
-  .image-gallery__console-wrap > button, .image-gallery__console-wrap > a {
+  -webkit-transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, width 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, width 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+  .image-gallery__console-wrap > button,
+  .image-gallery__console-wrap > a {
     position: relative;
     z-index: 10;
     height: 2.8125rem; }
@@ -6067,7 +6069,8 @@ a {
     background-color: transparent;
     box-shadow: none; }
   @media (min-width: 768px) {
-    .iastate22-modal--with-video .iastate22-modal__container, .iastate22-modal--image-download .iastate22-modal__container {
+    .iastate22-modal--with-video .iastate22-modal__container,
+    .iastate22-modal--image-download .iastate22-modal__container {
       padding: 2.8125rem 2.8125rem 0; } }
   @media (min-width: 768px) {
     .iastate22-modal__container.iastate22-modal__container-with-media {
@@ -6076,7 +6079,8 @@ a {
       -webkit-box-align: start;
               align-items: flex-start;
       flex-wrap: wrap; }
-      .iastate22-modal--with-video .iastate22-modal__container.iastate22-modal__container-with-media, .iastate22-modal--image-download .iastate22-modal__container.iastate22-modal__container-with-media {
+      .iastate22-modal--with-video .iastate22-modal__container.iastate22-modal__container-with-media,
+      .iastate22-modal--image-download .iastate22-modal__container.iastate22-modal__container-with-media {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
                 flex-direction: column;
@@ -6098,12 +6102,14 @@ a {
               flex: 0 1 auto;
       width: 100%;
       padding: 2.8125rem 4.6875rem 2.8125rem 3.375rem; }
-      .iastate22-modal--with-video .iastate22-modal__content, .iastate22-modal--image-download .iastate22-modal__content {
+      .iastate22-modal--with-video .iastate22-modal__content,
+      .iastate22-modal--image-download .iastate22-modal__content {
         padding: 1.5rem 0 2.8125rem; } }
   @media (min-width: 768px) {
     .iastate22-modal__container-with-media .iastate22-modal__content {
       width: 64%; }
-      .iastate22-modal--with-video .iastate22-modal__container-with-media .iastate22-modal__content, .iastate22-modal--image-download .iastate22-modal__container-with-media .iastate22-modal__content {
+      .iastate22-modal--with-video .iastate22-modal__container-with-media .iastate22-modal__content,
+      .iastate22-modal--image-download .iastate22-modal__container-with-media .iastate22-modal__content {
         width: 100%; } }
   .iastate22-modal__content .iastate22-modal__content-cta {
     margin-top: 1.25rem; }
@@ -6150,14 +6156,16 @@ a {
     -webkit-box-flex: 0;
             flex: 0 1 auto;
     width: 36%; }
-    .iastate22-modal--with-video .iastate22-modal__media, .iastate22-modal--image-download .iastate22-modal__media {
+    .iastate22-modal--with-video .iastate22-modal__media,
+    .iastate22-modal--image-download .iastate22-modal__media {
       width: 100%;
       -webkit-box-flex: 0;
               flex: 0 0 100%; } }
 
 .iastate22-modal__media:before {
   padding-top: 100%; }
-  .iastate22-modal--with-video .iastate22-modal__media:before, .iastate22-modal--image-download .iastate22-modal__media:before {
+  .iastate22-modal--with-video .iastate22-modal__media:before,
+  .iastate22-modal--image-download .iastate22-modal__media:before {
     display: none; }
 
 .iastate22-modal--image-download .iastate22-modal__media {

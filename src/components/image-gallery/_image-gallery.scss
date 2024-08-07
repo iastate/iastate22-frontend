@@ -1,9 +1,10 @@
 .image-gallery {
   display: grid;
-  grid-gap: rem(14) rem(12);
   grid-template-columns: 1fr;
+  grid-gap: rem(40);
 
   @include media-breakpoint-up(md) {
+    grid-gap: rem(14) rem(12);
     grid-template-columns: 1fr 1fr;
   }
 
