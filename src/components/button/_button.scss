@@ -26,6 +26,11 @@
     display: inline-flex;
   }
 
+  &:has(.icon) {
+    display: inline-flex;
+    padding-right: rem(40);
+  }
+
   .arrow {
     right: rem(17);
     top: rem(20);
@@ -36,6 +41,13 @@
     &:before {
       background-color: $iastate-gold;
     }
+  }
+
+  .icon {
+    position: absolute;
+    padding-left: rem(10);
+    right: rem(16);
+    bottom: rem(8);
   }
 
   .icon-video {
@@ -73,6 +85,10 @@
     padding-right: rem(40);
     .arrow {
       width: rem(12);
+    }
+
+    &:has(.icon) {
+      padding-right: rem(50);
     }
 
     svg.icon-video--inactive {
