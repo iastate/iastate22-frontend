@@ -10,6 +10,27 @@
 
   @include media-breakpoint-up(lg) {
     grid-template-columns: 1fr 1fr 1fr;
+
+    .outer-pad & {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .outer-pad & {
+      grid-template-columns: 1fr 1fr 1fr;
+      min-width: rem(1112);
+      position: relative;
+      left: calc(50% + 50px);
+      transform: translateX(-50%);
+      transition: left 0.15s ease-in-out;
+    }
+  }
+
+  @include media-breakpoint-up(xxl) {
+    .outer-pad & {
+      left: 50%;
+    }
   }
 }
 
@@ -27,6 +48,12 @@
     left: 0;
     transition: opacity 0.3s ease-out;
     z-index: 3;
+  }
+
+  @include media-breakpoint-down(md) {
+    &:nth-child(n + 4) {
+      display: none;
+    }
   }
 
   &:before {
@@ -148,7 +175,7 @@
 .image-gallery__console-wrap {
   position: relative;
   width: 100%;
-  min-width: rem(300);
+  min-width: rem(250);
   bottom: 0;
   left: 0;
   right: 0;
