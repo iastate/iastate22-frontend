@@ -90,13 +90,21 @@ export class Modal {
               composed: false,
             });
             enableBodyScroll(modal.querySelector(".iastate22-modal__container"));
-
             window.dispatchEvent(event);
-
+            console.log(trigger);
+            console.log(trigger.closest(".image-gallery__item"));
             if (!!trigger) {
-              setTimeout(() => {
-                trigger.focus();
-              }, 100);
+              if (!!trigger.closest(".image-gallery__item")) {
+                const btn = trigger
+                  .closest(".image-gallery__item")
+                  .querySelector("button.iastate22-button") as HTMLElement;
+                trigger.blur();
+                btn.blur();
+              } else {
+                setTimeout(() => {
+                  trigger.focus();
+                }, 100);
+              }
             }
             if (this.isVideo) {
               this.player.pauseVideo();

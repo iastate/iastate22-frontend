@@ -87,10 +87,6 @@
       width: rem(12);
     }
 
-    &:has(.icon) {
-      padding-right: rem(50);
-    }
-
     svg.icon-video--inactive {
       opacity: 0;
     }
