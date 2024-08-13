@@ -50,11 +50,11 @@
     z-index: 3;
   }
 
-  @include media-breakpoint-down(md) {
-    &:nth-child(n + 4) {
-      display: none;
-    }
-  }
+  // @include media-breakpoint-down(md) {
+  //   &:nth-child(n + 4) {
+  //     display: none;
+  //   }
+  // }
 
   &:before {
     top: 0;
@@ -65,7 +65,7 @@
   }
 
   &:hover,
-  &:focus-within {
+  &:focus-within:not(.image-gallery__image-contact) {
     &:before,
     &:after {
       opacity: 1;
@@ -187,10 +187,37 @@
   gap: rem(28);
   transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, width 0.3s ease-in-out;
 
+  @include media-breakpoint-up("md") {
+    gap: rem(10);
+  }
+
+  @include media-breakpoint-up("lg") {
+    gap: rem(28);
+  }
+
   > button,
   > a {
     position: relative;
     z-index: 10;
     height: rem(45);
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+
+    > .icon svg path,
+    .icon svg line {
+      transition: stroke 0.2s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      background: $iastate-red;
+      border-color: $border-gold;
+      color: $white;
+
+      > .icon svg path,
+      .icon svg line {
+        // fill: $iastate-gold;
+        stroke: $border-gold;
+      }
+    }
   }
 }

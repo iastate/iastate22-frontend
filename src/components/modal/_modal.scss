@@ -231,6 +231,8 @@
 
   @include media-breakpoint-down("lg") {
     padding: rem(8) rem(13.5);
+    bottom: rem(24);
+    right: rem(24);
   }
 
   .text {
