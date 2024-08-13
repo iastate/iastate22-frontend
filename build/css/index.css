@@ -5448,6 +5448,7 @@ a {
 .image-gallery {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   grid-gap: 2.5rem; }
   @media (min-width: 768px) {
     .image-gallery {
@@ -5490,72 +5491,64 @@ a {
     top: 0; }
   .image-gallery__item:after {
     bottom: 0; }
-  .image-gallery__item:hover:before, .image-gallery__item:hover:after, .image-gallery__item[focus-within]:not(.image-gallery__image-contact):before, .image-gallery__item[focus-within]:not(.image-gallery__image-contact):after {
+  .image-gallery__item:hover:before, .image-gallery__item:hover:after, .image-gallery__item[focus-within]:before, .image-gallery__item[focus-within]:after {
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out; }
-  .image-gallery__item:hover:before, .image-gallery__item:hover:after, .image-gallery__item:focus-within:not(.image-gallery__image-contact):before, .image-gallery__item:focus-within:not(.image-gallery__image-contact):after {
+  .image-gallery__item:hover:before, .image-gallery__item:hover:after, .image-gallery__item:focus-within:before, .image-gallery__item:focus-within:after {
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out; }
-  .image-gallery__item:hover .image-gallery__item-wrap:before, .image-gallery__item:hover .image-gallery__item-wrap:after, .image-gallery__item[focus-within]:not(.image-gallery__image-contact) .image-gallery__item-wrap:before, .image-gallery__item[focus-within]:not(.image-gallery__image-contact) .image-gallery__item-wrap:after {
+  .image-gallery__item:hover .image-gallery__item-wrap:before, .image-gallery__item:hover .image-gallery__item-wrap:after, .image-gallery__item[focus-within] .image-gallery__item-wrap:before, .image-gallery__item[focus-within] .image-gallery__item-wrap:after {
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out; }
-  .image-gallery__item:hover .image-gallery__item-wrap:before, .image-gallery__item:hover .image-gallery__item-wrap:after, .image-gallery__item:focus-within:not(.image-gallery__image-contact) .image-gallery__item-wrap:before, .image-gallery__item:focus-within:not(.image-gallery__image-contact) .image-gallery__item-wrap:after {
+  .image-gallery__item:hover .image-gallery__item-wrap:before, .image-gallery__item:hover .image-gallery__item-wrap:after, .image-gallery__item:focus-within .image-gallery__item-wrap:before, .image-gallery__item:focus-within .image-gallery__item-wrap:after {
     opacity: 1;
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out; }
-  .image-gallery__item:hover .image-gallery__image-wrap > img, .image-gallery__item[focus-within]:not(.image-gallery__image-contact) .image-gallery__image-wrap > img {
+  .image-gallery__item:hover .image-gallery__image-wrap > img, .image-gallery__item[focus-within] .image-gallery__image-wrap > img {
     -webkit-transition: -webkit-transform 0.2s ease-out;
     transition: -webkit-transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
-  .image-gallery__item:hover .image-gallery__image-wrap > img, .image-gallery__item:focus-within:not(.image-gallery__image-contact) .image-gallery__image-wrap > img {
+  .image-gallery__item:hover .image-gallery__image-wrap > img, .image-gallery__item:focus-within .image-gallery__image-wrap > img {
     -webkit-transition: -webkit-transform 0.2s ease-out;
     transition: -webkit-transform 0.2s ease-out;
     transition: transform 0.2s ease-out;
     transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
-  .image-gallery__item:hover .image-gallery__console > .icon, .image-gallery__item[focus-within]:not(.image-gallery__image-contact) .image-gallery__console > .icon {
+  .image-gallery__item:hover .image-gallery__console > .icon, .image-gallery__item[focus-within] .image-gallery__console > .icon {
     opacity: 0;
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out; }
-  .image-gallery__item:hover .image-gallery__console > .icon, .image-gallery__item:focus-within:not(.image-gallery__image-contact) .image-gallery__console > .icon {
+  .image-gallery__item:hover .image-gallery__console > .icon, .image-gallery__item:focus-within .image-gallery__console > .icon {
     opacity: 0;
     -webkit-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out; }
-  .image-gallery__item:hover .image-gallery__console, .image-gallery__item[focus-within]:not(.image-gallery__image-contact) .image-gallery__console {
+  .image-gallery__item:hover .image-gallery__console, .image-gallery__item[focus-within] .image-gallery__console {
     width: 100%;
     grid-template-rows: 1fr;
     -webkit-transition: grid-template-rows 0.2s ease-out, width 0.2s ease-out;
     transition: grid-template-rows 0.2s ease-out, width 0.2s ease-out;
     transition: grid-template-rows 0.2s ease-out, width 0.2s ease-out, -ms-grid-rows 0.2s ease-out; }
-  .image-gallery__item:hover .image-gallery__console, .image-gallery__item:focus-within:not(.image-gallery__image-contact) .image-gallery__console {
+  .image-gallery__item:hover .image-gallery__console, .image-gallery__item:focus-within .image-gallery__console {
     width: 100%;
     grid-template-rows: 1fr;
     -webkit-transition: grid-template-rows 0.2s ease-out, width 0.2s ease-out;
     transition: grid-template-rows 0.2s ease-out, width 0.2s ease-out;
     transition: grid-template-rows 0.2s ease-out, width 0.2s ease-out, -ms-grid-rows 0.2s ease-out; }
-  .image-gallery__item:hover .image-gallery__console-wrap, .image-gallery__item[focus-within]:not(.image-gallery__image-contact) .image-gallery__console-wrap {
+  .image-gallery__item:hover .image-gallery__console-wrap, .image-gallery__item[focus-within] .image-gallery__console-wrap {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transition: opacity 0.2s 0.3s ease-out, -webkit-transform 0.2s 0.3s ease-out;
-    transition: opacity 0.2s 0.3s ease-out, -webkit-transform 0.2s 0.3s ease-out;
-    transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.3s ease-out;
-    transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.3s ease-out, -webkit-transform 0.2s 0.3s ease-out; }
-  .image-gallery__item:hover .image-gallery__console-wrap, .image-gallery__item:focus-within:not(.image-gallery__image-contact) .image-gallery__console-wrap {
+    -webkit-transition: opacity 0.2s 0.3s ease-out;
+    transition: opacity 0.2s 0.3s ease-out; }
+  .image-gallery__item:hover .image-gallery__console-wrap, .image-gallery__item:focus-within .image-gallery__console-wrap {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    -webkit-transition: opacity 0.2s 0.3s ease-out, -webkit-transform 0.2s 0.3s ease-out;
-    transition: opacity 0.2s 0.3s ease-out, -webkit-transform 0.2s 0.3s ease-out;
-    transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.3s ease-out;
-    transition: transform 0.2s 0.3s ease-out, opacity 0.2s 0.3s ease-out, -webkit-transform 0.2s 0.3s ease-out; }
+    -webkit-transition: opacity 0.2s 0.3s ease-out;
+    transition: opacity 0.2s 0.3s ease-out; }
 
 .image-gallery__item-wrap:before, .image-gallery__item-wrap:after {
   content: "";
@@ -5629,8 +5622,6 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
   overflow: hidden;
   opacity: 0;
   display: -webkit-box;
@@ -5638,10 +5629,8 @@ a {
   -webkit-box-pack: center;
           justify-content: center;
   gap: 1.75rem;
-  -webkit-transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, width 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out, width 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
+  -webkit-transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out; }
   @media (min-width: 768px) {
     .image-gallery__console-wrap {
       gap: 0.625rem; } }
