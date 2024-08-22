@@ -1,4 +1,6 @@
 webpackHotUpdate("main", {
+  /***/ "": false,
+
   /***/ "./src/scss/index.scss":
     /*!*****************************!*\
   !*** ./src/scss/index.scss ***!
