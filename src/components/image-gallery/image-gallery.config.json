@@ -4,6 +4,16 @@
       {
         "src": "../../img/IMG-Campus-Location-Large-Image.jpg",
         "alt": "Image One",
+        "additional_buttons": [
+          {
+            "url": "https://iastate.edu",
+            "text": "Extra Link"
+          },
+          {
+            "url": "https://iastate.edu",
+            "text": "Link Two"
+          }
+        ],
         "modal": {
           "id": "modal-image-gallery-1",
           "image": "../../img/IMG-Campus-Location-Large-Image.jpg",

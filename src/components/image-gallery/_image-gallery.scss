@@ -183,22 +183,22 @@
   opacity: 0;
   display: flex;
   justify-content: center;
-  gap: rem(28);
+  flex-wrap: wrap;
+  gap: rem(12) rem(28);
   transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out;
 
   @include media-breakpoint-up("md") {
-    gap: rem(10);
+    gap: rem(5) rem(10);
   }
 
   @include media-breakpoint-up("lg") {
-    gap: rem(28);
+    gap: rem(12) rem(28);
   }
 
   > button,
   > a {
     position: relative;
     z-index: 10;
-    height: rem(45);
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
     > .icon svg path,
@@ -218,5 +218,11 @@
         stroke: $border-gold;
       }
     }
+  }
+}
+
+.iastate22-modal--image-download {
+  figure {
+    margin: 0;
   }
 }
