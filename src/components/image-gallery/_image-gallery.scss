@@ -160,6 +160,7 @@
   width: rem(40);
   height: auto;
   display: grid;
+  justify-content: center;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.3s 0.2s ease-out, width 0.3s 0.2s ease-out;
 
@@ -175,7 +176,8 @@
 .image-gallery__console-wrap {
   position: relative;
   width: 100%;
-  min-width: rem(250);
+  min-width: rem(300);
+  max-width: rem(300);
   bottom: 0;
   left: 0;
   right: 0;
@@ -184,8 +186,14 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: rem(12) rem(28);
+  gap: rem(4) rem(10);
   transition: opacity 0.2s ease-in-out, width 0.3s ease-in-out;
+
+  @include media-breakpoint-up("sm") {
+    min-width: rem(320);
+    max-width: rem(340);
+    gap: rem(12) rem(28);
+  }
 
   @include media-breakpoint-up("md") {
     gap: rem(5) rem(10);
