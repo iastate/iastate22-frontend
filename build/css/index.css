@@ -2800,12 +2800,6 @@ main {
     .iastate22-button:hover .arrow,
     .iastate22-button:focus-visible .arrow {
       width: 0.75rem; }
-    .iastate22-form button:hover:has(.icon)[type="submit"], .iastate22-modal__content-form button:hover:has(.icon)[type="submit"], .site-header__mega-menu-main-nav > ul > li > a:hover:has(.icon),
-    .site-header__mega-menu-main-nav > ul > li > button:hover:has(.icon), .iastate22-form button:focus-visible:has(.icon)[type="submit"], .iastate22-modal__content-form button:focus-visible:has(.icon)[type="submit"], .site-header__mega-menu-main-nav > ul > li > a:focus-visible:has(.icon),
-    .site-header__mega-menu-main-nav > ul > li > button:focus-visible:has(.icon),
-    .iastate22-button:hover:has(.icon),
-    .iastate22-button:focus-visible:has(.icon) {
-      padding-right: 3.125rem; }
     .iastate22-form button:hover[type="submit"] svg.icon-video--inactive, .iastate22-modal__content-form button:hover[type="submit"] svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > a:hover svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > button:hover svg.icon-video--inactive, .iastate22-form button:focus-visible[type="submit"] svg.icon-video--inactive, .iastate22-modal__content-form button:focus-visible[type="submit"] svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > a:focus-visible svg.icon-video--inactive, .site-header__mega-menu-main-nav > ul > li > button:focus-visible svg.icon-video--inactive,
     .iastate22-button:hover svg.icon-video--inactive,
     .iastate22-button:focus-visible svg.icon-video--inactive {
@@ -5925,8 +5919,6 @@ a {
         width: 100%; } }
   .iastate22-modal__content .iastate22-modal__content-cta {
     margin-top: 1.25rem; }
-  .iastate22-modal--image-download .iastate22-modal__content p {
-    font-style: italic; }
 
 .iastate22-modal__title {
   margin: 0 0 0.625rem 0;
@@ -6026,7 +6018,9 @@ a {
   margin-bottom: 0; }
   @media (max-width: 991.98px) {
     .iastate22-modal--image-download .iastate22-modal__media .iastate22-button {
-      padding: 0.5rem 0.84375rem; } }
+      padding: 0.5rem 0.84375rem;
+      bottom: 1.5rem;
+      right: 1.5rem; } }
   .iastate22-modal--image-download .iastate22-modal__media .iastate22-button .text {
     color: #7c2529; }
     @media (max-width: 991.98px) {
