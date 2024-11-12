@@ -3,6 +3,13 @@
     "description": "Frontend component library for Iowa State University.",
     "type":"library",
     "minimum-stability" : "stable",
+    "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/mcmiller-isu/master"
+        }
+    ],
+    
     "authors": [
         {
             "name": "iastate Web Development Services",
