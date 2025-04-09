@@ -47,7 +47,7 @@ export default class AccessibilityUtilities {
   public static convertAnchorToButton(anchor: HTMLAnchorElement): HTMLButtonElement {
     if (!!anchor) {
       const button = document.createElement("BUTTON") as HTMLButtonElement;
-
+      button.setAttribute("tabindex", "0");
       // Copy attributes from anchor to button
       for (let i = 0; i < anchor.attributes.length; i++) {
         const attribute = anchor.attributes[i];

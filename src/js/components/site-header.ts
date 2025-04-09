@@ -123,6 +123,13 @@ export class SiteHeader {
       const key = event.key || event.keyCode;
       // Close the nav when the esc key is pressed while it's open
       if (key === "Escape" || key === "Esc" || key === 27) {
+        // hide nav section dropdowns
+        this.initiallyHideDropdowns();
+        // hide search box
+        this.toggleSearch(false);
+        // hide utility dropdowns
+        this.hideUtilityDropdowns();
+
         if (this.visible) {
           this.visible = false;
           this.toggleVisibility();
@@ -137,6 +144,10 @@ export class SiteHeader {
       const key = event.key || event.keyCode;
       // Close the nav when tabbing outside of it while it's open
       if (key === "Tab" || key === 9) {
+        this.checkNavSectionsTabFocus(event.target as HTMLElement);
+        this.checkSearchTabFocus(event.target as HTMLElement);
+        this.checkUtilityDropDownFocus(event.target as HTMLElement);
+
         if (this.visible && !this.element.contains(event.target as HTMLElement)) {
           this.visible = false;
           this.toggleVisibility();
@@ -299,6 +310,18 @@ export class SiteHeader {
     }
   }
 
+  private checkNavSectionsTabFocus(focusedElement: HTMLElement) {
+    // check only in desktop mode
+    if (!mobileMQ.matches) {
+      for (let i = 0; i < this.parentNavItems.length; i++) {
+        let testParentItem = this.parentNavItems[i];
+        if (!testParentItem.contains(focusedElement)) {
+          this.toggleNavSectionVisibility(i, false);
+        }
+      }
+    }
+  }
+
   public on(eventType: string, handler: Function) {
     if (this.eventHandlers.hasOwnProperty(eventType)) {
       this.eventHandlers[eventType].push(handler);
@@ -317,6 +340,28 @@ export class SiteHeader {
     }
   }
 
+  private toggleSearch(visibility: boolean) {
+    this.searchTrigger.setAttribute("aria-expanded", `${visibility}`);
+    this.searchFormDesktop.setAttribute("aria-hidden", `${!visibility}`);
+    this.closeSearchButton.setAttribute("aria-hidden", `${!visibility}`);
+    if (visibility) {
+      this.searchFormDesktop.style.visibility = "visible";
+      setTimeout(() => {
+        this.formInput.focus();
+      }, 300);
+    } else {
+      setTimeout(() => {
+        this.searchFormDesktop.style.visibility = "hidden";
+      }, 300);
+    }
+  }
+
+  private checkSearchTabFocus(focusedElement: HTMLElement) {
+    if (!this.searchFormDesktop.contains(focusedElement)) {
+      this.toggleSearch(false);
+    }
+  }
+
   private handleSearch() {
     if (this.searchTrigger) {
       this.searchTrigger.setAttribute("aria-expanded", "false");
@@ -329,21 +374,10 @@ export class SiteHeader {
         '.site-header__search-form-desktop button[type="submit"] .fa-iastate22-magnifying-glass'
       );
       this.searchTrigger.addEventListener("click", () => {
-        this.searchTrigger.setAttribute("aria-expanded", "true");
-        this.searchFormDesktop.setAttribute("aria-hidden", "false");
-        this.closeSearchButton.setAttribute("aria-hidden", "false");
-        this.searchFormDesktop.style.visibility = "visible";
-        setTimeout(() => {
-          this.formInput.focus();
-        }, 300);
+        this.toggleSearch(true);
       });
       this.closeSearchButton.addEventListener("click", () => {
-        this.searchTrigger.setAttribute("aria-expanded", "false");
-        this.searchFormDesktop.setAttribute("aria-hidden", "true");
-        this.closeSearchButton.setAttribute("aria-hidden", "true");
-        setTimeout(() => {
-          this.searchFormDesktop.style.visibility = "hidden";
-        }, 300);
+        this.toggleSearch(false);
       });
       window.addEventListener("click", (e) => {
         const target = e.target as Element;
@@ -363,6 +397,28 @@ export class SiteHeader {
         }
       });
     }
+  }
+
+  private checkUtilityDropDownFocus(focusedElement: HTMLElement) {
+    let utilityMenus = document.querySelectorAll(".site-header__utility-dropdown-menu") as NodeListOf<HTMLElement>;
+    utilityMenus.forEach((menu) => {
+      if (!menu.contains(focusedElement)) {
+        let utilityTrigger = menu.parentNode.querySelector(
+          ".site-header__utility-dropdown-trigger"
+        ) as HTMLButtonElement;
+        utilityTrigger.setAttribute("aria-expanded", "false");
+        menu.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
+  private hideUtilityDropdowns() {
+    this.utilityDropdownTrigger.forEach((el, i) => {
+      let utilityTrigger = el;
+      let utilityMenu = el.parentNode.querySelector(".site-header__utility-dropdown-menu");
+      utilityTrigger.setAttribute("aria-expanded", "false");
+      utilityMenu.setAttribute("aria-hidden", "true");
+    });
   }
 
   private handleUtilityDropdown() {
