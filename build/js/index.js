@@ -24074,6 +24074,7 @@
                   l = document.createElement("BUTTON"),
                   c = document.createElement("SPAN");
                 o.classList.add("site-header__mega-menu-main-nav-parent"),
+                  o.setAttribute("role", "button"),
                   (o.dataset.index = "" + e),
                   r.classList.add("site-header__mega-menu-main-nav-dropdown-back-wrap"),
                   i.classList.add("site-header__mega-menu-main-nav-dropdown-parent-wrap"),

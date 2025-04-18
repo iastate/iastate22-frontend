@@ -241,6 +241,7 @@ export class SiteHeader {
         const backButton = document.createElement("BUTTON") as HTMLButtonElement;
         const parentLinkCloneArrow = document.createElement("SPAN") as HTMLElement;
         parentLink.classList.add("site-header__mega-menu-main-nav-parent");
+        parentLink.setAttribute("role", "button");
         parentLink.dataset.index = `${i}`;
         backButtonLI.classList.add("site-header__mega-menu-main-nav-dropdown-back-wrap");
         clonedParentLI.classList.add("site-header__mega-menu-main-nav-dropdown-parent-wrap");
