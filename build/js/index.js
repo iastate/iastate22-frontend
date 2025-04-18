@@ -24118,21 +24118,19 @@
               var n = this.parentNavItems[e],
                 i = n.querySelector("button, a"),
                 r = n.querySelector("ul"),
-                o = null == r ? void 0 : r.querySelectorAll("a, button"),
-                s = document.querySelector(".site-header__mega-menu-secondary");
+                o = null == r ? void 0 : r.querySelectorAll("a, button");
+              document.querySelector(".site-header__mega-menu-secondary");
               if (!i.classList.contains("site-header__parent-link-no-subnav")) {
-                i.setAttribute("aria-expanded", "" + t),
-                  r.setAttribute("aria-hidden", "" + !t),
-                  a.matches && s.setAttribute("aria-hidden", "" + t);
-                for (var l = 0; l < o.length; l++) o[l].setAttribute("tabindex", t ? "0" : "-1");
+                i.setAttribute("aria-expanded", "" + t), r.setAttribute("aria-hidden", "" + !t);
+                for (var s = 0; s < o.length; s++) o[s].setAttribute("tabindex", t ? "0" : "-1");
+                t && o[0].focus();
               }
             }
           }),
           (e.prototype.checkNavSectionsTabFocus = function(e) {
-            if (!a.matches)
-              for (var t = 0; t < this.parentNavItems.length; t++) {
-                this.parentNavItems[t].contains(e) || this.toggleNavSectionVisibility(t, !1);
-              }
+            for (var t = 0; t < this.parentNavItems.length; t++) {
+              this.parentNavItems[t].contains(e) || this.toggleNavSectionVisibility(t, !1);
+            }
           }),
           (e.prototype.on = function(e, t) {
             if (!this.eventHandlers.hasOwnProperty(e))

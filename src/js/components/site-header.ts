@@ -301,24 +301,25 @@ export class SiteHeader {
       if (!parentLink.classList.contains("site-header__parent-link-no-subnav")) {
         parentLink.setAttribute("aria-expanded", `${visible}`);
         childList.setAttribute("aria-hidden", `${!visible}`);
-        if (mobileMQ.matches) {
-          secondaryMenu.setAttribute("aria-hidden", `${visible}`);
-        }
+        // keep secondary menu open
+        //if (mobileMQ.matches) {
+        //  secondaryMenu.setAttribute("aria-hidden", `${visible}`);
+        //}
         for (let i = 0; i < focusableChildren.length; i++) {
           focusableChildren[i].setAttribute("tabindex", visible ? "0" : "-1");
+        }
+        if (visible) {
+          focusableChildren[0].focus();
         }
       }
     }
   }
 
   private checkNavSectionsTabFocus(focusedElement: HTMLElement) {
-    // check only in desktop mode
-    if (!mobileMQ.matches) {
-      for (let i = 0; i < this.parentNavItems.length; i++) {
-        let testParentItem = this.parentNavItems[i];
-        if (!testParentItem.contains(focusedElement)) {
-          this.toggleNavSectionVisibility(i, false);
-        }
+    for (let i = 0; i < this.parentNavItems.length; i++) {
+      let testParentItem = this.parentNavItems[i];
+      if (!testParentItem.contains(focusedElement)) {
+        this.toggleNavSectionVisibility(i, false);
       }
     }
   }
