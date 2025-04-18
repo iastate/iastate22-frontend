@@ -1078,12 +1078,22 @@
           &.site-header__mega-menu-main-nav-dropdown-parent-wrap {
             margin-bottom: rem(20);
             @include media-breakpoint-up(xl) {
-              order: 1;
               width: 100% !important;
+              /*
+              order: 1;
               border-top: rem(2) solid $iastate-gold;
               margin-top: rem(45);
               margin-bottom: rem(-15);
               padding-top: rem(25);
+              */
+              /* move parent items to the top */
+              order: 0;
+              border-top: none;
+              border-bottom: rem(2) solid $iastate-gold;
+              margin-top: rem(0);
+              padding-top: rem(0);
+              padding-bottom: rem(25);
+              margin-bottom: rem(25);
             }
             &.site-header__mega-menu-main-nav-dropdown-parent-wrap-no-href {
               display: none;
