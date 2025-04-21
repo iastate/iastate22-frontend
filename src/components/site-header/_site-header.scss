@@ -640,9 +640,17 @@
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  overscroll-behavior-y: contain;
   @include media-breakpoint-up(xl) {
     overflow: initial;
     pointer-events: none;
+    overscroll-behavior-y: unset;
+  }
+  > div {
+    height: calc(100% + 1px); /* force scroll behavior to prevent scroll chaining */
+    @include media-breakpoint-up(xl) {
+      height: auto;
+    }
   }
 }
 
