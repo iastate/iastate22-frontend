@@ -23989,10 +23989,11 @@
               ("Escape" !== n && "Esc" !== n && 27 !== n) ||
                 (e.toggleSearch(!1),
                 e.hideUtilityDropdowns(),
-                e.visible &&
-                  (e.element.querySelector('.site-header__mega-menu-main-nav ul ul[aria-hidden="false"]')
+                e.visible
+                  ? e.element.querySelector('.site-header__mega-menu-main-nav ul ul[aria-hidden="false"]')
                     ? e.initiallyHideDropdowns()
-                    : ((e.visible = !1), e.toggleVisibility(), e.openButton.focus())));
+                    : ((e.visible = !1), e.toggleVisibility(), e.openButton.focus())
+                  : e.initiallyHideDropdowns());
             });
           }),
           (e.prototype.handleTabbing = function() {

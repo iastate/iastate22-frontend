@@ -142,6 +142,8 @@ export class SiteHeader {
             this.toggleVisibility();
             this.openButton.focus();
           }
+        } else {
+          this.initiallyHideDropdowns(); // always hide subnavs if not in mobile mode
         }
       }
     });
