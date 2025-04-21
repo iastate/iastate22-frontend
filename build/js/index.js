@@ -23987,10 +23987,12 @@
             window.addEventListener("keydown", function(t) {
               var n = t.key || t.keyCode;
               ("Escape" !== n && "Esc" !== n && 27 !== n) ||
-                (e.initiallyHideDropdowns(),
-                e.toggleSearch(!1),
+                (e.toggleSearch(!1),
                 e.hideUtilityDropdowns(),
-                e.visible && ((e.visible = !1), e.toggleVisibility(), e.openButton.focus()));
+                e.visible &&
+                  (e.element.querySelector('.site-header__mega-menu-main-nav ul ul[aria-hidden="false"]')
+                    ? e.initiallyHideDropdowns()
+                    : ((e.visible = !1), e.toggleVisibility(), e.openButton.focus())));
             });
           }),
           (e.prototype.handleTabbing = function() {

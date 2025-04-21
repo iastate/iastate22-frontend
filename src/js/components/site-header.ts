@@ -123,17 +123,25 @@ export class SiteHeader {
       const key = event.key || event.keyCode;
       // Close the nav when the esc key is pressed while it's open
       if (key === "Escape" || key === "Esc" || key === 27) {
-        // hide nav section dropdowns
-        this.initiallyHideDropdowns();
         // hide search box
         this.toggleSearch(false);
         // hide utility dropdowns
         this.hideUtilityDropdowns();
 
         if (this.visible) {
-          this.visible = false;
-          this.toggleVisibility();
-          this.openButton.focus();
+          // check to close a subnav first
+          let openSubNav = this.element.querySelector(
+            '.site-header__mega-menu-main-nav ul ul[aria-hidden="false"]'
+          ) as HTMLElement;
+          if (openSubNav) {
+            // hide nav section dropdowns
+            this.initiallyHideDropdowns();
+          } else {
+            // close the main nav
+            this.visible = false;
+            this.toggleVisibility();
+            this.openButton.focus();
+          }
         }
       }
     });
