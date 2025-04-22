@@ -1552,6 +1552,11 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   display: inline-block;
   text-decoration: none;
   pointer-events: none;
+  &:focus {
+    opacity: 1;
+    pointer-events: initial;
+    background-color: #ffffff;
+  }
 
   @include media-breakpoint-up(xl) {
     position: static;

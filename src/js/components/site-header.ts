@@ -179,9 +179,9 @@ export class SiteHeader {
       this.visible = !this.visible;
       this.toggleVisibility();
       if (clickedViaKeyboard && this.visible) {
-        setTimeout(() => {
-          this.focusableChildren[0]?.focus();
-        }, 50);
+        //  setTimeout(() => {
+        //    this.focusableChildren[0]?.focus();
+        //  }, 50);
       }
       // Reset state for subsequent click events
       clickedViaKeyboard = false;
@@ -207,6 +207,12 @@ export class SiteHeader {
       const target = event.target as HTMLElement;
       if (!!target.closest(".site-header__mega-menu-main-nav-dropdown-back")) {
         this.toggleNavSectionVisibility(this.selectedMainNavSectionIndex, false);
+        const parentLink = this.parentNavItems[this.selectedMainNavSectionIndex].querySelector(
+          ".site-header__mega-menu-main-nav-parent"
+        ) as HTMLAnchorElement;
+        if (parentLink) {
+          parentLink.focus();
+        }
         this.selectedMainNavSectionIndex = null;
       }
     });
@@ -317,9 +323,6 @@ export class SiteHeader {
         //}
         for (let i = 0; i < focusableChildren.length; i++) {
           focusableChildren[i].setAttribute("tabindex", visible ? "0" : "-1");
-        }
-        if (visible) {
-          focusableChildren[0].focus();
         }
       }
     }
