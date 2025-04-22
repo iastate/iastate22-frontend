@@ -24856,8 +24856,11 @@
           }),
           (e.prototype.createVideoPlayer = function() {
             var e = this.element.querySelector(".video-embed__video"),
-              t = e.dataset.vid;
-            (this.player = r.default(e, { videoId: t, playerVars: { rel: 0 } })), this.handlePlayerEvents();
+              t = e.dataset.ariaLabel,
+              n = e.dataset.vid;
+            (this.player = r.default(e, { videoId: n, playerVars: { rel: 0 } })),
+              t && e.setAttribute("aria-label", t),
+              this.handlePlayerEvents();
           }),
           (e.prototype.handlePlayButtonClick = function() {
             var e = this;
@@ -24904,10 +24907,16 @@
               });
           }),
           (e.prototype.playVimeoVid = function() {
-            var e = this;
-            new o.default(this.vimeoMedia).play().then(function() {
-              e.media.classList.contains("video-playing") || e.media.classList.add("video-playing");
-            });
+            var e = this,
+              t = new o.default(this.vimeoMedia),
+              n = this.vimeoMedia.dataset.ariaLabel;
+            t.on("loaded", function() {
+              var t = e.vimeoMedia.querySelector("iframe");
+              n && t && t.setAttribute("aria-label", n);
+            }),
+              t.play().then(function() {
+                e.media.classList.contains("video-playing") || e.media.classList.add("video-playing");
+              });
           }),
           (e.prototype.createPlayButton = function() {
             var e = document.createElement("BUTTON");
@@ -25118,11 +25127,13 @@
               });
           }),
           (e.prototype.createVideoPlayer = function() {
-            var e = this.playerRoot.getAttribute("data-vid"),
-              t = this.playerRoot.getAttribute("data-vimeo-id");
-            null !== e
+            var e = this,
+              t = this.playerRoot.getAttribute("data-vid"),
+              n = this.playerRoot.getAttribute("data-vimeo-id"),
+              i = this.playerRoot.dataset.ariaLabel;
+            null !== t
               ? ((this.player = r.default(this.playerRoot, {
-                  videoId: e,
+                  videoId: t,
                   playerVars: {
                     autoplay: this.reducedMotion ? 0 : 1,
                     controls: 0,
@@ -25132,14 +25143,19 @@
                     loop: 1,
                     modestbranding: 1,
                     rel: 0,
-                    playlist: e,
+                    playlist: t,
                     playsinline: 1,
                   },
                 })),
+                i && this.playerRoot.setAttribute("aria-label", i),
                 this.handlePlayerEvents(),
                 this.handlePlayButtonClick())
-              : null !== t
+              : null !== n
               ? ((this.vimPlayer = new o.default(this.playerRoot)),
+                this.vimPlayer.on("loaded", function() {
+                  var t = e.playerRoot.querySelector("iframe");
+                  i && t && t.setAttribute("aria-label", i);
+                }),
                 this.handleVimeoPlayerEvents(),
                 this.handleVimeoPlayButtonClick())
               : ((this.cdnVideo = this.element.querySelector(".ecosystem-home-hero__media video")),
