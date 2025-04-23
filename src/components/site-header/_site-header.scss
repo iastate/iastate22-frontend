@@ -873,6 +873,9 @@
           line-height: (26 / 14);
           margin: 0;
           border-radius: 0;
+          &:focus-visible {
+            padding-right: 0;
+          }
           @include media-breakpoint-up(xxl) {
             font-size: rem(16);
             line-height: (26 / 16);
@@ -887,6 +890,9 @@
         .home & {
           @include media-breakpoint-up(xl) {
             color: $white;
+            &:focus-visible {
+              background-color: transparent;
+            }
           }
         }
         .headroom--not-top & {
@@ -1431,22 +1437,25 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
   }
   &[aria-hidden="false"] {
     visibility: visible;
-    width: rem(640);
-    background-color: #ffffff;
-
+    /*width: fit-content;*/
+    /*width: rem(640);*/
     label {
       color: $iastate-maroon;
       font-weight: 700;
       white-space: nowrap;
       flex: 1 0 auto;
       text-align: right;
-      padding: rem(8) rem(15) rem(8) rem(15);
-      margin-right: rem(5);
+      padding: rem(8) rem(20) rem(8) rem(20);
+      margin-right: 0;
+      background-color: rgba($white, 0.95);
+      border: rem(2) solid $iastate-maroon;
+      border-right: none;
+      position: relative;
+      z-index: 1;
       /* unset for screen readers hide css */
       clip: auto;
       height: auto;
       width: auto;
-      position: relative;
     }
     button[type="submit"] {
       display: block;
@@ -1454,6 +1463,7 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
       min-width: rem(44);
       right: rem(44);
       top: rem(2);
+      z-index: 3;
     }
     input {
       width: rem(270);
@@ -1461,6 +1471,8 @@ a.site-header__mega-menu-main-nav-dropdown-parent {
       border: rem(2) solid $iastate-maroon;
       pointer-events: all;
       padding: rem(8) rem(15);
+      position: relative;
+      z-index: 2;
     }
   }
   label {
