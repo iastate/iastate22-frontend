@@ -23912,7 +23912,7 @@
               )),
               (this.focusableChildren = this.element.querySelectorAll("a, button, input")),
               (this.parentNavItems = this.element.querySelectorAll(".site-header__mega-menu-main-nav > ul > li")),
-              (this.searchBox = this.element.querySelector(".site-header__search")),
+              (this.searchBox = document.querySelector(".site-header__search")),
               (this.searchTrigger = s.default.convertAnchorToButton(
                 document.querySelector(".site-header__search-toggle")
               )),
@@ -24014,7 +24014,15 @@
               (" " !== e.key && "Enter" !== e.key && "Spacebar" !== e.key) || (t = !0);
             }),
               this.openButton.addEventListener("click", function() {
-                (e.visible = !e.visible), e.toggleVisibility(), t && e.visible, (t = !1);
+                (e.visible = !e.visible),
+                  e.toggleVisibility(),
+                  t &&
+                    e.visible &&
+                    setTimeout(function() {
+                      var t;
+                      null === (t = e.focusableChildren[0]) || void 0 === t || t.focus();
+                    }, 300),
+                  (t = !1);
               });
           }),
           (e.prototype.handleOutsideClick = function() {
@@ -24041,15 +24049,28 @@
           (e.prototype.handleParentLinkClicks = function() {
             var e = this;
             this.element.addEventListener("click", function(t) {
-              var n = t.target.closest(".site-header__mega-menu-main-nav-parent");
-              if (n) {
+              var n,
+                i = t.target.closest(".site-header__mega-menu-main-nav-parent");
+              if (i) {
                 t.preventDefault();
-                var i = parseInt(n.dataset.index),
-                  r = i !== e.selectedMainNavSectionIndex;
-                null !== e.selectedMainNavSectionIndex &&
-                  e.toggleNavSectionVisibility(e.selectedMainNavSectionIndex, !1),
-                  e.toggleNavSectionVisibility(i, r),
-                  (e.selectedMainNavSectionIndex = r ? i : null);
+                var r = parseInt(i.dataset.index),
+                  o = r !== e.selectedMainNavSectionIndex;
+                if (
+                  (null !== e.selectedMainNavSectionIndex &&
+                    e.toggleNavSectionVisibility(e.selectedMainNavSectionIndex, !1),
+                  e.toggleNavSectionVisibility(r, o),
+                  (e.selectedMainNavSectionIndex = o ? r : null),
+                  o)
+                ) {
+                  var s =
+                    null === (n = e.parentNavItems[r]) || void 0 === n
+                      ? void 0
+                      : n.querySelector("ul[aria-hidden=false] li a, ul[aria-hidden=false] li button");
+                  s &&
+                    setTimeout(function() {
+                      s.focus();
+                    }, 300);
+                }
               }
             });
           }),
@@ -24118,6 +24139,7 @@
                 i = n.querySelector("button, a"),
                 r = n.querySelector("ul"),
                 o = null == r ? void 0 : r.querySelectorAll("a, button");
+              console.log(o);
               document.querySelector(".site-header__mega-menu-secondary");
               if (!i.classList.contains("site-header__parent-link-no-subnav")) {
                 i.setAttribute("aria-expanded", "" + t), r.setAttribute("aria-hidden", "" + !t);
@@ -24126,8 +24148,16 @@
             }
           }),
           (e.prototype.checkNavSectionsTabFocus = function(e) {
-            for (var t = 0; t < this.parentNavItems.length; t++) {
-              this.parentNavItems[t].contains(e) || this.toggleNavSectionVisibility(t, !1);
+            var t = this.element.querySelector('.site-header__mega-menu-main-nav ul ul[aria-hidden="false"]');
+            if (t && !t.contains(e)) {
+              var n = t.closest("li");
+              if (n) {
+                var i = n.querySelector(".site-header__mega-menu-main-nav-parent");
+                if (i) {
+                  var r = parseInt(i.dataset.index);
+                  this.toggleNavSectionVisibility(r, !1);
+                }
+              }
             }
           }),
           (e.prototype.on = function(e, t) {
@@ -24155,7 +24185,7 @@
                   }, 300);
           }),
           (e.prototype.checkSearchTabFocus = function(e) {
-            this.searchFormDesktop.contains(e) || this.toggleSearch(!1);
+            this.searchBox.contains(e) || this.toggleSearch(!1);
           }),
           (e.prototype.handleSearch = function() {
             var e = this;
@@ -24172,7 +24202,10 @@
                 e.toggleSearch(!0);
               }),
                 this.closeSearchButton.addEventListener("click", function() {
-                  e.toggleSearch(!1);
+                  e.toggleSearch(!1),
+                    setTimeout(function() {
+                      e.searchTrigger.focus();
+                    }, 300);
                 }),
                 window.addEventListener("click", function(i) {
                   var r = i.target;

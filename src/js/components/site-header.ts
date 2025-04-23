@@ -34,7 +34,7 @@ export class SiteHeader {
       );
       this.focusableChildren = this.element.querySelectorAll("a, button, input");
       this.parentNavItems = this.element.querySelectorAll(".site-header__mega-menu-main-nav > ul > li");
-      this.searchBox = this.element.querySelector(".site-header__search");
+      this.searchBox = document.querySelector(".site-header__search");
       this.searchTrigger = AccessibilityUtilities.convertAnchorToButton(
         document.querySelector(".site-header__search-toggle")
       );
@@ -179,9 +179,9 @@ export class SiteHeader {
       this.visible = !this.visible;
       this.toggleVisibility();
       if (clickedViaKeyboard && this.visible) {
-        //  setTimeout(() => {
-        //    this.focusableChildren[0]?.focus();
-        //  }, 50);
+        setTimeout(() => {
+          this.focusableChildren[0]?.focus();
+        }, 300);
       }
       // Reset state for subsequent click events
       clickedViaKeyboard = false;
@@ -231,6 +231,16 @@ export class SiteHeader {
         }
         this.toggleNavSectionVisibility(newIndex, newLinkClicked);
         this.selectedMainNavSectionIndex = newLinkClicked ? newIndex : null;
+        if (newLinkClicked) {
+          const focusableChild = this.parentNavItems[newIndex]?.querySelector(
+            "ul[aria-hidden=false] li a, ul[aria-hidden=false] li button"
+          ) as HTMLAnchorElement | HTMLButtonElement;
+          if (focusableChild) {
+            setTimeout(() => {
+              focusableChild.focus();
+            }, 300);
+          }
+        }
       }
     });
   }
@@ -313,6 +323,7 @@ export class SiteHeader {
       const parentLink = parentItem.querySelector("button, a") as HTMLButtonElement | HTMLAnchorElement;
       const childList = parentItem.querySelector("ul") as HTMLElement;
       const focusableChildren = childList?.querySelectorAll("a, button") as NodeListOf<HTMLElement>;
+      console.log(focusableChildren);
       const secondaryMenu = document.querySelector(".site-header__mega-menu-secondary") as HTMLElement;
       if (!parentLink.classList.contains("site-header__parent-link-no-subnav")) {
         parentLink.setAttribute("aria-expanded", `${visible}`);
@@ -329,10 +340,19 @@ export class SiteHeader {
   }
 
   private checkNavSectionsTabFocus(focusedElement: HTMLElement) {
-    for (let i = 0; i < this.parentNavItems.length; i++) {
-      let testParentItem = this.parentNavItems[i];
-      if (!testParentItem.contains(focusedElement)) {
-        this.toggleNavSectionVisibility(i, false);
+    const openSubNav = this.element.querySelector(
+      '.site-header__mega-menu-main-nav ul ul[aria-hidden="false"]'
+    ) as HTMLElement;
+    if (!!openSubNav) {
+      if (!openSubNav.contains(focusedElement)) {
+        const parentItem = openSubNav.closest("li") as HTMLElement;
+        if (parentItem) {
+          const parentLink = parentItem.querySelector(".site-header__mega-menu-main-nav-parent") as HTMLAnchorElement;
+          if (parentLink) {
+            const parentLinkIndex = parseInt(parentLink.dataset.index);
+            this.toggleNavSectionVisibility(parentLinkIndex, false);
+          }
+        }
       }
     }
   }
@@ -372,7 +392,7 @@ export class SiteHeader {
   }
 
   private checkSearchTabFocus(focusedElement: HTMLElement) {
-    if (!this.searchFormDesktop.contains(focusedElement)) {
+    if (!this.searchBox.contains(focusedElement)) {
       this.toggleSearch(false);
     }
   }
@@ -393,6 +413,9 @@ export class SiteHeader {
       });
       this.closeSearchButton.addEventListener("click", () => {
         this.toggleSearch(false);
+        setTimeout(() => {
+          this.searchTrigger.focus();
+        }, 300);
       });
       window.addEventListener("click", (e) => {
         const target = e.target as Element;
