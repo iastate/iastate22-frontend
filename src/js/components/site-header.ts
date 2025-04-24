@@ -63,7 +63,7 @@ export class SiteHeader {
     this.handleParentLinkClicks();
     this.handleTransitionEnd();
     this.initMobileNav();
-    this.toggleVisibility();
+    //this.toggleVisibility();
     this.handleSearch();
     this.handleUtilityDropdown();
   }
@@ -232,9 +232,11 @@ export class SiteHeader {
         this.toggleNavSectionVisibility(newIndex, newLinkClicked);
         this.selectedMainNavSectionIndex = newLinkClicked ? newIndex : null;
         if (newLinkClicked) {
-          const focusableChild = this.parentNavItems[newIndex]?.querySelector(
-            "ul[aria-hidden=false] li a, ul[aria-hidden=false] li button"
-          ) as HTMLAnchorElement | HTMLButtonElement;
+          // with mobile the first focusable element is the back button, otherwise it's the parent link
+          const selector = this.visible ? "ul[aria-hidden=false] li button" : "ul[aria-hidden=false] li a";
+          const focusableChild = this.parentNavItems[newIndex]?.querySelector(selector) as
+            | HTMLAnchorElement
+            | HTMLButtonElement;
           if (focusableChild) {
             setTimeout(() => {
               focusableChild.focus();
@@ -296,6 +298,9 @@ export class SiteHeader {
         childList.insertBefore(backButtonLI, clonedParentLI);
       }
     }
+
+    const initialMenuState = mobileMQ.matches ? "true" : "false";
+    this.element.setAttribute("aria-hidden", initialMenuState);
   }
 
   public toggleVisibility() {
@@ -323,7 +328,6 @@ export class SiteHeader {
       const parentLink = parentItem.querySelector("button, a") as HTMLButtonElement | HTMLAnchorElement;
       const childList = parentItem.querySelector("ul") as HTMLElement;
       const focusableChildren = childList?.querySelectorAll("a, button") as NodeListOf<HTMLElement>;
-      console.log(focusableChildren);
       const secondaryMenu = document.querySelector(".site-header__mega-menu-secondary") as HTMLElement;
       if (!parentLink.classList.contains("site-header__parent-link-no-subnav")) {
         parentLink.setAttribute("aria-expanded", `${visible}`);

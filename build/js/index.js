@@ -12208,20 +12208,23 @@
                 null !== i.attributeName &&
                 -1 !== ["aria-hidden", "hidden"].indexOf(i.attributeName) &&
                 i.target.nodeType === Node.ELEMENT_NODE
-              )
-                for (
-                  var r =
-                      ("hidden" === i.attributeName && null === i.oldValue) ||
-                      ("aria-hidden" === i.attributeName && ("false" === i.oldValue || null === i.oldValue)),
-                    o = i.target,
-                    s = o.querySelectorAll(e.focusableChildSelector),
-                    a = 0;
-                  a < s.length;
-                  a++
-                ) {
+              ) {
+                var r =
+                  ("hidden" === i.attributeName && null === i.oldValue) ||
+                  ("aria-hidden" === i.attributeName && ("false" === i.oldValue || null === i.oldValue));
+                if ("aria-hidden" === i.attributeName && null === i.oldValue)
+                  switch (i.target.getAttribute("aria-hidden")) {
+                    case "true":
+                      r = !0;
+                      break;
+                    case "false":
+                      r = !1;
+                  }
+                for (var o = i.target, s = o.querySelectorAll(e.focusableChildSelector), a = 0; a < s.length; a++) {
                   var l = s[a];
                   l.closest("[aria-hidden]") === o && (l.tabIndex = r ? -1 : 0);
                 }
+              }
             }
           }).observe(document.body, { subtree: !0, attributes: !0, attributeOldValue: !0 });
         }),
@@ -23938,7 +23941,6 @@
               this.handleParentLinkClicks(),
               this.handleTransitionEnd(),
               this.initMobileNav(),
-              this.toggleVisibility(),
               this.handleSearch(),
               this.handleUtilityDropdown();
           }),
@@ -24062,13 +24064,11 @@
                   (e.selectedMainNavSectionIndex = o ? r : null),
                   o)
                 ) {
-                  var s =
-                    null === (n = e.parentNavItems[r]) || void 0 === n
-                      ? void 0
-                      : n.querySelector("ul[aria-hidden=false] li a, ul[aria-hidden=false] li button");
-                  s &&
+                  var s = e.visible ? "ul[aria-hidden=false] li button" : "ul[aria-hidden=false] li a",
+                    a = null === (n = e.parentNavItems[r]) || void 0 === n ? void 0 : n.querySelector(s);
+                  a &&
                     setTimeout(function() {
-                      s.focus();
+                      a.focus();
                     }, 300);
                 }
               }
@@ -24090,20 +24090,20 @@
                 var i = document.createElement("LI"),
                   r = document.createElement("LI"),
                   o = t.querySelector("a"),
-                  a = document.createElement("A"),
-                  l = document.createElement("BUTTON"),
-                  c = document.createElement("SPAN");
+                  l = document.createElement("A"),
+                  c = document.createElement("BUTTON"),
+                  u = document.createElement("SPAN");
                 o.classList.add("site-header__mega-menu-main-nav-parent"),
                   o.setAttribute("role", "button"),
                   (o.dataset.index = "" + e),
                   r.classList.add("site-header__mega-menu-main-nav-dropdown-back-wrap"),
                   i.classList.add("site-header__mega-menu-main-nav-dropdown-parent-wrap"),
-                  l.classList.add("site-header__mega-menu-main-nav-dropdown-back"),
-                  (l.innerHTML =
+                  c.classList.add("site-header__mega-menu-main-nav-dropdown-back"),
+                  (c.innerHTML =
                     '\n          <span class="site-header__mega-menu-main-nav-dropdown-back-icon" aria-hidden="true">&lt;</span>\n          <span class="site-header__mega-menu-main-nav-dropdown-back-label">Back</span>\n          <span class="visible-for-screen-readers"> to top level of menu</span>\n        '),
-                  a.classList.add("site-header__mega-menu-main-nav-dropdown-parent", "iastate22-link-secondary"),
-                  c.classList.add("arrow"),
-                  (a.textContent = Array.prototype.filter
+                  l.classList.add("site-header__mega-menu-main-nav-dropdown-parent", "iastate22-link-secondary"),
+                  u.classList.add("arrow"),
+                  (l.textContent = Array.prototype.filter
                     .call(o.childNodes, function(e) {
                       return e.nodeType === Node.TEXT_NODE;
                     })
@@ -24111,16 +24111,18 @@
                       return e.textContent;
                     })
                     .join("")),
-                  (a.href = o.getAttribute("href")),
-                  r.appendChild(l),
-                  "#" !== a.getAttribute("href")
-                    ? (i.appendChild(a), a.appendChild(c))
+                  (l.href = o.getAttribute("href")),
+                  r.appendChild(c),
+                  "#" !== l.getAttribute("href")
+                    ? (i.appendChild(l), l.appendChild(u))
                     : (s.default.convertAnchorToButton(o),
                       i.classList.add("site-header__mega-menu-main-nav-dropdown-parent-wrap-no-href")),
                   n.insertBefore(i, n.firstElementChild),
                   n.insertBefore(r, i);
               }
             }
+            var d = a.matches ? "true" : "false";
+            this.element.setAttribute("aria-hidden", d);
           }),
           (e.prototype.toggleVisibility = function() {
             if (a.matches) {
@@ -24139,7 +24141,6 @@
                 i = n.querySelector("button, a"),
                 r = n.querySelector("ul"),
                 o = null == r ? void 0 : r.querySelectorAll("a, button");
-              console.log(o);
               document.querySelector(".site-header__mega-menu-secondary");
               if (!i.classList.contains("site-header__parent-link-no-subnav")) {
                 i.setAttribute("aria-expanded", "" + t), r.setAttribute("aria-hidden", "" + !t);
