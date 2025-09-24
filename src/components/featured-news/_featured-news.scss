@@ -79,9 +79,12 @@
               }
             }
           }
+          ~ .featured-news__large-article__title {
+            margin-top: 0;
+          }
         }
         .featured-news__large-article__title {
-          margin: 0;
+          margin: rem(20) 0 0;
           padding: 0;
           line-height: rem(16);
           .iastate22-link-secondary {
@@ -145,9 +148,12 @@
               }
             }
           }
+          ~ .featured-news__small-article__title {
+            margin-top: 0;
+          }
         }
         .featured-news__small-article__title {
-          margin: 0;
+          margin: rem(20) 0 0;
           padding: 0;
           line-height: rem(16);
           .iastate22-link-secondary {
